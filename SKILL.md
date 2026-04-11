@@ -50,7 +50,7 @@ Launch **all 4 agents in parallel** using the Agent tool in a single message. Ea
 
 The 4 sector agents are:
 1. **Crypto Agent** — Analyzes Bitcoin (BTC), Ethereum (ETH), and Solana (SOL)
-2. **Stocks Agent** — Discovers 5-8 best stocks to analyze (always includes SPX + IXIC benchmarks, dynamically finds top-performing and catalyst-driven stocks across sectors)
+2. **Stocks Agent** — Screens the top 15 mega-caps by market cap, then discovers additional opportunities, and selects the best 6-10 for deep analysis (always includes SPX + IXIC benchmarks)
 3. **Currencies Agent** — Analyzes USD, EUR, and MXN through the pairs USD/MXN, EUR/USD, and EUR/MXN
 4. **Materials Agent** — Analyzes Gold (XAU), Crude Oil WTI (CL), and Silver (XAG)
 
