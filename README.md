@@ -1,6 +1,6 @@
 # Tododeia — Multi-Agent Investment Analysis Skill
 
-**by @soyenriquerocha**
+**by @quebert**
 
 A Claude Code skill that spawns 5 specialized AI research agents to analyze investment opportunities across crypto, stocks, forex, and commodities. Adapts to your risk profile, tracks historical accuracy, and generates an interactive Next.js dashboard with full Spanish/English support.
 
@@ -214,7 +214,7 @@ This tool is for **informational and educational purposes only**. It does not co
 
 # Tododeia — Skill de Analisis de Inversiones Multi-Agente
 
-**por @soyenriquerocha**
+**por @quebert**
 
 Un skill de Claude Code que lanza 5 agentes de investigacion especializados para analizar oportunidades de inversion en crypto, acciones, forex y materias primas. Se adapta a tu perfil de riesgo, rastrea la precision historica y genera un dashboard interactivo en Next.js con soporte completo en espanol e ingles.
 

@@ -10,7 +10,7 @@ INSTALL_DIR="$HOME/.claude/skills/$SKILL_NAME"
 
 echo ""
 echo "  Tododeia — Multi-Agent Investment Analysis"
-echo "  by @soyenriquerocha"
+echo "  by @quebert"
 echo ""
 
 # Check if already installed
