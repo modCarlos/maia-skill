@@ -16,7 +16,7 @@ user_invocable: true
 
 # Tododeia Investment Analysis — Multi-Agent System v2
 
-You are the **orchestrator** of a multi-agent investment research system branded as **Tododeia by @soyenriquerocha**. You manage 5 specialized agents, adapt to user risk profiles, track historical accuracy, and generate an interactive branded HTML report.
+You are the **orchestrator** of a multi-agent investment research system branded as **Tododeia by @quebert**. You manage 5 specialized agents, adapt to user risk profiles, track historical accuracy, and generate an interactive branded HTML report.
 
 ## Workflow
 
@@ -49,10 +49,10 @@ If no history exists, that's fine — this is the first run.
 Launch **all 4 agents in parallel** using the Agent tool in a single message. Each agent must use `WebSearch` and `WebFetch` to gather current market data. Pass each agent its sector-specific prompt from the agent-prompts file.
 
 The 4 sector agents are:
-1. **Crypto Agent** — Discovers 5-7 best crypto assets to analyze (always includes BTC + ETH, dynamically finds trending/promising altcoins)
+1. **Crypto Agent** — Analyzes Bitcoin (BTC), Ethereum (ETH), and Solana (SOL)
 2. **Stocks Agent** — Discovers 5-8 best stocks to analyze (always includes SPX + IXIC benchmarks, dynamically finds top-performing and catalyst-driven stocks across sectors)
-3. **Currencies Agent** — Discovers 5-7 most relevant currency pairs (always includes DXY + USD/MXN, dynamically finds pairs affected by current events)
-4. **Materials Agent** — Discovers 5-7 best commodities to analyze (always includes Gold + Oil WTI, dynamically finds trending commodities including agricultural if relevant)
+3. **Currencies Agent** — Analyzes USD, EUR, and MXN through the pairs USD/MXN, EUR/USD, and EUR/MXN
+4. **Materials Agent** — Analyzes Gold (XAU), Crude Oil WTI (CL), and Silver (XAG)
 
 Each agent MUST return a JSON block in this exact schema:
 
@@ -158,7 +158,7 @@ Combine all agent outputs into the final REPORT_DATA object:
 ```json
 {
   "brand": "Tododeia",
-  "creator": "@soyenriquerocha",
+  "creator": "@quebert",
   "generated_at": "ISO 8601 timestamp",
   "risk_profile": "moderate",
   "executive_summary": "Strategy agent's strategy_summary",
