@@ -4,6 +4,20 @@ import { useState, useEffect } from "react"
 import type { ReportData } from "@/types/report"
 import type { Language } from "@/lib/translations"
 
+function sanitizeReportData(report: ReportData): ReportData {
+  const { currencies: _removedAllocation, ...portfolioAllocation } = report.portfolio_allocation as ReportData["portfolio_allocation"] & {
+    currencies?: number
+  }
+  const { currencies: _removedSector, ...sectors } = report.sectors
+
+  return {
+    ...report,
+    portfolio_allocation: portfolioAllocation,
+    risk_adjusted_picks: report.risk_adjusted_picks.filter((pick) => pick.sector !== "currencies"),
+    sectors,
+  }
+}
+
 export function useReportData(lang: Language = "en") {
   const [data, setData] = useState<ReportData | null>(null)
   const [loading, setLoading] = useState(true)
@@ -29,7 +43,7 @@ export function useReportData(lang: Language = "en") {
         }
         return res.json()
       })
-      .then(setData)
+        .then((report) => setData(sanitizeReportData(report)))
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false))
   }, [lang])

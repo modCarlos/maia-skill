@@ -100,12 +100,10 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     // Sector names
     "sector.crypto": "Cryptocurrency",
     "sector.stocks": "Stock Market",
-    "sector.currencies": "Forex & Currencies",
     "sector.materials": "Commodities & Materials",
     "sector.cash": "Cash",
     "sector.crypto.short": "Crypto",
     "sector.stocks.short": "Stocks",
-    "sector.currencies.short": "Currencies",
     "sector.materials.short": "Materials",
     "sector.cash.short": "Cash",
 
@@ -212,12 +210,10 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     // Sector names
     "sector.crypto": "Criptomonedas",
     "sector.stocks": "Mercado de Valores",
-    "sector.currencies": "Forex y Divisas",
     "sector.materials": "Materias Primas",
     "sector.cash": "Efectivo",
     "sector.crypto.short": "Cripto",
     "sector.stocks.short": "Acciones",
-    "sector.currencies.short": "Divisas",
     "sector.materials.short": "Materias",
     "sector.cash.short": "Efectivo",
 

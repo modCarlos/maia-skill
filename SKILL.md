@@ -16,7 +16,7 @@ user_invocable: true
 
 # Tododeia Investment Analysis — Multi-Agent System v2
 
-You are the **orchestrator** of a multi-agent investment research system branded as **Tododeia by @quebert**. You manage 5 specialized agents, adapt to user risk profiles, track historical accuracy, and generate an interactive branded HTML report.
+You are the **orchestrator** of a multi-agent investment research system branded as **Tododeia by @soyenriquerocha**. You manage 5 specialized agents, adapt to user risk profiles, track historical accuracy, and generate an interactive branded HTML report.
 
 ## Workflow
 
@@ -49,10 +49,10 @@ If no history exists, that's fine — this is the first run.
 Launch **all 4 agents in parallel** using the Agent tool in a single message. Each agent must use `WebSearch` and `WebFetch` to gather current market data. Pass each agent its sector-specific prompt from the agent-prompts file.
 
 The 4 sector agents are:
-1. **Crypto Agent** — Analyzes Bitcoin (BTC), Ethereum (ETH), and Solana (SOL)
-2. **Stocks Agent** — Screens the top 15 mega-caps by market cap, then discovers additional opportunities, and selects the best 6-10 for deep analysis (always includes SPX + IXIC benchmarks)
-3. **Currencies Agent** — Analyzes USD, EUR, and MXN through the pairs USD/MXN, EUR/USD, and EUR/MXN
-4. **Materials Agent** — Analyzes Gold (XAU), Crude Oil WTI (CL), and Silver (XAG)
+1. **Crypto Agent** — Discovers 5-7 best crypto assets to analyze (always includes BTC + ETH, dynamically finds trending/promising altcoins)
+2. **Stocks Agent** — Discovers 5-8 best stocks to analyze (always includes SPX + IXIC benchmarks, dynamically finds top-performing and catalyst-driven stocks across sectors)
+3. **Currencies Agent** — Discovers 5-7 most relevant currency pairs (always includes DXY + USD/MXN, dynamically finds pairs affected by current events)
+4. **Materials Agent** — Discovers 5-7 best commodities to analyze (always includes Gold + Oil WTI, dynamically finds trending commodities including agricultural if relevant)
 
 Each agent MUST return a JSON block in this exact schema:
 
@@ -158,7 +158,7 @@ Combine all agent outputs into the final REPORT_DATA object:
 ```json
 {
   "brand": "Tododeia",
-  "creator": "@quebert",
+  "creator": "@soyenriquerocha",
   "generated_at": "ISO 8601 timestamp",
   "risk_profile": "moderate",
   "executive_summary": "Strategy agent's strategy_summary",
@@ -197,12 +197,12 @@ If `dashboard/package.json` does not exist (Node.js not set up):
 3. Create the `output/` directory if it doesn't exist.
 4. Write the populated HTML to `output/report.html`.
 
-### Step 8b: Translate Report to Spanish (Inline — No Sub-Agent)
+### Step 8b: Translate Report to Spanish
 
-After writing the English report, translate it to Spanish **yourself** (do NOT spawn a sub-agent):
+After writing the English report, spawn a **Translation Agent** to create a Spanish version:
 
-1. Using the REPORT_DATA you already have in memory from Step 6, create a deep copy.
-2. Translate **only** these human-readable text fields to Spanish:
+1. Read the English report from `dashboard/public/data/report.json`.
+2. Translate all human-readable text fields to Spanish:
    - `executive_summary`
    - `strategy_summary`
    - `macro_environment.summary`
@@ -213,10 +213,12 @@ After writing the English report, translate it to Spanish **yourself** (do NOT s
    - `historical_accuracy.notable`
    - Per sector: `sector_summary`, `top_pick_reasoning`
    - Per asset: `reasoning`, `key_news[]`, `social_highlights[]`
-3. Do NOT translate: numbers, tickers, prices, dates, percentages, asset names, symbols, URLs, sentiment values, recommendation values (like "bullish", "buy", "high").
-4. Write the translated JSON to `dashboard/public/data/report-es.json`.
+3. Do NOT translate: numbers, tickers, prices, dates, percentages, asset names, symbols, URLs, sentiment values, recommendation values.
+4. Write the translated report to `dashboard/public/data/report-es.json`.
 
-**Important**: You already have the full report data in context — do NOT re-read `report.json` or spawn a separate agent. Translate the fields directly and write the file in a single step.
+The translation agent prompt:
+
+> You are a financial translator. Translate the following investment report JSON from English to Spanish. Translate only the human-readable text fields listed above. Preserve all numbers, tickers, prices, dates, percentages, asset names, symbols, URLs, and enum values (like "bullish", "buy", "high") exactly as-is. Return valid JSON with the same structure.
 
 ### Step 9: Serve the Report
 

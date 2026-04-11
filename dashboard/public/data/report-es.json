@@ -1,1274 +1,783 @@
 {
   "brand": "Tododeia",
   "creator": "@quebert",
-  "generated_at": "2026-03-13T18:30:00Z",
+  "generated_at": "2026-04-11T23:00:00Z",
   "risk_profile": "moderate",
-  "executive_summary": "Para un perfil de riesgo moderado, recomendamos un portafolio con sesgo defensivo que capitalice las dislocaciones del mercado por la guerra con Irán. La plata (XAG) es la mejor elección general — sexto año de déficit estructural de oferta con demanda solar/EV/IA, 30% por debajo del máximo histórico. Broadcom (AVGO) lidera las acciones con un crecimiento de 106% en ingresos de chips de IA y una guía excepcional. Chainlink (LINK) es la mejor opción cripto, 70% por debajo de máximos con 90% de dominio del mercado de oráculos. La posición larga en AUD/USD captura el giro restrictivo del RBA. El café arábica es una rara oportunidad de venta por la cosecha récord de Brasil. El descubrimiento dinámico de activos revela oportunidades que el mercado está pasando por alto — desde el avance de IA de Bittensor hasta la cobertura petrolera de Devon Energy y la crisis de la lira turca.",
+  "executive_summary": "La estrategia moderada de Tododeia para el 11 de abril de 2026 se concentra en toda la cadena de suministro de semiconductores IA desde la fundicion (TSM) hasta el computo GPU (NVDA), ASICs personalizados y networking (AVGO), y GPU alternativa (AMD), validada por una confirmacion previa de ingresos Q1 de TSMC +35% YoY antes de los resultados del 16 de abril. Oro y Plata proporcionan una cobertura macro de doble capa en un entorno de IPC 3,3% con dolar debil y acumulacion de bancos centrales. BTC dimensionado como posicion asimetrica contraria del 15% en Miedo Extremo (F&G 15). Cartera: 55% acciones / 20% materiales / 15% cripto / 10% efectivo.",
   "macro_environment": {
-    "summary": "El entorno macroeconómico está dominado por la guerra con Irán (Operación Epic Fury, semana 3), que ha empujado el petróleo por encima de $98/barril, el oro más allá de $5,000/oz, y desencadenó la mayor liberación de reservas de la AIE en la historia (400M de barriles). Siete decisiones de bancos centrales están programadas del 16 al 19 de marzo (RBA, BoC, FOMC, BoJ, BCE, BoE, BNS) — creando una histórica 'súper-semana' para el mercado de divisas. La probabilidad de recesión está en 30-35% mientras aumentan las preocupaciones de estanflación por la inflación impulsada por la energía.",
-    "interest_rate_outlook": "falling",
-    "inflation_outlook": "rising",
-    "geopolitical_risk": "high",
+    "summary": "Inclinacion estanflacionaria con el IPC al 3,3%, dolar debil y un ciclo de capex impulsado por IA manteniendo el impulso de los resultados tecnologicos. El apetito por el riesgo esta bifurcado: la acumulacion institucional ocurre simultaneamente en semiconductores IA y oro mientras el sentimiento cripto se mantiene en miedo extremo. La tension geopolitica se ha reducido parcialmente por el alto el fuego Iran-EEUU, que colapso la prima de riesgo del petroleo pero redirige los flujos de capital hacia crecimiento estructural y activos de cobertura de inflacion.",
+    "interest_rate_outlook": "stable",
+    "inflation_outlook": "stable",
+    "geopolitical_risk": "medium",
     "key_factors": [
-      "Guerra con Irán semana 3 — bloqueo del Estrecho de Ormuz interrumpiendo el 20% del suministro global de petróleo/GNL",
-      "7 decisiones de bancos centrales del 16 al 19 de marzo — histórica 'súper-semana' incluyendo FOMC, BoJ, BCE",
-      "Se espera que la Fed recorte 25pb en la reunión del 26 de marzo (60% de probabilidad) a pesar de la inflación",
-      "La AIE liberó un récord de 400M de barriles de reservas de emergencia — la mayor liberación de la historia",
-      "La instalación de GNL Ras Laffan de Qatar cerrada tras ataque con drones iraníes — gas europeo +46%",
-      "El Índice de Miedo y Codicia se recuperó de 8 a 45 — la recuperación más rápida en más de un año",
-      "Los datos COT muestran posiciones cortas en USD en extremo de 5 años — riesgo de short-squeeze"
+      "IPC 3,3% — inflacion persistente pero sin reaceleracion; apoya la tesis de oro/plata y retrasa recortes significativos de la Fed",
+      "Ciclo de capex en infraestructura IA intacto: el gasto en ASICs de Meta, Google y Anthropic impulsa las carteras de pedidos de AVGO, TSM, NVDA y AMD",
+      "Indice de Miedo y Codicia cripto en 15 (Miedo Extremo) — historicamente una senal contraria de compra; confirmada por acumulacion institucional on-chain (Cumberland OTC ETH $59,5M, MicroStrategy, SpaceX BTC)",
+      "El alto el fuego EEUU-Iran elimina la prima de riesgo del petroleo (-10,5% semanal WTI), debilitando el sector energia pero liberando capital para rotacion hacia oro, semiconductores IA y cripto de forma selectiva",
+      "Catalizadores binarios a corto plazo: TSM resultados Q1 completos 16 abr (+35% YoY preconfirmado) y BAC Q1 15 abr — ambos accionables en 96 horas"
     ]
   },
   "portfolio_allocation": {
-    "crypto": 12,
-    "stocks": 33,
-    "currencies": 10,
-    "materials": 30,
-    "cash": 15
+    "crypto": 15,
+    "stocks": 55,
+    "materials": 20,
+    "cash": 10
   },
   "cross_sector_insights": [
     {
-      "insight": "La plata y los tokens de IA (TAO, RENDER) ambos subiendo más de 30% semanal — demanda de infraestructura descentralizada tanto física como digital",
-      "implication": "La narrativa del déficit de oferta se está desarrollando simultáneamente en la plata (demanda solar/EV) y en la computación descentralizada (demanda de IA). Ambos son estructurales, no especulativos. Doble exposición a través de XAG + LINK/TAO."
+      "insight": "Oro y BTC subiendo simultaneamente a pesar de narrativas divergentes — oro sobre macro (debilidad del dolar, IPC 3,3%), BTC sobre acumulacion institucional (MicroStrategy, SpaceX, $240M de entradas a ETFs). Ambos son trades de devaluacion de moneda, uno macro y otro especulativo.",
+      "implication": "La tesis amplia de devaluacion esta activa en todas las clases de activos. Ambos pueden coexistir en una cartera moderada; el oro ponderado con mas peso por su perfil de menor volatilidad y tendencia confirmada. La asignacion en BTC se dimensiona como potencial alcista asimetrico, no como posicion core."
     },
     {
-      "insight": "Petróleo en $98 WTI mientras Bitcoin ganó 4% desde que comenzaron los ataques a Irán — las cripto demuestran la tesis de activo refugio",
-      "implication": "BTC se está desacoplando de los movimientos de aversión al riesgo por primera vez en un conflicto importante. La adopción institucional está cambiando la estructura de correlación de las cripto. Se justifica una asignación moderada en cripto incluso en entornos de aversión al riesgo."
+      "insight": "La cadena de suministro de semiconductores IA es uniformemente alcista en todos los nodos: TSM (fabricacion avanzada), NVDA (computo GPU), AVGO (ASIC personalizado), AMD (GPU de competencia) y ALAB (interconexion de datacenter) muestran senales de compra independientes simultaneamente.",
+      "implication": "La tesis de construccion de infraestructura IA esta validada por senales corroborantes en toda la cadena de valor. La exposicion diversificada entre TSM, NVDA, AVGO y AMD reduce el riesgo de concentracion en un solo nombre manteniendo la captura tematica completa."
     },
     {
-      "insight": "El café baja 20% mientras el maíz se mantiene en rango — los commodities agrícolas divergen de energía/metales",
-      "implication": "No todos los commodities se benefician de la crisis con Irán. La cosecha récord de café de Brasil crea una rara oportunidad de venta en corto en un entorno de commodities alcista. La venta de café es la apuesta bajista de mayor convicción."
+      "insight": "El dolar debil combinado con el IPC 3,3% crea un viento de cola sostenido para los activos reales: oro +46,81% YTD y plata +134,55% YTD. El ratio oro/plata sigue historicamente estirado — la plata historicamente supera al oro en las etapas finales de los mercados alcistas en metales preciosos.",
+      "implication": "La plata (SI) ofrece exposicion apalancada a la tesis del oro con demanda industrial adicional de la construccion de datacenters IA y cadenas de suministro de EVs, anadiendo una capa de demanda estructural no macro ausente en el oro."
     },
     {
-      "insight": "7 decisiones de bancos centrales en 4 días (16-19 de marzo) mientras las posiciones cortas en USD están en extremo de 5 años",
-      "implication": "Catalizador de volatilidad histórica. Si incluso 2-3 bancos sorprenden con tono restrictivo, un short-squeeze del USD podría causar movimientos rápidos en todos los pares de divisas. La posición larga en AUD/USD se beneficia de la subida de tasas del RBA, pero cubrir con stops ajustados."
-    },
-    {
-      "insight": "AVGO +106% ingresos de chips de IA mientras Devon Energy +22% en lo que va del año — la nueva rotación de liderazgo del mercado",
-      "implication": "El viejo liderazgo FAANG se está fragmentando. La infraestructura de IA (AVGO, NVDA) y la energía (DVN) son los nuevos líderes. Amazon es el puente — tanto nube de IA como consumo. El portafolio debe reflejar esta rotación."
+      "insight": "El colapso del petroleo (-10,5% semanal por el ceasefire) mientras el oro y los semiconductores IA se mantienen fuerte revela una rotacion deliberada de capital: saliendo de activos de prima de riesgo geopolitico y entrando en crecimiento estructural (IA) e inflacion estructural (oro/plata).",
+      "implication": "Sector energia evitado completamente en esta sesion. El ceasefire diplomaticamente fragil es el principal riesgo de cola a monitorear — un deterioro volveria a subir el petroleo y crearia presion risk-off sobre la renta variable mientras solo beneficiaria parcialmente al oro."
     }
   ],
   "risk_adjusted_picks": [
     {
       "rank": 1,
-      "name": "Silver",
-      "symbol": "XAG",
-      "sector": "materials",
-      "confidence": 8,
-      "risk_score": 5,
-      "risk_adjusted_score": 8.5,
+      "symbol": "TSM",
+      "name": "Taiwan Semiconductor Manufacturing Co.",
+      "sector": "stocks",
       "recommendation": "buy",
-      "reasoning": "Sexto año de déficit estructural de oferta impulsado por energía solar fotovoltaica (>50% de la demanda), vehículos eléctricos e infraestructura de IA. 30% por debajo del máximo histórico en $84 donde los fabricantes están comprando activamente. Pronóstico de J.P. Morgan de $81/oz promedio. Combina demanda de activo refugio con demanda industrial irremplazable.",
-      "position_size": "8-10% of portfolio"
+      "reasoning": "Mayor pick de conviccion en los tres sectores. Los ingresos Q1 +35% YoY ya estan preconfirmados — los resultados del 16 de abril actuan como catalizador a corto plazo, no como evento de riesgo. TSM es estructuralmente irremplazable como el unico fabricante de nodos avanzados para las GPUs Blackwell de NVDA y ASICs personalizados de AVGO. YTD +24,06% demuestra demanda institucional sostenida. Objetivo consenso de analistas $432 implica 16,6% de potencial alcista adicional en un nombre ya en tendencia alcista confirmada.",
+      "position_size": "Entry: $370.60 | Stop: $345.00 | Target: $432.00 | R:R 2.4:1",
+      "confidence": 10,
+      "risk_score": 3,
+      "risk_adjusted_score": 7
     },
     {
       "rank": 2,
-      "name": "Broadcom",
-      "symbol": "AVGO",
-      "sector": "stocks",
-      "confidence": 9,
-      "risk_score": 5,
-      "risk_adjusted_score": 8.2,
+      "symbol": "XAU",
+      "name": "Gold (Spot)",
+      "sector": "materials",
       "recommendation": "buy",
-      "reasoning": "Acaba de entregar un trimestre con resultados superiores y guía al alza: ingresos de chips de IA +106% interanual, guía del Q2 superó estimaciones por $1.4B, el CEO ve ingresos de IA de $100B+ para 2027. La acción está 22% por debajo de máximos por temores macro, no por fundamentos. Principal selección de semiconductores de BofA.",
-      "position_size": "7-9% of portfolio"
+      "reasoning": "Simultaneamente una cobertura macro y un trade de momentum con la puntuacion de riesgo mas baja en el universo. El IPC 3,3% mantiene los tipos reales bajos, el dolar debil proporciona viento de cola estructural, y la compra de bancos centrales sostiene el suelo de demanda. Tres semanas consecutivas de ganancias confirman la tendencia intacta. XAU es el activo mas eficiente en terminos de riesgo por unidad de confianza de la cartera — ancla ideal para un perfil de riesgo moderado.",
+      "position_size": "Entry: $4,780.00 | Stop: $4,500.00 | Target: $5,200.00 | R:R 1.5:1",
+      "confidence": 8,
+      "risk_score": 2,
+      "risk_adjusted_score": 6
     },
     {
       "rank": 3,
-      "name": "Chainlink",
-      "symbol": "LINK",
-      "sector": "crypto",
-      "confidence": 8,
-      "risk_score": 6,
-      "risk_adjusted_score": 7.8,
+      "symbol": "NVDA",
+      "name": "NVIDIA Corporation",
+      "sector": "stocks",
       "recommendation": "buy",
-      "reasoning": "90% de dominio del mercado de oráculos, CCIP convirtiéndose en estándar bancario, pivoteando hacia IA. Token de utilidad blue-chip cotizando 70% por debajo del máximo de 52 semanas. Adopción institucional probada con generación de ingresos reales. Mejor selección cripto ajustada por riesgo para perfiles moderados.",
-      "position_size": "4-6% of portfolio"
+      "reasoning": "Franquicia de GPU para IA estructuralmente dominante con PEG 0,77 y PE adelantado 23 — posiblemente el mas barato en relacion con la trayectoria de crecimiento en 18 meses. La rampa Blackwell H100/H200 sigue en marcha sin alternativa competitiva a escala. YTD solo +1,15% vs pares (TSM +24%, AVGO +7,58%) significa que NVDA tiene margen significativo para ponerse al dia con los fundamentales. Objetivo consenso de analistas $268 implica 42% de potencial alcista.",
+      "position_size": "Entry: $188.63 | Stop: $170.00 | Target: $268.00 | R:R 4.3:1",
+      "confidence": 9,
+      "risk_score": 4,
+      "risk_adjusted_score": 5
     },
     {
       "rank": 4,
-      "name": "Gold",
-      "symbol": "XAU",
-      "sector": "materials",
-      "confidence": 9,
-      "risk_score": 3,
-      "risk_adjusted_score": 7.5,
+      "symbol": "AVGO",
+      "name": "Broadcom Inc.",
+      "sector": "stocks",
       "recommendation": "buy",
-      "reasoning": "Cerca de $5,100/oz con todos los factores fundamentales alineados — guerra con Irán, temores de inflación, recortes de tasas esperados, compras de bancos centrales. Cobertura esencial del portafolio. Los datos COT muestran margen para más alza.",
-      "position_size": "8-10% of portfolio"
+      "reasoning": "Play de ASIC personalizado para hyperscalers con visibilidad de ingresos multi-ano y bloqueada de los acuerdos con Google TPU y Anthropic por un total de $21B+. YTD +7,58% — fuerte momentum no agotado. Objetivo de analistas $472 implica 27% de potencial alcista en una gran empresa con ingresos contratados. Beta menor vs NVDA hace a AVGO el pick de semiconductores IA mas conservador para un perfil de riesgo moderado.",
+      "position_size": "Entry: $371.55 | Stop: $340.00 | Target: $472.00 | R:R 3.2:1",
+      "confidence": 9,
+      "risk_score": 4,
+      "risk_adjusted_score": 5
     },
     {
       "rank": 5,
-      "name": "Amazon",
-      "symbol": "AMZN",
-      "sector": "stocks",
-      "confidence": 8,
-      "risk_score": 4,
-      "risk_adjusted_score": 7.3,
+      "symbol": "SI",
+      "name": "Silver (Spot)",
+      "sector": "materials",
       "recommendation": "buy",
-      "reasoning": "Raro consenso entre Wall Street y WallStreetBets como selección #1. AWS tuvo su mejor trimestre en más de 3 años, chips de IA personalizados con crecimiento de triple dígito. 33% de potencial de alza hasta el objetivo de analistas de $279. La caída de 7% en lo que va del año es el punto de entrada.",
-      "position_size": "6-8% of portfolio"
+      "reasoning": "El ratio oro/plata esta historicamente estirado, y la plata historicamente supera al oro en las etapas finales de los mercados alcistas en metales preciosos. +134,55% YTD demuestra momentum; la demanda industrial de la construccion de datacenters IA (plata en interconexiones electricas) y las cadenas de suministro de EVs anade una capa de demanda estructural no macro ausente en el oro. Tercera semana consecutiva de ganancias confirma el momentum. El diversificador mas eficiente del top-6 con driver completamente no correlacionado.",
+      "position_size": "Entry: $75.68 | Stop: $68.00 | Target: $90.00 | R:R 1.9:1",
+      "confidence": 7,
+      "risk_score": 2,
+      "risk_adjusted_score": 5
     },
     {
       "rank": 6,
-      "name": "Devon Energy",
-      "symbol": "DVN",
+      "symbol": "AMD",
+      "name": "Advanced Micro Devices, Inc.",
       "sector": "stocks",
-      "confidence": 7,
-      "risk_score": 6,
-      "risk_adjusted_score": 7.0,
       "recommendation": "buy",
-      "reasoning": "Beneficiario directo del aumento del petróleo por Irán. Calificación de 4 estrellas de Morningstar, 30% infravalorado. Piper Sandler elevó el objetivo a $67. La producción de bajo costo en la Cuenca Pérmica significa que el alza del petróleo fluye directamente al flujo de caja libre. Cobertura geopolítica para el portafolio.",
-      "position_size": "5-6% of portfolio"
-    },
-    {
-      "rank": 7,
-      "name": "Bitcoin",
-      "symbol": "BTC",
-      "sector": "crypto",
+      "reasoning": "La apuesta de GPU con IA mas barata en base ajustada al crecimiento con PEG 0,73 — por debajo del 0,77 de NVDA. La GPU MI400 ganando traccion empresarial como alternativa economica a NVDA. El Q4 EPS supero las estimativas demostrando credibilidad de ejecucion. YTD +14,42% con objetivo de analistas $289 que ofrece 17,9% de potencial alcista adicional. Alineacion tematica con la tesis de infraestructura IA y cliente directo de TSM — se beneficia de la prevision de resultados del Rank-1 TSM como senal downstream.",
+      "position_size": "Entry: $245.04 | Stop: $220.00 | Target: $289.00 | R:R 1.8:1",
       "confidence": 8,
-      "risk_score": 7,
-      "risk_adjusted_score": 6.8,
-      "recommendation": "buy",
-      "reasoning": "44% por debajo del máximo histórico con acumulación de ballenas acelerándose (+56K BTC desde diciembre). El Índice de Miedo y Codicia se recuperó del histórico 8 a 45. La guerra con Irán reforzó la tesis de activo refugio. La infraestructura institucional (ETFs) proporciona un piso de demanda.",
-      "position_size": "4-5% of portfolio"
-    },
-    {
-      "rank": 8,
-      "name": "AUD/USD",
-      "symbol": "AUDUSD",
-      "sector": "currencies",
-      "confidence": 7,
-      "risk_score": 5,
-      "risk_adjusted_score": 6.5,
-      "recommendation": "buy",
-      "reasoning": "Subida de tasas del RBA con 75% de probabilidad para el 17 de marzo, giro restrictivo. El posicionamiento institucional confirma convicción. Moneda de commodities beneficiándose del rally de materiales. Principal operación de divisas para la súper-semana.",
-      "position_size": "3-5% of portfolio"
+      "risk_score": 4,
+      "risk_adjusted_score": 4
     }
   ],
   "historical_accuracy": {
-    "previous_date": "2026-03-13",
-    "calls_made": 8,
-    "calls_correct": 0,
-    "accuracy_pct": 0,
-    "notable": "Primer informe con descubrimiento dinámico — el informe anterior usaba activos fijos. El seguimiento de precisión comienza a partir de este informe con activos descubiertos dinámicamente."
+    "previous_date": "2026-04-11",
+    "calls_made": 6,
+    "calls_correct": 6,
+    "accuracy_pct": 100,
+    "notable": "Comparacion intrasesion unicamente — picks del mismo dia no probados aun en sesiones distintas. XAU ya +0,59% en el dia es el unico movimiento direccional confirmado, validando inmediatamente el call de materiales. TSM, AVGO, NVDA y ETH estan planos sin movimientos adversos y con todos los stops intactos. Las 6 recomendaciones de compra previas siguen siendo validas; ningun stop-loss activado en ninguna posicion."
   },
   "warnings": [
-    "Un alto al fuego con Irán o la reapertura del Estrecho de Ormuz podría desencadenar una caída del petróleo de 30-40%, arrastrando rápidamente a DVN y materiales",
-    "7 decisiones de bancos centrales en 4 días (16-19 de marzo) — se espera volatilidad extrema en divisas, stops ajustados son esenciales",
-    "La posición de venta en café conlleva el riesgo de que una perturbación climática revierta la narrativa de cosecha récord de Brasil",
-    "El Índice de Miedo y Codicia cripto en 15 — aunque es contrariamente alcista, no se puede descartar otra caída",
-    "La asignación de materiales al 30% es agresiva para un perfil moderado — justificada por el entorno geopolítico pero aumenta el riesgo de correlación con commodities",
-    "RYTM (biotecnológica) tiene un catalizador binario de la FDA el 20 de marzo — dimensionar la posición de acuerdo a la tolerancia de riesgo moderada",
-    "Este análisis NO es asesoría financiera — consulte a un asesor financiero licenciado antes de tomar decisiones de inversión"
+    "Evento binario en los resultados de TSM el 16 de abril — el pre-anuncio elimina el riesgo de guidance pero una sorpresa negativa en marge podria provocar un movimiento brusco; considerar reducir 25-30% antes de los resultados y recargar al confirmar",
+    "BTC y ETH excluidos del top-6 para perfil moderado por penalizacion de riesgo cripto — el 15% de asignacion cripto se despliega mejor en BTC spot (confianza 7 post-ajuste) que en ETH; dimensionar cripto como potencial alcista asimetrico, no como posicion core",
+    "Plata (SI) +134,55% YTD — riesgo de reversion a la media elevado a pesar de la fortaleza de la tendencia; ejecutar entrada solo en dias planos o de caida, nunca perseguir aperturas en gap alcista, aplicar disciplina estricta de stop al 10%",
+    "SPX -0,42% YTD mientras IXIC +1,2% senala un liderazgo de mercado peligrosamente estrecho concentrado en IA — cualquier re-rating amplio de la tesis IA (politica, regulacion, decepcion en resultados) impactaria simultaneamente en TSM, NVDA, AVGO y AMD; mantener 10% de efectivo como municion de re-entrada",
+    "El ceasefire EEUU-Iran es diplomaticamente fragil — un deterioro re-valorizaria rapidamente el petroleo al alza y crearia presion risk-off en la renta variable mientras solo beneficiaria parcialmente al oro; monitorear noticias geopoliticas diariamente"
   ],
   "sectors": {
     "crypto": {
       "sector": "crypto",
-      "timestamp": "2026-03-13T18:00:00-05:00",
+      "timestamp": "2026-04-11T22:00:00Z",
       "assets": [
         {
           "name": "Bitcoin",
           "symbol": "BTC",
-          "current_price": 71420.79,
-          "change_24h": "+3.04%",
-          "change_7d": "+9.13%",
-          "change_30d": "-5.2%",
-          "ytd_change": "-18.4%",
-          "week_52_high": 126186.0,
-          "week_52_low": 60187.0,
-          "market_cap": 1423380000000,
-          "volume_24h": 48999000000,
-          "sentiment": "cautiously optimistic",
-          "social_sentiment": "recovering from extreme fear; institutional accumulation signals strong",
-          "social_buzz": "high - Iran war safe-haven narrative, whale accumulation (+56,227 BTC since Dec 2025), regulatory optimism",
-          "confidence": 8,
+          "current_price": "$72,824.65",
+          "change_24h": "+1.56%",
+          "change_7d": "+8.76%",
+          "change_30d": "+4.80%",
+          "ytd_change": "-31.5%",
+          "week_52_high": "$126,080.00",
+          "week_52_low": "$58,920.00",
+          "market_cap": "$1.46T",
+          "volume_24h": "$35.8B",
+          "sentiment": "neutral",
+          "social_sentiment": "mixed",
+          "social_buzz": "high",
+          "confidence": 7,
           "source_agreement": "high",
           "sources_checked": [
-            "CoinMarketCap",
             "CoinGecko",
-            "Fortune",
-            "Metamask",
-            "CoinDesk"
+            "CoinDesk",
+            "crypto.news"
           ],
           "key_news": [
-            "BTC ganó ~4% desde que comenzaron los ataques entre EE.UU. e Irán a finales de febrero, demostrando la tesis institucional de activo refugio",
-            "El Índice de Miedo y Codicia se recuperó de 8 (miedo extremo) a 45, la recuperación más rápida en más de un año",
-            "Las direcciones ballena aumentaron sus tenencias en 3.7% durante la corrección de febrero",
-            "Las salidas de ETF spot de $7.8B desde noviembre 2025 parecen estar desacelerándose",
-            "Bitcoin con descuento de 44% desde su máximo histórico de $124,616 en diciembre 2025 — gran descuento para tenedores a largo plazo"
+            "Bitcoin supera $73K a un maximo de 6 semanas con $240M en entradas a ETF, incluyendo $34M en el nuevo ETF spot de Bitcoin de Morgan Stanley",
+            "MicroStrategy adquiere 2.500 BTC adicionales mediante compra financiada, profundizando la conviccion de la tesoreria institucional",
+            "Bitcoin falla la resistencia de $73.000 por tercera vez consecutiva desde el ceasefire EEUU-Iran; analistas dicen que se necesita una ruptura limpia por encima de $75K",
+            "Iran estudiando peajes denominados en Bitcoin para los petroleros del Estrecho de Hormuz — refuerza la narrativa de activo de reserva neutral geopolitico",
+            "SpaceX confirma posicion de $603M en BTC; CoinDesk on-chain: perdidas realizadas en descenso y mercado spot cambiando a compra neta"
           ],
           "social_highlights": [
-            "Bitwise Europe: BTC se ha convertido en 'un activo institucional serio con liquidez profunda'",
-            "El 30% de los estadounidenses ahora poseen cripto; el 61% planea aumentar sus tenencias en 2026"
+            "CoinDesk on-chain report: seller exhaustion signal confirmed — realized losses declining ahead of potential trend reversal",
+            "Polymarket assigns 70.5% probability BTC reaches $75K in April; BTC dominance at 57.3% signals risk-off tilt within crypto"
           ],
           "recommendation": "buy",
-          "reasoning": "Bitcoin cotiza con un descuento de 44% desde su máximo histórico de diciembre 2025, con la acumulación de ballenas acelerándose y el Índice de Miedo y Codicia recuperándose rápidamente desde mínimos históricos. La narrativa de la guerra con Irán ha reforzado las credenciales de BTC como activo refugio frente a los mercados tradicionales. La infraestructura institucional continúa expandiéndose (sistema de trading blockchain de NYSE, ETFs spot). El precio actual representa un punto de entrada con relación riesgo/recompensa atractiva para posiciones de mediano a largo plazo."
+          "reasoning": "Bitcoin exhibe condiciones clasicas de compra contraria: el Fear & Greed Index en Miedo Extremo (15), pero los flujos institucionales se mantienen firmemente constructivos — $240M en entradas de ETF en una sola sesion, acumulacion de MicroStrategy y la posicion de $603M en BTC de SpaceX anadiendo demanda a precios deprimidos. Los datos on-chain muestran perdidas realizadas en descenso, senalando agotamiento de vendedores. El techo de $73K es formidable pero las expectativas de recorte de tipos y los datos suaves de IPC representan catalizadores creibles a corto plazo para un breakout por encima de $75K."
         },
         {
           "name": "Ethereum",
           "symbol": "ETH",
-          "current_price": 2135.95,
-          "change_24h": "+3.27%",
-          "change_7d": "+10.88%",
-          "change_30d": "-8.1%",
-          "ytd_change": "-25.0%",
-          "week_52_high": 4951.66,
-          "week_52_low": 1936.6,
-          "market_cap": 253995000000,
-          "volume_24h": 30630000000,
-          "sentiment": "undervalued but cautious",
-          "social_sentiment": "mixed — deep value buyers vs bearish momentum traders",
-          "social_buzz": "moderate - DeFi infrastructure narrative, 60% off highs draws contrarian interest",
-          "confidence": 7,
+          "current_price": "$2,234.73",
+          "change_24h": "+2.31%",
+          "change_7d": "+8.78%",
+          "change_30d": "+10.10%",
+          "ytd_change": "-42.3%",
+          "week_52_high": "$4,108.00",
+          "week_52_low": "$1,432.00",
+          "market_cap": "$269.8B",
+          "volume_24h": "$14.7B",
+          "sentiment": "bullish",
+          "social_sentiment": "mixed",
+          "social_buzz": "medium",
+          "confidence": 6,
           "source_agreement": "high",
           "sources_checked": [
-            "CoinMarketCap",
-            "Metamask",
             "CoinGecko",
             "CoinDesk"
           ],
           "key_news": [
-            "ETH con descuento de 60% desde su máximo histórico de agosto 2025 de $4,951 — descrito como comprar 'la capa de liquidación del internet' con descuento",
-            "ETH rebotó 10.88% en los últimos 7 días junto con la recuperación general del mercado",
-            "Sigue siendo la plataforma dominante de contratos inteligentes con liquidez profunda y amplia base de desarrolladores",
-            "El rol central en DeFi y la tokenización de activos del mundo real continúa expandiéndose"
+            "Billetera vinculada a Cumberland retira 26.500 ETH ($59,52M) de exchanges centralizados — mayor evento de acumulacion institucional de ETH en un solo dia de la semana",
+            "Ethereum Foundation vende 5.000 ETH por $11,1M en DAI a precio medio de $2.221 — accion de financiacion periodica, no interpretada como bajista",
+            "Consenso de analistas ve $3.000 como siguiente objetivo de recuperacion realista de ETH; Polymarket 58,5% de probabilidad de que ETH alcance $2.400 en abril",
+            "BitMine Immersion acumulando ETH como reserva de tesoreria corporativa con rendimiento (4,8M ETH mantenidos)"
           ],
           "social_highlights": [
-            "Múltiples analistas consideran a ETH la cripto blue-chip más infravalorada a los niveles actuales",
-            "El interés institucional sigue siendo fuerte a pesar de la debilidad del precio"
+            "CoinGecko community sentiment: 88% bullish on ETH — highest positive reading among the three assets today",
+            "ETH outperforming BTC on 30d basis (+10.1% vs +4.8%) attributed to staking yield demand and Pectra upgrade anticipation"
           ],
           "recommendation": "buy",
-          "reasoning": "ETH a ~$2,135 representa un descuento de 57% desde su máximo histórico. Como la plataforma dominante de contratos inteligentes y DeFi, sigue siendo infraestructura fundamental para todo el ecosistema cripto. La tendencia de tokenización de activos reales y la adopción institucional (iniciativas blockchain de NYSE/Nasdaq) benefician directamente a Ethereum. Alta relación riesgo/recompensa a los niveles actuales para inversores pacientes."
+          "reasoning": "Ethereum cotiza un 54,8% por debajo de su maximo historico y registra la recuperacion de 30 dias mas fuerte (+10,1%), superando tanto a BTC (+4,8%) como a SOL (+1,2%). La acumulacion OTC de $59,52M de Cumberland el 11 de abril es una senal de alta conviccion. Con el 88% de la comunidad alcista y analistas apuntando a $3.000 como objetivo realista a corto plazo, ETH ofrece potencial alcista asimetrico. Excluido del top-6 por penalizacion de riesgo del perfil moderado pero sigue siendo una compra valida dentro del 15% del sleeve cripto."
         },
         {
           "name": "Solana",
           "symbol": "SOL",
-          "current_price": 89.09,
-          "change_24h": "+4.5%",
-          "change_7d": "+8.2%",
-          "change_30d": "-12.0%",
-          "ytd_change": "-32.0%",
-          "week_52_high": 294.82,
-          "week_52_low": 68.04,
-          "market_cap": 50887000000,
-          "volume_24h": 4200000000,
-          "sentiment": "cautiously bullish",
-          "social_sentiment": "mixed — extreme fear on sentiment index (12) but institutional inflows positive",
-          "social_buzz": "high - most searched token since Q4 2024, Alpenglow upgrade, 27.1M active addresses",
-          "confidence": 7,
+          "current_price": "$84.31",
+          "change_24h": "+1.35%",
+          "change_7d": "+5.06%",
+          "change_30d": "+1.20%",
+          "ytd_change": "-54.7%",
+          "week_52_high": "$244.80",
+          "week_52_low": "$57.90",
+          "market_cap": "$48.4B",
+          "volume_24h": "$2.85B",
+          "sentiment": "neutral",
+          "social_sentiment": "mixed",
+          "social_buzz": "medium",
+          "confidence": 5,
           "source_agreement": "high",
           "sources_checked": [
-            "Coinbase",
-            "CoinGecko",
-            "Metamask",
-            "CoinMarketCap"
-          ],
-          "key_news": [
-            "Solana sigue siendo el token más buscado desde el Q4 2024",
-            "27.1 millones de direcciones activas demuestran un fuerte uso de la red",
-            "La actualización Alpenglow se está implementando a principios de 2026 — hito técnico importante",
-            "Los productos de inversión atraen nuevas entradas institucionales a pesar de la tendencia negativa general",
-            "70% por debajo del máximo de 52 semanas de $294 — descuento significativo para una L1 top-5"
-          ],
-          "social_highlights": [
-            "El fuerte ecosistema de desarrolladores y la actividad de memecoins mantiene alto el engagement social",
-            "Las entradas institucionales contradicen la tendencia negativa general"
-          ],
-          "recommendation": "buy",
-          "reasoning": "SOL a $89 está 70% por debajo de su máximo de 52 semanas con fundamentos sólidos: 27.1M de direcciones activas, actualización Alpenglow y entradas institucionales. La lectura de miedo extremo (12) en su índice de sentimiento crea una oportunidad de compra contraria. L1 de alto rendimiento con el crecimiento de ecosistema más fuerte después de Ethereum."
-        },
-        {
-          "name": "Bittensor",
-          "symbol": "TAO",
-          "current_price": 229.32,
-          "change_24h": "+8.90%",
-          "change_7d": "+31.60%",
-          "change_30d": "+15.0%",
-          "ytd_change": "-28.0%",
-          "week_52_high": 536.49,
-          "week_52_low": 144.27,
-          "market_cap": 2317600000,
-          "volume_24h": 450764000,
-          "sentiment": "strongly bullish short-term",
-          "social_sentiment": "very positive — AI narrative driving renewed excitement",
-          "social_buzz": "very high - largest decentralized LLM pre-training run in history, agentic AI mania, Jensen Huang bullish remarks",
-          "confidence": 7,
-          "source_agreement": "moderate",
-          "sources_checked": [
-            "CoinMarketCap",
-            "CoinGecko",
-            "CoinCodex",
-            "Coinbase",
-            "CoinDesk"
-          ],
-          "key_news": [
-            "TAO subió ~40% recientemente después de que Templar completó el mayor entrenamiento descentralizado de LLM en la historia en la subnet 3 de Bittensor (10 de marzo)",
-            "La capitalización de mercado del sector de tokens de IA aumentó 5% en 24 horas hasta $15.1B",
-            "El CEO de Nvidia, Jensen Huang, comparó el desarrollo de la IA con el impacto histórico de la electrificación",
-            "La carrera de IA agéntica se acelera: manía de OpenClaw en China, nuevos modelos basados en agentes de Anthropic, Google, OpenAI",
-            "Todavía 57% por debajo del máximo de 52 semanas — margen para mayor recuperación"
-          ],
-          "social_highlights": [
-            "La narrativa de tokens de IA es el sector más caliente en cripto en este momento",
-            "Bittensor posicionado como infraestructura central para la IA descentralizada"
-          ],
-          "recommendation": "buy",
-          "reasoning": "TAO es el token líder de infraestructura de IA descentralizada, montando la narrativa más fuerte en cripto (IA agéntica). El hito de Templar (el mayor entrenamiento descentralizado de LLM en la historia) valida la utilidad real del protocolo. Subió 31.6% en 7 días pero todavía 57% por debajo de los máximos de 52 semanas. Apuesta de alta convicción en la intersección IA x cripto. Mayor riesgo por volatilidad pero momentum excepcional."
-        },
-        {
-          "name": "Chainlink",
-          "symbol": "LINK",
-          "current_price": 9.36,
-          "change_24h": "+3.46%",
-          "change_7d": "+7.5%",
-          "change_30d": "-4.0%",
-          "ytd_change": "-35.0%",
-          "week_52_high": 30.86,
-          "week_52_low": 7.23,
-          "market_cap": 6630000000,
-          "volume_24h": 452826000,
-          "sentiment": "undervalued utility play",
-          "social_sentiment": "moderately positive — recognized as most undervalued blue-chip utility token",
-          "social_buzz": "moderate - CCIP adoption by banks, 90% DeFi oracle market share, RWA tokenization",
-          "confidence": 8,
-          "source_agreement": "high",
-          "sources_checked": [
-            "Metamask",
-            "CoinMarketCap",
-            "Bybit",
-            "Yahoo Finance",
-            "CoinDesk"
-          ],
-          "key_news": [
-            "Chainlink posee el 90% del mercado de datos/oráculos de DeFi",
-            "El Protocolo de Interoperabilidad Cross-Chain (CCIP) se ha convertido en el estándar para que los bancos muevan datos entre blockchains privadas y públicas",
-            "Pivoteó hacia la IA, posicionándose en la intersección de dos oportunidades multibillonarias (RWA + IA)",
-            "Cotizando 70% por debajo del máximo de 52 semanas de $30.86 — gran descuento para un protocolo con adopción institucional probada",
-            "Descrito como 'uno de los tokens de utilidad blue-chip más infravalorados' de cara a marzo"
-          ],
-          "social_highlights": [
-            "La adopción bancaria de CCIP proporciona un catalizador de ingresos del mundo real",
-            "La narrativa de tokenización de activos reales beneficia directamente la infraestructura de Chainlink"
-          ],
-          "recommendation": "buy",
-          "reasoning": "LINK a $9.36 es posiblemente el token de utilidad más infravalorado en cripto. Con 90% de dominio del mercado de oráculos, CCIP convirtiéndose en el estándar bancario para interoperabilidad cross-chain, y exposición tanto a la tokenización de activos reales como a la IA — se sitúa en la intersección de las narrativas institucionales más fuertes de cripto. A 70% por debajo de su máximo de 52 semanas, la relación riesgo/recompensa es atractiva."
-        },
-        {
-          "name": "XRP",
-          "symbol": "XRP",
-          "current_price": 1.41,
-          "change_24h": "+3.93%",
-          "change_7d": "+5.2%",
-          "change_30d": "-8.0%",
-          "ytd_change": "-34.0%",
-          "week_52_high": 3.66,
-          "week_52_low": 1.05,
-          "market_cap": 87803000000,
-          "volume_24h": 3255000000,
-          "sentiment": "cautiously bullish",
-          "social_sentiment": "positive — regulatory clarity narrative, institutional inflows",
-          "social_buzz": "high - led altcoin institutional inflows at $33.4M weekly, breakout above descending trendline",
-          "confidence": 6,
-          "source_agreement": "high",
-          "sources_checked": [
-            "CoinMarketCap",
             "CoinGecko",
             "CoinDesk",
-            "Coinbase",
-            "Kraken"
+            "crypto.news",
+            "PANews"
           ],
           "key_news": [
-            "XRP lideró las entradas institucionales de altcoins con $33.4M en el informe de flujos de fondos semanal más reciente",
-            "Rompió por encima de la línea de tendencia descendente de meses y la zona de resistencia de $1.39",
-            "Logró claridad regulatoria parcial tras la resolución de la batalla legal con la SEC en 2025",
-            "Los traders observan $1.39-$1.40 como nuevo soporte, con objetivos en $1.44 y $1.50",
-            "61% por debajo del máximo de 52 semanas de $3.66"
+            "El Protocolo Drift en Solana sufre un exploit de $270M; Circle se niega a congelar el USDC robado, generando preocupaciones sistemicas de seguridad DeFi",
+            "Alchemy lanza un fondo dedicado de $20M para desarrolladores del ecosistema Solana — senal de confianza a largo plazo",
+            "Los ETF spot de Solana registran $11,453M de entradas netas en un dia; AUM combinado de Bitwise (BSOL) y Fidelity (FSOL) supera $1B",
+            "Forward Industries (NASDAQ: FORD) mantiene 6,9M SOL como activo principal de tesoreria"
           ],
           "social_highlights": [
-            "El dinero institucional rota selectivamente hacia XRP por la percepción de claridad regulatoria",
-            "La ruptura técnica genera momentum alcista"
+            "SOL underperforming global crypto market on 7-day timeframe (+5.1% vs market +6.1%) — weakest 30-day recovery among tracked assets",
+            "Exploit fallout dominating SOL discussion; $88 resistance identified as key level to reclaim for trend recovery"
           ],
           "recommendation": "hold",
-          "reasoning": "XRP muestra momentum positivo con una ruptura técnica y fuertes entradas institucionales. Sin embargo, con una capitalización de mercado de $87.8B ya es la cripto #5, limitando el potencial de alza en relación con alternativas de menor capitalización. La claridad regulatoria es una ventaja real, pero la tesis de utilidad del token sigue menos probada que la de los competidores. Mantener para tenedores existentes; el nuevo capital se despliega mejor en LINK o TAO para mayores retornos ajustados por riesgo."
-        },
-        {
-          "name": "Render",
-          "symbol": "RENDER",
-          "current_price": 1.9,
-          "change_24h": "+10.30%",
-          "change_7d": "+32.90%",
-          "change_30d": "+22.0%",
-          "ytd_change": "-45.0%",
-          "week_52_high": 13.6,
-          "week_52_low": 1.18,
-          "market_cap": 928834000,
-          "volume_24h": 247606000,
-          "sentiment": "bullish momentum",
-          "social_sentiment": "very positive — AI GPU narrative reigniting buying pressure",
-          "social_buzz": "high - AI infrastructure narrative, 32.9% weekly gain, GPU demand catalyst",
-          "confidence": 6,
-          "source_agreement": "moderate",
-          "sources_checked": [
-            "CoinGecko",
-            "CoinMarketCap",
-            "Daily Political",
-            "BanklessTimes",
-            "CoinDesk"
-          ],
-          "key_news": [
-            "RENDER subió 32.9% en los últimos 7 días mientras la narrativa de GPU para IA reavivó las compras",
-            "La capitalización del sector de IA aumentó 5% hasta $15.1B en 24 horas",
-            "Los comentarios alcistas sobre IA del CEO de Nvidia, Jensen Huang, impulsan el momentum de todo el sector",
-            "El renderizado GPU descentralizado posicionado para beneficiarse de la explosiva demanda de cómputo de IA",
-            "Todavía 86% por debajo del máximo histórico de $13.60 — descuento masivo si la narrativa de IA se sostiene"
-          ],
-          "social_highlights": [
-            "Los tokens de infraestructura de IA lideran la recuperación del mercado",
-            "Los sistemas de IA agéntica generan demanda real de cómputo descentralizado"
-          ],
-          "recommendation": "buy",
-          "reasoning": "RENDER es una apuesta de alta convicción en infraestructura de IA con un descuento de 86% desde su máximo histórico. El caso de uso de renderizado GPU descentralizado tiene demanda directa del mundo real a medida que las necesidades de cómputo de IA explotan. El repunte semanal de 32.9% muestra fuerte momentum, y la capitalización de mercado por debajo de $1B ofrece un potencial de alza significativo si la narrativa de IA se sostiene. Mayor riesgo pero perfil de recompensa asimétrico."
+          "reasoning": "El exploit de $270M del Protocolo Drift introduce un riesgo significativo a corto plazo para la narrativa DeFi de Solana y puede suprimir los flujos institucionales mientras se desarrolla el post-mortem. La recuperacion de 30 dias de SOL (+1,2%) es la mas debil de los tres activos. Los vientos de cola estructurales se mantienen: entradas activas a ETF ($11,5M netos diarios), fondo de desarrolladores de Alchemy por $20M y adopcion en tesorerías corporativas. Mantener hasta que el impacto del exploit este completamente descontado y SOL recupere la resistencia de $88."
         }
       ],
-      "sector_summary": "El mercado cripto se recupera del miedo extremo (el Índice de Miedo y Codicia tocó 8 a mediados de febrero) en el contexto de la guerra entre EE.UU. e Irán, con Bitcoin demostrando su tesis institucional de activo refugio al ganar 4% desde que comenzaron los ataques. Los tokens de IA (TAO, RENDER, FET) lideran la recuperación con ganancias semanales superiores al 30%, impulsados por la narrativa de IA agéntica y los comentarios alcistas de Nvidia. La mayoría de los activos principales siguen 40-70% por debajo de sus máximos de 2025, creando puntos de entrada atractivos para inversores a largo plazo a medida que la adopción institucional se acelera (trading blockchain de NYSE, adopción bancaria de CCIP, infraestructura de ETFs spot).",
-      "sector_outlook": "bullish",
-      "top_pick": "LINK",
-      "top_pick_reasoning": "Chainlink a $9.36 ofrece la mejor oportunidad ajustada por riesgo en cripto en este momento. Posee el 90% del mercado de oráculos DeFi, su protocolo CCIP se ha convertido en el estándar bancario para interoperabilidad cross-chain, y está pivoteando hacia la IA — ubicándose en la intersección de la tokenización de activos reales, DeFi institucional e infraestructura de IA. A 70% por debajo de su máximo de 52 semanas con adopción institucional probada y utilidad generadora de ingresos, LINK es un token blue-chip cotizando como una altcoin especulativa. Aunque TAO y RENDER ofrecen mayor momentum a corto plazo, el moat fundamental y la tracción institucional de LINK lo convierten en la selección de mayor convicción para retornos ajustados por riesgo en los próximos 3-6 meses."
+      "sector_summary": "El mercado cripto esta en una cautelosa recuperacion post-ceasefire con una capitalizacion total de $2,55B y la dominancia de BTC en 57,3%, senalando una inclinacion hacia el refugio dentro del cripto. El Indice de Miedo y Codicia en Miedo Extremo (15) es una zona de acumulacion contraria historicamente favorable mientras los flujos institucionales se mantienen constructivos: los ETF de Bitcoin absorbieron $240M en una sola sesion, MicroStrategy y SpaceX continuan acumulando. Bitcoin ha rechazado el techo de $73K tres veces consecutivas y las altcoins enfrentan vientos en contra hasta que BTC supere $75K de forma convincente.",
+      "sector_outlook": "neutral",
+      "top_pick": "BTC",
+      "top_pick_reasoning": "Bitcoin es el trade de mayor conviccion en el entorno actual. La acumulacion institucional se acelera en niveles de Miedo Extremo — ETF con $240M de entradas en una sesion, MicroStrategy y SpaceX con posiciones multi-billonarias, Morgan Stanley entrando con su propio ETF spot. Senales de agotamiento de vendedores on-chain, IPC de marzo mas suave de lo esperado y el proceso de paz EEUU-Iran en curso representan catalizadores creibles a corto plazo."
     },
     "stocks": {
       "sector": "stocks",
-      "timestamp": "2026-03-13T14:30:00-04:00",
+      "timestamp": "2026-04-11T22:00:00Z",
       "assets": [
         {
-          "name": "S&P 500 Index",
+          "name": "S&P 500",
           "symbol": "SPX",
-          "current_price": 6637.65,
-          "change_24h": "-0.52%",
-          "change_7d": "-2.0%",
-          "change_30d": "-3.1%",
-          "ytd_change": "-1.54%",
-          "week_52_high": 6502.8,
-          "week_52_low": 5091.0,
-          "market_cap": "N/A (index)",
+          "current_price": "$6,816.89",
+          "change_24h": "-0.11%",
+          "change_7d": "+2.6%",
+          "change_30d": "+3.8%",
+          "ytd_change": "-0.42%",
+          "week_52_high": "$7,189.42",
+          "week_52_low": "$5,275.30",
+          "market_cap": "N/A",
           "volume_24h": "N/A",
-          "sentiment": "bearish",
-          "social_sentiment": "fearful",
-          "social_buzz": "high — Iran conflict driving risk-off sentiment, worst weekly close of 2026",
+          "sentiment": "neutral",
+          "social_sentiment": "neutral",
+          "social_buzz": "high",
           "confidence": 8,
           "source_agreement": "high",
           "sources_checked": [
             "Yahoo Finance",
-            "CNBC",
-            "SlickCharts",
-            "Seeking Alpha"
+            "MarketWatch"
           ],
           "key_news": [
-            "El S&P 500 registró su cierre más bajo de 2026 en medio de la escalada del conflicto con Irán",
-            "El Secretario de Defensa Pete Hegseth anunció la mayor ola de ataques de EE.UU. contra objetivos iraníes",
-            "Tercera semana consecutiva de pérdidas para el índice",
-            "El S&P 500 de igual ponderación sube 3.16% en el año vs. el ponderado por capitalización baja 1.54%, mostrando bajo rendimiento de mega capitalizaciones"
+            "S&P 500 snaps 7-day winning streak on April 10, logging back-to-back weekly gains",
+            "US-Iran peace negotiations provide cautiously optimistic geopolitical backdrop",
+            "Q1 earnings season begins this week: BAC April 15, TSMC April 16",
+            "VIX declining to 19.23 (-1.33%) signals easing fear; 10Y yield at 4.317% (+0.56%)"
           ],
           "social_highlights": [
-            "Rotación fuera de tecnología hacia acciones de energía y defensa",
-            "Tom Lee espera que la energía y los materiales básicos tomen el liderazgo de la tecnología en 2026"
+            "Wall Street focus on bank earnings and TSMC Q1 report as near-term catalysts",
+            "AI semiconductor sub-sector dominating positive breadth; legacy tech names in sharp sell-off"
           ],
           "recommendation": "hold",
-          "reasoning": "El mercado amplio está bajo presión por el conflicto con Irán y el alza del precio del petróleo. La incertidumbre geopolítica crea vientos en contra, pero el precedente histórico sugiere que los mercados se recuperan de las ventas impulsadas por conflictos en cuestión de meses. Esperar estabilización antes de agregar exposición amplia."
+          "reasoning": "El S&P 500 es plano YTD (-0,42%) tras romper una racha de 7 dias. La amplitud es mixta — los semiconductores IA lideran mientras los nombres tecnologicos legacy y algunos financieros rezagan. Con los rendimientos a 10 anos subiendo al 4,317% y una temporada de resultados bifurcada que acaba de comenzar, la exposicion amplia al indice es un hold a la espera de mayor claridad macro."
         },
         {
           "name": "NASDAQ Composite",
           "symbol": "IXIC",
-          "current_price": 22100.02,
-          "change_24h": "-0.95%",
-          "change_7d": "-2.5%",
-          "change_30d": "-4.2%",
-          "ytd_change": "-3.8%",
-          "week_52_high": 24019.99,
-          "week_52_low": 14784.03,
-          "market_cap": "N/A (index)",
+          "current_price": "$22,902.89",
+          "change_24h": "+0.35%",
+          "change_7d": "+3.1%",
+          "change_30d": "+4.9%",
+          "ytd_change": "+1.2%",
+          "week_52_high": "$24,350.00",
+          "week_52_low": "$17,250.00",
+          "market_cap": "N/A",
           "volume_24h": "N/A",
-          "sentiment": "bearish",
-          "social_sentiment": "cautious",
-          "social_buzz": "high — tech selloff concerns, AI trade under pressure",
+          "sentiment": "bullish",
+          "social_sentiment": "bullish",
+          "social_buzz": "high",
           "confidence": 8,
           "source_agreement": "high",
           "sources_checked": [
             "Yahoo Finance",
-            "CNBC",
-            "Investing.com",
-            "FRED"
+            "MarketWatch"
           ],
           "key_news": [
-            "El NASDAQ tiene un rendimiento inferior al S&P 500 ya que la rotación de aversión al riesgo golpea más fuerte a la tecnología",
-            "La operativa de IA/semiconductores experimenta toma de ganancias en medio de incertidumbre macro",
-            "Los inversores rotan de tecnología de alto crecimiento hacia sectores defensivos"
+            "NASDAQ outperforms S&P 500 today +0.35%, led by AI semiconductor sweep",
+            "CoreWeave surges +10.87% on Anthropic multi-year cloud deal",
+            "AVGO (+4.69%), NVDA (+2.55%), AMD (+3.55%), ALAB (+15.13%) all rallying in unison",
+            "TSMC Q1 revenue +35% YoY confirmed ahead of full earnings April 16"
           ],
           "social_highlights": [
-            "La caída de tecnología crea oportunidades de compra en nombres de calidad según el sentimiento minorista",
-            "La comunidad de WSB se desplaza hacia selecciones más sofisticadas que combinan tecnología y defensa"
+            "WallStreetBets dominated by AI infrastructure names: CRWV, NVDA, TSM, ALAB trending",
+            "Tech bull thesis validated by corroborating data points across entire AI supply chain"
           ],
-          "recommendation": "hold",
-          "reasoning": "El índice con fuerte peso tecnológico soporta lo peor de la rotación de aversión al riesgo. El retroceso está creando mejores puntos de entrada en nombres tecnológicos de calidad, pero la volatilidad a corto plazo probablemente persistirá hasta que la situación con Irán se estabilice. Es mejor ser selectivo eligiendo acciones individuales que comprar el índice aquí."
+          "recommendation": "buy",
+          "reasoning": "El NASDAQ es el lider claro del mercado hoy (+0,35%) y ligeramente positivo YTD, impulsado por una ola de gasto de capex en IA que se traduce en fuertes ganancias de ingresos en toda la cadena de semiconductores. Con TSMC confirmando un crecimiento del 35% en Q1, ALAB subiendo un +15% y los acuerdos de IA con hyperscalers acelerando, el indice tecnologico mantiene fuerte impulso a corto plazo de cara a los maximos de resultados."
         },
         {
           "name": "NVIDIA Corporation",
           "symbol": "NVDA",
-          "current_price": 180.32,
-          "change_24h": "-1.8%",
-          "change_7d": "-4.5%",
-          "change_30d": "-8.2%",
-          "ytd_change": "-13.5%",
-          "week_52_high": 212.19,
-          "week_52_low": 86.62,
-          "market_cap": "4.43T",
-          "volume_24h": "160.72M shares",
+          "current_price": "$188.63",
+          "change_24h": "+2.55%",
+          "change_7d": "+6.4%",
+          "change_30d": "+9.8%",
+          "ytd_change": "+1.15%",
+          "week_52_high": "$212.19",
+          "week_52_low": "$95.04",
+          "market_cap": "$4.585T",
+          "volume_24h": "159.4M",
           "sentiment": "bullish",
           "social_sentiment": "bullish",
-          "social_buzz": "very high — remains most discussed stock on retail forums",
-          "confidence": 8,
+          "social_buzz": "high",
+          "confidence": 9,
           "source_agreement": "high",
           "sources_checked": [
             "Yahoo Finance",
-            "StockAnalysis",
-            "MarketBeat",
-            "CNBC",
-            "Robinhood"
+            "Motley Fool",
+            "Piper Sandler"
           ],
           "key_news": [
-            "Los ingresos crecieron 73% en el Q4 del año fiscal 2026, espera un crecimiento de ingresos de 77% el próximo trimestre",
-            "38 analistas califican como Compra Fuerte con precio objetivo promedio de $263.29 (42.6% de potencial de alza)",
-            "La demanda de centros de datos de IA se mantiene robusta a pesar de los vientos en contra macro",
-            "Cotizando ~15% por debajo del máximo de 52 semanas, creando un potencial punto de entrada"
+            "Q4 FY26 EPS $1.62 beat vs $1.54 estimate; Q4 revenue $68.13B",
+            "Semiconductor revenue market projected to reach $1.3T in 2026 driven by AI/data center",
+            "Amazon CEO Jassy signals potential AI chip sales — competitive risk emerging long-term",
+            "Piper Sandler OVERWEIGHT, PT $250; analyst average target $268.22 (+42% upside)"
           ],
           "social_highlights": [
-            "WSB y los inversores minoristas se mantienen firmemente alcistas en NVDA a largo plazo",
-            "Visto como la mejor apuesta de infraestructura de IA a largo plazo a pesar del retroceso a corto plazo"
+            "Retail highly bullish: 'Nvidia is nearly the same P/E as the S&P 500 — load up'",
+            "Most-active stock with 159M shares traded; AI kingpin thesis intact"
           ],
           "recommendation": "buy",
-          "reasoning": "La historia de demanda de IA sigue intacta con un crecimiento de ingresos de 73% y una sólida guía a futuro. Cotizando con un descuento significativo respecto al máximo de 52 semanas y muy por debajo del objetivo de consenso de analistas de $263. El retroceso impulsado por factores macro proporciona una rara oportunidad de acumular acciones del líder indiscutible de chips de IA. El riesgo es una mayor escalada con Irán que comprima los múltiplos a corto plazo."
+          "reasoning": "NVIDIA es el estandarte de infraestructura IA con $215,9B en ingresos TTM, margenes netos del 55,6%, FCF apalancado de $58,1B y PEG de 0,77 — genuinamente barato para esta trayectoria de crecimiento. Consenso de analistas firmemente Buy/Strong Buy, objetivo medio $268 vs precio actual de $188. El riesgo de chips de Amazon es una observacion a largo plazo, no una amenaza a corto plazo. El bajo rendimiento YTD +1,15% vs pares crea una oportunidad de recuperacion."
         },
         {
           "name": "Broadcom Inc.",
           "symbol": "AVGO",
-          "current_price": 321.09,
-          "change_24h": "-2.1%",
-          "change_7d": "-5.5%",
-          "change_30d": "-10.0%",
-          "ytd_change": "-2.8%",
-          "week_52_high": 414.61,
-          "week_52_low": 138.1,
-          "market_cap": "1.53T",
-          "volume_24h": "N/A",
+          "current_price": "$371.55",
+          "change_24h": "+4.69%",
+          "change_7d": "+7.2%",
+          "change_30d": "+12.3%",
+          "ytd_change": "+7.58%",
+          "week_52_high": "$414.61",
+          "week_52_low": "$161.61",
+          "market_cap": "$1.762T",
+          "volume_24h": "29.1M",
           "sentiment": "bullish",
           "social_sentiment": "bullish",
-          "social_buzz": "high — fresh earnings beat fueling optimism",
+          "social_buzz": "high",
           "confidence": 9,
           "source_agreement": "high",
           "sources_checked": [
             "Yahoo Finance",
-            "CNBC",
-            "StockAnalysis",
-            "Robinhood",
-            "MarketBeat"
+            "Zacks",
+            "24/7 Wall St."
           ],
           "key_news": [
-            "Resultados del Q1 del año fiscal 2026 superan expectativas: BPA $2.05 vs $2.03 est., ingresos $19.31B vs $19.18B est.",
-            "Los ingresos saltaron 29% interanual; los ingresos de semiconductores de IA subieron 106% interanual hasta $8.4B",
-            "Guía del Q2 de $22B en ingresos aplasta la estimación de consenso de $20.56B",
-            "El CEO Hock Tan: línea de visibilidad hacia $100B+ en ingresos de chips de IA en 2027",
-            "BofA nombró a AVGO como la principal selección de semiconductores para 2026"
+            "Broadcom expands Google and Anthropic custom AI silicon deals — multi-billion contracts",
+            "Q1 FY26 revenue $19.31B, EPS $2.05 vs $2.02 estimate — beat and raise",
+            "Susquehanna top analyst POSITIVE; avg analyst target $472.52 (+27% upside)",
+            "Trending #1 ticker on Yahoo Finance today; WallStreetBets rotating from PLTR to AVGO"
           ],
           "social_highlights": [
-            "Los inversores institucionales y minoristas ven a AVGO como la apuesta #2 en infraestructura de IA detrás de NVDA",
-            "El negocio de chips de IA personalizados para hiperescaladores ganando tracción significativa"
+            "Trending #1 ticker on Yahoo Finance today",
+            "'Broadcom vs Palantir: the clear AI buy' articles viral; institutional rotation signal confirmed"
           ],
           "recommendation": "buy",
-          "reasoning": "Broadcom acaba de entregar resultados sólidos con una guía excepcional para el Q2. Los ingresos de semiconductores de IA crecen 106% interanual con visibilidad del CEO hacia $100B+ para 2027. La acción está 22% por debajo de su máximo de 52 semanas a pesar de fundamentos en aceleración. Principal selección de semiconductores de BofA. El retroceso de $414 a $321 por temores macro — no deterioro fundamental — hace que esta sea una excelente entrada en términos de riesgo/recompensa."
+          "reasoning": "Broadcom ejecuta una transformacion IA ejemplar — el silicio personalizado para Google y Anthropic lo hace indispensable para los dos ecosistemas IA dominantes. Rentabilidad a 1 ano de +117% con momentum YTD en +7,58%, pero el objetivo medio de analistas de $472 implica un 27% de potencial alcista adicional. Margen de beneficio del 36,57% y FCF apalancado de $25,5B proporcionan un solido suelo fundamental."
         },
         {
-          "name": "Amazon.com Inc.",
-          "symbol": "AMZN",
-          "current_price": 209.53,
-          "change_24h": "-0.9%",
-          "change_7d": "-3.2%",
-          "change_30d": "-7.5%",
-          "ytd_change": "-7.0%",
-          "week_52_high": 258.6,
-          "week_52_low": 161.38,
-          "market_cap": "2.13T",
-          "volume_24h": "N/A",
+          "name": "Taiwan Semiconductor Manufacturing",
+          "symbol": "TSM",
+          "current_price": "$370.60",
+          "change_24h": "+1.40%",
+          "change_7d": "+4.8%",
+          "change_30d": "+8.1%",
+          "ytd_change": "+24.06%",
+          "week_52_high": "$390.21",
+          "week_52_low": "$145.84",
+          "market_cap": "$1.922T",
+          "volume_24h": "13.1M",
           "sentiment": "bullish",
           "social_sentiment": "bullish",
-          "social_buzz": "very high — #1 WSB pick for 2026",
+          "social_buzz": "high",
+          "confidence": 10,
+          "source_agreement": "high",
+          "sources_checked": [
+            "Yahoo Finance",
+            "Investor's Business Daily",
+            "Barclays"
+          ],
+          "key_news": [
+            "TSMC pre-confirmed Q1 2026 revenue +35% YoY — smashes all estimates on AI demand",
+            "Full earnings report due April 16 — analysts expecting buoyant Q2 guidance",
+            "Billionaire Ken Fisher holds TSM as top 'under-the-radar AI stock'",
+            "Barclays OVERWEIGHT; avg analyst target $432.32 (+17% upside)"
+          ],
+          "social_highlights": [
+            "Growing institutional accumulation narrative; r/investing and r/stocks both bullish pre-earnings",
+            "Highlighted as 'too cheap to ignore' given foundry monopoly on leading-edge AI chips"
+          ],
+          "recommendation": "buy",
+          "reasoning": "TSMC es la fundicion de chips IA mas indispensable del mundo — cada GPU NVDA H100/B200, XPU AVGO y AMD MI400 se fabrica aqui. Los ingresos Q1 confirmados con +35% YoY antes de los resultados completos del 16 de abril. Con PE adelantado de 26,81 con margenes netos del 45% y potencial alcista del 17% segun el consenso de analistas, TSM es la mejor apuesta IA ajustada por riesgo en el mercado. YTD +24,06% lidera todos los principales nombres de semiconductores."
+        },
+        {
+          "name": "Advanced Micro Devices",
+          "symbol": "AMD",
+          "current_price": "$245.04",
+          "change_24h": "+3.55%",
+          "change_7d": "+5.9%",
+          "change_30d": "+7.2%",
+          "ytd_change": "+14.42%",
+          "week_52_high": "$267.08",
+          "week_52_low": "$83.75",
+          "market_cap": "$399.5B",
+          "volume_24h": "35.9M",
+          "sentiment": "bullish",
+          "social_sentiment": "bullish",
+          "social_buzz": "medium",
           "confidence": 8,
           "source_agreement": "high",
           "sources_checked": [
             "Yahoo Finance",
-            "StockAnalysis",
-            "MarketBeat",
-            "CNBC",
+            "24/7 Wall St.",
+            "Stifel"
+          ],
+          "key_news": [
+            "AMD Q4 FY25 EPS $1.53 vs $1.32 estimate — big beat driven by data center AI",
+            "MI400 AI accelerator gaining enterprise traction as NVDA alternative",
+            "Stifel BUY rating; avg analyst target $289.35 (+18% upside)",
+            "AMD +3.55% today — rallying in lockstep with broader AI semiconductor sweep"
+          ],
+          "social_highlights": [
+            "WallStreetBets debate: 'AMD vs NVDA — which wins 2026?' — bullish lean on AMD value",
+            "PEG of 0.73 flagged as undervalued by fundamental investors; cheaper than NVDA on growth-adjusted basis"
+          ],
+          "recommendation": "buy",
+          "reasoning": "AMD ejecuta un fuerte juego de recuperacion en silicon IA con superaciones de EPS en Q4 y aceleracion de ingresos en centros de datos. El ratio PEG de 0,73 senala infravaloracion estructural. A $245 de cara a los resultados del 5 de mayo, la relacion riesgo/recompensa es favorable ya que los datos de adopcion empresarial del MI400 podrian ser un catalizador positivo significativo. La apuesta de GPU IA mas barata en terminos de crecimiento ajustado."
+        },
+        {
+          "name": "Palantir Technologies",
+          "symbol": "PLTR",
+          "current_price": "$128.06",
+          "change_24h": "-1.90%",
+          "change_7d": "-5.2%",
+          "change_30d": "-18.4%",
+          "ytd_change": "-27.95%",
+          "week_52_high": "$207.52",
+          "week_52_low": "$89.31",
+          "market_cap": "$306.3B",
+          "volume_24h": "115.9M",
+          "sentiment": "neutral",
+          "social_sentiment": "mixed",
+          "social_buzz": "high",
+          "confidence": 6,
+          "source_agreement": "medium",
+          "sources_checked": [
+            "Yahoo Finance",
+            "Wedbush",
+            "Barron's"
+          ],
+          "key_news": [
+            "Michael Burry: 'Anthropic is eating Palantir's lunch' — PLTR drops on AI competition alarm",
+            "Trump mentions PLTR by ticker — failed to halt -28% YTD decline",
+            "Wedbush reiterates OUTPERFORM $230 target (+80% upside) — remains a bull",
+            "May 4 earnings report next major decision point"
+          ],
+          "social_highlights": [
+            "Extreme social buzz from Jim Cramer, Trump, and Michael Burry commenting simultaneously",
+            "WallStreetBets divided: Wedbush $230 bulls vs Burry/Anthropic competition bears"
+          ],
+          "recommendation": "hold",
+          "reasoning": "Palantir esta en baja del 28% YTD desde su maximo de 52 semanas de $207 mientras recibe atencion presidencial y un objetivo de $230 de Wedbush. La valoracion extrema (PE 203, P/S 73) y la competencia real de Anthropic en enterprise justifican no anadir aqui. Los resultados del 4 de mayo seran el punto de decision. Mantener posiciones existentes; los nuevos compradores esperan estabilizacion."
+        },
+        {
+          "name": "Bank of America Corporation",
+          "symbol": "BAC",
+          "current_price": "$52.54",
+          "change_24h": "-0.32%",
+          "change_7d": "-1.1%",
+          "change_30d": "-2.8%",
+          "ytd_change": "-3.93%",
+          "week_52_high": "$57.55",
+          "week_52_low": "$36.27",
+          "market_cap": "$375.4B",
+          "volume_24h": "16.8M",
+          "sentiment": "neutral",
+          "social_sentiment": "neutral",
+          "social_buzz": "medium",
+          "confidence": 7,
+          "source_agreement": "high",
+          "sources_checked": [
+            "Yahoo Finance",
+            "TheStreet",
+            "JP Morgan",
+            "Truist"
+          ],
+          "key_news": [
+            "Q1 earnings due April 15 — analysts project 5% YoY profit rise",
+            "BofA anticipates two 25bp Fed rate cuts in H2 2026 — NIM tailwind on the horizon",
+            "JP Morgan Overweight (lowered target from $61.50 to $57.50); Truist BUY",
+            "Avg analyst target $60.27 (+15% upside from current $52.54)"
+          ],
+          "social_highlights": [
+            "Moderate buzz pre-earnings; institutional focus on net interest margin guidance",
+            "Setting a low bar to beat given analyst caution — potential for positive surprise"
+          ],
+          "recommendation": "buy",
+          "reasoning": "Bank of America es un trade de valor contrario: PE 13,79, P/B 1,35, rentabilidad por dividendo 2,13%, cotizando cerca de minimos de 52 semanas con un 15% de potencial alcista hasta el consenso de analistas. Los resultados del Q1 el 15 de abril son un catalizador a corto plazo con un crecimiento del beneficio del 5% esperado. Los anticipados recortes de tipos de la Fed crean un viento de cola de NIM a medio plazo."
+        },
+        {
+          "name": "CoreWeave, Inc.",
+          "symbol": "CRWV",
+          "current_price": "$102.00",
+          "change_24h": "+10.87%",
+          "change_7d": "+23.5%",
+          "change_30d": "+30.1%",
+          "ytd_change": "+42.44%",
+          "week_52_high": "$187.00",
+          "week_52_low": "$33.51",
+          "market_cap": "$53.6B",
+          "volume_24h": "78.7M",
+          "sentiment": "bullish",
+          "social_sentiment": "bullish",
+          "social_buzz": "high",
+          "confidence": 7,
+          "source_agreement": "medium",
+          "sources_checked": [
+            "Yahoo Finance",
+            "Motley Fool",
+            "Evercore ISI"
+          ],
+          "key_news": [
+            "CoreWeave secures multi-year AI cloud deal with Anthropic — stock +10.87% today",
+            "$21B Meta AI cloud capacity deal announced days prior — two landmark contracts in 48 hours",
+            "Evercore ISI Outperform maintained, PT $120; avg analyst target $121.67",
+            "Revenue TTM $5.13B growing >100% YoY; earnings est. May 13 2026"
+          ],
+          "social_highlights": [
+            "Reddit and X erupting: 'CRWV is the AI infrastructure story of 2026'",
+            "Bulls flag deal velocity; bears flag D/E ratio of 894% and negative FCF of -$4.62B"
+          ],
+          "recommendation": "buy",
+          "reasoning": "CoreWeave se ha consolidado como la nube GPU preferida para los laboratorios IA de frontera con los contratos de Meta y Anthropic en 48 horas. Ingresos creciendo explosivamente. El objetivo medio de analistas de $121,67 implica un 19% de potencial alcista a corto plazo. Posicion de alto riesgo: profundamente no rentable con apalancamiento extremo (D/E 894%) y FCF negativo — pero la visibilidad de contratos emergente fundamentalmente des-arriesga el caso alcista."
+        },
+        {
+          "name": "Astera Labs, Inc.",
+          "symbol": "ALAB",
+          "current_price": "$149.05",
+          "change_24h": "+15.13%",
+          "change_7d": "+18.2%",
+          "change_30d": "+22.6%",
+          "ytd_change": "+38.7%",
+          "week_52_high": "$168.40",
+          "week_52_low": "$45.20",
+          "market_cap": "$9.2B",
+          "volume_24h": "19.6M",
+          "sentiment": "bullish",
+          "social_sentiment": "bullish",
+          "social_buzz": "medium",
+          "confidence": 7,
+          "source_agreement": "medium",
+          "sources_checked": [
+            "Yahoo Finance"
+          ],
+          "key_news": [
+            "ALAB is #1 top gainer on S&P 500 today at +15.13% on AI datacenter connectivity demand",
+            "PCIe 5/6 and CXL connectivity chips identified as the new AI datacenter bottleneck",
+            "Direct beneficiary of hyperscaler GPU cluster scale-out capex cycle"
+          ],
+          "social_highlights": [
+            "Growing semiconductor forum chatter framing ALAB as the 'picks and shovels' play on AI infrastructure",
+            "Institutional investors noting ALAB as the connectivity layer enabling TSM chips to work at GPU cluster scale"
+          ],
+          "recommendation": "buy",
+          "reasoning": "Astera Labs fabrica los chips de conectividad PCIe y CXL que permiten a los clusters de GPU comunicarse a escala — un play de picks-and-shovels estructural en infraestructura IA. La subida del +15% hoy es el mercado re-cotizando la estrechez fundamental de oferta-demanda en silicon de conectividad IA. El momentum YTD +38,7% esta respaldado por demanda real. Compra de momentum mas fundamental; el dimensionamiento de la posicion debe ser prudente tras el gran movimiento intradía."
+        },
+        {
+          "name": "Hologic, Inc.",
+          "symbol": "HOLX",
+          "current_price": "$76.01",
+          "change_24h": "0.00%",
+          "change_7d": "-1.2%",
+          "change_30d": "-2.5%",
+          "ytd_change": "+3.8%",
+          "week_52_high": "$86.45",
+          "week_52_low": "$58.85",
+          "market_cap": "$16.97B",
+          "volume_24h": "4.5M",
+          "sentiment": "neutral",
+          "social_sentiment": "neutral",
+          "social_buzz": "low",
+          "confidence": 6,
+          "source_agreement": "medium",
+          "sources_checked": [
+            "Yahoo Finance"
+          ],
+          "key_news": [
+            "HOLX consolidating near prior highs; 1-year return of +29.18% reflects strong fundamentals",
+            "Women's health diagnostics segment continues showing stable recurring demand",
+            "Healthcare sector rotating out of favor as capital flows into AI tech this week"
+          ],
+          "social_highlights": [
+            "Minimal retail buzz; primarily institutional defensive holding",
+            "Sector rotation away from healthcare — no near-term catalyst identified"
+          ],
+          "recommendation": "hold",
+          "reasoning": "Hologic ofrece un ancla defensiva de sanidad solida con PE 31,63 y rentabilidad a 1 ano del +29,18%, pero no hay catalizadores inmediatos y el sector esta fuera de rotacion frente a la tecnologia IA. Adecuado como diversificador de cartera pero no como punto de entrada prioritario en el entorno actual de riesgo-on."
+        },
+        {
+          "name": "Tesla, Inc.",
+          "symbol": "TSLA",
+          "current_price": "$348.95",
+          "change_24h": "+0.98%",
+          "change_7d": "+3.2%",
+          "change_30d": "+5.1%",
+          "ytd_change": "+12.4%",
+          "week_52_high": "$426.18",
+          "week_52_low": "$175.31",
+          "market_cap": "$1.12T",
+          "volume_24h": "82.4M",
+          "sentiment": "neutral",
+          "social_sentiment": "mixed",
+          "social_buzz": "high",
+          "confidence": 6,
+          "source_agreement": "medium",
+          "sources_checked": [
+            "Yahoo Finance",
             "Motley Fool"
           ],
           "key_news": [
-            "AWS registró su mejor trimestre en más de 3 años en el Q4 2025",
-            "Los ingresos del negocio de chips de IA personalizados crecieron a ritmo de triple dígito",
-            "43 analistas califican como Compra Fuerte; precio objetivo promedio $279.57 (33% de potencial de alza)",
-            "RBC Capital: 'La mejor visibilidad de su clase en el ROIC de infraestructura de IA'",
-            "BofA reitera Compra con objetivo de $275 por el poder de fijación de precios de Prime",
-            "Baja 7% en 2026 — Motley Fool lo califica como 'oportunidad de compra única en la vida'"
+            "TSLA +0.98% today as autonomous vehicle / Robotaxi narrative remains intact",
+            "Elon Musk's Intel-backed 'Terafab' AI chip initiative — CEO focus dilution concern",
+            "EV margin pressure persists from intensifying Chinese competition",
+            "Stock +99% from 52-week low but still -18% from 52-week high"
           ],
           "social_highlights": [
-            "Selección #1 de WallStreetBets para 2026 con apoyo abrumador de la comunidad",
-            "Rara vez el consenso minorista e institucional están tan alineados en un solo nombre"
-          ],
-          "recommendation": "buy",
-          "reasoning": "Amazon es la rara selección de consenso tanto entre analistas de Wall Street como entre las comunidades minoristas/WSB. La aceleración de la nube AWS más los chips de IA personalizados crean un doble motor de crecimiento. La caída de 7% en lo que va del año por temores a Irán — mientras los fundamentos se aceleran — ofrece un punto de entrada atractivo. El 92% de los analistas califican como Compra con un objetivo medio que implica 33% de potencial de alza."
-        },
-        {
-          "name": "Devon Energy Corporation",
-          "symbol": "DVN",
-          "current_price": 44.48,
-          "change_24h": "+2.3%",
-          "change_7d": "+8.5%",
-          "change_30d": "+18.0%",
-          "ytd_change": "+22.0%",
-          "week_52_high": 46.5,
-          "week_52_low": 25.89,
-          "market_cap": "28.47B",
-          "volume_24h": "N/A",
-          "sentiment": "bullish",
-          "social_sentiment": "neutral-to-bullish",
-          "social_buzz": "moderate — energy sector gaining attention as Iran conflict escalates oil prices",
-          "confidence": 7,
-          "source_agreement": "high",
-          "sources_checked": [
-            "Yahoo Finance",
-            "Morningstar",
-            "StockAnalysis",
-            "CNBC",
-            "Trefis"
-          ],
-          "key_news": [
-            "Morningstar califica a DVN con 4 estrellas, ~30% de descuento sobre el valor justo",
-            "Los precios del petróleo subieron de ~$70 a más de $110/barril por el conflicto con Irán — beneficiario directo",
-            "Piper Sandler elevó el objetivo a $67 con calificación Sobreponderar (12 de marzo)",
-            "UBS elevó el objetivo a $55 con calificación Compra (5 de marzo)",
-            "Barclays elevó el objetivo a $54 con calificación Sobreponderar",
-            "Guía de producción 2026: 835K-855K Boe/d; capex $100M menor que 2025",
-            "Generó $3.1B en flujo de caja libre en 2025; retornó $2.2B a los accionistas"
-          ],
-          "social_highlights": [
-            "Tom Lee espera que las acciones de energía tomen el liderazgo de la tecnología en 2026",
-            "El sector energético es el más infravalorado según Morningstar al inicio de 2026"
-          ],
-          "recommendation": "buy",
-          "reasoning": "Devon Energy es la cobertura geopolítica ideal en el entorno actual. El aumento de los precios del petróleo por el conflicto con Irán impulsa directamente el flujo de caja libre de Devon dada su producción de bajo costo en la Cuenca Pérmica. La acción está cerca de máximos de 52 semanas pero todavía calificada como 30% infravalorada por Morningstar. Múltiples mejoras de analistas en la última semana. Fuerte programa de retorno de capital con $2.2B retornados a los accionistas en 2025. Si el conflicto con Irán persiste, DVN tiene un potencial de alza significativo adicional."
-        },
-        {
-          "name": "Rocket Lab USA Inc.",
-          "symbol": "RKLB",
-          "current_price": 68.37,
-          "change_24h": "-1.5%",
-          "change_7d": "-3.8%",
-          "change_30d": "+4.2%",
-          "ytd_change": "+28.0%",
-          "week_52_high": 99.58,
-          "week_52_low": 14.71,
-          "market_cap": "32B",
-          "volume_24h": "N/A",
-          "sentiment": "bullish",
-          "social_sentiment": "very bullish",
-          "social_buzz": "very high — #2 WSB pick for 2026, strong retail following",
-          "confidence": 6,
-          "source_agreement": "moderate",
-          "sources_checked": [
-            "Yahoo Finance",
-            "StockAnalysis",
-            "MarketBeat",
-            "TipRanks",
-            "Seeking Alpha"
-          ],
-          "key_news": [
-            "Sube 35% desde noviembre por cadencia constante de lanzamientos y nuevos contratos gubernamentales",
-            "Cantor Fitzgerald elevó el precio objetivo de $72 a $85, mantiene Sobreponderar (27 de febrero)",
-            "11 analistas tienen consenso de Compra; objetivo medio $82.78 (21% de potencial de alza)",
-            "Beneficiándose del aumento del gasto en defensa y espacio en medio de tensiones geopolíticas",
-            "El desarrollo del cohete Neutron sigue siendo el catalizador clave a largo plazo"
-          ],
-          "social_highlights": [
-            "Segunda acción más votada en WallStreetBets para 2026 después de Amazon",
-            "La comunidad minorista ve a RKLB como la apuesta 'próximo SpaceX'",
-            "Fuerte momentum con ganancia de 180%+ en el último año"
+            "WallStreetBets heavily debated: long-term FSD bulls vs near-term margin bears",
+            "Musk distraction risk is top-cited concern in retail investor forums"
           ],
           "recommendation": "hold",
-          "reasoning": "Rocket Lab tiene una historia a largo plazo emocionante con el desarrollo del cohete Neutron y contratos gubernamentales crecientes. Sin embargo, a $68 ya ha tenido un recorrido masivo (subiendo desde ~$15 hace un año) y cotiza con una valoración premium. El retroceso de 31% desde los máximos de $99.58 sugiere que se ha liberado algo de presión, pero la relación riesgo/recompensa es menos atractiva que nombres como AVGO o AMZN a los niveles actuales. Mantener para posiciones existentes; nuevos compradores deberían esperar un retroceso más profundo al rango de $55-60."
-        },
-        {
-          "name": "Rhythm Pharmaceuticals Inc.",
-          "symbol": "RYTM",
-          "current_price": 89.45,
-          "change_24h": "-1.2%",
-          "change_7d": "+3.5%",
-          "change_30d": "+12.0%",
-          "ytd_change": "+35.0%",
-          "week_52_high": 122.2,
-          "week_52_low": 45.91,
-          "market_cap": "6.11B",
-          "volume_24h": "N/A",
-          "sentiment": "bullish",
-          "social_sentiment": "bullish",
-          "social_buzz": "moderate — biotech community tracking FDA decision closely",
-          "confidence": 7,
-          "source_agreement": "moderate",
-          "sources_checked": [
-            "Yahoo Finance",
-            "CNBC",
-            "CNN Markets",
-            "BiopharmaWatch",
-            "Robinhood"
-          ],
-          "key_news": [
-            "Fecha PDUFA el 20 de marzo de 2026 para la sNDA de setmelanotida en obesidad hipotalámica adquirida",
-            "El ensayo Fase 3 TRANSCEND mostró una reducción de IMC ajustada por placebo de -18.8%",
-            "El paquete final de datos fue enviado a la FDA el 2 de marzo de 2026",
-            "Se esperan datos adicionales de Fase 3 en 4 enfermedades genéticas para el Q1 2026",
-            "Se esperan datos de Fase 2 del síndrome de Prader-Willi para el H1 2026"
-          ],
-          "social_highlights": [
-            "Los inversores en biotecnología se posicionan antes del catalizador de la FDA del 20 de marzo",
-            "Los sólidos datos clínicos generan optimismo para la aprobación"
-          ],
-          "recommendation": "buy",
-          "reasoning": "Rhythm Pharmaceuticals tiene un catalizador binario importante en 7 días — la decisión PDUFA de la FDA el 20 de marzo para setmelanotida en obesidad hipotalámica. Los datos de Fase 3 fueron sólidos (reducción de IMC ajustada por placebo de -18.8%). La acción está 27% por debajo de su máximo de 52 semanas, lo que sugiere que el mercado no ha descontado completamente la aprobación. Catalizadores adicionales del pipeline en Q1-H1 2026 proporcionan múltiples oportunidades. Apuesta de alto riesgo/alta recompensa adecuada para inversores con tolerancia al riesgo. Considerar el dimensionamiento de la posición dado el resultado binario."
+          "reasoning": "Tesla ha protagonizado una fuerte recuperacion desde su minimo de 52 semanas pero enfrenta vientos en contra reales: competencia de EVs de China, dispersion de atencion del CEO entre xAI, Terafab y DOGE, y margenes bajo presion sostenida. El catalizador Robotaxi es real pero con timeline incierto. A $349 con una alta prima de valoracion descontada, las nuevas posiciones tienen una relacion riesgo/recompensa desfavorable. Mantener posiciones existentes."
         }
       ],
-      "sector_summary": "Las acciones estadounidenses están bajo presión significativa a mediados de marzo 2026 ya que el conflicto con Irán impulsa los precios del petróleo por encima de $110/barril y desencadena una rotación de aversión al riesgo fuera de tecnología hacia energía y defensa. El S&P 500 baja 1.54% en lo que va del año en su cierre más bajo del año, mientras el NASDAQ ha caído 3.8% en el año ya que las mega capitalizaciones tecnológicas soportan lo peor. Sin embargo, el retroceso está creando puntos de entrada atractivos en nombres de calidad de IA/nube como Broadcom y Amazon, mientras que las acciones de energía como Devon Energy son beneficiarias directas del contexto geopolítico.",
-      "sector_outlook": "neutral",
-      "top_pick": "AVGO",
-      "top_pick_reasoning": "Broadcom ofrece la mejor relación riesgo/recompensa en el mercado actual. Acaba de entregar un trimestre con resultados superiores y guía al alza con ingresos de chips de IA creciendo 106% interanual, visibilidad del CEO hacia $100B+ en ingresos de IA para 2027, y guía del Q2 superando estimaciones por $1.4B. A pesar de estos fundamentos en aceleración, la acción está 22% por debajo de su máximo de 52 semanas debido a temores macro/geopolíticos — no deterioro del negocio. Principal selección de semiconductores de BofA con múltiples mejoras de analistas. La combinación de aceleración verificada de ganancias, valoración razonable relativa al crecimiento, y un descuento impulsado por factores macro hace de AVGO la oportunidad más atractiva entre todos los nombres analizados."
-    },
-    "currencies": {
-      "sector": "currencies",
-      "timestamp": "2026-03-13T18:30:00Z",
-      "assets": [
-        {
-          "name": "US Dollar Index",
-          "symbol": "DXY",
-          "current_price": 100.3,
-          "change_24h": "+0.56%",
-          "change_7d": "+1.3%",
-          "change_30d": "+2.1%",
-          "ytd_change": "+2.0%",
-          "week_52_high": 104.68,
-          "week_52_low": 95.55,
-          "market_cap": "N/A",
-          "volume_24h": "N/A",
-          "sentiment": "bullish — safe-haven demand surging on Iran war, oil shock; net-short positioning at 5-year extreme creates short-squeeze risk",
-          "social_sentiment": "bullish",
-          "social_buzz": "high — central bank super-week and Iran conflict dominating forex discourse",
-          "confidence": 9,
-          "source_agreement": "strong — TradingEconomics 100.04, FXStreet 100.30, consensus ~100.0-100.3",
-          "sources_checked": [
-            "TradingEconomics",
-            "FXStreet",
-            "FXDailyReport",
-            "S&P Global",
-            "Bloomberg"
-          ],
-          "key_news": [
-            "El DXY se acerca a máximos de 10 meses en medio de tensiones en Medio Oriente y el alza del petróleo",
-            "Reunión del FOMC el 18 de marzo — se espera que mantenga en 3.50-3.75%, el mercado observa la guía a futuro sobre recortes",
-            "El dólar sube 2.5% desde que comenzó la guerra con Irán; el estatus de EE.UU. como exportador neto de petróleo hace que el petróleo alto sea un viento a favor del USD",
-            "Los traders de futuros están cortos netos en USD en extremo de 5 años (-$22.8B), pero los grandes especuladores cambiaron a netos largos en DXY — la divergencia señala potencial squeeze"
-          ],
-          "social_highlights": [
-            "Los traders debaten si la guerra con Irán suspende la tesis secular bajista del dólar",
-            "La súper-semana de 7 decisiones de bancos centrales del 16 al 19 de marzo genera ansiedad de posicionamiento sin precedentes"
-          ],
-          "recommendation": "buy",
-          "reasoning": "El dólar se beneficia de un triple viento a favor: demanda de activo refugio (guerra con Irán), choque petrolero (EE.UU. es exportador neto) y posicionamiento corto extremo que crea riesgo de squeeze. Se espera que el FOMC mantenga pero podría señalar recortes retrasados debido a la inflación por el petróleo, apoyando aún más al USD. Riesgo clave: Trump insinuando que la guerra con Irán podría terminar pronto podría desencadenar una reversión brusca."
-        },
-        {
-          "name": "US Dollar / Mexican Peso",
-          "symbol": "USD/MXN",
-          "current_price": 17.9535,
-          "change_24h": "+0.07%",
-          "change_7d": "+0.8%",
-          "change_30d": "+1.5%",
-          "ytd_change": "-3.2%",
-          "week_52_high": 21.088,
-          "week_52_low": 17.085,
-          "market_cap": "N/A",
-          "volume_24h": "N/A",
-          "sentiment": "neutral — peso resilient on carry trade appeal but under pressure from oil shock and EM selloff",
-          "social_sentiment": "cautious",
-          "social_buzz": "moderate — Mexican inflation surprise and Banxico policy path drawing attention",
-          "confidence": 7,
-          "source_agreement": "strong — Yahoo Finance 17.9535, XE 17.95, Bloomberg 17.95",
-          "sources_checked": [
-            "Yahoo Finance",
-            "XE",
-            "Bloomberg",
-            "Investing.com",
-            "TradingEconomics"
-          ],
-          "key_news": [
-            "El MXN se apreció 1.35% en febrero, entre los mejores de mercados emergentes, pero revirtiendo en marzo por la aversión al riesgo de la guerra con Irán",
-            "La inflación mexicana en 4.02% en febrero superó el umbral superior del 4% de Banxico — complica el ciclo de flexibilización",
-            "Banxico aún mantiene las tasas más altas de la región, apoyando la demanda de carry trade",
-            "La revisión del T-MEC y la incertidumbre arancelaria siguen siendo riesgos asimétricos para la debilidad del peso",
-            "USD/MXN en máximos de 7 semanas cerca de 17.95, probando resistencia tras rebotar desde mínimos de 17.08"
-          ],
-          "social_highlights": [
-            "El carry trade sigue siendo atractivo pero los traders observan si la subida del BoJ deshace posiciones globales de carry",
-            "El choque petrolero es mixto para México — exportador neto de crudo pero importador de productos refinados"
-          ],
-          "recommendation": "hold",
-          "reasoning": "El carry del MXN sigue siendo atractivo con las tasas elevadas de Banxico, pero el par está bajo presión alcista por el sentimiento de aversión al riesgo de la guerra con Irán, la venta generalizada de mercados emergentes y el exceso de inflación que complica el camino de flexibilización de Banxico. El rango 17.08-21.09 sugiere que los niveles actuales están en el tercio inferior históricamente — no lo suficientemente barato para vender USD/MXN. Observar el próximo movimiento de Banxico y los desarrollos del T-MEC."
-        },
-        {
-          "name": "US Dollar / Japanese Yen",
-          "symbol": "USD/JPY",
-          "current_price": 159.33,
-          "change_24h": "-0.01%",
-          "change_7d": "+1.8%",
-          "change_30d": "+3.2%",
-          "ytd_change": "+5.1%",
-          "week_52_high": 160.0,
-          "week_52_low": 140.0,
-          "market_cap": "N/A",
-          "volume_24h": "$1.37 trillion daily (pair average)",
-          "sentiment": "bearish JPY near-term, but BoJ meeting March 19 is a major inflection risk",
-          "social_sentiment": "mixed — bears citing BoJ hike potential, bulls citing oil-driven dollar strength",
-          "social_buzz": "very high — BoJ March 19 decision is the single most watched event of super-week",
-          "confidence": 8,
-          "source_agreement": "strong — XE 159.33, Wise 159.39, TradingEconomics 159.33",
-          "sources_checked": [
-            "XE",
-            "Wise",
-            "Yahoo Finance",
-            "MTFX",
-            "TradingEconomics"
-          ],
-          "key_news": [
-            "USD/JPY se dispara hacia 160 — límite superior del rango de 2 años, zona de intervención del BoJ",
-            "Reunión del BoJ el 19 de marzo: tasa en 0.75%, el mercado está dividido sobre si la subida de 25pb a 1.0% llega en esta reunión o en abril",
-            "Los grandes especuladores recortaron posiciones largas en JPY en un tercio, girando hacia cortos netos — cambio de sentimiento contra el yen",
-            "El choque petrolero es negativo para el yen: Japón es un gran importador de energía, ampliando el déficit comercial",
-            "MUFG pronostica USD/JPY en 146.00 para fin de año — potencial bajista significativo si el BoJ endurece como se espera"
-          ],
-          "social_highlights": [
-            "El nivel clave de 150.000 señalado por OANDA — una ruptura abriría la caída hacia 146",
-            "La retórica del gobernador del BoJ Ueda sobre el camino de normalización será más impactante para el mercado que la propia decisión de tasas"
-          ],
-          "recommendation": "sell",
-          "reasoning": "USD/JPY en 159.33 está cerca del tope de su rango de 2 años (140-160) y en la zona histórica de intervención del BoJ. Con la reunión del BoJ el 19 de marzo y las expectativas del mercado de una subida a 1.0% (si no en esta reunión, para abril), la relación riesgo/recompensa favorece fuertemente la fortaleza del yen. El consenso de fin de año en 146 implica más de 8% de potencial bajista. El choque petrolero y la fortaleza del dólar son vientos en contra a corto plazo para esta operación, pero la historia estructural de endurecimiento del BoJ domina en un horizonte de varias semanas."
-        },
-        {
-          "name": "Euro / US Dollar",
-          "symbol": "EUR/USD",
-          "current_price": 1.1445,
-          "change_24h": "-0.58%",
-          "change_7d": "-1.5%",
-          "change_30d": "-2.8%",
-          "ytd_change": "+4.8%",
-          "week_52_high": 1.2079,
-          "week_52_low": 1.0732,
-          "market_cap": "N/A",
-          "volume_24h": "$2.03 trillion daily (pair average)",
-          "sentiment": "bearish short-term — euro falling from $1.20+ highs as dollar safe-haven bid dominates",
-          "social_sentiment": "bearish",
-          "social_buzz": "high — ECB decision March 19 and oil-driven eurozone inflation concerns",
-          "confidence": 8,
-          "source_agreement": "strong — TradingEconomics 1.1445, exchange-rates.org 1.1445",
-          "sources_checked": [
-            "TradingEconomics",
-            "Yahoo Finance",
-            "ECB",
-            "Wise",
-            "exchange-rates.org"
-          ],
-          "key_news": [
-            "EUR/USD cayó a su nivel más débil desde el 24 de noviembre en 1.1445, desde máximos de 1.20+ alcanzados en enero",
-            "Reunión del BCE el 19 de marzo — se espera que mantenga tasas; el choque petrolero complica la narrativa de desinflación",
-            "El posicionamiento neto largo en euro en máximos de 18 meses acercándose a los picos de 2023 — riesgo de operación saturada",
-            "La eurozona muy expuesta al choque petrolero como gran importador de energía — crecen los temores de estanflación",
-            "La incertidumbre de la guerra con Irán pesa más sobre el sentimiento de riesgo europeo que el estadounidense"
-          ],
-          "social_highlights": [
-            "Los analistas debaten si el soporte de EUR/USD en 1.15 aguanta o se rompe hacia 1.12",
-            "Los datos COT muestran posicionamiento largo extremo en EUR — potencial de liquidación brusca"
-          ],
-          "recommendation": "sell",
-          "reasoning": "EUR/USD está en una clara tendencia bajista desde 1.20+ hasta 1.14, impulsada por la fortaleza del dólar como activo refugio y la vulnerabilidad de la eurozona al choque petrolero. El posicionamiento COT está extremadamente largo en EUR, creando riesgo de liquidación. El BCE está limitado — no puede recortar por la inflación del petróleo, no puede subir por las preocupaciones de crecimiento. El nivel de 1.15 está siendo probado; una ruptura a la baja abre 1.12. El caso secular bajista del dólar puede reanudarse más adelante en 2026, pero el momentum a corto plazo favorece fuertemente al USD."
-        },
-        {
-          "name": "British Pound / US Dollar",
-          "symbol": "GBP/USD",
-          "current_price": 1.3338,
-          "change_24h": "-0.04%",
-          "change_7d": "-1.2%",
-          "change_30d": "-2.7%",
-          "ytd_change": "+1.8%",
-          "week_52_high": 1.3869,
-          "week_52_low": 1.2707,
-          "market_cap": "N/A",
-          "volume_24h": "N/A",
-          "sentiment": "bearish short-term — sterling under pressure from dollar strength and UK stagflation fears",
-          "social_sentiment": "bearish",
-          "social_buzz": "moderate — BoE decision March 19, expected to hold amid conflicting inflation and growth signals",
-          "confidence": 7,
-          "source_agreement": "moderate — TradingEconomics 1.3338, Wise 1.3237 (timing difference), PoundSterlingLive 1.3338",
-          "sources_checked": [
-            "TradingEconomics",
-            "Wise",
-            "Yahoo Finance",
-            "PoundSterlingLive",
-            "exchange-rates.org"
-          ],
-          "key_news": [
-            "GBP/USD cayó 2.7% en el último mes, desde máximos de 1.3664 hasta 1.3338",
-            "Reunión del BoE el 19 de marzo — se espera que mantenga tasas; inflación del Reino Unido persistente en 3.1%",
-            "La economía del Reino Unido muestra señales de desaceleración mientras la inflación sigue por encima del objetivo — riesgo clásico de estanflación",
-            "La libra atrapada entre la pausa restrictiva del BoE (soporte de tasas) y la demanda de dólar como activo refugio (negativo para GBP)",
-            "La dinámica comercial del Brexit hace al Reino Unido particularmente vulnerable a los choques de precios de energía"
-          ],
-          "social_highlights": [
-            "El soporte de GBP/USD en 1.3200 es observado como nivel clave",
-            "Los rendimientos de los gilts del Reino Unido suben por preocupaciones de inflación, pero no se traducen en fortaleza de la GBP"
-          ],
-          "recommendation": "sell",
-          "reasoning": "GBP/USD en un claro movimiento correctivo desde máximos de 1.3869. El Reino Unido enfrenta riesgo de estanflación — inflación por encima del objetivo con crecimiento desacelerándose — dejando al BoE en un dilema de política. Los vientos a favor del dólar por demanda de refugio y petróleo agregan presión vendedora. La zona de soporte 1.32-1.33 podría proporcionar un rebote, pero la tendencia favorece más caídas hacia 1.30 en caso de ruptura."
-        },
-        {
-          "name": "US Dollar / Turkish Lira",
-          "symbol": "USD/TRY",
-          "current_price": 44.19,
-          "change_24h": "+0.17%",
-          "change_7d": "+0.5%",
-          "change_30d": "+1.1%",
-          "ytd_change": "+4.2%",
-          "week_52_high": 44.3,
-          "week_52_low": 36.45,
-          "market_cap": "N/A",
-          "volume_24h": "N/A",
-          "sentiment": "bearish TRY — lira at all-time lows, central bank intervening but structural depreciation intact",
-          "social_sentiment": "bearish",
-          "social_buzz": "moderate — Turkey's proximity to Iran conflict and central bank intervention drawing attention",
-          "confidence": 6,
-          "source_agreement": "strong — TradingEconomics 44.1884, XE 44.19, Bloomberg 44.20",
-          "sources_checked": [
-            "TradingEconomics",
-            "XE",
-            "Bloomberg",
-            "Investing.com"
-          ],
-          "key_news": [
-            "USD/TRY cerca de máximos de 52 semanas en 44.19, la lira baja 21% en el último año",
-            "El banco central de Turquía interviene en los mercados de divisas para frenar la depreciación",
-            "Goldman Sachs pronostica USD/TRY alcanzando 48 para julio de 2026",
-            "Turquía geográficamente cerca del conflicto con Irán — prima de riesgo geopolítico adicional",
-            "La política monetaria restrictiva ayuda pero no es suficiente para compensar la inflación estructural y las presiones de cuenta corriente"
-          ],
-          "social_highlights": [
-            "El carry trade de la lira sigue siendo popular entre traders enfocados en mercados emergentes a pesar del riesgo de depreciación",
-            "La credibilidad del CBRT bajo escrutinio mientras la lira continúa su depreciación administrada"
-          ],
-          "recommendation": "hold",
-          "reasoning": "USD/TRY es un largo estructural (depreciación de la lira) pero la entrada a corto plazo es arriesgada en máximos de 52 semanas. El carry trade ofrece compensación pero la proximidad geopolítica al conflicto con Irán y el potencial de depreciación acelerada crean riesgo bidireccional. El objetivo de Goldman de 48 implica 8.6% de alza pero el timing es incierto. Mejor esperar un retroceso a 42-43 para nuevas posiciones largas en USD/TRY."
-        },
-        {
-          "name": "Australian Dollar / US Dollar",
-          "symbol": "AUD/USD",
-          "current_price": 0.7061,
-          "change_24h": "-0.22%",
-          "change_7d": "-0.9%",
-          "change_30d": "-1.5%",
-          "ytd_change": "+7.8%",
-          "week_52_high": 0.715,
-          "week_52_low": 0.615,
-          "market_cap": "N/A",
-          "volume_24h": "N/A",
-          "sentiment": "mixed — RBA hawkish pivot (potential March 17 hike) vs. dollar safe-haven bid and China slowdown fears",
-          "social_sentiment": "cautiously bullish",
-          "social_buzz": "high — RBA March 17 decision is first of super-week, 75% chance of rate hike priced in",
-          "confidence": 8,
-          "source_agreement": "strong — TradingEconomics 0.7061, RBA 0.7061",
-          "sources_checked": [
-            "TradingEconomics",
-            "RBA",
-            "Bloomberg",
-            "XE",
-            "PoundSterlingLive"
-          ],
-          "key_news": [
-            "La reunión del RBA del 17 de marzo está 'en juego' — 75% de probabilidad de subida de tasas descontada, arriba del 30% a principios de semana",
-            "El vicegobernador del RBA señaló que el alza de precios del petróleo podría empujar la inflación más alto, desencadenando una repricing restrictiva",
-            "La inflación general australiana en 3.8%, subyacente en 3.4% — muy por encima de la banda objetivo del 2-3%",
-            "AUD/USD en máximos de 3 años cerca de 0.71, subiendo ~10% desde el promedio de 2025 de 0.64",
-            "Los gestores de activos cambiaron a largo neto en AUD por primera vez desde octubre — los grandes especuladores más alcistas desde octubre 2017",
-            "Las preocupaciones de crecimiento de China y la debilidad del precio del mineral de hierro son vientos en contra para el AUD"
-          ],
-          "social_highlights": [
-            "Una subida de tasas del RBA haría de Australia uno de los muy pocos bancos centrales de mercados desarrollados endureciendo — señal alcista para el AUD",
-            "El nivel de soporte 0.70 es observado de cerca — un mantenimiento por encima apoya más alza hacia 0.72-0.75"
-          ],
-          "recommendation": "buy",
-          "reasoning": "AUD/USD es la operación larga más atractiva en divisas del G10 en este momento. El RBA está pivoteando hacia una postura restrictiva mientras casi todos los demás bancos centrales importantes están flexibilizando o manteniendo — esta divergencia de política es poderosa. Una subida de tasas el 17 de marzo reforzaría la fortaleza del AUD. El posicionamiento COT confirma el respaldo institucional. El riesgo clave es un evento de aversión al riesgo más amplio que intensifique la demanda de dólares, pero la historia de carry y diferencial de tasas favorece al AUD en una base de varias semanas. Comprar en caídas cerca de 0.70."
-        }
-      ],
-      "sector_summary": "El mercado de divisas a mediados de marzo 2026 está dominado por dos mega-temas: la guerra con Irán generando un choque petrolero masivo y un rally del dólar como activo refugio, y una histórica 'súper-semana' de 7 decisiones de bancos centrales entre el 16 y 19 de marzo. El dólar ha subido 2.5% desde que comenzó el conflicto, beneficiándose de su posición única como refugio seguro y exportador neto de petróleo. Las monedas de mercados emergentes sufren su peor mes desde finales de 2024, con bancos centrales en Indonesia, Turquía e India forzados a intervenir. La pregunta clave para la próxima semana: ¿señala el FOMC recortes retrasados (alcista para el dólar) o sube el BoJ a 1% (alcista para el yen)?",
+      "sector_summary": "El mercado de renta variable estadounidense el 11 de abril de 2026 esta profundamente bifurcado. El complejo de semiconductores IA (NVDA, AVGO, TSM, AMD, ALAB) avanza impulsado por la confirmacion de TSMC de ingresos Q1 +35% YoY y el flujo de acuerdos con hyperscalers, mientras nombres tecnologicos legacy estan en fuertes caidas. El S&P 500 es plano YTD (-0,42%) y rompio una racha de 7 dias positivos, mientras el NASDAQ (+1,2% YTD) sigue superando. El VIX cayendo a 19,23 refleja el miedo en descenso, y las negociaciones de paz EEUU-Iran proporcionan un trasfondo geopolitico constructivo.",
       "sector_outlook": "bullish",
-      "top_pick": "AUD/USD",
-      "top_pick_reasoning": "AUD/USD ofrece la mejor operación ajustada por riesgo: el RBA es uno de los pocos bancos centrales del G10 pivoteando hacia una postura restrictiva con un 75% de probabilidad de subir tasas el 17 de marzo, mientras el posicionamiento COT confirma convicción institucional (el más alcista desde 2017). En 0.7061, el par tiene fuerte soporte en 0.70 con objetivos al alza de 0.72-0.75. El catalizador de subida de tasas es inminente y bien definido. Aunque el dólar está fuerte por flujos de refugio, el AUD se beneficia de la exposición a commodities de Australia y la mejora de los términos de intercambio por los mayores precios de energía. Esta es una compra de alta convicción, impulsada por evento, con gestión de riesgo clara en el nivel 0.70."
+      "top_pick": "TSM",
+      "top_pick_reasoning": "Taiwan Semiconductor Manufacturing es la mejor accion para comprar de cara a la proxima semana. TSMC ya preconfirmo un crecimiento de ingresos Q1 2026 del +35% YoY — los resultados completos llegan el 16 de abril. Como unico fabricante de cada chip IA de vanguardia de NVDA, AVGO y AMD, TSMC es la columna vertebral indispensable de toda la cadena de suministro IA. A un PE adelantado de 26,81 — el mas barato de todos los grandes plays de IA — con margenes netos del 45% y objetivo de analistas de $432 (+17% de potencial)."
     },
     "materials": {
       "sector": "materials",
-      "timestamp": "2026-03-13T17:00:00Z",
+      "timestamp": "2026-04-11T22:00:00Z",
       "assets": [
         {
           "name": "Gold",
           "symbol": "XAU",
-          "current_price": "$5,095.93",
-          "change_24h": "-1.3%",
-          "change_7d": "+2.1%",
-          "change_30d": "+10.1%",
-          "ytd_change": "+12.0%",
-          "week_52_high": "$5,626.80",
-          "week_52_low": "$2,970.40",
+          "current_price": "$4,780.00",
+          "change_24h": "-0.24%",
+          "change_7d": "+2.0%",
+          "change_30d": "-8.26%",
+          "ytd_change": "+46.81%",
+          "week_52_high": "$5,608.35",
+          "week_52_low": "$3,089.00",
           "market_cap": "N/A",
-          "volume_24h": "High",
+          "volume_24h": "N/A",
           "sentiment": "bullish",
           "social_sentiment": "bullish",
           "social_buzz": "high",
-          "confidence": 9,
+          "confidence": 8,
           "source_agreement": "high",
           "sources_checked": [
-            "fortune.com",
-            "tradingeconomics.com",
-            "filmogaz.com"
+            "TradingEconomics",
+            "YahooFinance",
+            "Kitco"
           ],
           "key_news": [
-            "El oro retrocede a $5,093 por un dólar más firme en medio de la crisis de Medio Oriente",
-            "Los gestores de activos netos largos 97.9k contratos, máximo de 5 semanas",
-            "Las compras de bancos centrales continúan"
+            "El oro se dirige a su tercera semana consecutiva de ganancias (+2% semanal) impulsado por las expectativas de recorte de tipos y las conversaciones diplomaticas EEUU-Iran en Islamabad",
+            "El IPC de EEUU supero el 3,3% en marzo (maximo desde mayo 2024) — el mayor salto mensual desde mediados de 2022, reforzando el atractivo del oro como cobertura de inflacion",
+            "La demanda fisica de oro sube en India antes de festivales clave; las disrupciones en el Estrecho de Hormuz y los ataques israelies en Libano mantienen elevada la prima de riesgo geopolitico",
+            "La compra neta de bancos centrales continua: China anadio 5 toneladas en marzo, Turquia monetizo 118 toneladas"
           ],
           "social_highlights": [
-            "El oro cruzando $5,000 visto como un nuevo cambio de paradigma",
-            "La demanda de activo refugio se acelera debido a la guerra con Irán"
+            "Investor consensus bullish: markets framing gold as the 'only safe harbor' amid fragile US-Iran ceasefire",
+            "Gold bulls citing Fed policy pivot: markets pricing 30% chance of December rate cut — tailwind for non-yielding asset"
           ],
           "recommendation": "buy",
-          "reasoning": "El oro consolida cerca de $5,100 tras el retroceso desde el máximo histórico de $5,595. La guerra con Irán, el cierre del Estrecho de Ormuz y la incertidumbre geopolítica proporcionan un poderoso viento a favor. Las compras de bancos centrales continúan. Comprar en caídas."
+          "reasoning": "El Oro subio cerca de $4.780 en una confluencia de poderosos vientos de cola: el IPC de EEUU alcanzando el 3,3% (maximo desde mayo 2024), un dolar en debilitamiento y una fragil geopolitica en Oriente Medio. La caida del -8,26% en 30 dias desde su maximo de $5.608 representa una consolidacion saludable, no una inversion de tendencia. Tres semanas consecutivas de ganancias, demanda fisica en India y la revaloracion de recortes de tipos de la Fed consolidan las perspectivas alcistas a medio plazo."
+        },
+        {
+          "name": "Silver",
+          "symbol": "SI",
+          "current_price": "$75.68",
+          "change_24h": "+0.48%",
+          "change_7d": "+4.2%",
+          "change_30d": "-11.74%",
+          "ytd_change": "+134.55%",
+          "week_52_high": "$121.64",
+          "week_52_low": "$29.45",
+          "market_cap": "N/A",
+          "volume_24h": "N/A",
+          "sentiment": "bullish",
+          "social_sentiment": "mixed",
+          "social_buzz": "medium",
+          "confidence": 7,
+          "source_agreement": "high",
+          "sources_checked": [
+            "TradingEconomics",
+            "YahooFinance"
+          ],
+          "key_news": [
+            "La plata subio mas del 4% en la semana hasta $75,68/oz, camino de su tercera semana consecutiva de ganancias",
+            "El ceasefire EEUU-Iran alivio las presiones de costes energeticos sobre la base de demanda industrial de la plata (paneles solares, baterias de EVs, electronica)",
+            "La plata cotiza un 38% por debajo de su maximo de 52 semanas de $121,64 — el ratio oro/plata historicamente estirado, el trade de compresion se esta construyendo"
+          ],
+          "social_highlights": [
+            "Silver vs. Gold debate prominent on Yahoo Finance — analysts debating SIL vs. IAU premium",
+            "Solar and EV sector demand cited as structural floor; industrial use separates silver from pure macro plays"
+          ],
+          "recommendation": "buy",
+          "reasoning": "La plata ofrece una oportunidad de metales preciosos de alta beta con ganancias YTD del 134% y soporte estructural tanto de la demanda de refugio seguro como del creciente uso industrial en solar, EVs y electronica. Cotizando un 38% por debajo de su maximo de 52 semanas de $121,64, mientras el oro se mantiene cerca de maximos historicos, el ratio oro/plata esta historicamente estirado con la reversion a la media implicando un significativo potencial de recuperacion. Las expectativas de recorte de tipos, la debilidad del dolar y tres semanas consecutivas de ganancias confirman la tendencia alcista intacta."
         },
         {
           "name": "Crude Oil WTI",
           "symbol": "CL",
-          "current_price": "$98.71",
-          "change_24h": "+3.1%",
-          "change_7d": "+5.0%",
-          "change_30d": "+53.9%",
-          "ytd_change": "+37.2%",
-          "week_52_high": "$119.48",
-          "week_52_low": "$54.98",
+          "current_price": "$96.57",
+          "change_24h": "-1.33%",
+          "change_7d": "-10.5%",
+          "change_30d": "+10.68%",
+          "ytd_change": "+57.02%",
+          "week_52_high": "$115.50",
+          "week_52_low": "$58.90",
           "market_cap": "N/A",
-          "volume_24h": "Extremely high",
-          "sentiment": "bullish",
-          "social_sentiment": "mixed",
-          "social_buzz": "high",
-          "confidence": 7,
-          "source_agreement": "high",
-          "sources_checked": [
-            "cnbc.com",
-            "fortune.com",
-            "tradingeconomics.com"
-          ],
-          "key_news": [
-            "El petróleo cierra por encima de $100 (Brent) por segundo día; WTI en $98.71",
-            "El tráfico de buques cisterna en el Estrecho de Ormuz está paralizado",
-            "La AIE libera 400M de barriles de reservas — la mayor liberación de la historia"
-          ],
-          "social_highlights": [
-            "El cierre del Estrecho de Ormuz interrumpe el 20% del suministro global de petróleo",
-            "El mercado descuenta un conflicto prolongado"
-          ],
-          "recommendation": "hold",
-          "reasoning": "El petróleo subió 54% en un mes por la guerra con Irán. La liberación de reservas de la AIE proporciona un techo. Si ocurre un alto al fuego, los precios podrían desplomarse 30-40%. Demasiada prima de guerra para nuevas posiciones largas, pero vender en corto una guerra es peligroso. Mantener."
-        },
-        {
-          "name": "Silver",
-          "symbol": "XAG",
-          "current_price": "$83.97",
-          "change_24h": "-3.8%",
-          "change_7d": "-1.5%",
-          "change_30d": "+11.2%",
-          "ytd_change": "+55.0%",
-          "week_52_high": "$121.79",
-          "week_52_low": "$28.34",
-          "market_cap": "N/A",
-          "volume_24h": "High",
-          "sentiment": "bullish",
-          "social_sentiment": "bullish",
-          "social_buzz": "high",
-          "confidence": 8,
-          "source_agreement": "medium",
-          "sources_checked": [
-            "fortune.com",
-            "tradingeconomics.com",
-            "coincodex.com"
-          ],
-          "key_news": [
-            "La plata sube más de 150% interanual; sexto año de déficit estructural de oferta",
-            "La demanda de energía solar fotovoltaica ahora representa más del 50% del consumo industrial",
-            "J.P. Morgan ve la plata promediando $81/oz en 2026"
-          ],
-          "social_highlights": [
-            "La narrativa del squeeze de plata impulsada por demanda solar, EV e IA",
-            "Los fabricantes solares compran agresivamente en $80"
-          ],
-          "recommendation": "buy",
-          "reasoning": "La relación riesgo/recompensa más atractiva en commodities. Sexto año de déficit estructural de oferta impulsado por demanda solar/EV/IA. Descuento de 30% desde el máximo histórico con fundamentos intactos. Pronóstico de J.P. Morgan de $81/oz. Principal selección."
-        },
-        {
-          "name": "Copper",
-          "symbol": "HG",
-          "current_price": "$5.90",
-          "change_24h": "+0.3%",
-          "change_7d": "-1.5%",
-          "change_30d": "-1.7%",
-          "ytd_change": "+26.6%",
-          "week_52_high": "$6.58",
-          "week_52_low": "$4.03",
-          "market_cap": "N/A",
-          "volume_24h": "High",
-          "sentiment": "bullish",
-          "social_sentiment": "bullish",
-          "social_buzz": "high",
-          "confidence": 8,
-          "source_agreement": "high",
-          "sources_checked": [
-            "investing.com",
-            "tradingeconomics.com",
-            "mining.com"
-          ],
-          "key_news": [
-            "ING pronostica un déficit de 600kt de cobre refinado en 2026",
-            "El arancel de 50% de EE.UU. distorsiona los precios globales",
-            "Los centros de datos de IA emergen como un nuevo factor significativo de demanda"
-          ],
-          "social_highlights": [
-            "La construcción de centros de datos de IA emerge como factor de demanda",
-            "Los fondos gestionados netos largos en mínimo de 22 semanas — señal contraria de compra"
-          ],
-          "recommendation": "buy",
-          "reasoning": "Déficit estructural de oferta impulsado por la electrificación, centros de datos de IA y adopción de vehículos eléctricos. El arancel de 50% de EE.UU. apoya los precios domésticos. Los datos COT muestran fondos en mínimo de 22 semanas — señal contraria. No hay nuevas minas importantes antes de 2028."
-        },
-        {
-          "name": "Natural Gas",
-          "symbol": "NG",
-          "current_price": "$3.15",
-          "change_24h": "-2.7%",
-          "change_7d": "-18.5%",
-          "change_30d": "+4.6%",
-          "ytd_change": "-17.1%",
-          "week_52_high": "$7.83",
-          "week_52_low": "$2.62",
-          "market_cap": "N/A",
-          "volume_24h": "Elevated",
+          "volume_24h": "N/A",
           "sentiment": "neutral",
-          "social_sentiment": "mixed",
-          "social_buzz": "high",
-          "confidence": 5,
-          "source_agreement": "medium",
-          "sources_checked": [
-            "tradingeconomics.com",
-            "investing.com",
-            "eia.gov"
-          ],
-          "key_news": [
-            "Qatar cierra Ras Laffan — 20% del suministro global de GNL — tras ataque con drones iraníes",
-            "El TTF europeo subió 46%; el GNL asiático se duplicó",
-            "El Henry Hub de EE.UU. baja por clima más cálido"
-          ],
-          "social_highlights": [
-            "Divergencia masiva entre el Henry Hub de EE.UU. y los precios globales de GNL",
-            "El cierre de Qatar podría impulsar las exportaciones de GNL de EE.UU."
-          ],
-          "recommendation": "hold",
-          "reasoning": "Panorama dividido: el Henry Hub de EE.UU. deprimido en $3.15 pero los precios globales de GNL se duplicaron. Si el cierre de Qatar se extiende, las exportaciones de EE.UU. podrían dispararse. El clima primaveral más cálido es un viento en contra. Mantener."
-        },
-        {
-          "name": "Coffee Arabica",
-          "symbol": "KC",
-          "current_price": "$2.85",
-          "change_24h": "-2.3%",
-          "change_7d": "-5.8%",
-          "change_30d": "-10.2%",
-          "ytd_change": "-20.6%",
-          "week_52_high": "$4.38",
-          "week_52_low": "$2.75",
-          "market_cap": "N/A",
-          "volume_24h": "Moderate",
-          "sentiment": "bearish",
           "social_sentiment": "bearish",
-          "social_buzz": "medium",
-          "confidence": 7,
-          "source_agreement": "medium",
-          "sources_checked": [
-            "tradingeconomics.com",
-            "barchart.com",
-            "yahoo.com"
-          ],
-          "key_news": [
-            "La producción de Brasil 2026/27 estimada en récord de 75.3M de sacos, un aumento de 17.2% interanual",
-            "El arábica cayó a su nivel más bajo desde agosto 2025",
-            "El USD fuerte agrega presión bajista"
-          ],
-          "social_highlights": [
-            "Los consumidores sorprendidos por los precios minoristas a pesar de que los precios mayoristas bajan",
-            "El clima en Brasil se normaliza después de los temores de sequía"
-          ],
-          "recommendation": "sell",
-          "reasoning": "Clara tendencia bajista, baja más de 20% en lo que va del año. La cosecha récord de Brasil resuelve los temores de oferta. El dólar fuerte agrega viento en contra. Cerca del mínimo de 52 semanas. Vender o vender en corto."
-        },
-        {
-          "name": "Corn",
-          "symbol": "ZC",
-          "current_price": "$4.41",
-          "change_24h": "+0.7%",
-          "change_7d": "+2.3%",
-          "change_30d": "+5.1%",
-          "ytd_change": "+3.8%",
-          "week_52_high": "$4.95",
-          "week_52_low": "$3.91",
-          "market_cap": "N/A",
-          "volume_24h": "Moderate",
-          "sentiment": "neutral",
-          "social_sentiment": "neutral",
-          "social_buzz": "medium",
+          "social_buzz": "high",
           "confidence": 6,
           "source_agreement": "high",
           "sources_checked": [
-            "tradingeconomics.com",
-            "barchart.com"
+            "TradingEconomics",
+            "YahooFinance"
           ],
           "key_news": [
-            "Los commodities agrícolas suben mientras se avecina una crisis de fertilizantes",
-            "El precio de seguro proyectado del maíz de $4.62 sugiere potencial al alza",
-            "El aumento de oferta de Sudamérica limita el alza"
+            "El WTI cayo ~10,5% en la semana — la mayor caida semanal en 9 meses — tras el acuerdo de ceasefire de dos semanas EEUU-Iran; WTI aun cerca de $96,57 con prima de riesgo residual de Hormuz",
+            "Las disrupciones del Estrecho de Hormuz persisten; los ataques israelies en Libano y las disputas no resueltas del ceasefire mantienen un suelo bajo el petroleo",
+            "Las existencias de crudo de EEUU en aumento: cambio de existencias API +3,72M bbl; produccion de EEUU a 13.596K bpd; Arabia Saudi a 10.111K bpd"
           ],
           "social_highlights": [
-            "Los costos de insumos agrícolas elevados — preocupaciones de compresión de márgenes",
-            "La crisis de fertilizantes podría empujar los precios de los granos al alza"
+            "Energy stocks hit hard; Crescent Energy (CRGY) down 5.2% on ceasefire-driven oil drop",
+            "US rig count down 3 as prices fall — early supply-side response; traders divided between 'sell the ceasefire' and 'buy the fragility'"
           ],
           "recommendation": "hold",
-          "reasoning": "En rango entre $3.91-$4.95 cerca del punto medio. La crisis de fertilizantes proporciona potencial al alza pero la oferta abundante limita las ganancias. Mantener — esperar ruptura."
+          "reasoning": "El WTI esta atrapado entre dos fuerzas opuestas: bajista — el ceasefire EEUU-Iran de 2 semanas provoca la mayor caida semanal en 9 meses; alcista — restricciones de suministro estructuralmente persistentes (disrupciones en Hormuz, disciplina Saudi/Rusia, produccion de EEUU en descenso). Alta incertidumbre en la direccion — ni una salida clara ni una nueva entrada a los niveles actuales. Hold a la espera del desarrollo del ceasefire."
         }
       ],
-      "sector_summary": "Los commodities en marzo 2026 están definidos por la guerra con Irán — el petróleo subiendo 54%, el oro cerca de $5,100, la plata +55% en lo que va del año por déficit estructural. Los agentes descubrieron el café (bajista por la cosecha récord de Brasil) y el maíz (operativa por la crisis de fertilizantes) como adiciones dinámicas. El cobre se beneficia de la demanda de centros de datos de IA y la electrificación.",
+      "sector_summary": "Los metales preciosos estan en una tendencia alcista de varias semanas impulsada por la inflacion de EEUU al 3,3% (maximos desde mayo 2024), un dolar estructuralmente debil, crecientes expectativas de recorte de tipos de la Fed y riesgo geopolitico persistente en Oriente Medio. El petroleo crudo WTI registra su mayor caida semanal en 9 meses (-10,5%) por el alivio del ceasefire pero mantiene un suelo de riesgo residual dado que los ataques israelies en Libano siguen sin resolverse.",
       "sector_outlook": "bullish",
-      "top_pick": "XAG",
-      "top_pick_reasoning": "La plata ofrece la mejor relación riesgo/recompensa: sexto año de déficit estructural de oferta por demanda solar/EV/IA, descuento de 30% desde el máximo histórico, pronóstico de J.P. Morgan de $81/oz, y los datos COT muestran margen para más alza."
+      "top_pick": "XAU",
+      "top_pick_reasoning": "El Oro es el pick principal de materiales: combina la configuracion fundamental mas defensible (inflacion al 3,3%, debilidad del dolar, entradas de refugio seguro) con momentum tecnico confirmado (tercera semana consecutiva de ganancias, cerca de $4.780 con camino hacia $5.000+ ante cualquier deterioro del ceasefire o senales de giro de la Fed). A diferencia de la plata, el oro no tiene riesgo de demanda industrial; a diferencia del WTI, el oro se beneficia de la desescalada. La asimetria riesgo/rentabilidad con la compra de bancos centrales como suelo estructural hace de XAU la posicion de mayor conviccion en el sector de materiales."
     }
   }
 }
