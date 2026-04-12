@@ -128,12 +128,16 @@ Do NOT use a fixed list. Instead, discover 5-8 assets worth analyzing right now:
 
 ### Research Strategy (Step 2)
 
+> **IMPORTANT — Pre-calculated data available**: Before searching, check if a `MARKET_CONTEXT` block was injected at the top of this prompt. If present, the fields `technicals`, `valuation`, `fundamentals`, `earnings`, and `insider_signal` for each ticker in that block have been **calculated from real market data** (not estimated). Use those values directly in your JSON output — do NOT search for RSI, PE ratios, support/resistance, or earnings dates for tickers that are already in MARKET_CONTEXT. This eliminates ~60 redundant web searches per run.
+
 1. **Market overview**: Search for `"stock market today"`, `"S&P 500 today {date}"`, `"NASDAQ today"`.
 2. **Individual stocks**: For each discovered stock, search for current price, analyst ratings, recent news, and earnings data.
-3. **Earnings & fundamentals**: Search for upcoming or recent earnings for your selected stocks.
+3. **Earnings & fundamentals**: Only search for earnings if the ticker is NOT in MARKET_CONTEXT.
 4. **Analyst sentiment**: Search for `"stock market outlook {month} {year}"`, `"wall street forecast {year}"`.
 5. **Social/retail sentiment**: Search for `"wallstreetbets trending"`, `"retail investor sentiment {month} {year}"`, and social mentions for your top picks.
-6. **Deep dive**: Use WebFetch on 2-3 key articles.
+6. **News & catalysts**: For each top pick, search for recent news, analyst upgrades/downgrades, and sector tailwinds. This is where your value is — narratives and catalysts that numbers alone don't capture.
+7. **Deep dive**: Use WebFetch on 2-3 key articles.
+8. **Newly discovered tickers** (not in MARKET_CONTEXT): For these only, search for `"{TICKER} RSI technical analysis"`, `"{TICKER} P/E PEG valuation"`, and `"{TICKER} revenue growth fundamentals"` to populate the technicals/valuation/fundamentals fields.
 
 ### Source Cross-Referencing
 
@@ -148,12 +152,39 @@ Verify prices from at least 2 sources (Yahoo Finance, MarketWatch, Google Financ
 
 ### Output Requirements
 
-Return a single JSON code block with `"sector": "stocks"`. Same schema as crypto agent. Include all discovered assets with full historical context (YTD, 52-week range).
+Return a single JSON code block with `"sector": "stocks"`. Same schema as crypto agent, but **add the following 3 fields to each individual stock** (not needed for SPX/IXIC benchmarks):
+
+```json
+"technicals": {
+  "trend": "uptrend",
+  "rsi": 58,
+  "macd": "bullish crossover",
+  "key_support": 170,
+  "key_resistance": 210,
+  "entry_quality": "good — near support, not extended"
+},
+"valuation": {
+  "pe": 35,
+  "forward_pe": 28,
+  "peg": 1.2,
+  "ev_ebitda": 22,
+  "verdict": "fairly valued — PEG near 1, growth justifies premium"
+},
+"fundamentals": {
+  "revenue_growth": "+22% YoY",
+  "gross_margin": "65%",
+  "fcf_margin": "30%",
+  "debt_equity": 0.5,
+  "verdict": "strong — growing revenue, positive FCF, low debt"
+}
+```
+
+If data for a field is unavailable after searching, use `null` and note it in `reasoning`. Include all discovered assets with full historical context (YTD, 52-week range).
 
 ### Recommendation Criteria
-- **Buy**: Strong earnings, positive guidance, sector tailwinds, attractive valuation, positive retail sentiment confirming institutional view
-- **Hold**: Fair valuation, stable earnings, no major catalysts, mixed sentiment
-- **Sell**: Declining fundamentals, overvaluation, sector headwinds, negative social sentiment and analyst downgrades converging
+- **Buy**: Technicals show uptrend with RSI not overbought (< 70) AND price near support OR valuation attractive (PEG ≤ 1.5 or forward PE reasonable for sector) AND positive catalyst confirmed by news. When MARKET_CONTEXT provides real RSI and PEG values, these checks are objective — use them as hard gates.
+- **Hold**: Technicals extended (RSI > 70, far above support), or valuation stretched (PEG > 2) without near-term catalyst, or mixed signals. Wait for a better entry.
+- **Sell**: Technical breakdown below key support, deteriorating fundamentals (declining revenue, negative FCF), or overvaluation without growth justification.
 
 ---
 
