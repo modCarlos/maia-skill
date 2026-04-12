@@ -38,6 +38,65 @@ DEFAULT_TICKERS = [
     "TSLA", "NFLX", "KMI",
 ]
 
+# Named watchlists — use with: python3 tools/pre_fetch.py --watchlist <name>
+# Multiple names allowed: python3 tools/pre_fetch.py --watchlist tech financials
+# Individual tickers still work: python3 tools/pre_fetch.py INTC COIN GLD
+WATCHLISTS = {
+    # Core 15 — same as DEFAULT_TICKERS
+    "default": DEFAULT_TICKERS,
+
+    # Extended tech: adds semiconductors, SaaS, and recently discovered high-momentum names
+    "tech": [
+        "NVDA", "AMD", "TSM", "INTC", "QCOM", "ARM",
+        "MSFT", "AAPL", "GOOGL", "META", "AMZN",
+        "AVGO", "AMAT", "ASML",
+        "PLTR", "SNOW", "CRM", "NOW", "PANW",
+        "NFLX", "TSLA",
+    ],
+
+    # Financials: banks, payment networks, asset managers
+    "financials": [
+        "JPM", "BAC", "GS", "MS", "WFC", "C",
+        "V", "MA", "PYPL",
+        "BLK", "BX",
+    ],
+
+    # Materials & energy: precious metals ETFs + oil & gas
+    "materials": [
+        "GLD", "SLV", "GDX", "GDXJ",
+        "XOM", "CVX", "COP", "KMI", "OXY",
+        "FCX", "NEM",
+    ],
+
+    # Healthcare & biotech
+    "healthcare": [
+        "LLY", "UNH", "JNJ", "ABBV", "MRK",
+        "AMGN", "GILD", "REGN", "MRNA", "PFE",
+    ],
+
+    # Indices & macro proxies (use for macro context alongside stocks)
+    "macro": [
+        "SPY", "QQQ", "IWM", "DIA",
+        "TLT", "GLD", "USO", "UUP",
+    ],
+
+    # Crypto proxies available on yfinance (spot via -USD suffix)
+    "crypto": [
+        "BTC-USD", "ETH-USD", "SOL-USD",
+        "COIN", "MSTR", "MARA", "RIOT",
+    ],
+
+    # Full extended: all of the above deduplicated (~65 tickers, ~3-4 min runtime)
+    "all": sorted(set(
+        DEFAULT_TICKERS +
+        ["INTC", "QCOM", "ARM", "AMAT", "ASML", "SNOW", "CRM", "NOW", "PANW"] +
+        ["JPM", "BAC", "GS", "MS", "WFC", "C", "V", "MA", "PYPL", "BLK", "BX"] +
+        ["GLD", "SLV", "GDX", "XOM", "CVX", "COP", "OXY", "FCX", "NEM"] +
+        ["LLY", "UNH", "JNJ", "ABBV", "MRK", "AMGN", "GILD", "REGN"] +
+        ["BTC-USD", "ETH-USD", "SOL-USD", "COIN", "MSTR"]
+    )),
+}
+
 MACRO_TICKERS = ["^VIX", "^TNX", "^GSPC", "^IRX"]
 
 SKILL_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -329,9 +388,43 @@ def fetch_macro() -> dict:
 # ─── Entry point ──────────────────────────────────────────────────────────────
 
 def main():
-    tickers = sys.argv[1:] if len(sys.argv) > 1 else DEFAULT_TICKERS
+    args = sys.argv[1:]
 
-    print(f"[pre_fetch] {datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')} — fetching {len(tickers)} tickers + macro")
+    # --watchlist NAME [NAME2 ...] — select one or more named watchlists
+    # Everything else is treated as individual ticker symbols
+    if "--watchlist" in args:
+        idx = args.index("--watchlist")
+        watchlist_names = []
+        individual = []
+        after = args[idx + 1:]
+        for token in after:
+            if token in WATCHLISTS:
+                watchlist_names.append(token)
+            elif not token.startswith("--"):
+                # Unknown name — treat as individual ticker
+                individual.append(token.upper())
+            else:
+                break
+        before = [t.upper() for t in args[:idx] if not t.startswith("--")]
+
+        tickers_set = list(dict.fromkeys(
+            before +
+            [t for name in watchlist_names for t in WATCHLISTS[name]] +
+            individual
+        ))
+        if not tickers_set:
+            print(f"[pre_fetch] Unknown watchlist(s). Available: {', '.join(WATCHLISTS)}")
+            sys.exit(1)
+        tickers = tickers_set
+        label = f"watchlist={'+'.join(watchlist_names) or 'none'}"
+    elif args:
+        tickers = [t.upper() for t in args]
+        label = "custom"
+    else:
+        tickers = DEFAULT_TICKERS
+        label = "default"
+
+    print(f"[pre_fetch] {datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')} — {label} — fetching {len(tickers)} tickers + macro")
 
     stocks = {}
     for symbol in tickers:
