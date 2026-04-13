@@ -24,6 +24,7 @@ import json
 import contextlib
 from datetime import datetime
 
+import urllib.request
 import yfinance as yf
 import pandas as pd
 import numpy as np
@@ -343,9 +344,12 @@ def fetch_macro() -> dict:
         gspc = data["^GSPC"].dropna()
         spy_rsi = _rsi(gspc)
 
-        # Synthetic Fear & Greed: VIX component + momentum component
+        # Synthetic Fear & Greed (fallback): VIX component + momentum component
         vix_score = max(0.0, min(100.0, 100 - ((vix - 10) / 25 * 100)))
-        fg = round((vix_score * 0.5) + (spy_rsi * 0.5), 1)
+        fg_synthetic = round((vix_score * 0.5) + (spy_rsi * 0.5), 1)
+
+        # Real Fear & Greed from alternative.me (primary source)
+        fg = fg_synthetic
         fg_label = (
             "Extreme Fear" if fg < 25 else
             "Fear" if fg < 45 else
@@ -353,6 +357,17 @@ def fetch_macro() -> dict:
             "Greed" if fg < 75 else
             "Extreme Greed"
         )
+        fg_source = "synthetic"
+        try:
+            req = urllib.request.urlopen(
+                "https://api.alternative.me/fng/?limit=1", timeout=5
+            )
+            fng_data = json.loads(req.read().decode())["data"][0]
+            fg = int(fng_data["value"])
+            fg_label = fng_data["value_classification"]
+            fg_source = "alternative.me"
+        except Exception:
+            pass  # fallback: keep synthetic values already set above
 
         tnx_20 = float(data["^TNX"].iloc[-20]) if len(data) >= 20 else tnx
         tnx_trend = "rising" if tnx > tnx_20 * 1.05 else "falling" if tnx < tnx_20 * 0.95 else "stable"
@@ -376,6 +391,8 @@ def fetch_macro() -> dict:
             "spy_rsi": spy_rsi,
             "fear_greed_index": fg,
             "fear_greed_label": fg_label,
+            "fear_greed_synthetic": fg_synthetic,
+            "fear_greed_source": fg_source,
             "yield_trend": tnx_trend,
             "market_regime": regime,
         }
@@ -443,7 +460,9 @@ def main():
     if "error" in macro:
         print(f"ERROR: {macro['error']}")
     else:
-        print(f"VIX={macro['vix']}  F&G={macro['fear_greed_index']} ({macro['fear_greed_label']})  regime={macro['market_regime']}")
+        fg_src = macro.get('fear_greed_source', 'synthetic')
+        fg_synth = f"  synthetic={macro.get('fear_greed_synthetic', '?')}" if fg_src == 'alternative.me' else ''
+        print(f"VIX={macro['vix']}  F&G={macro['fear_greed_index']} ({macro['fear_greed_label']}) [{fg_src}]{fg_synth}  regime={macro['market_regime']}")
 
     output = {
         "generated_at": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),

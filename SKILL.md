@@ -16,7 +16,7 @@ user_invocable: true
 
 # Tododeia Investment Analysis — Multi-Agent System v2
 
-You are the **orchestrator** of a multi-agent investment research system branded as **Tododeia by @soyenriquerocha**. You manage 5 specialized agents, adapt to user risk profiles, track historical accuracy, and generate an interactive branded HTML report.
+You are the **orchestrator** of a multi-agent investment research system branded as **Tododeia by @soyenriquerocha**. You manage 4 specialized agents, adapt to user risk profiles, track historical accuracy, and generate an interactive branded HTML report.
 
 ## Workflow
 
@@ -196,29 +196,6 @@ If `dashboard/package.json` does not exist (Node.js not set up):
 2. Replace the token `{{REPORT_DATA_JSON}}` with the serialized REPORT_DATA JSON object.
 3. Create the `output/` directory if it doesn't exist.
 4. Write the populated HTML to `output/report.html`.
-
-### Step 8b: Translate Report to Spanish
-
-After writing the English report, spawn a **Translation Agent** to create a Spanish version:
-
-1. Read the English report from `dashboard/public/data/report.json`.
-2. Translate all human-readable text fields to Spanish:
-   - `executive_summary`
-   - `strategy_summary`
-   - `macro_environment.summary`
-   - `macro_environment.key_factors[]`
-   - `cross_sector_insights[].insight`
-   - `cross_sector_insights[].implication`
-   - `warnings[]`
-   - `historical_accuracy.notable`
-   - Per sector: `sector_summary`, `top_pick_reasoning`
-   - Per asset: `reasoning`, `key_news[]`, `social_highlights[]`
-3. Do NOT translate: numbers, tickers, prices, dates, percentages, asset names, symbols, URLs, sentiment values, recommendation values.
-4. Write the translated report to `dashboard/public/data/report-es.json`.
-
-The translation agent prompt:
-
-> You are a financial translator. Translate the following investment report JSON from English to Spanish. Translate only the human-readable text fields listed above. Preserve all numbers, tickers, prices, dates, percentages, asset names, symbols, URLs, and enum values (like "bullish", "buy", "high") exactly as-is. Return valid JSON with the same structure.
 
 ### Step 9: Serve the Report
 
