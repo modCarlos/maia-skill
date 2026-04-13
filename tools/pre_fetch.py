@@ -328,7 +328,7 @@ def fetch_stock(symbol: str) -> dict | None:
         "valuation": {
             "pe": safe("trailingPE"),
             "forward_pe": safe("forwardPE"),
-            "peg": safe("pegRatio"),
+            "peg": safe("trailingPegRatio") or safe("pegRatio"),
             "ev_ebitda": safe("enterpriseToEbitda"),
             "price_to_fcf": safe("priceToFreeCashflows"),
         },
