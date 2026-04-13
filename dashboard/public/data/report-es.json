@@ -267,11 +267,23 @@
     "materials": 20,
     "energy": 15
   },
-  "cross_sector_insights": {
-    "stocks": "El SaaS empresarial está experimentando una capitulación sin precedentes: NOW en RSI=17.1 y CRM en RSI=22.2 descuentan una caída terminal para empresas que crecen +20% con márgenes FCF del 35%+. Las ventas indiscriminadas generadas por la nota Goldman Sachs han creado puntos de entrada generacionales. Las acciones energéticas (CVX) son el principal beneficiario macroeconómico de Ormuz. La temporada de resultados 22-29 abril es la ola catalizadora.",
-    "crypto": "El índice F&G real = 12 (Miedo Extremo) mientras el modelo sintético muestra 65.4 — la divergencia confirma que la señal contraria es real. Los flujos de ETFs se mantuvieron positivos durante el risk-off de Ormuz (+816M$ netos la semana pasada). Saylor/Strategy señalando compra. Históricamente esta es una entrada de acumulación para 6-12 meses. Preferencia BTC>ETH>SOL para riesgo moderado.",
-    "materials": "El oro cae paradójicamente con Ormuz (inflación por petróleo → retraso en recortes → viento en contra del oro vía tipos). Esto crea una oportunidad DCA dentro del toro estructural: compras de bancos centrales durante 23 meses seguidos, desdolarización, prima geopolítica. La plata está demasiado extendida (+95% en el año). El WTI es riesgo de evento binario — mejor jugar vía acciones de CVX."
-  },
+  "cross_sector_insights": [
+    {
+      "sector": "stocks",
+      "insight": "SaaS — Capitulación Histórica",
+      "implication": "El SaaS empresarial está experimentando una capitulación sin precedentes: NOW en RSI=17.1 y CRM en RSI=22.2 descuentan una caída terminal para empresas que crecen +20% con márgenes FCF del 35%+. Las ventas indiscriminadas generadas por la nota Goldman Sachs han creado puntos de entrada generacionales. Las acciones energéticas (CVX) son el principal beneficiario macroeconómico de Ormuz. La temporada de resultados 22-29 abril es la ola catalizadora."
+    },
+    {
+      "sector": "crypto",
+      "insight": "Crypto — Miedo Extremo = Señal Contraria",
+      "implication": "El índice F&G real = 12 (Miedo Extremo) mientras el modelo sintético muestra 65.4 — la divergencia confirma que la señal contraria es real. Los flujos de ETFs se mantuvieron positivos durante el risk-off de Ormuz (+816M$ netos la semana pasada). Saylor/Strategy señalando compra. Históricamente esta es una entrada de acumulación para 6-12 meses. Preferencia BTC>ETH>SOL para riesgo moderado."
+    },
+    {
+      "sector": "materials",
+      "insight": "Materiales — Oro DCA en Pullback",
+      "implication": "El oro cae paradójicamente con Ormuz (inflación por petróleo → retraso en recortes → viento en contra del oro vía tipos). Esto crea una oportunidad DCA dentro del toro estructural: compras de bancos centrales durante 23 meses seguidos, desdolarización, prima geopolítica. La plata está demasiado extendida (+95% en el año). El WTI es riesgo de evento binario — mejor jugar vía acciones de CVX."
+    }
+  ],
   "upcoming_catalysts": [
     {
       "symbol": "NOW",

@@ -267,18 +267,72 @@
     "materials": 20,
     "energy": 15
   },
-  "cross_sector_insights": {
-    "stocks": "Enterprise SaaS is experiencing a once-in-a-cycle capitulation: NOW at RSI=17.1 and CRM at RSI=22.2 are pricing in terminal decline for companies that are actually growing 20%+ with 35%+ FCF margins. The Goldman Sachs software note created indiscriminate selling that has produced generational entry points. Energy stocks (CVX) are the clearest macro beneficiary of Hormuz. Earnings season Apr 22-29 is the catalyst wave.",
-    "crypto": "Real F&G index = 12 (Extreme Fear) while synthetic model shows 65.4 — divergence confirms the contrarian signal is real. ETF flows remained positive throughout the Hormuz risk-off ($816M net last week). Saylor/Strategy signaling bid. This is historically a 6-12 month accumulation entry. BTC>ETH>SOL preference for moderate risk.",
-    "materials": "Gold is paradoxically dipping on Hormuz (oil inflation → rate cut delay → gold headwind via rates). This creates a DCA opportunity into the structural bull: CB buying for 23 months straight, de-dollarization, geopolitical premium. Silver is too extended (+95% YTD). WTI is binary event risk — play through CVX equity instead."
-  },
+  "cross_sector_insights": [
+    {
+      "sector": "stocks",
+      "insight": "SaaS — Capitulación Histórica",
+      "implication": "Enterprise SaaS is experiencing a once-in-a-cycle capitulation: NOW at RSI=17.1 and CRM at RSI=22.2 are pricing in terminal decline for companies that are actually growing 20%+ with 35%+ FCF margins. The Goldman Sachs software note created indiscriminate selling that has produced generational entry points. Energy stocks (CVX) are the clearest macro beneficiary of Hormuz. Earnings season Apr 22-29 is the catalyst wave."
+    },
+    {
+      "sector": "crypto",
+      "insight": "Crypto — Miedo Extremo = Señal Contraria",
+      "implication": "Real F&G index = 12 (Extreme Fear) while synthetic model shows 65.4 — divergence confirms the contrarian signal is real. ETF flows remained positive throughout the Hormuz risk-off ($816M net last week). Saylor/Strategy signaling bid. This is historically a 6-12 month accumulation entry. BTC>ETH>SOL preference for moderate risk."
+    },
+    {
+      "sector": "materials",
+      "insight": "Materiales — Oro DCA en Pullback",
+      "implication": "Gold is paradoxically dipping on Hormuz (oil inflation → rate cut delay → gold headwind via rates). This creates a DCA opportunity into the structural bull: CB buying for 23 months straight, de-dollarization, geopolitical premium. Silver is too extended (+95% YTD). WTI is binary event risk — play through CVX equity instead."
+    }
+  ],
   "upcoming_catalysts": [
-    {"symbol": "NOW", "event": "Earnings Q1 FY26", "date": "2026-04-22", "days_away": 10, "importance": "high"},
-    {"symbol": "GILD", "event": "Earnings Q1 2026", "date": "2026-04-23", "days_away": 11, "importance": "medium"},
-    {"symbol": "CVX", "event": "Earnings Q1 2026", "date": "2026-04-25", "days_away": 13, "importance": "high"},
-    {"symbol": "V", "event": "Earnings Q2 FY26", "date": "2026-04-28", "days_away": 16, "importance": "medium"},
-    {"symbol": "MSFT", "event": "Earnings Q3 FY26", "date": "2026-04-29", "days_away": 17, "importance": "high"},
-    {"symbol": "GOOGL", "event": "Earnings Q1 2026", "date": "2026-04-29", "days_away": 17, "importance": "medium"},
-    {"symbol": "NVDA", "event": "Earnings Q1 FY27", "date": "2026-05-20", "days_away": 38, "importance": "high"}
+    {
+      "symbol": "NOW",
+      "event": "Earnings Q1 FY26",
+      "date": "2026-04-22",
+      "days_away": 10,
+      "importance": "high"
+    },
+    {
+      "symbol": "GILD",
+      "event": "Earnings Q1 2026",
+      "date": "2026-04-23",
+      "days_away": 11,
+      "importance": "medium"
+    },
+    {
+      "symbol": "CVX",
+      "event": "Earnings Q1 2026",
+      "date": "2026-04-25",
+      "days_away": 13,
+      "importance": "high"
+    },
+    {
+      "symbol": "V",
+      "event": "Earnings Q2 FY26",
+      "date": "2026-04-28",
+      "days_away": 16,
+      "importance": "medium"
+    },
+    {
+      "symbol": "MSFT",
+      "event": "Earnings Q3 FY26",
+      "date": "2026-04-29",
+      "days_away": 17,
+      "importance": "high"
+    },
+    {
+      "symbol": "GOOGL",
+      "event": "Earnings Q1 2026",
+      "date": "2026-04-29",
+      "days_away": 17,
+      "importance": "medium"
+    },
+    {
+      "symbol": "NVDA",
+      "event": "Earnings Q1 FY27",
+      "date": "2026-05-20",
+      "days_away": 38,
+      "importance": "high"
+    }
   ]
 }
