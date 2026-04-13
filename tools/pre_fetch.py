@@ -21,8 +21,10 @@ Output:
 import sys
 import os
 import json
+import glob
 import contextlib
 from datetime import datetime
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import urllib.request
 import yfinance as yf
@@ -526,19 +528,21 @@ def main():
         tickers = DEFAULT_TICKERS
         label = "default"
 
-    print(f"[pre_fetch] {datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')} — {label} — fetching {len(tickers)} tickers + macro")
+    print(f"[pre_fetch] {datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')} — {label} — fetching {len(tickers)} tickers + macro (parallel)")
 
     stocks = {}
-    for symbol in tickers:
-        print(f"  {symbol:<6}", end=" ", flush=True)
-        result = fetch_stock(symbol)
-        if result:
-            t = result["technicals"]
-            v = result["valuation"]
-            print(f"RSI={t['rsi']}  {t['trend']:<10}  PEG={v['peg']}  entry={t['entry_quality']}")
-            stocks[symbol] = result
-        else:
-            print("SKIP — no data")
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        futures = {executor.submit(fetch_stock, symbol): symbol for symbol in tickers}
+        for future in as_completed(futures):
+            symbol = futures[future]
+            result = future.result()
+            if result:
+                t = result["technicals"]
+                v = result["valuation"]
+                print(f"  {symbol:<6} RSI={t['rsi']}  {t['trend']:<10}  PEG={v['peg']}  entry={t['entry_quality']}")
+                stocks[symbol] = result
+            else:
+                print(f"  {symbol:<6} SKIP — no data")
 
     print("[pre_fetch] Fetching macro...", end=" ", flush=True)
     macro = fetch_macro()
@@ -567,6 +571,14 @@ def main():
         json.dump(output, f, indent=2, default=str)
 
     print(f"[pre_fetch] ✓ Written → {OUTPUT_PATH}  ({os.path.getsize(OUTPUT_PATH):,} bytes)")
+
+    # Retain only the last 30 history files to prevent unbounded growth
+    history_dir = os.path.join(SKILL_ROOT, "output", "history")
+    if os.path.isdir(history_dir):
+        history_files = sorted(glob.glob(os.path.join(history_dir, "*.json")))
+        for old_file in history_files[:-30]:
+            os.remove(old_file)
+            print(f"[pre_fetch] Pruned old history: {os.path.basename(old_file)}")
 
 
 if __name__ == "__main__":

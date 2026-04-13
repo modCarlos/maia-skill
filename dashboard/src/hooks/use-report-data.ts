@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import type { ReportData, SectorData } from "@/types/report"
-import type { Language } from "@/lib/translations"
 
 const REC_MAP: Record<string, "buy" | "hold" | "sell"> = {
   buy: "buy", comprar: "buy",
@@ -80,17 +79,17 @@ function sanitizeReportData(report: ReportData): ReportData {
 
   const rawAcc = (report as any).historical_accuracy as Record<string, any> ?? {}
   const tracking: Array<Record<string, any>> = rawAcc.picks_tracking ?? []
-  const callsMade = tracking.length
-  // A pick is "correct" when the recommendation aligns with price movement:
-  // buy → current_price > entry; monitoring negative change is still a valid DCA hold
-  const callsCorrect = tracking.filter((t) => typeof t.change_pct === "number" && t.change_pct >= 0).length
-  const accuracyPct = callsMade > 0 ? Math.round((callsCorrect / callsMade) * 100) : 0
+  // Prefer direct integer fields from Strategy Agent output (calls_made, calls_correct, accuracy_pct).
+  // Fall back to picks_tracking array computation for legacy report formats.
+  const callsMade = rawAcc.calls_made ?? tracking.length
+  const callsCorrect = rawAcc.calls_correct ?? tracking.filter((t) => typeof t.change_pct === "number" && t.change_pct >= 0).length
+  const accuracyPct = rawAcc.accuracy_pct ?? (callsMade > 0 ? Math.round((callsCorrect / callsMade) * 100) : 0)
   const historical_accuracy = {
-    previous_date: rawAcc.previous_timestamp ? rawAcc.previous_timestamp.split("T")[0] : (rawAcc.previous_report ?? null),
+    previous_date: rawAcc.previous_date ?? (rawAcc.previous_timestamp ? rawAcc.previous_timestamp.split("T")[0] : (rawAcc.previous_report ?? null)),
     calls_made: callsMade,
     calls_correct: callsCorrect,
     accuracy_pct: accuracyPct,
-    notable: rawAcc.market_note ?? "",
+    notable: rawAcc.notable ?? rawAcc.market_note ?? "",
   }
 
   return {
@@ -103,7 +102,7 @@ function sanitizeReportData(report: ReportData): ReportData {
   }
 }
 
-export function useReportData(lang: Language = "en") {
+export function useReportData() {
   const [data, setData] = useState<ReportData | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -112,26 +111,15 @@ export function useReportData(lang: Language = "en") {
     setLoading(true)
     setError(null)
 
-    const file = lang === "es" ? "/data/report-es.json" : "/data/report.json"
-
-    fetch(file)
+    fetch("/data/report.json")
       .then((res) => {
-        if (!res.ok) {
-          if (lang === "es" && res.status === 404) {
-            // Fallback to English if Spanish file doesn't exist
-            return fetch("/data/report.json").then((fallback) => {
-              if (!fallback.ok) throw new Error(`Failed to load report data: ${fallback.status}`)
-              return fallback.json()
-            })
-          }
-          throw new Error(`Failed to load report data: ${res.status}`)
-        }
+        if (!res.ok) throw new Error(`Failed to load report data: ${res.status}`)
         return res.json()
       })
-        .then((report) => setData(sanitizeReportData(report)))
+      .then((report) => setData(sanitizeReportData(report)))
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false))
-  }, [lang])
+  }, [])
 
   return { data, loading, error }
 }
