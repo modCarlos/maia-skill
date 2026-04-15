@@ -7,13 +7,11 @@
   "vix": 17.53,
   "fear_greed": 23,
   "historical_accuracy": {
-    "yesterday_date": "2026-04-14",
-    "picks_tracked": 14,
-    "wins": 8,
-    "losses": 4,
-    "unknown": 2,
-    "win_rate_pct": 66.7,
-    "commentary": "Stocks outperformed strongly on T+1: NOW +3.6%, PANW +2.1%, CRM +1.8%, V +0.9%, GILD +0.2%, AMGN +0.1%. XAG and XAU flat (counted as holds). Crypto underperformed: BTC -1.8%, ETH -1.7%, SOL -3.1%. LLY slight miss at -1.2%. SNOW and PLTR unconfirmed. Pattern: equity compounders outperformed crypto in risk-off environment."
+    "previous_date": "2026-04-14",
+    "calls_made": 14,
+    "calls_correct": 8,
+    "accuracy_pct": 66.7,
+    "notable": "Stocks outperformed strongly on T+1: NOW +3.6%, PANW +2.1%, CRM +1.8%, V +0.9%, GILD +0.2%, AMGN +0.1%. XAG and XAU flat (counted as holds). Crypto underperformed: BTC -1.8%, ETH -1.7%, SOL -3.1%. LLY slight miss at -1.2%. SNOW and PLTR unconfirmed. Pattern: equity compounders outperformed crypto in risk-off environment."
   },
   "macro_context": {
     "sp500": 6972,
@@ -30,194 +28,679 @@
   },
   "picks": [
     {
-      "rank": 1, "symbol": "V", "name": "Visa", "sector": "payments", "asset_type": "stock",
-      "action": "buy", "action_label": "🟢 COMPRAR",
-      "current_price": 313.45, "entry_zone": [305, 318], "stop_loss": 292, "target_12m": 365,
-      "risk_reward": 2.7, "confidence": 9, "position_size_pct": 9,
+      "rank": 1,
+      "symbol": "V",
+      "name": "Visa",
+      "sector": "payments",
+      "asset_type": "stock",
+      "action": "buy",
+      "action_label": "🟢 COMPRAR",
+      "current_price": 313.45,
+      "entry_zone": [
+        305,
+        318
+      ],
+      "stop_loss": 292,
+      "target_12m": 365,
+      "risk_reward": 2.7,
+      "confidence": 9,
+      "position_size_pct": 9,
       "thesis": "53.2% FCF margin, PEG 1.71, earnings in 13 days with 4-beat streak, Tempo stablecoin validator positioning Visa at digital dollar infrastructure core.",
-      "key_catalysts": ["earnings +13d", "Tempo stablecoin validator", "beat_streak 4"],
+      "key_catalysts": [
+        "earnings +13d",
+        "Tempo stablecoin validator",
+        "beat_streak 4"
+      ],
       "risk_flags": [],
-      "technicals": {"rsi": 59.1, "trend": "bullish", "entry_quality": "fair"},
-      "valuation": {"forward_pe": 21.55, "peg": 1.71, "fcf_margin": 53.2},
-      "fundamentals": {"revenue_growth": "+14.6% YoY", "beat_streak": 4}
+      "technicals": {
+        "rsi": 59.1,
+        "trend": "bullish",
+        "entry_quality": "fair"
+      },
+      "valuation": {
+        "forward_pe": 21.55,
+        "peg": 1.71,
+        "fcf_margin": 53.2
+      },
+      "fundamentals": {
+        "revenue_growth": "+14.6% YoY",
+        "beat_streak": 4
+      }
     },
     {
-      "rank": 2, "symbol": "MA", "name": "Mastercard", "sector": "payments", "asset_type": "stock",
-      "action": "buy", "action_label": "🟢 COMPRAR",
-      "current_price": 514.92, "entry_zone": [505, 522], "stop_loss": 482, "target_12m": 610,
-      "risk_reward": 3.1, "confidence": 9, "position_size_pct": 8,
+      "rank": 2,
+      "symbol": "MA",
+      "name": "Mastercard",
+      "sector": "payments",
+      "asset_type": "stock",
+      "action": "buy",
+      "action_label": "🟢 COMPRAR",
+      "current_price": 514.92,
+      "entry_zone": [
+        505,
+        522
+      ],
+      "stop_loss": 482,
+      "target_12m": 610,
+      "risk_reward": 3.1,
+      "confidence": 9,
+      "position_size_pct": 8,
       "thesis": "FCF 49.6%, PEG 1.64, 4-beat streak, earnings +15d. Higher cross-border growth (+17.6% YoY) than Visa. Near-identical quality compounder at fair valuation.",
-      "key_catalysts": ["earnings +15d", "cross-border volume", "beat_streak 4"],
+      "key_catalysts": [
+        "earnings +15d",
+        "cross-border volume",
+        "beat_streak 4"
+      ],
       "risk_flags": [],
-      "technicals": {"rsi": 57.4, "trend": "bullish", "entry_quality": "fair"},
-      "valuation": {"forward_pe": 22.76, "peg": 1.64, "fcf_margin": 49.6},
-      "fundamentals": {"revenue_growth": "+17.6% YoY", "beat_streak": 4}
+      "technicals": {
+        "rsi": 57.4,
+        "trend": "bullish",
+        "entry_quality": "fair"
+      },
+      "valuation": {
+        "forward_pe": 22.76,
+        "peg": 1.64,
+        "fcf_margin": 49.6
+      },
+      "fundamentals": {
+        "revenue_growth": "+17.6% YoY",
+        "beat_streak": 4
+      }
     },
     {
-      "rank": 3, "symbol": "META", "name": "Meta Platforms", "sector": "technology", "asset_type": "stock",
-      "action": "buy", "action_label": "🟢 COMPRAR",
-      "current_price": 667.85, "entry_zone": [655, 682], "stop_loss": 618, "target_12m": 820,
-      "risk_reward": 2.9, "confidence": 8, "position_size_pct": 9,
+      "rank": 3,
+      "symbol": "META",
+      "name": "Meta Platforms",
+      "sector": "technology",
+      "asset_type": "stock",
+      "action": "buy",
+      "action_label": "🟢 COMPRAR",
+      "current_price": 667.85,
+      "entry_zone": [
+        655,
+        682
+      ],
+      "stop_loss": 618,
+      "target_12m": 820,
+      "risk_reward": 2.9,
+      "confidence": 8,
+      "position_size_pct": 9,
       "thesis": "Cheapest mega-cap tech on PEG basis (0.88) with +23.8% revenue growth. Broadcom AI chip deal through 2029. Snap cuts redirect ad budgets to Meta. Earnings +14d.",
-      "key_catalysts": ["Broadcom AI chip deal 2029", "Snap workforce cuts", "earnings +14d", "PEG 0.88"],
-      "risk_flags": ["RSI 66.3 — enter in tranches"],
-      "technicals": {"rsi": 66.3, "trend": "bullish", "entry_quality": "fair"},
-      "valuation": {"forward_pe": 18.75, "peg": 0.88, "fcf_margin": 11.7},
-      "fundamentals": {"revenue_growth": "+23.8% YoY", "beat_streak": 3}
+      "key_catalysts": [
+        "Broadcom AI chip deal 2029",
+        "Snap workforce cuts",
+        "earnings +14d",
+        "PEG 0.88"
+      ],
+      "risk_flags": [
+        "RSI 66.3 — enter in tranches"
+      ],
+      "technicals": {
+        "rsi": 66.3,
+        "trend": "bullish",
+        "entry_quality": "fair"
+      },
+      "valuation": {
+        "forward_pe": 18.75,
+        "peg": 0.88,
+        "fcf_margin": 11.7
+      },
+      "fundamentals": {
+        "revenue_growth": "+23.8% YoY",
+        "beat_streak": 3
+      }
     },
     {
-      "rank": 4, "symbol": "ETH", "name": "Ethereum", "sector": "crypto", "asset_type": "crypto",
-      "action": "buy", "action_label": "🟢 COMPRAR",
-      "current_price": 2321, "entry_zone": [2200, 2400], "stop_loss": 1980, "target_12m": 3600,
-      "risk_reward": 4.2, "confidence": 8, "position_size_pct": 13,
+      "rank": 4,
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "sector": "crypto",
+      "asset_type": "crypto",
+      "action": "buy",
+      "action_label": "🟢 COMPRAR",
+      "current_price": 2321,
+      "entry_zone": [
+        2200,
+        2400
+      ],
+      "stop_loss": 1980,
+      "target_12m": 3600,
+      "risk_reward": 4.2,
+      "confidence": 8,
+      "position_size_pct": 13,
       "thesis": "Best risk/reward in crypto: 53% below ATH, 4 consecutive ETF inflow days, Aave V4 mainnet catalyst, ETH/BTC bouncing from 2026 lows signaling altcoin rotation.",
-      "key_catalysts": ["4-day ETF inflow streak", "Aave V4 mainnet", "ETH/BTC reversal", "53% below ATH"],
-      "risk_flags": ["Extreme Fear environment", "Hormuz risk-off correlation"],
-      "technicals": {"rsi": 62.5, "trend": "mixed", "entry_quality": "fair"},
-      "valuation": {"forward_pe": null, "peg": null, "fcf_margin": null},
-      "fundamentals": {"revenue_growth": null, "beat_streak": 0}
+      "key_catalysts": [
+        "4-day ETF inflow streak",
+        "Aave V4 mainnet",
+        "ETH/BTC reversal",
+        "53% below ATH"
+      ],
+      "risk_flags": [
+        "Extreme Fear environment",
+        "Hormuz risk-off correlation"
+      ],
+      "technicals": {
+        "rsi": 62.5,
+        "trend": "mixed",
+        "entry_quality": "fair"
+      },
+      "valuation": {
+        "forward_pe": null,
+        "peg": null,
+        "fcf_margin": null
+      },
+      "fundamentals": {
+        "revenue_growth": null,
+        "beat_streak": 0
+      }
     },
     {
-      "rank": 5, "symbol": "QCOM", "name": "Qualcomm", "sector": "semiconductors", "asset_type": "stock",
-      "action": "buy", "action_label": "🟢 COMPRAR",
-      "current_price": 133.15, "entry_zone": [128, 137], "stop_loss": 118, "target_12m": 178,
-      "risk_reward": 3.1, "confidence": 8, "position_size_pct": 7,
+      "rank": 5,
+      "symbol": "QCOM",
+      "name": "Qualcomm",
+      "sector": "semiconductors",
+      "asset_type": "stock",
+      "action": "buy",
+      "action_label": "🟢 COMPRAR",
+      "current_price": 133.15,
+      "entry_zone": [
+        128,
+        137
+      ],
+      "stop_loss": 118,
+      "target_12m": 178,
+      "risk_reward": 3.1,
+      "confidence": 8,
+      "position_size_pct": 7,
       "thesis": "Deepest value in universe: PEG 0.57, fwd PE 12.01. Edge AI pivot (Bosch ADAS, Snap AR) priced as zero-growth company. 4-beat streak, earnings +14d.",
-      "key_catalysts": ["Bosch automotive ADAS deal", "Snap AR (Snapdragon XR)", "earnings +14d", "PEG 0.57"],
+      "key_catalysts": [
+        "Bosch automotive ADAS deal",
+        "Snap AR (Snapdragon XR)",
+        "earnings +14d",
+        "PEG 0.57"
+      ],
       "risk_flags": [],
-      "technicals": {"rsi": 57.3, "trend": "bullish", "entry_quality": "fair"},
-      "valuation": {"forward_pe": 12.01, "peg": 0.57, "fcf_margin": 23.2},
-      "fundamentals": {"revenue_growth": "+5.0% YoY", "beat_streak": 4}
+      "technicals": {
+        "rsi": 57.3,
+        "trend": "bullish",
+        "entry_quality": "fair"
+      },
+      "valuation": {
+        "forward_pe": 12.01,
+        "peg": 0.57,
+        "fcf_margin": 23.2
+      },
+      "fundamentals": {
+        "revenue_growth": "+5.0% YoY",
+        "beat_streak": 4
+      }
     },
     {
-      "rank": 6, "symbol": "LLY", "name": "Eli Lilly", "sector": "pharma", "asset_type": "stock",
-      "action": "buy", "action_label": "🟢 COMPRAR",
-      "current_price": 924.28, "entry_zone": [908, 942], "stop_loss": 852, "target_12m": 1180,
-      "risk_reward": 3.4, "confidence": 8, "position_size_pct": 8,
+      "rank": 6,
+      "symbol": "LLY",
+      "name": "Eli Lilly",
+      "sector": "pharma",
+      "asset_type": "stock",
+      "action": "buy",
+      "action_label": "🟢 COMPRAR",
+      "current_price": 924.28,
+      "entry_zone": [
+        908,
+        942
+      ],
+      "stop_loss": 852,
+      "target_12m": 1180,
+      "risk_reward": 3.4,
+      "confidence": 8,
+      "position_size_pct": 8,
       "thesis": "Best PEG/growth ratio in large-cap pharma: PEG 1.00 on +42.6% revenue growth. Foundayo oral GLP-1 FDA approval expands TAM massively. CrossBridge Bio ADC oncology pipeline. Earnings +15d.",
-      "key_catalysts": ["Foundayo oral GLP-1 approved", "CrossBridge Bio acquisition", "earnings +15d", "+42.6% revenue growth"],
-      "risk_flags": ["FCF 3.0% low (manufacturing CAPEX)", "NVO/OpenAI competition"],
-      "technicals": {"rsi": 51.9, "trend": "bullish", "entry_quality": "good"},
-      "valuation": {"forward_pe": 22.01, "peg": 1.00, "fcf_margin": 3.0},
-      "fundamentals": {"revenue_growth": "+42.6% YoY", "beat_streak": 3}
+      "key_catalysts": [
+        "Foundayo oral GLP-1 approved",
+        "CrossBridge Bio acquisition",
+        "earnings +15d",
+        "+42.6% revenue growth"
+      ],
+      "risk_flags": [
+        "FCF 3.0% low (manufacturing CAPEX)",
+        "NVO/OpenAI competition"
+      ],
+      "technicals": {
+        "rsi": 51.9,
+        "trend": "bullish",
+        "entry_quality": "good"
+      },
+      "valuation": {
+        "forward_pe": 22.01,
+        "peg": 1.0,
+        "fcf_margin": 3.0
+      },
+      "fundamentals": {
+        "revenue_growth": "+42.6% YoY",
+        "beat_streak": 3
+      }
     },
     {
-      "rank": 7, "symbol": "XAG", "name": "Silver Spot", "sector": "materials", "asset_type": "commodity",
-      "action": "buy", "action_label": "🟢 COMPRAR",
-      "current_price": 79.23, "entry_zone": [76, 82], "stop_loss": 68, "target_12m": 115,
-      "risk_reward": 2.8, "confidence": 8, "position_size_pct": 9,
+      "rank": 7,
+      "symbol": "XAG",
+      "name": "Silver Spot",
+      "sector": "materials",
+      "asset_type": "commodity",
+      "action": "buy",
+      "action_label": "🟢 COMPRAR",
+      "current_price": 79.23,
+      "entry_zone": [
+        76,
+        82
+      ],
+      "stop_loss": 68,
+      "target_12m": 115,
+      "risk_reward": 2.8,
+      "confidence": 8,
+      "position_size_pct": 9,
       "thesis": "Gold/silver ratio 60.7x vs 50x historical mean — reversion implies $96+ silver. Silver 20% below pre-conflict peak vs gold only 10% below. Solar/EV industrial demand provides structural floor.",
-      "key_catalysts": ["Gold/silver ratio 60.7x mean reversion", "Silver 20% vs gold 10% below peak", "Solar industrial demand"],
-      "risk_flags": ["Hormuz ceasefire could ease precious metals"],
-      "technicals": {"rsi": null, "trend": "bullish", "entry_quality": "fair"},
-      "valuation": {"forward_pe": null, "peg": null, "fcf_margin": null},
-      "fundamentals": {"revenue_growth": null, "beat_streak": 0}
+      "key_catalysts": [
+        "Gold/silver ratio 60.7x mean reversion",
+        "Silver 20% vs gold 10% below peak",
+        "Solar industrial demand"
+      ],
+      "risk_flags": [
+        "Hormuz ceasefire could ease precious metals"
+      ],
+      "technicals": {
+        "rsi": null,
+        "trend": "bullish",
+        "entry_quality": "fair"
+      },
+      "valuation": {
+        "forward_pe": null,
+        "peg": null,
+        "fcf_margin": null
+      },
+      "fundamentals": {
+        "revenue_growth": null,
+        "beat_streak": 0
+      }
     },
     {
-      "rank": 8, "symbol": "COP", "name": "ConocoPhillips", "sector": "energy", "asset_type": "stock",
-      "action": "buy", "action_label": "🟢 COMPRAR",
-      "current_price": 118.57, "entry_zone": [112, 124], "stop_loss": 101, "target_12m": 150,
-      "risk_reward": 2.0, "confidence": 7, "position_size_pct": 7,
+      "rank": 8,
+      "symbol": "COP",
+      "name": "ConocoPhillips",
+      "sector": "energy",
+      "asset_type": "stock",
+      "action": "buy",
+      "action_label": "🟢 COMPRAR",
+      "current_price": 118.57,
+      "entry_zone": [
+        112,
+        124
+      ],
+      "stop_loss": 101,
+      "target_12m": 150,
+      "risk_reward": 2.0,
+      "confidence": 7,
+      "position_size_pct": 7,
       "thesis": "RSI 32.2 oversold vs WTI at $91/bbl (breakeven ~$40). Goldman Sachs top oil pick for Q2. FCF 12.4% supports buybacks. Earnings +15d with 3-beat streak.",
-      "key_catalysts": ["RSI 32.2 oversold", "Goldman Sachs top pick", "Jefferies PT upgrade", "earnings +15d"],
-      "risk_flags": ["Revenue -6.8% YoY", "Ceasefire could push WTI to $75-80"],
-      "technicals": {"rsi": 32.2, "trend": "mixed", "entry_quality": "good"},
-      "valuation": {"forward_pe": 14.74, "peg": 1.77, "fcf_margin": 12.4},
-      "fundamentals": {"revenue_growth": "-6.8% YoY", "beat_streak": 3}
+      "key_catalysts": [
+        "RSI 32.2 oversold",
+        "Goldman Sachs top pick",
+        "Jefferies PT upgrade",
+        "earnings +15d"
+      ],
+      "risk_flags": [
+        "Revenue -6.8% YoY",
+        "Ceasefire could push WTI to $75-80"
+      ],
+      "technicals": {
+        "rsi": 32.2,
+        "trend": "mixed",
+        "entry_quality": "good"
+      },
+      "valuation": {
+        "forward_pe": 14.74,
+        "peg": 1.77,
+        "fcf_margin": 12.4
+      },
+      "fundamentals": {
+        "revenue_growth": "-6.8% YoY",
+        "beat_streak": 3
+      }
     },
     {
-      "rank": 9, "symbol": "REGN", "name": "Regeneron Pharmaceuticals", "sector": "biotech", "asset_type": "stock",
-      "action": "buy", "action_label": "🟢 COMPRAR",
-      "current_price": 757.37, "entry_zone": [740, 772], "stop_loss": 698, "target_12m": 940,
-      "risk_reward": 3.1, "confidence": 7, "position_size_pct": 6,
+      "rank": 9,
+      "symbol": "REGN",
+      "name": "Regeneron Pharmaceuticals",
+      "sector": "biotech",
+      "asset_type": "stock",
+      "action": "buy",
+      "action_label": "🟢 COMPRAR",
+      "current_price": 757.37,
+      "entry_zone": [
+        740,
+        772
+      ],
+      "stop_loss": 698,
+      "target_12m": 940,
+      "risk_reward": 3.1,
+      "confidence": 7,
+      "position_size_pct": 6,
       "thesis": "Stealth setup: PEG 1.61, FCF 22.7%, 3-beat streak, earnings +14d, under-followed. Dupixent expanding into COPD adds $5B+ addressable market on a $16B+ franchise.",
-      "key_catalysts": ["Dupixent COPD indication", "earnings +14d", "PEG 1.61 undervalued"],
-      "risk_flags": ["Revenue growth only +2.5% (masks Dupixent strength)"],
-      "technicals": {"rsi": 52.8, "trend": "mixed", "entry_quality": "fair"},
-      "valuation": {"forward_pe": 14.51, "peg": 1.61, "fcf_margin": 22.7},
-      "fundamentals": {"revenue_growth": "+2.5% YoY", "beat_streak": 3}
+      "key_catalysts": [
+        "Dupixent COPD indication",
+        "earnings +14d",
+        "PEG 1.61 undervalued"
+      ],
+      "risk_flags": [
+        "Revenue growth only +2.5% (masks Dupixent strength)"
+      ],
+      "technicals": {
+        "rsi": 52.8,
+        "trend": "mixed",
+        "entry_quality": "fair"
+      },
+      "valuation": {
+        "forward_pe": 14.51,
+        "peg": 1.61,
+        "fcf_margin": 22.7
+      },
+      "fundamentals": {
+        "revenue_growth": "+2.5% YoY",
+        "beat_streak": 3
+      }
     },
     {
-      "rank": 10, "symbol": "AMGN", "name": "Amgen", "sector": "biotech", "asset_type": "stock",
-      "action": "buy", "action_label": "🟢 COMPRAR",
-      "current_price": 350.45, "entry_zone": [340, 362], "stop_loss": 316, "target_12m": 425,
-      "risk_reward": 2.3, "confidence": 7, "position_size_pct": 5,
+      "rank": 10,
+      "symbol": "AMGN",
+      "name": "Amgen",
+      "sector": "biotech",
+      "asset_type": "stock",
+      "action": "buy",
+      "action_label": "🟢 COMPRAR",
+      "current_price": 350.45,
+      "entry_zone": [
+        340,
+        362
+      ],
+      "stop_loss": 316,
+      "target_12m": 425,
+      "risk_reward": 2.3,
+      "confidence": 7,
+      "position_size_pct": 5,
       "thesis": "Defensive anchor: FCF 20.4%, 3%+ dividend yield, 4-beat streak, RSI 46.2. MariTide obesity drug is a free call option on the GLP-1 market not in consensus estimates.",
-      "key_catalysts": ["MariTide obesity drug optionality", "earnings +15d", "beat_streak 4", "3%+ dividend"],
-      "risk_flags": ["Phase 3 binary risk", "PEG 2.35"],
-      "technicals": {"rsi": 46.2, "trend": "mixed", "entry_quality": "good"},
-      "valuation": {"forward_pe": 15.04, "peg": 2.35, "fcf_margin": 20.4},
-      "fundamentals": {"revenue_growth": "+8.6% YoY", "beat_streak": 4}
+      "key_catalysts": [
+        "MariTide obesity drug optionality",
+        "earnings +15d",
+        "beat_streak 4",
+        "3%+ dividend"
+      ],
+      "risk_flags": [
+        "Phase 3 binary risk",
+        "PEG 2.35"
+      ],
+      "technicals": {
+        "rsi": 46.2,
+        "trend": "mixed",
+        "entry_quality": "good"
+      },
+      "valuation": {
+        "forward_pe": 15.04,
+        "peg": 2.35,
+        "fcf_margin": 20.4
+      },
+      "fundamentals": {
+        "revenue_growth": "+8.6% YoY",
+        "beat_streak": 4
+      }
     },
     {
-      "rank": 11, "symbol": "ASML", "name": "ASML Holding", "sector": "semiconductors", "asset_type": "stock",
-      "action": "dca", "action_label": "🟡 DCA",
-      "current_price": 1444.05, "entry_zone": [1380, 1490], "stop_loss": 1275, "target_12m": 1820,
-      "risk_reward": 2.2, "confidence": 7, "position_size_pct": 10,
+      "rank": 11,
+      "symbol": "ASML",
+      "name": "ASML Holding",
+      "sector": "semiconductors",
+      "asset_type": "stock",
+      "action": "dca",
+      "action_label": "🟡 DCA",
+      "current_price": 1444.05,
+      "entry_zone": [
+        1380,
+        1490
+      ],
+      "stop_loss": 1275,
+      "target_12m": 1820,
+      "risk_reward": 2.2,
+      "confidence": 7,
+      "position_size_pct": 10,
       "thesis": "EUV monopoly with no competitive substitute. Q1 beat-and-raise but Q2 guide miss caused -5% flush today — DCA entry opportunity. FCF 33.2%, full-year 2026 guidance raised on AI demand.",
-      "key_catalysts": ["Q1 beat-and-raise", "EUV monopoly", "AI chip capacity expansion"],
-      "risk_flags": ["Q2 guidance miss today", "PEG 2.49 elevated"],
-      "dca_tranches": [
-        {"tranche": 1, "price": 1480, "weight_pct": 25},
-        {"tranche": 2, "price": 1420, "weight_pct": 50},
-        {"tranche": 3, "price": 1360, "weight_pct": 25}
+      "key_catalysts": [
+        "Q1 beat-and-raise",
+        "EUV monopoly",
+        "AI chip capacity expansion"
       ],
-      "technicals": {"rsi": 54.3, "trend": "mixed", "entry_quality": "good"},
-      "valuation": {"forward_pe": 31.63, "peg": 2.49, "fcf_margin": 33.2},
-      "fundamentals": {"revenue_growth": "+4.9% YoY", "beat_streak": 3}
+      "risk_flags": [
+        "Q2 guidance miss today",
+        "PEG 2.49 elevated"
+      ],
+      "dca_tranches": [
+        {
+          "tranche": 1,
+          "price": 1480,
+          "weight_pct": 25
+        },
+        {
+          "tranche": 2,
+          "price": 1420,
+          "weight_pct": 50
+        },
+        {
+          "tranche": 3,
+          "price": 1360,
+          "weight_pct": 25
+        }
+      ],
+      "technicals": {
+        "rsi": 54.3,
+        "trend": "mixed",
+        "entry_quality": "good"
+      },
+      "valuation": {
+        "forward_pe": 31.63,
+        "peg": 2.49,
+        "fcf_margin": 33.2
+      },
+      "fundamentals": {
+        "revenue_growth": "+4.9% YoY",
+        "beat_streak": 3
+      }
     },
     {
-      "rank": 12, "symbol": "OXY", "name": "Occidental Petroleum", "sector": "energy", "asset_type": "stock",
-      "action": "dca", "action_label": "🟡 DCA",
-      "current_price": 55.43, "entry_zone": [50, 60], "stop_loss": 43, "target_12m": 78,
-      "risk_reward": 2.1, "confidence": 7, "position_size_pct": 8,
+      "rank": 12,
+      "symbol": "OXY",
+      "name": "Occidental Petroleum",
+      "sector": "energy",
+      "asset_type": "stock",
+      "action": "dca",
+      "action_label": "🟡 DCA",
+      "current_price": 55.43,
+      "entry_zone": [
+        50,
+        60
+      ],
+      "stop_loss": 43,
+      "target_12m": 78,
+      "risk_reward": 2.1,
+      "confidence": 7,
+      "position_size_pct": 8,
       "thesis": "RSI 31.1 deeply oversold with Berkshire Hathaway credibility floor. Revenue +149% (CrownRock integration). 4-beat streak, earnings +20d. DCA given Hormuz binary risk and post-acquisition debt.",
-      "key_catalysts": ["RSI 31.1 oversold", "Berkshire holding", "CrownRock integration ramp", "beat_streak 4"],
-      "risk_flags": ["Ceasefire could push WTI to $75-80", "High post-acquisition debt"],
-      "dca_tranches": [
-        {"tranche": 1, "price": 58, "weight_pct": 25},
-        {"tranche": 2, "price": 53, "weight_pct": 50},
-        {"tranche": 3, "price": 47, "weight_pct": 25}
+      "key_catalysts": [
+        "RSI 31.1 oversold",
+        "Berkshire holding",
+        "CrownRock integration ramp",
+        "beat_streak 4"
       ],
-      "technicals": {"rsi": 31.1, "trend": "mixed", "entry_quality": "good"},
-      "valuation": {"forward_pe": 15.83, "peg": 3.16, "fcf_margin": 9.5},
-      "fundamentals": {"revenue_growth": "+148.9% YoY", "beat_streak": 4}
+      "risk_flags": [
+        "Ceasefire could push WTI to $75-80",
+        "High post-acquisition debt"
+      ],
+      "dca_tranches": [
+        {
+          "tranche": 1,
+          "price": 58,
+          "weight_pct": 25
+        },
+        {
+          "tranche": 2,
+          "price": 53,
+          "weight_pct": 50
+        },
+        {
+          "tranche": 3,
+          "price": 47,
+          "weight_pct": 25
+        }
+      ],
+      "technicals": {
+        "rsi": 31.1,
+        "trend": "mixed",
+        "entry_quality": "good"
+      },
+      "valuation": {
+        "forward_pe": 15.83,
+        "peg": 3.16,
+        "fcf_margin": 9.5
+      },
+      "fundamentals": {
+        "revenue_growth": "+148.9% YoY",
+        "beat_streak": 4
+      }
     },
     {
-      "rank": 13, "symbol": "BTC", "name": "Bitcoin", "sector": "crypto", "asset_type": "crypto",
-      "action": "dca", "action_label": "🟡 DCA",
-      "current_price": 73919, "entry_zone": [68000, 76500], "stop_loss": 59500, "target_12m": 115000,
-      "risk_reward": 2.9, "confidence": 7, "position_size_pct": 12,
+      "rank": 13,
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "sector": "crypto",
+      "asset_type": "crypto",
+      "action": "dca",
+      "action_label": "🟡 DCA",
+      "current_price": 73919,
+      "entry_zone": [
+        68000,
+        76500
+      ],
+      "stop_loss": 59500,
+      "target_12m": 115000,
+      "risk_reward": 2.9,
+      "confidence": 7,
+      "position_size_pct": 12,
       "thesis": "46-day negative funding streak (contrarian bullish signal). Goldman Sachs ETF filing, Pakistan banks unlock, Strategy 780K BTC. DCA given RSI 69.4 approaching overbought and ETH showing stronger near-term momentum.",
-      "key_catalysts": ["Goldman Sachs BTC ETF filing", "Pakistan sovereign unlock", "46-day negative funding", "Strategy accumulation"],
-      "risk_flags": ["RSI 69.4", "ETH likely outperforms near-term"],
-      "dca_tranches": [
-        {"tranche": 1, "price": 76000, "weight_pct": 25},
-        {"tranche": 2, "price": 71000, "weight_pct": 50},
-        {"tranche": 3, "price": 65000, "weight_pct": 25}
+      "key_catalysts": [
+        "Goldman Sachs BTC ETF filing",
+        "Pakistan sovereign unlock",
+        "46-day negative funding",
+        "Strategy accumulation"
       ],
-      "technicals": {"rsi": 69.4, "trend": "mixed", "entry_quality": "fair"},
-      "valuation": {"forward_pe": null, "peg": null, "fcf_margin": null},
-      "fundamentals": {"revenue_growth": null, "beat_streak": 0}
+      "risk_flags": [
+        "RSI 69.4",
+        "ETH likely outperforms near-term"
+      ],
+      "dca_tranches": [
+        {
+          "tranche": 1,
+          "price": 76000,
+          "weight_pct": 25
+        },
+        {
+          "tranche": 2,
+          "price": 71000,
+          "weight_pct": 50
+        },
+        {
+          "tranche": 3,
+          "price": 65000,
+          "weight_pct": 25
+        }
+      ],
+      "technicals": {
+        "rsi": 69.4,
+        "trend": "mixed",
+        "entry_quality": "fair"
+      },
+      "valuation": {
+        "forward_pe": null,
+        "peg": null,
+        "fcf_margin": null
+      },
+      "fundamentals": {
+        "revenue_growth": null,
+        "beat_streak": 0
+      }
     },
     {
-      "rank": 14, "symbol": "XAU", "name": "Gold Spot", "sector": "materials", "asset_type": "commodity",
-      "action": "wait", "action_label": "⏸️ ESPERAR",
-      "current_price": 4809, "entry_zone": [4550, 4660], "stop_loss": 4180, "target_12m": 5500,
-      "risk_reward": 2.3, "confidence": 6, "position_size_pct": 0,
+      "rank": 14,
+      "symbol": "XAU",
+      "name": "Gold Spot",
+      "sector": "materials",
+      "asset_type": "commodity",
+      "action": "wait",
+      "action_label": "⏸️ ESPERAR",
+      "current_price": 4809,
+      "entry_zone": [
+        4550,
+        4660
+      ],
+      "stop_loss": 4180,
+      "target_12m": 5500,
+      "risk_reward": 2.3,
+      "confidence": 6,
+      "position_size_pct": 0,
       "thesis": "Gold overbought post-rally (+48% YTD). Ceasefire diplomacy near-term headwind. Better entry at $4,550-4,660 (R/R 2.3x). Silver is the better precious metals play at current prices.",
-      "key_catalysts": ["Ceasefire collapse = acceleration", "Central bank diversification ongoing"],
-      "risk_flags": ["+48% YTD near overbought", "Ceasefire = risk-on = 5-8% correction", "Silver offers better R/R"],
-      "technicals": {"rsi": null, "trend": "bullish", "entry_quality": "wait"},
-      "valuation": {"forward_pe": null, "peg": null, "fcf_margin": null},
-      "fundamentals": {"revenue_growth": null, "beat_streak": 0}
+      "key_catalysts": [
+        "Ceasefire collapse = acceleration",
+        "Central bank diversification ongoing"
+      ],
+      "risk_flags": [
+        "+48% YTD near overbought",
+        "Ceasefire = risk-on = 5-8% correction",
+        "Silver offers better R/R"
+      ],
+      "technicals": {
+        "rsi": null,
+        "trend": "bullish",
+        "entry_quality": "wait"
+      },
+      "valuation": {
+        "forward_pe": null,
+        "peg": null,
+        "fcf_margin": null
+      },
+      "fundamentals": {
+        "revenue_growth": null,
+        "beat_streak": 0
+      }
     }
   ],
   "portfolio_summary": {
     "total_picks": 14,
-    "by_action": {"buy": 10, "dca": 3, "wait": 1, "sell": 0},
-    "by_sector": {"payments": 2, "technology": 1, "crypto": 2, "semiconductors": 2, "pharma": 1, "biotech": 2, "energy": 2, "materials": 2},
-    "by_asset_type": {"stock": 10, "crypto": 2, "commodity": 2, "etf": 0},
+    "by_action": {
+      "buy": 10,
+      "dca": 3,
+      "wait": 1,
+      "sell": 0
+    },
+    "by_sector": {
+      "payments": 2,
+      "technology": 1,
+      "crypto": 2,
+      "semiconductors": 2,
+      "pharma": 1,
+      "biotech": 2,
+      "energy": 2,
+      "materials": 2
+    },
+    "by_asset_type": {
+      "stock": 10,
+      "crypto": 2,
+      "commodity": 2,
+      "etf": 0
+    },
     "crypto_alloc_pct": 20,
     "stocks_alloc_pct": 70,
     "materials_alloc_pct": 10,
@@ -228,5 +711,273 @@
       "has_hard_asset": true,
       "has_defensive": true
     }
+  },
+  "portfolio_allocation": {
+    "stocks": 70,
+    "crypto": 20,
+    "materials": 10
+  },
+  "risk_adjusted_picks": [
+    {
+      "rank": 1,
+      "name": "Visa",
+      "symbol": "V",
+      "sector": "payments",
+      "confidence": 9,
+      "risk_score": 3,
+      "risk_adjusted_score": 8.1,
+      "recommendation": "buy",
+      "reasoning": "53.2% FCF margin, PEG 1.71, earnings in 13 days with 4-beat streak, Tempo stablecoin validator positioning Visa at digital dollar infrastructure core.",
+      "position_size": "9%",
+      "entry_price": 313.45,
+      "stop_loss": 292,
+      "target_12m": 365,
+      "risk_reward_ratio": 2.7
+    },
+    {
+      "rank": 2,
+      "name": "Mastercard",
+      "symbol": "MA",
+      "sector": "payments",
+      "confidence": 9,
+      "risk_score": 3,
+      "risk_adjusted_score": 8.1,
+      "recommendation": "buy",
+      "reasoning": "FCF 49.6%, PEG 1.64, 4-beat streak, earnings +15d. Higher cross-border growth (+17.6% YoY) than Visa. Near-identical quality compounder at fair valuation.",
+      "position_size": "8%",
+      "entry_price": 514.92,
+      "stop_loss": 482,
+      "target_12m": 610,
+      "risk_reward_ratio": 3.1
+    },
+    {
+      "rank": 3,
+      "name": "Meta Platforms",
+      "symbol": "META",
+      "sector": "technology",
+      "confidence": 8,
+      "risk_score": 4,
+      "risk_adjusted_score": 6.8,
+      "recommendation": "buy",
+      "reasoning": "Cheapest mega-cap tech on PEG basis (0.88) with +23.8% revenue growth. Broadcom AI chip deal through 2029. Snap cuts redirect ad budgets to Meta. Earnings +14d.",
+      "position_size": "9%",
+      "entry_price": 667.85,
+      "stop_loss": 618,
+      "target_12m": 820,
+      "risk_reward_ratio": 2.9
+    },
+    {
+      "rank": 4,
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "sector": "crypto",
+      "confidence": 8,
+      "risk_score": 5,
+      "risk_adjusted_score": 6.5,
+      "recommendation": "buy",
+      "reasoning": "Best risk/reward in crypto: 53% below ATH, 4 consecutive ETF inflow days, Aave V4 mainnet catalyst, ETH/BTC bouncing from 2026 lows signaling altcoin rotation.",
+      "position_size": "13%",
+      "entry_price": 2321,
+      "stop_loss": 1980,
+      "target_12m": 3600,
+      "risk_reward_ratio": 4.2
+    },
+    {
+      "rank": 5,
+      "name": "Qualcomm",
+      "symbol": "QCOM",
+      "sector": "semiconductors",
+      "confidence": 8,
+      "risk_score": 3,
+      "risk_adjusted_score": 7.1,
+      "recommendation": "buy",
+      "reasoning": "Deepest value in universe: PEG 0.57, fwd PE 12.01. Edge AI pivot (Bosch ADAS, Snap AR) priced as zero-growth company. 4-beat streak, earnings +14d.",
+      "position_size": "7%",
+      "entry_price": 133.15,
+      "stop_loss": 118,
+      "target_12m": 178,
+      "risk_reward_ratio": 3.1
+    },
+    {
+      "rank": 6,
+      "name": "Eli Lilly",
+      "symbol": "LLY",
+      "sector": "pharma",
+      "confidence": 8,
+      "risk_score": 5,
+      "risk_adjusted_score": 6.5,
+      "recommendation": "buy",
+      "reasoning": "Best PEG/growth ratio in large-cap pharma: PEG 1.00 on +42.6% revenue growth. Foundayo oral GLP-1 FDA approval expands TAM massively. CrossBridge Bio ADC oncology pipeline. Earnings +15d.",
+      "position_size": "8%",
+      "entry_price": 924.28,
+      "stop_loss": 852,
+      "target_12m": 1180,
+      "risk_reward_ratio": 3.4
+    },
+    {
+      "rank": 7,
+      "name": "Silver Spot",
+      "symbol": "XAG",
+      "sector": "materials",
+      "confidence": 8,
+      "risk_score": 4,
+      "risk_adjusted_score": 6.8,
+      "recommendation": "buy",
+      "reasoning": "Gold/silver ratio 60.7x vs 50x historical mean — reversion implies $96+ silver. Silver 20% below pre-conflict peak vs gold only 10% below. Solar/EV industrial demand provides structural floor.",
+      "position_size": "9%",
+      "entry_price": 79.23,
+      "stop_loss": 68,
+      "target_12m": 115,
+      "risk_reward_ratio": 2.8
+    },
+    {
+      "rank": 8,
+      "name": "ConocoPhillips",
+      "symbol": "COP",
+      "sector": "energy",
+      "confidence": 7,
+      "risk_score": 5,
+      "risk_adjusted_score": 5.5,
+      "recommendation": "buy",
+      "reasoning": "RSI 32.2 oversold vs WTI at $91/bbl (breakeven ~$40). Goldman Sachs top oil pick for Q2. FCF 12.4% supports buybacks. Earnings +15d with 3-beat streak.",
+      "position_size": "7%",
+      "entry_price": 118.57,
+      "stop_loss": 101,
+      "target_12m": 150,
+      "risk_reward_ratio": 2.0
+    },
+    {
+      "rank": 9,
+      "name": "Regeneron Pharmaceuticals",
+      "symbol": "REGN",
+      "sector": "biotech",
+      "confidence": 7,
+      "risk_score": 4,
+      "risk_adjusted_score": 5.8,
+      "recommendation": "buy",
+      "reasoning": "Stealth setup: PEG 1.61, FCF 22.7%, 3-beat streak, earnings +14d, under-followed. Dupixent expanding into COPD adds $5B+ addressable market on a $16B+ franchise.",
+      "position_size": "6%",
+      "entry_price": 757.37,
+      "stop_loss": 698,
+      "target_12m": 940,
+      "risk_reward_ratio": 3.1
+    },
+    {
+      "rank": 10,
+      "name": "Amgen",
+      "symbol": "AMGN",
+      "sector": "biotech",
+      "confidence": 7,
+      "risk_score": 5,
+      "risk_adjusted_score": 5.5,
+      "recommendation": "buy",
+      "reasoning": "Defensive anchor: FCF 20.4%, 3%+ dividend yield, 4-beat streak, RSI 46.2. MariTide obesity drug is a free call option on the GLP-1 market not in consensus estimates.",
+      "position_size": "5%",
+      "entry_price": 350.45,
+      "stop_loss": 316,
+      "target_12m": 425,
+      "risk_reward_ratio": 2.3
+    },
+    {
+      "rank": 11,
+      "name": "ASML Holding",
+      "symbol": "ASML",
+      "sector": "semiconductors",
+      "confidence": 7,
+      "risk_score": 7,
+      "risk_adjusted_score": 4.9,
+      "recommendation": "hold",
+      "reasoning": "EUV monopoly with no competitive substitute. Q1 beat-and-raise but Q2 guide miss caused -5% flush today — DCA entry opportunity. FCF 33.2%, full-year 2026 guidance raised on AI demand.",
+      "position_size": "10%",
+      "entry_price": 1444.05,
+      "stop_loss": 1275,
+      "target_12m": 1820,
+      "risk_reward_ratio": 2.2
+    },
+    {
+      "rank": 12,
+      "name": "Occidental Petroleum",
+      "symbol": "OXY",
+      "sector": "energy",
+      "confidence": 7,
+      "risk_score": 7,
+      "risk_adjusted_score": 4.9,
+      "recommendation": "hold",
+      "reasoning": "RSI 31.1 deeply oversold with Berkshire Hathaway credibility floor. Revenue +149% (CrownRock integration). 4-beat streak, earnings +20d. DCA given Hormuz binary risk and post-acquisition debt.",
+      "position_size": "8%",
+      "entry_price": 55.43,
+      "stop_loss": 43,
+      "target_12m": 78,
+      "risk_reward_ratio": 2.1
+    },
+    {
+      "rank": 13,
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "sector": "crypto",
+      "confidence": 7,
+      "risk_score": 7,
+      "risk_adjusted_score": 4.9,
+      "recommendation": "hold",
+      "reasoning": "46-day negative funding streak (contrarian bullish signal). Goldman Sachs ETF filing, Pakistan banks unlock, Strategy 780K BTC. DCA given RSI 69.4 approaching overbought and ETH showing stronger near-term momentum.",
+      "position_size": "12%",
+      "entry_price": 73919,
+      "stop_loss": 59500,
+      "target_12m": 115000,
+      "risk_reward_ratio": 2.9
+    },
+    {
+      "rank": 14,
+      "name": "Gold Spot",
+      "symbol": "XAU",
+      "sector": "materials",
+      "confidence": 6,
+      "risk_score": 9,
+      "risk_adjusted_score": 3.3,
+      "recommendation": "hold",
+      "reasoning": "Gold overbought post-rally (+48% YTD). Ceasefire diplomacy near-term headwind. Better entry at $4,550-4,660 (R/R 2.3x). Silver is the better precious metals play at current prices.",
+      "position_size": "0%",
+      "entry_price": 4809,
+      "stop_loss": 4180,
+      "target_12m": 5500,
+      "risk_reward_ratio": 2.3
+    }
+  ],
+  "brand": "Tododeia",
+  "creator": "Spectral Galileo",
+  "warnings": [],
+  "sectors": {},
+  "cross_sector_insights": [
+    {
+      "insight": "Payments duopoly (V + MA) offer the best risk-adjusted returns with earnings catalysts in 13-15 days.",
+      "implication": "Anchor ~17% of portfolio in V + MA for compounding with near-term catalyst."
+    },
+    {
+      "insight": "Silver (XAG) is the highest-conviction commodity trade: gold/silver ratio at 60.7x vs 50x historical mean.",
+      "implication": "Precious metals allocation should favor XAG over XAU at current relative valuations."
+    },
+    {
+      "insight": "Crypto: ETH shows stronger short-term momentum than BTC (ETH/BTC ratio turning, 4-day ETF inflows).",
+      "implication": "Full ETH buy; DCA BTC given RSI 69.4 approaching overbought."
+    },
+    {
+      "insight": "Energy stocks (COP, OXY) are deeply oversold at RSI 31-32 while WTI holds $91 — double the breakeven.",
+      "implication": "Accumulate energy in two tranches; watch Hormuz ceasefire outcome before committing full weight."
+    }
+  ],
+  "executive_summary": "April 15, 2026 — Moderate profile: 14 picks (10 buy, 3 DCA, 1 wait). Market regime MIXED with Fear & Greed at 23 (Extreme Fear) while S&P 500 holds near 6,972. Top conviction: V (payments moat, 53% FCF, earnings +13d), ETH (best crypto R/R on 4-day ETF inflows), QCOM (PEG 0.57 edge-AI mispricing), LLY (PEG 1.00 on +42.6% growth + Foundayo approval), XAG (gold/silver ratio 60.7x vs 50x mean = highest commodity R/R). Historical accuracy: 66.7% win rate (8/12 confirmed from April 14). ASML flush -5% today creates DCA opportunity. Gold overbought — wait for $4,550-4,660 entry.",
+  "macro_environment": {
+    "summary": "VIX 17.53, Fear & Greed 23 (Extreme Fear), MIXED regime. S&P 500 ~6,972. Hormuz 2-week ceasefire in progress; WTI at $91 down from $113 spike. Fed Funds 3.75%, ~30% cut probability 2026. BTC 46-day negative funding streak (contrarian bullish). ASML Q1 beat-and-raise but Q2 guide miss. Mega-cap earnings season begins in 13-22 days.",
+    "interest_rate_outlook": "falling",
+    "inflation_outlook": "stable",
+    "geopolitical_risk": "high",
+    "key_factors": [
+      "Hormuz Strait ceasefire diplomacy — binary oil price risk",
+      "Mega-cap earnings season: V, MA, QCOM, META, LLY all reporting in 13-15 days",
+      "BTC 46-day negative funding rate streak — historically rare contrarian buy signal",
+      "ASML Q1 beat-and-raise; Q2 guide miss creates DCA entry",
+      "Foundayo oral GLP-1 FDA approval — LLY TAM expansion catalyst",
+      "Silver gold/silver ratio 60.7x vs 50x historical mean"
+    ]
   }
 }
