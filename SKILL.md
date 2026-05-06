@@ -16,7 +16,7 @@ user_invocable: true
 
 # Tododeia Investment Analysis — Multi-Agent System v2
 
-You are the **orchestrator** of a multi-agent investment research system branded as **Tododeia by @soyenriquerocha**. You manage 5 specialized agents, adapt to user risk profiles, track historical accuracy, and generate an interactive branded HTML report.
+You are the **orchestrator** of a multi-agent investment research system branded as **Tododeia by @soyenriquerocha**. You manage 4 specialized agents, adapt to user risk profiles, track historical accuracy, and generate an interactive branded HTML report.
 
 ## Workflow
 
@@ -38,11 +38,22 @@ Store the selected profile as the `risk_profile` variable ("conservative", "mode
 
 Read the file `references/agent-prompts.md` relative to this skill's directory. Use the Glob tool to find this skill's installation path by searching for `**/jere-noticias-inver/references/agent-prompts.md` or `**/investment-analysis/references/agent-prompts.md`.
 
-### Step 3: Load Historical Data
+### Step 3: Load Historical Data + Pre-fetch Market Data
 
-Check if previous reports exist at `output/history/` in the user's current working directory. If the directory exists, read the most recent JSON file (sorted by filename which uses date format `YYYY-MM-DD.json`). This historical data will be passed to the Strategy Agent for accuracy tracking.
+**3a. Historical data**: Check if previous reports exist at `output/history/` in the user's current working directory. If the directory exists, read the most recent JSON file (sorted by filename which uses date format `YYYY-MM-DD.json`). This historical data will be passed to the Strategy Agent for accuracy tracking. If no history exists, that's fine — this is the first run.
 
-If no history exists, that's fine — this is the first run.
+**3b. Pre-fetch market data**: Run the pre-fetch script to calculate real technical indicators and fundamentals for the full ticker universe:
+
+```bash
+python3 tools/pre_fetch.py --watchlist all
+```
+
+This generates `data/market_context.json` with:
+- `macro`: VIX, real Fear & Greed index (from alternative.me), yields, market regime
+- `stocks`: per-ticker RSI, MACD, trend, support/resistance, valuation, fundamentals, earnings, insider signal
+- `candidates`: pre-filtered list sorted by entry quality (RSI<70, entry≠poor) — **pass this directly to the Stocks Agent**
+
+The script takes 4-6 minutes for the full universe. While it runs, proceed to read agent prompts. Wait for it to complete before spawning agents.
 
 ### Step 4: Spawn 4 Sector Research Agents
 
@@ -50,7 +61,7 @@ Launch **all 4 agents in parallel** using the Agent tool in a single message. Ea
 
 The 4 sector agents are:
 1. **Crypto Agent** — Discovers 5-7 best crypto assets to analyze (always includes BTC + ETH, dynamically finds trending/promising altcoins)
-2. **Stocks Agent** — Discovers 5-8 best stocks to analyze (always includes SPX + IXIC benchmarks, dynamically finds top-performing and catalyst-driven stocks across sectors)
+2. **Stocks Agent** — Uses `SCREENED_CANDIDATES` from `data/market_context.json` (pre-filtered universe, sorted by RSI+entry quality). Does NOT do web discovery for technicals — only fetches news, catalysts, and social sentiment for the top candidates.
 3. **Currencies Agent** — Discovers 5-7 most relevant currency pairs (always includes DXY + USD/MXN, dynamically finds pairs affected by current events)
 4. **Materials Agent** — Discovers 5-7 best commodities to analyze (always includes Gold + Oil WTI, dynamically finds trending commodities including agricultural if relevant)
 
@@ -196,27 +207,6 @@ If `dashboard/package.json` does not exist (Node.js not set up):
 2. Replace the token `{{REPORT_DATA_JSON}}` with the serialized REPORT_DATA JSON object.
 3. Create the `output/` directory if it doesn't exist.
 4. Write the populated HTML to `output/report.html`.
-
-### Step 8b: Translate Report to Spanish (Inline — No Sub-Agent)
-
-After writing the English report, translate it to Spanish **yourself** (do NOT spawn a sub-agent):
-
-1. Using the REPORT_DATA you already have in memory from Step 6, create a deep copy.
-2. Translate **only** these human-readable text fields to Spanish:
-   - `executive_summary`
-   - `strategy_summary`
-   - `macro_environment.summary`
-   - `macro_environment.key_factors[]`
-   - `cross_sector_insights[].insight`
-   - `cross_sector_insights[].implication`
-   - `warnings[]`
-   - `historical_accuracy.notable`
-   - Per sector: `sector_summary`, `top_pick_reasoning`
-   - Per asset: `reasoning`, `key_news[]`, `social_highlights[]`
-3. Do NOT translate: numbers, tickers, prices, dates, percentages, asset names, symbols, URLs, sentiment values, recommendation values (like "bullish", "buy", "high").
-4. Write the translated JSON to `dashboard/public/data/report-es.json`.
-
-**Important**: You already have the full report data in context — do NOT re-read `report.json` or spawn a separate agent. Translate the fields directly and write the file in a single step.
 
 ### Step 9: Serve the Report
 

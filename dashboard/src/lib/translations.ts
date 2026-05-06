@@ -54,12 +54,12 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
 
     // Table columns
     "table.asset": "Asset",
-    "table.price": "Price",
-    "table.24h": "24h",
-    "table.7d": "7d",
-    "table.30d": "30d",
-    "table.ytd": "YTD",
-    "table.52w": "52w H/L",
+    "table.price": "Entry",
+    "table.24h": "Stop Loss",
+    "table.7d": "Target 12m",
+    "table.30d": "R/R",
+    "table.ytd": "Score",
+    "table.52w": "Conf / Risk",
     "table.sources": "Sources",
     "table.social": "Social",
     "table.signal": "Signal",
@@ -100,12 +100,10 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     // Sector names
     "sector.crypto": "Cryptocurrency",
     "sector.stocks": "Stock Market",
-    "sector.currencies": "Forex & Currencies",
     "sector.materials": "Commodities & Materials",
     "sector.cash": "Cash",
     "sector.crypto.short": "Crypto",
     "sector.stocks.short": "Stocks",
-    "sector.currencies.short": "Currencies",
     "sector.materials.short": "Materials",
     "sector.cash.short": "Cash",
 
@@ -166,12 +164,12 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
 
     // Table columns
     "table.asset": "Activo",
-    "table.price": "Precio",
-    "table.24h": "24h",
-    "table.7d": "7d",
-    "table.30d": "30d",
-    "table.ytd": "AcA",
-    "table.52w": "52s M/m",
+    "table.price": "Entrada",
+    "table.24h": "Stop Loss",
+    "table.7d": "Target 12m",
+    "table.30d": "R/R",
+    "table.ytd": "Score",
+    "table.52w": "Conf / Riesgo",
     "table.sources": "Fuentes",
     "table.social": "Social",
     "table.signal": "Señal",
@@ -212,12 +210,10 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     // Sector names
     "sector.crypto": "Criptomonedas",
     "sector.stocks": "Mercado de Valores",
-    "sector.currencies": "Forex y Divisas",
     "sector.materials": "Materias Primas",
     "sector.cash": "Efectivo",
     "sector.crypto.short": "Cripto",
     "sector.stocks.short": "Acciones",
-    "sector.currencies.short": "Divisas",
     "sector.materials.short": "Materias",
     "sector.cash.short": "Efectivo",
 
