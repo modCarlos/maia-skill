@@ -16,15 +16,17 @@ Output: data/news_context.json
 
 import argparse
 import json
+import logging
 import os
 import sys
 import time
+import warnings
+import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone, timedelta
+from urllib.parse import quote
 
-import logging
-import warnings
-
+import pandas as pd
 import requests
 import yfinance as yf
 
@@ -82,7 +84,7 @@ def analyze_sentiment(news_list: list) -> dict:
     keywords = []
     n = len(news_list)
 
-    for i, item in enumerate(news_list[:10]):
+    for i, item in enumerate(news_list[:15]):
         title = item.get("title", "")
         if not title:
             continue
@@ -118,9 +120,9 @@ def analyze_sentiment(news_list: list) -> dict:
 # Adapted from spectral-galileo/src/spectral_galileo/external/reddit_sentiment.py
 # ---------------------------------------------------------------------------
 _REDDIT_UA = "Mozilla/5.0 (compatible; TododeiaNewsBot/1.0)"
-_SUBREDDITS = ["wallstreetbets", "stocks", "investing"]
+_SUBREDDITS = ["wallstreetbets", "stocks", "investing", "SecurityAnalysis"]
 
-def _reddit_search(subreddit: str, query: str, limit: int = 15) -> list:
+def _reddit_search(subreddit: str, query: str, limit: int = 25) -> list:
     """Search one subreddit, return posts list."""
     try:
         url = f"https://www.reddit.com/r/{subreddit}/search.json"
@@ -138,7 +140,7 @@ def get_reddit_sentiment(symbol: str) -> dict:
     Returns mentions count, score, and label.
     Times out at 15s total.
     """
-    deadline = time.time() + 15
+    deadline = time.time() + 20
     query = f"${symbol} OR {symbol}"
     posts = []
 
@@ -160,7 +162,7 @@ def get_reddit_sentiment(symbol: str) -> dict:
     titles = [{"title": p.get("title", "")} for p in recent]
     sentiment = analyze_sentiment(titles)
     mentions = len(recent)
-    buzz = "high" if mentions >= 8 else "medium" if mentions >= 3 else "low"
+    buzz = "high" if mentions >= 10 else "medium" if mentions >= 4 else "low"
 
     return {
         "mentions": mentions,
@@ -168,6 +170,96 @@ def get_reddit_sentiment(symbol: str) -> dict:
         "label": sentiment["label"],
         "buzz": buzz,
     }
+
+# ---------------------------------------------------------------------------
+# Google News RSS — more source diversity, no auth
+# ---------------------------------------------------------------------------
+
+def get_google_news(symbol: str) -> list:
+    """
+    Fetch up to 10 headlines from Google News RSS for the given ticker.
+    Returns list of {title, publisher} dicts.
+    Uses only stdlib xml.etree + requests — no new deps.
+    """
+    try:
+        query = quote(f"{symbol} stock")
+        url = f"https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
+        r = requests.get(url, timeout=8, headers={"User-Agent": _REDDIT_UA})
+        if r.status_code != 200:
+            return []
+        root = ET.fromstring(r.content)
+        items = []
+        for item in root.findall(".//item")[:12]:
+            title_el = item.find("title")
+            source_el = item.find("source")
+            title = title_el.text if title_el is not None else ""
+            publisher = source_el.text if source_el is not None else "Google News"
+            if title:
+                items.append({"title": title, "publisher": publisher})
+        return items
+    except Exception:
+        return []
+
+
+def _merge_news(primary: list, secondary: list) -> list:
+    """
+    Merge two news lists, deduplicating by first-50-chars fingerprint.
+    `primary` items (yfinance) take precedence.
+    """
+    seen = {item["title"][:50].lower() for item in primary}
+    merged = list(primary)
+    for item in secondary:
+        fp = item["title"][:50].lower()
+        if fp not in seen:
+            seen.add(fp)
+            merged.append(item)
+    return merged
+
+
+# ---------------------------------------------------------------------------
+# Insider signal — SEC Form 4 via yfinance
+# ---------------------------------------------------------------------------
+
+def get_insider_signal(ticker: yf.Ticker) -> dict:
+    """
+    Count insider buys vs sells in the last 30 days from Form 4 filings.
+    Returns {buys_30d, sells_30d, signal}.
+    signal: "accumulating" | "distributing" | "mixed" | "none"
+    """
+    empty = {"buys_30d": 0, "sells_30d": 0, "signal": "none"}
+    try:
+        df = ticker.insider_transactions
+        if df is None or df.empty:
+            return empty
+        # Normalize column names
+        df.columns = [c.strip() for c in df.columns]
+        date_col = next((c for c in df.columns if "date" in c.lower() or "start" in c.lower()), None)
+        text_col = next((c for c in df.columns if "text" in c.lower() or "transaction" in c.lower()), None)
+        if not text_col:
+            return empty
+        # Filter last 30 days
+        if date_col:
+            df[date_col] = pd.to_datetime(df[date_col], errors="coerce")
+            cutoff = pd.Timestamp.now() - pd.Timedelta(days=30)
+            df = df[df[date_col] >= cutoff]
+        else:
+            df = df.head(15)
+        if df.empty:
+            return empty
+        buys = df[df[text_col].str.contains(r"Purchase|Buy|Acquisition", case=False, na=False, regex=True)].shape[0]
+        sells = df[df[text_col].str.contains(r"Sale|Sell|Disposition", case=False, na=False, regex=True)].shape[0]
+        if buys >= 2 and buys > sells:
+            signal = "accumulating"
+        elif sells >= 2 and sells > buys:
+            signal = "distributing"
+        elif buys > 0 or sells > 0:
+            signal = "mixed"
+        else:
+            signal = "none"
+        return {"buys_30d": int(buys), "sells_30d": int(sells), "signal": signal}
+    except Exception:
+        return empty
+
 
 # ---------------------------------------------------------------------------
 # Per-ticker news fetch
@@ -184,6 +276,7 @@ def fetch_news_for_ticker(symbol: str, include_reddit: bool = True) -> dict:
         "analyst_recommendation": None,
         "analyst_target": None,
         "num_analysts": None,
+        "insider": {"buys_30d": 0, "sells_30d": 0, "signal": "none"},
         "reddit": {"mentions": 0, "score": 0.0, "label": "neutral", "buzz": "low"},
         "fetched_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "error": None,
@@ -192,11 +285,11 @@ def fetch_news_for_ticker(symbol: str, include_reddit: bool = True) -> dict:
     try:
         ticker = yf.Ticker(symbol)
 
-        # ── News ──────────────────────────────────────────────────────────
+        # ── yfinance news ─────────────────────────────────────────────────
         raw_news = ticker.news or []
 
-        news_list = []
-        for n in raw_news[:8]:
+        yf_news = []
+        for n in raw_news[:15]:
             content = n.get("content", {}) if isinstance(n, dict) else {}
             title = content.get("title") or n.get("title", "")
             publisher = (
@@ -204,9 +297,13 @@ def fetch_news_for_ticker(symbol: str, include_reddit: bool = True) -> dict:
                 or n.get("publisher", "")
             )
             if title:
-                news_list.append({"title": title, "publisher": publisher})
+                yf_news.append({"title": title, "publisher": publisher})
 
-        result["key_news"] = news_list[:5]  # top 5 for context
+        # ── Google News RSS — deduplicated merge ──────────────────────────
+        google_news = get_google_news(symbol)
+        news_list = _merge_news(yf_news, google_news)
+
+        result["key_news"] = news_list[:8]  # top 8 for context
         result["sentiment"] = analyze_sentiment(news_list)
 
         # ── Analyst data ─────────────────────────────────────────────────
@@ -217,6 +314,10 @@ def fetch_news_for_ticker(symbol: str, include_reddit: bool = True) -> dict:
             result["analyst_recommendation"] = rec.lower().replace("_", " ")
         result["analyst_target"] = info.get("targetMeanPrice")
         result["num_analysts"] = info.get("numberOfAnalystOpinions")
+
+        # ── Insider signal (Form 4 via yfinance) ──────────────────────────
+        if not symbol.endswith("-USD"):  # skip crypto — no Form 4
+            result["insider"] = get_insider_signal(ticker)
 
     except Exception as e:
         result["error"] = str(e)
@@ -273,9 +374,10 @@ def main():
                 results[sym] = data
                 sentiment_label = data["sentiment"]["label"]
                 reddit_buzz = data["reddit"]["buzz"] if include_reddit else "—"
+                insider_signal = data.get("insider", {}).get("signal", "—")
                 print(
                     f"  {sym:10} sentiment={sentiment_label:8} reddit_buzz={reddit_buzz}  "
-                    f"news={len(data['key_news'])}  analyst={data['analyst_recommendation'] or '—'}",
+                    f"news={len(data['key_news'])}  analyst={data['analyst_recommendation'] or '—'}  insider={insider_signal}",
                     file=sys.stderr,
                 )
             except Exception as e:
@@ -312,14 +414,16 @@ def main():
         if d.get("error"):
             print(f"  {sym}: ERROR — {d['error']}")
             continue
-        news_titles = [n["title"][:80] for n in d.get("key_news", [])[:2]]
+        news_titles = [n["title"][:80] for n in d.get("key_news", [])[:3]]
         label = d["sentiment"]["label"]
         reddit = d.get("reddit", {})
+        insider = d.get("insider", {})
         kws = [k["word"] for k in d["sentiment"].get("keywords", [])[:3]]
         analyst = d.get("analyst_recommendation") or "—"
         target = d.get("analyst_target")
         target_str = f" target=${target}" if target else ""
-        print(f"  {sym:10} [{label:8}] analyst={analyst}{target_str}  reddit={reddit.get('buzz','—')}/{reddit.get('mentions',0)}  kw={kws}")
+        insider_str = f"  insider={insider.get('signal','—')}({insider.get('buys_30d',0)}B/{insider.get('sells_30d',0)}S)" if insider.get('signal', 'none') != 'none' else ""
+        print(f"  {sym:10} [{label:8}] analyst={analyst}{target_str}  reddit={reddit.get('buzz','—')}/{reddit.get('mentions',0)}{insider_str}  kw={kws}")
         for t in news_titles:
             print(f"             → {t}")
 
