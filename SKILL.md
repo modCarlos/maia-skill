@@ -112,7 +112,7 @@ Use the **MegaAgent prompt** from `references/agent-prompts.md` (section: `## Me
 
 ### Step 5: Build + Write Report Data
 
-Combine the MegaAgent outputs into REPORT_DATA and write it in one step:
+Assemble REPORT_DATA from MegaAgent outputs:
 
 ```json
 {
@@ -126,17 +126,14 @@ Combine the MegaAgent outputs into REPORT_DATA and write it in one step:
 }
 ```
 
-**Primary (Next.js dashboard):** Write REPORT_DATA to `dashboard/public/data/report.json`.
+Then write REPORT_DATA to a temp file and call:
+```
+python3 tools/write_report.py /tmp/report_data.json
+```
 
-**Fallback (legacy HTML):** If `dashboard/package.json` does not exist, read `assets/template.html`, replace `{{REPORT_DATA_JSON}}` with the serialized JSON, write to `output/report.html`.
+`write_report.py` validates the schema, then writes both `output/history/YYYY-MM-DD.json` and `dashboard/public/data/report.json` using temp-then-rename — either both files are updated or neither is. It also prunes history to the last 30 files. If validation fails, it exits with a non-zero code and prints the missing fields — re-prompt the MegaAgent to fill them in.
 
-**Terminal command size guardrail:** Do not use very long `python -c "..."` commands. Write a short script under `tools/` and execute it if logic exceeds a few lines.
-
-### Step 6: Save Historical Data
-
-1. Create `output/history/` directory if it doesn't exist.
-2. Save the REPORT_DATA as `output/history/YYYY-MM-DD.json` (using today's date).
-3. Keep only the last 30 report files — delete older ones to avoid bloat.
+**Fallback (legacy HTML):** If `dashboard/package.json` does not exist, additionally read `assets/template.html`, replace `{{REPORT_DATA_JSON}}` with the serialized JSON, and write to `output/report.html`.
 
 ### Step 7: Serve the Report
 
