@@ -16,7 +16,7 @@ user_invocable: true
 
 # Tododeia Investment Analysis — Multi-Agent System v2
 
-You are the **orchestrator** of a multi-agent investment research system branded as **Tododeia by @soyenriquerocha**. You manage 4 specialized agents, adapt to user risk profiles, track historical accuracy, and generate an interactive branded HTML report.
+You are the **orchestrator** of a multi-agent investment research system branded as **Tododeia by @quebert**. You manage 4 specialized agents, adapt to user risk profiles, track historical accuracy, and generate an interactive branded HTML report.
 
 ## Workflow
 
@@ -55,10 +55,12 @@ Read `data/market_context.json` once after it completes — do **not** poll or c
 Immediately after Step 2 completes, run the news pre-fetcher **in background mode** so it runs in parallel with Step 3 (which is mostly file I/O):
 
 ```
-run_in_terminal: cd <skill_dir> && python3 tools/news_fetch.py --top 15 --no-reddit 2>/dev/null
+run_in_terminal: python3 <skill_dir>/tools/news_fetch.py --top 15 --no-reddit 2>/dev/null
 mode: async
 timeout: 60000
 ```
+
+> **Path note**: Use the **absolute path** to `news_fetch.py` (e.g. `python3 /Users/you/.claude/skills/investment-analysis/tools/news_fetch.py`). Do NOT use `cd <skill_dir> && python3 tools/...` — in async mode the shell may not preserve the working directory, causing exit code 2 and silently skipping news data.
 
 This fetches yfinance headlines, keyword-based sentiment (`bullish`/`bearish`/`neutral`), and analyst recommendations for the top 15 candidates in ~5-10s. Output lands in `data/news_context.json`. Read it after Step 3 completes before building the MegaAgent prompt.
 
@@ -80,11 +82,22 @@ Then read `data/market_context.json` from the PREVIOUS run to load `prices_snaps
 
 **Accuracy formula (use this exactly)**:
 ```
+# SPY baseline for alpha — spy_price_at_report stored in the previous history file
+spy_then = previous_history_file.get("spy_price_at_report")  # None for old runs
+spy_now  = today_market_context["macro"]["spy_price"]         # always present
+
 for each previous pick:
     current_price = prices_snapshot[symbol].price  # from TODAY's market_context.json
     entry_price   = pick.entry_price               # from PREVIOUS history file
-    correct = current_price > entry_price           # for "buy" recommendations
+    pick_return   = (current_price - entry_price) / entry_price
+    correct       = pick_return > 0                # absolute: price went up
+    # Alpha — only computed when spy_then is available (graceful degradation):
+    if spy_then:
+        spy_return  = (spy_now - spy_then) / spy_then
+        alpha       = pick_return - spy_return      # positive = outperformed SPY
+        beat_market = alpha > 0
 ```
+Pass `alpha` per pick in `accuracy_baseline` so the MegaAgent can report "beat SPY: X/N" inside `historical_accuracy`.
 
 Build a `previous_theses` dict to pass to the MegaAgent:
 ```
@@ -131,15 +144,18 @@ Assemble REPORT_DATA from MegaAgent outputs:
 
 ```json
 {
-  "brand": "Tododeia", "creator": "@soyenriquerocha",
+  "brand": "Tododeia", "creator": "@quebert",
   "generated_at": "ISO 8601", "risk_profile": "moderate",
   "executive_summary": "<MegaAgent strategy_summary>",
   "macro_environment": "<Block 2>", "portfolio_allocation": "<Block 2>",
   "cross_sector_insights": "<Block 2>", "risk_adjusted_picks": "<Block 2>",
   "historical_accuracy": "<Block 2>", "warnings": [],
-  "sectors": "<Block 1 sectors>"
+  "sectors": "<Block 1 sectors>",
+  "spy_price_at_report": "<today_market_context.macro.spy_price>"
 }
 ```
+
+`spy_price_at_report` records the S&P 500 level at the time of this report. The **next** run reads this from the history file to compute alpha (pick return minus SPY return) for each position.
 
 Then write REPORT_DATA to a temp file and call:
 ```

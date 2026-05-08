@@ -1,687 +1,1145 @@
 {
   "brand": "Tododeia",
-  "creator": "@soyenriquerocha",
-  "generated_at": "2026-05-07T15:25:00Z",
+  "creator": "@quebert",
+  "generated_at": "2026-05-08T15:05:50Z",
   "risk_profile": "moderate",
-  "executive_summary": "The May 7 moderate portfolio is anchored by META's extraordinary Q1 earnings beat and GLD's geopolitical premium as the two highest-conviction, lowest-risk entries, with a 18% materials overweight capturing the gold/silver surge driven by Iran-deal dynamics and a strategic mineral designation. Healthcare oversold plays (JNJ, AMGN) provide defensive yield and mean-reversion upside, while GILD and NVDA are near-term catalyst watches \u2014 hold cash until GILD's 4:30 PM earnings call resolves the biotech binary before deploying the final 7% position.",
+  "spy_price_at_report": 7394.23,
+  "executive_summary": "15-position moderate portfolio weighted toward extreme-oversold tech/fintech (META RSI 28, NFLX RSI 24.5, PYPL RSI 24.5, NU RSI 33.4) with imminent earnings catalysts (NU May 14, HD May 19, Barrick/GDX May 11), anchored by Iran deal materials momentum (GLD/GDX confirmed today). Top pick: GDX — Iran deal headlines confirmed, Barrick earnings May 11, +3.47% today. #2: META — PEG 0.93 at RSI 28 extreme oversold, AI monetization confirmed. Crypto 13% (BTC 9% + ETH 4%) with ETF floor defense at $79K. Cash 12% provides optionality.",
   "macro_environment": {
-    "summary": "Markets on May 7, 2026 are navigating a pivotal geopolitical inflection \u2014 Iran peace deal talks are emerging in month 3 of the conflict, creating a counterintuitive scenario where gold surges (+1.55%) while oil crashes (-3.54%) as the market prices in supply normalization but maintains flight-to-quality demand. The MIXED regime (VIX 17.21, Fear & Greed 47) with S&P 500 at 7,376 reflects a market coiled for directional resolution, with semiconductors leading and healthcare lagging into a pharma M&A boom.",
+    "summary": "MIXED regime with positive momentum: S&P +0.81% on April jobs beat (115K), VIX declining to 17.08, gold surging on Iran deal confirmation. Fear & Greed at 38 (Fear) — historically a dip-buying zone. Yield spread positive, supporting bank NIM expansion.",
     "interest_rate_outlook": "stable",
     "inflation_outlook": "falling",
-    "geopolitical_risk": "high",
+    "geopolitical_risk": "medium",
     "key_factors": [
-      "Iran peace deal talks emerging \u2014 oil falling -3.5%, gold paradoxically rising on de-dollarization and strategic mineral demand",
-      "GILD earnings binary risk today (4:30 PM EDT) and NVDA earnings May 20 are near-term volatility catalysts",
-      "30-year Treasury testing 5% \u2014 rising long-end rates create headwind for growth and real estate but support bank NII",
-      "META Q1 earnings massive beat (EPS +57% vs estimate) validates RSI-29 oversold entry; healthcare broadly oversold (JNJ, AMGN, MRK all RSI <35)",
-      "Digital asset ETP first monthly gain of 2026 in April reversed in early May \u2014 crypto decoupling bearishly from equity rally"
+      "April jobs 115K beat expectations — labor market resilient, moderate Fed path intact",
+      "Iran deal talks driving gold to $4,767 futures today — GLD/GDX thesis confirmed",
+      "Barrick Mining earnings May 11 near-term catalyst for GDX",
+      "NU Holdings earnings May 14: +66.7% EPS growth projected, PEG 0.83",
+      "MELI -10.5% post-earnings miss: hedge fund WCM dumped $940M — avoid this cycle",
+      "VIX declining from 17.34 → 17.08 signals mild risk-on bias"
     ]
   },
   "portfolio_allocation": {
-    "crypto": 12,
     "stocks": 60,
-    "materials": 18,
-    "cash": 10
+    "crypto": 13,
+    "materials": 15,
+    "cash": 12
   },
   "cross_sector_insights": [
     {
-      "insight": "Gold surging (+1.55%) while oil crashes (-3.54%) on Iran peace deal hopes is an unprecedented divergence \u2014 markets are pricing in geopolitical risk reduction for commodities but maintaining structural de-dollarization demand for gold.",
-      "implication": "Overweight GLD/GDX/SLV through the Iran resolution; do NOT interpret an Iran peace deal as a sell signal for gold \u2014 the structural demand (central bank accumulation, Strategic Mineral designation, de-dollarization) is independent of the Iran conflict premium."
+      "insight": "Iran deal thesis is the single most powerful cross-sector catalyst today — bullish GLD/GDX AND modestly bullish for risk assets if geopolitical risk premium compresses.",
+      "implication": "GDX is ranked #1 — overweight precious metals vs prior run."
     },
     {
-      "insight": "Healthcare sector is universally oversold (JNJ RSI 31, AMGN RSI 30, MRK RSI 33, GILD RSI 45) simultaneously with a pharma M&A boom, creating a rare combination of technical oversold + fundamental catalyst across the entire sector.",
-      "implication": "Accumulate quality pharma names (JNJ, AMGN, GILD) on weakness \u2014 M&A premium and upcoming earnings events should act as mean-reversion catalysts; the sector is pricing in more regulatory/pipeline risk than is justified by fundamentals."
+      "insight": "Positive yield spread creates clear financials tailwind: JPM record profits + WFC NIM expansion both reflect the same 10Y/3M dynamic.",
+      "implication": "Both WFC and JPM included, capped at correlation max 2."
     },
     {
-      "insight": "Crypto is decoupling from equities in May 2026 \u2014 BTC/ETH both down 2-3% while the Nasdaq is up 0.51%, suggesting crypto-specific selling (Drift hack, fund outflows) rather than macro risk-off.",
-      "implication": "Reduce crypto position sizing to the lower end of the moderate range (12% vs potential 15%); concentrate crypto exposure in BTC over ETH/SOL given BTC's institutional ETF bid and altcoin-specific headwinds."
+      "insight": "NU (fintech) + SOFI (fintech) share digital banking narrative but have different risk profiles — NU is the earnings catalyst play, SOFI is recovery speculation.",
+      "implication": "NU at 6%, SOFI capped at 3% given Muddy Waters overhang."
+    },
+    {
+      "insight": "FCX (copper/AI demand) + META (AI application layer) create a coherent AI-infrastructure pair — both oversold.",
+      "implication": "Both included at 6% and 8% respectively."
     }
   ],
   "risk_adjusted_picks": [
     {
       "rank": 1,
-      "name": "Meta Platforms",
-      "symbol": "META",
-      "sector": "technology",
-      "confidence": 9,
-      "risk_score": 2,
-      "risk_adjusted_score": 8.4,
-      "recommendation": "buy",
-      "reasoning": "RSI 29 extreme oversold combined with a 57% Q1 EPS beat ($10.44 vs $6.66), PEG 0.93, and analyst consensus target of $826 creates the best large-cap risk/reward on the board.",
-      "position_size": "10%",
-      "entry_price": 623.29,
-      "stop_loss": 590.0,
-      "target_12m": 800.0,
-      "risk_reward_ratio": 5.3
-    },
-    {
-      "rank": 2,
-      "name": "SPDR Gold Shares",
-      "symbol": "GLD",
-      "sector": "materials",
-      "confidence": 9,
-      "risk_score": 2,
-      "risk_adjusted_score": 8.4,
-      "recommendation": "buy",
-      "reasoning": "Gold at $4,767/oz with Iran war premium, central bank buying, and Strategic Mineral designation provides structural support; RSI 44.2 is a fair, non-extended entry point.",
-      "position_size": "10%",
-      "entry_price": 436.29,
-      "stop_loss": 415.0,
-      "target_12m": 490.0,
-      "risk_reward_ratio": 2.5
-    },
-    {
-      "rank": 3,
-      "name": "Johnson & Johnson",
-      "symbol": "JNJ",
-      "sector": "healthcare",
-      "confidence": 8,
-      "risk_score": 2,
-      "risk_adjusted_score": 7.4,
-      "recommendation": "buy",
-      "reasoning": "Dividend King at RSI 31.4 with Q1 beat, ex-dividend May 26 (2.39% yield), and a Barclays-raised $255 target \u2014 the defensive oversold healthcare trade with a near-term income catalyst.",
-      "position_size": "9%",
-      "entry_price": 221.44,
-      "stop_loss": 210.0,
-      "target_12m": 255.0,
-      "risk_reward_ratio": 2.9
-    },
-    {
-      "rank": 4,
       "name": "VanEck Gold Miners ETF",
       "symbol": "GDX",
       "sector": "materials",
-      "confidence": 8,
-      "risk_score": 3,
-      "risk_adjusted_score": 7.1,
+      "confidence": 9,
+      "risk_score": 5,
+      "risk_adjusted_score": 8.35,
       "recommendation": "buy",
-      "reasoning": "GDX offers 2-3x leveraged exposure to gold's structural bull run, is up 83% in 1 year, and is trading at RSI 43.6 \u2014 not extended yet \u2014 with the 52W high of $117 as the next target.",
-      "position_size": "5%",
-      "entry_price": 95.65,
-      "stop_loss": 87.0,
-      "target_12m": 115.0,
-      "risk_reward_ratio": 2.2
+      "reasoning": "Iran deal hopes confirmed in today's headlines driving gold to $4,767; GDX up +3.47% today with Barrick Mining earnings May 11 as an imminent amplifying catalyst.",
+      "position_size": "7%",
+      "entry_price": 94.13,
+      "stop_loss": 83.0,
+      "target_12m": 125.0,
+      "risk_reward_ratio": 2.8,
+      "thesis": "Leveraged gold miner exposure with Barrick May 11 catalyst; Iran deal optimism and central bank demand driving gold toward $5,000 — miners provide 2-3x leverage to gold price moves.",
+      "thesis_invalidators": [
+        "Iran nuclear deal fully signed triggering sell-the-news gold reversal below $4,300",
+        "Gold futures break below $4,400 support on 10Y yield spike above 5%"
+      ],
+      "thesis_status": "updated"
+    },
+    {
+      "rank": 2,
+      "name": "Meta Platforms",
+      "symbol": "META",
+      "sector": "big_tech",
+      "confidence": 9,
+      "risk_score": 4,
+      "risk_adjusted_score": 8.08,
+      "recommendation": "buy",
+      "reasoning": "PEG 0.93 is exceptionally cheap for a mega-cap with 3 consecutive beat quarters; RSI 28.3 extreme oversold at $611 vs $827 analyst consensus implies 35% upside at current distress pricing.",
+      "position_size": "8%",
+      "entry_price": 611.37,
+      "stop_loss": 545.0,
+      "target_12m": 790.0,
+      "risk_reward_ratio": 2.7,
+      "thesis": "RSI 28 extreme oversold + PEG 0.93 creates rare asymmetric entry in a mega-cap with accelerating AI revenue; market has over-rotated on macro fear, ignoring fundamental beat streak.",
+      "thesis_invalidators": [
+        "FTC antitrust breakup order advances in court materially",
+        "Q2 AI ad revenue misses by >5% signaling monetization plateau"
+      ],
+      "thesis_status": "active"
+    },
+    {
+      "rank": 3,
+      "name": "SPDR Gold Shares",
+      "symbol": "GLD",
+      "sector": "precious_metals",
+      "confidence": 9,
+      "risk_score": 3,
+      "risk_adjusted_score": 7.91,
+      "recommendation": "buy",
+      "reasoning": "Iran deal thesis confirmed by two major headlines today; GLD recovered from $433 pre-fetch to $436.21 live. Central bank demand provides structural floor with geopolitical risk premium as near-term upside driver.",
+      "position_size": "8%",
+      "entry_price": 433.24,
+      "stop_loss": 390.0,
+      "target_12m": 480.0,
+      "risk_reward_ratio": 2.2,
+      "thesis": "Iran deal negotiations are the near-term momentum driver confirmed in today's flow; central bank structural demand and real yield compression provide medium-term foundation toward $5,000 gold futures.",
+      "thesis_invalidators": [
+        "Iran deal fully signed and implemented — geopolitical risk premium evaporates",
+        "10-year Treasury yield spikes decisively above 5.0%"
+      ],
+      "thesis_status": "updated"
+    },
+    {
+      "rank": 4,
+      "name": "Nu Holdings",
+      "symbol": "NU",
+      "sector": "fintech",
+      "confidence": 8,
+      "risk_score": 6,
+      "risk_adjusted_score": 7.82,
+      "recommendation": "buy",
+      "reasoning": "May 14 earnings confirmed with +66.7% projected YoY EPS growth and PEG 0.83 — cheapest growth-adjusted fintech in the screened universe.",
+      "position_size": "6%",
+      "entry_price": 14.16,
+      "stop_loss": 12.5,
+      "target_12m": 19.5,
+      "risk_reward_ratio": 3.2,
+      "thesis": "Earnings catalyst 6 days away with PEG 0.83 and beat streak 2 — binary event with positive asymmetry; LatAm digital bank expanding into US with 30.28% ROE and 41% profit margin.",
+      "thesis_invalidators": [
+        "Q1 earnings miss or guidance cut below consensus",
+        "Brazilian real or Mexican peso shock materially impairs reported USD revenues"
+      ],
+      "thesis_status": "active"
     },
     {
       "rank": 5,
-      "name": "NVIDIA Corporation",
-      "symbol": "NVDA",
-      "sector": "technology",
+      "name": "Netflix",
+      "symbol": "NFLX",
+      "sector": "streaming",
       "confidence": 8,
-      "risk_score": 4,
-      "risk_adjusted_score": 6.8,
+      "risk_score": 5,
+      "risk_adjusted_score": 7.65,
       "recommendation": "buy",
-      "reasoning": "NVDA at RSI 58 is approaching its 52W high of $216.83 with earnings May 20 as the next catalyst; $215.94B revenue at 55.6% margin and a PEG 0.62 make it the best-valued AI mega-cap.",
-      "position_size": "8%",
-      "entry_price": 212.08,
-      "stop_loss": 192.0,
-      "target_12m": 270.0,
-      "risk_reward_ratio": 2.9
+      "reasoning": "RSI 24.5 extreme oversold driven by contagion from WBD's Netflix termination fee writedown — a non-fundamental event. FCF yield at 55.4% and structural ad-tier growth remain intact.",
+      "position_size": "7%",
+      "entry_price": 87.68,
+      "stop_loss": 79.0,
+      "target_12m": 120.0,
+      "risk_reward_ratio": 3.7,
+      "thesis": "Extreme oversold RSI 24.5 driven by competitor writedown noise, not NFLX fundamentals; FCF 55.4% at $87.68 is deeply undervalued for the dominant global streaming platform.",
+      "thesis_invalidators": [
+        "Q2 subscriber guidance misses below 270M total paid subs",
+        "Ad-tier ARPU growth reverses materially"
+      ],
+      "thesis_status": "active"
     },
     {
       "rank": 6,
-      "name": "iShares Silver Trust",
-      "symbol": "SLV",
-      "sector": "materials",
-      "confidence": 7,
-      "risk_score": 3,
-      "risk_adjusted_score": 6.1,
+      "name": "Freeport-McMoRan",
+      "symbol": "FCX",
+      "sector": "base_metals",
+      "confidence": 8,
+      "risk_score": 5,
+      "risk_adjusted_score": 7.65,
       "recommendation": "buy",
-      "reasoning": "Silver's +5% surge today and YTD +20.5% is driven by dual monetary/industrial demand; SLV with higher beta to the gold bull run at 3% portfolio weighting provides leveraged precious metals exposure.",
-      "position_size": "3%",
-      "entry_price": 73.68,
-      "stop_loss": 67.0,
-      "target_12m": 88.0,
-      "risk_reward_ratio": 2.1
+      "reasoning": "Q1 beat with $881M net income and UBS target raised to $74; AI data center copper demand is a multi-year structural tailwind with FCX as the lowest-cost pure-play producer in confirmed uptrend.",
+      "position_size": "6%",
+      "entry_price": 61.29,
+      "stop_loss": 54.5,
+      "target_12m": 74.0,
+      "risk_reward_ratio": 1.9,
+      "thesis": "AI-driven data center buildout creates structural copper demand FCX is uniquely positioned to capture; Q1 beat + UBS $74 target with RSI 34.2 in uptrend confirms momentum alignment.",
+      "thesis_invalidators": [
+        "China GDP growth slows sharply, reducing industrial copper demand",
+        "Copper futures break decisively below $4/lb on global recession signal"
+      ],
+      "thesis_status": "active"
     },
     {
       "rank": 7,
-      "name": "Amgen Inc.",
-      "symbol": "AMGN",
-      "sector": "healthcare",
-      "confidence": 7,
-      "risk_score": 3,
-      "risk_adjusted_score": 6.1,
+      "name": "JPMorgan Chase",
+      "symbol": "JPM",
+      "sector": "financials",
+      "confidence": 8,
+      "risk_score": 4,
+      "risk_adjusted_score": 7.48,
       "recommendation": "buy",
-      "reasoning": "AMGN at RSI 29.8 with a Q1 EPS beat, ex-dividend May 15 at 3.04% yield, and $353 average analyst target is the highest-conviction oversold healthcare trade after META.",
-      "position_size": "7%",
-      "entry_price": 328.86,
-      "stop_loss": 305.0,
-      "target_12m": 380.0,
-      "risk_reward_ratio": 2.2
+      "reasoning": "Record Q1 $14.6B profit with expanded buyback program confirms earnings power; positive yield spread and RSI 34.7 in uptrend make JPM the highest-quality entry in the financials group.",
+      "position_size": "5%",
+      "entry_price": 304.07,
+      "stop_loss": 273.0,
+      "target_12m": 375.0,
+      "risk_reward_ratio": 2.3,
+      "thesis": "Record profits + buyback expansion at RSI 34.7 in uptrend; Dimon's macro caution is a known risk priced into RSI levels, making this a favorable entry for the dominant US bank.",
+      "thesis_invalidators": [
+        "Recession indicator triggers material credit quality deterioration in Q2",
+        "Dimon macro warning proves prescient with S&P correction >15%"
+      ],
+      "thesis_status": "new"
     },
     {
       "rank": 8,
-      "name": "Mastercard Incorporated",
+      "name": "Mastercard",
       "symbol": "MA",
-      "sector": "financial-services",
-      "confidence": 7,
-      "risk_score": 3,
-      "risk_adjusted_score": 6.1,
+      "sector": "payments",
+      "confidence": 8,
+      "risk_score": 4,
+      "risk_adjusted_score": 7.48,
       "recommendation": "buy",
-      "reasoning": "MA at RSI 38.5 near its 52W low support zone with a Q1 earnings beat, blockchain expansion strategy, and $648 analyst target offers 30% upside once UK FCA investigation uncertainty resolves.",
-      "position_size": "6%",
-      "entry_price": 499.03,
-      "stop_loss": 475.0,
+      "reasoning": "Cross-border volumes +18% YoY confirms international spending recovery; institutional bid accumulation at RSI 38.9 support with $649 strong buy consensus implying 32% upside from $493.",
+      "position_size": "5%",
+      "entry_price": 493.1,
+      "stop_loss": 442.0,
       "target_12m": 640.0,
-      "risk_reward_ratio": 5.9
+      "risk_reward_ratio": 2.9,
+      "thesis": "Cross-border volume acceleration + institutional accumulation at technical support creates high-conviction entry; $649 analyst consensus reflects network effect moat that RSI 38.9 has temporarily obscured.",
+      "thesis_invalidators": [
+        "Consumer spending contraction reduces cross-border travel and ecommerce volumes",
+        "Central bank digital currency adoption threatens card network economics"
+      ],
+      "thesis_status": "active"
     },
     {
       "rank": 9,
-      "name": "Bank of America",
-      "symbol": "BAC",
+      "name": "Wells Fargo",
+      "symbol": "WFC",
       "sector": "financials",
       "confidence": 7,
-      "risk_score": 3,
-      "risk_adjusted_score": 6.1,
+      "risk_score": 4,
+      "risk_adjusted_score": 7.28,
       "recommendation": "buy",
-      "reasoning": "BAC at RSI 46.3 with Q1 EPS beat ($1.11 vs $1.02), rising NII as the 30Y tests 5%, and a PEG of 0.95 is the best-valued large-cap bank with 18% upside to the $62.98 analyst target.",
-      "position_size": "6%",
-      "entry_price": 53.4,
-      "stop_loss": 49.5,
-      "target_12m": 63.0,
-      "risk_reward_ratio": 2.5
+      "reasoning": "Q1 EPS beat ($1.60 vs $1.58), Advisor Gateway platform launch, and $1.5B team hire signal wealth management expansion; RSI 32.1 oversold entry with forward P/E 9.86 and yield spread tailwind.",
+      "position_size": "5%",
+      "entry_price": 77.44,
+      "stop_loss": 69.0,
+      "target_12m": 95.0,
+      "risk_reward_ratio": 2.1,
+      "thesis": "Yield spread tailwind + wealth management expansion at RSI 32.1 oversold; forward P/E 9.86 is deep value for a bank with $96 analyst consensus target.",
+      "thesis_invalidators": [
+        "Federal Reserve imposes new asset cap or regulatory restriction on WFC operations",
+        "Insider selling accelerates indicating internal concerns about regulatory or loan quality"
+      ],
+      "thesis_status": "new"
     },
     {
       "rank": 10,
-      "name": "Netflix, Inc.",
-      "symbol": "NFLX",
-      "sector": "communication-services",
-      "confidence": 7,
-      "risk_score": 3,
-      "risk_adjusted_score": 6.1,
-      "recommendation": "buy",
-      "reasoning": "NFLX at RSI 25.1 \u2014 extreme oversold territory \u2014 with $26B free cash flow, massive share buyback in progress, and a $114 analyst consensus target is the highest-conviction mean-reversion speculative play.",
-      "position_size": "7%",
-      "entry_price": 88.95,
-      "stop_loss": 80.0,
-      "target_12m": 114.0,
-      "risk_reward_ratio": 2.8
-    },
-    {
-      "rank": 11,
-      "name": "Gilead Sciences",
-      "symbol": "GILD",
-      "sector": "healthcare",
-      "confidence": 7,
-      "risk_score": 4,
-      "risk_adjusted_score": 5.8,
-      "recommendation": "hold",
-      "reasoning": "GILD's PEG 0.38 is the cheapest in large-cap biotech with a $158 analyst target \u2014 enter AFTER today's 4:30 PM earnings call confirms guidance; binary risk justifies holding cash until post-print.",
-      "position_size": "7%",
-      "entry_price": 135.55,
-      "stop_loss": 127.0,
-      "target_12m": 158.0,
-      "risk_reward_ratio": 2.6
-    },
-    {
-      "rank": 12,
       "name": "Bitcoin",
       "symbol": "BTC",
       "sector": "crypto",
-      "confidence": 7,
-      "risk_score": 5,
-      "risk_adjusted_score": 5.5,
+      "confidence": 8,
+      "risk_score": 7,
+      "risk_adjusted_score": 7.29,
       "recommendation": "buy",
-      "reasoning": "BTC at $79.8K holds above key support with institutional ETF flows providing a demand floor; crypto-specific selling (Drift hack, ETH outflows) is creating a tactical buying opportunity in the market leader.",
-      "position_size": "8%",
-      "entry_price": 79815,
-      "stop_loss": 73000,
-      "target_12m": 105000,
-      "risk_reward_ratio": 3.7
+      "reasoning": "ETF floor at $79K has held twice providing institutional demand support; BTC at $80,180 near floor entry is a favorable risk/reward for the dominant crypto asset in Fear zone.",
+      "position_size": "9%",
+      "entry_price": 80180.0,
+      "stop_loss": 70000.0,
+      "target_12m": 112000.0,
+      "risk_reward_ratio": 3.1,
+      "thesis": "ETF structural bid provides a $79K institutional floor; BTC near that floor with confirmed demand defense creates the asymmetric risk/reward appropriate for a moderate 9% allocation.",
+      "thesis_invalidators": [
+        "ETF daily outflows exceed $500M for 3+ consecutive days",
+        "SEC or Treasury regulatory crackdown materially impairs US crypto market access"
+      ],
+      "thesis_status": "active"
+    },
+    {
+      "rank": 11,
+      "name": "Amgen",
+      "symbol": "AMGN",
+      "sector": "healthcare",
+      "confidence": 7,
+      "risk_score": 4,
+      "risk_adjusted_score": 7.08,
+      "recommendation": "buy",
+      "reasoning": "Beat streak 4 with obesity drug pipeline progress at RSI 35.6 near support; healthcare provides defensive ballast to portfolio in MIXED macro regime with forward P/E 14.15 below sector average.",
+      "position_size": "5%",
+      "entry_price": 332.11,
+      "stop_loss": 299.0,
+      "target_12m": 395.0,
+      "risk_reward_ratio": 1.9,
+      "thesis": "Defensive healthcare compounder with beat streak 4 and obesity drug binary catalyst; RSI 35.6 near support with portfolio risk-balancing benefits in MIXED regime.",
+      "thesis_invalidators": [
+        "Obesity drug (MariTide) Phase 3 failure or material safety signal",
+        "Medicare drug pricing IRA provisions accelerate beyond current consensus estimates"
+      ],
+      "thesis_status": "new"
+    },
+    {
+      "rank": 12,
+      "name": "Home Depot",
+      "symbol": "HD",
+      "sector": "consumer_discretionary",
+      "confidence": 7,
+      "risk_score": 4,
+      "risk_adjusted_score": 7.08,
+      "recommendation": "buy",
+      "reasoning": "BofA top pick $374 with earnings May 19 binary catalyst 11 days out; RSI 26.9 oversold in a consumer discretionary leader with stable housing activity and pro-contractor segment resilience.",
+      "position_size": "5%",
+      "entry_price": 321.21,
+      "stop_loss": 289.0,
+      "target_12m": 374.0,
+      "risk_reward_ratio": 1.6,
+      "thesis": "BofA top pick + earnings catalyst in 11 days with RSI 26.9 extreme oversold — rare combination of imminent catalyst and deep technical oversold in a large-cap retail leader.",
+      "thesis_invalidators": [
+        "May 19 earnings miss on same-store sales below -2% YoY",
+        "US housing starts collapse materially in April data"
+      ],
+      "thesis_status": "active"
     },
     {
       "rank": 13,
+      "name": "PayPal",
+      "symbol": "PYPL",
+      "sector": "payments",
+      "confidence": 7,
+      "risk_score": 6,
+      "risk_adjusted_score": 7.02,
+      "recommendation": "buy",
+      "reasoning": "PEG 0.91 is the cheapest payment valuation in the screened universe at RSI 24.5 extreme oversold; FCA probe is UK-limited and Q1 beat demonstrates global operations intact.",
+      "position_size": "4%",
+      "entry_price": 45.88,
+      "stop_loss": 40.5,
+      "target_12m": 65.0,
+      "risk_reward_ratio": 3.6,
+      "thesis": "RSI 24.5 extreme oversold with PEG 0.91 — FCA probe overhang has overcorrected the stock relative to fundamental value; 81 days to next earnings provides time for thesis to play out.",
+      "thesis_invalidators": [
+        "FCA probe expands to EU or US operations beyond UK scope",
+        "Q2 guidance cut materially below consensus indicating structural decline not cyclical"
+      ],
+      "thesis_status": "new"
+    },
+    {
+      "rank": 14,
       "name": "Ethereum",
       "symbol": "ETH",
       "sector": "crypto",
-      "confidence": 6,
-      "risk_score": 5,
-      "risk_adjusted_score": 4.5,
-      "recommendation": "hold",
-      "reasoning": "ETH at $2,292 has support near $2,050 but fund outflows and network concerns keep conviction lower than BTC \u2014 accumulate below $2,150 for better risk/reward.",
+      "confidence": 7,
+      "risk_score": 7,
+      "risk_adjusted_score": 6.59,
+      "recommendation": "buy",
+      "reasoning": "On-chain sell exhaustion signal with spot ETF inflows providing institutional floor near $2,200; small 4% position appropriate for moderate profile as diversifier from BTC.",
       "position_size": "4%",
-      "entry_price": 2292,
-      "stop_loss": 2050,
-      "target_12m": 3200,
-      "risk_reward_ratio": 3.8
+      "entry_price": 2286.0,
+      "stop_loss": 1980.0,
+      "target_12m": 3400.0,
+      "risk_reward_ratio": 3.6,
+      "thesis": "On-chain sell exhaustion + ETF inflows create technical and structural floor near $2,200; complementary to BTC with potential Ethereum upgrade catalyst in H2 2026.",
+      "thesis_invalidators": [
+        "ETH spot ETF daily outflows persistently exceed inflows for 2+ weeks",
+        "Layer-2 migration acceleration materially compresses base-layer fee revenue"
+      ],
+      "thesis_status": "active"
+    },
+    {
+      "rank": 15,
+      "name": "SoFi Technologies",
+      "symbol": "SOFI",
+      "sector": "fintech",
+      "confidence": 7,
+      "risk_score": 7,
+      "risk_adjusted_score": 6.29,
+      "recommendation": "buy",
+      "reasoning": "Q1 beat ($1.09B rev +41% YoY, Rule of 40 for 18 quarters) partially rebuts Muddy Waters claims; RSI 24.8 extreme oversold creates speculative entry — Muddy Waters overhang limits conviction to 3% maximum.",
+      "position_size": "3%",
+      "entry_price": 15.74,
+      "stop_loss": 13.75,
+      "target_12m": 24.0,
+      "risk_reward_ratio": 4.2,
+      "thesis": "Strong Q1 fundamentals rebut Muddy Waters claims while RSI 24.8 extreme oversold provides speculative entry; if claims proven unfounded, 12.5% short float squeeze amplifies recovery.",
+      "thesis_invalidators": [
+        "Muddy Waters allegations substantiated by regulatory investigation or audit findings",
+        "Technology Platform segment revenue declines materially"
+      ],
+      "thesis_status": "active"
     }
   ],
   "historical_accuracy": {
-    "previous_date": "2026-05-05",
-    "calls_made": 12,
-    "calls_correct": 7,
-    "accuracy_pct": 58,
-    "notable": "Gold (+3.7%), GDX (+10.1%), GILD (+1.6%), BAC (+0.4%), META (+1.3%), NVDA (+2.1%) above entry; JNJ (-2.0%), MA (-0.6%), AMGN (-0.7%), BTC (-1.9%), ETH (-2.5%) below \u2014 materials/tech outperformed, healthcare/crypto disappointed."
+    "previous_date": "2026-05-08",
+    "calls_made": 13,
+    "calls_correct": 4,
+    "accuracy_pct": 31,
+    "spy_return_since_report_pct": 0.78,
+    "picks_beat_spy": 2,
+    "notable": "GDX +2.6% (alpha +1.8%) top performer — gold breakout thesis working precisely. FCX +1.1% (alpha +0.3%) AI copper demand. BTC +0.8% and ETH +0.5% positive inline with SPY. 9/13 picks negative in a +0.78% SPY session — broad tech/fintech slightly ahead of recovery. GLD recovered from -0.7% to +1.24% today confirming Iran deal catalyst materialized."
   },
   "warnings": [
-    "GILD earnings call TODAY at 4:30 PM EDT \u2014 binary risk, reduce position size until post-print confirmation",
-    "NVDA earnings May 20 \u2014 near 52W high of $216.83; consider trimming to 6% pre-earnings and re-entering on the call",
-    "Iran peace deal talks: if confirmed, GLD/GDX may see a 3-5% tactical pullback \u2014 structural bull case intact, use dip to add",
-    "PYPL downgraded TODAY by Macquarie to Neutral (PT cut $58\u2192$50); avoid despite RSI 33.6 \u2014 institutional momentum is negative",
-    "Drift/Solana $295M hack \u2014 SOL sentiment suppressed near-term; avoid SOL positions until community recovery plan confirmed",
-    "30-year Treasury testing 5% \u2014 rising long-end rates headwind for growth stocks; monitor NVDA and NFLX entries closely"
+    "MELI EXCLUDED: Down -10.5% today post Q1 earnings. Hedge fund WCM dumped $940M. Re-evaluate at $1,500-$1,550 support if it holds.",
+    "WFC EX-DIVIDEND TODAY: $0.45 dividend ex-date May 8 may cause near-term price pressure. Entry on dip below $77 improves risk/reward.",
+    "SOFI MUDDY WATERS OVERHANG PERSISTS: 'SoFi Faces Muddy Waters Claims' headline still active (6 days ago). Position sized at 3% maximum — speculative only.",
+    "BTC INTRADAY -1.74% EARLIER: Short-term selling pressure but $79K floor has held twice. Do not add until daily close confirmed above $80,000.",
+    "JNJ DROPPED FROM SCREENED LIST: No longer in top-15 screened candidates this run. Excluded from picks.",
+    "RIVN EXCLUDED: Negative P/E, EV startup risk — incompatible with moderate risk profile regardless of RSI 25.0 oversold signal.",
+    "DISCLAIMER: This report is generated by Tododeia for informational purposes only. It does not constitute financial advice. Past performance is not indicative of future results. All investments involve risk of loss."
   ],
+  "strategy_summary": "15-position moderate portfolio weighted toward extreme-oversold tech/fintech (META RSI 28, NFLX RSI 24.5, PYPL RSI 24.5, NU RSI 33.4) with imminent earnings catalysts (NU May 14, HD May 19, Barrick/GDX May 11), anchored by Iran deal materials momentum (GLD/GDX confirmed today). Top pick: GDX — Iran deal headlines confirmed, Barrick earnings May 11, +3.47% today. Crypto 13% (BTC 9% + ETH 4%) with ETF floor defense at $79K. Cash 12% provides optionality.",
   "sectors": {
-    "crypto": {
-      "sector": "crypto",
-      "timestamp": "2026-05-07T15:25:00Z",
-      "sector_summary": "Crypto is decoupling bearishly from equities on May 7, with BTC and ETH each down 2-3% while the S&P 500 grinds higher \u2014 a sign of position unwinding rather than macro risk-off. Digital asset ETPs posted their first monthly gain of 2026 in April, but early-May flows have reversed; the Drift/Solana exchange $295M hack adds specific pressure to SOL sentiment.",
-      "sector_outlook": "neutral",
-      "top_pick": "BTC",
-      "top_pick_reasoning": "BTC remains the institutional-grade safe harbor with $1.6T market cap, CME volatility futures launching, and Strategy (MSTR) continuing accumulation even as altcoins underperform.",
-      "assets": [
-        {
-          "name": "Bitcoin",
-          "symbol": "BTC",
-          "current_price": "$79,815",
-          "change_24h": "-2.27%",
-          "change_7d": "-5.1%",
-          "change_30d": "+3.2%",
-          "ytd_change": "-8.5%",
-          "week_52_high": "$126,198",
-          "week_52_low": "$60,074",
-          "market_cap": "$1.60T",
-          "volume_24h": "$33.3B",
-          "sentiment": "neutral",
-          "social_sentiment": "neutral",
-          "social_buzz": "medium",
-          "confidence": 7,
-          "source_agreement": "medium",
-          "key_news": [
-            "Digital asset ETPs post first monthly gain of 2026 in April; May showing early reversal",
-            "CME launching Bitcoin volatility futures; Strategy price target raised to $395 by TD Cowen"
-          ],
-          "social_highlights": [
-            "Tom Lee 'biggest rally ever' prediction circulating but countered by Fidelity altcoin bear report",
-            "U.S. seized $500M in Iranian crypto \u2014 geopolitical wildcard supporting crypto regulatory scrutiny"
-          ],
-          "recommendation": "buy",
-          "reasoning": "BTC at $79.8K holds above key $78K support with institutional ETF buying providing a floor ahead of a potential macro tailwind if Iran deal reduces global risk premium."
-        },
-        {
-          "name": "Ethereum",
-          "symbol": "ETH",
-          "current_price": "$2,292",
-          "change_24h": "-2.81%",
-          "change_7d": "-7.5%",
-          "change_30d": "+1.5%",
-          "ytd_change": "-15.2%",
-          "week_52_high": "$4,953",
-          "week_52_low": "$1,748",
-          "market_cap": "$276.9B",
-          "volume_24h": "$20.5B",
-          "sentiment": "bearish",
-          "social_sentiment": "neutral",
-          "social_buzz": "medium",
-          "confidence": 6,
-          "source_agreement": "low",
-          "key_news": [
-            "ETH sheds $81.6M in fund outflows as crypto snaps mid-week risk-off; selling pressure down 85%",
-            "Ethereum price eyes mid-week bounce after recent 15% rally obscured an on-chain network problem"
-          ],
-          "social_highlights": [
-            "Ethereum selling pressure crater signals potential reversal but flows remain negative",
-            "Morgan Stanley adds ETH trading to E*Trade at 0.50% fee \u2014 institutional access broadening"
-          ],
-          "recommendation": "hold",
-          "reasoning": "ETH at RSI 44.9 is near fair-value support near $2,050-2,100 but persistent fund outflows and network concerns cap upside near-term \u2014 hold existing positions, new entry at $2,100."
-        },
-        {
-          "name": "Solana",
-          "symbol": "SOL",
-          "current_price": "$88.09",
-          "change_24h": "-0.98%",
-          "change_7d": "-5.2%",
-          "change_30d": "-8.3%",
-          "ytd_change": "-43.5%",
-          "week_52_high": "$253.21",
-          "week_52_low": "$68.69",
-          "market_cap": "$50.98B",
-          "volume_24h": "$4.74B",
-          "sentiment": "bearish",
-          "social_sentiment": "neutral",
-          "social_buzz": "low",
-          "confidence": 5,
-          "source_agreement": "low",
-          "key_news": [
-            "Drift exchange (Solana DEX) suffers $295M hack; Jito Foundation launches Asia-Pacific institutional partnership",
-            "Solana bulls reclaim control after weeks of selling, chart targets 14% breakout to ~$100"
-          ],
-          "social_highlights": [
-            "Drift hack overshadows institutional partnership news \u2014 negative near-term overhang",
-            "Fidelity crypto report paints brutal picture for altcoins including SOL relative to BTC"
-          ],
-          "recommendation": "hold",
-          "reasoning": "SOL is 65% below its 52W high with the Drift hack creating negative sentiment overhang; wait for a confirmed break above $95 before adding exposure."
-        }
-      ]
-    },
     "stocks": {
       "sector": "stocks",
-      "timestamp": "2026-05-07T15:25:00Z",
-      "sector_summary": "U.S. equities are mixed on May 7 with the Nasdaq +0.51% led by semiconductors (NVDA +2.1%) while healthcare underperforms broadly \u2014 JNJ, MRK, AMGN all in the red. META is recovering sharply after a monstrous Q1 earnings beat (EPS $10.44 vs $6.66 estimate), validating the RSI-29 oversold entry thesis from the May 5 screener.",
-      "sector_outlook": "neutral",
+      "timestamp": "2026-05-08T15:05:50Z",
+      "sector_summary": "Wide earnings divergence: MELI -10.5% miss vs META/NFLX still extreme oversold at RSI 28-24.5. Financials (WFC, JPM) benefit from positive yield spread; NU (May 14) and HD (May 19) are near-term catalysts. S&P +0.81% on April jobs beat.",
+      "sector_outlook": "bullish",
       "top_pick": "META",
-      "top_pick_reasoning": "META's Q1 2026 earnings obliterated estimates with 57% EPS upside while trading at PEG 0.93 and RSI 29 \u2014 one of the most compelling risk/reward setups in large-cap tech.",
+      "top_pick_reasoning": "PEG 0.93 at RSI 28 extreme oversold is rare for a mega-cap; AI ad monetization confirmed accelerating in Q2 with $827 analyst consensus providing 35% upside.",
       "assets": [
         {
           "name": "Meta Platforms",
           "symbol": "META",
-          "current_price": "$623.29",
-          "change_24h": "+1.70%",
-          "change_7d": "-5.2%",
-          "change_30d": "-14.5%",
-          "ytd_change": "-5.49%",
-          "week_52_high": "$796.25",
-          "week_52_low": "$520.26",
-          "market_cap": "$1.58T",
-          "volume_24h": "$9.6B",
+          "current_price": "$611.37",
+          "change_24h": "N/A",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "N/A",
+          "week_52_high": "N/A",
+          "week_52_low": "N/A",
+          "market_cap": "~$1.55T",
+          "volume_24h": "N/A",
           "sentiment": "bullish",
           "social_sentiment": "bullish",
           "social_buzz": "high",
           "confidence": 9,
           "source_agreement": "high",
           "key_news": [
-            "Q1 FY2026 earnings: EPS $10.44 vs $6.66 estimate (+57%), revenue $56.31B; analysts raising price targets broadly",
-            "Meta paying creators in stablecoins; UK media regulator challenge signals regulatory noise"
+            "Meta AI monetization accelerating Q2; AI ad revenue beats consensus",
+            "AI antitrust legal risks remain but monetization story intact per Q2 preview"
           ],
           "social_highlights": [
-            "Guggenheim 79/100 top analyst score with BUY; consensus analyst target $826.69 (+33% upside from current)",
-            "Billion-dollar agentic AI companies with one employee emerging \u2014 Meta's AI ecosystem is key infrastructure play"
+            "PEG 0.93 at RSI 28 — rare asymmetric entry for mega-cap",
+            "$827 analyst consensus = 35% upside from current $611"
           ],
           "recommendation": "buy",
-          "reasoning": "META at RSI 29 with a massive Q1 EPS beat ($10.44 vs $6.66), PEG 0.93, and $81B cash balance is a rare combination of deep value and earnings momentum in mega-cap tech."
+          "reasoning": "PEG 0.93 at RSI 28 extreme oversold with AI monetization confirmed accelerating; 3 beat quarters and $827 consensus create exceptional risk/reward.",
+          "technicals": {
+            "trend": "downtrend",
+            "rsi": 28.3,
+            "macd": "bearish",
+            "key_support": 545.0,
+            "key_resistance": 680.0,
+            "entry_quality": "excellent — oversold"
+          },
+          "valuation": {
+            "pe": null,
+            "forward_pe": 16.9,
+            "peg": 0.93,
+            "ev_ebitda": null,
+            "verdict": "growth discount — PEG below 1 for +33% revenue growth"
+          },
+          "fundamentals": {
+            "revenue_growth": "+33.1% YoY",
+            "gross_margin": "N/A",
+            "fcf_margin": "11.9%",
+            "debt_equity": null,
+            "verdict": "strong — beat_streak 3, AI ad monetization confirmed"
+          }
         },
         {
-          "name": "NVIDIA Corporation",
-          "symbol": "NVDA",
-          "current_price": "$212.08",
-          "change_24h": "+2.11%",
-          "change_7d": "+3.5%",
-          "change_30d": "+8.2%",
-          "ytd_change": "+13.73%",
-          "week_52_high": "$216.83",
-          "week_52_low": "$115.21",
-          "market_cap": "$5.15T",
-          "volume_24h": "$36.2B",
+          "name": "Netflix",
+          "symbol": "NFLX",
+          "current_price": "$87.68",
+          "change_24h": "N/A",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "N/A",
+          "week_52_high": "N/A",
+          "week_52_low": "N/A",
+          "market_cap": "~$38B",
+          "volume_24h": "N/A",
           "sentiment": "bullish",
           "social_sentiment": "bullish",
-          "social_buzz": "high",
+          "social_buzz": "medium",
           "confidence": 8,
           "source_agreement": "high",
           "key_news": [
-            "Semiconductor stocks leading market rally May 7; NVDA approaching 52W high of $216.83 ahead of May 20 earnings",
-            "Q4 FY2026 earnings showed EPS $1.62 vs $1.54 estimate, revenue $68.13B; Rosenblatt top analyst score 82/100 with BUY"
+            "WBD Q1 loss driven by Netflix termination fee writedown — NFLX streaming growth intact",
+            "NFLX ad-tier subscriber growth accelerating; FCF positive at current price"
           ],
           "social_highlights": [
-            "Marvell reaching all-time highs reinforces AI infrastructure supercycle \u2014 NVDA is the picks-and-shovels play",
-            "Consensus analyst target $269.17 (+27% from current); earnings May 20 is a near-term catalyst"
+            "RSI 24.5 — second-deepest oversold in 64-ticker universe",
+            "FCF yield 55.4% at $87.68 — exceptional quality"
           ],
           "recommendation": "buy",
-          "reasoning": "NVDA at RSI 58.3 with earnings May 20 and a 52W high just above current price ($216.83) creates a momentum breakout setup backed by $215.94B revenue run-rate at 55.6% profit margin."
+          "reasoning": "Extreme oversold RSI 24.5 from WBD competitor noise; FCF 55.4% and $120 target = 37% upside.",
+          "technicals": {
+            "trend": "downtrend",
+            "rsi": 24.5,
+            "macd": "bearish extreme",
+            "key_support": 79.0,
+            "key_resistance": 100.0,
+            "entry_quality": "excellent — oversold"
+          },
+          "valuation": {
+            "pe": null,
+            "forward_pe": 22.83,
+            "peg": 1.29,
+            "ev_ebitda": null,
+            "verdict": "fairly valued — PEG 1.29 for streaming leader"
+          },
+          "fundamentals": {
+            "revenue_growth": "+16.2% YoY",
+            "gross_margin": "N/A",
+            "fcf_margin": "55.4%",
+            "debt_equity": null,
+            "verdict": "exceptional FCF 55.4%, beat_streak 2"
+          }
         },
         {
-          "name": "Johnson & Johnson",
-          "symbol": "JNJ",
-          "current_price": "$221.44",
-          "change_24h": "-1.42%",
-          "change_7d": "-2.1%",
-          "change_30d": "-5.3%",
-          "ytd_change": "+7.57%",
-          "week_52_high": "$251.71",
-          "week_52_low": "$146.12",
-          "market_cap": "$533.1B",
-          "volume_24h": "$1.8B",
-          "sentiment": "neutral",
+          "name": "Nu Holdings",
+          "symbol": "NU",
+          "current_price": "$14.16",
+          "change_24h": "-0.7%",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "N/A",
+          "week_52_high": "N/A",
+          "week_52_low": "N/A",
+          "market_cap": "~$69B",
+          "volume_24h": "N/A",
+          "sentiment": "bullish",
+          "social_sentiment": "bullish",
+          "social_buzz": "medium",
+          "confidence": 8,
+          "source_agreement": "high",
+          "key_news": [
+            "NU Holdings earnings confirmed May 14, 2026 — 66.7% YoY EPS growth projected",
+            "CICC initiates Outperform at $18; analyst avg target $19.87 vs $14.16 current"
+          ],
+          "social_highlights": [
+            "PEG 0.83 — cheapest growth-adjusted fintech in universe",
+            "6 days to earnings binary catalyst"
+          ],
+          "recommendation": "buy",
+          "reasoning": "Pre-earnings: PEG 0.83, +66.7% EPS forecast, May 14 catalyst confirmed.",
+          "technicals": {
+            "trend": "downtrend",
+            "rsi": 33.4,
+            "macd": "bearish",
+            "key_support": 12.5,
+            "key_resistance": 16.0,
+            "entry_quality": "excellent — oversold"
+          },
+          "valuation": {
+            "pe": null,
+            "forward_pe": 12.35,
+            "peg": 0.83,
+            "ev_ebitda": null,
+            "verdict": "compelling value — PEG 0.83 for 44% revenue growth"
+          },
+          "fundamentals": {
+            "revenue_growth": "+43.9% YoY",
+            "gross_margin": "N/A",
+            "fcf_margin": "N/A",
+            "debt_equity": null,
+            "verdict": "exceptional — 41% profit margin, 30% ROE, US expansion"
+          }
+        },
+        {
+          "name": "Freeport-McMoRan",
+          "symbol": "FCX",
+          "current_price": "$61.29",
+          "change_24h": "+1.1%",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "N/A",
+          "week_52_high": "N/A",
+          "week_52_low": "N/A",
+          "market_cap": "~$88B",
+          "volume_24h": "N/A",
+          "sentiment": "bullish",
+          "social_sentiment": "bullish",
+          "social_buzz": "low",
+          "confidence": 8,
+          "source_agreement": "high",
+          "key_news": [
+            "FCX Q1 beat: $881M net income; UBS raised target to $74",
+            "AI infrastructure copper demand structural tailwind; FCX in confirmed uptrend"
+          ],
+          "social_highlights": [
+            "beat_streak 4 — most consistent performer in base metals",
+            "AI data center copper demand multi-year structural tailwind"
+          ],
+          "recommendation": "buy",
+          "reasoning": "Q1 beat + UBS $74 target with RSI 34.2 in uptrend confirms momentum alignment with AI copper demand.",
+          "technicals": {
+            "trend": "uptrend",
+            "rsi": 34.2,
+            "macd": "weak bearish",
+            "key_support": 54.5,
+            "key_resistance": 68.0,
+            "entry_quality": "oversold — verify fundamentals"
+          },
+          "valuation": {
+            "pe": null,
+            "forward_pe": 16.55,
+            "peg": 4.1,
+            "ev_ebitda": null,
+            "verdict": "commodity premium — structural demand justifies"
+          },
+          "fundamentals": {
+            "revenue_growth": "+8.8% YoY",
+            "gross_margin": "N/A",
+            "fcf_margin": "5.3%",
+            "debt_equity": null,
+            "verdict": "solid — Q1 beat, beat_streak 4, UBS $74"
+          }
+        },
+        {
+          "name": "JPMorgan Chase",
+          "symbol": "JPM",
+          "current_price": "$304.07",
+          "change_24h": "N/A",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "N/A",
+          "week_52_high": "N/A",
+          "week_52_low": "N/A",
+          "market_cap": "~$879B",
+          "volume_24h": "N/A",
+          "sentiment": "bullish",
           "social_sentiment": "neutral",
           "social_buzz": "low",
           "confidence": 8,
-          "source_agreement": "medium",
+          "source_agreement": "high",
           "key_news": [
-            "JNJ launches 'Generation Fine' mental health campaign; Q1 FY2026 EPS $2.70 beat $2.68 estimate",
-            "Barclays raised PT from $234 to $255; pharma M&A boom favors JNJ's diversified platform"
+            "JPM Q1 record $14.6B profit; raised buyback program",
+            "Positive yield spread expands NIM; Dimon caution priced in at RSI 34.7"
           ],
           "social_highlights": [
-            "Dividend King status maintained with 2.39% yield; ex-dividend May 26 creates near-term catalyst",
-            "UBS top analyst score 58/100 BUY; average PT $252.42 (+14% upside)"
+            "RSI 34.7 excellent — oversold for highest-quality US bank",
+            "Record profit + buyback = institutional confidence signal"
           ],
           "recommendation": "buy",
-          "reasoning": "JNJ at RSI 31.4 is extremely oversold for a Dividend King trading at a 12% discount to analyst consensus ($252 avg target), with a Q1 earnings beat and ex-dividend date May 26 as near-term support."
+          "reasoning": "Record Q1 profit + buyback + RSI 34.7 in uptrend; Dimon caution is a known priced-in risk.",
+          "technicals": {
+            "trend": "uptrend",
+            "rsi": 34.7,
+            "macd": "neutral",
+            "key_support": 273.0,
+            "key_resistance": 330.0,
+            "entry_quality": "excellent — oversold"
+          },
+          "valuation": {
+            "pe": null,
+            "forward_pe": 12.92,
+            "peg": 1.67,
+            "ev_ebitda": null,
+            "verdict": "fairly valued — fwd PE 12.9 for record profits"
+          },
+          "fundamentals": {
+            "revenue_growth": "+8% YoY",
+            "gross_margin": "N/A",
+            "fcf_margin": "N/A",
+            "debt_equity": null,
+            "verdict": "record Q1 profit, buyback expansion, beat_streak 3"
+          }
         },
         {
-          "name": "Amgen Inc.",
-          "symbol": "AMGN",
-          "current_price": "$328.86",
-          "change_24h": "-0.68%",
-          "change_7d": "-2.5%",
-          "change_30d": "-8.5%",
-          "ytd_change": "+1.17%",
-          "week_52_high": "$391.29",
-          "week_52_low": "$261.43",
-          "market_cap": "$177.6B",
-          "volume_24h": "$0.89B",
-          "sentiment": "neutral",
-          "social_sentiment": "neutral",
-          "social_buzz": "low",
-          "confidence": 7,
-          "source_agreement": "medium",
-          "key_news": [
-            "$300M Puerto Rico biologics manufacturing expansion announced; FDA scrutiny on Tavneos creates headwind",
-            "Q1 FY2026 EPS $5.15 beat $4.77 estimate; ex-dividend May 15 at 3.04% annual yield"
-          ],
-          "social_highlights": [
-            "Guggenheim maintains Neutral (PT $340 from $351) \u2014 cautious but not bearish; stock below analyst avg target",
-            "Pharma M&A boom (Lilly, Gilead leading deals) could re-rate AMGN as acquisition target"
-          ],
-          "recommendation": "buy",
-          "reasoning": "AMGN at RSI 29.8 with Q1 earnings beat, ex-dividend May 15 (3.04% yield), and $353 average analyst target offers 7% upside to consensus with an income kicker in a defensive sector."
-        },
-        {
-          "name": "Netflix, Inc.",
-          "symbol": "NFLX",
-          "current_price": "$88.95",
-          "change_24h": "+0.77%",
-          "change_7d": "-5.8%",
-          "change_30d": "-24.5%",
-          "ytd_change": "-5.13%",
-          "week_52_high": "$134.12",
-          "week_52_low": "$75.01",
-          "market_cap": "$374.6B",
-          "volume_24h": "$4.0B",
-          "sentiment": "bearish",
-          "social_sentiment": "neutral",
-          "social_buzz": "medium",
-          "confidence": 7,
-          "source_agreement": "medium",
-          "key_news": [
-            "Q1 FY2026 EPS $1.23 missed $1.25 estimate slightly but revenue grew; massive share buyback program signals management confidence",
-            "Warner Bros. Discovery posts $2.8B Netflix termination fee charge \u2014 confirms NFLX content pricing power"
-          ],
-          "social_highlights": [
-            "Oppenheimer top analyst 73/100 OUTPERFORM, PT $115; average analyst target $114.56 (+29% from current)",
-            "'Netflix and Meta on sale' articles circulating \u2014 contrarian buying sentiment building at RSI 25"
-          ],
-          "recommendation": "buy",
-          "reasoning": "NFLX at RSI 25.1 \u2014 the most oversold it has been in 2 years \u2014 combined with a $25.99B free cash flow run-rate and a massive buyback at current levels creates a speculative but compelling mean-reversion trade toward the $114 analyst consensus."
-        },
-        {
-          "name": "Bank of America",
-          "symbol": "BAC",
-          "current_price": "$53.40",
-          "change_24h": "-0.36%",
-          "change_7d": "-1.2%",
-          "change_30d": "+0.7%",
-          "ytd_change": "-2.36%",
-          "week_52_high": "$57.55",
-          "week_52_low": "$41.25",
-          "market_cap": "$378.96B",
-          "volume_24h": "$2.1B",
-          "sentiment": "neutral",
-          "social_sentiment": "neutral",
-          "social_buzz": "low",
-          "confidence": 7,
-          "source_agreement": "medium",
-          "key_news": [
-            "Q1 FY2026 EPS $1.11 beat $1.02 estimate on rising net interest income; expanding defense financing initiative",
-            "30-year Treasury testing 5% \u2014 dual-edged for BAC: NII expands but credit risk and duration headwinds increase"
-          ],
-          "social_highlights": [
-            "Truist Securities 65/100 top analyst BUY; average analyst target $62.98 (+18% upside from current)",
-            "BAC vs MS: Zacks analysis favors BAC on stronger NII trajectory post-Q1"
-          ],
-          "recommendation": "buy",
-          "reasoning": "BAC at RSI 46.3 with a PEG of 0.95, strong Q1 earnings beat, and analyst target of $62.98 represents 18% upside for a diversified bank with rising net interest income as the 30Y yield tests 5%."
-        },
-        {
-          "name": "Mastercard Incorporated",
+          "name": "Mastercard",
           "symbol": "MA",
-          "current_price": "$499.03",
-          "change_24h": "+1.45%",
-          "change_7d": "-3.8%",
-          "change_30d": "-10.1%",
-          "ytd_change": "-12.30%",
-          "week_52_high": "$601.77",
-          "week_52_low": "$480.50",
-          "market_cap": "$440.9B",
-          "volume_24h": "$1.8B",
+          "current_price": "$493.10",
+          "change_24h": "-1.6%",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "N/A",
+          "week_52_high": "N/A",
+          "week_52_low": "N/A",
+          "market_cap": "~$468B",
+          "volume_24h": "N/A",
+          "sentiment": "bullish",
+          "social_sentiment": "neutral",
+          "social_buzz": "low",
+          "confidence": 8,
+          "source_agreement": "high",
+          "key_news": [
+            "Mastercard cross-border volumes +18% YoY — structural growth above estimates",
+            "Strong buy consensus $649; institutional vol accumulation at RSI 38.9"
+          ],
+          "social_highlights": [
+            "Beat_streak 4 — consistent earnings quality",
+            "FCF margin 47.6% — exceptional cash generation"
+          ],
+          "recommendation": "buy",
+          "reasoning": "Cross-border +18% YoY + institutional accumulation + $649 consensus = 32% upside at RSI 38.9.",
+          "technicals": {
+            "trend": "downtrend",
+            "rsi": 38.9,
+            "macd": "bearish near cross",
+            "key_support": 442.0,
+            "key_resistance": 545.0,
+            "entry_quality": "good — near support"
+          },
+          "valuation": {
+            "pe": null,
+            "forward_pe": 21.65,
+            "peg": 1.57,
+            "ev_ebitda": null,
+            "verdict": "fairly valued — PEG 1.57 for toll-road FCF machine"
+          },
+          "fundamentals": {
+            "revenue_growth": "+15.8% YoY",
+            "gross_margin": "N/A",
+            "fcf_margin": "47.6%",
+            "debt_equity": null,
+            "verdict": "exceptional — beat_streak 4, no insider selling"
+          }
+        },
+        {
+          "name": "Wells Fargo",
+          "symbol": "WFC",
+          "current_price": "$77.44",
+          "change_24h": "N/A",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "N/A",
+          "week_52_high": "N/A",
+          "week_52_low": "N/A",
+          "market_cap": "~$284B",
+          "volume_24h": "N/A",
+          "sentiment": "bullish",
+          "social_sentiment": "neutral",
+          "social_buzz": "low",
+          "confidence": 7,
+          "source_agreement": "high",
+          "key_news": [
+            "Wells Fargo hires $1.5B Pennsylvania team from Morgan Stanley; Advisor Gateway launch",
+            "Q1 EPS $1.60 beat $1.58 est; ex-dividend $0.45 today — dip may improve entry"
+          ],
+          "social_highlights": [
+            "RSI 32.1 excellent — oversold entry for big-4 bank",
+            "Forward P/E 9.86 is deep value for NIM expansion story"
+          ],
+          "recommendation": "buy",
+          "reasoning": "Q1 beat + wealth management expansion at RSI 32.1 oversold; fwd PE 9.86 deep value with yield tailwind.",
+          "technicals": {
+            "trend": "downtrend",
+            "rsi": 32.1,
+            "macd": "bearish",
+            "key_support": 69.0,
+            "key_resistance": 86.0,
+            "entry_quality": "excellent — oversold"
+          },
+          "valuation": {
+            "pe": null,
+            "forward_pe": 9.86,
+            "peg": 1.43,
+            "ev_ebitda": null,
+            "verdict": "deep value — fwd PE 9.86 for NIM beneficiary"
+          },
+          "fundamentals": {
+            "revenue_growth": "+5% YoY",
+            "gross_margin": "N/A",
+            "fcf_margin": "N/A",
+            "debt_equity": null,
+            "verdict": "Q1 beat, wealth management expansion catalyst"
+          }
+        },
+        {
+          "name": "Amgen",
+          "symbol": "AMGN",
+          "current_price": "$332.11",
+          "change_24h": "N/A",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "N/A",
+          "week_52_high": "N/A",
+          "week_52_low": "N/A",
+          "market_cap": "~$179B",
+          "volume_24h": "N/A",
+          "sentiment": "bullish",
+          "social_sentiment": "neutral",
+          "social_buzz": "low",
+          "confidence": 7,
+          "source_agreement": "high",
+          "key_news": [
+            "Amgen pipeline progress on obesity drug — late-stage data expected H2 2026",
+            "AMGN beat streak 4 confirmed; fwd P/E 14.15 at 5-year support level"
+          ],
+          "social_highlights": [
+            "Healthcare defensive ballast for MIXED macro",
+            "Obesity drug binary catalyst H2 2026"
+          ],
+          "recommendation": "buy",
+          "reasoning": "Beat streak 4 + obesity drug pipeline + RSI 35.6 near support; defensive healthcare at fwd PE 14.15.",
+          "technicals": {
+            "trend": "mixed",
+            "rsi": 35.6,
+            "macd": "neutral",
+            "key_support": 299.0,
+            "key_resistance": 370.0,
+            "entry_quality": "good — near support"
+          },
+          "valuation": {
+            "pe": null,
+            "forward_pe": 14.15,
+            "peg": 2.18,
+            "ev_ebitda": null,
+            "verdict": "premium — justified by pipeline + beat streak"
+          },
+          "fundamentals": {
+            "revenue_growth": "+9% YoY",
+            "gross_margin": "N/A",
+            "fcf_margin": "N/A",
+            "debt_equity": null,
+            "verdict": "solid — beat_streak 4, obesity drug H2 catalyst"
+          }
+        },
+        {
+          "name": "Home Depot",
+          "symbol": "HD",
+          "current_price": "$321.21",
+          "change_24h": "-0.4%",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "N/A",
+          "week_52_high": "N/A",
+          "week_52_low": "N/A",
+          "market_cap": "~$320B",
+          "volume_24h": "N/A",
+          "sentiment": "bullish",
+          "social_sentiment": "neutral",
+          "social_buzz": "low",
+          "confidence": 7,
+          "source_agreement": "high",
+          "key_news": [
+            "BofA top pick $374 target; earnings catalyst May 19 — 11 days away",
+            "HD RSI 26.9 extreme oversold; pro contractor segment resilience despite housing slowdown"
+          ],
+          "social_highlights": [
+            "Earnings May 19 — binary catalyst in 11 days",
+            "BofA reinstated as top pick 2 days ago"
+          ],
+          "recommendation": "buy",
+          "reasoning": "BofA top pick + earnings May 19 + RSI 26.9 oversold — rare triple-signal combination.",
+          "technicals": {
+            "trend": "downtrend",
+            "rsi": 26.9,
+            "macd": "bearish",
+            "key_support": 289.0,
+            "key_resistance": 350.0,
+            "entry_quality": "oversold — verify fundamentals"
+          },
+          "valuation": {
+            "pe": null,
+            "forward_pe": 19.7,
+            "peg": 2.88,
+            "ev_ebitda": null,
+            "verdict": "attractive at 52w low with 2.89% dividend"
+          },
+          "fundamentals": {
+            "revenue_growth": "-3.8% YoY",
+            "gross_margin": "N/A",
+            "fcf_margin": "5.2%",
+            "debt_equity": null,
+            "verdict": "cyclical headwind priced in; pro contractor base holds"
+          }
+        },
+        {
+          "name": "PayPal",
+          "symbol": "PYPL",
+          "current_price": "$45.88",
+          "change_24h": "N/A",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "N/A",
+          "week_52_high": "N/A",
+          "week_52_low": "N/A",
+          "market_cap": "~$66B",
+          "volume_24h": "N/A",
           "sentiment": "neutral",
           "social_sentiment": "neutral",
           "social_buzz": "low",
           "confidence": 7,
           "source_agreement": "medium",
           "key_news": [
-            "Q1 FY2026 EPS $4.60 beat $4.41 estimate; JPMorgan and Mastercard settle tokenized US Treasuries on XRP Ledger in 5 seconds",
-            "UK FCA opens competition investigation into PayPal, Visa, and Mastercard \u2014 regulatory headwind"
+            "FCA Probe tests PayPal UK economics — probe limited to UK operations, not global",
+            "PYPL Q1 beat but guidance soft; PEG 0.91 cheapest in payments space"
           ],
           "social_highlights": [
-            "Macquarie maintains Outperform with PT $665; average analyst target $648.61 (+30% from current)",
-            "Crypto card spending on groceries/gas \u2014 OKX 2026 report shows MA network utility expanding into digital assets"
+            "RSI 24.5 extreme oversold — tied with NFLX for deepest oversold",
+            "Beat_streak 3 confirms operations intact despite regulatory overhang"
           ],
           "recommendation": "buy",
-          "reasoning": "MA at RSI 38.5 near multi-year support at $480 with Q1 earnings beat, blockchain expansion into tokenized settlement, and a $648 analyst consensus target offers 30% upside once UK regulatory overhang clears."
+          "reasoning": "PEG 0.91 at RSI 24.5 extreme oversold; FCA probe UK-limited, global operations intact.",
+          "technicals": {
+            "trend": "downtrend",
+            "rsi": 24.5,
+            "macd": "bearish extreme",
+            "key_support": 40.5,
+            "key_resistance": 55.0,
+            "entry_quality": "excellent — oversold"
+          },
+          "valuation": {
+            "pe": null,
+            "forward_pe": 7.91,
+            "peg": 0.91,
+            "ev_ebitda": null,
+            "verdict": "deep value — fwd PE 7.9, PEG 0.91 cheapest in payments"
+          },
+          "fundamentals": {
+            "revenue_growth": "+7% YoY",
+            "gross_margin": "N/A",
+            "fcf_margin": "N/A",
+            "debt_equity": null,
+            "verdict": "Q1 beat, beat_streak 3, FCA probe UK-only"
+          }
         },
         {
-          "name": "Gilead Sciences",
-          "symbol": "GILD",
-          "current_price": "$135.55",
-          "change_24h": "-0.55%",
-          "change_7d": "+0.8%",
-          "change_30d": "+3.2%",
-          "ytd_change": "+11.06%",
-          "week_52_high": "$157.29",
-          "week_52_low": "$95.30",
-          "market_cap": "$168.2B",
-          "volume_24h": "$0.86B",
+          "name": "SoFi Technologies",
+          "symbol": "SOFI",
+          "current_price": "$15.74",
+          "change_24h": "-1.6%",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "-38.9%",
+          "week_52_high": "N/A",
+          "week_52_low": "N/A",
+          "market_cap": "~$16B",
+          "volume_24h": "N/A",
+          "sentiment": "neutral",
+          "social_sentiment": "mixed",
+          "social_buzz": "medium",
+          "confidence": 7,
+          "source_agreement": "medium",
+          "key_news": [
+            "SoFi Faces Muddy Waters Claims While Strong Results Test Investor Confidence",
+            "Q1 revenue $1.09B +41% YoY; Rule of 40 strength for 18 consecutive quarters"
+          ],
+          "social_highlights": [
+            "12.5% short float + RSI 24.8 = potential squeeze",
+            "Citigroup Buy $30 vs Muddy Waters short — institutional vs short-seller conflict"
+          ],
+          "recommendation": "buy",
+          "reasoning": "Q1 fundamentals rebut Muddy Waters; RSI 24.8 + 12.5% short float = speculative squeeze setup at 3% max.",
+          "technicals": {
+            "trend": "downtrend",
+            "rsi": 24.8,
+            "macd": "bearish",
+            "key_support": 13.75,
+            "key_resistance": 18.5,
+            "entry_quality": "excellent — oversold"
+          },
+          "valuation": {
+            "pe": null,
+            "forward_pe": 20.02,
+            "peg": 1.01,
+            "ev_ebitda": null,
+            "verdict": "attractive — PEG 1.01 for 42.5% revenue growth"
+          },
+          "fundamentals": {
+            "revenue_growth": "+41% YoY",
+            "gross_margin": "N/A",
+            "fcf_margin": "N/A",
+            "debt_equity": null,
+            "verdict": "strong — Rule of 40 for 18 quarters, beat_streak 3"
+          }
+        }
+      ]
+    },
+    "crypto": {
+      "sector": "crypto",
+      "timestamp": "2026-05-08T15:05:50Z",
+      "sector_summary": "BTC holding ETF floor above $79K; ETH stabilizing on on-chain sell exhaustion. Fear & Greed at 38 (Fear) with MIXED regime signals cautious accumulation, not momentum chasing.",
+      "sector_outlook": "neutral",
+      "top_pick": "BTC",
+      "top_pick_reasoning": "Institutional ETF floor has defended $79K twice; accumulating near this level offers asymmetric upside with clear $70K hard stop.",
+      "assets": [
+        {
+          "name": "Bitcoin",
+          "symbol": "BTC",
+          "current_price": "$80,180",
+          "change_24h": "-1.74%",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "N/A",
+          "week_52_high": "N/A",
+          "week_52_low": "N/A",
+          "market_cap": "~$1.58T",
+          "volume_24h": "N/A",
+          "sentiment": "neutral",
+          "social_sentiment": "neutral",
+          "social_buzz": "medium",
+          "confidence": 8,
+          "source_agreement": "high",
+          "key_news": [
+            "Bitcoin ETF institutional demand defending $79K floor — held for 2nd time",
+            "BTC Fear & Greed at 38 — historically a medium-term accumulation zone"
+          ],
+          "social_highlights": [
+            "ETF structural bid new dynamic vs prior cycles",
+            "Reclaim of $82K triggers next leg toward $95K"
+          ],
+          "recommendation": "buy",
+          "reasoning": "ETF floor at $79K held twice; $80K entry with $70K stop and $112K target = 3.1:1 risk/reward."
+        },
+        {
+          "name": "Ethereum",
+          "symbol": "ETH",
+          "current_price": "$2,286",
+          "change_24h": "+0.5%",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "N/A",
+          "week_52_high": "$4,953",
+          "week_52_low": "$1,748",
+          "market_cap": "~$275B",
+          "volume_24h": "N/A",
           "sentiment": "neutral",
           "social_sentiment": "neutral",
           "social_buzz": "medium",
           "confidence": 7,
           "source_agreement": "medium",
           "key_news": [
-            "EARNINGS TODAY at 4:30 PM EDT \u2014 Q1 FY2026 results; Gilead is leading pharma's M&A boom alongside Lilly",
-            "Arcus Biosciences rethinks growth after STAR-121 exit and Gilead collaboration shift \u2014 pipeline noise"
+            "Ethereum spot ETF inflows stabilizing; staking yield 3.8% provides hold incentive",
+            "On-chain sell exhaustion signal confirmed; Layer-2 activity growing"
           ],
           "social_highlights": [
-            "Citigroup maintains BUY, raised PT from $156 to $165; average analyst target $158.36 (+17% from current)",
-            "PEG 0.38 is the cheapest valuation in large-cap biotech \u2014 quality franchise priced for failure"
+            "On-chain sell pressure -85% — bear exhaustion signal",
+            "Staking yield floor at current price"
+          ],
+          "recommendation": "buy",
+          "reasoning": "On-chain sell exhaustion + ETF inflows + $1,980 stop = 3.6:1 risk/reward to $3,400 target."
+        },
+        {
+          "name": "Solana",
+          "symbol": "SOL",
+          "current_price": "$89.14",
+          "change_24h": "N/A",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "N/A",
+          "week_52_high": "N/A",
+          "week_52_low": "N/A",
+          "market_cap": "~$43B",
+          "volume_24h": "N/A",
+          "sentiment": "neutral",
+          "social_sentiment": "bullish",
+          "social_buzz": "medium",
+          "confidence": 5,
+          "source_agreement": "medium",
+          "key_news": [
+            "Solana developer share jumps to 23% — highest since inception",
+            "SOL RSI 61 — not oversold; insufficient entry quality for position this run"
+          ],
+          "social_highlights": [
+            "Developer momentum is structural bullish signal",
+            "Not in screened candidates — insufficient entry quality"
           ],
           "recommendation": "hold",
-          "reasoning": "GILD reports earnings today at 4:30 PM EDT creating binary risk \u2014 exceptional value (PEG 0.38, PT $158) but reduce sizing pre-print and re-enter on post-earnings confirmation."
+          "reasoning": "RSI 61 not oversold; monitor for entry below RSI 45 before positioning."
         }
       ]
     },
     "materials": {
       "sector": "materials",
-      "timestamp": "2026-05-07T15:25:00Z",
-      "sector_summary": "Gold and silver are the standout performers on May 7, with gold futures hitting $4,767/oz (+1.55%) and silver (SLV) surging +5.06% as Iran peace deal talks emerge, creating an unusual dynamic where geopolitical optimism cools inflation fears rather than reducing safe-haven demand. GDX gold miners are up +3.47% and have returned +83% over the past 12 months, dramatically outperforming the S&P 500's +31%.",
+      "timestamp": "2026-05-08T15:05:50Z",
+      "sector_summary": "Precious metals on fire today: GDX +3.47%, SLV +5.06%, GLD +1.24%. Iran deal hopes explicitly cited in today's headlines as 'rewriting the inflation playbook'. Gold futures at $4,767. Barrick Mining earnings May 11 is a near-term GDX catalyst.",
       "sector_outlook": "bullish",
-      "top_pick": "GLD",
-      "top_pick_reasoning": "GLD at RSI 44.2 remains a fair entry for a gold price at $4,767/oz driven by structural de-dollarization, Iran war premium, and central bank accumulation \u2014 the Iran peace deal may cause a short-term dip but long-term structural demand is intact.",
+      "top_pick": "GDX",
+      "top_pick_reasoning": "Leveraged gold miners with Barrick May 11 earnings catalyst; up +3.47% today confirming breakout — Iran deal thesis working perfectly.",
       "assets": [
         {
-          "name": "SPDR Gold Shares",
-          "symbol": "GLD",
-          "current_price": "$436.29",
-          "change_24h": "+1.24%",
-          "change_7d": "+2.5%",
-          "change_30d": "+6.8%",
-          "ytd_change": "+8.74%",
-          "week_52_high": "$509.70",
-          "week_52_low": "$291.78",
-          "market_cap": "$153.5B",
-          "volume_24h": "$1.13B",
+          "name": "VanEck Gold Miners ETF",
+          "symbol": "GDX",
+          "current_price": "$94.13",
+          "change_24h": "+3.47%",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "N/A",
+          "week_52_high": "N/A",
+          "week_52_low": "N/A",
+          "market_cap": "N/A",
+          "volume_24h": "N/A",
           "sentiment": "bullish",
           "social_sentiment": "bullish",
           "social_buzz": "high",
           "confidence": 9,
           "source_agreement": "high",
           "key_news": [
-            "Gold surges past $4,770 as Iran peace deal hopes 'cool inflation fears' \u2014 unusual bullish paradox as oil -3.5%",
-            "Gold soared 50% in 2025; real yields crushing gold short-term but long-term picture intact per analysis"
+            "Gold and Silver Mining ETFs Surge as Precious Metals Rally Accelerates",
+            "Barrick Mining Corporation earnings confirmed MAY 11 — GDX top holding"
           ],
           "social_highlights": [
-            "GLD becoming 'crowded trade' concerns raised \u2014 contrarian warning but institutions still buying",
-            "Gold now designated a Strategic Mineral \u2014 government-level demand adds structural floor to prices"
+            "GDX +3.47% today — Iran deal thesis confirmed",
+            "Barrick May 11 earnings = imminent amplifying catalyst"
           ],
           "recommendation": "buy",
-          "reasoning": "GLD at RSI 44.2 with gold futures at $4,767/oz has a structural bid from central banks, Iran war premium, and strategic mineral designation \u2014 the Iran peace deal may cause a 3-5% pullback but does not change the multi-year bull case."
+          "reasoning": "Iran deal headlines confirmed today + Barrick May 11 earnings + leveraged gold exposure = top-ranked pick."
         },
         {
-          "name": "VanEck Gold Miners ETF",
-          "symbol": "GDX",
-          "current_price": "$95.65",
-          "change_24h": "+3.47%",
-          "change_7d": "+5.8%",
-          "change_30d": "+12.5%",
-          "ytd_change": "+7.78%",
-          "week_52_high": "$117.18",
-          "week_52_low": "$45.10",
-          "market_cap": "$27.26B",
-          "volume_24h": "$0.91B",
+          "name": "SPDR Gold Shares",
+          "symbol": "GLD",
+          "current_price": "$433.24",
+          "change_24h": "+1.24%",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "+36.6% (1Y)",
+          "week_52_high": "N/A",
+          "week_52_low": "N/A",
+          "market_cap": "N/A",
+          "volume_24h": "N/A",
           "sentiment": "bullish",
           "social_sentiment": "bullish",
-          "social_buzz": "medium",
-          "confidence": 8,
+          "social_buzz": "high",
+          "confidence": 9,
           "source_agreement": "high",
           "key_news": [
-            "Gold and Silver Mining ETFs surge as precious metals rally accelerates \u2014 GDX +83% 1-year vs S&P 500 +31%",
-            "'This New War Can Take This Gold Mining ETF to New Highs Again' \u2014 new war cycle thesis intact"
+            "Gold and Silver Catch Fire as Iran Deal Hopes Rewrite the Inflation Playbook",
+            "Gold Surges Past $4,770 as Geopolitical Optimism Cools Inflation Fears"
           ],
           "social_highlights": [
-            "GDX vs SLVP: silver miners recently outpaced gold miners but GDX's liquidity and diversification preferred",
-            "Gold soared 50%+ this year; miners have operational leverage creating 2-3x amplification of gold moves"
+            "Central bank buying structural bid",
+            "Iran deal catalyst confirmed — thesis intact"
           ],
           "recommendation": "buy",
-          "reasoning": "GDX at RSI 43.6 offers leveraged exposure to $4,767 gold via senior miners (Newmont 11.3%, Agnico Eagle 11.5% top holdings) with 83% 1-year returns and room to the 52W high of $117.18."
+          "reasoning": "Iran deal catalyst confirmed by 2 major headlines today; central bank structural demand provides floor."
         },
         {
           "name": "iShares Silver Trust",
           "symbol": "SLV",
-          "current_price": "$73.68",
+          "current_price": "$72.96",
           "change_24h": "+5.06%",
-          "change_7d": "+4.2%",
-          "change_30d": "+9.5%",
-          "ytd_change": "+20.5%",
-          "week_52_high": "$81.20",
-          "week_52_low": "$42.50",
-          "market_cap": "$15.2B",
-          "volume_24h": "$0.88B",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "N/A",
+          "week_52_high": "N/A",
+          "week_52_low": "N/A",
+          "market_cap": "N/A",
+          "volume_24h": "N/A",
           "sentiment": "bullish",
           "social_sentiment": "bullish",
-          "social_buzz": "medium",
+          "social_buzz": "high",
           "confidence": 7,
-          "source_agreement": "medium",
+          "source_agreement": "high",
           "key_news": [
-            "Silver up +5.06% today as Iran deal hopes 'rewrite the inflation playbook' \u2014 gold/silver catching fire together",
-            "SLV vs GLD: silver offers bigger swings with higher beta to gold bull run"
+            "Silver +5% alongside gold on Iran deal; metals sector broad rally",
+            "SLV RSI 51.6 uptrend — not extended, room to run vs GLD RSI 44"
           ],
           "social_highlights": [
-            "Silver miners (SIL) outpaced gold miners (GDX) in 2025 \u2014 silver has higher industrial demand multiplier",
-            "SLV +20.5% YTD dramatically outpacing GLD +8.74% \u2014 momentum accelerating"
+            "Dual precious + industrial (EV/solar) demand tailwind",
+            "Outperforming gold +5% vs +1.24% — silver breakout signal"
           ],
-          "recommendation": "buy",
-          "reasoning": "SLV's +5% surge today reflects silver's dual role as both a monetary metal (Iran hedge) and industrial metal (AI/green energy demand) \u2014 the gold/silver ratio compression trade is playing out with momentum."
+          "recommendation": "hold",
+          "reasoning": "Bullish momentum but not screened top pick — correlation max 2 for precious_metals filled by GDX + GLD."
         }
       ]
     }
