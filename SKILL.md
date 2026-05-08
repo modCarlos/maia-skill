@@ -50,6 +50,20 @@ timeout: 120000
 
 Read `data/market_context.json` once after it completes — do **not** poll or call `get_terminal_output` in a loop.
 
+### Step 2.5: Run News Pre-fetch (parallel with Step 3)
+
+Immediately after Step 2 completes, run the news pre-fetcher **in background mode** so it runs in parallel with Step 3 (which is mostly file I/O):
+
+```
+run_in_terminal: cd <skill_dir> && python3 tools/news_fetch.py --top 15 --no-reddit 2>/dev/null
+mode: async
+timeout: 60000
+```
+
+This fetches yfinance headlines, keyword-based sentiment (`bullish`/`bearish`/`neutral`), and analyst recommendations for the top 15 candidates in ~5-10s. Output lands in `data/news_context.json`. Read it after Step 3 completes before building the MegaAgent prompt.
+
+> **Skip Reddit** (`--no-reddit`) by default for speed. The MegaAgent's web searches cover social sentiment. If the user asks for deeper social data, remove the flag.
+
 ### Step 3: Load Agent Prompts + Historical Data (parallel)
 
 In the same turn, do both in parallel:
@@ -95,6 +109,7 @@ If `prices_snapshot` is missing from the previous context file (older runs), fal
 
 Pass the MegaAgent:
 - `SCREENED_CANDIDATES` **compact table**: top 12-15 by entry quality + RSI (from `data/market_context.json` → `candidates[]`) with only: symbol, **price_at_fetch**, RSI, entry_quality, trend, fwd_PE, PEG, earnings_days_away, **correlation_group**
+- `NEWS_CONTEXT` (from `data/news_context.json` → `news{}`) — injected as a compact block per ticker. Tell the MegaAgent: **"News headlines and keyword sentiment have been pre-fetched below. Use `key_news[0..1]` as the 2 required headlines per pick and `sentiment.label` as the default sentiment value. Only do additional web searches for missing catalyst context or to verify the top 2-3 highest-conviction picks — do NOT search for headlines already present."** Format each ticker as: `SYMBOL: [sentiment_label | analyst_rec] → headline_1 | headline_2`. This alone eliminates ~20 web searches per run.
 - `CORRELATION_WARNINGS` (from `data/market_context.json` → `correlation_warnings[]`): list of over-concentration alerts. **Hard rule**: include at most `max_allowed` picks per group from `suggested_keep`. If a warning exists, do NOT include more than `max_allowed` picks from that group in `risk_adjusted_picks`.
 - `MACRO_CONTEXT` (from `data/market_context.json` → `macro`) — VIX, F&G, regime, synthetic score
 - `risk_profile` (from Step 1)
