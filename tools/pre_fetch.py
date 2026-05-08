@@ -108,6 +108,44 @@ DEFAULT_TICKERS = WATCHLISTS["all"]
 
 MACRO_TICKERS = ["^VIX", "^TNX", "^GSPC", "^IRX"]
 
+# ─── Correlation groups ───────────────────────────────────────────────────────
+# Assets within the same group tend to move together (high beta correlation).
+# Used to detect over-concentration in picks and generate warnings.
+# Rule enforced downstream: max MAX_PICKS_PER_GROUP picks per group.
+#
+# Design notes:
+# - A ticker can belong to only ONE group (primary driver wins).
+# - "precious_metals" covers GLD+SLV+GDX+NEM — all gold/silver proxies.
+# - "semiconductors" is separate from "big_tech" because chip cycles diverge.
+# - FCX is "base_metals" not "precious_metals" (copper-driven, not gold).
+# - COIN/MSTR are "crypto_equity" — they track crypto but add equity risk.
+
+CORRELATION_GROUPS: dict[str, list[str]] = {
+    "precious_metals": ["GLD", "SLV", "GDX", "NEM"],
+    "crypto":          ["BTC-USD", "ETH-USD", "SOL-USD"],
+    "crypto_equity":   ["COIN", "MSTR"],
+    "semiconductors":  ["NVDA", "AMD", "INTC", "QCOM", "TSM", "ARM", "AMAT", "ASML", "AVGO"],
+    "big_tech":        ["MSFT", "AAPL", "GOOGL", "META", "AMZN", "PLTR"],
+    "financials":      ["JPM", "BAC", "GS", "MS", "WFC", "C"],
+    "payments":        ["V", "MA", "PYPL"],
+    "healthcare":      ["JNJ", "ABBV", "MRK", "AMGN", "GILD", "REGN", "LLY", "UNH"],
+    "energy":          ["XOM", "CVX", "COP", "OXY", "KMI"],
+    "base_metals":     ["FCX"],
+    "saas":            ["CRM", "NOW", "SNOW", "PANW"],
+    "asset_managers":  ["BLK", "BX"],
+}
+
+# Reverse lookup: symbol → group name (built once at import time)
+_SYMBOL_TO_GROUP: dict[str, str] = {
+    sym: group
+    for group, symbols in CORRELATION_GROUPS.items()
+    for sym in symbols
+}
+
+# Maximum picks allowed per correlation group in a single report.
+# Enforced as a warning (not a hard cut) so the MegaAgent has final judgment.
+MAX_PICKS_PER_GROUP = 2
+
 SKILL_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT_PATH = os.path.join(SKILL_ROOT, "data", "market_context.json")
 
@@ -469,6 +507,9 @@ def filter_candidates(stocks: dict, top_n: int = 35) -> list[dict]:
             "rsi": rsi,
             "trend": tech.get("trend"),
             "entry_quality": entry,
+            # correlation_group: the asset family this ticker belongs to.
+            # Used downstream to detect over-concentration in picks.
+            "correlation_group": _SYMBOL_TO_GROUP.get(symbol, "other"),
             "forward_pe": data.get("valuation", {}).get("forward_pe"),
             "peg": data.get("valuation", {}).get("peg"),
             "revenue_growth_yoy": data.get("fundamentals", {}).get("revenue_growth_yoy"),
@@ -484,6 +525,54 @@ def filter_candidates(stocks: dict, top_n: int = 35) -> list[dict]:
         del c["_sort_key"]
 
     return candidates[:top_n]
+
+
+# ─── Correlation warnings ──────────────────────────────────────────────────────
+
+def build_correlation_warnings(candidates: list[dict]) -> list[dict]:
+    """Detect over-concentration in the screened candidate list.
+
+    Returns a list of warning dicts, one per group that exceeds
+    MAX_PICKS_PER_GROUP candidates. Each warning includes the group name,
+    the tickers involved, and a suggested action for the MegaAgent.
+
+    These warnings are injected into market_context.json as
+    `correlation_warnings` and MUST be passed to the MegaAgent so it can
+    enforce the max-picks-per-group rule when building the final portfolio.
+    """
+    from collections import defaultdict
+
+    group_members: dict[str, list[str]] = defaultdict(list)
+    for c in candidates:
+        group = c.get("correlation_group", "other")
+        group_members[group].append(c["symbol"])
+
+    warnings_out = []
+    for group, symbols in group_members.items():
+        if len(symbols) > MAX_PICKS_PER_GROUP:
+            # Rank by RSI ascending (most oversold = best pick to keep)
+            ranked = sorted(
+                [c for c in candidates if c.get("correlation_group") == group],
+                key=lambda x: x["rsi"],
+            )
+            keep = [r["symbol"] for r in ranked[:MAX_PICKS_PER_GROUP]]
+            cut  = [r["symbol"] for r in ranked[MAX_PICKS_PER_GROUP:]]
+            warnings_out.append({
+                "group": group,
+                "count": len(symbols),
+                "max_allowed": MAX_PICKS_PER_GROUP,
+                "all_candidates": symbols,
+                "suggested_keep": keep,
+                "suggested_cut": cut,
+                "message": (
+                    f"Over-concentration: {len(symbols)} '{group}' candidates "
+                    f"({', '.join(symbols)}). "
+                    f"Recommend keeping max {MAX_PICKS_PER_GROUP}: {', '.join(keep)}. "
+                    f"Consider cutting: {', '.join(cut)}."
+                ),
+            })
+
+    return warnings_out
 
 
 # ─── Entry point ──────────────────────────────────────────────────────────────
@@ -555,6 +644,14 @@ def main():
     for c in candidates:
         print(f"  {c['symbol']:<6}  RSI={c['rsi']}  {c['entry_quality']}")
 
+    correlation_warnings = build_correlation_warnings(candidates)
+    if correlation_warnings:
+        print(f"[pre_fetch] ⚠ Correlation warnings ({len(correlation_warnings)}):")
+        for w in correlation_warnings:
+            print(f"  {w['message']}")
+    else:
+        print("[pre_fetch] ✓ No correlation over-concentration detected")
+
     fetch_ts = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
 
     # prices_snapshot: immutable price record for ALL fetched tickers at this
@@ -574,6 +671,7 @@ def main():
         "tickers_fetched": list(stocks.keys()),
         "prices_snapshot": prices_snapshot,
         "candidates": candidates,
+        "correlation_warnings": correlation_warnings,
         "stocks": stocks,
         "macro": macro,
     }
