@@ -462,6 +462,10 @@ def filter_candidates(stocks: dict, top_n: int = 35) -> list[dict]:
         candidates.append({
             "symbol": symbol,
             "price": data.get("price"),
+            # price_at_fetch is the immutable baseline for accuracy tracking.
+            # MegaAgent must use this value (not a web-searched price) when
+            # comparing next-run prices against the entry to compute accuracy.
+            "price_at_fetch": data.get("price"),
             "rsi": rsi,
             "trend": tech.get("trend"),
             "entry_quality": entry,
@@ -551,9 +555,24 @@ def main():
     for c in candidates:
         print(f"  {c['symbol']:<6}  RSI={c['rsi']}  {c['entry_quality']}")
 
+    fetch_ts = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    # prices_snapshot: immutable price record for ALL fetched tickers at this
+    # exact moment. Used by the next run to compute real accuracy: compare
+    # previous run's pick entry_price against prices_snapshot[symbol].price.
+    # Never re-fetched or reconstructed — ground truth only.
+    prices_snapshot = {
+        symbol: {
+            "price": data["price"],
+            "fetched_at": fetch_ts,
+        }
+        for symbol, data in stocks.items()
+    }
+
     output = {
-        "generated_at": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "generated_at": fetch_ts,
         "tickers_fetched": list(stocks.keys()),
+        "prices_snapshot": prices_snapshot,
         "candidates": candidates,
         "stocks": stocks,
         "macro": macro,
