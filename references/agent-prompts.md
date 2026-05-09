@@ -274,8 +274,9 @@ If `previous_theses` is non-empty, evaluate each previous pick's thesis:
 ### Phase 1 — Market Research (use WebSearch + WebFetch)
 
 - Research the top 10-15 candidates from `SCREENED_CANDIDATES`: news, catalysts, earnings updates, analyst ratings
-- Research Gold (XAU) and Silver (XAG): prices, macro context, geopolitical drivers
 - Search for overall market sentiment today
+
+> **Materials (Gold, Silver, Energy, Base Metals)** are covered by `tools/build_sectors.py` from pre-fetched data. Do NOT search for XAU/XAG prices or commodities data — it is already in the sectors JSON.
 
 ### Phase 2 — Strategy synthesis
 
