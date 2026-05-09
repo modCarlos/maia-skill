@@ -289,22 +289,12 @@ Apply the `risk_profile` to rank and select 12-16 picks across sectors. Compute 
 - Do NOT include a `sources_checked` field
 - All other fields required
 
-### Required JSON output — Block 1 (Sectors)
-
-Return this block first:
-
-```json
-{
-  "sectors": {
-    "stocks": { "...same schema as stocks agent output..." },
-    "materials": { "...same schema as materials agent output..." }
-  }
-}
-```
+> **Block 1 (Sectors) is generated automatically by `tools/build_sectors.py`.**
+> You do NOT output sectors JSON. Return ONLY Block 2 (strategy) below.
 
 ### Required JSON output — Block 2 (Strategy)
 
-Return this block second:
+Return this JSON block:
 
 ```json
 {

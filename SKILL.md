@@ -116,7 +116,17 @@ previous_theses = {
 
 If `prices_snapshot` is missing from the previous context file (older runs), fall back to the MegaAgent web search as before. If no history or no `thesis` field exists (old run format), pass `previous_theses = {}` and skip thesis evaluation silently.
 
-### Step 4: Spawn Research + Strategy MegaAgent
+### Step 4a: Build Sectors (deterministic, no LLM)
+
+Run immediately after news_fetch completes:
+
+```bash
+python3 tools/build_sectors.py --out /tmp/sectors.json
+```
+
+This generates Block 1 (sectors JSON with all screened stock and materials assets, technicals, valuation, and fundamentals from the pre-fetched candidates) in ~1 second. No LLM required. The script reads `data/market_context.json` and `data/news_context.json` directly.
+
+### Step 4b: Spawn Strategy MegaAgent (Block 2 only)
 
 **Fix 5 — single subagent** replacing the previous 4 sector agents + strategy agent. Launch **one MegaAgent** using the Agent tool. This reduces orchestrator context pressure and eliminates the intermediate turn between sector agents and the strategy agent.
 
@@ -136,21 +146,32 @@ Pass the MegaAgent:
 - Never paste full 35+ candidate lists inline.
 - Pass file paths (e.g. `data/market_context.json`) and instruct the subagent to read only required fields.
 
-Use the **MegaAgent prompt** from `references/agent-prompts.md` (section: `## MegaAgent (Combined Research + Strategy)`) as the subagent system prompt. The MegaAgent returns two JSON blocks: Block 1 (sectors) and Block 2 (strategy). Both schemas are defined in that file.
+Use the **MegaAgent prompt** from `references/agent-prompts.md` (section: `## MegaAgent (Combined Research + Strategy)`) as the subagent system prompt. The MegaAgent returns **only Block 2** (strategy JSON). Block 1 (sectors) was already built by Step 4a. The Block 2 schema is defined in that file.
 
 ### Step 5: Build + Write Report Data
 
-Assemble REPORT_DATA from MegaAgent outputs:
+Assemble REPORT_DATA from Step 4a (sectors) and Step 4b (MegaAgent Block 2):
 
-```json
-{
+```python
+import json
+
+sectors   = json.load(open("/tmp/sectors.json"))      # built by Step 4a
+strategy  = <MegaAgent Block 2 JSON>                  # from Step 4b
+
+# Optionally enrich sectors with MegaAgent picks:
+# python3 tools/build_sectors.py --out /tmp/sectors.json --enrich-picks /tmp/picks.json
+
+report_data = {
   "brand": "Tododeia", "creator": "@quebert",
-  "generated_at": "ISO 8601", "risk_profile": "moderate",
-  "executive_summary": "<MegaAgent strategy_summary>",
-  "macro_environment": "<Block 2>", "portfolio_allocation": "<Block 2>",
-  "cross_sector_insights": "<Block 2>", "risk_adjusted_picks": "<Block 2>",
-  "historical_accuracy": "<Block 2>", "warnings": [],
-  "sectors": "<Block 1 sectors — stocks + materials only>",
+  "generated_at": "ISO 8601", "risk_profile": strategy["risk_profile"],
+  "executive_summary": strategy["strategy_summary"],
+  "macro_environment": strategy["macro_environment"],
+  "portfolio_allocation": strategy["portfolio_allocation"],
+  "cross_sector_insights": strategy["cross_sector_insights"],
+  "risk_adjusted_picks": strategy["risk_adjusted_picks"],
+  "historical_accuracy": strategy["historical_accuracy"],
+  "warnings": strategy.get("warnings", []),
+  "sectors": sectors,
   "spy_price_at_report": "<today_market_context.macro.spy_price>"
 }
 ```
