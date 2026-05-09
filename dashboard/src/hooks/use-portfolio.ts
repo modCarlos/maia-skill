@@ -12,33 +12,34 @@ export interface PortfolioEntry {
   buyDate: string // ISO 8601
 }
 
-const STORAGE_KEY = "tododeia_portfolio"
-
-function loadFromStorage(): PortfolioEntry[] {
-  if (typeof window === "undefined") return []
+async function fetchPortfolio(): Promise<PortfolioEntry[]> {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY)
-    if (!raw) return []
-    return JSON.parse(raw) as PortfolioEntry[]
+    const res = await fetch("/api/portfolio", { cache: "no-store" })
+    if (!res.ok) return []
+    return res.json()
   } catch {
     return []
   }
 }
 
-function saveToStorage(entries: PortfolioEntry[]) {
+async function persistPortfolio(entries: PortfolioEntry[]) {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(entries))
+    await fetch("/api/portfolio", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(entries),
+    })
   } catch {
-    // storage quota exceeded or private mode — fail silently
+    // fail silently — data already in React state
   }
 }
 
 export function usePortfolio() {
   const [entries, setEntries] = useState<PortfolioEntry[]>([])
 
-  // Load once on mount (client-side only)
+  // Load from server on mount
   useEffect(() => {
-    setEntries(loadFromStorage())
+    fetchPortfolio().then(setEntries)
   }, [])
 
   const addEntry = useCallback(
@@ -58,7 +59,7 @@ export function usePortfolio() {
       }
       setEntries((prev) => {
         const updated = [...prev, newEntry]
-        saveToStorage(updated)
+        persistPortfolio(updated)
         return updated
       })
     },
@@ -68,14 +69,14 @@ export function usePortfolio() {
   const removeEntry = useCallback((id: string) => {
     setEntries((prev) => {
       const updated = prev.filter((e) => e.id !== id)
-      saveToStorage(updated)
+      persistPortfolio(updated)
       return updated
     })
   }, [])
 
   const clearAll = useCallback(() => {
     setEntries([])
-    saveToStorage([])
+    persistPortfolio([])
   }, [])
 
   const hasSymbol = useCallback(

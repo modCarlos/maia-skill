@@ -8,8 +8,8 @@ import { SECTOR_COLORS, SECTORS } from "@/lib/constants"
 
 function parseNumeric(val: string): number { return parseFloat(val.replace(/[^0-9.\-]/g, "")) || 0 }
 
-function ChangeCell({ value }: { value: string }) {
-  const cls = value.startsWith("+") ? "text-green-600" : value.startsWith("-") ? "text-red-600" : "text-[#8B8B85]"
+function ChangeCell({ value }: { value: string | undefined }) {
+  const cls = value?.startsWith("+") ? "text-green-600" : value?.startsWith("-") ? "text-red-600" : "text-[#8B8B85]"
   return <span className={cls}>{value || "-"}</span>
 }
 
