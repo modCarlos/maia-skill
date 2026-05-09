@@ -48,8 +48,18 @@ interface RowPnL {
 }
 
 function computeRowPnL(entry: PortfolioEntry, data: ReportData): RowPnL {
-  const currentPrice = getCurrentPrice(entry.symbol, data)
   const totalCost = entry.buyPrice * entry.quantity
+
+  // Prefer pre-fetched fields stored directly in portfolio.json
+  if (entry.currentPrice != null) {
+    const currentPrice = entry.currentPrice
+    const pnlAmount = (currentPrice - entry.buyPrice) * entry.quantity
+    const pnlPct = ((currentPrice - entry.buyPrice) / entry.buyPrice) * 100
+    return { currentPrice, pnlAmount, pnlPct, totalCost }
+  }
+
+  // Fallback: look up in today's report sectors (covers tickers screened today)
+  const currentPrice = getCurrentPrice(entry.symbol, data)
   if (currentPrice == null) return { currentPrice: null, pnlAmount: null, pnlPct: null, totalCost }
   const pnlAmount = (currentPrice - entry.buyPrice) * entry.quantity
   const pnlPct = ((currentPrice - entry.buyPrice) / entry.buyPrice) * 100

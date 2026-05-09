@@ -10,6 +10,21 @@ export interface PortfolioEntry {
   buyPrice: number
   quantity: number
   buyDate: string // ISO 8601
+  // Enriched by portfolio_fetch.py
+  currentPrice?: number | null
+  pnlPct?: number | null
+  pnlAmount?: number | null
+  rsi?: number | null
+  trend?: string | null
+  change1d?: number | null
+  change7d?: number | null
+  change30d?: number | null
+  analystTarget?: number | null
+  analystUpside?: number | null
+  forwardPe?: number | null
+  weekHigh52?: number | null
+  weekLow52?: number | null
+  updatedAt?: string | null
 }
 
 async function fetchPortfolio(): Promise<PortfolioEntry[]> {
