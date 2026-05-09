@@ -57,14 +57,22 @@ WATCHLISTS = {
         "MSFT", "AAPL", "GOOGL", "META", "AMZN",
         "AVGO", "AMAT", "ASML",
         "PLTR", "SNOW", "CRM", "NOW", "PANW",
-        "NFLX", "TSLA",
+        "NFLX", "TSLA", "RIVN", "SONY",
     ],
 
-    # Financials: banks, payment networks, asset managers
+    # Financials: banks, payment networks, asset managers, fintech
     "financials": [
         "JPM", "BAC", "GS", "MS", "WFC", "C",
         "V", "MA", "PYPL",
         "BLK", "BX",
+        "NU", "SOFI",
+    ],
+
+    # Consumer: entertainment, retail, restaurants, global ecommerce
+    "consumer": [
+        "DIS", "NFLX",
+        "HD", "SBUX",
+        "BABA", "MELI",
     ],
 
     # Materials & energy: precious metals ETFs + oil & gas
@@ -86,11 +94,8 @@ WATCHLISTS = {
         "TLT", "GLD", "USO", "UUP",
     ],
 
-    # Crypto proxies available on yfinance (spot via -USD suffix)
-    "crypto": [
-        "BTC-USD", "ETH-USD", "SOL-USD",
-        "COIN", "MSTR", "MARA", "RIOT",
-    ],
+    # Crypto proxies — removed (no longer tracked)
+    # "crypto": ["BTC-USD", "ETH-USD", "SOL-USD", "COIN", "MSTR", "MARA", "RIOT"],
 
     # Full extended: all of the above deduplicated (~65 tickers, ~3-4 min runtime)
     "all": sorted(set(
@@ -99,7 +104,8 @@ WATCHLISTS = {
         ["JPM", "BAC", "GS", "MS", "WFC", "C", "V", "MA", "PYPL", "BLK", "BX"] +
         ["GLD", "SLV", "GDX", "XOM", "CVX", "COP", "OXY", "FCX", "NEM"] +
         ["LLY", "UNH", "JNJ", "ABBV", "MRK", "AMGN", "GILD", "REGN"] +
-        ["BTC-USD", "ETH-USD", "SOL-USD", "COIN", "MSTR"]
+        # New additions (May 2026)
+        ["SONY", "BABA", "RIVN", "MELI", "NU", "SOFI", "DIS", "HD", "SBUX"]
     )),
 }
 
@@ -121,18 +127,22 @@ MACRO_TICKERS = ["^VIX", "^TNX", "^GSPC", "^IRX"]
 # - COIN/MSTR are "crypto_equity" — they track crypto but add equity risk.
 
 CORRELATION_GROUPS: dict[str, list[str]] = {
-    "precious_metals": ["GLD", "SLV", "GDX", "NEM"],
-    "crypto":          ["BTC-USD", "ETH-USD", "SOL-USD"],
-    "crypto_equity":   ["COIN", "MSTR"],
-    "semiconductors":  ["NVDA", "AMD", "INTC", "QCOM", "TSM", "ARM", "AMAT", "ASML", "AVGO"],
-    "big_tech":        ["MSFT", "AAPL", "GOOGL", "META", "AMZN", "PLTR"],
-    "financials":      ["JPM", "BAC", "GS", "MS", "WFC", "C"],
-    "payments":        ["V", "MA", "PYPL"],
-    "healthcare":      ["JNJ", "ABBV", "MRK", "AMGN", "GILD", "REGN", "LLY", "UNH"],
-    "energy":          ["XOM", "CVX", "COP", "OXY", "KMI"],
-    "base_metals":     ["FCX"],
-    "saas":            ["CRM", "NOW", "SNOW", "PANW"],
-    "asset_managers":  ["BLK", "BX"],
+    "precious_metals":       ["GLD", "SLV", "GDX", "NEM"],
+    "semiconductors":        ["NVDA", "AMD", "INTC", "QCOM", "TSM", "ARM", "AMAT", "ASML", "AVGO"],
+    "big_tech":              ["MSFT", "AAPL", "GOOGL", "META", "AMZN", "PLTR", "SONY"],
+    "financials":            ["JPM", "BAC", "GS", "MS", "WFC", "C"],
+    "payments":              ["V", "MA", "PYPL"],
+    "healthcare":            ["JNJ", "ABBV", "MRK", "AMGN", "GILD", "REGN", "LLY", "UNH"],
+    "energy":                ["XOM", "CVX", "COP", "OXY", "KMI"],
+    "base_metals":           ["FCX"],
+    "saas":                  ["CRM", "NOW", "SNOW", "PANW"],
+    "asset_managers":        ["BLK", "BX"],
+    # New groups added May 2026
+    "ev":                    ["TSLA", "RIVN"],
+    "streaming":             ["NFLX", "DIS"],
+    "ecommerce_global":      ["BABA", "MELI"],
+    "fintech":               ["NU", "SOFI"],
+    "consumer_discretionary": ["HD", "SBUX"],
 }
 
 # Reverse lookup: symbol → group name (built once at import time)
@@ -320,6 +330,18 @@ def fetch_stock(symbol: str) -> dict | None:
         sma200_val = closes.rolling(200).mean().iloc[-1]
         sma200 = round(float(sma200_val), 2) if len(closes) >= 200 and not pd.isna(sma200_val) else None
 
+        # Volume anomaly: ratio of latest session volume vs 30-day average.
+        # >1.5 = above-average activity; >2.0 = high conviction move.
+        volumes = hist["Volume"]
+        vol_30d_avg = float(volumes.rolling(30).mean().iloc[-1])
+        volume_ratio = round(float(volumes.iloc[-1]) / vol_30d_avg, 2) if vol_30d_avg > 0 else None
+
+        # 52-week range position: 0% = at 52w low, 100% = at 52w high.
+        # Stocks below 15% of range near multi-year support; above 85% = extended.
+        low_52w = float(closes.tail(252).min())
+        high_52w = float(closes.tail(252).max())
+        range_52w_pct = round((price - low_52w) / (high_52w - low_52w) * 100, 1) if high_52w > low_52w else None
+
         # Fundamentals from .info (real data from yfinance, not estimated)
         # Computed before entry_quality so it can use them as a quality gate
         try:
@@ -341,6 +363,13 @@ def fetch_stock(symbol: str) -> dict | None:
         fcf_margin = round(fcf / revenue, 4) if fcf and revenue and revenue > 0 else None
         revenue_growth = safe("revenueGrowth")
 
+        # Short interest — days to cover (short_ratio) and % of float shorted.
+        # short_ratio > 10 = highly shorted (squeeze candidate if oversold).
+        # short_float_pct > 20% = crowded short (potential squeeze fuel).
+        short_ratio = safe("shortRatio")
+        short_float = safe("shortPercentOfFloat")
+        short_float_pct = round(short_float * 100, 2) if short_float is not None else None
+
         entry = _entry_quality(rsi, price, support, fcf_margin, revenue_growth)
 
         earnings = _earnings(ticker)
@@ -360,6 +389,8 @@ def fetch_stock(symbol: str) -> dict | None:
             "key_support": support,
             "key_resistance": resistance,
             "entry_quality": entry,
+            "volume_ratio": volume_ratio,
+            "range_52w_pct": range_52w_pct,
         },
         "valuation": {
             "pe": safe("trailingPE"),
@@ -378,6 +409,10 @@ def fetch_stock(symbol: str) -> dict | None:
         },
         "earnings": earnings,
         "insider_signal": insider,
+        "short_interest": {
+            "short_ratio": short_ratio,
+            "short_float_pct": short_float_pct,
+        },
     }
 
 
@@ -447,6 +482,7 @@ def fetch_macro() -> dict:
             "yield_10y": tnx,
             "yield_3m": irx,
             "yield_spread_10y_3m": round(tnx - irx, 3),
+            "spy_price": round(float(gspc.iloc[-1]), 2),
             "spy_rsi": spy_rsi,
             "fear_greed_value": fg,
             "fear_greed_index": fg,
@@ -517,6 +553,10 @@ def filter_candidates(stocks: dict, top_n: int = 35) -> list[dict]:
             "earnings_days_away": data.get("earnings", {}).get("days_away"),
             "beat_streak": data.get("earnings", {}).get("beat_streak"),
             "insider_signal": data.get("insider_signal"),
+            "volume_ratio": data.get("technicals", {}).get("volume_ratio"),
+            "range_52w_pct": data.get("technicals", {}).get("range_52w_pct"),
+            "short_ratio": data.get("short_interest", {}).get("short_ratio"),
+            "short_float_pct": data.get("short_interest", {}).get("short_float_pct"),
             "_sort_key": (QUALITY_RANK.get(quality_key, 2), rsi),
         })
 
