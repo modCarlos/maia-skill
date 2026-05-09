@@ -41,8 +41,29 @@ interface PortfolioSummary {
 }
 
 interface CrossPositionInsight {
-  insight: string
-  implication: string
+  // shape from write_portfolio_report.py output
+  type?: string
+  description?: string
+  symbols?: string[]
+  severity?: string
+  recommendation?: string
+  // legacy shape
+  insight?: string
+  implication?: string
+}
+
+interface PortfolioWarning {
+  type?: string
+  severity?: string
+  message?: string
+  symbols?: string[]
+}
+
+interface PriorityAttention {
+  symbol?: string
+  urgency?: string
+  action?: string
+  reason?: string
 }
 
 interface PortfolioAnalysisReport {
@@ -50,8 +71,8 @@ interface PortfolioAnalysisReport {
   portfolio_summary: PortfolioSummary
   positions: PortfolioPosition[]
   cross_position_insights: CrossPositionInsight[]
-  priority_attention: string[]
-  warnings: string[]
+  priority_attention: (string | PriorityAttention)[]
+  warnings: (string | PortfolioWarning)[]
 }
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -393,12 +414,17 @@ export function PortfolioAnalysisTab() {
       {/* Warnings */}
       {report.warnings.length > 0 && (
         <div className="space-y-2">
-          {report.warnings.map((w, i) => (
-            <div key={i} className="flex gap-3 rounded-lg border border-orange-200 bg-orange-50 px-4 py-3">
+          {report.warnings.map((w, i) => {
+            const msg = typeof w === "string" ? w : (w as PortfolioWarning).message ?? JSON.stringify(w)
+            const sev = typeof w === "string" ? "medium" : (w as PortfolioWarning).severity ?? "medium"
+            const borderCls = sev === "high" ? "border-red-200 bg-red-50" : "border-orange-200 bg-orange-50"
+            return (
+            <div key={i} className={`flex gap-3 rounded-lg border px-4 py-3 ${borderCls}`}>
               <span className="shrink-0 text-orange-500">⚠</span>
-              <p className="text-xs text-[#4D4A44]">{w}</p>
+              <p className="text-xs text-[#4D4A44]">{msg}</p>
             </div>
-          ))}
+            )
+          })}
         </div>
       )}
 
@@ -421,12 +447,18 @@ export function PortfolioAnalysisTab() {
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8B8B85] mb-3">Cross-Position Insights</p>
           <div className="space-y-3">
-            {report.cross_position_insights.map((ins, i) => (
+            {report.cross_position_insights.map((ins, i) => {
+              const title = ins.description ?? ins.insight ?? ""
+              const sub = ins.recommendation ?? ins.implication ?? ""
+              const syms = ins.symbols?.join(", ")
+              return (
               <div key={i} className="rounded-xl border border-[#E6E6E4] bg-[#FCFCFB] px-5 py-4">
-                <p className="text-sm font-semibold text-[#252420]">{ins.insight}</p>
-                <p className="mt-1 text-xs text-[#8B8B85]">{ins.implication}</p>
+                <p className="text-sm font-semibold text-[#252420]">{title}</p>
+                {syms && <p className="mt-1 text-[10px] font-semibold text-[#8B8B85] uppercase tracking-wider">{syms}</p>}
+                <p className="mt-1 text-xs text-[#8B8B85]">{sub}</p>
               </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       )}
