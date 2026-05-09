@@ -105,7 +105,9 @@ WATCHLISTS = {
         ["GLD", "SLV", "GDX", "XOM", "CVX", "COP", "OXY", "FCX", "NEM"] +
         ["LLY", "UNH", "JNJ", "ABBV", "MRK", "AMGN", "GILD", "REGN"] +
         # New additions (May 2026)
-        ["SONY", "BABA", "RIVN", "MELI", "NU", "SOFI", "DIS", "HD", "SBUX"]
+        ["SONY", "BABA", "RIVN", "MELI", "NU", "SOFI", "DIS", "HD", "SBUX"] +
+        # Industrials (May 2026)
+        ["MMM"]
     )),
 }
 
@@ -143,6 +145,7 @@ CORRELATION_GROUPS: dict[str, list[str]] = {
     "ecommerce_global":      ["BABA", "MELI"],
     "fintech":               ["NU", "SOFI"],
     "consumer_discretionary": ["HD", "SBUX"],
+    "industrials":           ["MMM"],
 }
 
 # Reverse lookup: symbol → group name (built once at import time)
