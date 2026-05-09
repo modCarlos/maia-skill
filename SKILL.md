@@ -3,8 +3,8 @@ name: investment-analysis
 version: 2.0.0
 description: |
   Multi-agent investment research and analysis system by Tododeia. Use when the user wants
-  market analysis, investment research, or a summary of current opportunities across crypto,
-  stocks, forex, and commodities. Spawns 5 specialized research agents (4 sector + 1 strategy),
+  market analysis, investment research, or a summary of current opportunities across
+  stocks and commodities. Spawns specialized research agents (sector + strategy),
   adapts to user risk profile, tracks historical accuracy, and generates a branded interactive
   HTML report served locally.
   Trigger phrases: "investment analysis", "market research", "analyze markets",
@@ -129,7 +129,7 @@ Pass the MegaAgent:
 - `historical_picks` (from Step 3b, if available) — previous picks with `entry_price` values
 - `accuracy_baseline` (from Step 3b) — dict of `{symbol: current_price}` built from today's `prices_snapshot`, cross-referenced against previous picks' `entry_price`. Compute accuracy **before** spawning the MegaAgent and pass the result directly. Do NOT ask the MegaAgent to reconstruct prices from web searches for accuracy purposes.
 - `previous_theses` (from Step 3b) — dict of `{symbol: {thesis, invalidators, entry_price, price_then, price_now, status}}`. The MegaAgent MUST evaluate each thesis before ranking new picks (see Phase 0 below).
-- The strategy agent prompt from `references/agent-prompts.md`
+- The MegaAgent prompt from `references/agent-prompts.md`
 
 **Prompt size guardrail (required):**
 - Keep the subagent prompt under ~8,000 characters.
@@ -150,7 +150,7 @@ Assemble REPORT_DATA from MegaAgent outputs:
   "macro_environment": "<Block 2>", "portfolio_allocation": "<Block 2>",
   "cross_sector_insights": "<Block 2>", "risk_adjusted_picks": "<Block 2>",
   "historical_accuracy": "<Block 2>", "warnings": [],
-  "sectors": "<Block 1 sectors>",
+  "sectors": "<Block 1 sectors — stocks + materials only>",
   "spy_price_at_report": "<today_market_context.macro.spy_price>"
 }
 ```
