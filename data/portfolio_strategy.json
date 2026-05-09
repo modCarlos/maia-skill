@@ -1,104 +1,902 @@
 {
-  "generated_at": "2026-05-09T05:00:00Z",
+  "generated_at": "2025-05-09T12:00:00Z",
   "portfolio_summary": {
-    "total_positions": 2,
-    "total_cost": 885.63,
-    "total_current_value": 885.63,
-    "total_pnl": 0.0,
-    "total_pnl_pct": 0.0,
-    "macro_summary": "Market regime is MIXED with conflicting signals: VIX 17.19 reflects calm volatility and the positive yield spread (0.769) supports growth equities, but SPY RSI of 73 warns of near-term overbought exhaustion. Fear + Greed at 38 (Fear) is a historically contrarian bullish signal yet confirms fragile sentiment. Both positions were entered at market price yesterday with zero embedded gains — capital preservation is the primary mandate while the macro picture resolves.",
-    "overall_health": "neutral",
-    "immediate_actions_needed": 0
+    "total_positions": 35,
+    "total_cost": 38092.13,
+    "total_current_value": 51729.24,
+    "total_pnl": 13637.11,
+    "total_pnl_pct": 35.80,
+    "macro_summary": "MIXED regime with elevated caution signals: SPY RSI 73 (overbought), VIX 17.19 (contained but not complacent), Fear & Greed at 38 (fear) — a rare divergence where price momentum is extended while sentiment lags. 10Y yield at 4.36% continues to pressure growth multiples. The SPY RSI reading is the primary near-term risk: historically, corrections of 5–10% follow SPY RSI>70 within 4–6 weeks. Trim overbought tech into strength; avoid new high-beta longs until RSI normalizes below 65.",
+    "overall_health": "strong",
+    "immediate_actions_needed": 6
   },
   "positions": [
     {
-      "symbol": "META",
-      "name": "Meta Platforms",
-      "current_price": 609.63,
-      "buy_price": 609.63,
-      "quantity": 1,
-      "pnl_pct": 0.0,
-      "action": "HOLD",
-      "urgency": "low",
-      "stop_loss_price": 566.96,
-      "take_profit_price": 826.69,
-      "trim_price": null,
+      "symbol": "INTC",
+      "action": "TRIM",
+      "urgency": "high",
+      "stop_loss_price": 105.00,
+      "take_profit_price": null,
+      "trim_price": 122.00,
       "add_price": null,
-      "exit_full": false,
       "position_health": "strong",
-      "thesis_status": "intact",
-      "micro_sentiment": "neutral",
-      "macro_impact": "neutral",
+      "thesis_status": "invalidated",
       "key_risks": [
-        "Heavy AI infrastructure capex compressing near-term free cash flow and EPS estimates",
-        "SPY RSI 73 raises broad market pullback risk that could drag quality names lower indiscriminately",
-        "AI-driven layoff narrative creates headline risk and potential regulatory scrutiny"
+        "RSI 85.1 — extreme overbought, parabolic move",
+        "Analyst consensus target $80.93 is 35.2% BELOW current price — strong mean-reversion risk",
+        "SPY RSI 73 provides no macro tailwind to sustain further upside"
       ],
       "key_catalysts": [
-        "AI monetization ramp via precision ad-targeting and Llama ecosystem commercial adoption",
-        "Analyst Strong Buy consensus with $826.69 target representing 35.6% upside from entry",
-        "PEG ratio of 0.89 signals undervaluation relative to growth — rare for a mega-cap compounder"
+        "AI chip demand narrative drove speculative short-covering rally",
+        "Intel Foundry Services (IFS) government contract potential",
+        "18A process node validation milestone"
       ],
-      "reasoning": "META was entered at a technically healthy RSI of 42.2 in a confirmed uptrend, sitting 22.7% below its 52-week high with substantial mean-reversion runway toward the $826.69 analyst target. Fundamentals are compelling at a forward P/E of 16.85 and PEG of 0.89, making this one of the cheapest large-cap AI plays by growth-adjusted valuation. Near-term AI capex headwinds are acknowledged in headlines but represent investment in the competitive moat rather than thesis deterioration — HOLD with a 7% stop to protect fresh capital.",
-      "headline_insight": "'Meta Platforms Swaps Jobs For AI Infrastructure And Investor Uncertainty' — signals near-term margin pressure and elevated capex that may disappoint consensus EPS, but the infrastructure build-out is compounding Meta's AI-driven ad-targeting efficiency and positions it for durable revenue acceleration through 2027."
+      "reasoning": "Analyst consensus of $80.93 is 35% below the current price of $124.92 — the sell-side has not validated this move. With RSI at 85 and the market broadly overbought, the risk/reward is sharply negative. Trim 60–75% of the position immediately at market ($122–125 range). Set a hard stop at $105 on the remainder."
+    },
+    {
+      "symbol": "AMD",
+      "action": "TRIM",
+      "urgency": "high",
+      "stop_loss_price": 405.00,
+      "take_profit_price": null,
+      "trim_price": 448.00,
+      "add_price": null,
+      "position_health": "strong",
+      "thesis_status": "updated",
+      "key_risks": [
+        "RSI 80.8 — overbought, +28.4% in 7 days is unsustainable",
+        "Analyst target $433.02 is 4.9% below current price — mild negative divergence",
+        "NVIDIA competes directly in AI GPU market"
+      ],
+      "key_catalysts": [
+        "MI300X AI GPU gaining enterprise data center traction",
+        "PC/server CPU market share gains from Intel weakness",
+        "AI inference compute expansion"
+      ],
+      "reasoning": "A +262% gain with RSI at 80.8 and analyst targets slightly below current levels warrants trimming 30–40% of the position. The AI thesis remains intact, but a near-term pullback to the $400–420 range is probable given the 7-day +28.4% spike. Set stop at $405 on remainder."
+    },
+    {
+      "symbol": "GOOG",
+      "action": "TRIM",
+      "urgency": "medium",
+      "stop_loss_price": 360.00,
+      "take_profit_price": 411.00,
+      "trim_price": 395.00,
+      "add_price": null,
+      "position_health": "strong",
+      "thesis_status": "active",
+      "key_risks": [
+        "RSI 83.3 — overbought in a combined Google concentration exceeding $3,200 portfolio value",
+        "DOJ antitrust remedies could structurally impair Search monopoly",
+        "AI search disruption from OpenAI / Perplexity eroding query volume"
+      ],
+      "key_catalysts": [
+        "Gemini AI integration into Search and Workspace",
+        "YouTube monetization growth and Shorts ad revenue ramp",
+        "Google Cloud approaching profitability inflection"
+      ],
+      "reasoning": "Combined with GOOGL, total Google exposure is ~$3,203 (6.2% of portfolio). RSI at 83 with analyst target only 3.6% above ($411) suggests limited near-term upside. Trim this single GOOG share near $395 and consolidate into GOOGL. Stop $360."
+    },
+    {
+      "symbol": "WMT",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 120.00,
+      "take_profit_price": 137.00,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "strong",
+      "thesis_status": "active",
+      "key_risks": [
+        "Consumer spending slowdown if recession materializes",
+        "Tariff impact on imported goods margin pressure"
+      ],
+      "key_catalysts": [
+        "Grocery market share gains from Amazon",
+        "Advertising revenue from Walmart Connect accelerating",
+        "Sam's Club membership growth"
+      ],
+      "reasoning": "RSI 57.5 is healthy — not overbought. +131% gain with analyst target $136.68 (+4.8%) suggests the position is approaching fair value but not overextended. WMT is a defensive anchor; hold with stop at $120. Trim 20% if price reaches $137."
+    },
+    {
+      "symbol": "FTNT",
+      "action": "TRIM",
+      "urgency": "high",
+      "stop_loss_price": 100.00,
+      "take_profit_price": null,
+      "trim_price": 112.00,
+      "add_price": null,
+      "position_health": "strong",
+      "thesis_status": "invalidated",
+      "key_risks": [
+        "RSI 84.4 — extreme overbought with +35.3% in 7 days",
+        "Analyst target $95.69 is 16.1% BELOW current price",
+        "Cybersecurity sector rotation risk after parabolic move"
+      ],
+      "key_catalysts": [
+        "SASE and SD-WAN enterprise adoption",
+        "OT/IoT security expansion into critical infrastructure"
+      ],
+      "reasoning": "FTNT is the second most urgent trim after INTC. The +35.3% weekly spike pushed price to $114 while analyst consensus sits at $95.69. RSI 84 confirms extreme exhaustion. Trim 50% immediately near $112 and set a stop at $100 on the remainder."
+    },
+    {
+      "symbol": "SOFI",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 13.50,
+      "take_profit_price": 21.00,
+      "trim_price": null,
+      "add_price": 14.50,
+      "position_health": "healthy",
+      "thesis_status": "active",
+      "key_risks": [
+        "Rate sensitivity — student loan volumes tied to Fed policy",
+        "Competition from traditional banks and BNPL fintechs"
+      ],
+      "key_catalysts": [
+        "Banking charter providing lower cost of funds",
+        "Analyst target $21.25 represents +34.9% upside",
+        "Galileo B2B payments platform monetization"
+      ],
+      "reasoning": "RSI 38.5 with a -1.6% 1-day move suggests mild pullback that looks like a buying opportunity. With +34.9% analyst upside and a solid fintech growth thesis, hold and consider adding near $14.50. Hard stop at $13.50."
+    },
+    {
+      "symbol": "URA",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 48.00,
+      "take_profit_price": 65.00,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "healthy",
+      "thesis_status": "active",
+      "key_risks": [
+        "No analyst price target — ETF without direct consensus",
+        "Uranium spot price volatility",
+        "Nuclear project delays (permitting, grid interconnection)"
+      ],
+      "key_catalysts": [
+        "Global nuclear energy renaissance driven by AI data center power demand",
+        "Multiple new SMR (Small Modular Reactor) projects announced",
+        "Uranium supply constraints from Kazakhstan and Canada"
+      ],
+      "reasoning": "RSI 52.5 is neutral and healthy. The nuclear/uranium macro tailwind from AI power demand is a multi-year thesis. Hold with stop at $48. No add at this level — wait for RSI below 45 for a better entry."
+    },
+    {
+      "symbol": "GOOGL",
+      "action": "TRIM",
+      "urgency": "medium",
+      "stop_loss_price": 365.00,
+      "take_profit_price": 427.00,
+      "trim_price": 398.00,
+      "add_price": null,
+      "position_health": "strong",
+      "thesis_status": "active",
+      "key_risks": [
+        "RSI 84.0 — extreme overbought",
+        "Combined Google concentration (GOOG + GOOGL) is >6% of portfolio",
+        "Antitrust proceedings could force structural changes to Search business model"
+      ],
+      "key_catalysts": [
+        "Analyst target $427.02 implies +6.5% further upside",
+        "Gemini Ultra integration and AI Overviews monetization",
+        "Waymo robotaxi commercialization"
+      ],
+      "reasoning": "Trim 2–3 of the 7 GOOGL shares near $398 to reduce Google concentration risk. Analyst target of $427 provides a legitimate upside path for remaining shares. Set stop at $365."
+    },
+    {
+      "symbol": "NVDA",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 195.00,
+      "take_profit_price": 265.00,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "strong",
+      "thesis_status": "active",
+      "key_risks": [
+        "Export restrictions on H100/H200 chips to China",
+        "Hyperscaler CapEx cycle plateau risk in late 2026",
+        "AMD MI300X and custom ASICs gaining share"
+      ],
+      "key_catalysts": [
+        "Analyst target $269.17 implies +25.1% upside",
+        "Blackwell GB200 NVL72 production ramp",
+        "CUDA ecosystem moat and software lock-in",
+        "Sovereign AI infrastructure spending globally"
+      ],
+      "reasoning": "RSI 65.9 is elevated but not overbought. NVDA has +25.1% analyst upside with the strongest AI infrastructure moat in the market. Hold all 14 shares. Stop at $195. Take profit at $265."
+    },
+    {
+      "symbol": "TSLA",
+      "action": "TRIM",
+      "urgency": "medium",
+      "stop_loss_price": 382.00,
+      "take_profit_price": null,
+      "trim_price": 425.00,
+      "add_price": null,
+      "position_health": "strong",
+      "thesis_status": "updated",
+      "key_risks": [
+        "Analyst target $412.25 is 3.8% BELOW current price",
+        "RSI 69.9 approaching overbought threshold",
+        "EV market share erosion from BYD and legacy OEMs"
+      ],
+      "key_catalysts": [
+        "Robotaxi (Cybercab) commercial launch",
+        "Optimus humanoid robot production scale",
+        "Energy storage (Megapack) business growing 100%+ YoY"
+      ],
+      "reasoning": "With analyst consensus at $412 vs current $428, the stock is trading slightly above fair value. Trim 1–2 shares near $425 to lock in gains while retaining exposure to Robotaxi and Optimus catalysts. Set stop at $382."
+    },
+    {
+      "symbol": "BA",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 215.00,
+      "take_profit_price": 268.00,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "healthy",
+      "thesis_status": "active",
+      "key_risks": [
+        "Production rate ramp execution risk on 737 MAX and 787",
+        "FAA oversight and quality control scrutiny"
+      ],
+      "key_catalysts": [
+        "Analyst target $269.52 implies +13.6% upside",
+        "Airline fleet replacement super-cycle post-COVID",
+        "New CEO Kelly Ortberg stabilizing operations"
+      ],
+      "reasoning": "RSI 62.5 is healthy. Boeing is in operational recovery mode with a multi-year backlog. Analyst target +13.6% provides clear upside. Hold with stop at $215."
+    },
+    {
+      "symbol": "BIDU",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 128.00,
+      "take_profit_price": 174.00,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "healthy",
+      "thesis_status": "active",
+      "key_risks": [
+        "China ADR delisting risk under SEC audit requirements",
+        "Geopolitical escalation could trigger forced selling",
+        "Domestic AI competition from ByteDance and DeepSeek"
+      ],
+      "key_catalysts": [
+        "Analyst target $175.71 implies +24.6% upside",
+        "ERNIE Bot enterprise AI adoption in China",
+        "Apollo Go autonomous driving commercial expansion"
+      ],
+      "reasoning": "RSI 68.8 is healthy with +11.5% 7-day momentum. The +24.6% analyst upside is compelling. Keep position size limited due to China ADR risk. Stop at $128. Target $174."
+    },
+    {
+      "symbol": "AMZN",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 250.00,
+      "take_profit_price": 308.00,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "strong",
+      "thesis_status": "active",
+      "key_risks": [
+        "RSI 75.1 — approaching overbought, some near-term pullback risk",
+        "AWS growth deceleration if enterprise CapEx freezes"
+      ],
+      "key_catalysts": [
+        "Analyst target $310.81 implies +14.0% upside",
+        "AWS Bedrock AI services accelerating enterprise adoption",
+        "Advertising revenue surpassing $60B annual run rate"
+      ],
+      "reasoning": "RSI slightly elevated at 75 but AWS/AI thesis remains the strongest in cloud. Analyst upside of +14% is meaningful. Hold all 9 shares with stop at $250. Take profit near $308."
+    },
+    {
+      "symbol": "VOO",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 620.00,
+      "take_profit_price": null,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "strong",
+      "thesis_status": "active",
+      "key_risks": [
+        "RSI 75.4 — broad market is overbought, ETF follows SPY",
+        "Concentration in top holdings (AAPL, MSFT, NVDA) — already own several directly"
+      ],
+      "key_catalysts": [
+        "Passive index investing long-term compounding",
+        "Dividend reinvestment adds cost-basis cushion"
+      ],
+      "reasoning": "Core S&P 500 exposure. RSI 75 mirrors SPY overbought reading — expect near-term volatility, but do not sell a long-term index holding. Stop at $620 only as a circuit breaker for a macro meltdown scenario."
+    },
+    {
+      "symbol": "PLD",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 133.00,
+      "take_profit_price": 149.00,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "healthy",
+      "thesis_status": "active",
+      "key_risks": [
+        "REIT sensitivity to 10Y yield at 4.36%",
+        "E-commerce fulfillment demand plateauing post-COVID"
+      ],
+      "key_catalysts": [
+        "Analyst target $149.40 implies +3.7% near-term plus dividend income",
+        "Data center land/warehouse conversion optionality",
+        "Industrial vacancy rates historically low globally"
+      ],
+      "reasoning": "RSI 60.4 is healthy. PLD is a best-in-class industrial REIT with strong dividend. Hold with stop at $133. Trim near $149 at analyst target."
+    },
+    {
+      "symbol": "AAL",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 11.75,
+      "take_profit_price": 14.80,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "healthy",
+      "thesis_status": "active",
+      "key_risks": [
+        "High debt load ($35B+) limits financial flexibility",
+        "Recession would devastate leisure travel demand"
+      ],
+      "key_catalysts": [
+        "Analyst target $14.86 implies +11.3% upside",
+        "+14.0% in 7 days shows demand resilience"
+      ],
+      "reasoning": "RSI 67.3 is healthy. Small speculative position with clear analyst target at $14.86. Hold with hard stop at $11.75. Tighten stop if recession signals emerge."
+    },
+    {
+      "symbol": "SBUX",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 95.00,
+      "take_profit_price": 105.50,
+      "trim_price": 106.00,
+      "add_price": null,
+      "position_health": "healthy",
+      "thesis_status": "active",
+      "key_risks": [
+        "Analyst target $105.62 is essentially at current price — minimal upside",
+        "China same-store sales recovery remains uncertain"
+      ],
+      "key_catalysts": [
+        "Brian Niccol (former Chipotle CEO) turnaround execution",
+        "Mobile order streamlining and menu simplification"
+      ],
+      "reasoning": "At $104.93 vs analyst target $105.62, SBUX is essentially at fair value. The Niccol turnaround thesis is playing out. Trim slightly above $106. Stop at $95."
+    },
+    {
+      "symbol": "XOM",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 135.00,
+      "take_profit_price": 164.00,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "neutral",
+      "thesis_status": "active",
+      "key_risks": [
+        "RSI 37.1, downtrend — oil price weakness dragging energy sector",
+        "-6.3% in 7 days signals sector rotation out of energy"
+      ],
+      "key_catalysts": [
+        "Analyst target $166.27 implies +15.0% upside",
+        "Pioneer acquisition fully integrated, driving production growth"
+      ],
+      "reasoning": "Downtrend and RSI 37 are concerning signals. However, the +15% analyst upside and XOM's fortress balance sheet justify holding. Stop at $135. Do not add to a downtrend."
+    },
+    {
+      "symbol": "XYZ",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 68.00,
+      "take_profit_price": 87.00,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "healthy",
+      "thesis_status": "active",
+      "key_risks": [
+        "6.7% single-day spike may be driven by thin float or news event",
+        "Verify ticker matches expected security"
+      ],
+      "key_catalysts": [
+        "Analyst target $86.98 implies +16.2% upside",
+        "+6.7% 1-day and +6.2% 7-day momentum positive"
+      ],
+      "reasoning": "RSI 67.2 is healthy and momentum is positive. Analyst upside of +16.2% supports holding. Stop at $68. Verify this ticker matches expectations."
     },
     {
       "symbol": "NU",
-      "name": "Nu Holdings",
-      "current_price": 13.8,
-      "buy_price": 13.8,
-      "quantity": 20,
-      "pnl_pct": 0.0,
       "action": "HOLD",
-      "urgency": "medium",
-      "stop_loss_price": 12.42,
-      "take_profit_price": 19.87,
+      "urgency": "low",
+      "stop_loss_price": 11.75,
+      "take_profit_price": 19.50,
       "trim_price": null,
-      "add_price": 12.9,
-      "exit_full": false,
-      "position_health": "neutral",
-      "thesis_status": "intact",
-      "micro_sentiment": "bearish",
-      "macro_impact": "negative",
+      "add_price": 12.50,
+      "position_health": "healthy",
+      "thesis_status": "active",
       "key_risks": [
-        "Brazilian macro volatility and BRL/USD FX depreciation risk on emerging market risk-off flows",
-        "Bearish news sentiment combined with -3.23% daily and -4.70% weekly decline signals continued distribution",
-        "Fear environment (Fear+Greed 38) disproportionately pressures high-beta EM growth names"
+        "RSI 38.2 — recent selling pressure, -3.2% 1-day, -4.7% 7-day",
+        "Brazil macro risk (FX, fiscal deficit)",
+        "LatAm regulatory environment for fintech"
       ],
       "key_catalysts": [
-        "Forward P/E of 12.03x is deeply discounted for a fintech compounding at 40%+ revenue growth",
-        "Analyst Strong Buy consensus with $19.87 target representing 44% upside — highest conviction in portfolio",
-        "RSI 38 approaching oversold territory in an uptrend signals a potential technical mean-reversion bounce"
+        "Analyst target $19.87 implies +44.0% upside — highest in portfolio",
+        "95M+ customers in Brazil, Mexico, Colombia with low penetration",
+        "NuPay and credit card business scaling profitably"
       ],
-      "reasoning": "NU's entry at $13.80 coincides with technically weak momentum (RSI 38, -4.7% weekly) driven by macro-led emerging market selling pressure rather than any fundamental deterioration in the business. At a forward P/E of 12x and PEG of 0.85 for a hypergrowth LatAm digital bank, the valuation discount is difficult to justify on fundamentals alone — the market is pricing in macro risk, not business risk. HOLD with a wide 10% stop at $12.42 to absorb volatility; a further dip to $12.90 represents a high-conviction ADD entry given the 44% analyst upside target.",
-      "headline_insight": "'NU: High Search Interest Signals Retail Momentum' — surging retail search volume historically precedes a price inflection point, suggesting the recent -4.7% pullback is attracting bottom-fishing interest that could catalyze a technical recovery."
+      "reasoning": "NU is the highest analyst-upside name in the portfolio at +44%. RSI 38 pullback is a buying opportunity. Consider adding near $12.50. Stop at $11.75. The LatAm fintech growth story is one of the best risk-reward opportunities here."
+    },
+    {
+      "symbol": "DIS",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 97.00,
+      "take_profit_price": 128.00,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "healthy",
+      "thesis_status": "active",
+      "key_risks": [
+        "Streaming profitability transition still in progress",
+        "Linear TV decline accelerating (ESPN, ABC)"
+      ],
+      "key_catalysts": [
+        "Analyst target $129.32 implies +19.7% upside",
+        "Disney+ / Hulu bundling and ad-supported tier scaling",
+        "ESPN DTC launch timeline"
+      ],
+      "reasoning": "RSI 63.5 is healthy with +4.1% 7-day momentum. Analyst upside of +19.7% is meaningful. DIS is a brand recovery play. Hold with stop at $97 and target $128."
+    },
+    {
+      "symbol": "TSM",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 375.00,
+      "take_profit_price": 460.00,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "strong",
+      "thesis_status": "active",
+      "key_risks": [
+        "Taiwan geopolitical risk — existential tail risk",
+        "Customer concentration (Apple ~25% revenue)"
+      ],
+      "key_catalysts": [
+        "Analyst target $463.45 implies +12.6% upside",
+        "2nm N2 node ramping for Apple A20 and AI accelerators",
+        "Arizona fab expansion reducing geopolitical risk discount"
+      ],
+      "reasoning": "TSM is the world's most critical semiconductor manufacturer. RSI 64 is healthy. N2 ramp ahead provides catalyst. Hold with stop at $375. Target $460."
+    },
+    {
+      "symbol": "RIVN",
+      "action": "WATCH",
+      "urgency": "medium",
+      "stop_loss_price": 12.25,
+      "take_profit_price": 18.00,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "weak",
+      "thesis_status": "updated",
+      "key_risks": [
+        "-13.3% in 7 days — EV sector broad weakness",
+        "RSI 36.5 — selling pressure",
+        "Cash burn rate and path to profitability uncertain"
+      ],
+      "key_catalysts": [
+        "Analyst target $18.12 implies +27.4% upside",
+        "Volkswagen partnership providing engineering capital",
+        "R2 midsize SUV launch targeting higher volume segment"
+      ],
+      "reasoning": "RIVN is flashing warning signs: -13.3% in 7 days with RSI at 36.5. Watch closely — if it breaks below $12.25 (stop), exit immediately. The VW partnership and R2 launch are the thesis pillars."
+    },
+    {
+      "symbol": "V",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 295.00,
+      "take_profit_price": 395.00,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "healthy",
+      "thesis_status": "active",
+      "key_risks": [
+        "Durbin-Marshall routing competition risk",
+        "BNPL and crypto payment alternatives"
+      ],
+      "key_catalysts": [
+        "Analyst target $398.31 implies +24.9% upside",
+        "Cross-border transaction volume recovery",
+        "Value-added services expanding margins"
+      ],
+      "reasoning": "RSI 52.8 is perfectly neutral. V has the highest risk-adjusted upside in the stable/large-cap bucket at +24.9%. High-quality compounder. Hold with stop at $295. Consider adding near $305 on a pullback."
+    },
+    {
+      "symbol": "BABA",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 125.00,
+      "take_profit_price": 188.00,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "neutral",
+      "thesis_status": "active",
+      "key_risks": [
+        "China ADR delisting risk — permanent regulatory overhang",
+        "JD.com and PDD (Temu) taking e-commerce market share"
+      ],
+      "key_catalysts": [
+        "Analyst target $189.57 implies +35.4% upside",
+        "Alibaba Cloud AI (QWEN models) enterprise adoption in Asia",
+        "Share buyback program ($25B authorized)"
+      ],
+      "reasoning": "RSI 59.3 is healthy with +6.2% 7-day momentum. The +35.4% analyst upside is attractive. However, China ADR risk is permanent. Hold with stop at $125. Do not add until geopolitical clarity improves."
+    },
+    {
+      "symbol": "OXY",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 48.00,
+      "take_profit_price": 64.00,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "neutral",
+      "thesis_status": "active",
+      "key_risks": [
+        "RSI 37.2, downtrend — oil sector weakness, -12.5% in 7 days",
+        "Highly leveraged to WTI oil price"
+      ],
+      "key_catalysts": [
+        "Analyst target $64.79 implies +22.2% upside",
+        "Berkshire Hathaway (Buffett) is the largest shareholder",
+        "CrownRock acquisition synergies flowing through 2025-2026"
+      ],
+      "reasoning": "OXY is in a confirmed downtrend with RSI 37. Buffett-backed value play with 22.2% analyst upside, but hold the stop at $48 firmly. Do not average down into a downtrend."
+    },
+    {
+      "symbol": "ORCL",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 180.00,
+      "take_profit_price": 240.00,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "healthy",
+      "thesis_status": "active",
+      "key_risks": [
+        "RSI 69.5 approaching overbought after +21.4% in 7 days",
+        "Competition from AWS RDS, Azure SQL, and Snowflake"
+      ],
+      "key_catalysts": [
+        "Analyst target $242.10 implies +23.6% upside",
+        "Multi-cloud AI infrastructure partnerships (MSFT, NVDA, Google)",
+        "Oracle Cloud Infrastructure (OCI) winning AI workloads"
+      ],
+      "reasoning": "ORCL's +21.4% 7-day move has elevated RSI to 69.5. Analyst upside of +23.6% supports holding. Stop at $180. If RSI crosses 75, trim 25% of position."
+    },
+    {
+      "symbol": "HD",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 295.00,
+      "take_profit_price": 400.00,
+      "trim_price": null,
+      "add_price": 305.00,
+      "position_health": "neutral",
+      "thesis_status": "active",
+      "key_risks": [
+        "RSI 39.7, downtrend — housing market stagnation from high mortgage rates",
+        "High-rate environment suppressing home improvement spending"
+      ],
+      "key_catalysts": [
+        "Analyst target $406.52 implies +28.1% upside",
+        "Rate cut cycle resumption would unlock housing market",
+        "Pro-customer segment ($50B+) growing faster than consumer"
+      ],
+      "reasoning": "HD is barely above cost basis (+0.4%) in a downtrend with RSI 39.7. The +28.1% analyst upside reflects housing market recovery optionality. Hold with stop at $295. Consider adding 1 share near $305 if housing data improves."
+    },
+    {
+      "symbol": "MSFT",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 390.00,
+      "take_profit_price": 555.00,
+      "trim_price": null,
+      "add_price": 400.00,
+      "position_health": "neutral",
+      "thesis_status": "active",
+      "key_risks": [
+        "-2.7% loss position — near cost basis, no margin of safety",
+        "Azure growth deceleration risk if enterprise AI spend contracts"
+      ],
+      "key_catalysts": [
+        "Analyst target $562.07 implies +35.4% upside",
+        "Copilot 365 enterprise seat expansion (400M+ Office users)",
+        "Azure AI services growing 60%+ YoY"
+      ],
+      "reasoning": "MSFT is in a small loss (-2.7%) but has the second-highest analyst upside at +35.4%. RSI 53.9 is neutral. AI/cloud thesis fully intact. Hold with stop at $390. Add 1 share near $400 to average down cost basis."
+    },
+    {
+      "symbol": "META",
+      "action": "HOLD",
+      "urgency": "low",
+      "stop_loss_price": 560.00,
+      "take_profit_price": 820.00,
+      "trim_price": null,
+      "add_price": 582.00,
+      "position_health": "neutral",
+      "thesis_status": "active",
+      "key_risks": [
+        "-5.9% loss — near cost basis, requires patience",
+        "RSI 42.2 — recent selling pressure",
+        "EU Digital Markets Act compliance costs"
+      ],
+      "key_catalysts": [
+        "Analyst target $826.69 implies +35.6% upside — highest in portfolio",
+        "Llama AI open-source ecosystem driving enterprise adoption",
+        "Instagram Reels and WhatsApp monetization scaling"
+      ],
+      "reasoning": "META has the highest analyst upside in the portfolio (+35.6%) and is only -5.9% from cost basis. RSI 42.2 suggests selling pressure is moderating. AI advertising efficiency and Llama ecosystem moat are intact. Hold with stop at $560. Add 1 share near $582."
+    },
+    {
+      "symbol": "CRM",
+      "action": "HOLD",
+      "urgency": "medium",
+      "stop_loss_price": 165.00,
+      "take_profit_price": 265.00,
+      "trim_price": null,
+      "add_price": 170.00,
+      "position_health": "weak",
+      "thesis_status": "active",
+      "key_risks": [
+        "-23.9% loss — significant drawdown requiring thesis validation",
+        "Downtrend confirmed — RSI 48.9, price trend is bearish",
+        "Enterprise SaaS spending freezes in economic uncertainty"
+      ],
+      "key_catalysts": [
+        "Analyst target $268.25 implies +47.5% upside — very high conviction if thesis holds",
+        "Agentforce AI platform represents a new product category",
+        "Slack integration driving platform stickiness"
+      ],
+      "reasoning": "CRM is the highest-conviction recovery trade with +47.5% analyst upside, but it's in a downtrend with a -23.9% loss. Agentforce AI platform is the key re-rating catalyst. If it breaks below $165, exit immediately. Otherwise hold and consider adding 1 share near $170. Stop at $165."
+    },
+    {
+      "symbol": "NVO",
+      "action": "EXIT",
+      "urgency": "medium",
+      "stop_loss_price": 42.00,
+      "take_profit_price": null,
+      "trim_price": 47.00,
+      "add_price": null,
+      "position_health": "weak",
+      "thesis_status": "invalidated",
+      "key_risks": [
+        "-29.5% loss — deep capital destruction",
+        "Analyst target $47.41 is only $1.34 above current — essentially no upside",
+        "GLP-1 competition from Eli Lilly (tirzepatide) taking market share",
+        "US drug pricing reform risk (IRA) compressing margins"
+      ],
+      "key_catalysts": [
+        "Wegovy and Ozempic remain dominant GLP-1 brands globally",
+        "Oral semaglutide could expand addressable market"
+      ],
+      "reasoning": "NVO presents the worst risk/reward: -29.5% loss with analyst consensus offering only +2.9% upside. The GLP-1 market has become highly competitive. RSI 75 after a recent bounce makes this an opportune exit — trim near $47 and exit the position. Redeploy capital into META, MSFT, or NU."
+    },
+    {
+      "symbol": "LULU",
+      "action": "HOLD",
+      "urgency": "medium",
+      "stop_loss_price": 120.00,
+      "take_profit_price": 175.00,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "weak",
+      "thesis_status": "updated",
+      "key_risks": [
+        "-36.1% loss — severe drawdown",
+        "RSI 31.8, downtrend — oversold but not a buy signal until trend reverses",
+        "US premium athleisure demand cooling",
+        "China market execution stumbling"
+      ],
+      "key_catalysts": [
+        "Analyst target $179.36 implies +36.7% upside if recovery materializes",
+        "RSI 31.8 extreme oversold — technical bounce due",
+        "International expansion (Europe, APAC) still growing"
+      ],
+      "reasoning": "LULU is at an extreme — -36% loss, RSI 31.8, confirmed downtrend. Analyst upside of +36.7% suggests recovery value. Hold for a potential oversold bounce but do NOT add until RSI crosses back above 40. Hard stop at $120."
+    },
+    {
+      "symbol": "NKE",
+      "action": "HOLD",
+      "urgency": "medium",
+      "stop_loss_price": 40.00,
+      "take_profit_price": 60.00,
+      "trim_price": null,
+      "add_price": 42.00,
+      "position_health": "weak",
+      "thesis_status": "active",
+      "key_risks": [
+        "-40.4% loss — worst performing position by P&L%",
+        "RSI 39.0, downtrend — no confirmed reversal",
+        "DTC shift creating channel conflict with wholesalers",
+        "China market share loss to Anta and Li-Ning"
+      ],
+      "key_catalysts": [
+        "Analyst target $61.08 implies +38.4% upside — significant recovery thesis",
+        "Elliott Hill (new CEO, NKE veteran) executing back-to-basics strategy",
+        "Wholesale channel re-engagement (Foot Locker partnership restored)"
+      ],
+      "reasoning": "NKE is the portfolio's largest loser by P&L% at -40.4%. Analyst upside of +38.4% and the new CEO's wholesale re-engagement strategy form a credible recovery thesis. Nike's brand remains elite. Hold with hard stop at $40. Consider adding 5–10 shares near $42 if RSI confirms a turn above 42."
+    },
+    {
+      "symbol": "MPW",
+      "action": "WATCH",
+      "urgency": "high",
+      "stop_loss_price": null,
+      "take_profit_price": null,
+      "trim_price": null,
+      "add_price": null,
+      "position_health": "critical",
+      "thesis_status": "invalidated",
+      "key_risks": [
+        "Possibly delisted — no market data available",
+        "138 shares with unknown current value creates portfolio accounting blind spot",
+        "Medical Properties Trust history of tenant distress (Steward Health Care bankruptcy)"
+      ],
+      "key_catalysts": [
+        "If still trading OTC, asset sale proceeds could provide recovery value",
+        "Any restructuring plan that preserves shareholder equity"
+      ],
+      "reasoning": "Verify MPW status with your broker immediately. Check: (1) Is the position showing a current price or $0.00? (2) Has it transferred to OTC markets? (3) Were you notified of any corporate actions? If delisted and worthless, file for capital loss documentation. Do not deploy new capital until status is confirmed."
     }
   ],
   "cross_position_insights": [
     {
-      "insight": "Both positions are at break-even with zero embedded gains to cushion against the overbought SPY (RSI 73), which historically corrects 3-5% before resuming its trend.",
-      "implication": "Do not add to either position until SPY RSI retreats below 65 — adding into an overextended market amplifies drawdown risk on a portfolio with no profit buffer."
+      "type": "concentration_risk",
+      "description": "GOOG and GOOGL represent duplicate exposure to Alphabet Inc. with a combined portfolio value of approximately $3,203 (6.2% of total portfolio). Both positions carry RSI readings of 83-84, amplifying the concentration risk during an overbought market environment.",
+      "symbols": ["GOOG", "GOOGL"],
+      "severity": "high",
+      "recommendation": "Sell the single GOOG share ($397) and trim 2-3 of 7 GOOGL shares near $398. Consolidate into one vehicle. This keeps Google thesis intact while reducing RSI-driven reversion risk."
     },
     {
-      "insight": "Portfolio is 100% long equities with no hedges, concentrated in two high-beta growth names that are positively correlated in a risk-off sell-off.",
-      "implication": "Consider a 10-15% cash reserve or a small inverse ETF position as a macro hedge until the market regime shifts from MIXED to clearly BULLISH."
+      "type": "overbought_cluster",
+      "description": "Five positions have RSI readings above 80 simultaneously while SPY RSI is 73: INTC (85.1), FTNT (84.4), GOOGL (84.0), GOOG (83.3), AMD (80.8). This cluster of extreme readings in a broadly overbought market creates systemic reversion risk. Historically, clusters of RSI>80 positions in an overbought market precede 5-15% corrections in affected names within 2-4 weeks.",
+      "symbols": ["INTC", "FTNT", "GOOG", "GOOGL", "AMD"],
+      "severity": "high",
+      "recommendation": "Execute trims on INTC (60-75%), FTNT (50%), and AMD (30-40%) within the next 2-3 trading sessions. Partial trims on GOOG and GOOGL for concentration management. Trim into strength — do not wait for RSI to peak."
     },
     {
-      "insight": "Both names carry elite analyst conviction (recommendation mean 1.35 and 1.38) with 35-44% upside to targets, meaning the fundamental thesis is strongly supported by institutional research.",
-      "implication": "Maintain positions through normal volatility — the stop-loss levels define the risk, and the analyst targets define the reward; do not exit based on sentiment alone if stops are untouched."
+      "type": "energy_sector_downtrend",
+      "description": "Both energy positions (XOM and OXY) are in confirmed downtrends with RSI readings of 37.1 and 37.2. XOM is -6.3% and OXY is -12.5% over 7 days, indicating oil sector broad weakness. Combined energy exposure is approximately $2,779 (5.4% of portfolio).",
+      "symbols": ["XOM", "OXY"],
+      "severity": "medium",
+      "recommendation": "Hold both with strict stops ($135 XOM, $48 OXY) and do not add. Monitor WTI crude — if it breaks below $65, consider reducing OXY first. Both have significant analyst upside if oil stabilizes."
     },
     {
-      "insight": "Fear+Greed at 38 (Fear) is historically a buy zone, yet SPY RSI at 73 creates an unusual tension between sentiment-based opportunity and technical overextension.",
-      "implication": "The Fear reading supports the long thesis for both META and NU, but the overbought SPY RSI warns against aggressive additions — patience over the next 5-10 trading days is the highest-conviction strategy."
+      "type": "china_adr_risk",
+      "description": "BIDU and BABA represent combined exposure of approximately $1,965 to Chinese ADRs. Both face permanent delisting risk from SEC PCAOB audit requirements and geopolitical escalation risk.",
+      "symbols": ["BIDU", "BABA"],
+      "severity": "medium",
+      "recommendation": "Combined position size is acceptable at ~3.8% of portfolio. Do not add without geopolitical clarity. Set strict stops ($128 BIDU, $125 BABA). If PCAOB audit status deteriorates, reduce both immediately."
+    },
+    {
+      "type": "ev_sector_concentration",
+      "description": "TSLA and RIVN represent dual EV exposure totaling approximately $2,782. RIVN is -13.3% in 7 days with RSI 36.5, signaling broad EV sector weakness. Both are correlated to EV demand sentiment.",
+      "symbols": ["TSLA", "RIVN"],
+      "severity": "medium",
+      "recommendation": "Trim TSLA 1-2 shares near $425 (analyst target breach). Watch RIVN closely at stop $12.25. TSLA's AI/robotaxi optionality is distinct from RIVN's pure-play EV manufacturing risk."
+    },
+    {
+      "type": "high_conviction_recovery_cluster",
+      "description": "META, MSFT, CRM, NKE, LULU, and NVO collectively have an average analyst upside of ~32%. These are either in losses or underperforming but represent significant potential value if their turnaround theses execute. Combined exposure is approximately $9,200 (17.8% of portfolio).",
+      "symbols": ["META", "MSFT", "CRM", "NKE", "LULU", "NVO"],
+      "severity": "low",
+      "recommendation": "Maintain META and MSFT as conviction holds. Monitor CRM's Agentforce catalyst closely. Hold NKE and LULU with strict stops. Exit NVO given minimal analyst upside vs the rest of this group."
+    },
+    {
+      "type": "voo_overlap_redundancy",
+      "description": "Holding VOO (S&P 500 ETF) while also directly owning NVDA, MSFT, AMZN, META, GOOGL, and GOOG creates significant double exposure to top VOO holdings. These 6 names represent ~30% of VOO's weighting, amplifying megacap concentration.",
+      "symbols": ["VOO", "NVDA", "MSFT", "AMZN", "META", "GOOGL", "GOOG"],
+      "severity": "low",
+      "recommendation": "Acceptable structure for a concentrated growth portfolio. Be aware that a megacap tech drawdown would impact this portfolio more severely than VOO's diversification implies. No immediate action required."
     }
   ],
   "priority_attention": [
-    "NU"
+    {
+      "symbol": "INTC",
+      "urgency": "high",
+      "action": "TRIM",
+      "reason": "RSI 85.1 extreme overbought. Analyst target $80.93 is 35.2% BELOW current $124.92. Trim 60-75% immediately. This is the most urgent trade — the analyst community has not validated this price level."
+    },
+    {
+      "symbol": "FTNT",
+      "urgency": "high",
+      "action": "TRIM",
+      "reason": "RSI 84.4 extreme overbought after +35.3% in 7 days. Analyst target $95.69 is 16.1% BELOW current $114.07. Trim 50% near $112 immediately."
+    },
+    {
+      "symbol": "MPW",
+      "urgency": "high",
+      "action": "WATCH",
+      "reason": "138 shares with no market data — possibly delisted. Verify broker status immediately. Unknown value creates portfolio accounting risk."
+    },
+    {
+      "symbol": "AMD",
+      "urgency": "high",
+      "action": "TRIM",
+      "reason": "RSI 80.8, +28.4% in 7 days. Analyst target $433 slightly below current $455. Trim 30-40% to lock in gains from +262% position."
+    },
+    {
+      "symbol": "NVO",
+      "urgency": "medium",
+      "action": "EXIT",
+      "reason": "Down 29.5% with only +2.9% analyst upside remaining. GLP-1 competition thesis invalidated. Exit near $47 while RSI 75 bounce provides favorable exit price."
+    },
+    {
+      "symbol": "GOOG",
+      "urgency": "medium",
+      "action": "TRIM",
+      "reason": "Combined Google (GOOG+GOOGL) concentration at 6.2% of portfolio with both RSI >83. Sell GOOG single share and trim 2-3 GOOGL shares to reduce concentration."
+    }
   ],
   "warnings": [
-    "NU is declining -3.23% today and -4.70% over 7 days with bearish news sentiment — monitor daily closes carefully; a close below $13.20 would accelerate stop-loss exposure toward the $12.42 floor.",
-    "SPY RSI at 73 is statistically overbought (top 10% of readings historically) — a 3-5% broad market correction would push both META and NU into loss territory with no cushion given zero P&L at entry.",
-    "Fear+Greed at 38 can deepen to Extreme Fear (below 25) in a risk-off event — do not add aggressively until sentiment stabilizes above 40 for two consecutive sessions.",
-    "NU's emerging market exposure creates asymmetric downside risk if BRL weakens materially or Brazil macro data disappoints — this is an exogenous risk not captured in the RSI or analyst targets."
+    {
+      "type": "overbought_cluster",
+      "severity": "high",
+      "message": "5 positions have RSI above 80 (INTC 85.1, FTNT 84.4, GOOGL 84.0, GOOG 83.3, AMD 80.8) while SPY RSI is 73 (overbought). This is a rare simultaneous extreme reading. Historically, clusters of RSI>80 in overbought markets resolve with 10-20% corrections within 2-4 weeks. Trim these positions into strength before the reversal.",
+      "symbols": ["INTC", "FTNT", "GOOG", "GOOGL", "AMD"]
+    },
+    {
+      "type": "analyst_target_breach",
+      "severity": "high",
+      "message": "3 positions are trading ABOVE analyst consensus targets: INTC ($124.92 vs $80.93 target, -35.2%), FTNT ($114.07 vs $95.69, -16.1%), TSLA ($428.35 vs $412.25, -3.8%). When price exceeds analyst consensus, risk/reward is negative. This premium is vulnerable to mean reversion.",
+      "symbols": ["INTC", "FTNT", "TSLA"]
+    },
+    {
+      "type": "market_overbought",
+      "severity": "high",
+      "message": "SPY RSI at 73 signals the broad market is overbought. Fear & Greed at 38 (Fear) creates an unusual divergence: price momentum is extended while sentiment hasn't caught up. This combination often precedes a 5-8% index correction. Raise cash by trimming overbought winners (INTC, FTNT, AMD). Avoid new high-beta long positions until SPY RSI resets below 60.",
+      "symbols": ["INTC", "AMD", "FTNT", "GOOG", "GOOGL", "AMZN", "VOO"]
+    },
+    {
+      "type": "delisted_position",
+      "severity": "high",
+      "message": "MPW (138 shares) has no market data and may be delisted. Verify immediately with your broker: (1) Does the position show a price or $0.00? (2) Has it transferred OTC? (3) Were you notified of corporate actions? If delisted and worthless, file for capital loss documentation.",
+      "symbols": ["MPW"]
+    },
+    {
+      "type": "energy_sector_downtrend",
+      "severity": "medium",
+      "message": "XOM (-6.3% 7d, RSI 37) and OXY (-12.5% 7d, RSI 37) are both in confirmed downtrends. Oil sector weakness may persist if OPEC+ increases production or recession fears spike. Both are above stop-loss levels but require monitoring. Do not add to downtrending positions.",
+      "symbols": ["XOM", "OXY"]
+    },
+    {
+      "type": "deep_loss_cluster",
+      "severity": "medium",
+      "message": "4 positions are in significant losses: NKE (-40.4%), LULU (-36.1%), NVO (-29.5%), CRM (-23.9%). Combined unrealized loss is approximately -$11,200. NVO should be exited (minimal analyst upside). NKE, LULU, CRM have credible recovery theses but require strict stop management.",
+      "symbols": ["NKE", "LULU", "NVO", "CRM"]
+    },
+    {
+      "type": "china_adr_concentration",
+      "severity": "medium",
+      "message": "Combined China ADR exposure (BIDU + BABA) is approximately $1,965 (~3.8% of portfolio). Both face PCAOB audit compliance deadlines and geopolitical escalation risk. Position sizes are acceptable but should not be increased.",
+      "symbols": ["BIDU", "BABA"]
+    },
+    {
+      "type": "rate_sensitivity",
+      "severity": "low",
+      "message": "10Y yield at 4.36% creates headwind for rate-sensitive positions: PLD (REIT), HD (housing), SOFI (fintech lending), AAL (high debt), RIVN (cash burn). A rate spike above 4.75% would pressure these names disproportionately.",
+      "symbols": ["PLD", "HD", "SOFI", "AAL", "RIVN"]
+    }
   ]
 }
