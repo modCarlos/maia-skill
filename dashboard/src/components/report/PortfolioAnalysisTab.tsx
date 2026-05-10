@@ -7,26 +7,28 @@ import { useState, useEffect } from "react"
 
 interface PortfolioPosition {
   symbol: string
-  name: string
-  current_price: number | null
-  buy_price: number
-  quantity: number
-  pnl_pct: number | null
+  name?: string
+  current_price?: number | null
+  buy_price?: number
+  quantity?: number
+  pnl_pct?: number | null
   action: "HOLD" | "TRIM" | "STOP_LOSS" | "SELL" | "ADD"
   urgency: "high" | "medium" | "low"
   stop_loss_price: number | null
   take_profit_price: number | null
   trim_price: number | null
   add_price: number | null
-  exit_full: boolean
+  exit_full?: boolean
   position_health: "strong" | "neutral" | "weak" | "critical"
-  thesis_status: "intact" | "partial" | "broken"
-  micro_sentiment: "bullish" | "neutral" | "bearish"
-  macro_impact: "positive" | "neutral" | "negative"
+  thesis_status: string
+  micro_sentiment?: string
+  macro_impact?: string
   key_risks: string[]
   key_catalysts: string[]
   reasoning: string
   headline_insight?: string
+  altman_z?: { score?: number; zone?: string } | null
+  piotroski?: { score?: number; strength?: string; signals?: string[] } | null
 }
 
 interface PortfolioSummary {
@@ -108,6 +110,20 @@ function fmtDate(iso: string): string {
   catch { return iso }
 }
 
+function healthBadgeTone(zone?: string | null): string {
+  if (zone === "safe") return "bg-green-50 text-green-700 border-green-200"
+  if (zone === "gray") return "bg-yellow-50 text-yellow-700 border-yellow-200"
+  if (zone === "distress") return "bg-red-50 text-red-700 border-red-200"
+  return "bg-[#F0F0ED] text-[#8B8B85] border-[#E6E6E4]"
+}
+
+function piotroskiTone(strength?: string | null): string {
+  if (strength === "strong") return "bg-green-50 text-green-700 border-green-200"
+  if (strength === "neutral") return "bg-blue-50 text-blue-700 border-blue-200"
+  if (strength === "weak") return "bg-red-50 text-red-700 border-red-200"
+  return "bg-[#F0F0ED] text-[#8B8B85] border-[#E6E6E4]"
+}
+
 // ─── Position Card (attention-needed) ────────────────────────────────────────
 
 function AttentionCard({ pos }: { pos: PortfolioPosition }) {
@@ -157,6 +173,15 @@ function AttentionCard({ pos }: { pos: PortfolioPosition }) {
             {pos.pnl_pct != null ? `${pnlPositive ? "+" : ""}${pos.pnl_pct.toFixed(2)}%` : "—"}
           </p>
         </div>
+      </div>
+
+      <div className="mt-3 flex flex-wrap gap-2">
+        <span className={`rounded-full border px-2.5 py-1 text-[10px] font-semibold ${healthBadgeTone(pos.altman_z?.zone)}`}>
+          Altman Z: {pos.altman_z?.score != null ? `${pos.altman_z.score} (${pos.altman_z.zone})` : "N/A"}
+        </span>
+        <span className={`rounded-full border px-2.5 py-1 text-[10px] font-semibold ${piotroskiTone(pos.piotroski?.strength)}`}>
+          Piotroski: {pos.piotroski?.score != null ? `${pos.piotroski.score}/9 (${pos.piotroski.strength})` : "N/A"}
+        </span>
       </div>
 
       {/* Stop-loss / Take-profit / Trim row */}
@@ -229,10 +254,10 @@ function AttentionCard({ pos }: { pos: PortfolioPosition }) {
                 Thesis: <strong>{pos.thesis_status}</strong>
               </span>
               <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#F0F0ED] text-[#4D4A44]">
-                Sentiment: <strong>{pos.micro_sentiment}</strong>
+                Sentiment: <strong>{pos.micro_sentiment ?? "N/A"}</strong>
               </span>
               <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#F0F0ED] text-[#4D4A44]">
-                Macro: <strong>{pos.macro_impact}</strong>
+                Macro: <strong>{pos.macro_impact ?? "N/A"}</strong>
               </span>
             </div>
           </motion.div>
@@ -250,7 +275,7 @@ function PositionsTable({ positions }: { positions: PortfolioPosition[] }) {
       <table className="w-full text-sm">
         <thead>
           <tr className="border-b border-[#E6E6E4] bg-[#F7F7F5]">
-            {["Asset", "P&L", "Action", "Stop Loss", "Take Profit", "Urgency", "Thesis", "Sentiment"].map((h) => (
+            {["Asset", "P&L", "Action", "Altman Z", "Piotroski", "Stop Loss", "Take Profit", "Urgency", "Thesis", "Sentiment"].map((h) => (
               <th key={h} className="px-3 py-3 text-left text-[10px] font-semibold uppercase tracking-wider text-[#8B8B85] whitespace-nowrap">
                 {h}
               </th>
@@ -282,6 +307,16 @@ function PositionsTable({ positions }: { positions: PortfolioPosition[] }) {
                     {action.label}
                   </span>
                 </td>
+                <td className="px-3 py-3">
+                  <span className={`rounded-full border px-2 py-0.5 text-[10px] font-semibold ${healthBadgeTone(pos.altman_z?.zone)}`}>
+                    {pos.altman_z?.score != null ? `${pos.altman_z.score} (${pos.altman_z.zone})` : "N/A"}
+                  </span>
+                </td>
+                <td className="px-3 py-3">
+                  <span className={`rounded-full border px-2 py-0.5 text-[10px] font-semibold ${piotroskiTone(pos.piotroski?.strength)}`}>
+                    {pos.piotroski?.score != null ? `${pos.piotroski.score}/9` : "N/A"}
+                  </span>
+                </td>
                 <td className={`px-3 py-3 font-semibold ${pos.stop_loss_price ? "text-orange-600" : "text-[#8B8B85]"}`}>
                   {pos.stop_loss_price ? fmt(pos.stop_loss_price) : "—"}
                 </td>
@@ -294,7 +329,7 @@ function PositionsTable({ positions }: { positions: PortfolioPosition[] }) {
                   </span>
                 </td>
                 <td className="px-3 py-3 text-xs text-[#4D4A44] capitalize">{pos.thesis_status}</td>
-                <td className="px-3 py-3 text-xs text-[#4D4A44] capitalize">{pos.micro_sentiment}</td>
+                <td className="px-3 py-3 text-xs text-[#4D4A44] capitalize">{pos.micro_sentiment ?? "n/a"}</td>
               </tr>
             )
           })}

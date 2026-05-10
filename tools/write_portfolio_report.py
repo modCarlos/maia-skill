@@ -14,6 +14,16 @@ import sys
 import tempfile
 from datetime import datetime
 
+MARKET_POSITION_FIELDS = [
+    "name", "sector", "buy_price", "quantity", "buy_date", "cost_basis",
+    "current_price", "change_pct_1d", "change_pct_7d", "change_pct_30d",
+    "pnl_amount", "pnl_pct", "rsi_14", "week_52_high", "week_52_low",
+    "pct_from_52w_high", "pct_from_52w_low", "market_cap", "pe_ratio",
+    "forward_pe", "peg_ratio", "analyst_target", "analyst_upside",
+    "recommendation_mean", "altman_z", "piotroski", "trend",
+    "news_headlines", "news_sentiment", "error",
+]
+
 REQUIRED_TOP = [
     "generated_at", "portfolio_summary", "positions",
     "cross_position_insights", "priority_attention", "warnings",
@@ -68,6 +78,36 @@ def atomic_write(path: str, content: str):
         raise
 
 
+def enrich_positions_with_market(repo: str, data: dict) -> dict:
+    market_path = os.path.join(repo, "data", "portfolio_market.json")
+    if not os.path.exists(market_path):
+        return data
+
+    try:
+        market = json.loads(open(market_path, encoding="utf-8").read())
+    except Exception:
+        return data
+
+    market_by_symbol = {
+        pos.get("symbol"): pos
+        for pos in market.get("positions", [])
+        if pos.get("symbol")
+    }
+
+    enriched_positions = []
+    for pos in data.get("positions", []):
+        symbol = pos.get("symbol")
+        market_pos = market_by_symbol.get(symbol, {})
+        merged = dict(market_pos)
+        merged.update(pos)
+        for field in MARKET_POSITION_FIELDS:
+            merged.setdefault(field, market_pos.get(field))
+        enriched_positions.append(merged)
+
+    data["positions"] = enriched_positions
+    return data
+
+
 def main():
     if len(sys.argv) < 2:
         print("Usage: write_portfolio_report.py <path_or_-> ", file=sys.stderr)
@@ -103,6 +143,8 @@ def main():
 
     repo = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     dashboard_out = os.path.join(repo, "dashboard", "public", "data", "portfolio_report.json")
+
+    data = enrich_positions_with_market(repo, data)
 
     serialized = json.dumps(data, ensure_ascii=False, indent=2)
 
