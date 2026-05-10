@@ -271,10 +271,20 @@ If `previous_theses` is non-empty, evaluate each previous pick's thesis:
   - `"invalidated"` — at least one invalidator triggered → drop the pick from new recommendations
 - Briefly note the thesis status for each previous pick in the `historical_accuracy.notable` field.
 
+**Financial health overlay (use when `altman_z` and `piotroski` are present in position data):**
+- If `altman_z.zone == "distress"` → treat as a **soft invalidator**: flag the pick, tighten stop-loss, reduce position size. Only keep if thesis explicitly accounts for the distress zone (turnaround play).
+- If `piotroski.strength == "weak"` (score ≤ 2) → penalize confidence by −1 and note in `reasoning`.
+- If `altman_z.zone == "safe"` AND `piotroski.strength == "strong"` (score ≥ 7) → boost confidence by +1 (max 10). Note as "strong balance sheet" in `reasoning`.
+- ETFs (VOO, URA, etc.) will have `altman_z: null` and `piotroski: null` — skip the overlay for those.
+
 ### Phase 1 — Market Research (use WebSearch + WebFetch)
 
 - Research the top 10-15 candidates from `SCREENED_CANDIDATES`: news, catalysts, earnings updates, analyst ratings
 - Search for overall market sentiment today
+
+> **Pre-calculated financial health data**: Each position in the portfolio data now includes `altman_z` (Altman Z-Score) and `piotroski` (Piotroski F-Score) computed from yfinance financial statements. Use these directly — **do NOT search for financial health, debt ratios, or balance sheet quality**; it is already calculated.
+> - `altman_z.zone`: `"safe"` (Z > 2.99) | `"gray"` (1.81–2.99) | `"distress"` (< 1.81) | `null` (ETFs)
+> - `piotroski.score`: 0–9, `piotroski.strength`: `"strong"` (≥7) | `"neutral"` (3–6) | `"weak"` (≤2) | `null` (ETFs)
 
 > **Materials (Gold, Silver, Energy, Base Metals)** are covered by `tools/build_sectors.py` from pre-fetched data. Do NOT search for XAU/XAG prices or commodities data — it is already in the sectors JSON.
 
@@ -324,7 +334,21 @@ Return this JSON block:
       "entry_price": 313.45, "stop_loss": 292, "target_12m": 365, "risk_reward_ratio": 2.7,
       "thesis": "1-2 sentence WHY this pick, WHAT the specific catalyst is, WHAT conditions sustain the trade",
       "thesis_invalidators": ["condition 1 that would break the thesis", "condition 2"],
-      "thesis_status": "new | active | updated | invalidated"
+      "thesis_status": "new | active | updated | invalidated",
+      "financial_health": {
+        "altman_z": 3.08,
+        "altman_zone": "safe | gray | distress | N/A",
+        "piotroski": 7,
+        "piotroski_strength": "strong | neutral | weak | N/A",
+        "health_note": "1 sentence — e.g. 'Balance sheet is strong (Piotroski 9/9), no distress risk' or 'Altman Z in distress zone — thesis must account for this'"
+      }
+    }
+  ],
+  "priority_attention": [
+    {
+      "symbol": "SOFI",
+      "reason": "Altman Z=0.35 (distress), Piotroski=2 (weak) — fundamental deterioration",
+      "action": "review stop-loss / consider trim"
     }
   ],
   "historical_accuracy": {
@@ -332,7 +356,10 @@ Return this JSON block:
     "calls_made": 14, "calls_correct": 10, "accuracy_pct": 71,
     "notable": "1 sentence summary including thesis status notes from Phase 0"
   },
-  "warnings": [],
+  "warnings": [
+    "Auto-generate a warning for every position where altman_z.zone == 'distress'. Format: '{SYMBOL}: Altman Z={score} (distress zone) — {brief implication}'",
+    "Auto-generate a warning for every position where piotroski.score <= 2. Format: '{SYMBOL}: Piotroski F-Score={score}/9 (weak fundamentals) — {brief implication}'"
+  ],
   "strategy_summary": "2 sentences max"
 }
 ```
