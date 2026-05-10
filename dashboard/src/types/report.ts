@@ -82,4 +82,7 @@ export interface Asset {
   social_highlights: string[]
   recommendation: "buy" | "hold" | "sell"
   reasoning: string
+  // Optional, hydrated client-side from portfolio_market.json when available
+  piotroski_score?: number | null
+  piotroski_strength?: "strong" | "neutral" | "weak" | null
 }
