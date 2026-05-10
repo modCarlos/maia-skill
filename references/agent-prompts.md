@@ -363,3 +363,9 @@ Return this JSON block:
   "strategy_summary": "2 sentences max"
 }
 ```
+
+**Score scale is strict and required:**
+- `confidence` must be a number on a **0-10 scale** (example: `8.2`, not `82`)
+- `risk_score` must be a number on a **0-10 scale** (example: `3.5`, not `35`)
+- `risk_adjusted_score = confidence - (risk_score * 0.3)` and should normally land between `0.0` and `10.0`
+- Never express these three fields as percentages or 0-100 scores

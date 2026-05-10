@@ -1,328 +1,422 @@
 {
   "brand": "Tododeia",
   "creator": "@quebert",
-  "generated_at": "2026-05-09T04:02:40Z",
+  "generated_at": "2026-05-10T03:50:50Z",
   "risk_profile": "moderate",
-  "executive_summary": "For moderate risk, the portfolio stays growth-aware but risk-controlled: 70% stocks, 25% materials, 5% cash. The focus is on oversold high-quality names with valuation support, supplemented by defensive materials as macro hedge.",
+  "executive_summary": "Run a selective, cash-heavy mean-reversion book: emphasize oversold quality in financials, payments, and platform tech while keeping materials exposure measured. The market backdrop supports buying weakness in specific names, not chasing the index after an overbought surge.",
   "macro_environment": {
-    "summary": "Market in mixed regime with extreme technical oversold conditions creating dip-buying opportunity. Fear & Greed index at 38 (Fear) despite benign VIX=17.2 suggests capitulation-driven selloff. Broad index oversold while individual high-quality names trade at depressed RSI levels.",
+    "summary": "The tape is mixed: volatility is contained and yields are stable, but the broad index is technically stretched with a 73 RSI and neutral sentiment. That argues for selective mean-reversion entries in oversold quality names rather than aggressive index-level risk.",
     "interest_rate_outlook": "stable",
     "inflation_outlook": "stable",
-    "geopolitical_risk": "high",
+    "geopolitical_risk": "medium",
     "key_factors": [
-      "Fear & Greed at 38 with VIX near 17 indicates stress without panic-volatility spike",
-      "Multiple candidates RSI<30 (PYPL, NFLX, SOFI, META) support mean-reversion setups",
-      "Positive yield curve still supports large-cap financial earnings quality",
-      "USD weakness theme supports materials allocation as portfolio ballast"
+      "SPY is overbought while fear-greed remains neutral, which favors disciplined entries over momentum chasing.",
+      "The 10Y-3M spread is positive and yields are stable, reducing near-term rate-shock pressure on financials and quality cyclicals.",
+      "The best setups are concentrated in oversold single names with reasonable valuation rather than broad market beta."
     ]
   },
   "portfolio_allocation": {
-    "stocks": 70,
-    "materials": 25,
-    "cash": 5
+    "stocks": 60,
+    "materials": 10,
+    "cash": 30
   },
   "cross_sector_insights": [
     {
-      "insight": "Technical oversold pressure spans growth and value simultaneously",
-      "implication": "This supports phased re-risking in quality names rather than broad index chasing"
+      "insight": "Oversold setups are concentrated in financials, payments, and platform tech while the index itself is extended.",
+      "implication": "Favor stock selection and staggered entries instead of adding broad market exposure."
     },
     {
-      "insight": "Fear sentiment is elevated while realized volatility remains moderate",
-      "implication": "Contrarian entries have favorable asymmetry if stops are respected"
+      "insight": "Stable rates improve the setup for value-oriented banks and payments more than for speculative long-duration assets.",
+      "implication": "Core risk should lean toward C, WFC, and PYPL before lower-quality cyclicals."
     },
     {
-      "insight": "Financials and payments show better valuation support than mega-cap growth",
-      "implication": "Moderate profile can overweight banks/payments and keep selective growth exposure"
+      "insight": "Selective materials exposure still works as a diversification sleeve in a mixed regime without needing a broad commodities bet.",
+      "implication": "Use FCX and MMM as smaller diversifiers rather than portfolio anchors."
     }
   ],
   "risk_adjusted_picks": [
     {
       "rank": 1,
-      "name": "PayPal Holdings",
-      "symbol": "PYPL",
-      "sector": "stocks",
-      "confidence": 8,
-      "risk_score": 5,
-      "risk_adjusted_score": 6.5,
+      "name": "Citigroup",
+      "symbol": "C",
+      "sector": "financials",
+      "confidence": 8.2,
+      "risk_score": 3.1,
+      "risk_adjusted_score": 7.3,
       "recommendation": "buy",
-      "reasoning": "RSI 23.4 with PEG under 1.0 offers strong mean-reversion setup with valuation support.",
-      "position_size": "6-8%",
-      "entry_price": 45.37,
-      "stop_loss": 41.5,
-      "target_12m": 58.5,
-      "risk_reward_ratio": 3.4,
-      "thesis": "Payment platform with depressed valuation versus normalized growth and improving operating discipline.",
+      "reasoning": "Uptrend support, low valuation, and bullish wealth-management news make C the cleanest financial mean-reversion setup.",
+      "position_size": "8%",
+      "entry_price": 125.55,
+      "stop_loss": 114,
+      "target_12m": 154,
+      "risk_reward_ratio": 2.46,
+      "thesis": "Citigroup offers a favorable moderate-risk entry because its valuation remains inexpensive while business momentum and sentiment have improved.",
       "thesis_invalidators": [
-        "Further margin compression in core checkout business",
-        "Material negative guidance revision in next earnings"
+        "Breaks and closes below the low-114 area on heavy volume.",
+        "Wealth and fee-growth initiatives fail to translate into better operating momentum.",
+        "Credit quality deteriorates materially or rate stability reverses sharply higher."
       ],
-      "thesis_status": "new"
+      "thesis_status": "new",
+      "financial_health": {
+        "altman_z": null,
+        "altman_zone": "N/A",
+        "piotroski": null,
+        "piotroski_strength": "N/A",
+        "health_note": "Forward valuation is attractive for a large bank and the trend is firmer than most peers in this screen."
+      }
     },
     {
       "rank": 2,
       "name": "Meta Platforms",
       "symbol": "META",
-      "sector": "stocks",
-      "confidence": 8,
-      "risk_score": 4,
-      "risk_adjusted_score": 6.8,
+      "sector": "communication_services",
+      "confidence": 8.0,
+      "risk_score": 3.5,
+      "risk_adjusted_score": 7.0,
       "recommendation": "buy",
-      "reasoning": "RSI near 28 and PEG below 1.0 create rare value-for-growth entry in mega-cap tech.",
-      "position_size": "8-10%",
+      "reasoning": "META combines oversold technicals, sub-1 PEG, and strong-buy analyst support despite the recent big-tech margin concern headlines.",
+      "position_size": "8%",
       "entry_price": 609.63,
-      "stop_loss": 560,
-      "target_12m": 826.69,
-      "risk_reward_ratio": 3.2,
-      "thesis": "AI monetization plus resilient ad engine should re-rate valuation after technical reset.",
+      "stop_loss": 555,
+      "target_12m": 735,
+      "risk_reward_ratio": 2.29,
+      "thesis": "The current pullback looks more like a sentiment reset than a structural break, leaving room for re-rating if earnings power holds.",
       "thesis_invalidators": [
-        "Sharp deterioration in ad demand",
-        "Regulatory action that impairs core ad monetization"
+        "Price loses the 555 support area and fails to reclaim it.",
+        "Ad monetization or AI-related capex pressure causes a sustained earnings revision lower.",
+        "Big-tech margin compression persists beyond one quarter and weakens cash-flow quality."
       ],
-      "thesis_status": "new"
+      "thesis_status": "new",
+      "financial_health": {
+        "altman_z": null,
+        "altman_zone": "N/A",
+        "piotroski": null,
+        "piotroski_strength": "N/A",
+        "health_note": "Forward multiple and PEG remain reasonable for a mega-cap platform, with bullish sell-side support offsetting near-term headline risk."
+      }
     },
     {
       "rank": 3,
-      "name": "SoFi Technologies",
-      "symbol": "SOFI",
-      "sector": "stocks",
-      "confidence": 7,
-      "risk_score": 6,
-      "risk_adjusted_score": 5.2,
+      "name": "PayPal Holdings",
+      "symbol": "PYPL",
+      "sector": "financial_technology",
+      "confidence": 7.8,
+      "risk_score": 3.7,
+      "risk_adjusted_score": 6.7,
       "recommendation": "buy",
-      "reasoning": "High-growth fintech with oversold RSI and upcoming catalyst, sized smaller for volatility.",
-      "position_size": "5-7%",
-      "entry_price": 15.75,
-      "stop_loss": 14.4,
-      "target_12m": 23.5,
-      "risk_reward_ratio": 5.0,
-      "thesis": "Bank-charter economics and member growth support upside if next earnings confirm momentum.",
+      "reasoning": "PYPL is deeply oversold with the cheapest valuation profile in the screen, making it the preferred payments exposure despite the downtrend.",
+      "position_size": "7%",
+      "entry_price": 45.37,
+      "stop_loss": 40.5,
+      "target_12m": 58,
+      "risk_reward_ratio": 2.59,
+      "thesis": "If execution stabilizes, PYPL has enough valuation support and operating leverage to produce an outsized rebound from washed-out levels.",
       "thesis_invalidators": [
-        "Credit quality deterioration",
-        "Weak guidance that invalidates growth trajectory"
+        "Continued wallet-share losses or take-rate deterioration keep estimates falling.",
+        "Stablecoin and payments-policy issues materially disrupt product positioning.",
+        "The stock cannot base above the low-40s and extends the downtrend."
       ],
-      "thesis_status": "new"
+      "thesis_status": "new",
+      "financial_health": {
+        "altman_z": null,
+        "altman_zone": "N/A",
+        "piotroski": null,
+        "piotroski_strength": "N/A",
+        "health_note": "Very low forward P/E and sub-1 PEG provide valuation support, though the trend remains the main risk."
+      }
     },
     {
       "rank": 4,
-      "name": "Netflix",
-      "symbol": "NFLX",
-      "sector": "stocks",
-      "confidence": 7,
-      "risk_score": 6,
-      "risk_adjusted_score": 5.2,
+      "name": "Johnson & Johnson",
+      "symbol": "JNJ",
+      "sector": "healthcare",
+      "confidence": 7.6,
+      "risk_score": 2.8,
+      "risk_adjusted_score": 6.8,
       "recommendation": "buy",
-      "reasoning": "Extremely oversold RSI with very strong free-cash-flow profile supports rebound thesis.",
-      "position_size": "5-7%",
-      "entry_price": 87.49,
-      "stop_loss": 80,
-      "target_12m": 105,
-      "risk_reward_ratio": 2.3,
-      "thesis": "Cash-generative streaming leader is priced for overly bearish near-term expectations.",
+      "reasoning": "JNJ adds defensive balance to the list with bullish news flow, a reasonable multiple, and a less fragile setup than most oversold names.",
+      "position_size": "6%",
+      "entry_price": 221.32,
+      "stop_loss": 205,
+      "target_12m": 255,
+      "risk_reward_ratio": 2.06,
+      "thesis": "JNJ is a moderate-risk stabilizer that can work if investors rotate toward resilient healthcare cash flows in a mixed macro tape.",
       "thesis_invalidators": [
-        "Subscriber growth miss across key regions",
-        "Sustained ad-tier monetization weakness"
+        "Defensive rotation fails and healthcare underperforms despite market stress.",
+        "Material litigation or product-specific issues impair earnings visibility.",
+        "The stock breaks decisively below 205 and loses support."
       ],
-      "thesis_status": "new"
+      "thesis_status": "new",
+      "financial_health": {
+        "altman_z": null,
+        "altman_zone": "N/A",
+        "piotroski": null,
+        "piotroski_strength": "N/A",
+        "health_note": "This is one of the steadier quality names in the screen, with supportive news and a manageable valuation for a defensive large cap."
+      }
     },
     {
       "rank": 5,
-      "name": "Bank of America",
-      "symbol": "BAC",
-      "sector": "stocks",
-      "confidence": 7,
-      "risk_score": 3,
-      "risk_adjusted_score": 6.1,
+      "name": "Wells Fargo",
+      "symbol": "WFC",
+      "sector": "financials",
+      "confidence": 7.5,
+      "risk_score": 3.2,
+      "risk_adjusted_score": 6.5,
       "recommendation": "buy",
-      "reasoning": "Uptrend plus near-oversold RSI and low PEG gives attractive risk-adjusted financial exposure.",
-      "position_size": "6-8%",
-      "entry_price": 51.31,
-      "stop_loss": 48,
-      "target_12m": 62.98,
-      "risk_reward_ratio": 3.5,
-      "thesis": "Large-cap bank earnings resilience should benefit from stable rates and healthier credit backdrop.",
+      "reasoning": "WFC fits the preferred financials basket, pairing oversold conditions with solid valuation and constructive buy-side commentary.",
+      "position_size": "7%",
+      "entry_price": 75.64,
+      "stop_loss": 69,
+      "target_12m": 90,
+      "risk_reward_ratio": 2.16,
+      "thesis": "WFC can participate in a financials rebound if stable yields and credit conditions keep earnings revisions from worsening.",
       "thesis_invalidators": [
-        "Credit losses accelerate materially",
-        "Yield-curve inversion compresses net interest margin"
+        "Net interest margin pressure accelerates materially.",
+        "Credit losses rise enough to offset valuation support.",
+        "The stock loses 69 support and the downtrend steepens."
       ],
-      "thesis_status": "new"
+      "thesis_status": "new",
+      "financial_health": {
+        "altman_z": null,
+        "altman_zone": "N/A",
+        "piotroski": null,
+        "piotroski_strength": "N/A",
+        "health_note": "Low forward valuation and sector support help, though the current trend is weaker than C's."
+      }
     },
     {
       "rank": 6,
-      "name": "Citigroup",
-      "symbol": "C",
-      "sector": "stocks",
-      "confidence": 7,
-      "risk_score": 4,
-      "risk_adjusted_score": 5.8,
+      "name": "Freeport-McMoRan",
+      "symbol": "FCX",
+      "sector": "materials",
+      "confidence": 7.3,
+      "risk_score": 3.6,
+      "risk_adjusted_score": 6.2,
       "recommendation": "buy",
-      "reasoning": "RSI near oversold with low PEG and positive analyst skew supports recovery potential.",
-      "position_size": "5-7%",
-      "entry_price": 125.55,
-      "stop_loss": 118,
-      "target_12m": 144.02,
-      "risk_reward_ratio": 2.4,
-      "thesis": "Execution on wealth/prime-brokerage plan can unlock valuation catch-up versus peers.",
+      "reasoning": "FCX is one of the few names here still in an uptrend, and bullish copper-related news supports keeping a measured materials sleeve.",
+      "position_size": "6%",
+      "entry_price": 61.65,
+      "stop_loss": 56,
+      "target_12m": 74,
+      "risk_reward_ratio": 2.19,
+      "thesis": "FCX offers a cleaner cyclical exposure than most commodity-linked names because trend and sentiment are both still constructive.",
       "thesis_invalidators": [
-        "Execution slippage on strategic targets",
-        "Macro shock that hits investment banking flows"
+        "Copper demand expectations weaken enough to cut production and cash-flow estimates.",
+        "The stock loses the 56 area and breaks its uptrend.",
+        "Macro growth slows without offsetting supply constraints."
       ],
-      "thesis_status": "new"
+      "thesis_status": "new",
+      "financial_health": {
+        "altman_z": null,
+        "altman_zone": "N/A",
+        "piotroski": null,
+        "piotroski_strength": "N/A",
+        "health_note": "Trend strength is the main support here, while valuation is acceptable but not especially cheap."
+      }
     },
     {
       "rank": 7,
-      "name": "JPMorgan Chase",
-      "symbol": "JPM",
-      "sector": "stocks",
-      "confidence": 7,
-      "risk_score": 4,
-      "risk_adjusted_score": 5.8,
+      "name": "Netflix",
+      "symbol": "NFLX",
+      "sector": "communication_services",
+      "confidence": 7.1,
+      "risk_score": 3.8,
+      "risk_adjusted_score": 6.0,
       "recommendation": "buy",
-      "reasoning": "Quality balance sheet and earnings consistency with RSI reset make it core moderate holding.",
-      "position_size": "6-8%",
-      "entry_price": 302.1,
-      "stop_loss": 286,
-      "target_12m": 342.32,
-      "risk_reward_ratio": 2.5,
-      "thesis": "Franchise strength across consumer and capital-markets businesses supports steady compounding.",
+      "reasoning": "NFLX is washed out post-earnings with a still-acceptable growth multiple, making it a reasonable rebound candidate despite mixed commentary.",
+      "position_size": "6%",
+      "entry_price": 87.49,
+      "stop_loss": 79,
+      "target_12m": 105,
+      "risk_reward_ratio": 2.06,
+      "thesis": "A post-report reset can recover if subscriber and margin trends remain intact and the market stops derating premium media names.",
       "thesis_invalidators": [
-        "Credit-event driven provisioning spike",
-        "Material slowdown in fee and advisory revenues"
+        "Subscriber growth or engagement disappoints on the next update.",
+        "Competitive pressure materially compresses margins or guidance.",
+        "The stock fails to hold the high-70s support zone."
       ],
-      "thesis_status": "new"
+      "thesis_status": "new",
+      "financial_health": {
+        "altman_z": null,
+        "altman_zone": "N/A",
+        "piotroski": null,
+        "piotroski_strength": "N/A",
+        "health_note": "Forward valuation is not distressed, but the earnings overhang has already reset near-term expectations."
+      }
     },
     {
       "rank": 8,
-      "name": "Gilead Sciences",
-      "symbol": "GILD",
-      "sector": "stocks",
-      "confidence": 8,
-      "risk_score": 3,
-      "risk_adjusted_score": 6.5,
+      "name": "MercadoLibre",
+      "symbol": "MELI",
+      "sector": "consumer_internet",
+      "confidence": 7.0,
+      "risk_score": 3.9,
+      "risk_adjusted_score": 5.8,
       "recommendation": "buy",
-      "reasoning": "Lowest PEG in the screened universe with defensive healthcare profile and clear catalyst path.",
-      "position_size": "6-8%",
-      "entry_price": 131.33,
-      "stop_loss": 125,
-      "target_12m": 160,
-      "risk_reward_ratio": 2.8,
-      "thesis": "Undervalued cash-generative biotech with durable HIV franchise and pipeline optionality.",
+      "reasoning": "MELI remains a high-quality growth name and the post-margin dip looks manageable given strong-buy sentiment and near-PEG parity.",
+      "position_size": "5%",
+      "entry_price": 1632.52,
+      "stop_loss": 1490,
+      "target_12m": 1920,
+      "risk_reward_ratio": 2.02,
+      "thesis": "MELI can resume leadership if investors decide recent margin pressure was the cost of sustaining strong regional scale and revenue momentum.",
       "thesis_invalidators": [
-        "Pipeline setback in key late-stage program",
-        "Unexpected pricing pressure in core HIV products"
+        "Margins keep deteriorating without clear reinvestment payoff.",
+        "Latin American consumer or FX conditions weaken materially.",
+        "Price breaks below 1490 and fails to recover."
       ],
-      "thesis_status": "new"
+      "thesis_status": "new",
+      "financial_health": {
+        "altman_z": null,
+        "altman_zone": "N/A",
+        "piotroski": null,
+        "piotroski_strength": "N/A",
+        "health_note": "Growth valuation is reasonable relative to its quality, but this remains a higher-volatility name than the core positions."
+      }
     },
     {
       "rank": 9,
-      "name": "Mastercard",
-      "symbol": "MA",
-      "sector": "stocks",
-      "confidence": 7,
-      "risk_score": 3,
-      "risk_adjusted_score": 6.1,
+      "name": "SoFi Technologies",
+      "symbol": "SOFI",
+      "sector": "financial_technology",
+      "confidence": 6.8,
+      "risk_score": 4.4,
+      "risk_adjusted_score": 5.5,
       "recommendation": "buy",
-      "reasoning": "Quality compounder with strong cash flow and technical reset near support.",
-      "position_size": "5-7%",
-      "entry_price": 495.48,
-      "stop_loss": 470,
-      "target_12m": 575,
-      "risk_reward_ratio": 2.0,
-      "thesis": "Global payments secular growth plus pricing power should drive durable earnings compounding.",
+      "reasoning": "SOFI has bullish operational chatter and a still-manageable valuation, but the downtrend keeps this as a mid-size rather than core position.",
+      "position_size": "5%",
+      "entry_price": 15.75,
+      "stop_loss": 13.8,
+      "target_12m": 20,
+      "risk_reward_ratio": 2.18,
+      "thesis": "If product expansion and brand repositioning continue to lift engagement, SOFI can rebound sharply from oversold conditions.",
       "thesis_invalidators": [
-        "Cross-border volume slowdown persists",
-        "Unexpected regulatory fee constraints"
+        "Rebranding and product investments fail to improve growth quality.",
+        "Funding costs or credit performance worsen enough to hurt the narrative.",
+        "The stock breaks below 13.8 and does not stabilize."
       ],
-      "thesis_status": "new"
+      "thesis_status": "new",
+      "financial_health": {
+        "altman_z": null,
+        "altman_zone": "N/A",
+        "piotroski": null,
+        "piotroski_strength": "N/A",
+        "health_note": "Growth metrics are the draw here, but execution and credit sensitivity make risk materially higher than the large-bank picks."
+      }
     },
     {
       "rank": 10,
-      "name": "Johnson & Johnson",
-      "symbol": "JNJ",
-      "sector": "stocks",
-      "confidence": 6,
-      "risk_score": 3,
-      "risk_adjusted_score": 5.1,
+      "name": "3M",
+      "symbol": "MMM",
+      "sector": "industrials",
+      "confidence": 6.7,
+      "risk_score": 4.0,
+      "risk_adjusted_score": 5.5,
       "recommendation": "buy",
-      "reasoning": "Defensive healthcare exposure with oversold RSI improves portfolio balance for moderate profile.",
-      "position_size": "4-6%",
-      "entry_price": 221.32,
-      "stop_loss": 210,
-      "target_12m": 252.42,
-      "risk_reward_ratio": 2.7,
-      "thesis": "Diversified healthcare cash flows offer downside resilience with modest re-rating upside.",
+      "reasoning": "MMM merits inclusion as a newly added watchlist name because RSI 34.5, bullish analyst tone, and restructuring optionality create a credible industrial recovery setup.",
+      "position_size": "4%",
+      "entry_price": 143.29,
+      "stop_loss": 133,
+      "target_12m": 166,
+      "risk_reward_ratio": 2.21,
+      "thesis": "MMM can re-rate if restructuring execution and legal overhang normalization allow investors to focus on cleaner operating progress.",
       "thesis_invalidators": [
-        "Major litigation overhang worsens",
-        "Pipeline disappointments reduce medium-term growth"
+        "Settlement or restructuring costs re-expand and pressure estimates.",
+        "Industrial demand softens enough to offset internal improvement.",
+        "The stock loses 133 support and trend repair stalls."
       ],
-      "thesis_status": "new"
+      "thesis_status": "new",
+      "financial_health": {
+        "altman_z": null,
+        "altman_zone": "N/A",
+        "piotroski": null,
+        "piotroski_strength": "N/A",
+        "health_note": "The case is more turnaround-driven than balance-sheet-screen-driven, but news flow and technical setup have improved enough for a starter position."
+      }
     },
     {
       "rank": 11,
-      "name": "SPDR Gold Trust",
-      "symbol": "GLD",
-      "sector": "materials",
-      "confidence": 7,
-      "risk_score": 3,
-      "risk_adjusted_score": 6.1,
-      "recommendation": "buy",
-      "reasoning": "Materials hedge with stable momentum and macro support from diversified risk posture.",
-      "position_size": "7-9%",
-      "entry_price": 433.77,
-      "stop_loss": 410,
-      "target_12m": 480,
-      "risk_reward_ratio": 1.9,
-      "thesis": "Gold serves as portfolio ballast against macro shock while preserving upside in risk-off episodes.",
+      "name": "Home Depot",
+      "symbol": "HD",
+      "sector": "consumer_discretionary",
+      "confidence": 6.4,
+      "risk_score": 3.9,
+      "risk_adjusted_score": 5.2,
+      "recommendation": "hold",
+      "reasoning": "HD is oversold and fundamentally durable, but the upcoming earnings window and mixed housing sensitivity argue for patience.",
+      "position_size": "4%",
+      "entry_price": 317.45,
+      "stop_loss": 292,
+      "target_12m": 365,
+      "risk_reward_ratio": 1.87,
+      "thesis": "Home Depot remains a high-quality retail compounder, but confirmation after the near-term catalyst would improve the risk-adjusted entry.",
       "thesis_invalidators": [
-        "Real yields rise sharply above trend",
-        "Sustained USD strength regime returns"
+        "Earnings reset guidance lower and confirm weaker consumer project demand.",
+        "Housing and renovation demand weaken further despite lower expectations.",
+        "The stock breaks below 292 and volume expands on the downside."
       ],
-      "thesis_status": "new"
+      "thesis_status": "new",
+      "financial_health": {
+        "altman_z": null,
+        "altman_zone": "N/A",
+        "piotroski": null,
+        "piotroski_strength": "N/A",
+        "health_note": "Business quality is high, but the setup is event-dependent and less attractive than the top-ranked value opportunities."
+      }
     },
     {
       "rank": 12,
-      "name": "VanEck Gold Miners ETF",
-      "symbol": "GDX",
-      "sector": "materials",
-      "confidence": 6,
-      "risk_score": 4,
-      "risk_adjusted_score": 4.8,
+      "name": "Nu Holdings",
+      "symbol": "NU",
+      "sector": "financial_technology",
+      "confidence": 6.2,
+      "risk_score": 4.5,
+      "risk_adjusted_score": 4.9,
       "recommendation": "hold",
-      "reasoning": "Operational leverage to gold prices with higher volatility, suitable as smaller satellite position.",
-      "position_size": "4-6%",
-      "entry_price": 94.59,
-      "stop_loss": 88,
-      "target_12m": 112,
-      "risk_reward_ratio": 2.6,
-      "thesis": "Gold miner beta can outperform bullion in supportive macro, but requires tighter risk controls.",
+      "reasoning": "NU has strong-buy support and reasonable valuation, but earnings in four days make it a watchful starter rather than a fully sized buy today.",
+      "position_size": "4%",
+      "entry_price": 13.8,
+      "stop_loss": 12.5,
+      "target_12m": 16.8,
+      "risk_reward_ratio": 2.31,
+      "thesis": "NU stays interesting if user growth and monetization continue to scale without damaging credit quality, but the immediate catalyst raises variance.",
       "thesis_invalidators": [
-        "Gold price trend breaks down",
-        "Cost inflation compresses miner margins"
+        "Upcoming earnings disappoint on growth, margins, or credit quality.",
+        "Emerging-market macro or currency pressure weakens the operating backdrop.",
+        "The stock loses 12.5 support after the report."
       ],
-      "thesis_status": "new"
+      "thesis_status": "new",
+      "financial_health": {
+        "altman_z": null,
+        "altman_zone": "N/A",
+        "piotroski": null,
+        "piotroski_strength": "N/A",
+        "health_note": "Valuation is not demanding and sentiment is supportive, but event risk is high enough to keep sizing modest."
+      }
     }
   ],
   "historical_accuracy": {
     "previous_date": "2026-05-07",
-    "calls_made": 10,
-    "calls_correct": 6,
-    "accuracy_pct": 60,
-    "notable": "Historical baseline reused from previous run; this report prioritizes fresh technical reset signals and updates thesis tracking from today forward."
+    "calls_made": 11,
+    "calls_correct": 2,
+    "accuracy_pct": 18.18,
+    "notable": "Only NVDA and AMGN are above their prior entry prices in the provided baseline, so the recent book has not yet seen broad follow-through and argues for tighter risk control."
   },
   "warnings": [
-    "Several top picks are technical mean-reversion trades; use staged entries rather than all-in execution.",
-    "Earnings/event risk remains elevated in fintech and selected large-caps, so stop-loss discipline is required.",
-    "Financials concentration should be monitored to avoid overexposure to one macro factor.",
-    "Materials hedge depends on macro uncertainty; trim if real-yield trend rises materially.",
-    "If Fear & Greed deteriorates toward extreme fear quickly, preserve liquidity and defer adds."
+    "SPY is technically overbought, so broad beta chasing is unattractive even with a moderate VIX.",
+    "Respect the financials correlation cap and do not add JPM or BAC alongside C and WFC in this sleeve.",
+    "Several picks remain in downtrends, so entries should be staggered rather than deployed all at once.",
+    "Near-term catalyst risk is elevated in NU and HD due to approaching earnings windows."
   ],
   "sectors": {
     "stocks": {
       "sector": "stocks",
-      "timestamp": "2026-05-09T04:00:45Z",
-      "sector_summary": "US equities screened from the 25-candidate universe. Regime: MIXED. VIX=17.2, Fear&Greed=38 (Fear). SPY RSI=0 — oversold — index dip opportunity. Top entry opportunities by RSI oversold + fundamental quality shown below.",
+      "timestamp": "2026-05-10T03:46:16Z",
+      "sector_summary": "US equities screened from the 26-candidate universe. Regime: MIXED. VIX=17.2, Fear&Greed=47 (Neutral). SPY RSI=0 — oversold — index dip opportunity. Top entry opportunities by RSI oversold + fundamental quality shown below.",
       "sector_outlook": "neutral",
-      "top_pick": "PYPL",
-      "top_pick_reasoning": "Highest ranked by entry quality in screened universe (RSI=23)",
+      "top_pick": "C",
+      "top_pick_reasoning": "Uptrend support, low valuation, and bullish wealth-management news make C the cleanest financial mean-reversion setup.",
       "assets": [
         {
           "name": "PayPal Holdings",
@@ -337,21 +431,21 @@
           "week_52_low": "$41.63",
           "market_cap": "N/A",
           "volume_24h": "N/A",
-          "sentiment": "bullish",
-          "social_sentiment": "bullish",
+          "sentiment": "neutral",
+          "social_sentiment": "neutral",
           "social_buzz": "medium",
-          "confidence": 7,
+          "confidence": 78,
           "source_agreement": "high",
           "key_news": [
-            "Bitcoin Will Be 'Worth Over A Million Dollars Or More' In 'The Very Long Term,' ",
-            "The Money Guy Show: Buy Now, Pay Later Schemes Are Never Worth It"
+            "Banking groups and crypto advocates clash over stablecoin rewards in Senate bill",
+            "PayPal Faces a Brutal Reality: 3 Real Problems Hurting the Stock Now"
           ],
           "social_highlights": [
             "Pre-screened via yfinance universe",
             "Entry quality: excellent — oversold"
           ],
-          "recommendation": "N/A",
-          "reasoning": "excellent — oversold",
+          "recommendation": "buy",
+          "reasoning": "PYPL is deeply oversold with the cheapest valuation profile in the screen, making it the preferred payments exposure despite the downtrend.",
           "technicals": {
             "trend": "downtrend",
             "rsi": 23.4,
@@ -363,9 +457,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 7.8173,
-            "peg": 0.9115,
+            "peg": 0.8238,
             "ev_ebitda": null,
-            "verdict": "PEG=0.91"
+            "verdict": "PEG=0.82"
           },
           "fundamentals": {
             "revenue_growth": "7.2%",
@@ -391,18 +485,18 @@
           "sentiment": "bearish",
           "social_sentiment": "bearish",
           "social_buzz": "medium",
-          "confidence": 7,
+          "confidence": 71,
           "source_agreement": "high",
           "key_news": [
-            "Ken Burns on What He Will and Won’t Allow When Financing His Films",
-            "Jim Cramer on Netflix: “It’s Not a Buy, Buy, Buy”"
+            "Is It Time To Reassess Warner Bros. Discovery (WBD) After The Terminated Netflix",
+            "Ken Burns on What He Will and Won’t Allow When Financing His Films"
           ],
           "social_highlights": [
             "Pre-screened via yfinance universe",
             "Entry quality: excellent — oversold"
           ],
-          "recommendation": "N/A",
-          "reasoning": "excellent — oversold",
+          "recommendation": "buy",
+          "reasoning": "NFLX is washed out post-earnings with a still-acceptable growth multiple, making it a reasonable rebound candidate despite mixed commentary.",
           "technicals": {
             "trend": "downtrend",
             "rsi": 24.2,
@@ -414,9 +508,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 22.7763,
-            "peg": 1.2872,
+            "peg": 1.2758,
             "ev_ebitda": null,
-            "verdict": "PEG=1.29"
+            "verdict": "PEG=1.28"
           },
           "fundamentals": {
             "revenue_growth": "16.2%",
@@ -442,18 +536,18 @@
           "sentiment": "bullish",
           "social_sentiment": "bullish",
           "social_buzz": "medium",
-          "confidence": 7,
+          "confidence": 68,
           "source_agreement": "high",
           "key_news": [
-            "SoFi Just Reported 1 Number That Should Be on Every Investor's Radar",
-            "Affirm Posts a Beat and Raise as Volumes Surge. The Stock is Sliding Anyway."
+            "SoFi Stablecoin And Tech Rebrand Raise Questions On Valuation And Growth",
+            "Is SoFi Tech (SOFI) One of the Best High Volume Stocks According to Hedge Funds?"
           ],
           "social_highlights": [
             "Pre-screened via yfinance universe",
             "Entry quality: excellent — oversold"
           ],
-          "recommendation": "N/A",
-          "reasoning": "excellent — oversold",
+          "recommendation": "buy",
+          "reasoning": "SOFI has bullish operational chatter and a still-manageable valuation, but the downtrend keeps this as a mid-size rather than core position.",
           "technicals": {
             "trend": "downtrend",
             "rsi": 24.9,
@@ -465,9 +559,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 20.0318,
-            "peg": 1.0112,
+            "peg": 0.9831,
             "ev_ebitda": null,
-            "verdict": "PEG=1.01"
+            "verdict": "PEG=0.98"
           },
           "fundamentals": {
             "revenue_growth": "42.5%",
@@ -490,21 +584,21 @@
           "week_52_low": "$512.09",
           "market_cap": "N/A",
           "volume_24h": "N/A",
-          "sentiment": "neutral",
-          "social_sentiment": "neutral",
+          "sentiment": "bullish",
+          "social_sentiment": "bullish",
           "social_buzz": "medium",
-          "confidence": 7,
+          "confidence": 80,
           "source_agreement": "high",
           "key_news": [
-            "CoreWeave stock sinks after forecast miss",
-            "The AI arms race is eating into Big Tech's cash flow: Chart of the Day"
+            "Is Vistra (VST) the Best Utility Stock that Beat Earnings Estimates?",
+            "The Memory Shortage Is Coming for Big Tech's Bottom Line. This Company Will Hold"
           ],
           "social_highlights": [
             "Pre-screened via yfinance universe",
             "Entry quality: excellent — oversold"
           ],
-          "recommendation": "N/A",
-          "reasoning": "excellent — oversold",
+          "recommendation": "buy",
+          "reasoning": "META combines oversold technicals, sub-1 PEG, and strong-buy analyst support despite the recent big-tech margin concern headlines.",
           "technicals": {
             "trend": "downtrend",
             "rsi": 28.0,
@@ -516,9 +610,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 16.8471,
-            "peg": 0.9298,
+            "peg": 0.8893,
             "ev_ebitda": null,
-            "verdict": "PEG=0.93"
+            "verdict": "PEG=0.89"
           },
           "fundamentals": {
             "revenue_growth": "33.1%",
@@ -537,14 +631,14 @@
           "change_7d": "N/A",
           "change_30d": "N/A",
           "ytd_change": "N/A",
-          "week_52_high": "$82.41",
-          "week_52_low": "$68.87",
+          "week_52_high": "$83.09",
+          "week_52_low": "$68.19",
           "market_cap": "N/A",
           "volume_24h": "N/A",
           "sentiment": "neutral",
           "social_sentiment": "neutral",
           "social_buzz": "medium",
-          "confidence": 7,
+          "confidence": 75,
           "source_agreement": "high",
           "key_news": [
             "Week’s Best: Great Wealth Is Already Transferring",
@@ -554,22 +648,22 @@
             "Pre-screened via yfinance universe",
             "Entry quality: excellent — oversold"
           ],
-          "recommendation": "N/A",
-          "reasoning": "excellent — oversold",
+          "recommendation": "buy",
+          "reasoning": "WFC fits the preferred financials basket, pairing oversold conditions with solid valuation and constructive buy-side commentary.",
           "technicals": {
             "trend": "downtrend",
-            "rsi": 28.1,
+            "rsi": 28.9,
             "macd": "N/A",
-            "key_support": 68.87,
-            "key_resistance": 82.41,
+            "key_support": 68.19,
+            "key_resistance": 83.09,
             "entry_quality": "excellent — oversold"
           },
           "valuation": {
             "pe": null,
             "forward_pe": 9.6263,
-            "peg": 1.4279,
+            "peg": 1.343,
             "ev_ebitda": null,
-            "verdict": "PEG=1.43"
+            "verdict": "PEG=1.34"
           },
           "fundamentals": {
             "revenue_growth": "5.7%",
@@ -592,21 +686,21 @@
           "week_52_low": "$11.89",
           "market_cap": "N/A",
           "volume_24h": "N/A",
-          "sentiment": "bullish",
-          "social_sentiment": "bullish",
+          "sentiment": "neutral",
+          "social_sentiment": "neutral",
           "social_buzz": "medium",
-          "confidence": 7,
+          "confidence": 62,
           "source_agreement": "high",
           "key_news": [
-            "Ready Capital (RC) Reports Q1 Loss, Misses Revenue Estimates",
-            "Investors Heavily Search Nu Holdings Ltd. (NU): Here is What You Need to Know"
+            "Nu Holdings’ (NU) Nubank Appoints Carl Rivera as Chief Product Officer",
+            "Ready Capital (RC) Reports Q1 Loss, Misses Revenue Estimates"
           ],
           "social_highlights": [
             "Pre-screened via yfinance universe",
             "Entry quality: excellent — oversold"
           ],
-          "recommendation": "N/A",
-          "reasoning": "excellent — oversold",
+          "recommendation": "hold",
+          "reasoning": "NU has strong-buy support and reasonable valuation, but earnings in four days make it a watchful starter rather than a fully sized buy today.",
           "technicals": {
             "trend": "downtrend",
             "rsi": 29.6,
@@ -618,9 +712,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 12.0347,
-            "peg": 0.8333,
+            "peg": 0.8121,
             "ev_ebitda": null,
-            "verdict": "PEG=0.83"
+            "verdict": "PEG=0.81"
           },
           "fundamentals": {
             "revenue_growth": "43.9%",
@@ -646,18 +740,18 @@
           "sentiment": "bullish",
           "social_sentiment": "bullish",
           "social_buzz": "medium",
-          "confidence": 7,
+          "confidence": 82,
           "source_agreement": "high",
           "key_news": [
-            "Citigroup Plans Wealth Unit Hiring Push",
-            "Top Midday Decliners"
+            "Has The Strong 84% One Year Rally In Citigroup (C) Left Further Upside On The Ta",
+            "Citigroup Plans Wealth Unit Hiring Push"
           ],
           "social_highlights": [
             "Pre-screened via yfinance universe",
             "Entry quality: excellent — oversold"
           ],
-          "recommendation": "N/A",
-          "reasoning": "excellent — oversold",
+          "recommendation": "buy",
+          "reasoning": "Uptrend support, low valuation, and bullish wealth-management news make C the cleanest financial mean-reversion setup.",
           "technicals": {
             "trend": "uptrend",
             "rsi": 30.5,
@@ -669,12 +763,12 @@
           "valuation": {
             "pe": null,
             "forward_pe": 10.0563,
-            "peg": 0.7127,
+            "peg": 0.699,
             "ev_ebitda": null,
-            "verdict": "PEG=0.71"
+            "verdict": "PEG=0.70"
           },
           "fundamentals": {
-            "revenue_growth": "16.9%",
+            "revenue_growth": "15.9%",
             "gross_margin": "N/A",
             "fcf_margin": "N/A",
             "debt_equity": null,
@@ -700,8 +794,8 @@
           "confidence": 7,
           "source_agreement": "high",
           "key_news": [
-            "JPMorgan's Jamie Dimon Warns Of 'Some Kind Of Bond Crisis' — Blames Government D",
-            "Wall Street wants the best crypto talent but there's a catch"
+            "Banking groups and crypto advocates clash over stablecoin rewards in Senate bill",
+            "How The Oportun Financial (OPRT) Investment Story Is Shifting With Price Targets"
           ],
           "social_highlights": [
             "Pre-screened via yfinance universe",
@@ -720,9 +814,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 12.8362,
-            "peg": 1.6716,
+            "peg": 1.6036,
             "ev_ebitda": null,
-            "verdict": "PEG=1.67"
+            "verdict": "PEG=1.60"
           },
           "fundamentals": {
             "revenue_growth": "12.7%",
@@ -745,14 +839,14 @@
           "week_52_low": "$34.63",
           "market_cap": "N/A",
           "volume_24h": "N/A",
-          "sentiment": "neutral",
-          "social_sentiment": "neutral",
+          "sentiment": "bullish",
+          "social_sentiment": "bullish",
           "social_buzz": "medium",
           "confidence": 7,
           "source_agreement": "high",
           "key_news": [
-            "The best balance transfer credit cards for May 2026: Don't pay any interest unti",
-            "University of Michigan sentiment data raises economic warning signs"
+            "Banking groups and crypto advocates clash over stablecoin rewards in Senate bill",
+            "BofA's blunt call on Planet Fitness stock price after earnings"
           ],
           "social_highlights": [
             "Pre-screened via yfinance universe",
@@ -771,9 +865,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 10.1763,
-            "peg": 0.9506,
+            "peg": 0.9182,
             "ev_ebitda": null,
-            "verdict": "PEG=0.95"
+            "verdict": "PEG=0.92"
           },
           "fundamentals": {
             "revenue_growth": "8.1%",
@@ -799,18 +893,18 @@
           "sentiment": "bullish",
           "social_sentiment": "bullish",
           "social_buzz": "medium",
-          "confidence": 7,
+          "confidence": 76,
           "source_agreement": "high",
           "key_news": [
-            "The Nationwide Social Security Survey Says Most Americans Are Flying Blind on Be",
-            "Nationwide Survey: 83% of Americans Are Worried Social Security Won’t Survive, a"
+            "A $500,000 Dividend Portfolio That Pays More Than a Full-Time Minimum Wage Job",
+            "Johnson & Johnson CEO: America’s innovation advantage starts with health"
           ],
           "social_highlights": [
             "Pre-screened via yfinance universe",
             "Entry quality: excellent — oversold"
           ],
-          "recommendation": "N/A",
-          "reasoning": "excellent — oversold",
+          "recommendation": "buy",
+          "reasoning": "JNJ adds defensive balance to the list with bullish news flow, a reasonable multiple, and a less fragile setup than most oversold names.",
           "technicals": {
             "trend": "mixed",
             "rsi": 34.9,
@@ -822,9 +916,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 17.4125,
-            "peg": 2.9194,
+            "peg": 2.8765,
             "ev_ebitda": null,
-            "verdict": "PEG=2.92"
+            "verdict": "PEG=2.88"
           },
           "fundamentals": {
             "revenue_growth": "9.9%",
@@ -850,7 +944,7 @@
           "sentiment": "neutral",
           "social_sentiment": "neutral",
           "social_buzz": "medium",
-          "confidence": 7,
+          "confidence": 64,
           "source_agreement": "high",
           "key_news": [
             "Home Improvement Spending Is, Well, Improving. Lowe’s Stock Looks Cheap.",
@@ -860,8 +954,8 @@
             "Pre-screened via yfinance universe",
             "Entry quality: oversold — verify fundamentals"
           ],
-          "recommendation": "N/A",
-          "reasoning": "oversold — verify fundamentals",
+          "recommendation": "hold",
+          "reasoning": "HD is oversold and fundamentally durable, but the upcoming earnings window and mixed housing sensitivity argue for patience.",
           "technicals": {
             "trend": "downtrend",
             "rsi": 25.4,
@@ -872,10 +966,10 @@
           },
           "valuation": {
             "pe": null,
-            "forward_pe": 19.4687,
-            "peg": 2.8844,
+            "forward_pe": 19.4649,
+            "peg": 2.903,
             "ev_ebitda": null,
-            "verdict": "PEG=2.88"
+            "verdict": "PEG=2.90"
           },
           "fundamentals": {
             "revenue_growth": "-3.8%",
@@ -898,14 +992,14 @@
           "week_52_low": "$12.52",
           "market_cap": "N/A",
           "volume_24h": "N/A",
-          "sentiment": "bullish",
-          "social_sentiment": "bullish",
+          "sentiment": "neutral",
+          "social_sentiment": "neutral",
           "social_buzz": "medium",
           "confidence": 7,
           "source_agreement": "high",
           "key_news": [
-            "How High Gas Prices Need to Rise to Boost Electric Vehicle Sales",
-            "Tesla and Amazon Stock Could Lead This Sector Higher. (Hint: It Isn’t Tech.)"
+            "Assessing Rivian (RIVN) Valuation After Uber’s 50,000 Autonomous R2 SUV Robotaxi",
+            "Better EV Stock: Tesla vs. Rivian vs. Lucid"
           ],
           "social_highlights": [
             "Pre-screened via yfinance universe",
@@ -923,7 +1017,7 @@
           },
           "valuation": {
             "pe": null,
-            "forward_pe": -7.513,
+            "forward_pe": -7.5289,
             "peg": null,
             "ev_ebitda": null,
             "verdict": "Pre-fetched from yfinance"
@@ -952,7 +1046,7 @@
           "sentiment": "neutral",
           "social_sentiment": "neutral",
           "social_buzz": "medium",
-          "confidence": 7,
+          "confidence": 70,
           "source_agreement": "high",
           "key_news": [
             "MercadoLibre Pursues Scale As Q1 Revenue Beat Reshapes Profit Trade Off",
@@ -962,8 +1056,8 @@
             "Pre-screened via yfinance universe",
             "Entry quality: oversold — verify fundamentals"
           ],
-          "recommendation": "N/A",
-          "reasoning": "oversold — verify fundamentals",
+          "recommendation": "buy",
+          "reasoning": "MELI remains a high-quality growth name and the post-margin dip looks manageable given strong-buy sentiment and near-PEG parity.",
           "technicals": {
             "trend": "downtrend",
             "rsi": 29.9,
@@ -975,14 +1069,65 @@
           "valuation": {
             "pe": null,
             "forward_pe": 25.0658,
-            "peg": 1.1348,
+            "peg": 1.0063,
             "ev_ebitda": null,
-            "verdict": "PEG=1.13"
+            "verdict": "PEG=1.01"
           },
           "fundamentals": {
-            "revenue_growth": "44.6%",
+            "revenue_growth": "49.0%",
             "gross_margin": "N/A",
-            "fcf_margin": "-8.5%",
+            "fcf_margin": "-12.9%",
+            "debt_equity": null,
+            "verdict": "Pre-fetched from yfinance"
+          }
+        },
+        {
+          "name": "MMM",
+          "symbol": "MMM",
+          "watchlist": "industrials",
+          "current_price": "$143.29",
+          "change_24h": "N/A",
+          "change_7d": "N/A",
+          "change_30d": "N/A",
+          "ytd_change": "N/A",
+          "week_52_high": "$150.24",
+          "week_52_low": "$136.34",
+          "market_cap": "N/A",
+          "volume_24h": "N/A",
+          "sentiment": "bullish",
+          "social_sentiment": "bullish",
+          "social_buzz": "medium",
+          "confidence": 67,
+          "source_agreement": "high",
+          "key_news": [
+            "What Are Wall Street Analysts' Target Price for 3M Company Stock?",
+            "Is It Time To Reassess 3M (MMM) After PFAS Settlement And Restructuring Efforts?"
+          ],
+          "social_highlights": [
+            "Pre-screened via yfinance universe",
+            "Entry quality: oversold — verify fundamentals"
+          ],
+          "recommendation": "buy",
+          "reasoning": "MMM merits inclusion as a newly added watchlist name because RSI 34.5, bullish analyst tone, and restructuring optionality create a credible industrial recovery setup.",
+          "technicals": {
+            "trend": "downtrend",
+            "rsi": 34.5,
+            "macd": "N/A",
+            "key_support": 136.34,
+            "key_resistance": 150.24,
+            "entry_quality": "oversold — verify fundamentals"
+          },
+          "valuation": {
+            "pe": null,
+            "forward_pe": 15.159,
+            "peg": 1.5059,
+            "ev_ebitda": null,
+            "verdict": "PEG=1.51"
+          },
+          "fundamentals": {
+            "revenue_growth": "1.3%",
+            "gross_margin": "N/A",
+            "fcf_margin": "9.3%",
             "debt_equity": null,
             "verdict": "Pre-fetched from yfinance"
           }
@@ -1000,14 +1145,14 @@
           "week_52_low": "$235.84",
           "market_cap": "N/A",
           "volume_24h": "N/A",
-          "sentiment": "bullish",
-          "social_sentiment": "bullish",
+          "sentiment": "neutral",
+          "social_sentiment": "neutral",
           "social_buzz": "medium",
           "confidence": 7,
           "source_agreement": "high",
           "key_news": [
-            "2 Dividend Stocks to Double Up On Right Now",
-            "Amgen’s US$300m Biologics Push And What It Means For AMGN Stock"
+            "No additional headlines available",
+            "No additional headlines available"
           ],
           "social_highlights": [
             "Pre-screened via yfinance universe",
@@ -1026,9 +1171,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 14.123,
-            "peg": 2.1784,
+            "peg": 2.1923,
             "ev_ebitda": null,
-            "verdict": "PEG=2.18"
+            "verdict": "PEG=2.19"
           },
           "fundamentals": {
             "revenue_growth": "5.8%",
@@ -1077,14 +1222,14 @@
           "valuation": {
             "pe": null,
             "forward_pe": 16.9328,
-            "peg": 2.8119,
+            "peg": 2.7121,
             "ev_ebitda": null,
-            "verdict": "PEG=2.81"
+            "verdict": "PEG=2.71"
           },
           "fundamentals": {
-            "revenue_growth": "0.5%",
+            "revenue_growth": "15.4%",
             "gross_margin": "N/A",
-            "fcf_margin": "-0.6%",
+            "fcf_margin": "-2.3%",
             "debt_equity": null,
             "verdict": "Pre-fetched from yfinance"
           }
@@ -1128,9 +1273,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 21.7505,
-            "peg": 1.5699,
+            "peg": 1.5814,
             "ev_ebitda": null,
-            "verdict": "PEG=1.57"
+            "verdict": "PEG=1.58"
           },
           "fundamentals": {
             "revenue_growth": "15.8%",
@@ -1179,9 +1324,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 13.2859,
-            "peg": 1.4741,
+            "peg": 1.4615,
             "ev_ebitda": null,
-            "verdict": "PEG=1.47"
+            "verdict": "PEG=1.46"
           },
           "fundamentals": {
             "revenue_growth": "19.0%",
@@ -1230,14 +1375,14 @@
           "valuation": {
             "pe": null,
             "forward_pe": 13.6539,
-            "peg": 0.3804,
+            "peg": 0.3665,
             "ev_ebitda": null,
-            "verdict": "PEG=0.38"
+            "verdict": "PEG=0.37"
           },
           "fundamentals": {
-            "revenue_growth": "4.7%",
+            "revenue_growth": "4.4%",
             "gross_margin": "N/A",
-            "fcf_margin": "25.6%",
+            "fcf_margin": "30.2%",
             "debt_equity": null,
             "verdict": "Pre-fetched from yfinance"
           }
@@ -1281,9 +1426,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 21.4482,
-            "peg": 1.2831,
+            "peg": 1.2863,
             "ev_ebitda": null,
-            "verdict": "PEG=1.28"
+            "verdict": "PEG=1.29"
           },
           "fundamentals": {
             "revenue_growth": "18.3%",
@@ -1332,9 +1477,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 21.491,
-            "peg": 1.6786,
+            "peg": 1.6656,
             "ev_ebitda": null,
-            "verdict": "PEG=1.68"
+            "verdict": "PEG=1.67"
           },
           "fundamentals": {
             "revenue_growth": "17.1%",
@@ -1383,9 +1528,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 21.4181,
-            "peg": 1.4017,
+            "peg": 1.2799,
             "ev_ebitda": null,
-            "verdict": "PEG=1.40"
+            "verdict": "PEG=1.28"
           },
           "fundamentals": {
             "revenue_growth": "55.5%",
@@ -1434,9 +1579,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 11.5692,
-            "peg": 5.2806,
+            "peg": 5.1793,
             "ev_ebitda": null,
-            "verdict": "PEG=5.28"
+            "verdict": "PEG=5.18"
           },
           "fundamentals": {
             "revenue_growth": "4.9%",
@@ -1485,9 +1630,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 18.1948,
-            "peg": 0.8923,
+            "peg": 0.8846,
             "ev_ebitda": null,
-            "verdict": "PEG=0.89"
+            "verdict": "PEG=0.88"
           },
           "fundamentals": {
             "revenue_growth": "22.1%",
@@ -1536,9 +1681,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 16.3883,
-            "peg": 1.8206,
+            "peg": 1.8072,
             "ev_ebitda": null,
-            "verdict": "PEG=1.82"
+            "verdict": "PEG=1.81"
           },
           "fundamentals": {
             "revenue_growth": "5.7%",
@@ -1587,9 +1732,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 12.1702,
-            "peg": 1.0145,
+            "peg": 0.9865,
             "ev_ebitda": null,
-            "verdict": "PEG=1.01"
+            "verdict": "PEG=0.99"
           },
           "fundamentals": {
             "revenue_growth": "12.1%",
@@ -1603,11 +1748,11 @@
     },
     "materials": {
       "sector": "materials",
-      "timestamp": "2026-05-09T04:00:45Z",
+      "timestamp": "2026-05-10T03:46:16Z",
       "sector_summary": "Commodities and materials equities screened from the pre-fetch universe. Gold/energy/base-metals candidates with RSI and valuation data from yfinance. Regime: MIXED. Macro signal: mixed regime — sector-selective approach recommended.",
       "sector_outlook": "neutral",
       "top_pick": "FCX",
-      "top_pick_reasoning": "Highest ranked materials asset in screened universe",
+      "top_pick_reasoning": "FCX is one of the few names here still in an uptrend, and bullish copper-related news supports keeping a measured materials sleeve.",
       "assets": [
         {
           "name": "Freeport-McMoRan",
@@ -1625,7 +1770,7 @@
           "sentiment": "bullish",
           "social_sentiment": "bullish",
           "social_buzz": "medium",
-          "confidence": 7,
+          "confidence": 73,
           "source_agreement": "high",
           "key_news": [
             "Is Stronger Copper Output And A New Production Outlook Altering The Investment C",
@@ -1635,8 +1780,8 @@
             "Pre-screened via yfinance universe",
             "Entry quality: good — near support"
           ],
-          "recommendation": "N/A",
-          "reasoning": "good — near support",
+          "recommendation": "buy",
+          "reasoning": "FCX is one of the few names here still in an uptrend, and bullish copper-related news supports keeping a measured materials sleeve.",
           "technicals": {
             "trend": "uptrend",
             "rsi": 35.1,
@@ -1648,9 +1793,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 16.642,
-            "peg": 4.1003,
+            "peg": 4.1515,
             "ev_ebitda": null,
-            "verdict": "PEG=4.10"
+            "verdict": "PEG=4.15"
           },
           "fundamentals": {
             "revenue_growth": "8.8%",
@@ -1851,10 +1996,10 @@
           },
           "valuation": {
             "pe": null,
-            "forward_pe": 14.1859,
-            "peg": 1.4205,
+            "forward_pe": 14.1506,
+            "peg": 1.3246,
             "ev_ebitda": null,
-            "verdict": "PEG=1.42"
+            "verdict": "PEG=1.32"
           },
           "fundamentals": {
             "revenue_growth": "2.6%",
@@ -1954,9 +2099,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 14.3866,
-            "peg": 1.2075,
+            "peg": 1.2375,
             "ev_ebitda": null,
-            "verdict": "PEG=1.21"
+            "verdict": "PEG=1.24"
           },
           "fundamentals": {
             "revenue_growth": "-8.3%",
@@ -2005,9 +2150,9 @@
           "valuation": {
             "pe": null,
             "forward_pe": 13.063,
-            "peg": 1.1433,
+            "peg": 1.0557,
             "ev_ebitda": null,
-            "verdict": "PEG=1.14"
+            "verdict": "PEG=1.06"
           },
           "fundamentals": {
             "revenue_growth": "-5.3%",
@@ -2056,65 +2201,14 @@
           "valuation": {
             "pe": null,
             "forward_pe": 15.122,
-            "peg": 1.1067,
+            "peg": 0.8422,
             "ev_ebitda": null,
-            "verdict": "PEG=1.11"
+            "verdict": "PEG=0.84"
           },
           "fundamentals": {
-            "revenue_growth": "3.5%",
+            "revenue_growth": "2.3%",
             "gross_margin": "N/A",
-            "fcf_margin": "N/A",
-            "debt_equity": null,
-            "verdict": "Pre-fetched from yfinance"
-          }
-        },
-        {
-          "name": "Kinder Morgan",
-          "symbol": "KMI",
-          "watchlist": "energy",
-          "current_price": "$31.41",
-          "change_24h": "N/A",
-          "change_7d": "N/A",
-          "change_30d": "N/A",
-          "ytd_change": "N/A",
-          "week_52_high": "$42.86",
-          "week_52_low": "$19.96",
-          "market_cap": "N/A",
-          "volume_24h": "N/A",
-          "sentiment": "neutral",
-          "social_sentiment": "neutral",
-          "social_buzz": "medium",
-          "confidence": 7,
-          "source_agreement": "high",
-          "key_news": [
-            "No additional headlines available",
-            "No additional headlines available"
-          ],
-          "social_highlights": [
-            "Pre-screened via yfinance universe",
-            "Entry quality: fair"
-          ],
-          "recommendation": "N/A",
-          "reasoning": "fair",
-          "technicals": {
-            "trend": "mixed",
-            "rsi": 47.6,
-            "macd": "N/A",
-            "key_support": 19.96,
-            "key_resistance": 42.86,
-            "entry_quality": "fair"
-          },
-          "valuation": {
-            "pe": null,
-            "forward_pe": 20.7312,
-            "peg": 3.8727,
-            "ev_ebitda": null,
-            "verdict": "PEG=3.87"
-          },
-          "fundamentals": {
-            "revenue_growth": "13.8%",
-            "gross_margin": "N/A",
-            "fcf_margin": "9.4%",
+            "fcf_margin": "6.3%",
             "debt_equity": null,
             "verdict": "Pre-fetched from yfinance"
           }
@@ -2122,5 +2216,5 @@
       ]
     }
   },
-  "spy_price_at_report": null
+  "spy_price_at_report": 7398.93
 }

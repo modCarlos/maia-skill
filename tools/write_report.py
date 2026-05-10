@@ -43,6 +43,49 @@ REQUIRED_PICK = [
 ]
 
 
+def _normalize_score_0_10(value):
+    """Normalize agent-provided score values to a 0-10 scale.
+
+    Some runs incorrectly emit 0-100-style values (e.g. 82 instead of 8.2).
+    We treat any absolute value > 10 and <= 100 as percentage-style and divide by 10.
+    Values are then clamped to [0, 10].
+    """
+    if value is None:
+        return None
+    try:
+        score = float(value)
+    except (TypeError, ValueError):
+        return None
+
+    if abs(score) > 10 and abs(score) <= 100:
+        score = score / 10.0
+
+    score = max(0.0, min(10.0, score))
+    return round(score, 1)
+
+
+def normalize_pick_scores(data: dict) -> dict:
+    """Ensure confidence/risk scores are always on a 0-10 scale."""
+    picks = data.get("risk_adjusted_picks", [])
+    if not isinstance(picks, list):
+        return data
+
+    for pick in picks:
+        confidence = _normalize_score_0_10(pick.get("confidence"))
+        risk_score = _normalize_score_0_10(pick.get("risk_score"))
+
+        if confidence is not None:
+            pick["confidence"] = confidence
+        if risk_score is not None:
+            pick["risk_score"] = risk_score
+
+        # Always recompute the derived score from the normalized inputs.
+        if confidence is not None and risk_score is not None:
+            pick["risk_adjusted_score"] = round(confidence - (risk_score * 0.3), 1)
+
+    return data
+
+
 def validate(data: dict) -> list[str]:
     """Return a list of validation errors (empty = OK)."""
     errors = []
@@ -166,6 +209,8 @@ def main() -> None:
     except json.JSONDecodeError as exc:
         print(f"ERROR: Invalid JSON — {exc}", file=sys.stderr)
         sys.exit(1)
+
+    data = normalize_pick_scores(data)
 
     # Validate schema
     errors = validate(data)
