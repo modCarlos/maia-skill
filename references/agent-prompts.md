@@ -286,6 +286,10 @@ If `previous_theses` is non-empty, evaluate each previous pick's thesis:
 > - `altman_z.zone`: `"safe"` (Z > 2.99) | `"gray"` (1.81–2.99) | `"distress"` (< 1.81) | `null` (ETFs)
 > - `piotroski.score`: 0–9, `piotroski.strength`: `"strong"` (≥7) | `"neutral"` (3–6) | `"weak"` (≤2) | `null` (ETFs)
 
+> **Pre-fetched SEC risk factors**: When `SEC_RISK_CONTEXT` is provided, use it as the primary source for filing-backed risks (`Item 1A Risk Factors` from latest 10-K/20-F/40-F). **Do NOT run web searches to re-extract 10-K risks** unless a ticker has `error` or no extracted risk bullets.
+> - Prefer SEC bullets in `key_risks`
+> - If SEC data exists and conflicts with headlines, mention both and mark the conflict explicitly in `reasoning`
+
 > **Materials (Gold, Silver, Energy, Base Metals)** are covered by `tools/build_sectors.py` from pre-fetched data. Do NOT search for XAU/XAG prices or commodities data — it is already in the sectors JSON.
 
 ### Phase 2 — Strategy synthesis
