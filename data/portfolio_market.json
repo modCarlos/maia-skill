@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T06:49:17Z",
+  "generated_at": "2026-05-10T01:48:16Z",
   "positions": [
     {
       "symbol": "VOO",
@@ -17,7 +17,7 @@
       "pnl_pct": 36.42,
       "rsi_14": 75.4,
       "week_52_high": 678.04,
-      "week_52_low": 512.5064,
+      "week_52_low": 512.5065,
       "pct_from_52w_high": 0.0,
       "pct_from_52w_low": 32.3,
       "market_cap": null,
@@ -27,15 +27,17 @@
       "analyst_target": null,
       "analyst_upside": null,
       "recommendation_mean": null,
+      "altman_z": null,
+      "piotroski": null,
       "trend": "uptrend",
       "news_headlines": [
+        "Vanguard VOO vs. iShares IWO: How S&P 500 Stability Compares to Small-Cap Growth Potential",
         "How Should Investors React When the Market Drops 5% or More?",
         "Stock Funds Shake Off War Shock To Post Best Month Since 2020",
         "Should You Invest $1,000 In VOO Right Now?",
-        "VOO vs. QQQ: Which Index Fund Is the Better Buy Right Now?",
-        "How Lower ETF Fees Are Saving 401(k) Investors Thousands"
+        "VOO vs. QQQ: Which Index Fund Is the Better Buy Right Now?"
       ],
-      "news_sentiment": "neutral",
+      "news_sentiment": "bullish",
       "error": null
     },
     {
@@ -59,18 +61,35 @@
       "pct_from_52w_low": 342.62,
       "market_cap": 742233079808,
       "pe_ratio": 151.73,
-      "forward_pe": 35.280003,
-      "peg_ratio": 1.25,
-      "analyst_target": 433.02127,
-      "analyst_upside": -4.87,
-      "recommendation_mean": 1.5,
+      "forward_pe": 35.279404,
+      "peg_ratio": 1.1,
+      "analyst_target": 445.02084,
+      "analyst_upside": -2.23,
+      "recommendation_mean": 1.4902,
+      "altman_z": {
+        "score": 33.01,
+        "zone": "safe"
+      },
+      "piotroski": {
+        "score": 7,
+        "strength": "strong",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "ROA↑",
+          "Quality",
+          "CR↑",
+          "Margin↑",
+          "AssetTurn↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
-        "Intel stock hits fourth straight record high as Apple report fuels chip rally",
-        "Micron's monster run hits seventh straight record high",
-        "Advanced Micro Devices (AMD) Reports Q1 2026 Revenue of $10.3B Driven by Data Center Growth",
-        "Rackspace Technology Q1 Earnings Call Highlights",
-        "Advanced Micro Devices (AMD) – Among the 10 Best Stocks to Buy to Beat the S&P 500"
+        "AMD Rackspace AI Cloud Deal Targets Regulated Growth And Valuation Questions",
+        "AMD Stock Is Up 320% Over the Past Year. Should Investors Shift Their Attention Away From Nvidia?",
+        "Analysts turn heads with AMD stock forecast after massive rally",
+        "Jim Cramer Slams AMD Downgrade",
+        "Prediction: It's Not Too Late to Buy AMD Stock as Revenue Surges"
       ],
       "news_sentiment": "bullish",
       "error": null
@@ -95,19 +114,34 @@
       "pct_from_52w_high": -39.85,
       "pct_from_52w_low": 44.08,
       "market_cap": 563561234432,
-      "pe_ratio": 35.17953,
+      "pe_ratio": 35.242805,
       "forward_pe": 24.394617,
-      "peg_ratio": 1.23,
+      "peg_ratio": 1.24,
       "analyst_target": 242.10205,
       "analyst_upside": 23.55,
-      "recommendation_mean": 1.55814,
+      "recommendation_mean": 1.51163,
+      "altman_z": {
+        "score": 2.8,
+        "zone": "gray"
+      },
+      "piotroski": {
+        "score": 5,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "Debt↓",
+          "CR↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
-        "Coinbase & Cloudflare's AI-driven layoffs might not be rewarded",
-        "Should workers be worried about more AI layoffs? Acting Labor Secy. responds",
+        "Goldman Sachs spots a troubling big tech trend",
         "Oracle Layoffs And AI Focus Weigh On Costs Culture And Valuation",
         "Laid-off Oracle workers tried to negotiate better severance. Oracle said no.",
-        "US Equity Indexes Advance This Week as AI-Trade Boosts Technology While Iran Ceasefire Continues"
+        "US Equity Indexes Advance This Week as AI-Trade Boosts Technology While Iran Ceasefire Continues",
+        "Coinbase & Cloudflare's AI-driven layoffs might not be rewarded"
       ],
       "news_sentiment": "neutral",
       "error": null
@@ -134,17 +168,34 @@
       "market_cap": 1039656222720,
       "pe_ratio": 47.776554,
       "forward_pe": 39.69348,
-      "peg_ratio": 4.85,
-      "analyst_target": 136.68294,
-      "analyst_upside": 4.79,
+      "peg_ratio": 4.86,
+      "analyst_target": 137.09756,
+      "analyst_upside": 5.11,
       "recommendation_mean": 1.44186,
+      "altman_z": {
+        "score": 6.79,
+        "zone": "safe"
+      },
+      "piotroski": {
+        "score": 7,
+        "strength": "strong",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "ROA↑",
+          "Quality",
+          "Debt↓",
+          "NoDilution",
+          "Margin↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
-        "Are rising travel costs making 2026 the year of the staycation?",
+        "Nvidia, Boeing Lead 5 Dow Stocks Near Buy Points. They Share This Flaw.",
         "Walmart (WMT) – Among the 10 Best Inflation-Hedge Stocks to Buy for 2026",
         "Magnite Inc. (MGNI) CTV Momentum Strengthens Its Small-Cap Value Case",
-        "RBC Raises Price Target on Target to $132 Ahead of Q1: Is the Turnaround Finally Resonating?",
-        "Funko Q1 Earnings Call Highlights"
+        "Are rising travel costs making 2026 the year of the staycation?",
+        "RBC Raises Price Target on Target to $132 Ahead of Q1: Is the Turnaround Finally Resonating?"
       ],
       "news_sentiment": "bullish",
       "error": null
@@ -171,17 +222,31 @@
       "market_cap": 5230436024320,
       "pe_ratio": 43.828922,
       "forward_pe": 19.068007,
-      "peg_ratio": 0.66,
+      "peg_ratio": 0.68,
       "analyst_target": 269.16544,
       "analyst_upside": 25.08,
       "recommendation_mean": 1.28333,
+      "altman_z": {
+        "score": 68.23,
+        "zone": "safe"
+      },
+      "piotroski": {
+        "score": 4,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Debt↓",
+          "NoDilution"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
-        "CoreWeave stock sinks after forecast miss",
-        "Micron's monster run hits seventh straight record high",
-        "Why Nvidia stock looks cheap ahead of its high-stakes earnings report this month",
-        "The SpaceX IPO Isn't Here Yet -- but This 2026 IPO Is, and It Looks Like a Steal",
-        "Why Vanguard's Flagship Tech ETF Might Not Be a Good Investment if You're Interested in AI Stocks"
+        "The Nasdaq's top winners are now running hotter than in 2000: Chart of the Day",
+        "Dell’s Pangea 5 Win Highlights AI And Energy Computing Ambitions",
+        "Fed Chair Jerome Powell Just Broke 75 Years of Precedent With a Move That's Likely to Frustrate President Trump. How Will This Impact the Stock Market?",
+        "AMD Stock Is Up 320% Over the Past Year. Should Investors Shift Their Attention Away From Nvidia?",
+        "The Dollar’s Next Move Will Make or Break Your EDIV Returns Over the Next 12 Months"
       ],
       "news_sentiment": "neutral",
       "error": null
@@ -208,17 +273,33 @@
       "market_cap": 4855869472768,
       "pe_ratio": 30.572083,
       "forward_pe": 27.709045,
-      "peg_ratio": 1.57,
-      "analyst_target": 427.02173,
-      "analyst_upside": 6.54,
+      "peg_ratio": 1.58,
+      "analyst_target": 427.88712,
+      "analyst_upside": 6.76,
       "recommendation_mean": 1.39683,
+      "altman_z": {
+        "score": 18.72,
+        "zone": "safe"
+      },
+      "piotroski": {
+        "score": 6,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "CR↑",
+          "NoDilution",
+          "Margin↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
-        "Why Nvidia stock looks cheap ahead of its high-stakes earnings report this month",
-        "The AI arms race is eating into Big Tech's cash flow: Chart of the Day",
-        "Thailand's SiamAI denies exporting US AI servers to China",
-        "Synaptics Q3 Earnings Call Highlights",
-        "Mizuho Boosts Alphabet Target as Google (GOOG) Cloud Outlook Strengthens"
+        "Is Now a Good Time to Buy Amazon Stock?",
+        "Alphabet’s $17b Bond Sale Reshapes AI Spending And Valuation Story",
+        "Goldman Sachs spots a troubling big tech trend",
+        "The Best AI Software Stock to Buy in 2026",
+        "Apple dominated the 2026 chip war. Google’s partners are left to buy scraps"
       ],
       "news_sentiment": "neutral",
       "error": null
@@ -249,15 +330,30 @@
       "analyst_target": 826.69104,
       "analyst_upside": 35.61,
       "recommendation_mean": 1.34921,
+      "altman_z": {
+        "score": 8.26,
+        "zone": "safe"
+      },
+      "piotroski": {
+        "score": 5,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "NoDilution",
+          "Margin↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
-        "CoreWeave stock sinks after forecast miss",
-        "The AI arms race is eating into Big Tech's cash flow: Chart of the Day",
-        "Advanced Micro Devices (AMD) Reports Q1 2026 Revenue of $10.3B Driven by Data Center Growth",
-        "Meta Platforms Swaps Jobs For AI Infrastructure And Investor Uncertainty",
-        "Federal judge rejects immediate approval of Elon Musk’s $1.5m SEC settlement"
+        "Goldman Sachs spots a troubling big tech trend",
+        "Jim Cramer Says “I Wish I’d Bought Dell for My Charitable Trust a Hundred Points Ago”",
+        "Jim Cramer on Meta: “I Think It’s Time to Stop Worrying and Start Buying”",
+        "Apple dominated the 2026 chip war. Google’s partners are left to buy scraps",
+        "Micron Stock Is Up 700% Over the Past Year. Its Shares Still Look Relatively Cheap."
       ],
-      "news_sentiment": "bullish",
+      "news_sentiment": "neutral",
       "error": null
     },
     {
@@ -282,19 +378,35 @@
       "market_cap": 2933248491520,
       "pe_ratio": 32.578255,
       "forward_pe": 27.625109,
-      "peg_ratio": 1.91,
-      "analyst_target": 310.8095,
-      "analyst_upside": 13.98,
+      "peg_ratio": 1.89,
+      "analyst_target": 311.55145,
+      "analyst_upside": 14.26,
       "recommendation_mean": 1.34848,
+      "altman_z": {
+        "score": 6.05,
+        "zone": "safe"
+      },
+      "piotroski": {
+        "score": 6,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "ROA↑",
+          "Quality",
+          "Debt↓",
+          "Margin↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
-        "Mother's Day flowers to come with a bigger price tag this year",
-        "The AI arms race is eating into Big Tech's cash flow: Chart of the Day",
-        "‘Devil Wears Prada’ Kicks Off What Could Be Hollywood’s Best Summer Since ‘Barbenheimer’",
-        "Magnite Inc. (MGNI) CTV Momentum Strengthens Its Small-Cap Value Case",
-        "Weekly Wrap: Bitcoin Struggles To Stay Above $80,000"
+        "Is Now a Good Time to Buy Amazon Stock?",
+        "Amazon CEO Andy Jassy Has Good News and Bad News for Nvidia Investors",
+        "7 Reasons to Buy Amazon Stock Right Now",
+        "Goldman Sachs spots a troubling big tech trend",
+        "Jim Cramer Says “Amazon is Winning, and It’s Winning Big”"
       ],
-      "news_sentiment": "bearish",
+      "news_sentiment": "neutral",
       "error": null
     },
     {
@@ -312,26 +424,41 @@
       "pnl_amount": -57.35,
       "pnl_pct": -2.69,
       "rsi_14": 53.9,
-      "week_52_high": 539.8253,
+      "week_52_high": 539.8252,
       "week_52_low": 356.77,
       "pct_from_52w_high": -23.1,
       "pct_from_52w_low": 16.36,
       "market_cap": 3083691884544,
       "pe_ratio": 24.753725,
       "forward_pe": 21.448198,
-      "peg_ratio": 1.28,
-      "analyst_target": 562.07465,
-      "analyst_upside": 35.4,
+      "peg_ratio": 1.29,
+      "analyst_target": 561.5561,
+      "analyst_upside": 35.28,
       "recommendation_mean": 1.30909,
+      "altman_z": {
+        "score": 8.48,
+        "zone": "safe"
+      },
+      "piotroski": {
+        "score": 5,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "Debt↓",
+          "CR↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
-        "Coinbase & Cloudflare's AI-driven layoffs might not be rewarded",
-        "Thailand's SiamAI denies exporting US AI servers to China",
-        "ServiceNow Aims To Be Enterprise AI Control Plane After Knowledge 2026",
-        "Why Memory-Chip Stocks Are Top Of Mind For Investors",
-        "Sector Update: Tech Stocks Gain Late Afternoon"
+        "Paul Tudor Jones Warns Trump-Era Market Boom Could End in a 35% Crash. Here’s Why He’s Still Buying Stocks",
+        "Microsoft Deal Strengthens Black Hills Corporation (BKH) Prospects as a High Growth Utility Stock to Buy",
+        "Goldman Sachs spots a troubling big tech trend",
+        "Jim Cramer on Salesforce: “It’s Tough Because the Market Hates Software”",
+        "Microsoft’s AI Safety Role Grows As Infrastructure Hiring And Security Risks Mount"
       ],
-      "news_sentiment": "neutral",
+      "news_sentiment": "bullish",
       "error": null
     },
     {
@@ -356,19 +483,34 @@
       "market_cap": 1608764358656,
       "pe_ratio": 400.3271,
       "forward_pe": 168.95036,
-      "peg_ratio": 5.49,
+      "peg_ratio": 5.9,
       "analyst_target": 412.25366,
       "analyst_upside": -3.76,
       "recommendation_mean": 2.3617,
+      "altman_z": {
+        "score": 19.11,
+        "zone": "safe"
+      },
+      "piotroski": {
+        "score": 5,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "CR↑",
+          "Margin↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
-        "Everything you need to know from the first 2 weeks of the Musk v. OpenAI trial ",
-        "Federal judge rejects immediate approval of Elon Musk’s $1.5m SEC settlement",
-        "Intel CEO Who Won Over Trump and Musk Now Needs a Breakthrough",
-        "Tesla’s Record Semi Order Tests Valuation And Freight Growth Expectations",
-        "S&P 500 Posts Sixth Consecutive Weekly Gain, Hits Highs in Tech-Led Rise"
+        "Wedbush sends blunt message on Elon Musk's Tesla and Intel deal",
+        "Tesla (TSLA) Is Up 7.9% After China EV Rebound and Terafab AI Chip Push - What's Changed",
+        "Is Cathie Wood Still Hopeful About Tesla (TSLA)?",
+        "Elon Musk Fires Back As Calls To Tax Billionaires Grow Louder, Says Paid More Taxes Than 'Anyone In History'",
+        "Elon Musk Says 'I Hope Civilization's Around in 100 Years' But If It Is, Expect It To Look Super Different With 10x's More Humanoid Robots Than Humans"
       ],
-      "news_sentiment": "bullish",
+      "news_sentiment": "neutral",
       "error": null
     },
     {
@@ -394,16 +536,32 @@
       "pe_ratio": null,
       "forward_pe": 81.60652,
       "peg_ratio": 1.36,
-      "analyst_target": 80.93333,
-      "analyst_upside": -35.21,
-      "recommendation_mean": 2.66667,
+      "analyst_target": 82.6,
+      "analyst_upside": -33.88,
+      "recommendation_mean": 2.625,
+      "altman_z": {
+        "score": 5.23,
+        "zone": "safe"
+      },
+      "piotroski": {
+        "score": 6,
+        "strength": "neutral",
+        "signals": [
+          "OCF>0",
+          "ROA↑",
+          "Quality",
+          "Debt↓",
+          "CR↑",
+          "Margin↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
-        "Intel stock hits fourth straight record high as Apple report fuels chip rally",
-        "What CoreWeave's Q1 earnings mean for Nvidia",
-        "The SpaceX IPO Isn't Here Yet -- but This 2026 IPO Is, and It Looks Like a Steal",
-        "Why Vanguard's Flagship Tech ETF Might Not Be a Good Investment if You're Interested in AI Stocks",
-        "Intel (INTC) Is Up 16.0% After Securing Preliminary Apple Chip Manufacturing Pact - What's Changed"
+        "Wedbush sends blunt message on Elon Musk's Tesla and Intel deal",
+        "Fed Chair Jerome Powell Just Broke 75 Years of Precedent With a Move That's Likely to Frustrate President Trump. How Will This Impact the Stock Market?",
+        "AMD Stock Is Up 320% Over the Past Year. Should Investors Shift Their Attention Away From Nvidia?",
+        "EVs Are Out of the Headlines and That's Exactly Why These 2 Stocks Are Buys",
+        "The AI Stock That Gets Stronger Every Time the Market Sells Off"
       ],
       "news_sentiment": "bullish",
       "error": null
@@ -434,13 +592,27 @@
       "analyst_target": 61.07879,
       "analyst_upside": 38.38,
       "recommendation_mean": 2.23684,
+      "altman_z": {
+        "score": 3.67,
+        "zone": "safe"
+      },
+      "piotroski": {
+        "score": 4,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "NoDilution"
+        ]
+      },
       "trend": "downtrend",
       "news_headlines": [
+        "Nike Says It’s ‘Deeply Committed’ to Snkrs App After Speculation Swirls",
+        "Nike Tariff Lawsuit Tests Pricing Story And Brand Trust For Investors",
         "Nike faces class action lawsuit accusing it of pocketing tariff refunds while charging consumers more",
         "Nike Faces Class Action Over Tariff Refunds",
-        "Nike sued by consumers seeking tariff refund repayment",
-        "Nike sued by consumers for not refunding tariff costs",
-        "Wells Fargo Downgrades Nike to Equal Weight: GLP-1 Mega-Trend Threatens the Athletic Wear Giant"
+        "Nike sued by consumers seeking tariff refund repayment"
       ],
       "news_sentiment": "bearish",
       "error": null
@@ -467,10 +639,22 @@
       "market_cap": 20203173888,
       "pe_ratio": 35.0,
       "forward_pe": 20.031797,
-      "peg_ratio": 1.02,
+      "peg_ratio": 0.98,
       "analyst_target": 21.25,
       "analyst_upside": 34.92,
       "recommendation_mean": 2.70833,
+      "altman_z": {
+        "score": 0.35,
+        "zone": "distress"
+      },
+      "piotroski": {
+        "score": 2,
+        "strength": "weak",
+        "signals": [
+          "ROA>0",
+          "Debt↓"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
         "Is SoFi Tech (SOFI) One of the Best High Volume Stocks According to Hedge Funds?",
@@ -503,18 +687,33 @@
       "pct_from_52w_low": 45.51,
       "market_cap": 599235035136,
       "pe_ratio": 24.338385,
-      "forward_pe": 14.185895,
-      "peg_ratio": 1.36,
+      "forward_pe": 14.150599,
+      "peg_ratio": 1.32,
       "analyst_target": 166.27274,
       "analyst_upside": 15.01,
       "recommendation_mean": 2.36,
+      "altman_z": {
+        "score": 4.53,
+        "zone": "safe"
+      },
+      "piotroski": {
+        "score": 5,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "Debt↓",
+          "NoDilution"
+        ]
+      },
       "trend": "downtrend",
       "news_headlines": [
+        "Fragile cease-fire holds in Middle East while U.S. awaits Iranian war response",
         "Argus Sees Stronger Production Growth Ahead for Exxon Mobil (XOM)",
         "US Equity Indexes Advance This Week as AI-Trade Boosts Technology While Iran Ceasefire Continues",
         "Is BP Cleaning House to Stay Independent or Setting Itself Up to Be Bought?",
-        "Shell warns the global oil market is tightening fast",
-        "Shell Q1 Earnings Beat on Trading Strength, Revenues Miss"
+        "Shell warns the global oil market is tightening fast"
       ],
       "news_sentiment": "bullish",
       "error": null
@@ -540,18 +739,35 @@
       "pct_from_52w_low": 34.89,
       "market_cap": 336011001856,
       "pe_ratio": 24.615114,
-      "forward_pe": 19.034168,
-      "peg_ratio": 0.87,
+      "forward_pe": 19.008532,
+      "peg_ratio": 0.86,
       "analyst_target": 189.56624,
       "analyst_upside": 35.35,
       "recommendation_mean": 1.35714,
+      "altman_z": {
+        "score": 1.8,
+        "zone": "distress"
+      },
+      "piotroski": {
+        "score": 7,
+        "strength": "strong",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "ROA↑",
+          "Quality",
+          "NoDilution",
+          "Margin↑",
+          "AssetTurn↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
+        "Stock Market Week Ahead: Dow Jones Breakout Watch",
         "US Said to Suspect Nvidia Chips Smuggled to Alibaba Via Thailand",
         "RealReal Q1 Earnings Call Highlights",
         "Nvidia pulled deeper into U.S.-China chip tensions",
-        "Apple Likely to see Major Inflection Point in Growth, Wedbush Says",
-        "Top Midday Stories: Nvidia Chips Said at Center of Smuggling Probe; TCI Slashes Nearly All Its $8 Billion Microsoft Stake"
+        "Apple Likely to see Major Inflection Point in Growth, Wedbush Says"
       ],
       "news_sentiment": "bullish",
       "error": null
@@ -578,10 +794,24 @@
       "market_cap": 67076272128,
       "pe_ratio": 23.389832,
       "forward_pe": 12.034744,
-      "peg_ratio": 0.85,
+      "peg_ratio": 0.81,
       "analyst_target": 19.87143,
       "analyst_upside": 44.0,
       "recommendation_mean": 1.38095,
+      "altman_z": {
+        "score": 0.89,
+        "zone": "distress"
+      },
+      "piotroski": {
+        "score": 4,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "Debt↓"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
         "Nu Holdings’ (NU) Nubank Appoints Carl Rivera as Chief Product Officer",
@@ -615,10 +845,24 @@
       "market_cap": 52745478144,
       "pe_ratio": 71.66216,
       "forward_pe": 14.386557,
-      "peg_ratio": 1.21,
-      "analyst_target": 64.79167,
-      "analyst_upside": 22.18,
-      "recommendation_mean": 2.64,
+      "peg_ratio": 1.24,
+      "analyst_target": 64.33333,
+      "analyst_upside": 21.31,
+      "recommendation_mean": 2.68,
+      "altman_z": {
+        "score": 1.44,
+        "zone": "distress"
+      },
+      "piotroski": {
+        "score": 4,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "Debt↓"
+        ]
+      },
       "trend": "downtrend",
       "news_headlines": [
         "Occidental Petroleum (OXY) Beats Guidance in Key Segments during Q1 2026",
@@ -651,18 +895,36 @@
       "pct_from_52w_low": 16.88,
       "market_cap": 187577958400,
       "pe_ratio": 17.2832,
-      "forward_pe": 14.483621,
-      "peg_ratio": 3.08,
-      "analyst_target": 129.3207,
-      "analyst_upside": 19.72,
+      "forward_pe": 14.462134,
+      "peg_ratio": 2.94,
+      "analyst_target": 130.66553,
+      "analyst_upside": 20.96,
       "recommendation_mean": 1.54839,
+      "altman_z": {
+        "score": 2.43,
+        "zone": "gray"
+      },
+      "piotroski": {
+        "score": 8,
+        "strength": "strong",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "ROA↑",
+          "Quality",
+          "Debt↓",
+          "NoDilution",
+          "Margin↑",
+          "AssetTurn↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
+        "Disney CFO Hugh Johnston Says Relationship With NFL Remains 'Broad And Deep' Even As ESPN Yet To Engage In NFL Renewal Talks",
+        "Walt Disney Insiders Added US$2.11m Of Stock To Their Holdings",
         "‘Devil Wears Prada’ Kicks Off What Could Be Hollywood’s Best Summer Since ‘Barbenheimer’",
         "S&P 500 Posts Sixth Consecutive Weekly Gain, Hits Highs in Tech-Led Rise",
-        "Playtika Q1 Earnings Call Highlights",
-        "As Jet Fuel Spikes 100%, 2 Mega-Cap CEOs Reveal the Staycation Trade Has Already Started",
-        "Terence Corcoran: The Devil wears subsidized Prada"
+        "Playtika Q1 Earnings Call Highlights"
       ],
       "news_sentiment": "bearish",
       "error": null
@@ -689,10 +951,24 @@
       "market_cap": 134340575232,
       "pe_ratio": 36.203518,
       "forward_pe": 42.40585,
-      "peg_ratio": 111.16,
-      "analyst_target": 149.4,
-      "analyst_upside": 3.69,
-      "recommendation_mean": 2.04348,
+      "peg_ratio": 112.09,
+      "analyst_target": 150.65,
+      "analyst_upside": 4.55,
+      "recommendation_mean": 1.95652,
+      "altman_z": {
+        "score": 2.2,
+        "zone": "gray"
+      },
+      "piotroski": {
+        "score": 4,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "AssetTurn↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
         "Are Wall Street Analysts Bullish on Prologis Stock?",
@@ -730,6 +1006,8 @@
       "analyst_target": null,
       "analyst_upside": null,
       "recommendation_mean": null,
+      "altman_z": null,
+      "piotroski": null,
       "trend": "unknown",
       "news_headlines": [],
       "news_sentiment": "neutral",
@@ -757,19 +1035,35 @@
       "market_cap": 187111440384,
       "pe_ratio": 93.44882,
       "forward_pe": 55.344666,
-      "peg_ratio": 24.91,
+      "peg_ratio": 25.72,
       "analyst_target": 269.52,
       "analyst_upside": 13.55,
       "recommendation_mean": 1.62963,
+      "altman_z": {
+        "score": 1.62,
+        "zone": "distress"
+      },
+      "piotroski": {
+        "score": 6,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "ROA↑",
+          "Debt↓",
+          "Margin↑",
+          "AssetTurn↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
-        "Rocket Lab stock blasts back to record highs",
         "Dow Jones Futures: Market At Highs With Iran, Trump-Xi Summit In Focus; Apple, Nvidia, Boeing In Buy Areas",
+        "Nvidia, Boeing Lead 5 Dow Stocks Near Buy Points. They Share This Flaw.",
         "Airbus Lands $19 Bil Order; Boeing Wins Air Force One Contract",
-        "Joby Aviation Incurs Loss in Q1, Surpasses Revenue Estimates",
-        "Embraer's Q1 Earnings Miss Estimates, Revenues Increase Y/Y"
+        "Rocket Lab stock blasts back to record highs",
+        "Joby Aviation Incurs Loss in Q1, Surpasses Revenue Estimates"
       ],
-      "news_sentiment": "bearish",
+      "news_sentiment": "neutral",
       "error": null
     },
     {
@@ -793,11 +1087,27 @@
       "pct_from_52w_low": 53.34,
       "market_cap": 83510878208,
       "pe_ratio": 44.21318,
-      "forward_pe": 33.3658,
-      "peg_ratio": 2.18,
-      "analyst_target": 95.68571,
-      "analyst_upside": -16.12,
-      "recommendation_mean": 2.72093,
+      "forward_pe": 33.356533,
+      "peg_ratio": 2.56,
+      "analyst_target": 105.5,
+      "analyst_upside": -7.51,
+      "recommendation_mean": 2.69767,
+      "altman_z": {
+        "score": 6.89,
+        "zone": "safe"
+      },
+      "piotroski": {
+        "score": 6,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "Debt↓",
+          "NoDilution",
+          "AssetTurn↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
         "Fortinet (FTNT) Upgraded to Buy: What Does It Mean for the Stock?",
@@ -830,18 +1140,32 @@
       "pct_from_52w_low": 22.16,
       "market_cap": 19095560192,
       "pe_ratio": null,
-      "forward_pe": -7.5129576,
+      "forward_pe": -7.5288687,
       "peg_ratio": null,
-      "analyst_target": 18.11538,
-      "analyst_upside": 27.39,
+      "analyst_target": 18.15385,
+      "analyst_upside": 27.66,
       "recommendation_mean": 2.57692,
+      "altman_z": {
+        "score": -1.41,
+        "zone": "distress"
+      },
+      "piotroski": {
+        "score": 4,
+        "strength": "neutral",
+        "signals": [
+          "ROA↑",
+          "Quality",
+          "Margin↑",
+          "AssetTurn↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
+        "Assessing Rivian (RIVN) Valuation After Uber’s 50,000 Autonomous R2 SUV Robotaxi Commitment",
+        "Better EV Stock: Tesla vs. Rivian vs. Lucid",
         "How High Gas Prices Need to Rise to Boost Electric Vehicle Sales",
         "Tesla and Amazon Stock Could Lead This Sector Higher. (Hint: It Isn’t Tech.)",
-        "1 Surprising Reason Rivian Stock Is a Buy Before the SpaceX IPO",
-        "Tesla Rival Lucid Eyes 2027 Affordable EV Ramp Against Model Y, Rivian R2",
-        "Rivian gets serious about challenging Tesla FSD with latest move"
+        "1 Surprising Reason Rivian Stock Is a Buy Before the SpaceX IPO"
       ],
       "news_sentiment": "neutral",
       "error": null
@@ -868,17 +1192,34 @@
       "market_cap": 148738539520,
       "pe_ratio": 23.310257,
       "forward_pe": 12.170209,
-      "peg_ratio": 0.98,
+      "peg_ratio": 0.99,
       "analyst_target": 268.2532,
       "analyst_upside": 47.54,
       "recommendation_mean": 1.59524,
+      "altman_z": {
+        "score": 2.49,
+        "zone": "gray"
+      },
+      "piotroski": {
+        "score": 7,
+        "strength": "strong",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "ROA↑",
+          "Quality",
+          "NoDilution",
+          "Margin↑",
+          "AssetTurn↑"
+        ]
+      },
       "trend": "downtrend",
       "news_headlines": [
+        "Jim Cramer on Salesforce: “It’s Tough Because the Market Hates Software”",
         "Coinbase & Cloudflare's AI-driven layoffs might not be rewarded",
         "Salesforce AI Shift Agentforce Operations Links Product Adoption To Valuation",
         "Adobe Falls 27% YTD, Trades at a Discount: What Should Investors Do?",
-        "Top Big Data Stocks Powering the AI Boom as Analytics Demand Surges",
-        "Is Wall Street Bullish or Bearish on Salesforce Stock?"
+        "Top Big Data Stocks Powering the AI Boom as Analytics Demand Surges"
       ],
       "news_sentiment": "bullish",
       "error": null
@@ -905,17 +1246,31 @@
       "market_cap": 204221448192,
       "pe_ratio": 10.6890955,
       "forward_pe": 13.599023,
-      "peg_ratio": 5.0,
-      "analyst_target": 47.4059,
-      "analyst_upside": 2.9,
+      "peg_ratio": 3.37,
+      "analyst_target": 47.316727,
+      "analyst_upside": 2.71,
       "recommendation_mean": 2.35714,
+      "altman_z": {
+        "score": 2.15,
+        "zone": "gray"
+      },
+      "piotroski": {
+        "score": 4,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "CR↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
+        "Is This News From Novo Nordisk a Warning for Eli Lilly Shareholders?",
         "Amazon Pharmacy Access To Ozempic Pills Tests Novo Nordisk Pricing Power",
         "Sector Update: Healthcare Stocks Lower Late Afternoon",
         "Eli Lilly's Retatrutide Is So Hot, The Unlaunched Weight-Loss Drug Is Already Getting Knocked Off",
-        "Novo Nordisk India Sales Jump After Price Cuts",
-        "European Stocks Decline in Friday Trading; Middle East Ceasefire Tenuous Amid Rising US-Iran Tensions"
+        "Novo Nordisk India Sales Jump After Price Cuts"
       ],
       "news_sentiment": "bearish",
       "error": null
@@ -941,11 +1296,23 @@
       "pct_from_52w_low": 72.22,
       "market_cap": 47992639488,
       "pe_ratio": 82.00581,
-      "forward_pe": 15.284946,
+      "forward_pe": 15.433704,
       "peg_ratio": 0.8,
-      "analyst_target": 175.7088,
-      "analyst_upside": 24.57,
+      "analyst_target": 175.65315,
+      "analyst_upside": 24.53,
       "recommendation_mean": 1.48485,
+      "altman_z": {
+        "score": 1.27,
+        "zone": "distress"
+      },
+      "piotroski": {
+        "score": 2,
+        "strength": "weak",
+        "signals": [
+          "ROA>0",
+          "NoDilution"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
         "Baidu Chip Unit Targets $14.7 Billion Valuation In IPO Push",
@@ -983,13 +1350,28 @@
       "analyst_target": 179.3636,
       "analyst_upside": 36.73,
       "recommendation_mean": 2.87879,
+      "altman_z": {
+        "score": 5.9,
+        "zone": "safe"
+      },
+      "piotroski": {
+        "score": 5,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "CR↑",
+          "NoDilution"
+        ]
+      },
       "trend": "downtrend",
       "news_headlines": [
+        "Chip Wilson’s Activist Push Puts Lululemon’s Future Direction Under Scrutiny",
         "Nike Faces Class Action Over Tariff Refunds",
         "Wells Fargo Downgrades Nike to Equal Weight: GLP-1 Mega-Trend Threatens the Athletic Wear Giant",
         "Lululemon Athletica Inc. (LULU) On Edge Amid Next CEO Squabbles",
-        "Retail stability hinges on disciplined transformation, deeper consumer connection",
-        "Lululemon (LULU) Stock Sinks As Market Gains: Here's Why"
+        "Retail stability hinges on disciplined transformation, deeper consumer connection"
       ],
       "news_sentiment": "bearish",
       "error": null
@@ -1020,6 +1402,8 @@
       "analyst_target": null,
       "analyst_upside": null,
       "recommendation_mean": null,
+      "altman_z": null,
+      "piotroski": null,
       "trend": "uptrend",
       "news_headlines": [
         "3 Market Themes Driving Stocks Right Now: AI, Alt Energy and Commodities",
@@ -1053,17 +1437,31 @@
       "market_cap": 8829492224,
       "pe_ratio": 43.064518,
       "forward_pe": 6.0645432,
-      "peg_ratio": 0.49,
+      "peg_ratio": 0.51,
       "analyst_target": 14.86042,
       "analyst_upside": 11.31,
-      "recommendation_mean": 2.15385,
+      "recommendation_mean": 2.19231,
+      "altman_z": {
+        "score": 0.68,
+        "zone": "distress"
+      },
+      "piotroski": {
+        "score": 4,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "AssetTurn↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
+        "With Spirit gone, what could this mean for passenger throughput numbers?",
         "Airbnb Boosts Annual Sales Outlook While Spending Picks Up",
         "Is American Airlines Group (AAL) Price Recovery Creating An Opportunity For Investors?",
         "You’re Going to Miss Spirit Airlines. Why Cheap Flights Are Going Extinct.",
-        "Warren Buffett’s 1992 ‘Kamikaze Pricing’ warning came true at 3 a.m. on May 2",
-        "Airfares skyrocket as much as 218% on Spirit Airlines’ busiest routes within just 48 hours of its May 2 liquidation"
+        "Warren Buffett’s 1992 ‘Kamikaze Pricing’ warning came true at 3 a.m. on May 2"
       ],
       "news_sentiment": "bearish",
       "error": null
@@ -1089,15 +1487,31 @@
       "pct_from_52w_low": 52.48,
       "market_cap": 44549296128,
       "pe_ratio": 58.476562,
-      "forward_pe": 15.259223,
-      "peg_ratio": 0.8,
-      "analyst_target": 86.97951,
-      "analyst_upside": 16.21,
+      "forward_pe": 15.246231,
+      "peg_ratio": 0.85,
+      "analyst_target": 89.2478,
+      "analyst_upside": 19.24,
       "recommendation_mean": 1.58696,
+      "altman_z": {
+        "score": 2.91,
+        "zone": "gray"
+      },
+      "piotroski": {
+        "score": 6,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "Debt↓",
+          "NoDilution",
+          "Margin↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
-        "Coinbase & Cloudflare's AI-driven layoffs might not be rewarded",
         "Sector Update: Financial Stocks Decline Late Afternoon",
+        "Coinbase & Cloudflare's AI-driven layoffs might not be rewarded",
         "Sector Update: Financial Stocks Decline Friday Afternoon",
         "Block Earnings Show How the Company Is Leaning Into AI As a Catalyst for Its Business",
         "Jack Dorsey touts Block's AI-driven restructuring"
@@ -1131,13 +1545,32 @@
       "analyst_target": 463.4514,
       "analyst_upside": 12.58,
       "recommendation_mean": 1.47368,
+      "altman_z": {
+        "score": 3.08,
+        "zone": "safe"
+      },
+      "piotroski": {
+        "score": 9,
+        "strength": "strong",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "ROA↑",
+          "Quality",
+          "Debt↓",
+          "CR↑",
+          "NoDilution",
+          "Margin↑",
+          "AssetTurn↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
-        "Tech stocks today: Chip stocks surge on report of Apple-Intel deal, rekindled AI trade",
-        "Micron's monster run hits seventh straight record high",
-        "China exports jump 14.1% as AI boom outpaces war disruptions",
-        "Goldman Sachs Is Jim Cramer's 'Big Winner' — Plus A Chip Stock With 'More Business Than They Can Handle'",
-        "Intel CEO Who Won Over Trump and Musk Now Needs a Breakthrough"
+        "Asia emerges as primary target for global equity bulls seeking next growth leg",
+        "Jim Cramer on Taiwan Semi: “They Have More Business Than They Can Handle”",
+        "This Fund Sold Out of Klaviyo Before a Brutal 32% Post-Earnings Drop",
+        "Apple dominated the 2026 chip war. Google’s partners are left to buy scraps",
+        "Apple Intel Chip Deal Reshapes Supply Chain And Valuation Debate"
       ],
       "news_sentiment": "bullish",
       "error": null
@@ -1165,16 +1598,32 @@
       "pe_ratio": 30.309158,
       "forward_pe": 27.449793,
       "peg_ratio": 1.56,
-      "analyst_target": 411.2525,
-      "analyst_upside": 3.58,
+      "analyst_target": 418.46933,
+      "analyst_upside": 5.39,
       "recommendation_mean": 1.42424,
+      "altman_z": {
+        "score": 18.56,
+        "zone": "safe"
+      },
+      "piotroski": {
+        "score": 6,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "CR↑",
+          "NoDilution",
+          "Margin↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
-        "Why Nvidia stock looks cheap ahead of its high-stakes earnings report this month",
-        "The AI arms race is eating into Big Tech's cash flow: Chart of the Day",
-        "Thailand's SiamAI denies exporting US AI servers to China",
-        "Synaptics Q3 Earnings Call Highlights",
-        "Mizuho Boosts Alphabet Target as Google (GOOG) Cloud Outlook Strengthens"
+        "Is Now a Good Time to Buy Amazon Stock?",
+        "Alphabet’s $17b Bond Sale Reshapes AI Spending And Valuation Story",
+        "Goldman Sachs spots a troubling big tech trend",
+        "The Best AI Software Stock to Buy in 2026",
+        "Apple dominated the 2026 chip war. Google’s partners are left to buy scraps"
       ],
       "news_sentiment": "neutral",
       "error": null
@@ -1201,10 +1650,24 @@
       "market_cap": 316188983296,
       "pe_ratio": 22.324192,
       "forward_pe": 19.46488,
-      "peg_ratio": 2.95,
-      "analyst_target": 406.51514,
-      "analyst_upside": 28.06,
+      "peg_ratio": 2.9,
+      "analyst_target": 406.57578,
+      "analyst_upside": 28.08,
       "recommendation_mean": 1.88889,
+      "altman_z": {
+        "score": 5.56,
+        "zone": "safe"
+      },
+      "piotroski": {
+        "score": 4,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "Debt↓"
+        ]
+      },
       "trend": "downtrend",
       "news_headlines": [
         "Home Improvement Spending Is, Well, Improving. Lowe’s Stock Looks Cheap.",
@@ -1242,13 +1705,29 @@
       "analyst_target": 398.31458,
       "analyst_upside": 24.95,
       "recommendation_mean": 1.34211,
+      "altman_z": {
+        "score": 7.36,
+        "zone": "safe"
+      },
+      "piotroski": {
+        "score": 6,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "Debt↓",
+          "NoDilution",
+          "AssetTurn↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
+        "Visa Just Beat Earnings Expectations. Here's the Bigger Story Investors Should Watch",
         "Spain's Bizum heads to the high street to take on Visa and Mastercard",
         "Visa Just Posted Its Strongest Revenue Growth Since 2022. Is the Stock a Buy After Earnings?",
         "FIS Tops Q1 Earnings on Banking Solutions Growth, Margin Expansion",
-        "Visa (V) Valuation Check As Share Price Swings And Premium P/E Invite Fresh Scrutiny",
-        "Affirm Q3 Earnings Beat on Strong GMV Growth & Higher Transactions"
+        "Visa (V) Valuation Check As Share Price Swings And Premium P/E Invite Fresh Scrutiny"
       ],
       "news_sentiment": "bullish",
       "error": null
@@ -1275,17 +1754,32 @@
       "market_cap": 119588716544,
       "pe_ratio": 80.09924,
       "forward_pe": 34.81247,
-      "peg_ratio": 1.79,
+      "peg_ratio": 1.77,
       "analyst_target": 105.61765,
       "analyst_upside": 0.66,
       "recommendation_mean": 2.41026,
+      "altman_z": {
+        "score": 2.8,
+        "zone": "gray"
+      },
+      "piotroski": {
+        "score": 5,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "Debt↓",
+          "AssetTurn↑"
+        ]
+      },
       "trend": "uptrend",
       "news_headlines": [
+        "Dutch Bros Q1 Earnings Call Highlights",
+        "A Mom Complains Her College Graduate Daughter Is Wasting Money On Starbucks. Dave Ramsey Asks, 'In 30 Days, You Want To Fix 4 Years Of Damage?'",
         "Fast food chains brace for wary consumers",
         "After a big win in the burger showdown, Burger King eyes taking on McDonald's Egg McMuffin",
-        "Dutch Bros' Limited-Time Offers Contributed to Q1 Beat, But Competitive Overhang Remains, RBC Says",
-        "Krispy Kreme 1Q Adjusted EBITDA Jumps 38% Amid Turnaround",
-        "A Look At Starbucks (SBUX) Valuation As Shares Show Building Momentum"
+        "Dutch Bros' Limited-Time Offers Contributed to Q1 Beat, But Competitive Overhang Remains, RBC Says"
       ],
       "news_sentiment": "bullish",
       "error": null

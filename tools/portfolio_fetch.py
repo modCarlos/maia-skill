@@ -93,6 +93,152 @@ def fetch_news(ticker_obj) -> list[str]:
         return []
 
 # ---------------------------------------------------------------------------
+# Financial health scores (free — yfinance balance sheet / income / cashflow)
+# ---------------------------------------------------------------------------
+def _safe_get(df, *keys):
+    """Try multiple possible row labels, return first float found or None."""
+    for k in keys:
+        try:
+            val = df.loc[k].iloc[0]
+            if pd.notna(val) and val != 0:
+                return float(val)
+        except (KeyError, IndexError):
+            pass
+    return None
+
+def _safe_get2(df, *keys):
+    """Same but returns (current, prior) tuple for YoY comparisons."""
+    for k in keys:
+        try:
+            row = df.loc[k]
+            cur = float(row.iloc[0]) if pd.notna(row.iloc[0]) else None
+            pri = float(row.iloc[1]) if len(row) > 1 and pd.notna(row.iloc[1]) else None
+            if cur is not None:
+                return cur, pri
+        except (KeyError, IndexError):
+            pass
+    return None, None
+
+
+def calc_altman_z(tkr) -> dict | None:
+    """
+    Altman Z-Score for public companies.
+    Z = 1.2*X1 + 1.4*X2 + 3.3*X3 + 0.6*X4 + 1.0*X5
+    Safe > 2.99 | Gray 1.81-2.99 | Distress < 1.81
+    """
+    try:
+        bs = tkr.balance_sheet
+        inc = tkr.income_stmt
+        if bs is None or bs.empty or inc is None or inc.empty:
+            return None
+
+        total_assets = _safe_get(bs, "Total Assets")
+        if not total_assets:
+            return None
+
+        cur_assets  = _safe_get(bs, "Current Assets")
+        cur_liab    = _safe_get(bs, "Current Liabilities")
+        ret_earn    = _safe_get(bs, "Retained Earnings")
+        total_liab  = _safe_get(bs, "Total Liabilities Net Minority Interest",
+                                    "Total Liabilities")
+        ebit        = _safe_get(inc, "EBIT", "Operating Income")
+        revenue     = _safe_get(inc, "Total Revenue", "Revenue")
+        market_cap  = tkr.info.get("marketCap") if tkr.info else None
+
+        working_cap = (cur_assets - cur_liab) if (cur_assets and cur_liab) else None
+
+        x1 = working_cap / total_assets if working_cap is not None else 0
+        x2 = ret_earn    / total_assets if ret_earn    else 0
+        x3 = ebit        / total_assets if ebit        else 0
+        x4 = (market_cap / total_liab)  if (market_cap and total_liab) else 0
+        x5 = revenue     / total_assets if revenue     else 0
+
+        z = round(1.2*x1 + 1.4*x2 + 3.3*x3 + 0.6*x4 + 1.0*x5, 2)
+        if z > 2.99:
+            zone = "safe"
+        elif z > 1.81:
+            zone = "gray"
+        else:
+            zone = "distress"
+
+        return {"score": z, "zone": zone}
+    except Exception:
+        return None
+
+
+def calc_piotroski(tkr) -> dict | None:
+    """
+    Piotroski F-Score (0-9). Higher = stronger fundamentals.
+    >= 7 strong | 3-6 neutral | <= 2 weak
+    """
+    try:
+        bs  = tkr.balance_sheet
+        inc = tkr.income_stmt
+        cf  = tkr.cashflow
+        if any(x is None or (hasattr(x, 'empty') and x.empty) for x in [bs, inc, cf]):
+            return None
+
+        total_assets_c, total_assets_p = _safe_get2(bs, "Total Assets")
+        if not total_assets_c:
+            return None
+
+        net_income_c, _  = _safe_get2(inc, "Net Income")
+        ocf_c,  _        = _safe_get2(cf,  "Operating Cash Flow", "Cash Flow From Continuing Operating Activities")
+        roa_c  = (net_income_c / total_assets_c) if (net_income_c and total_assets_c) else None
+
+        net_income_p, _  = _safe_get2(inc, "Net Income")
+        net_income_p = float(inc.loc["Net Income"].iloc[1]) if "Net Income" in inc.index and len(inc.loc["Net Income"]) > 1 else None
+        roa_p = (net_income_p / total_assets_p) if (net_income_p and total_assets_p) else None
+
+        gross_c, gross_p = _safe_get2(inc, "Gross Profit")
+        rev_c,   rev_p   = _safe_get2(inc, "Total Revenue", "Revenue")
+
+        lt_debt_c, lt_debt_p = _safe_get2(bs, "Long Term Debt")
+        cur_assets_c, cur_assets_p = _safe_get2(bs, "Current Assets")
+        cur_liab_c,   cur_liab_p  = _safe_get2(bs, "Current Liabilities")
+        shares_c, shares_p = _safe_get2(bs, "Ordinary Shares Number", "Share Issued")
+
+        cr_c = (cur_assets_c / cur_liab_c) if (cur_assets_c and cur_liab_c) else None
+        cr_p = (cur_assets_p / cur_liab_p) if (cur_assets_p and cur_liab_p) else None
+        lev_c = (lt_debt_c / total_assets_c) if (lt_debt_c and total_assets_c) else None
+        lev_p = (lt_debt_p / total_assets_p) if (lt_debt_p and total_assets_p) else None
+        gm_c  = (gross_c / rev_c) if (gross_c and rev_c) else None
+        gm_p  = (gross_p / rev_p) if (gross_p and rev_p) else None
+        at_c  = (rev_c / total_assets_c) if (rev_c and total_assets_c) else None
+        at_p  = (rev_p / total_assets_p) if (rev_p and total_assets_p) else None
+        accrual = ((ocf_c / total_assets_c) - roa_c) if (ocf_c and roa_c and total_assets_c) else None
+
+        score = 0
+        details = []
+
+        # Profitability
+        if roa_c is not None and roa_c > 0:       score += 1; details.append("ROA>0")
+        if ocf_c is not None and ocf_c > 0:       score += 1; details.append("OCF>0")
+        if roa_c and roa_p and roa_c > roa_p:     score += 1; details.append("ROA↑")
+        if accrual is not None and accrual > 0:   score += 1; details.append("Quality")
+
+        # Leverage / Liquidity
+        if lev_c and lev_p and lev_c < lev_p:    score += 1; details.append("Debt↓")
+        if cr_c  and cr_p  and cr_c  > cr_p:     score += 1; details.append("CR↑")
+        if shares_c and shares_p and shares_c <= shares_p: score += 1; details.append("NoDilution")
+
+        # Efficiency
+        if gm_c and gm_p and gm_c > gm_p:        score += 1; details.append("Margin↑")
+        if at_c and at_p and at_c > at_p:         score += 1; details.append("AssetTurn↑")
+
+        if score >= 7:
+            strength = "strong"
+        elif score >= 3:
+            strength = "neutral"
+        else:
+            strength = "weak"
+
+        return {"score": score, "strength": strength, "signals": details}
+    except Exception:
+        return None
+
+
+# ---------------------------------------------------------------------------
 # Per-ticker fetch
 # ---------------------------------------------------------------------------
 def fetch_ticker(entry: dict) -> dict:
@@ -126,6 +272,8 @@ def fetch_ticker(entry: dict) -> dict:
         "analyst_target": None,
         "analyst_upside": None,
         "recommendation_mean": None,
+        "altman_z": None,
+        "piotroski": None,
         "trend": "unknown",
         "news_headlines": [],
         "news_sentiment": "neutral",
@@ -183,6 +331,10 @@ def fetch_ticker(entry: dict) -> dict:
         if result["analyst_target"] and current:
             result["analyst_upside"] = round((result["analyst_target"] - current) / current * 100, 2)
         result["recommendation_mean"] = info.get("recommendationMean")  # 1=strong buy, 5=strong sell
+
+        # Financial health scores
+        result["altman_z"]  = calc_altman_z(tkr)
+        result["piotroski"] = calc_piotroski(tkr)
 
         # News
         headlines = fetch_news(tkr)
