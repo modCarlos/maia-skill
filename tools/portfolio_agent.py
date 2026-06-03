@@ -173,7 +173,14 @@ def call_ollama(context: str, attempt: int) -> str:
         timeout=480,
     )
     resp.raise_for_status()
-    return resp.json()["message"]["content"]
+    result = resp.json()
+    content = result.get("message", {}).get("content", "")
+    if not content or not content.strip():
+        # Mostrar respuesta completa para debug
+        print(f"   ⚠️  Respuesta vacía de Ollama. done_reason={result.get('done_reason')} done={result.get('done')}", file=sys.stderr)
+        print(f"   eval_count={result.get('eval_count')} prompt_eval_count={result.get('prompt_eval_count')}", file=sys.stderr)
+        raise json.JSONDecodeError("Respuesta vacía del modelo", "", 0)
+    return content
 
 
 def repair_json(text: str) -> str:
@@ -238,6 +245,11 @@ def main():
 
     context = compress_portfolio(market_data, portfolio)
     print(f"   Contexto: {len(context):,} chars", file=sys.stderr)
+
+    # Si el contexto es demasiado largo, truncar noticias para caber en context window
+    if len(context) > 12000:
+        print(f"   ⚠️  Contexto largo — truncando headlines para reducir tokens", file=sys.stderr)
+        context = context[:12000] + "\n[...context truncated to fit model context window...]"
 
     for attempt in range(1, MAX_RETRIES + 1):
         print(f"   Intento {attempt}/{MAX_RETRIES}...", file=sys.stderr)
