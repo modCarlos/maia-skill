@@ -210,7 +210,7 @@ def call_ollama(context: str, attempt: int) -> str:
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user",   "content": context + correction},
             ],
-            "options": {"temperature": 0.2, "num_predict": 6000},
+            "options": {"temperature": 0.2, "num_predict": 2500},
             "stream": False,
         },
         timeout=480,
