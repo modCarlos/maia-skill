@@ -78,9 +78,52 @@ REQUIRED JSON STRUCTURE:
 
 # ─── Helpers ──────────────────────────────────────────────────────────────────
 
+MAX_POSITIONS_PER_BATCH = 20  # modelo local no puede manejar más de ~20 posiciones a la vez
+
+
+def prioritize_portfolio(portfolio: list, market_data: dict, max_pos: int = MAX_POSITIONS_PER_BATCH) -> list:
+    """Prioriza las posiciones más críticas cuando el portfolio es muy grande.
+    Orden: pérdidas grandes → RSI alto (sobrecomprado) → ganancias extremas → resto.
+    """
+    if len(portfolio) <= max_pos:
+        return portfolio
+
+    pos_by_sym = {p.get("symbol"): p for p in market_data.get("positions", [])}
+
+    def urgency_score(entry):
+        sym = entry.get("symbol", "")
+        mkt = pos_by_sym.get(sym, {})
+        pnl_pct = mkt.get("pnl_pct") or 0
+        rsi = mkt.get("rsi_14") or 50
+        buy_p = entry.get("buyPrice") or entry.get("buy_price") or 1
+        qty = entry.get("quantity") or 1
+        curr_p = mkt.get("current_price") or buy_p
+        position_value = curr_p * qty
+
+        # Puntuación de urgencia: mayor = más urgente
+        score = 0
+        if pnl_pct < -15: score += 100    # pérdida severa
+        if pnl_pct < -5:  score += 50     # pérdida moderada
+        if rsi > 75:       score += 60     # sobrecomprado, riesgo de caída
+        if rsi < 30:       score += 40     # oversold, posible rebote
+        if pnl_pct > 50:   score += 30     # ganancia grande — revisar si tomar ganancias
+        score += position_value / 1000     # posiciones más grandes tienen más impacto
+        return -score  # negativo para ordenar descending
+
+    sorted_portfolio = sorted(portfolio, key=urgency_score)
+    print(f"   ℹ️  Portfolio grande ({len(portfolio)} posiciones) — analizando top {max_pos} más críticas", file=sys.stderr)
+    excluded = [e["symbol"] for e in sorted_portfolio[max_pos:]]
+    print(f"   Excluidas (menor urgencia): {', '.join(excluded)}", file=sys.stderr)
+    return sorted_portfolio[:max_pos]
+
+
 def compress_portfolio(market_data: dict, portfolio: list) -> str:
     """Construye contexto comprimido del portfolio para el LLM."""
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+    # Priorizar si hay demasiadas posiciones
+    portfolio = prioritize_portfolio(portfolio, market_data)
+
     lines = [f"DATE: {today}", "", "=== PORTFOLIO POSITIONS ==="]
 
     positions = market_data.get("positions", [])
@@ -140,8 +183,8 @@ def compress_portfolio(market_data: dict, portfolio: list) -> str:
             lines.append(f"  fundamentals: {' | '.join(fundamentals)}")
 
         lines.append(f"  news: {news_s}")
-        for h in headlines[:2]:
-            lines.append(f"    → {h[:90]}")
+        for h in headlines[:1]:  # solo 1 headline para reducir tokens
+            lines.append(f"    → {h[:80]}")
 
     # Portfolio totals
     total_pnl = round(total_value - total_cost, 2)
@@ -156,7 +199,7 @@ def call_ollama(context: str, attempt: int) -> str:
     if attempt > 1:
         correction = (
             f"\n\n⚠️ ATTEMPT {attempt}/{MAX_RETRIES}: Previous output was invalid. "
-            "Output ONLY valid JSON. Analyze ALL positions. Do NOT truncate."
+            "Output ONLY valid JSON. Analyze ALL positions shown. Do NOT truncate."
         )
 
     resp = requests.post(
