@@ -234,8 +234,25 @@ def call_ollama(context: str, attempt: int) -> str:
     return resp.json()["message"]["content"]
 
 
+def repair_json(text: str) -> str:
+    """Repara errores comunes de JSON generados por modelos locales."""
+    # Trailing commas antes de } o ]  →  el error más común
+    text = re.sub(r",\s*([}\]])", r"\1", text)
+    # Comas dobles
+    text = re.sub(r",\s*,", ",", text)
+    # Comillas simples → dobles (cuando el modelo usa Python-style)
+    # Solo si no hay ya dobles alrededor
+    text = re.sub(r"(?<![\\])'([^']*)'(?=\s*:)", r'"\1"', text)
+    # Newlines literales dentro de strings (rompen JSON)
+    # Reemplazar \n real dentro de valores string por \\n
+    def fix_newlines_in_strings(m):
+        return m.group(0).replace('\n', '\\n').replace('\r', '\\r')
+    text = re.sub(r'"[^"\\]*(?:\\.[^"\\]*)*"', fix_newlines_in_strings, text, flags=re.DOTALL)
+    return text
+
+
 def extract_json(text: str) -> dict:
-    """Extrae JSON del output — maneja markdown, texto extra, etc."""
+    """Extrae y repara JSON del output del modelo."""
     # Quitar bloques ```json ... ```
     text = re.sub(r"```json\s*", "", text)
     text = re.sub(r"```\s*", "", text)
@@ -246,7 +263,35 @@ def extract_json(text: str) -> dict:
     if first >= 0 and last > first:
         text = text[first:last + 1]
 
-    return json.loads(text)
+    # Intento 1: JSON directo
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+
+    # Intento 2: reparar errores comunes
+    try:
+        return json.loads(repair_json(text))
+    except json.JSONDecodeError:
+        pass
+
+    # Intento 3: truncado — buscar el último pick completo y cerrar el JSON
+    # Encuentra la última coma de pick completo y cierra el array
+    last_complete = text.rfind("},\n    {")
+    if last_complete == -1:
+        last_complete = text.rfind("},\n  {")
+    if last_complete > 0:
+        truncated = text[:last_complete + 1]  # hasta el último pick completo
+        # Cerrar arrays y objeto abiertos
+        open_brackets = truncated.count("[") - truncated.count("]")
+        open_braces   = truncated.count("{") - truncated.count("}")
+        truncated += "]" * open_brackets + "}" * open_braces
+        try:
+            return json.loads(repair_json(truncated))
+        except json.JSONDecodeError:
+            pass
+
+    raise json.JSONDecodeError("No se pudo parsear ni reparar el JSON", text, 0)
 
 
 def fill_defaults(data: dict, risk_profile: str) -> dict:
