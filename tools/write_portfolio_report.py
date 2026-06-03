@@ -120,7 +120,7 @@ def main():
         if not os.path.exists(src):
             print(f"ERROR: file not found: {src}", file=sys.stderr)
             sys.exit(1)
-        raw = open(src, encoding="utf-8").read()
+        raw = open(src, encoding="utf-8", errors="replace").read()
 
     # Strip markdown fences if present
     raw = raw.strip()

@@ -18,6 +18,12 @@ import requests
 from pathlib import Path
 from datetime import datetime, timezone
 
+# Forzar UTF-8 en stdout/stderr para compatibilidad con Windows
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
+
 # ─── Config ───────────────────────────────────────────────────────────────────
 OLLAMA_URL  = "http://localhost:11434/api/chat"
 MODEL       = os.getenv("MAIA_MODEL", "qwen2.5:14b")
