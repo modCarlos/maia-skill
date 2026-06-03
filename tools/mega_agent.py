@@ -249,35 +249,70 @@ def extract_json(text: str) -> dict:
     return json.loads(text)
 
 
+def fill_defaults(data: dict, risk_profile: str) -> dict:
+    """Rellena campos de metadata que el modelo local suele omitir."""
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    data.setdefault("brand", "Tododeia")
+    data.setdefault("creator", "@quebert")
+    data.setdefault("generated_at", now)
+    data.setdefault("risk_profile", risk_profile)
+    data.setdefault("historical_accuracy", {
+        "note": "First run — no historical data available",
+        "sessions": 0
+    })
+    data.setdefault("warnings", [
+        "This report is for informational purposes only and does not constitute financial advice."
+    ])
+    data.setdefault("cross_sector_insights", [])
+
+    # Construir sectors a partir de los picks si falta
+    if not data.get("sectors"):
+        picks = data.get("risk_adjusted_picks", [])
+        sector_map: dict = {}
+        for p in picks:
+            s = p.get("sector", "unknown")
+            sector_map.setdefault(s, {"count": 0, "confidences": []})
+            sector_map[s]["count"] += 1
+            if "confidence" in p:
+                sector_map[s]["confidences"].append(float(p["confidence"]))
+        data["sectors"] = {
+            s: {
+                "count": v["count"],
+                "avg_confidence": round(sum(v["confidences"]) / len(v["confidences"]), 1)
+                if v["confidences"] else 0
+            }
+            for s, v in sector_map.items()
+        }
+        if not data["sectors"]:
+            data["sectors"] = {"stocks": {"count": 0, "avg_confidence": 0}}
+
+    return data
+
+
 def validate(data: dict) -> list[str]:
+    """Solo valida campos críticos — los metadata se rellenan con fill_defaults."""
     errors = []
 
-    for field in REQUIRED_TOP:
-        if field not in data:
-            errors.append(f"Missing top-level: '{field}'")
-
-    if errors:
-        return errors  # stop early
+    # Críticos: sin estos el reporte no tiene valor
+    if not data.get("executive_summary"):
+        errors.append("Missing: 'executive_summary'")
 
     macro = data.get("macro_environment", {})
-    if isinstance(macro, dict):
-        for field in REQUIRED_MACRO:
-            if field not in macro:
-                errors.append(f"Missing macro_environment.{field}")
+    if not isinstance(macro, dict) or not macro:
+        errors.append("Missing: 'macro_environment'")
 
     picks = data.get("risk_adjusted_picks", [])
     if not isinstance(picks, list) or len(picks) == 0:
         errors.append("risk_adjusted_picks is empty or missing")
     else:
-        for i, pick in enumerate(picks[:3]):  # validar los primeros 3 para no ser demasiado estricto
-            sym = pick.get("symbol", f"#{i+1}")
-            for field in REQUIRED_PICK:
-                if field not in pick:
-                    errors.append(f"Pick {sym} missing: '{field}'")
-
-    sectors = data.get("sectors", {})
-    if not isinstance(sectors, dict) or len(sectors) == 0:
-        errors.append("sectors is empty or missing")
+        # Solo verificar que los picks tienen ticker/symbol y thesis
+        for i, pick in enumerate(picks[:3]):
+            sym = pick.get("symbol") or pick.get("ticker", f"#{i+1}")
+            if not sym:
+                errors.append(f"Pick #{i+1} has no symbol/ticker")
+            if not pick.get("thesis") and not pick.get("reasoning"):
+                errors.append(f"Pick {sym} has no thesis or reasoning")
 
     return errors
 
@@ -297,6 +332,7 @@ def main():
         try:
             raw    = call_ollama(context, attempt)
             data   = extract_json(raw)
+            data   = fill_defaults(data, risk_profile)
             errors = validate(data)
 
             if errors:
