@@ -210,7 +210,7 @@ def call_ollama(context: str, attempt: int) -> str:
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user",   "content": context + correction},
             ],
-            "options": {"temperature": 0.2, "num_predict": 2500},
+            "options": {"temperature": 0.2, "num_predict": 1200},
             "stream": False,
         },
         timeout=480,
@@ -290,9 +290,9 @@ def main():
     print(f"   Contexto: {len(context):,} chars", file=sys.stderr)
 
     # Si el contexto es demasiado largo, truncar noticias para caber en context window
-    if len(context) > 12000:
-        print(f"   ⚠️  Contexto largo — truncando headlines para reducir tokens", file=sys.stderr)
-        context = context[:12000] + "\n[...context truncated to fit model context window...]"
+    if len(context) > 6000:
+        print(f"   ⚠️  Contexto largo — truncando a 6,000 chars", file=sys.stderr)
+        context = context[:6000] + "\n[...context truncated to fit model context window...]"
 
     for attempt in range(1, MAX_RETRIES + 1):
         print(f"   Intento {attempt}/{MAX_RETRIES}...", file=sys.stderr)
