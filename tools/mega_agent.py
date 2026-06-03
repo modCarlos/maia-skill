@@ -19,7 +19,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 
 # ─── Config ───────────────────────────────────────────────────────────────────
-OLLAMA_URL = "http://localhost:11434/v1/chat/completions"
+OLLAMA_URL = "http://localhost:11434/api/chat"  # native API — más estable que /v1
 MODEL      = os.getenv("MAIA_MODEL", "qwen2.5:14b")
 MAX_RETRIES = 3
 
@@ -213,6 +213,7 @@ def call_ollama(context: str, attempt: int) -> str:
             "Include ALL required fields. Do NOT truncate. Do NOT wrap in markdown."
         )
 
+    # Usar la API nativa de Ollama (/api/chat) — más estable que el endpoint OpenAI
     resp = requests.post(
         OLLAMA_URL,
         json={
@@ -221,14 +222,16 @@ def call_ollama(context: str, attempt: int) -> str:
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user",   "content": context + correction},
             ],
-            "temperature": 0.2,
-            "max_tokens": 8000,
+            "options": {
+                "temperature": 0.2,
+                "num_predict": 8000,
+            },
             "stream": False,
         },
-        timeout=360,
+        timeout=480,
     )
     resp.raise_for_status()
-    return resp.json()["choices"][0]["message"]["content"]
+    return resp.json()["message"]["content"]
 
 
 def extract_json(text: str) -> dict:
