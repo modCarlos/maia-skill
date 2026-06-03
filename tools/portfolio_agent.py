@@ -210,7 +210,7 @@ def call_ollama(context: str, attempt: int) -> str:
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user",   "content": context + correction},
             ],
-            "options": {"temperature": 0.2, "num_predict": 1200},
+            "options": {"temperature": 0.2, "num_predict": 1500},
             "stream": False,
         },
         timeout=480,
@@ -238,11 +238,37 @@ def extract_json(text: str) -> dict:
     first = text.find("{")
     last  = text.rfind("}")
     if first >= 0 and last > first:
-        text = text[first:last + 1]
+        candidate = text[first:last + 1]
+    else:
+        candidate = text[first:] if first >= 0 else text
+
+    # Intento 1: JSON directo
     try:
-        return json.loads(text)
+        return json.loads(candidate)
     except json.JSONDecodeError:
-        return json.loads(repair_json(text))
+        pass
+
+    # Intento 2: reparar trailing commas y errores comunes
+    try:
+        return json.loads(repair_json(candidate))
+    except json.JSONDecodeError:
+        pass
+
+    # Intento 3: JSON truncado — cerrar brackets abiertos
+    # Encuentra la última posición completa (último } de un objeto de posición)
+    truncated = text[first:] if first >= 0 else text
+    last_complete = truncated.rfind("},")
+    if last_complete > 0:
+        truncated = truncated[:last_complete + 1]
+        open_brackets = truncated.count("[") - truncated.count("]")
+        open_braces   = truncated.count("{") - truncated.count("}")
+        truncated += "]" * open_brackets + "}" * open_braces
+        try:
+            return json.loads(repair_json(truncated))
+        except json.JSONDecodeError:
+            pass
+
+    raise json.JSONDecodeError("No se pudo parsear ni reparar el JSON", text, 0)
 
 
 def fill_defaults(data: dict, portfolio: list) -> dict:
