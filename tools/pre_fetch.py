@@ -112,7 +112,7 @@ WATCHLISTS = {
 # Default: full universe so the Stocks Agent always has a pre-screened list
 DEFAULT_TICKERS = WATCHLISTS["all"]
 
-MACRO_TICKERS = ["^VIX", "^TNX", "^GSPC", "^IRX"]
+MACRO_TICKERS = ["^VIX", "^TNX", "^GSPC", "^IRX", "DX-Y.NYB"]
 
 # ─── Correlation groups ───────────────────────────────────────────────────────
 # Assets within the same group tend to move together (high beta correlation).
@@ -375,6 +375,27 @@ def fetch_stock(symbol: str) -> dict | None:
         earnings = _earnings(ticker)
         insider = _insider(ticker)
 
+        # Relative strength vs SPY over 3 months
+        # Positive = outperforming market; negative = underperforming
+        relative_strength_3m = None
+        try:
+            spy_hist = yf.Ticker("SPY").history(period="3mo", interval="1d")
+            if not spy_hist.empty and len(closes) >= 63:
+                spy_ret = (spy_hist["Close"].iloc[-1] / spy_hist["Close"].iloc[0] - 1) * 100
+                ticker_ret = (closes.iloc[-1] / closes.iloc[-63] - 1) * 100
+                relative_strength_3m = round(float(ticker_ret - spy_ret), 2)
+        except Exception:
+            pass
+
+        # EPS estimate revision trend (proxy via earningsQuarterlyGrowth)
+        eps_revision = None
+        try:
+            qg = safe("earningsQuarterlyGrowth")
+            if qg is not None:
+                eps_revision = "raising" if qg > 0.05 else "lowering" if qg < -0.05 else "stable"
+        except Exception:
+            pass
+
     except Exception:
         return None
 
@@ -413,6 +434,8 @@ def fetch_stock(symbol: str) -> dict | None:
             "short_ratio": short_ratio,
             "short_float_pct": short_float_pct,
         },
+        "relative_strength_3m": relative_strength_3m,
+        "eps_revision": eps_revision,
     }
 
 
@@ -463,6 +486,19 @@ def fetch_macro() -> dict:
         except Exception:
             pass  # fallback: keep synthetic values already set above
 
+        # DXY — US Dollar Index
+        dxy = None
+        try:
+            dxy_series = data["DX-Y.NYB"].dropna()
+            if not dxy_series.empty:
+                dxy = round(float(dxy_series.iloc[-1]), 2)
+                dxy_20 = float(dxy_series.iloc[-20]) if len(dxy_series) >= 20 else dxy
+                dxy_trend = "rising" if dxy > dxy_20 * 1.01 else "falling" if dxy < dxy_20 * 0.99 else "stable"
+            else:
+                dxy_trend = "unknown"
+        except Exception:
+            dxy_trend = "unknown"
+
         tnx_20 = float(data["^TNX"].iloc[-20]) if len(data) >= 20 else tnx
         tnx_trend = "rising" if tnx > tnx_20 * 1.05 else "falling" if tnx < tnx_20 * 0.95 else "stable"
 
@@ -490,6 +526,8 @@ def fetch_macro() -> dict:
             "fear_greed_synthetic": fg_synthetic,
             "fear_greed_source": fg_source,
             "yield_trend": tnx_trend,
+            "dxy": dxy,
+            "dxy_trend": dxy_trend,
             "market_regime": regime,
         }
     except Exception as e:
@@ -557,6 +595,8 @@ def filter_candidates(stocks: dict, top_n: int = 35) -> list[dict]:
             "range_52w_pct": data.get("technicals", {}).get("range_52w_pct"),
             "short_ratio": data.get("short_interest", {}).get("short_ratio"),
             "short_float_pct": data.get("short_interest", {}).get("short_float_pct"),
+            "relative_strength_3m": data.get("relative_strength_3m"),
+            "eps_revision": data.get("eps_revision"),
             "_sort_key": (QUALITY_RANK.get(quality_key, 2), rsi),
         })
 

@@ -128,60 +128,139 @@ def load_json_safe(path: Path, label: str) -> dict | list | None:
         return None
 
 
+def compress_macro(macro: dict) -> str:
+    """Bloque de contexto macro — VIX, yields, DXY, F&G, regime."""
+    if not macro or "error" in macro:
+        return "MACRO: unavailable"
+    vix    = macro.get("vix", "?")
+    fg     = macro.get("fear_greed_index", "?")
+    fg_lbl = macro.get("fear_greed_label", "")
+    regime = macro.get("market_regime", "?")
+    tnx    = macro.get("yield_10y", "?")
+    tnx_tr = macro.get("yield_trend", "?")
+    spread = macro.get("yield_spread_10y_3m", "?")
+    spy_p  = macro.get("spy_price", "?")
+    spy_r  = macro.get("spy_rsi", "?")
+    dxy    = macro.get("dxy", "?")
+    dxy_tr = macro.get("dxy_trend", "?")
+    return (
+        f"MACRO: VIX={vix}  F&G={fg}({fg_lbl})  regime={regime}\n"
+        f"  yields: 10Y={tnx}% ({tnx_tr}) spread={spread}%\n"
+        f"  SPY=${spy_p} RSI={spy_r}  DXY={dxy}({dxy_tr})"
+    )
+
+
 def compress_market(data: dict) -> str:
-    """Convierte market_context.json en un bloque comprimido legible para el LLM."""
+    """Convierte market_context.json en un bloque comprimido legible para el LLM.
+    Limita a top 10 candidatos con todos los campos relevantes."""
     if not data:
         return "MARKET_CONTEXT: unavailable\n"
 
-    lines = ["=== MARKET_CONTEXT (pre-fetched real data) ==="]
-    candidates = data.get("screened_candidates") or data.get("candidates") or []
+    # Macro block
+    macro_block = compress_macro(data.get("macro", {}))
 
-    if not candidates and isinstance(data, dict):
-        # Intentar extraer tickers directamente del dict
-        for key, val in data.items():
-            if isinstance(val, dict) and "current_price" in val:
-                candidates.append({"symbol": key, **val})
+    # Correlation warnings
+    corr_warnings = data.get("correlation_warnings", [])
+    corr_block = ""
+    if corr_warnings:
+        msgs = [w.get("message", "") for w in corr_warnings[:3]]
+        corr_block = "\nCORRELATION_LIMITS:\n" + "\n".join(f"  ⚠ {m}" for m in msgs)
 
-    for c in candidates[:20]:
-        sym = c.get("symbol") or c.get("ticker", "?")
-        price = c.get("current_price") or c.get("price", "?")
-        rsi = c.get("rsi", "?")
-        trend = c.get("trend", "?")
-        entry_q = c.get("entry_quality", "?")
-        sector = c.get("sector", "?")
-        lines.append(
-            f"  {sym:6} price=${price} RSI={rsi} trend={trend} entry={entry_q} sector={sector}"
-        )
+    # Top 10 candidates with all relevant fields
+    candidates = data.get("candidates") or data.get("screened_candidates") or []
+    lines = ["SCREENED_CANDIDATES (top 10, sorted by entry quality):"]
+    for c in candidates[:10]:
+        sym      = c.get("symbol", "?")
+        price    = c.get("price") or c.get("price_at_fetch", "?")
+        rsi      = c.get("rsi", "?")
+        trend    = c.get("trend", "?")
+        entry_q  = c.get("entry_quality", "?")
+        grp      = c.get("correlation_group", "?")
+        fpe      = c.get("forward_pe")
+        peg      = c.get("peg")
+        fcf      = c.get("fcf_margin")
+        rev_g    = c.get("revenue_growth_yoy")
+        earn_d   = c.get("earnings_days_away")
+        beat_s   = c.get("beat_streak", 0)
+        insider  = c.get("insider_signal", "neutral")
+        vol_r    = c.get("volume_ratio")
+        rng_52   = c.get("range_52w_pct")
+        short_f  = c.get("short_float_pct")
+        rs3m     = c.get("relative_strength_3m")
+        eps_rev  = c.get("eps_revision")
 
-    return "\n".join(lines)
+        # Build compact one-liner
+        parts = [f"  {sym:<6} ${price}  RSI={rsi}  {trend:<10}  entry={entry_q}  group={grp}"]
+
+        valuation = []
+        if fpe:  valuation.append(f"fPE={fpe}")
+        if peg:  valuation.append(f"PEG={peg}")
+        if fcf:  valuation.append(f"FCF={round(fcf*100,1)}%")
+        if rev_g: valuation.append(f"revG={round(rev_g*100,1)}%")
+        if valuation:
+            parts.append("    val: " + "  ".join(valuation))
+
+        signals = []
+        if earn_d is not None: signals.append(f"earnings={earn_d}d(streak={beat_s})")
+        if insider != "neutral": signals.append(f"insider={insider}")
+        if vol_r and vol_r > 1.3: signals.append(f"vol={vol_r}x")
+        if short_f and short_f > 10: signals.append(f"short={short_f}%")
+        if rs3m is not None: signals.append(f"RS3m={rs3m:+.1f}%")
+        if eps_rev and eps_rev != "stable": signals.append(f"epsRev={eps_rev}")
+        if rng_52 is not None: signals.append(f"52wk={rng_52}%")
+        if signals:
+            parts.append("    signals: " + "  ".join(signals))
+
+        lines.append("\n".join(parts))
+
+    return f"{macro_block}\n{corr_block}\n\n" + "\n".join(lines)
 
 
-def compress_news(data: dict) -> str:
+def compress_news(data: dict, top_symbols: list[str] | None = None) -> str:
+    """Incluye noticias solo de los tickers seleccionados (reduce tokens)."""
     if not data:
         return "NEWS_CONTEXT: unavailable\n"
     lines = ["=== NEWS_CONTEXT ==="]
     news_items = data.get("news", {})
-    for sym, info in list(news_items.items())[:15]:
+
+    # Filtrar solo los top candidatos para reducir tokens
+    if top_symbols:
+        filtered = {k: v for k, v in news_items.items() if k in top_symbols}
+    else:
+        filtered = dict(list(news_items.items())[:12])
+
+    for sym, info in filtered.items():
         if isinstance(info, dict):
-            sentiment = info.get("sentiment", {}).get("label", "?")
-            headlines = [n.get("title", "")[:80] for n in info.get("key_news", [])[:2]]
-            analyst = info.get("analyst_recommendation", "—")
-            lines.append(f"  {sym}: sentiment={sentiment} analyst={analyst}")
+            sentiment  = info.get("sentiment", {}).get("label", "?")
+            headlines  = [n.get("title", "")[:90] for n in info.get("key_news", [])[:2]]
+            analyst    = info.get("analyst_recommendation", "—")
+            target     = info.get("analyst_target")
+            insider    = info.get("insider", {})
+            ins_signal = insider.get("signal", "none")
+
+            meta = [f"sentiment={sentiment}", f"analyst={analyst}"]
+            if target:  meta.append(f"target=${target}")
+            if ins_signal != "none": meta.append(f"insider={ins_signal}")
+            lines.append(f"  {sym}: " + "  ".join(meta))
             for h in headlines:
                 lines.append(f"    → {h}")
     return "\n".join(lines)
 
 
-def compress_sec(data: dict | list) -> str:
+def compress_sec(data: dict | list, top_symbols: list[str] | None = None) -> str:
     if not data:
         return "SEC_CONTEXT: unavailable\n"
     lines = ["=== SEC_RISK_CONTEXT ==="]
     items = data if isinstance(data, list) else data.get("risks", data.get("results", []))
-    for item in items[:10]:
+    for item in items:
         sym = item.get("symbol") or item.get("ticker", "?")
+        if top_symbols and sym not in top_symbols:
+            continue
         risks = item.get("risks", item.get("key_risks", []))
-        risk_str = " | ".join(str(r)[:60] for r in risks[:2])
+        risk_str = " | ".join(str(r)[:70] for r in risks[:2])
         lines.append(f"  {sym}: {risk_str}")
+        if len(lines) > 12:
+            break
     return "\n".join(lines)
 
 
@@ -190,6 +269,12 @@ def build_context(risk_profile: str) -> str:
     news   = load_json_safe(NEWS_CTX,   "news_context")
     sec    = load_json_safe(SEC_CTX,    "sec_risk_context")
 
+    # Extraer los símbolos top para filtrar noticias/SEC
+    top_symbols = []
+    if market:
+        candidates = market.get("candidates") or market.get("screened_candidates") or []
+        top_symbols = [c.get("symbol") for c in candidates[:10] if c.get("symbol")]
+
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     parts = [
         f"DATE: {today}",
@@ -197,9 +282,9 @@ def build_context(risk_profile: str) -> str:
         "",
         compress_market(market or {}),
         "",
-        compress_news(news or {}),
+        compress_news(news or {}, top_symbols),
         "",
-        compress_sec(sec or {}),
+        compress_sec(sec or {}, top_symbols),
     ]
     return "\n".join(parts)
 
