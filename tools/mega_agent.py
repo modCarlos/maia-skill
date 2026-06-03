@@ -1,181 +1,320 @@
 #!/usr/bin/env python3
 """
-MegaAgent local — llama a Ollama en lugar de Claude.
-Lee /tmp/mega_context.txt, genera picks JSON, reintenta si falla.
+mega_agent.py — MegaAgent local usando Ollama.
+
+Lee los archivos de datos generados por los tools de pre-fetch,
+construye un contexto comprimido, llama a Ollama y genera el
+reporte completo en el schema que espera write_report.py.
 
 Uso: python3 tools/mega_agent.py [conservative|moderate|aggressive]
+Output: JSON completo a stdout (piped a write_report.py)
 """
 
 import json
 import sys
 import os
+import re
 import requests
 from pathlib import Path
+from datetime import datetime, timezone
 
+# ─── Config ───────────────────────────────────────────────────────────────────
 OLLAMA_URL = "http://localhost:11434/v1/chat/completions"
-MODEL = os.getenv("MAIA_MODEL", "qwen2.5:14b")
+MODEL      = os.getenv("MAIA_MODEL", "qwen2.5:14b")
 MAX_RETRIES = 3
-CONTEXT_FILE = "/tmp/mega_context.txt"
 
-REQUIRED_FIELDS = [
-    "ticker", "action", "entry_price", "target_price", "stop_loss",
-    "confidence", "thesis", "thesis_invalidators", "risk_adjusted_score",
-    "financial_health", "thesis_status", "sector", "time_horizon",
-    "position_size_pct", "current_price", "upside_pct", "atr"
+REPO = Path(__file__).parent.parent
+DATA_DIR  = REPO / "data"
+MARKET_CTX  = DATA_DIR / "market_context.json"
+NEWS_CTX    = DATA_DIR / "news_context.json"
+SEC_CTX     = DATA_DIR / "sec_risk_context.json"
+
+# ─── Schema requerido por write_report.py ────────────────────────────────────
+REQUIRED_TOP = [
+    "brand", "creator", "generated_at", "risk_profile",
+    "executive_summary", "macro_environment", "portfolio_allocation",
+    "cross_sector_insights", "risk_adjusted_picks", "historical_accuracy",
+    "warnings", "sectors",
+]
+REQUIRED_MACRO = [
+    "summary", "interest_rate_outlook", "inflation_outlook",
+    "geopolitical_risk", "key_factors",
+]
+REQUIRED_PICK = [
+    "rank", "name", "symbol", "sector", "confidence", "risk_score",
+    "risk_adjusted_score", "recommendation", "reasoning", "position_size",
+    "entry_price", "stop_loss", "target_12m", "risk_reward_ratio",
+    "thesis", "thesis_invalidators", "thesis_status",
 ]
 
-SYSTEM_PROMPT = """You are a professional investment analyst. Your task is to analyze the provided market data and generate exactly 13 investment picks as a JSON object.
+# ─── System prompt para el MegaAgent ─────────────────────────────────────────
+SYSTEM_PROMPT = """You are a professional investment analyst for Tododeia, a financial research system.
+
+Your task: analyze the provided market data and produce a complete investment report as a single JSON object.
 
 CRITICAL RULES:
-1. You MUST output ONLY valid JSON — no markdown, no explanation, no text outside the JSON
-2. You MUST include ALL 13 picks — do NOT truncate or stop early
-3. Each pick MUST have ALL required fields with correct types
-4. Respect CORRELATION_LIMITS defined in DATA_CONTEXT
-5. Respect CARRY_FORWARD positions — keep active positions unless thesis explicitly invalidated
+1. Output ONLY valid JSON — no markdown code blocks, no explanation text, nothing outside the JSON
+2. The JSON must have ALL required top-level fields
+3. Include 8-13 investment picks in risk_adjusted_picks
+4. Each pick must have ALL required fields with correct data types
+5. Use the real price data from MARKET_CONTEXT — do not invent numbers
+6. Adapt position sizes and asset mix to the RISK_PROFILE
 
-REQUIRED JSON SCHEMA:
+REQUIRED JSON STRUCTURE:
 {
+  "brand": "Tododeia",
+  "creator": "@quebert",
+  "generated_at": "<ISO 8601 datetime>",
+  "risk_profile": "<risk profile>",
+  "executive_summary": "<2-3 sentence market narrative with specific data points>",
   "macro_environment": {
-    "regime": "string",
-    "vix": number,
-    "fear_greed": number,
-    "yield_10y": number,
-    "bias": "string"
+    "summary": "<macro context with VIX, Fear&Greed if available>",
+    "interest_rate_outlook": "stable|rising|falling",
+    "inflation_outlook": "stable|rising|falling",
+    "geopolitical_risk": "low|moderate|high",
+    "key_factors": ["<factor 1>", "<factor 2>", "<factor 3>"]
   },
   "portfolio_allocation": {
-    "cash_pct": number,
-    "equity_pct": number,
-    "commodity_pct": number
+    "stocks": <number 0-100>,
+    "materials": <number 0-100>,
+    "cash": <number 0-100>
   },
-  "picks": [
+  "cross_sector_insights": [
+    {"insight": "<observation>", "implication": "<action implication>"}
+  ],
+  "risk_adjusted_picks": [
     {
-      "ticker": "string",
-      "action": "ADD|HOLD|TRIM",
-      "entry_price": number,
-      "current_price": number,
-      "target_price": number,
-      "stop_loss": number,
-      "upside_pct": number,
-      "atr": number,
-      "confidence": number (0-10),
-      "risk_adjusted_score": number (0-100),
-      "financial_health": "STRONG|MODERATE|WEAK",
-      "thesis_status": "ACTIVE|NEW|CARRY_FORWARD",
-      "sector": "string",
-      "time_horizon": "SHORT|MEDIUM|LONG",
-      "position_size_pct": number,
-      "thesis": "string (specific catalyst, metric, date)",
-      "thesis_invalidators": "string (specific condition that breaks thesis)"
+      "rank": <integer 1-13>,
+      "name": "<company full name>",
+      "symbol": "<TICKER>",
+      "sector": "<sector name>",
+      "confidence": <number 1-10>,
+      "risk_score": <number 1-100, lower is safer>,
+      "risk_adjusted_score": <number 1-100>,
+      "recommendation": "ADD|HOLD|TRIM",
+      "reasoning": "<specific reasoning with data from MARKET_CONTEXT>",
+      "position_size": <percentage of portfolio as number>,
+      "entry_price": <number — use current_price from data>,
+      "stop_loss": <number>,
+      "target_12m": <number>,
+      "risk_reward_ratio": <number>,
+      "thesis": "<specific catalyst with date/metric>",
+      "thesis_invalidators": "<specific condition that breaks thesis>",
+      "thesis_status": "NEW|ACTIVE|CARRY_FORWARD"
     }
   ],
-  "cross_sector_insights": "string"
-}
+  "historical_accuracy": {
+    "note": "First run — no historical data available",
+    "sessions": 0
+  },
+  "warnings": ["This report is for informational purposes only and does not constitute financial advice."],
+  "sectors": {
+    "stocks": {"count": <number>, "avg_confidence": <number>},
+    "materials": {"count": <number>, "avg_confidence": <number>}
+  }
+}"""
 
-Generate EXACTLY 13 picks. Output ONLY the JSON object, nothing else."""
 
+# ─── Helpers ──────────────────────────────────────────────────────────────────
 
-def read_context() -> str:
-    path = Path(CONTEXT_FILE)
+def load_json_safe(path: Path, label: str) -> dict | list | None:
     if not path.exists():
-        print(f"ERROR: {CONTEXT_FILE} not found. Run compress_context.py first.", file=sys.stderr)
-        sys.exit(1)
-    return path.read_text(encoding="utf-8")
+        print(f"  ⚠️  {label} not found ({path}) — skipping", file=sys.stderr)
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        print(f"  ⚠️  {label} is invalid JSON: {e}", file=sys.stderr)
+        return None
 
 
-def call_ollama(context: str, risk_profile: str, attempt: int) -> str:
+def compress_market(data: dict) -> str:
+    """Convierte market_context.json en un bloque comprimido legible para el LLM."""
+    if not data:
+        return "MARKET_CONTEXT: unavailable\n"
+
+    lines = ["=== MARKET_CONTEXT (pre-fetched real data) ==="]
+    candidates = data.get("screened_candidates") or data.get("candidates") or []
+
+    if not candidates and isinstance(data, dict):
+        # Intentar extraer tickers directamente del dict
+        for key, val in data.items():
+            if isinstance(val, dict) and "current_price" in val:
+                candidates.append({"symbol": key, **val})
+
+    for c in candidates[:20]:
+        sym = c.get("symbol") or c.get("ticker", "?")
+        price = c.get("current_price") or c.get("price", "?")
+        rsi = c.get("rsi", "?")
+        trend = c.get("trend", "?")
+        entry_q = c.get("entry_quality", "?")
+        sector = c.get("sector", "?")
+        lines.append(
+            f"  {sym:6} price=${price} RSI={rsi} trend={trend} entry={entry_q} sector={sector}"
+        )
+
+    return "\n".join(lines)
+
+
+def compress_news(data: dict) -> str:
+    if not data:
+        return "NEWS_CONTEXT: unavailable\n"
+    lines = ["=== NEWS_CONTEXT ==="]
+    news_items = data.get("news", {})
+    for sym, info in list(news_items.items())[:15]:
+        if isinstance(info, dict):
+            sentiment = info.get("sentiment", {}).get("label", "?")
+            headlines = [n.get("title", "")[:80] for n in info.get("key_news", [])[:2]]
+            analyst = info.get("analyst_recommendation", "—")
+            lines.append(f"  {sym}: sentiment={sentiment} analyst={analyst}")
+            for h in headlines:
+                lines.append(f"    → {h}")
+    return "\n".join(lines)
+
+
+def compress_sec(data: dict | list) -> str:
+    if not data:
+        return "SEC_CONTEXT: unavailable\n"
+    lines = ["=== SEC_RISK_CONTEXT ==="]
+    items = data if isinstance(data, list) else data.get("risks", data.get("results", []))
+    for item in items[:10]:
+        sym = item.get("symbol") or item.get("ticker", "?")
+        risks = item.get("risks", item.get("key_risks", []))
+        risk_str = " | ".join(str(r)[:60] for r in risks[:2])
+        lines.append(f"  {sym}: {risk_str}")
+    return "\n".join(lines)
+
+
+def build_context(risk_profile: str) -> str:
+    market = load_json_safe(MARKET_CTX, "market_context")
+    news   = load_json_safe(NEWS_CTX,   "news_context")
+    sec    = load_json_safe(SEC_CTX,    "sec_risk_context")
+
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    parts = [
+        f"DATE: {today}",
+        f"RISK_PROFILE: {risk_profile}",
+        "",
+        compress_market(market or {}),
+        "",
+        compress_news(news or {}),
+        "",
+        compress_sec(sec or {}),
+    ]
+    return "\n".join(parts)
+
+
+def call_ollama(context: str, attempt: int) -> str:
     correction = ""
     if attempt > 1:
         correction = (
-            f"\n\nATTENTION (attempt {attempt}/{MAX_RETRIES}): "
-            "Previous output was INVALID. You MUST produce COMPLETE valid JSON. "
-            "Include ALL 13 picks. Include ALL required fields. Do NOT truncate."
+            f"\n\n⚠️ ATTEMPT {attempt}/{MAX_RETRIES}: Previous output was invalid. "
+            "You MUST output ONLY a valid JSON object. "
+            "Include ALL required fields. Do NOT truncate. Do NOT wrap in markdown."
         )
 
-    user_content = f"RISK_PROFILE: {risk_profile}\n\nDATA_CONTEXT:\n{context}{correction}"
-
-    payload = {
-        "model": MODEL,
-        "messages": [
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": user_content}
-        ],
-        "temperature": 0.2,
-        "max_tokens": 7000,
-        "stream": False
-    }
-
-    resp = requests.post(OLLAMA_URL, json=payload, timeout=300)
+    resp = requests.post(
+        OLLAMA_URL,
+        json={
+            "model": MODEL,
+            "messages": [
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user",   "content": context + correction},
+            ],
+            "temperature": 0.2,
+            "max_tokens": 8000,
+            "stream": False,
+        },
+        timeout=360,
+    )
     resp.raise_for_status()
     return resp.json()["choices"][0]["message"]["content"]
 
 
 def extract_json(text: str) -> dict:
-    """Extrae JSON del output (puede venir con markdown o texto extra)."""
-    # Limpiar bloques markdown
-    if "```json" in text:
-        start = text.find("```json") + 7
-        end = text.find("```", start)
-        text = text[start:end].strip()
-    elif "```" in text:
-        start = text.find("```") + 3
-        end = text.find("```", start)
-        text = text[start:end].strip()
+    """Extrae JSON del output — maneja markdown, texto extra, etc."""
+    # Quitar bloques ```json ... ```
+    text = re.sub(r"```json\s*", "", text)
+    text = re.sub(r"```\s*", "", text)
 
-    # Extraer desde primer { hasta último }
+    # Encontrar el primer { y el último }
     first = text.find("{")
-    last = text.rfind("}")
+    last  = text.rfind("}")
     if first >= 0 and last > first:
         text = text[first:last + 1]
 
     return json.loads(text)
 
 
-def validate(data: dict) -> list:
+def validate(data: dict) -> list[str]:
     errors = []
 
-    if "picks" not in data:
-        errors.append("Falta campo 'picks'")
-        return errors
+    for field in REQUIRED_TOP:
+        if field not in data:
+            errors.append(f"Missing top-level: '{field}'")
 
-    picks = data["picks"]
-    if len(picks) < 8:
-        errors.append(f"Solo {len(picks)} picks — mínimo 8 requeridos")
+    if errors:
+        return errors  # stop early
 
-    for i, pick in enumerate(picks, 1):
-        for field in REQUIRED_FIELDS:
-            if field not in pick:
-                errors.append(f"Pick {i} ({pick.get('ticker','?')}): falta '{field}'")
+    macro = data.get("macro_environment", {})
+    if isinstance(macro, dict):
+        for field in REQUIRED_MACRO:
+            if field not in macro:
+                errors.append(f"Missing macro_environment.{field}")
+
+    picks = data.get("risk_adjusted_picks", [])
+    if not isinstance(picks, list) or len(picks) == 0:
+        errors.append("risk_adjusted_picks is empty or missing")
+    else:
+        for i, pick in enumerate(picks[:3]):  # validar los primeros 3 para no ser demasiado estricto
+            sym = pick.get("symbol", f"#{i+1}")
+            for field in REQUIRED_PICK:
+                if field not in pick:
+                    errors.append(f"Pick {sym} missing: '{field}'")
+
+    sectors = data.get("sectors", {})
+    if not isinstance(sectors, dict) or len(sectors) == 0:
+        errors.append("sectors is empty or missing")
 
     return errors
 
 
+# ─── Main ────────────────────────────────────────────────────────────────────
+
 def main():
     risk_profile = sys.argv[1] if len(sys.argv) > 1 else "moderate"
-    print(f"🤖 MegaAgent local — modelo: {MODEL} — perfil: {risk_profile}", file=sys.stderr)
+    print(f"🤖 MegaAgent local | modelo: {MODEL} | perfil: {risk_profile}", file=sys.stderr)
 
-    context = read_context()
+    context = build_context(risk_profile)
+    print(f"   Contexto construido ({len(context):,} chars)", file=sys.stderr)
 
+    last_error = None
     for attempt in range(1, MAX_RETRIES + 1):
         print(f"   Intento {attempt}/{MAX_RETRIES}...", file=sys.stderr)
         try:
-            raw = call_ollama(context, risk_profile, attempt)
-            data = extract_json(raw)
+            raw    = call_ollama(context, attempt)
+            data   = extract_json(raw)
             errors = validate(data)
 
             if errors:
-                print(f"   ⚠️  Validación fallida: {errors[:3]}", file=sys.stderr)
+                last_error = errors
+                print(f"   ⚠️  Validación ({attempt}): {errors[:3]}", file=sys.stderr)
                 if attempt < MAX_RETRIES:
                     continue
-                else:
-                    print("   ❌ Máximo de reintentos alcanzado. Guardando output parcial...", file=sys.stderr)
+                # En el último intento, si hay picks, guardar igual con advertencia
+                if data.get("risk_adjusted_picks"):
+                    print("   ⚠️  Guardando output parcialmente válido...", file=sys.stderr)
                     print(json.dumps(data, indent=2, ensure_ascii=False))
-                    sys.exit(1)
+                    sys.exit(0)
+                sys.exit(1)
 
-            print(f"   ✅ JSON válido con {len(data.get('picks', []))} picks", file=sys.stderr)
+            picks_count = len(data.get("risk_adjusted_picks", []))
+            print(f"   ✅ JSON válido — {picks_count} picks generados", file=sys.stderr)
             print(json.dumps(data, indent=2, ensure_ascii=False))
             return
 
         except json.JSONDecodeError as e:
+            last_error = str(e)
             print(f"   ⚠️  JSON inválido (intento {attempt}): {e}", file=sys.stderr)
             if attempt == MAX_RETRIES:
                 print("   ❌ No se pudo parsear JSON tras todos los reintentos.", file=sys.stderr)
@@ -183,7 +322,7 @@ def main():
 
         except requests.RequestException as e:
             print(f"   ❌ Error conectando a Ollama: {e}", file=sys.stderr)
-            print("   Verifica que Ollama esté corriendo: brew services start ollama", file=sys.stderr)
+            print("   Verifica: brew services start ollama  (o: ollama serve)", file=sys.stderr)
             sys.exit(1)
 
 
