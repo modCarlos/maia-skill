@@ -12,6 +12,8 @@ set -e
 RISK="${1:-moderate}"
 SKILL_DIR="$(cd "$(dirname "$0")" && pwd)"
 MODEL="${MAIA_MODEL:-qwen2.5:14b}"
+# MAIA_NUM_PREDICT: tokens máximos a generar. Aumentar en GPU rápida (ej: 4000).
+export MAIA_NUM_PREDICT="${MAIA_NUM_PREDICT:-1500}"
 
 echo ""
 echo "🚀 Tododeia Local | Perfil: $RISK | Modelo: $MODEL"
@@ -76,7 +78,27 @@ echo ""
 # ── 4. Dashboard ─────────────────────────────────────────────────────────────
 echo "✅ Pipeline completo."
 echo ""
-echo "📈 Para ver el dashboard:"
-echo "   cd $SKILL_DIR/dashboard && npm run dev -- -p 3420"
-echo "   Abre http://localhost:3420"
+
+DASHBOARD_PORT="${DASHBOARD_PORT:-3420}"
+
+# Verificar si ya hay un servidor corriendo en el puerto
+if curl -s "http://localhost:$DASHBOARD_PORT" > /dev/null 2>&1; then
+    echo "📈 Dashboard ya activo → http://localhost:$DASHBOARD_PORT"
+    echo "   (recarga la página para ver los nuevos datos)"
+else
+    echo "🌐 Iniciando dashboard en http://localhost:$DASHBOARD_PORT ..."
+    cd "$SKILL_DIR/dashboard"
+    npm run dev -- -p "$DASHBOARD_PORT" &
+    DASHBOARD_PID=$!
+    echo "   PID: $DASHBOARD_PID (Ctrl+C para detener)"
+    echo ""
+    # Esperar a que arranque
+    for i in $(seq 1 15); do
+        sleep 1
+        if curl -s "http://localhost:$DASHBOARD_PORT" > /dev/null 2>&1; then
+            echo "   ✅ Dashboard listo → http://localhost:$DASHBOARD_PORT"
+            break
+        fi
+    done
+fi
 echo ""

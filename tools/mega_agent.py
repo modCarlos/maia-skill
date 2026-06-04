@@ -25,9 +25,11 @@ if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8")
 
 # ─── Config ───────────────────────────────────────────────────────────────────
-OLLAMA_URL = "http://localhost:11434/api/chat"  # native API — más estable que /v1
-MODEL      = os.getenv("MAIA_MODEL", "qwen2.5:14b")
-MAX_RETRIES = 3
+OLLAMA_URL   = "http://localhost:11434/api/chat"  # native API — más estable que /v1
+MODEL        = os.getenv("MAIA_MODEL", "qwen2.5:14b")
+MAX_RETRIES  = 3
+# Aumentar MAIA_NUM_PREDICT en GPU potente (ej: export MAIA_NUM_PREDICT=4000)
+NUM_PREDICT  = int(os.getenv("MAIA_NUM_PREDICT", "1500"))
 
 REPO = Path(__file__).parent.parent
 DATA_DIR  = REPO / "data"
@@ -95,8 +97,8 @@ REQUIRED JSON STRUCTURE:
       "symbol": "<TICKER>",
       "sector": "<sector name>",
       "confidence": <number 1-10>,
-      "risk_score": <number 1-100, lower is safer>,
-      "risk_adjusted_score": <number 1-100>,
+      "risk_score": <number 1-10, lower is safer>,
+      "risk_adjusted_score": <number 1-10>,
       "recommendation": "ADD|HOLD|TRIM",
       "reasoning": "<specific reasoning with data from MARKET_CONTEXT>",
       "position_size": <percentage of portfolio as number>,
@@ -315,7 +317,7 @@ def call_ollama(context: str, attempt: int) -> str:
             ],
             "options": {
                 "temperature": 0.2,
-                "num_predict": 1500,
+                "num_predict": NUM_PREDICT,
             },
             "stream": False,
         },
