@@ -30,6 +30,8 @@ MODEL        = os.getenv("MAIA_MODEL", "qwen2.5:14b")
 MAX_RETRIES  = 3
 # Aumentar MAIA_NUM_PREDICT en GPU potente (ej: export MAIA_NUM_PREDICT=4000)
 NUM_PREDICT  = int(os.getenv("MAIA_NUM_PREDICT", "1500"))
+# Aumentar MAIA_TIMEOUT para modelos grandes como 32b (ej: export MAIA_TIMEOUT=900)
+TIMEOUT      = int(os.getenv("MAIA_TIMEOUT", "480"))
 
 REPO = Path(__file__).parent.parent
 DATA_DIR  = REPO / "data"
@@ -322,7 +324,7 @@ def call_ollama(context: str, attempt: int) -> str:
             },
             "stream": False,
         },
-        timeout=480,
+        timeout=TIMEOUT,
     )
     resp.raise_for_status()
     result = resp.json()
