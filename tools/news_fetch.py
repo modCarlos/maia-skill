@@ -312,7 +312,19 @@ def fetch_news_for_ticker(symbol: str, include_reddit: bool = True) -> dict:
         rec = info.get("recommendationKey")  # "buy" / "hold" / "sell" / "strong_buy" etc.
         if rec:
             result["analyst_recommendation"] = rec.lower().replace("_", " ")
-        result["analyst_target"] = info.get("targetMeanPrice")
+
+        # Analyst target — validar que esté en rango razonable vs precio actual
+        # (targets < 20% o > 500% del precio = dato corrupto de yfinance)
+        raw_target = info.get("targetMeanPrice")
+        current_price = info.get("regularMarketPrice") or info.get("currentPrice")
+        if raw_target and current_price and current_price > 0:
+            ratio = raw_target / current_price
+            if 0.2 <= ratio <= 5.0:
+                result["analyst_target"] = raw_target
+            # else: descartado silenciosamente (ratio imposible)
+        else:
+            result["analyst_target"] = raw_target
+
         result["num_analysts"] = info.get("numberOfAnalystOpinions")
 
         # ── Insider signal (Form 4 via yfinance) ──────────────────────────

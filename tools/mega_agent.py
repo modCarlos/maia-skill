@@ -143,8 +143,6 @@ def compress_macro(macro: dict) -> str:
     if not macro or "error" in macro:
         return "MACRO: unavailable"
     vix    = macro.get("vix", "?")
-    fg     = macro.get("fear_greed_index", "?")
-    fg_lbl = macro.get("fear_greed_label", "")
     regime = macro.get("market_regime", "?")
     tnx    = macro.get("yield_10y", "?")
     tnx_tr = macro.get("yield_trend", "?")
@@ -153,8 +151,25 @@ def compress_macro(macro: dict) -> str:
     spy_r  = macro.get("spy_rsi", "?")
     dxy    = macro.get("dxy", "?")
     dxy_tr = macro.get("dxy_trend", "?")
+
+    # Fear & Greed: si alternative.me y el sintético difieren > 30 puntos,
+    # hay contradicción (alternative.me rastrea crypto, no stocks). Usar sintético.
+    fg_ext     = macro.get("fear_greed_index", "?")
+    fg_synth   = macro.get("fear_greed_synthetic", fg_ext)
+    fg_source  = macro.get("fear_greed_source", "synthetic")
+    fg_lbl     = macro.get("fear_greed_label", "")
+    if fg_source == "alternative.me" and isinstance(fg_ext, (int, float)) and isinstance(fg_synth, (int, float)):
+        if abs(fg_ext - fg_synth) > 30:
+            fg     = fg_synth
+            fg_lbl = ("Extreme Fear" if fg < 25 else "Fear" if fg < 45 else
+                      "Neutral" if fg < 55 else "Greed" if fg < 75 else "Extreme Greed")
+            fg_source = "synthetic(⚠ alt.me diverged)"
+        else:
+            fg = fg_ext
+    else:
+        fg = fg_synth
     return (
-        f"MACRO: VIX={vix}  F&G={fg}({fg_lbl})  regime={regime}\n"
+        f"MACRO: VIX={vix}  F&G={fg}({fg_lbl})[{fg_source}]  regime={regime}\n"
         f"  yields: 10Y={tnx}% ({tnx_tr}) spread={spread}%\n"
         f"  SPY=${spy_p} RSI={spy_r}  DXY={dxy}({dxy_tr})"
     )

@@ -75,9 +75,8 @@ WATCHLISTS = {
         "BABA", "MELI",
     ],
 
-    # Materials & energy: precious metals ETFs + oil & gas
+    # Materials & energy: miners + oil & gas stocks only (ETFs removed — no fundamentals)
     "materials": [
-        "GLD", "SLV", "GDX", "GDXJ",
         "XOM", "CVX", "COP", "KMI", "OXY",
         "FCX", "NEM",
     ],
@@ -88,21 +87,15 @@ WATCHLISTS = {
         "AMGN", "GILD", "REGN", "MRNA", "PFE",
     ],
 
-    # Indices & macro proxies (use for macro context alongside stocks)
-    "macro": [
-        "SPY", "QQQ", "IWM", "DIA",
-        "TLT", "GLD", "USO", "UUP",
-    ],
-
     # Crypto proxies — removed (no longer tracked)
     # "crypto": ["BTC-USD", "ETH-USD", "SOL-USD", "COIN", "MSTR", "MARA", "RIOT"],
 
-    # Full extended: all of the above deduplicated (~65 tickers, ~3-4 min runtime)
+    # Full extended: all of the above deduplicated (~60 tickers, ~3-4 min runtime)
     "all": sorted(set(
         _CORE +
         ["INTC", "QCOM", "ARM", "AMAT", "ASML", "SNOW", "CRM", "NOW", "PANW"] +
         ["JPM", "BAC", "GS", "MS", "WFC", "C", "V", "MA", "PYPL", "BLK", "BX"] +
-        ["GLD", "SLV", "GDX", "XOM", "CVX", "COP", "OXY", "FCX", "NEM"] +
+        ["XOM", "CVX", "COP", "OXY", "FCX", "NEM"] +
         ["LLY", "UNH", "JNJ", "ABBV", "MRK", "AMGN", "GILD", "REGN"] +
         # New additions (May 2026)
         ["SONY", "BABA", "RIVN", "MELI", "NU", "SOFI", "DIS", "HD", "SBUX", "IBM"]
@@ -127,7 +120,7 @@ MACRO_TICKERS = ["^VIX", "^TNX", "^GSPC", "^IRX", "DX-Y.NYB"]
 # - COIN/MSTR are "crypto_equity" — they track crypto but add equity risk.
 
 CORRELATION_GROUPS: dict[str, list[str]] = {
-    "precious_metals":       ["GLD", "SLV", "GDX", "NEM"],
+    "precious_metals":       ["NEM"],  # GLD/SLV/GDX eran ETFs — eliminados
     "semiconductors":        ["NVDA", "AMD", "INTC", "QCOM", "TSM", "ARM", "AMAT", "ASML", "AVGO"],
     "big_tech":              ["MSFT", "AAPL", "GOOGL", "META", "AMZN", "IBM", "PLTR", "SONY"],
     "financials":            ["JPM", "BAC", "GS", "MS", "WFC", "C"],

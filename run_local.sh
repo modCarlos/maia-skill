@@ -57,7 +57,7 @@ echo "  → pre_fetch.py (yfinance, ~30-60s)..."
 python3 tools/pre_fetch.py
 
 echo "  → news_fetch.py + sec_risk_fetch.py (paralelo)..."
-python3 tools/news_fetch.py &
+python3 tools/news_fetch.py --no-reddit &  # Reddit bloqueado/rate-limited → desactivado
 PID_NEWS=$!
 python3 tools/sec_risk_fetch.py &
 PID_SEC=$!
