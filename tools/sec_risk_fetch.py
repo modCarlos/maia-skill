@@ -48,6 +48,14 @@ SEC_USER_AGENT = os.environ.get(
     "TododeiaRiskFetcher/1.0 (github.com/modCarlos/maia-skill; contact: support@example.com)",
 )
 
+# Aliases para tickers que yfinance/SEC no mapean bien con su ticker primario.
+# Se usan solo en la búsqueda de filings SEC, no en precios ni RSI.
+SEC_TICKER_ALIASES: dict[str, str] = {
+    "GOOGL": "GOOG",   # Alphabet Class A → SEC lo indexa igual que Class C
+    "BRK.B": "BRK-B",
+    "BF.B":  "BF-B",
+}
+
 
 def fetch_url_text(url: str, timeout: int = 20) -> str:
     req = Request(url, headers={"User-Agent": SEC_USER_AGENT, "Accept": "application/json,text/html,*/*"})
@@ -283,6 +291,11 @@ def fetch_risks_for_symbol(symbol: str, ticker_to_cik: dict[str, str]) -> dict:
     }
 
     cik = ticker_to_cik.get(symbol)
+    # Intentar alias si el ticker primario no tiene CIK (ej: GOOGL → GOOG)
+    sec_symbol = symbol
+    if not cik and symbol in SEC_TICKER_ALIASES:
+        sec_symbol = SEC_TICKER_ALIASES[symbol]
+        cik = ticker_to_cik.get(sec_symbol)
     if cik:
         out["cik"] = cik
 
@@ -296,7 +309,7 @@ def fetch_risks_for_symbol(symbol: str, ticker_to_cik: dict[str, str]) -> dict:
 
         # Fallback path when SEC lookup is unavailable (e.g. HTTP 403) or no annual filing found.
         if not meta:
-            meta = latest_yf_annual_filing(symbol)
+            meta = latest_yf_annual_filing(sec_symbol)
 
         if not meta:
             out["error"] = "no_annual_filing_found"
