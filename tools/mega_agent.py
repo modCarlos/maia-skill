@@ -65,10 +65,18 @@ Your task: analyze the provided market data and produce a complete investment re
 CRITICAL RULES:
 1. Output ONLY valid JSON — no markdown code blocks, no explanation text, nothing outside the JSON
 2. The JSON must have ALL required top-level fields
-3. Include 8-13 investment picks in risk_adjusted_picks
+3. Include 10-13 investment picks in risk_adjusted_picks — aim for the upper end of this range
 4. Each pick must have ALL required fields with correct data types
 5. Use the real price data from MARKET_CONTEXT — do not invent numbers
 6. Adapt position sizes and asset mix to the RISK_PROFILE
+
+RECOMMENDATION DECISION RULES (apply these before assigning recommendation):
+- entry_quality=excellent AND analyst_upside > 20% AND RSI < 45 → recommend ADD (not HOLD)
+- entry_quality=good AND analyst_upside > 15% AND no insider selling → recommend ADD
+- entry_quality=fair OR RSI > 65 OR insider selling detected → HOLD is appropriate
+- Only use TRIM if RSI > 70 AND price is near 52-week high AND analyst_upside < 5%
+- When in doubt between ADD and HOLD with strong fundamentals, choose ADD
+- Do NOT default to HOLD simply because macro environment has uncertainty — all markets have uncertainty
 
 REQUIRED JSON STRUCTURE:
 {
