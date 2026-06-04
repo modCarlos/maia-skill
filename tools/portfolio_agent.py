@@ -101,6 +101,47 @@ REQUIRED JSON STRUCTURE:
 MAX_POSITIONS_PER_BATCH = MAX_POSITIONS_ENV  # configurable via MAIA_MAX_POSITIONS (default 20, GPU puede usar 30)
 
 
+def merge_duplicate_positions(portfolio: list) -> list:
+    """Consolida compras múltiples del mismo ticker en una sola posición.
+
+    - quantity  : suma de todas las cantidades
+    - buyPrice  : precio promedio ponderado  Σ(price × qty) / Σ(qty)
+    - buyDate   : fecha de compra más antigua
+    - name/sector: del primer entry encontrado
+    """
+    merged: dict[str, dict] = {}
+    total_cost_map: dict[str, float] = {}
+
+    for entry in portfolio:
+        sym = (entry.get("symbol") or "").upper().strip()
+        if not sym:
+            continue
+        qty   = float(entry.get("quantity") or 0)
+        price = float(entry.get("buyPrice") or entry.get("buy_price") or 0)
+        date  = entry.get("buyDate") or entry.get("buy_date") or ""
+
+        if sym not in merged:
+            merged[sym] = {**entry, "symbol": sym, "quantity": qty}
+            total_cost_map[sym] = price * qty
+        else:
+            existing = merged[sym]
+            existing["quantity"] += qty
+            total_cost_map[sym] += price * qty
+            # Conservar la fecha de compra más antigua
+            existing_date = existing.get("buyDate") or existing.get("buy_date") or ""
+            if date and (not existing_date or date < existing_date):
+                existing["buyDate"] = date
+                existing.pop("buy_date", None)
+
+    result = []
+    for sym, entry in merged.items():
+        qty = entry.get("quantity") or 1
+        entry["buyPrice"] = round(total_cost_map[sym] / qty, 4) if qty else entry.get("buyPrice", 0)
+        result.append(entry)
+
+    return result
+
+
 def prioritize_portfolio(portfolio: list, market_data: dict, max_pos: int = MAX_POSITIONS_PER_BATCH) -> list:
     """Prioriza las posiciones más críticas cuando el portfolio es muy grande.
     Orden: pérdidas grandes → RSI alto (sobrecomprado) → ganancias extremas → resto.
@@ -140,6 +181,13 @@ def prioritize_portfolio(portfolio: list, market_data: dict, max_pos: int = MAX_
 def compress_portfolio(market_data: dict, portfolio: list) -> str:
     """Construye contexto comprimido del portfolio para el LLM."""
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+    # Consolidar compras múltiples del mismo ticker antes de analizar
+    original_count = len(portfolio)
+    portfolio = merge_duplicate_positions(portfolio)
+    if len(portfolio) < original_count:
+        dupes = original_count - len(portfolio)
+        print(f"   ℹ️  {dupes} compra(s) duplicada(s) consolidadas por ticker (precio promedio ponderado)", file=sys.stderr)
 
     # Priorizar si hay demasiadas posiciones
     portfolio = prioritize_portfolio(portfolio, market_data)
