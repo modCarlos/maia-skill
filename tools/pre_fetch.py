@@ -156,9 +156,10 @@ OUTPUT_PATH = os.path.join(SKILL_ROOT, "data", "market_context.json")
 # ─── Technical indicators (pure pandas/numpy — no external deps) ──────────────
 
 def _rsi(closes: pd.Series, window: int = 14) -> float:
+    """RSI con suavizado de Wilder (EWM) — coincide con TradingView/Bloomberg."""
     delta = closes.diff()
-    gain = delta.where(delta > 0, 0.0).rolling(window).mean()
-    loss = (-delta.where(delta < 0, 0.0)).rolling(window).mean()
+    gain = delta.where(delta > 0, 0.0).ewm(alpha=1 / window, adjust=False).mean()
+    loss = (-delta.where(delta < 0, 0.0)).ewm(alpha=1 / window, adjust=False).mean()
     rs = gain / loss.replace(0, np.nan)
     rsi_series = 100 - (100 / (1 + rs))
     return round(float(rsi_series.iloc[-1]), 1)
