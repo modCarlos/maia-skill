@@ -1,0 +1,115 @@
+{
+  "generated_at": "2026-06-04T04:10:47Z",
+  "sessions_evaluated": 1,
+  "picks_evaluated": 10,
+  "no_data_count": 0,
+  "by_horizon": {
+    "30": {
+      "picks": 0,
+      "hit_rate": null,
+      "avg_return_pct": null
+    },
+    "60": {
+      "picks": 0,
+      "hit_rate": null,
+      "avg_return_pct": null
+    },
+    "90": {
+      "picks": 0,
+      "hit_rate": null,
+      "avg_return_pct": null
+    }
+  },
+  "by_risk_profile": {
+    "moderate": {
+      "picks": 10,
+      "hit_rate": 0.0,
+      "avg_return_pct": 2.72
+    }
+  },
+  "top_wins": [
+    {
+      "symbol": "V",
+      "recommendation": "TRIM",
+      "entry": 245.67,
+      "current": 312.4,
+      "return_pct": 27.16,
+      "date": "2026-06-03"
+    },
+    {
+      "symbol": "NFLX",
+      "recommendation": "ADD",
+      "entry": 81.52,
+      "current": 81.52,
+      "return_pct": 0.0,
+      "date": "2026-06-03"
+    },
+    {
+      "symbol": "NU",
+      "recommendation": "ADD",
+      "entry": 11.64,
+      "current": 11.64,
+      "return_pct": 0.0,
+      "date": "2026-06-03"
+    },
+    {
+      "symbol": "MA",
+      "recommendation": "ADD",
+      "entry": 471.55,
+      "current": 471.55,
+      "return_pct": 0.0,
+      "date": "2026-06-03"
+    },
+    {
+      "symbol": "REGN",
+      "recommendation": "ADD",
+      "entry": 618.95,
+      "current": 618.95,
+      "return_pct": 0.0,
+      "date": "2026-06-03"
+    }
+  ],
+  "top_losses": [
+    {
+      "symbol": "NFLX",
+      "recommendation": "ADD",
+      "entry": 81.52,
+      "current": 81.52,
+      "return_pct": 0.0,
+      "date": "2026-06-03"
+    },
+    {
+      "symbol": "NU",
+      "recommendation": "ADD",
+      "entry": 11.64,
+      "current": 11.64,
+      "return_pct": 0.0,
+      "date": "2026-06-03"
+    },
+    {
+      "symbol": "MA",
+      "recommendation": "ADD",
+      "entry": 471.55,
+      "current": 471.55,
+      "return_pct": 0.0,
+      "date": "2026-06-03"
+    },
+    {
+      "symbol": "REGN",
+      "recommendation": "ADD",
+      "entry": 618.95,
+      "current": 618.95,
+      "return_pct": 0.0,
+      "date": "2026-06-03"
+    },
+    {
+      "symbol": "BLK",
+      "recommendation": "ADD",
+      "entry": 990.87,
+      "current": 990.87,
+      "return_pct": 0.0,
+      "date": "2026-06-03"
+    }
+  ],
+  "prompt_block": ""
+}

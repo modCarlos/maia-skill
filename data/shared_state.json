@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-06-04T04:12:33Z",
+  "screener": {
+    "date": "2026-06-04",
+    "risk_profile": "moderate",
+    "add": [
+      "NFLX",
+      "NU",
+      "MA",
+      "REGN",
+      "BX",
+      "GOOGL",
+      "BLK"
+    ],
+    "hold": [
+      "PYPL",
+      "SBUX",
+      "AMZN"
+    ],
+    "trim": [
+      "V",
+      "META"
+    ]
+  }
+}

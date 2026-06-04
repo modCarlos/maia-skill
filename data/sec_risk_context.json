@@ -1,0 +1,229 @@
+{
+  "generated_at": "2026-06-04T04:10:47Z",
+  "source": "SEC EDGAR",
+  "top": 15,
+  "symbols": [
+    "NFLX",
+    "NU",
+    "MA",
+    "PYPL",
+    "REGN",
+    "BLK",
+    "BX",
+    "SBUX",
+    "GOOGL",
+    "AMZN",
+    "GILD",
+    "PLTR",
+    "META",
+    "AMGN",
+    "TSLA"
+  ],
+  "results": [
+    {
+      "symbol": "NFLX",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-01-23",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001065280/000106528026000034/nflx-20251231.htm",
+      "risk_factors": [
+        "All forward-looking statements included in this document are based on information available to us on the date hereof, and we assume no obligation to revise or publicly release any revision to any such forward-looking statement, except as may otherwise be required by law.",
+        "(“Netflix”, the “Company”, “registrant”, “we”, or “us”) is one of the world’s leading entertainment services offering TV series, films, games and live programming across a wide variety of genres and languages.",
+        "Members can play, pause and resume watching as much as they want, anytime, anywhere, and can change their plans at any time.",
+        "Our core strategy is to grow our business globally within the parameters of our operating margin target."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "NU",
+      "cik": null,
+      "form": "20-F",
+      "filing_date": "2026-04-08",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001691493/000129281426002166/nuform20f_2025.htm",
+      "risk_factors": [
+        "You should not rely upon forward-looking statements as predictions of future events.",
+        "We have based the forward-looking statements contained in this annual report primarily on our current expectations and projections about future events and trends that we believe may affect our business, financial condition, results of operations, and prospects.",
+        "The outcome of the events described in these forward-looking statements is subject to risks, uncertainties, and other factors, including those described in “Item 3.",
+        "New risks and uncertainties emerge from time to time and it is not possible for us to predict all risks and uncertainties that could have an impact on the forward-looking statements contained in this annual report."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "MA",
+      "cik": null,
+      "form": null,
+      "filing_date": null,
+      "source_url": null,
+      "risk_factors": [],
+      "error": "no_annual_filing_found"
+    },
+    {
+      "symbol": "PYPL",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-03",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001633917/000163391726000024/pypl-20251231.htm",
+      "risk_factors": [
+        "We do not intend, and undertake no obligation except as required by law, to update any of our forward-looking statements after the date of this report to reflect actual results, new information, or future events or circumstances.",
+        "Given these risks and uncertainties, readers are cautioned not to place undue reliance on such forward-looking statements.",
+        "You should read the information in this report in conjunction with the audited consolidated financial statements and the related notes that appear in this report.",
+        "BUSINESS OVERVIEW At PayPal Holdings, Inc., our mission is to revolutionize commerce globally."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "REGN",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-04",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000872589/000087258926000008/regn-20251231.htm",
+      "risk_factors": [
+        "The risks described below include forward-looking statements, and actual events and our actual results may differ materially from these forward-looking statements.",
+        "Additional risks and uncertainties not currently known to us or that we currently deem immaterial may also impair our business, prospects, operating results, and financial condition.",
+        "Furthermore, additional risks and uncertainties are described under other captions in this report and should also be considered by our investors.",
+        "For purposes of this section (as well as this report in general), references to our products encompass products marketed or otherwise commercialized by us and/or our collaborators or licensees; and references to our product candidates encompass product candidates in development by us and/or our collaborators or lice..."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "BLK",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-02-25",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0002012383/000095017025026584/blk-20241231.htm",
+      "risk_factors": [
+        "(together, with its subsidiaries, unless the context otherwise indicates, “BlackRock” or the “Company”) is a leading publicly traded investment management firm with $11.6 trillion of AUM at December 31, 2024.",
+        "With approximately 21,100 employees in more than 30 countries, BlackRock provides a broad range of investment management and technology services to institutional and retail clients in more than 100 countries across the globe.",
+        "For further information see Note 1, Business Overview , and Note 27, Segment Information , in the notes to the consolidated financial statements contained in Part II, Item 8.",
+        "On October 1, 2024, BlackRock completed the acquisition of 100% of the issued and outstanding limited liability company interests of GIP for a total consideration, at close, of approximately $3 billion in cash and 6.9 million shares, valued at $5.9 billion."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "BX",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-27",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001393818/000119312526082531/d48618d10k.htm",
+      "risk_factors": [
+        "Such allocations are typically realized at the end of the measurement period and, once realized, are typically not subject to clawback or reversal.",
+        "In particular, our ability to generate and realize these amounts is an important element of our business.",
+        "Such allocations in certain of our Perpetual Capital strategies contribute a significant and growing portion to our overall revenues.",
+        "The following is a general description of the Performance Revenues earned by Blackstone in structures other than carry funds: • The general partners of certain open-ended BPP and BIP funds are entitled to an incentive fee allocation generally between 7% and 12.5% of net profit, subject to a hurdle amount generally o..."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "SBUX",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-11-14",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000829224/000082922425000114/sbux-20250928.htm",
+      "risk_factors": [
+        "Governance Our cybersecurity program is led by our senior vice president, chief information security officer (“ciso”), who is responsible for identifying, assessing, and managing our collective information security and technology risks.",
+        "Our ciso has more than 20 years of experience in the information security and technology fields, including various leadership roles in several large companies across multiple industries.",
+        "Those roles have included leading various cybersecurity capabilities and managing information security, business intelligence, and data analytics teams.",
+        "The ciso is informed about the prevention, detection, mitigation, and remediation of cybersecurity incidents through management of, and participation in, the cybersecurity program described above, including through reports prepared by our internal cybersecurity team and the operation of our incident response plan."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "GOOGL",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-02-05",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001652044/000165204425000014/goog-20241231.htm",
+      "risk_factors": [
+        "Ongoing Commitment to Sustainability Our environmental strat egy has two key pillars, supported by our dedication to accessible information and technological innovation: • Our products: We are empowering people with information about the environmental impacts of their choices.",
+        "• Our operations: We are working to drive sustainability and efficiency across our operations and value chain.",
+        "Through our products, we have an aspiration to help individuals, cities, and other partners collectively reduce one gigaton of their carbon equivalent emissions annually by 2030.",
+        "In 2021, we set an ambitious goal to reach net-zero emissions across all of our operations and value chain by 2030."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "AMZN",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-02-07",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001018724/000101872425000004/amzn-20241231.htm",
+      "risk_factors": [
+        "We are guided by four principles: customer obsession rather than competitor focus, passion for invention, commitment to operational excellence, and long-term thinking.",
+        "In each of our segments, we serve our primary customer sets, consisting of consumers, sellers, developers, enterprises, content creators, advertisers, and employees.",
+        "We have organized our operations into three segments: North America, International, and Amazon Web Services (“AWS”).",
+        "These segments reflect the way the Company evaluates its business performance and manages its operations."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "GILD",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-24",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000882095/000088209526000006/gild-20251231.htm",
+      "risk_factors": [
+        "and EMA and EC in the EU, as well as the national authorities of the EU member states, must approve a drug before it can be sold in the respective country or countries.",
+        "Many other countries, including individual countries within the EU, have similar regulatory structures.",
+        "Drug Development Preclinical Testing Before we can test a drug candidate in humans, we must study the drug in laboratory experiments and in animals to generate data to support the drug candidate’s potential benefits and safety.",
+        "We submit this data to FDA in an Investigational New Drug (“IND”) application seeking its approval to test the compound in humans."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "PLTR",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-02-18",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001321655/000132165525000022/pltr-20241231.htm",
+      "risk_factors": [
+        "You should carefully consider the risks and uncertainties described below, together with all of the other information in this Annual Report on Form 10-K, including the section titled “Management’s Discussion and Analysis of Financial Condition and Results of Operations” and our consolidated financial statements and...",
+        "Our business, financial condition, results of operations, or prospects could also be harmed by risks and uncertainties not currently known to us or that we currently do not believe are material.",
+        "If any of the risks actually occur, our business, financial condition, results of operations, and prospects could be adversely affected.",
+        "In that event, the trading price of our Class A common stock could decline, and you could lose part or all of your investment."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "META",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-01-29",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000162828026003942/meta-20251231.htm",
+      "risk_factors": [
+        "It is not possible for our management to predict all risks, nor can we assess the impact of all factors on our business or the extent to which any factor, or combination of factors, may cause actual results to differ materially from those contained in any forward-looking statements we may make.",
+        "In light of these risks, uncertainties and assumptions, the future events and trends discussed in this Annual Report on Form 10-K may not occur and actual results could differ materially and adversely from those anticipated or implied in the forward-looking statements.",
+        "We undertake no obligation to revise or publicly release the results of any revision to these forward-looking statements, except as required by law.",
+        "Given these risks and uncertainties, readers are cautioned not to place undue reliance on such forward‑looking statements."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "AMGN",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-02-14",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000318154/000031815425000010/amgn-20241231.htm",
+      "risk_factors": [
+        "8 The following table reflects our significant competitors for our principal products and is not exhaustive.",
+        "Product Territory Competitor-marketed product Competitors Prolia (1) U.S., Europe & Asia Pacific Bisphosphonates, including generics Various ENBREL U.S.",
+        "& Europe Zoledronate generics Various Repatha U.S., Europe & Asia Pacific PRALUENT Regeneron Sanofi U.S.",
+        "Bisphosphonates, including generics Various Japan Teribone Asahi Kasei Pharma KYPROLIS U.S."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "TSLA",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-01-29",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001318605/000162828026003952/tsla-20251231.htm",
+      "risk_factors": [
+        "Risks and uncertainties not currently known to us or that we currently deem to be immaterial also may materially adversely affect our business, financial condition and operating results.",
+        "Risks Related to Our Ability to Grow Our Business We may experience issues or delays in developing, launching and ramping the production of our products, services and features, or we may be unable to control our manufacturing costs.",
+        "We are developing new technologies and services, unique manufacturing processes and design features in our products.",
+        "There is no guarantee we will be able to successfully develop or timely introduce and scale these new products, services and features, or that there will be widespread consumer adoption."
+      ],
+      "error": null
+    }
+  ]
+}
