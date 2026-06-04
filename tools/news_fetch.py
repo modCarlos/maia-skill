@@ -264,9 +264,10 @@ def get_insider_signal(ticker: yf.Ticker) -> dict:
 # ---------------------------------------------------------------------------
 # Per-ticker news fetch
 # ---------------------------------------------------------------------------
-def fetch_news_for_ticker(symbol: str, include_reddit: bool = True) -> dict:
+def fetch_news_for_ticker(symbol: str, include_reddit: bool = True, known_price: float = 0) -> dict:
     """
     Fetch yfinance news + analyst rec + optional Reddit for one ticker.
+    known_price: precio de cierre de pre_fetch usado como fallback de validación.
     Returns a dict ready for news_context.json.
     """
     result = {
@@ -316,12 +317,13 @@ def fetch_news_for_ticker(symbol: str, include_reddit: bool = True) -> dict:
         # Analyst target — validar que esté en rango razonable vs precio actual
         # (targets < 20% o > 500% del precio = dato corrupto de yfinance)
         raw_target = info.get("targetMeanPrice")
-        current_price = info.get("regularMarketPrice") or info.get("currentPrice")
-        if raw_target and current_price and current_price > 0:
+        # Precio: primero yfinance info, luego el precio de pre_fetch como fallback
+        current_price = (info.get("regularMarketPrice") or info.get("currentPrice") or known_price) or 0
+        if raw_target and current_price > 0:
             ratio = raw_target / current_price
             if 0.2 <= ratio <= 5.0:
                 result["analyst_target"] = raw_target
-            # else: descartado silenciosamente (ratio imposible)
+            # else: target imposible — descartado silenciosamente
         else:
             result["analyst_target"] = raw_target
 
@@ -365,6 +367,8 @@ def main():
         candidates = candidates[: args.top]
 
     symbols = [c["symbol"] for c in candidates]
+    # Precio de cierre desde pre_fetch — usado como fallback en validación de analyst_target
+    price_lookup: dict[str, float] = {c["symbol"]: c.get("price", 0) for c in candidates}
 
     print(
         f"[news_fetch] {datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')} — "
@@ -377,7 +381,7 @@ def main():
     start = time.time()
 
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures = {pool.submit(fetch_news_for_ticker, sym, include_reddit): sym for sym in symbols}
+        futures = {pool.submit(fetch_news_for_ticker, sym, include_reddit, price_lookup.get(sym, 0)): sym for sym in symbols}
         done = 0
         for future in as_completed(futures):
             sym = futures[future]
