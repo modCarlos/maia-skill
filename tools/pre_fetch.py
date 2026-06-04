@@ -323,6 +323,13 @@ def fetch_stock(symbol: str) -> dict | None:
         price = round(float(closes.iloc[-1]), 2)
 
         rsi = _rsi(closes)
+
+        # Sanity check: RSI fuera de rango real (< 10 o > 98) indica datos corruptos.
+        # En la práctica ningún blue chip sostiene RSI < 10 por más de 1-2 días.
+        if not (10.0 <= rsi <= 98.0):
+            print(f"  {symbol:<6} SKIP — RSI={rsi} fuera de rango válido (datos corruptos)", file=sys.stderr)
+            return None
+
         macd = _macd_signal(closes)
         trend = _trend(closes)
         support, resistance = _support_resistance(closes)
