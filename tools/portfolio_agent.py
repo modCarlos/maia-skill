@@ -28,6 +28,12 @@ if hasattr(sys.stderr, "reconfigure"):
 OLLAMA_URL  = "http://localhost:11434/api/chat"
 MODEL       = os.getenv("MAIA_MODEL", "qwen2.5:14b")
 MAX_RETRIES = 3
+# Aumentar MAIA_NUM_PREDICT en GPU potente (ej: export MAIA_NUM_PREDICT=4000)
+NUM_PREDICT = int(os.getenv("MAIA_NUM_PREDICT", "1500"))
+# Aumentar MAIA_TIMEOUT para modelos lentos (ej: export MAIA_TIMEOUT=900)
+TIMEOUT     = int(os.getenv("MAIA_TIMEOUT", "480"))
+# Aumentar MAIA_MAX_POSITIONS en GPU con num_predict alto (ej: export MAIA_MAX_POSITIONS=30)
+MAX_POSITIONS_ENV = int(os.getenv("MAIA_MAX_POSITIONS", "20"))
 
 REPO         = Path(__file__).parent.parent
 MARKET_FILE  = REPO / "data" / "portfolio_market.json"
@@ -47,6 +53,14 @@ CRITICAL RULES:
 6. Urgency must be one of: HIGH, MEDIUM, LOW
 7. Position health must be one of: STRONG, MODERATE, WEAK
 8. Thesis status must be one of: ACTIVE, DETERIORATING, INVALIDATED
+
+ACTION DECISION RULES (apply these before assigning action):
+- ADD: RSI < 40 AND P&L > -30% AND analyst_upside > 15% AND thesis ACTIVE → increase position
+- HOLD: thesis ACTIVE, RSI 40-65, no major red flags → keep current size
+- TRIM: RSI > 70 OR P&L > 40% OR position is overweight → reduce 25-50%
+- EXIT: thesis INVALIDATED OR P&L < -25% with deteriorating fundamentals OR analyst_rec > 3.5 (sell) → close
+- HIGH urgency: EXIT candidates OR RSI > 78 OR P&L < -20% with no recovery thesis
+- Do NOT default to HOLD for everything — use the data to make decisive calls
 
 REQUIRED JSON STRUCTURE:
 {
@@ -84,7 +98,7 @@ REQUIRED JSON STRUCTURE:
 
 # ─── Helpers ──────────────────────────────────────────────────────────────────
 
-MAX_POSITIONS_PER_BATCH = 20  # modelo local no puede manejar más de ~20 posiciones a la vez
+MAX_POSITIONS_PER_BATCH = MAX_POSITIONS_ENV  # configurable via MAIA_MAX_POSITIONS (default 20, GPU puede usar 30)
 
 
 def prioritize_portfolio(portfolio: list, market_data: dict, max_pos: int = MAX_POSITIONS_PER_BATCH) -> list:
@@ -216,10 +230,10 @@ def call_ollama(context: str, attempt: int) -> str:
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user",   "content": context + correction},
             ],
-            "options": {"temperature": 0.2, "num_predict": 1500, "num_ctx": 8192},
+            "options": {"temperature": 0.2, "num_predict": NUM_PREDICT, "num_ctx": 8192},
             "stream": False,
         },
-        timeout=480,
+        timeout=TIMEOUT,
     )
     resp.raise_for_status()
     result = resp.json()
@@ -233,8 +247,17 @@ def call_ollama(context: str, attempt: int) -> str:
 
 
 def repair_json(text: str) -> str:
+    """Repara errores comunes de JSON generados por modelos locales."""
+    # Trailing commas antes de } o ]
     text = re.sub(r",\s*([}\]])", r"\1", text)
+    # Comas dobles
     text = re.sub(r",\s*,", ",", text)
+    # Comillas simples → dobles (Python-style keys)
+    text = re.sub(r"(?<![\\])'([^']*)'(?=\s*:)", r'"\1"', text)
+    # Newlines literales dentro de strings (rompen JSON)
+    def fix_newlines_in_strings(m):
+        return m.group(0).replace('\n', '\\n').replace('\r', '\\r')
+    text = re.sub(r'"[^"\\]*(?:\\.[^"\\]*)*"', fix_newlines_in_strings, text, flags=re.DOTALL)
     return text
 
 

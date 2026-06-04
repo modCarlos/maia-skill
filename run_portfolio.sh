@@ -1,10 +1,19 @@
 #!/bin/bash
 # run_portfolio.sh — Analiza el portfolio con Ollama (sin cloud)
 # Uso: bash run_portfolio.sh
+#
+# Variables de entorno opcionales:
+#   MAIA_MODEL=gemma3:27b          # modelo a usar
+#   MAIA_NUM_PREDICT=4000          # tokens máx. a generar (GPU rápida)
+#   MAIA_TIMEOUT=900               # timeout en segundos para modelos lentos
+#   MAIA_MAX_POSITIONS=30          # posiciones a analizar (GPU con num_predict alto)
 set -e
 
 SKILL_DIR="$(cd "$(dirname "$0")" && pwd)"
 MODEL="${MAIA_MODEL:-qwen2.5:14b}"
+export MAIA_NUM_PREDICT="${MAIA_NUM_PREDICT:-1500}"
+export MAIA_TIMEOUT="${MAIA_TIMEOUT:-480}"
+export MAIA_MAX_POSITIONS="${MAIA_MAX_POSITIONS:-20}"
 
 echo ""
 echo "📊 Tododeia — Análisis de Portfolio | Modelo: $MODEL"
