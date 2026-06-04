@@ -278,7 +278,7 @@ def call_ollama(context: str, attempt: int) -> str:
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user",   "content": context + correction},
             ],
-            "options": {"temperature": 0.2, "num_predict": NUM_PREDICT, "num_ctx": 8192},
+            "options": {"temperature": 0.2, "num_predict": NUM_PREDICT, "num_ctx": 16384},
             "stream": False,
         },
         timeout=TIMEOUT,
@@ -392,10 +392,12 @@ def main():
     context = compress_portfolio(market_data, portfolio)
     print(f"   Contexto: {len(context):,} chars", file=sys.stderr)
 
-    # Si el contexto es demasiado largo, truncar noticias para caber en context window
-    if len(context) > 6000:
-        print(f"   ⚠️  Contexto largo — truncando a 6,000 chars", file=sys.stderr)
-        context = context[:6000] + "\n[...context truncated to fit model context window...]"
+    # Truncar solo si excede el límite de la ventana de contexto del modelo.
+    # Con num_ctx=16384: ~4 chars/token → límite seguro = 12,000 chars para el prompt.
+    CTX_CHAR_LIMIT = int(os.getenv("MAIA_CTX_CHARS", "12000"))
+    if len(context) > CTX_CHAR_LIMIT:
+        print(f"   ⚠️  Contexto largo — truncando a {CTX_CHAR_LIMIT:,} chars", file=sys.stderr)
+        context = context[:CTX_CHAR_LIMIT] + "\n[...context truncated to fit model context window...]"
 
     for attempt in range(1, MAX_RETRIES + 1):
         print(f"   Intento {attempt}/{MAX_RETRIES}...", file=sys.stderr)
