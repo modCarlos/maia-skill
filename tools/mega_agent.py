@@ -328,6 +328,25 @@ def build_context(risk_profile: str) -> str:
         if prompt_block:
             parts += ["", prompt_block]
 
+    # Inyectar holdings del portfolio para coherencia screener↔portfolio
+    portfolio_path = REPO / "data" / "portfolio.json"
+    if portfolio_path.exists():
+        try:
+            port_raw = json.loads(portfolio_path.read_text(encoding="utf-8"))
+            held = sorted(set(
+                (e.get("symbol") or "").upper().strip()
+                for e in port_raw
+                if (e.get("symbol") or "").strip()
+            ))
+            if held:
+                parts += [
+                    "",
+                    "ALREADY HELD IN PORTFOLIO: " + " ".join(held),
+                    "→ Held tickers: use thesis_status=CARRY_FORWARD. Still apply ADD/HOLD/TRIM rules normally.",
+                ]
+        except Exception:
+            pass
+
     return "\n".join(parts)
 
 

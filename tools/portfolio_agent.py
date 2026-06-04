@@ -259,6 +259,47 @@ def compress_portfolio(market_data: dict, portfolio: list) -> str:
     total_pnl_pct = round(total_pnl / total_cost * 100, 2) if total_cost else 0
     lines.insert(2, f"PORTFOLIO TOTALS: cost=${total_cost:,.0f}  value=${total_value:,.0f}  P&L=${total_pnl:+,.0f} ({total_pnl_pct:+.2f}%)")
 
+    # Inyectar picks del screener para coherencia portfolio↔screener
+    shared_state_path = REPO / "data" / "shared_state.json"
+    if shared_state_path.exists():
+        try:
+            state = json.loads(shared_state_path.read_text(encoding="utf-8"))
+            screener = state.get("screener", {})
+            screener_date = screener.get("date")
+            if screener_date:
+                today_d = datetime.now(timezone.utc).date()
+                screener_d = datetime.fromisoformat(screener_date).date()
+                age_days = (today_d - screener_d).days
+
+                add_list  = screener.get("add", [])
+                hold_list = screener.get("hold", [])
+                trim_list = screener.get("trim", [])
+                risk_prof = screener.get("risk_profile", "?")
+
+                held_syms = set(e.get("symbol", "").upper() for e in portfolio)
+                add_overlap  = [s for s in add_list  if s in held_syms]
+                trim_overlap = [s for s in trim_list if s in held_syms]
+
+                stale_tag = f"⚠ {age_days}d old — may be stale" if age_days > 2 else screener_date
+                screener_block = [
+                    "",
+                    f"=== SCREENER PICKS ({stale_tag}, {risk_prof}) ===",
+                    f"SCREENER ADD:  {' '.join(add_list[:12]) or 'none'}",
+                    f"SCREENER HOLD: {' '.join(hold_list[:12]) or 'none'}",
+                    f"SCREENER TRIM: {' '.join(trim_list[:6]) or 'none'}",
+                ]
+                if add_overlap:
+                    screener_block.append(
+                        f"→ Screener also ADD for your holdings: {' '.join(add_overlap)} — consider increasing position"
+                    )
+                if trim_overlap:
+                    screener_block.append(
+                        f"→ Screener says TRIM for your holdings: {' '.join(trim_overlap)} — reduce recommended"
+                    )
+                lines += screener_block
+        except Exception:
+            pass
+
     return "\n".join(lines)
 
 

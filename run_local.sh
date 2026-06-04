@@ -78,6 +78,9 @@ echo ""
 # ── 3. Validar y guardar reporte ─────────────────────────────────────────────
 echo "📝 Fase 3 — Guardando reporte..."
 python3 tools/write_report.py /tmp/tododeia_report.json
+
+# Actualizar shared_state.json para que portfolio_agent lo lea en el siguiente run
+python3 tools/update_shared_state.py || echo "  ⚠️  update_shared_state.py falló — continuando"
 echo ""
 
 # ── 4. Dashboard ─────────────────────────────────────────────────────────────
