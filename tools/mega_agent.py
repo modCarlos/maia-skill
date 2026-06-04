@@ -318,13 +318,19 @@ def call_ollama(context: str, attempt: int) -> str:
             "options": {
                 "temperature": 0.2,
                 "num_predict": NUM_PREDICT,
+                "num_ctx": 8192,  # context window explícito (default Ollama = 2048, insuficiente)
             },
             "stream": False,
         },
         timeout=480,
     )
     resp.raise_for_status()
-    return resp.json()["message"]["content"]
+    result = resp.json()
+    content = result.get("message", {}).get("content", "")
+    if not content or not content.strip():
+        print(f"   ⚠️  Respuesta vacía. done_reason={result.get('done_reason')} eval_count={result.get('eval_count')} prompt_eval_count={result.get('prompt_eval_count')}", file=sys.stderr)
+        raise json.JSONDecodeError("Respuesta vacía del modelo", "", 0)
+    return content
 
 
 def repair_json(text: str) -> str:
