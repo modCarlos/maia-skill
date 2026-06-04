@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-04T04:10:47Z",
+  "generated_at": "2026-06-04T14:56:53Z",
   "sessions_evaluated": 1,
-  "picks_evaluated": 10,
+  "picks_evaluated": 9,
   "no_data_count": 0,
   "by_horizon": {
     "30": {
@@ -22,92 +22,92 @@
   },
   "by_risk_profile": {
     "moderate": {
-      "picks": 10,
-      "hit_rate": 0.0,
-      "avg_return_pct": 2.72
+      "picks": 9,
+      "hit_rate": 0.778,
+      "avg_return_pct": 8.4
     }
   },
   "top_wins": [
     {
       "symbol": "V",
       "recommendation": "TRIM",
-      "entry": 245.67,
-      "current": 312.4,
-      "return_pct": 27.16,
+      "entry": 200.02,
+      "current": 321.885,
+      "return_pct": 60.93,
       "date": "2026-06-03"
     },
     {
-      "symbol": "NFLX",
+      "symbol": "BX",
       "recommendation": "ADD",
-      "entry": 81.52,
-      "current": 81.52,
-      "return_pct": 0.0,
-      "date": "2026-06-03"
-    },
-    {
-      "symbol": "NU",
-      "recommendation": "ADD",
-      "entry": 11.64,
-      "current": 11.64,
-      "return_pct": 0.0,
+      "entry": 110.28,
+      "current": 115.69,
+      "return_pct": 4.91,
       "date": "2026-06-03"
     },
     {
       "symbol": "MA",
       "recommendation": "ADD",
       "entry": 471.55,
-      "current": 471.55,
-      "return_pct": 0.0,
+      "current": 484.735,
+      "return_pct": 2.8,
       "date": "2026-06-03"
     },
     {
-      "symbol": "REGN",
+      "symbol": "GOOGL",
       "recommendation": "ADD",
-      "entry": 618.95,
-      "current": 618.95,
-      "return_pct": 0.0,
+      "entry": 358.99,
+      "current": 368.76,
+      "return_pct": 2.72,
+      "date": "2026-06-03"
+    },
+    {
+      "symbol": "PYPL",
+      "recommendation": "TRIM",
+      "entry": 42.61,
+      "current": 43.1751,
+      "return_pct": 1.33,
       "date": "2026-06-03"
     }
   ],
   "top_losses": [
     {
-      "symbol": "NFLX",
+      "symbol": "SBUX",
       "recommendation": "ADD",
-      "entry": 81.52,
-      "current": 81.52,
-      "return_pct": 0.0,
-      "date": "2026-06-03"
-    },
-    {
-      "symbol": "NU",
-      "recommendation": "ADD",
-      "entry": 11.64,
-      "current": 11.64,
-      "return_pct": 0.0,
-      "date": "2026-06-03"
-    },
-    {
-      "symbol": "MA",
-      "recommendation": "ADD",
-      "entry": 471.55,
-      "current": 471.55,
-      "return_pct": 0.0,
-      "date": "2026-06-03"
-    },
-    {
-      "symbol": "REGN",
-      "recommendation": "ADD",
-      "entry": 618.95,
-      "current": 618.95,
-      "return_pct": 0.0,
+      "entry": 95.89,
+      "current": 95.9297,
+      "return_pct": 0.04,
       "date": "2026-06-03"
     },
     {
       "symbol": "BLK",
       "recommendation": "ADD",
       "entry": 990.87,
-      "current": 990.87,
-      "return_pct": 0.0,
+      "current": 998.62,
+      "return_pct": 0.78,
+      "date": "2026-06-03"
+    },
+    {
+      "symbol": "REGN",
+      "recommendation": "ADD",
+      "entry": 618.95,
+      "current": 624.2,
+      "return_pct": 0.85,
+      "date": "2026-06-03"
+    },
+    {
+      "symbol": "NFLX",
+      "recommendation": "ADD",
+      "entry": 81.52,
+      "current": 82.505,
+      "return_pct": 1.21,
+      "date": "2026-06-03"
+    },
+    {
+      "symbol": "PYPL",
+      "recommendation": "TRIM",
+      "entry": 42.61,
+      "current": 43.1751,
+      "return_pct": 1.33,
       "date": "2026-06-03"
     }
   ],

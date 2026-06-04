@@ -1,12 +1,91 @@
 {
-  "fetched_at": "2026-06-04T04:10:37Z",
+  "fetched_at": "2026-06-04T14:56:43Z",
   "tickers_fetched": 35,
   "reddit_enabled": false,
-  "elapsed_seconds": 9.0,
+  "elapsed_seconds": 8.8,
   "news": {
+    "MA": {
+      "symbol": "MA",
+      "key_news": [
+        {
+          "title": "Visa\u2019s Role As New Stablecoin Platform Nears Faces Valuation Questions",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "Mastercard to add stablecoin, intraday and non-business day settlement options",
+          "publisher": "Electronic Payments"
+        },
+        {
+          "title": "Mastercard adds stablecoins to payment settlement system",
+          "publisher": "Retail Insight Network"
+        },
+        {
+          "title": "Why Circle Internet Group Stock Tumbled Today",
+          "publisher": "Motley Fool"
+        },
+        {
+          "title": "Circle Stock Slips as Stripe, Visa, Mastercard Explore Stablecoin Platform",
+          "publisher": "Barchart"
+        },
+        {
+          "title": "Stripe, Visa, Mastercard close to new stablecoin platform",
+          "publisher": "CoinDesk"
+        },
+        {
+          "title": "Mastercard Leadership Shakeup Puts Global Growth And Services In Focus",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "Mastercard taps Solana as it brings stablecoin settlement to its global card network",
+          "publisher": "TheStreet"
+        }
+      ],
+      "sentiment": {
+        "score": 0.013,
+        "label": "neutral",
+        "keywords": [
+          {
+            "word": "growth",
+            "type": "positive"
+          },
+          {
+            "word": "lowers",
+            "type": "negative"
+          }
+        ]
+      },
+      "analyst_recommendation": "strong buy",
+      "analyst_target": 646.9722,
+      "num_analysts": 36,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 0,
+        "signal": "none"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:34Z",
+      "error": null
+    },
     "NFLX": {
       "symbol": "NFLX",
       "key_news": [
+        {
+          "title": "Netflix thinks AI can solve one of streaming's biggest frustrations",
+          "publisher": "GuruFocus.com"
+        },
+        {
+          "title": "Spotify vs. Netflix: Which Streaming Stock Deserves Your Retirement Capital?",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Netflix Aims to Use AI to Help Viewers Manage Content Overload",
+          "publisher": "Bloomberg"
+        },
         {
           "title": "Netflix Stock Is in the Longest Losing Streak Since 2022",
           "publisher": "Barrons.com"
@@ -26,31 +105,24 @@
         {
           "title": "Meta vs. Netflix: Which One Deserves Your Retirement Capital Today?",
           "publisher": "24/7 Wall St."
-        },
-        {
-          "title": "If You'd Invested $10,000 in Netflix Stock 10 Years Ago, Here's How Much You'd Have Today",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "NFLX Stock Reverses Course Overnight: Retail Shrugs Off Outgoing Chairman\u2019s Sale As \u2018Routine\u2019",
-          "publisher": "Stocktwits"
-        },
-        {
-          "title": "Netflix (NFLX) Stock Falls Amid Market Uptick: What Investors Need to Know",
-          "publisher": "Zacks"
         }
       ],
       "sentiment": {
-        "score": 0.0,
+        "score": 0.043,
         "label": "neutral",
-        "keywords": []
+        "keywords": [
+          {
+            "word": "outperform",
+            "type": "positive"
+          }
+        ]
       },
       "analyst_recommendation": "buy",
       "analyst_target": 114.555,
       "num_analysts": 44,
       "insider": {
         "buys_30d": 0,
-        "sells_30d": 4,
+        "sells_30d": 3,
         "signal": "distributing"
       },
       "reddit": {
@@ -59,12 +131,103 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-04T04:10:28Z",
+      "fetched_at": "2026-06-04T14:56:34Z",
+      "error": null
+    },
+    "AMZN": {
+      "symbol": "AMZN",
+      "key_news": [
+        {
+          "title": "Alphabet and Nvidia reveal a surprising truth about the 'Magnificent 7' stocks",
+          "publisher": "Yahoo Finance"
+        },
+        {
+          "title": "Elon Musk\u2019s New Role: Why SpaceX Just Became a \u2018Neo Cloud\u2019 for Anthropic",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "S4 Capital Touts AI Gains, Lower Debt at AGM Despite Tough Ad Market",
+          "publisher": "MarketBeat"
+        },
+        {
+          "title": "Broadcom downgraded, UnitedHealth upgraded: Wall Street's top analyst calls",
+          "publisher": "The Fly"
+        },
+        {
+          "title": "Anthropic Turns Its Scariest AI Into A Money Printer",
+          "publisher": "Moby"
+        },
+        {
+          "title": "The White House Is Now Hoarding AI Tokens: How Government Compute Competition Reshapes the AI Trade",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Amazon's AI ambitions are running into local resistance",
+          "publisher": "GuruFocus.com"
+        },
+        {
+          "title": "Cerebras CEO Just Dropped Blunt News for Nvidia Stock Investors",
+          "publisher": "GuruFocus.com"
+        }
+      ],
+      "sentiment": {
+        "score": 0.05,
+        "label": "neutral",
+        "keywords": [
+          {
+            "word": "upgrade",
+            "type": "positive"
+          },
+          {
+            "word": "upgraded",
+            "type": "positive"
+          },
+          {
+            "word": "downgrade",
+            "type": "negative"
+          },
+          {
+            "word": "downgraded",
+            "type": "negative"
+          },
+          {
+            "word": "surge",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "strong buy",
+      "analyst_target": 312.7934,
+      "num_analysts": 62,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 7,
+        "signal": "distributing"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:34Z",
       "error": null
     },
     "NU": {
       "symbol": "NU",
       "key_news": [
+        {
+          "title": "Why Is NU Stock Rising Today?",
+          "publisher": "Stocktwits"
+        },
+        {
+          "title": "Nu Holdings Advances $1 Billion Share Buyback Plan (NU)",
+          "publisher": "InvestorsHub"
+        },
+        {
+          "title": "Nu Holdings Ltd. (NU) is Attracting Investor Attention: Here is What You Should Know",
+          "publisher": "Zacks"
+        },
         {
           "title": "Personal Loan Stocks Q1 In Review: Nubank (NYSE:NU) Vs Peers",
           "publisher": "StockStory"
@@ -84,24 +247,16 @@
         {
           "title": "Better Fintech Stock for Growth Investors: Nu Holdings vs. SoFi",
           "publisher": "Motley Fool"
-        },
-        {
-          "title": "Stock Indexes Post New Record Highs Amid AI Enthusiasm",
-          "publisher": "Barchart"
-        },
-        {
-          "title": "Nubank swipes Visa vet for CFO amid US push",
-          "publisher": "CFO Dive"
-        },
-        {
-          "title": "Stocks Push Higher on US Labor Market Strength and AI Spending",
-          "publisher": "Barchart"
         }
       ],
       "sentiment": {
-        "score": -0.096,
+        "score": -0.017,
         "label": "neutral",
         "keywords": [
+          {
+            "word": "buyback",
+            "type": "positive"
+          },
           {
             "word": "weak",
             "type": "negative"
@@ -138,527 +293,47 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-04T04:10:28Z",
+      "fetched_at": "2026-06-04T14:56:34Z",
       "error": null
     },
-    "BX": {
-      "symbol": "BX",
+    "HD": {
+      "symbol": "HD",
       "key_news": [
         {
-          "title": "Blackstone-backed Liftoff Mobile raises $437 million in US IPO",
-          "publisher": "Reuters"
-        },
-        {
-          "title": "Blackstone and Carlyle Stocks Trade Down, What You Need To Know",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "Blackstone vs. Apollo Global: Which Alternative Asset Giant Is a Better Buy in 2026?",
+          "title": "3 Things to Know About Home Depot Stock Before You Buy",
           "publisher": "Motley Fool"
         },
         {
-          "title": "AMD, Marvell, Intel, Blackstone, KKR, and More Stocks That Explain Today\u2019s Market",
-          "publisher": "Barrons.com"
-        },
-        {
-          "title": "Stock Market Today: Dow Drops 620 Points After Iran War Jitters; Broadcom Hits Highs",
-          "publisher": "Investor's Business Daily"
-        },
-        {
-          "title": "KKR, Blue Owl, and Blackstone Tumble. Why Private-Market Jitters Are Back and Hitting the Stocks.",
-          "publisher": "Barrons.com"
-        },
-        {
-          "title": "Private Markets Contagion Hits Blackstone, KKR, and Blue Owl as Redemptions Spread",
-          "publisher": "GuruFocus.com"
-        },
-        {
-          "title": "Stocks Fall on Escalation of US-Iran Hostilities",
-          "publisher": "Barchart"
-        }
-      ],
-      "sentiment": {
-        "score": 0.102,
-        "label": "bullish",
-        "keywords": [
-          {
-            "word": "raises",
-            "type": "positive"
-          },
-          {
-            "word": "record",
-            "type": "positive"
-          },
-          {
-            "word": "dividend",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "buy",
-      "analyst_target": 143.65,
-      "num_analysts": 20,
-      "insider": {
-        "buys_30d": 1,
-        "sells_30d": 0,
-        "signal": "mixed"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:28Z",
-      "error": null
-    },
-    "BLK": {
-      "symbol": "BLK",
-      "key_news": [
-        {
-          "title": "Tech ETF inflows surge and defy AI concentration risks",
-          "publisher": "Yahoo Finance Video"
-        },
-        {
-          "title": "Here's Why BlackRock (BLK) Fell More Than Broader Market",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Stocks Retreat as US-Iran Peace Hopes in Doubt",
-          "publisher": "Barchart"
-        },
-        {
-          "title": "Vanguard\u2019s VOO Hits $1 Trillion of Assets in ETF Industry First",
-          "publisher": "Bloomberg"
-        },
-        {
-          "title": "Stocks Fall on Escalation of US-Iran Hostilities",
-          "publisher": "Barchart"
-        },
-        {
-          "title": "'The world is choosing Texas': Is 'Y'All Street' taking over as the new financial capital of America?",
-          "publisher": "Moneywise"
-        },
-        {
-          "title": "Blackstone Stock: Is BX Underperforming the Financial Sector?",
-          "publisher": "Barchart"
-        },
-        {
-          "title": "Sector Update: Financial Stocks Advance Late Afternoon",
-          "publisher": "MT Newswires"
-        }
-      ],
-      "sentiment": {
-        "score": 0.108,
-        "label": "bullish",
-        "keywords": [
-          {
-            "word": "surge",
-            "type": "positive"
-          },
-          {
-            "word": "dividend",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "buy",
-      "analyst_target": 1251.25,
-      "num_analysts": 16,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 0,
-        "signal": "none"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:28Z",
-      "error": null
-    },
-    "SBUX": {
-      "symbol": "SBUX",
-      "key_news": [
-        {
-          "title": "How Starbucks plans to boost the afternoon business",
-          "publisher": "Yahoo Finance"
-        },
-        {
-          "title": "After Plunging 9.0% in 4 Weeks, Here's Why the Trend Might Reverse for Starbucks (SBUX)",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Black Rock Coffee Bar Touts 20% Growth Goals, 1,000-Store Ambition at Conference",
-          "publisher": "MarketBeat"
-        },
-        {
-          "title": "Too Close for Comfort: How Over-Expansion Is Hurting Major Retailers",
-          "publisher": "Barrons.com"
-        },
-        {
-          "title": "How Is Starbucks\u2019 Stock Performance Compared to Other Consumer Discretionary Stocks?",
-          "publisher": "Barchart"
-        },
-        {
-          "title": "Does Starbucks\u2019 (SBUX) Nostalgia-Driven Menu Strategy Clarify or Complicate Its Long-Term Brand Narrative?",
+          "title": "Walmart Tool Push Tests Home Depot Thesis On DIY Customers And Value",
           "publisher": "Simply Wall St."
-        },
-        {
-          "title": "Smart Money Owns 87% of Starbucks. Should Retail Investors Follow?",
-          "publisher": "24/7 Wall St."
-        },
-        {
-          "title": "As Anthropic Files for IPO, AI Savings Disappoint America\u2019s C-Suites",
-          "publisher": "The Daily Upside"
-        }
-      ],
-      "sentiment": {
-        "score": 0.116,
-        "label": "bullish",
-        "keywords": [
-          {
-            "word": "growth",
-            "type": "positive"
-          },
-          {
-            "word": "expansion",
-            "type": "positive"
-          },
-          {
-            "word": "cut",
-            "type": "negative"
-          },
-          {
-            "word": "cuts",
-            "type": "negative"
-          },
-          {
-            "word": "beat",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "buy",
-      "analyst_target": 106.25,
-      "num_analysts": 32,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 1,
-        "signal": "mixed"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:28Z",
-      "error": null
-    },
-    "MA": {
-      "symbol": "MA",
-      "key_news": [
-        {
-          "title": "Why Circle Internet Group Stock Tumbled Today",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "Circle Stock Slips as Stripe, Visa, Mastercard Explore Stablecoin Platform",
-          "publisher": "Barchart"
-        },
-        {
-          "title": "Stripe, Visa, Mastercard close to new stablecoin platform",
-          "publisher": "CoinDesk"
-        },
-        {
-          "title": "Mastercard Leadership Shakeup Puts Global Growth And Services In Focus",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "Mastercard taps Solana as it brings stablecoin settlement to its global card network",
-          "publisher": "TheStreet"
-        },
-        {
-          "title": "Mastercard goes 24/7 on-chain as bitcoin searches for a bottom",
-          "publisher": "Yahoo Finance Video"
-        },
-        {
-          "title": "Mastercard Expands Stablecoin Settlement via Circle's USDC, Ripple's RLUSD and Beyond",
-          "publisher": "decrypt"
-        },
-        {
-          "title": "Mastercard Adds Stablecoin Settlement for 24/7 Card Payments",
-          "publisher": "Bankless"
-        }
-      ],
-      "sentiment": {
-        "score": -0.029,
-        "label": "neutral",
-        "keywords": [
-          {
-            "word": "growth",
-            "type": "positive"
-          },
-          {
-            "word": "weak",
-            "type": "negative"
-          },
-          {
-            "word": "lowers",
-            "type": "negative"
-          }
-        ]
-      },
-      "analyst_recommendation": "strong buy",
-      "analyst_target": 646.9722,
-      "num_analysts": 36,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 0,
-        "signal": "none"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:28Z",
-      "error": null
-    },
-    "PYPL": {
-      "symbol": "PYPL",
-      "key_news": [
-        {
-          "title": "Apple's new feature takes the pain out of splitting the check",
-          "publisher": "Yahoo Finance Video"
-        },
-        {
-          "title": "Is PayPal the Ultimate Asymmetric Fintech Bet at 8x Earnings?",
-          "publisher": "Trefis"
-        },
-        {
-          "title": "PayPal Bets On AI Agentic Commerce With Hey Savi And Debenhams",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "3 Profitable Stocks That Fall Short",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "MoneyGram Brings 80+ Years of Remittance Infrastructure to Stablecoins With MGUSD Launch",
-          "publisher": "CCN"
-        },
-        {
-          "title": "Billionaire reveals one job making you old faster",
-          "publisher": "TheStreet"
-        },
-        {
-          "title": "PayPal Stock: Is PYPL Underperforming the Financial Services Sector?",
-          "publisher": "Barchart"
-        },
-        {
-          "title": "This Small-Cap Fintech Stock Is Crushing PayPal, SoFi, Klarna In 2026: Analyst Says Rally Isn't Over Yet",
-          "publisher": "Stocktwits"
-        }
-      ],
-      "sentiment": {
-        "score": 0.074,
-        "label": "neutral",
-        "keywords": [
-          {
-            "word": "profit",
-            "type": "positive"
-          },
-          {
-            "word": "rally",
-            "type": "positive"
-          },
-          {
-            "word": "weak",
-            "type": "negative"
-          }
-        ]
-      },
-      "analyst_recommendation": "hold",
-      "analyst_target": 51.34971,
-      "num_analysts": 34,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 1,
-        "signal": "mixed"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:28Z",
-      "error": null
-    },
-    "REGN": {
-      "symbol": "REGN",
-      "key_news": [
-        {
-          "title": "Why Regeneron (REGN) Stock Is Trading Up Today",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "How Investors May Respond To Regeneron (REGN) EMA Fast-Track Review Of Otarmeni Gene Therapy",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "2 S&P 500 Stocks with Solid Fundamentals and 1 We Find Risky",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "NewLimit\u2019s $435M megaround; Lilly\u2019s busy dealmaking week",
-          "publisher": "BioPharma Dive"
-        },
-        {
-          "title": "Are Options Traders Betting on a Big Move in Regeneron Stock?",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "3 Nasdaq 100 Stocks We Find Risky",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "Regeneron (REGN) Down 12.1% Since Last Earnings Report: Can It Rebound? (Revised)",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Regeneron Q1 Earnings Top, Sales Up on Dupixent & Eylea HD Strength (Revised)",
-          "publisher": "Zacks"
-        }
-      ],
-      "sentiment": {
-        "score": 0.0,
-        "label": "neutral",
-        "keywords": []
-      },
-      "analyst_recommendation": "buy",
-      "analyst_target": 833.3061,
-      "num_analysts": 28,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 0,
-        "signal": "none"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:28Z",
-      "error": null
-    },
-    "GOOGL": {
-      "symbol": "GOOGL",
-      "key_news": [
-        {
-          "title": "Tech stocks today: Marvell stock continues wild run as AI hype escalates",
-          "publisher": "Yahoo Finance"
-        },
-        {
-          "title": "Meta, Microsoft, Amazon, and Alphabet are about to spend a shocking amount of money to dominate the AI era",
-          "publisher": "Yahoo Finance"
-        },
-        {
-          "title": "DuckDuckGo reports largest search traffic ever as Google's AI push alienates some users",
-          "publisher": "TheStreet"
-        },
-        {
-          "title": "Google's $84 Million Capital Raise Uses Tools 'Popularized' By Michael Saylor's Strategy, Says Phong Le: Is It Just Old Wine In A New Bottle?",
-          "publisher": "Benzinga"
-        },
-        {
-          "title": "Big Tech's AI Spending Is on Track to Top $700 Billion This Year. Here's Who May Cash In Next.",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "Should Apple\u2019s Gemini\u2011Powered Siri and iOS Payments Push Require Action From AAPL Investors?",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "Berkshire\u2019s New Era Under Greg Abel Housing Meets AI Investment Shift",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "2 AI Stocks I'd Buy and Hold for the Next Decade -- Even After This Year's Big Run",
-          "publisher": "Motley Fool"
-        }
-      ],
-      "sentiment": {
-        "score": 0.043,
-        "label": "neutral",
-        "keywords": [
-          {
-            "word": "beat",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "strong buy",
-      "analyst_target": 429.8698,
-      "num_analysts": 52,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 0,
-        "signal": "none"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:30Z",
-      "error": null
-    },
-    "AMZN": {
-      "symbol": "AMZN",
-      "key_news": [
-        {
-          "title": "Marvell stock extends gains after a 32% pop as Nvidia CEO calls chipmaker 'the next trillion-dollar company'",
-          "publisher": "Yahoo Finance"
-        },
-        {
-          "title": "Meta, Microsoft, Amazon, and Alphabet are about to spend a shocking amount of money to dominate the AI era",
-          "publisher": "Yahoo Finance"
-        },
-        {
-          "title": "Big Tech's AI Spending Is on Track to Top $700 Billion This Year. Here's Who May Cash In Next.",
-          "publisher": "Motley Fool"
         },
         {
           "title": "Home Depot rival hardware chain files Chapter 11 bankruptcy",
           "publisher": "TheStreet"
         },
         {
-          "title": "2 AI Stocks I'd Buy and Hold for the Next Decade -- Even After This Year's Big Run",
-          "publisher": "Motley Fool"
+          "title": "3 Out-of-Favor Stocks with Open Questions",
+          "publisher": "StockStory"
         },
         {
-          "title": "Amazon Extends Prime Day And Doubles Down On AI And Valuation Potential",
+          "title": "Congressman Looking For Dividends? Taylor Ditches 2 Magnificent Seven Stocks For Blue Chips",
+          "publisher": "Benzinga"
+        },
+        {
+          "title": "Walmart makes a move to challenge Lowe's and Home Depot",
+          "publisher": "TheStreet"
+        },
+        {
+          "title": "Is It Time To Reassess Home Depot (HD) After Recent Share Price Weakness?",
           "publisher": "Simply Wall St."
         },
         {
-          "title": "Target hijacks Amazon to keep winning shoppers back",
-          "publisher": "TheStreet"
-        },
-        {
-          "title": "Now's the time to invest in Amazon's $99 smart lock \u2014 here's why",
-          "publisher": "TheStreet"
+          "title": "How Low Can Home Depot Stock Go?",
+          "publisher": "Trefis"
         }
       ],
       "sentiment": {
-        "score": 0.026,
+        "score": -0.058,
         "label": "neutral",
         "keywords": [
           {
@@ -666,97 +341,18 @@
             "type": "negative"
           },
           {
-            "word": "rally",
+            "word": "dividend",
             "type": "positive"
           },
           {
-            "word": "beat",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "strong buy",
-      "analyst_target": 312.7934,
-      "num_analysts": 62,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 7,
-        "signal": "distributing"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:30Z",
-      "error": null
-    },
-    "SONY": {
-      "symbol": "SONY",
-      "key_news": [
-        {
-          "title": "Still facing copyright lawsuits, AI music generator Suno raises another $400M",
-          "publisher": "TechCrunch"
-        },
-        {
-          "title": "Garth Brooks Considers Sale of Music Catalog, Seeking Roughly $2 Billion",
-          "publisher": "The Wall Street Journal"
-        },
-        {
-          "title": "Sony Electronics (SONY) Unveils Alpha 7R VI High-Resolution Mirrorless Camera",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "If Spider-Man Wins 2026\u2019s Box Office Crown, These Stocks Win Too",
-          "publisher": "24/7 Wall St."
-        },
-        {
-          "title": "Sony Unveils $31,000 Bravia TV Ahead Of TCL Joint Venture",
-          "publisher": "GuruFocus.com"
-        },
-        {
-          "title": "How Is Apple's Stock Performance Compared to Other Technology Stocks?",
-          "publisher": "Barchart"
-        },
-        {
-          "title": "Sony Stock Might Be One of the Deep\u2011Value Ways To Play AI",
-          "publisher": "24/7 Wall St."
-        },
-        {
-          "title": "GD Holdings buys 16 St. Regis Chicago condos from Sony for $21M",
-          "publisher": "The Real Deal"
-        }
-      ],
-      "sentiment": {
-        "score": 0.167,
-        "label": "bullish",
-        "keywords": [
-          {
-            "word": "raises",
-            "type": "positive"
-          },
-          {
-            "word": "lawsuit",
+            "word": "weak",
             "type": "negative"
-          },
-          {
-            "word": "growth",
-            "type": "positive"
-          },
-          {
-            "word": "buyback",
-            "type": "positive"
-          },
-          {
-            "word": "profit",
-            "type": "positive"
           }
         ]
       },
-      "analyst_recommendation": "none",
-      "analyst_target": 29.375,
-      "num_analysts": 4,
+      "analyst_recommendation": "buy",
+      "analyst_target": 370.21213,
+      "num_analysts": 33,
       "insider": {
         "buys_30d": 0,
         "sells_30d": 0,
@@ -768,7 +364,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-04T04:10:30Z",
+      "fetched_at": "2026-06-04T14:56:34Z",
       "error": null
     },
     "GILD": {
@@ -808,8 +404,8 @@
         }
       ],
       "sentiment": {
-        "score": 0.089,
-        "label": "neutral",
+        "score": 0.131,
+        "label": "bullish",
         "keywords": [
           {
             "word": "weak",
@@ -847,122 +443,55 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-04T04:10:30Z",
+      "fetched_at": "2026-06-04T14:56:34Z",
       "error": null
     },
-    "META": {
-      "symbol": "META",
+    "SBUX": {
+      "symbol": "SBUX",
       "key_news": [
         {
-          "title": "Meta, Microsoft, Amazon, and Alphabet are about to spend a shocking amount of money to dominate the AI era",
-          "publisher": "Yahoo Finance"
-        },
-        {
-          "title": "Big Tech's AI Spending Is on Track to Top $700 Billion This Year. Here's Who May Cash In Next.",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "Wayfair, Roku, and Instacart Stocks Trade Down, What You Need To Know",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "Fiverr, Teladoc, and Coursera Shares Plummet, What You Need To Know",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "Cars.com, Take-Two, and Match Group Shares Plummet, What You Need To Know",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "ACV Auctions, CarGurus, and LendingTree Shares Are Falling, What You Need To Know",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "Angi, Bumble, and LegalZoom Shares Plummet, What You Need To Know",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "Meta accuses Australia of breaching FTA, invokes US 'trade action'",
-          "publisher": "Reuters"
-        }
-      ],
-      "sentiment": {
-        "score": -0.043,
-        "label": "neutral",
-        "keywords": [
-          {
-            "word": "weak",
-            "type": "negative"
-          }
-        ]
-      },
-      "analyst_recommendation": "strong buy",
-      "analyst_target": 828.798,
-      "num_analysts": 59,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 6,
-        "signal": "distributing"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:30Z",
-      "error": null
-    },
-    "AMGN": {
-      "symbol": "AMGN",
-      "key_news": [
-        {
-          "title": "Dear Future Quantinuum Stock Investors, Mark Your Calendars for June 3",
-          "publisher": "Barchart"
-        },
-        {
-          "title": "ASCO 2026: Mixed SCLC result for Legend\u2019s LB2102, Novartis expedites manufacture",
-          "publisher": "Pharmaceutical Technology"
-        },
-        {
-          "title": "Amgen Secures EU Nod for Imdylltra in Lung Cancer Indication",
+          "title": "After Plunging 9.0% in 4 Weeks, Here's Why the Trend Might Reverse for Starbucks (SBUX)",
           "publisher": "Zacks"
         },
         {
-          "title": "TScan Therapeutics, Inc. (TCRX) Reports Q1 2026 Results With Improved Net Loss",
-          "publisher": "Insider Monkey"
+          "title": "How Starbucks plans to boost the afternoon business",
+          "publisher": "Yahoo Finance"
         },
         {
-          "title": "How Is Gilead Sciences's Stock Performance Compared to Other Healthcare Stocks",
+          "title": "Black Rock Coffee Bar Touts 20% Growth Goals, 1,000-Store Ambition at Conference",
+          "publisher": "MarketBeat"
+        },
+        {
+          "title": "Too Close for Comfort: How Over-Expansion Is Hurting Major Retailers",
+          "publisher": "Barrons.com"
+        },
+        {
+          "title": "How Is Starbucks\u2019 Stock Performance Compared to Other Consumer Discretionary Stocks?",
           "publisher": "Barchart"
         },
         {
-          "title": "MIT bullish on its Initiative for New Manufacturing at the one-year mark",
-          "publisher": "Manufacturing Dive"
-        },
-        {
-          "title": "2 Unpopular Stocks That Should Get More Attention and 1 We Question",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "How The Amgen (AMGN) Story Is Evolving As Rare Disease Upside Meets Valuation Caution",
+          "title": "Does Starbucks\u2019 (SBUX) Nostalgia-Driven Menu Strategy Clarify or Complicate Its Long-Term Brand Narrative?",
           "publisher": "Simply Wall St."
+        },
+        {
+          "title": "Smart Money Owns 87% of Starbucks. Should Retail Investors Follow?",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "As Anthropic Files for IPO, AI Savings Disappoint America\u2019s C-Suites",
+          "publisher": "The Daily Upside"
         }
       ],
       "sentiment": {
-        "score": 0.095,
-        "label": "neutral",
+        "score": 0.163,
+        "label": "bullish",
         "keywords": [
           {
-            "word": "loss",
-            "type": "negative"
-          },
-          {
-            "word": "outperform",
+            "word": "growth",
             "type": "positive"
           },
           {
-            "word": "strong",
+            "word": "expansion",
             "type": "positive"
           },
           {
@@ -970,14 +499,14 @@
             "type": "positive"
           },
           {
-            "word": "dividend",
+            "word": "raises",
             "type": "positive"
           }
         ]
       },
       "analyst_recommendation": "buy",
-      "analyst_target": 352.23334,
-      "num_analysts": 30,
+      "analyst_target": 106.25,
+      "num_analysts": 32,
       "insider": {
         "buys_30d": 0,
         "sells_30d": 0,
@@ -989,66 +518,153 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-04T04:10:30Z",
+      "fetched_at": "2026-06-04T14:56:34Z",
       "error": null
     },
-    "TSLA": {
-      "symbol": "TSLA",
+    "AVGO": {
+      "symbol": "AVGO",
       "key_news": [
         {
-          "title": "What's justifying SpaceX's $2T valuation target ahead of IPO?",
+          "title": "Broadcom stock sinks. Are AI earnings expectations 'insatiable'?",
           "publisher": "Yahoo Finance Video"
         },
         {
-          "title": "Used Cybertrucks are in demand, but that won't move Tesla stock",
+          "title": "Intel, AMD, Micron shares sink as Broadcom results spark semiconductor sector sell-off",
+          "publisher": "Yahoo Finance"
+        },
+        {
+          "title": "Broadcom stock falls despite Q2 earnings, guidance beat",
           "publisher": "Yahoo Finance Video"
         },
         {
-          "title": "ASTS, RKLB, SPCE, RDW Stocks Extend Selloff Overnight \u2014 Analyst Backs 'Betting Against Space' Trade As Jefferies Courts SpaceX Bears",
-          "publisher": "Stocktwits"
+          "title": "Tech ETF inflows surge and defy AI concentration risks",
+          "publisher": "Yahoo Finance Video"
         },
         {
-          "title": "Elon Musk, Tesla face serious new threat",
-          "publisher": "TheStreet"
+          "title": "Broadcom Stock Punished Over Lack of AI Guidance Boost",
+          "publisher": "The Wall Street Journal"
         },
         {
-          "title": "Dow Logs Worst Day Since March, S&P 500 And Nasdaq Snap Win Streak After US-Iran Exchange Fire \u2014 SNDK, TSLA, GOOGL, META, IREN In Focus",
-          "publisher": "Stocktwits"
-        },
-        {
-          "title": "SpaceX or Tesla: What Will Be the Better Buy on June 12?",
+          "title": "Why Broadcom Stock Crashed Today",
           "publisher": "Motley Fool"
         },
         {
-          "title": "SpaceX IPO Pricing At $135 Per Share Will Value The Rocket Maker At $1.77 Trillion \u2014 Musk To Keep Ironclad Control",
-          "publisher": "Stocktwits"
+          "title": "\ud83d\udcc3Money Quote: Tech Selloff an \u2018Overreaction\u2019",
+          "publisher": "The Wall Street Journal"
         },
         {
-          "title": "Tesla Stock Tests Short-Term Moving Averages Amid Surging Scandinavian Demand",
-          "publisher": "Benzinga"
+          "title": "Why Nvidia Stock Is Riding the Chip Selloff Better Than Its Rivals",
+          "publisher": "Barrons.com"
         }
       ],
       "sentiment": {
-        "score": 0.096,
+        "score": 0.073,
         "label": "neutral",
         "keywords": [
           {
-            "word": "growth",
+            "word": "beat",
+            "type": "positive"
+          },
+          {
+            "word": "surge",
+            "type": "positive"
+          },
+          {
+            "word": "weak",
+            "type": "negative"
+          },
+          {
+            "word": "disappoints",
+            "type": "negative"
+          },
+          {
+            "word": "strong",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "strong buy",
+      "analyst_target": 486.85416,
+      "num_analysts": 44,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 0,
+        "signal": "none"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:34Z",
+      "error": null
+    },
+    "GOOGL": {
+      "symbol": "GOOGL",
+      "key_news": [
+        {
+          "title": "Alphabet and Nvidia reveal a surprising truth about the 'Magnificent 7' stocks",
+          "publisher": "Yahoo Finance"
+        },
+        {
+          "title": "Is OpenAI coming for Tesla's robotics business?",
+          "publisher": "Yahoo Finance Video"
+        },
+        {
+          "title": "IBM Stock Rises As Tech Giant Enters Cloud Partnership On Agentic AI With Google",
+          "publisher": "Investor's Business Daily"
+        },
+        {
+          "title": "Why Nvidia Stock Is Riding the Chip Selloff Better Than Its Rivals",
+          "publisher": "Barrons.com"
+        },
+        {
+          "title": "Broadcom Just Had a Record Quarter\u2014and It Just Wasn\u2019t Good Enough",
+          "publisher": "Barrons.com"
+        },
+        {
+          "title": "S4 Capital Touts AI Gains, Lower Debt at AGM Despite Tough Ad Market",
+          "publisher": "MarketBeat"
+        },
+        {
+          "title": "Palantir Stock Rises Amid Google Cloud Deal, AIPCon 10 Announcements",
+          "publisher": "Investor's Business Daily"
+        },
+        {
+          "title": "The White House Is Now Hoarding AI Tokens: How Government Compute Competition Reshapes the AI Trade",
+          "publisher": "24/7 Wall St."
+        }
+      ],
+      "sentiment": {
+        "score": 0.073,
+        "label": "neutral",
+        "keywords": [
+          {
+            "word": "partnership",
             "type": "positive"
           },
           {
             "word": "record",
             "type": "positive"
+          },
+          {
+            "word": "downgrade",
+            "type": "negative"
+          },
+          {
+            "word": "downgraded",
+            "type": "negative"
           }
         ]
       },
-      "analyst_recommendation": "buy",
-      "analyst_target": 411.8878,
-      "num_analysts": 41,
+      "analyst_recommendation": "strong buy",
+      "analyst_target": 429.8698,
+      "num_analysts": 52,
       "insider": {
         "buys_30d": 0,
-        "sells_30d": 1,
-        "signal": "mixed"
+        "sells_30d": 0,
+        "signal": "none"
       },
       "reddit": {
         "mentions": 0,
@@ -1056,62 +672,66 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-04T04:10:30Z",
+      "fetched_at": "2026-06-04T14:56:36Z",
       "error": null
     },
-    "PLTR": {
-      "symbol": "PLTR",
+    "BLK": {
+      "symbol": "BLK",
       "key_news": [
         {
-          "title": "'Big Short' Star Steve Eisman Warns SpaceX Will Be A 'Retail Cult Stock' With A 'Crazy' Valuation Compared To NVDA",
-          "publisher": "Benzinga"
+          "title": "Tech ETF inflows surge and defy AI concentration risks",
+          "publisher": "Yahoo Finance Video"
         },
         {
-          "title": "Most Income Investors Have Never Heard of These 3 ETFs Paying Over 10 Percent Monthly",
-          "publisher": "24/7 Wall St."
+          "title": "Alternative Managers Shares Slip as Cliffwater Redemption Fears Mount",
+          "publisher": "Zacks"
         },
         {
-          "title": "Defense tech is flooded with money, but who\u2019s built to last?",
-          "publisher": "TechCrunch"
+          "title": "Here's Why BlackRock (BLK) Fell More Than Broader Market",
+          "publisher": "Zacks"
         },
         {
-          "title": "3 Trump-Promoted US Stocks to Watch in June",
-          "publisher": "BeInCrypto"
+          "title": "Stocks Retreat as US-Iran Peace Hopes in Doubt",
+          "publisher": "Barchart"
         },
         {
-          "title": "Palantir Investors Vote Down Human Rights Proposals. Why Insiders Prevailed.",
-          "publisher": "Barrons.com"
+          "title": "Vanguard\u2019s VOO Hits $1 Trillion of Assets in ETF Industry First",
+          "publisher": "Bloomberg"
         },
         {
-          "title": "Palantir Shares Sink After Michael Burry Calls It a 'Sand Castle'",
-          "publisher": "GuruFocus.com"
+          "title": "Stocks Fall on Escalation of US-Iran Hostilities",
+          "publisher": "Barchart"
         },
         {
-          "title": "Why Palantir Stock Is Sinking Today",
-          "publisher": "Motley Fool"
+          "title": "'The world is choosing Texas': Is 'Y'All Street' taking over as the new financial capital of America?",
+          "publisher": "Moneywise"
         },
         {
-          "title": "Palantir Lags the S&P 500 in 2026. How to Play the Once-Leading AI Stock Now.",
+          "title": "Blackstone Stock: Is BX Underperforming the Financial Sector?",
           "publisher": "Barchart"
         }
       ],
       "sentiment": {
-        "score": 0.041,
-        "label": "neutral",
+        "score": 0.108,
+        "label": "bullish",
         "keywords": [
           {
-            "word": "rally",
+            "word": "surge",
+            "type": "positive"
+          },
+          {
+            "word": "dividend",
             "type": "positive"
           }
         ]
       },
       "analyst_recommendation": "buy",
-      "analyst_target": 183.7289,
-      "num_analysts": 27,
+      "analyst_target": 1251.25,
+      "num_analysts": 16,
       "insider": {
         "buys_30d": 0,
-        "sells_30d": 7,
-        "signal": "distributing"
+        "sells_30d": 0,
+        "signal": "none"
       },
       "reddit": {
         "mentions": 0,
@@ -1119,12 +739,16 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-04T04:10:30Z",
+      "fetched_at": "2026-06-04T14:56:37Z",
       "error": null
     },
     "V": {
       "symbol": "V",
       "key_news": [
+        {
+          "title": "Visa\u2019s Role As New Stablecoin Platform Nears Faces Valuation Questions",
+          "publisher": "Simply Wall St."
+        },
         {
           "title": "Why Circle Internet Group Stock Tumbled Today",
           "publisher": "Motley Fool"
@@ -1152,18 +776,26 @@
         {
           "title": "Mastercard Adds Stablecoin Settlement for 24/7 Card Payments",
           "publisher": "Bankless"
-        },
-        {
-          "title": "Visa Down 14% in a Year, But the Disruption Thesis Weakens: Buy Now?",
-          "publisher": "Zacks"
         }
       ],
       "sentiment": {
-        "score": -0.051,
+        "score": -0.062,
         "label": "neutral",
         "keywords": [
           {
             "word": "weak",
+            "type": "negative"
+          },
+          {
+            "word": "beat",
+            "type": "positive"
+          },
+          {
+            "word": "cut",
+            "type": "negative"
+          },
+          {
+            "word": "cuts",
             "type": "negative"
           }
         ]
@@ -1182,7 +814,354 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-04T04:10:31Z",
+      "fetched_at": "2026-06-04T14:56:37Z",
+      "error": null
+    },
+    "PLTR": {
+      "symbol": "PLTR",
+      "key_news": [
+        {
+          "title": "Why Is PLTR Stock Rising Today?",
+          "publisher": "Stocktwits"
+        },
+        {
+          "title": "Palantir Stock Rises Amid Google Cloud Deal, AIPCon 10 Announcements",
+          "publisher": "Investor's Business Daily"
+        },
+        {
+          "title": "Palantir Lands Major AI Deal With Kirkland & Ellis",
+          "publisher": "GuruFocus.com"
+        },
+        {
+          "title": "Palantir Signs AI Platform Agreements With Kirkland & Ellis, McCarthy Building, GNP Seguros",
+          "publisher": "MT Newswires"
+        },
+        {
+          "title": "Market Chatter: Palantir Signs Multiyear AI Partnership With Kirkland & Ellis",
+          "publisher": "MT Newswires"
+        },
+        {
+          "title": "'Big Short' Star Steve Eisman Warns SpaceX Will Be A 'Retail Cult Stock' With A 'Crazy' Valuation Compared To NVDA",
+          "publisher": "Benzinga"
+        },
+        {
+          "title": "Most Income Investors Have Never Heard of These 3 ETFs Paying Over 10 Percent Monthly",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Defense tech is flooded with money, but who\u2019s built to last?",
+          "publisher": "TechCrunch"
+        }
+      ],
+      "sentiment": {
+        "score": 0.102,
+        "label": "bullish",
+        "keywords": [
+          {
+            "word": "partnership",
+            "type": "positive"
+          },
+          {
+            "word": "rally",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "buy",
+      "analyst_target": 183.7289,
+      "num_analysts": 27,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 7,
+        "signal": "distributing"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:37Z",
+      "error": null
+    },
+    "TSLA": {
+      "symbol": "TSLA",
+      "key_news": [
+        {
+          "title": "Alphabet and Nvidia reveal a surprising truth about the 'Magnificent 7' stocks",
+          "publisher": "Yahoo Finance"
+        },
+        {
+          "title": "Used Cybertrucks are in demand, but that won't move Tesla stock",
+          "publisher": "Yahoo Finance Video"
+        },
+        {
+          "title": "Tesla Stock Falls. Blame Broadcom.",
+          "publisher": "Barrons.com"
+        },
+        {
+          "title": "SpaceX Files $75 Billion IPO at Nearly $1.8 Trillion Valuation",
+          "publisher": "GuruFocus.com"
+        },
+        {
+          "title": "Tesla Expands Robotaxi Service in Austin",
+          "publisher": "GuruFocus.com"
+        },
+        {
+          "title": "BYD Challenges Tesla With Accident-Liability Warranty In China",
+          "publisher": "GuruFocus.com"
+        },
+        {
+          "title": "The Hidden Cost of Elon Musk\u2019s AI Ambitions Is Bigger Than Most Public Companies",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "The $10 Trillion Bet: Why Insiders Think SpaceX Could Rival Apple by Decade\u2019s End",
+          "publisher": "24/7 Wall St."
+        }
+      ],
+      "sentiment": {
+        "score": 0.04,
+        "label": "neutral",
+        "keywords": [
+          {
+            "word": "growth",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "buy",
+      "analyst_target": 411.8878,
+      "num_analysts": 41,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 1,
+        "signal": "mixed"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:37Z",
+      "error": null
+    },
+    "SONY": {
+      "symbol": "SONY",
+      "key_news": [
+        {
+          "title": "A Look At Sony Group (TSE:6758) Valuation After A Recent Share Price Rebound",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "Still facing copyright lawsuits, AI music generator Suno raises another $400M",
+          "publisher": "TechCrunch"
+        },
+        {
+          "title": "Garth Brooks Considers Sale of Music Catalog, Seeking Roughly $2 Billion",
+          "publisher": "The Wall Street Journal"
+        },
+        {
+          "title": "Sony Electronics (SONY) Unveils Alpha 7R VI High-Resolution Mirrorless Camera",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "If Spider-Man Wins 2026\u2019s Box Office Crown, These Stocks Win Too",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Sony Unveils $31,000 Bravia TV Ahead Of TCL Joint Venture",
+          "publisher": "GuruFocus.com"
+        },
+        {
+          "title": "How Is Apple's Stock Performance Compared to Other Technology Stocks?",
+          "publisher": "Barchart"
+        },
+        {
+          "title": "Sony Stock Might Be One of the Deep\u2011Value Ways To Play AI",
+          "publisher": "24/7 Wall St."
+        }
+      ],
+      "sentiment": {
+        "score": 0.087,
+        "label": "neutral",
+        "keywords": [
+          {
+            "word": "raises",
+            "type": "positive"
+          },
+          {
+            "word": "lawsuit",
+            "type": "negative"
+          },
+          {
+            "word": "beat",
+            "type": "positive"
+          },
+          {
+            "word": "growth",
+            "type": "positive"
+          },
+          {
+            "word": "profit",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "none",
+      "analyst_target": 29.375,
+      "num_analysts": 4,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 0,
+        "signal": "none"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:37Z",
+      "error": null
+    },
+    "PYPL": {
+      "symbol": "PYPL",
+      "key_news": [
+        {
+          "title": "Apple's new feature takes the pain out of splitting the check",
+          "publisher": "Yahoo Finance Video"
+        },
+        {
+          "title": "Personal Loan Stocks Q1 Recap: Benchmarking Affirm (NASDAQ:AFRM)",
+          "publisher": "StockStory"
+        },
+        {
+          "title": "Dogecoin Is A 'Buy', Analyst Says, As House Of Doge Integrates With Paxos Network",
+          "publisher": "Benzinga"
+        },
+        {
+          "title": "Is PayPal the Ultimate Asymmetric Fintech Bet at 8x Earnings?",
+          "publisher": "Trefis"
+        },
+        {
+          "title": "PayPal Bets On AI Agentic Commerce With Hey Savi And Debenhams",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "3 Profitable Stocks That Fall Short",
+          "publisher": "StockStory"
+        },
+        {
+          "title": "MoneyGram Brings 80+ Years of Remittance Infrastructure to Stablecoins With MGUSD Launch",
+          "publisher": "CCN"
+        },
+        {
+          "title": "Billionaire reveals one job making you old faster",
+          "publisher": "TheStreet"
+        }
+      ],
+      "sentiment": {
+        "score": 0.062,
+        "label": "neutral",
+        "keywords": [
+          {
+            "word": "profit",
+            "type": "positive"
+          },
+          {
+            "word": "rally",
+            "type": "positive"
+          },
+          {
+            "word": "weak",
+            "type": "negative"
+          }
+        ]
+      },
+      "analyst_recommendation": "hold",
+      "analyst_target": 51.34971,
+      "num_analysts": 34,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 1,
+        "signal": "mixed"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:37Z",
+      "error": null
+    },
+    "SOFI": {
+      "symbol": "SOFI",
+      "key_news": [
+        {
+          "title": "The best personal loans for June 2026",
+          "publisher": "Yahoo Personal Finance"
+        },
+        {
+          "title": "Mastercard to add stablecoin, intraday and non-business day settlement options",
+          "publisher": "Electronic Payments"
+        },
+        {
+          "title": "Assessing Whether SoFi Technologies (SOFI) Looks Overvalued After Mixed Recent Share Price Performance",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "Mastercard Adds Stablecoin Settlement for 24/7 Card Payments",
+          "publisher": "Bankless"
+        },
+        {
+          "title": "Mastercard Expands Stablecoin Settlement Hours With Polygon",
+          "publisher": "CryptoProwl"
+        },
+        {
+          "title": "Better Fintech Stock for Growth Investors: Nu Holdings vs. SoFi",
+          "publisher": "Motley Fool"
+        },
+        {
+          "title": "HOOD vs SOFI vs BULL: Which Brokerage Has The Most Upside As PDT Rules End?",
+          "publisher": "Stocktwits"
+        },
+        {
+          "title": "This Small-Cap Fintech Stock Is Crushing PayPal, SoFi, Klarna In 2026: Analyst Says Rally Isn't Over Yet",
+          "publisher": "Stocktwits"
+        }
+      ],
+      "sentiment": {
+        "score": 0.1,
+        "label": "bullish",
+        "keywords": [
+          {
+            "word": "growth",
+            "type": "positive"
+          },
+          {
+            "word": "rally",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "hold",
+      "analyst_target": 21.0,
+      "num_analysts": 20,
+      "insider": {
+        "buys_30d": 2,
+        "sells_30d": 1,
+        "signal": "accumulating"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:37Z",
       "error": null
     },
     "DIS": {
@@ -1222,7 +1201,7 @@
         }
       ],
       "sentiment": {
-        "score": 0.213,
+        "score": 0.215,
         "label": "bullish",
         "keywords": [
           {
@@ -1239,6 +1218,10 @@
           },
           {
             "word": "beat",
+            "type": "positive"
+          },
+          {
+            "word": "raises",
             "type": "positive"
           },
           {
@@ -1261,7 +1244,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-04T04:10:32Z",
+      "fetched_at": "2026-06-04T14:56:38Z",
       "error": null
     },
     "KMI": {
@@ -1301,7 +1284,7 @@
         }
       ],
       "sentiment": {
-        "score": 0.115,
+        "score": 0.148,
         "label": "bullish",
         "keywords": [
           {
@@ -1317,8 +1300,12 @@
             "type": "positive"
           },
           {
-            "word": "weak",
+            "word": "loss",
             "type": "negative"
+          },
+          {
+            "word": "buyback",
+            "type": "positive"
           },
           {
             "word": "dividend",
@@ -1331,8 +1318,8 @@
       "num_analysts": 21,
       "insider": {
         "buys_30d": 0,
-        "sells_30d": 2,
-        "signal": "distributing"
+        "sells_30d": 1,
+        "signal": "mixed"
       },
       "reddit": {
         "mentions": 0,
@@ -1340,133 +1327,62 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-04T04:10:32Z",
+      "fetched_at": "2026-06-04T14:56:38Z",
       "error": null
     },
-    "NEM": {
-      "symbol": "NEM",
+    "BX": {
+      "symbol": "BX",
       "key_news": [
         {
-          "title": "Is It Too Late To Reassess Newmont (NEM) After Its 1 Year 96% Surge?",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "A Look At Newmont (NEM) Valuation As Shares Trade Near Estimated Fair Value",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "Gold Stocks Are in a Bear Market. The Case For Buying.",
+          "title": "Blackstone Fund Caps Withdrawals. Why Private-Credit Stocks Aren\u2019t Falling This Time.",
           "publisher": "Barrons.com"
         },
         {
-          "title": "Newmont Corporation (NEM) Is a Trending Stock: Facts to Know Before Betting on It",
+          "title": "Alternative Managers Shares Slip as Cliffwater Redemption Fears Mount",
           "publisher": "Zacks"
         },
         {
-          "title": "This Gold Stock Under $30 Is The Pivot Away From Historically Overvalued Tech",
-          "publisher": "24/7 Wall St."
+          "title": "Blackstone Investors Ask to Pull $4.4 Billion From Private-Credit Fund",
+          "publisher": "The Wall Street Journal"
         },
         {
-          "title": "Newmont\u2019s 2025 ESG Reports Inform Safety And Valuation Considerations",
-          "publisher": "Simply Wall St."
+          "title": "Redemption Requests Rise at Blackstone\u2019s Giant Private-Credit Fund",
+          "publisher": "The Wall Street Journal"
         },
         {
-          "title": "Why Newmont Corporation (NEM) Outpaced the Stock Market Today",
-          "publisher": "Zacks"
+          "title": "Apogee Therapeutics Readies Zumi for Phase 3 With Blackstone Backing",
+          "publisher": "MarketBeat"
         },
         {
-          "title": "Barclays Maintains an \u201cOverweight\u201d Rating on Newmont Corporation (NEM)",
-          "publisher": "Insider Monkey"
+          "title": "Another redemption wave is spooking the $2 trillion private-credit market",
+          "publisher": "MarketWatch"
+        },
+        {
+          "title": "Blackstone weighs sale of Japan payments provider SP.LINKS \u2013 report",
+          "publisher": "Electronic Payments"
+        },
+        {
+          "title": "Blackstone-backed Liftoff Mobile raises $437 million in US IPO",
+          "publisher": "Reuters"
         }
       ],
       "sentiment": {
-        "score": 0.064,
+        "score": 0.007,
         "label": "neutral",
         "keywords": [
           {
-            "word": "surge",
+            "word": "raises",
             "type": "positive"
           },
           {
-            "word": "cut",
-            "type": "negative"
-          },
-          {
-            "word": "cuts",
+            "word": "weak",
             "type": "negative"
           }
         ]
       },
       "analyst_recommendation": "buy",
-      "analyst_target": 142.69333,
-      "num_analysts": 21,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 0,
-        "signal": "none"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:32Z",
-      "error": null
-    },
-    "MELI": {
-      "symbol": "MELI",
-      "key_news": [
-        {
-          "title": "Intapp And 2 Additional Stocks That May Be Priced Below Estimated Value",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "Brown Advisory Global Leaders Strategy Bets on Mercado Libre (MELI)",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "How Diverging Institutional Bets On MercadoLibre\u2019s Margin Trade-Offs (MELI) Has Changed Its Investment Story",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "House of Doge and Paxos Partner to Expand Regulated Access to Dogecoin",
-          "publisher": "CryptoProwl"
-        },
-        {
-          "title": "TBH Stock Climbs On House Of Doge-Paxos Dogecoin Deal, But Reverse Split Muddies The Retail Sentiment",
-          "publisher": "Stocktwits"
-        },
-        {
-          "title": "Why a Fintech-Focused Fund Just Added $44 Million of MercadoLibre Stock",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "Why a Fund Made a $17 Million Bet on MercadoLibre Despite a 35% Stock Drop",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "A Look At MercadoLibre (MELI) Valuation As Contrarian Interest Rises And Analyst Concerns Persist",
-          "publisher": "Simply Wall St."
-        }
-      ],
-      "sentiment": {
-        "score": 0.093,
-        "label": "neutral",
-        "keywords": [
-          {
-            "word": "growth",
-            "type": "positive"
-          },
-          {
-            "word": "strong",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "buy",
-      "analyst_target": 2216.9583,
-      "num_analysts": 24,
+      "analyst_target": 143.65,
+      "num_analysts": 20,
       "insider": {
         "buys_30d": 1,
         "sells_30d": 0,
@@ -1478,378 +1394,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-04T04:10:32Z",
-      "error": null
-    },
-    "JNJ": {
-      "symbol": "JNJ",
-      "key_news": [
-        {
-          "title": "Medtronic Stock Is Defying a Market Selloff After Earnings. Here\u2019s Why.",
-          "publisher": "Barrons.com"
-        },
-        {
-          "title": "Medtronic Stock Jumps on Strong Earnings",
-          "publisher": "The Wall Street Journal"
-        },
-        {
-          "title": "Are You Looking for a High-Growth Dividend Stock?",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Can AstraZeneca's Expanding Cancer Portfolio Sustain Momentum?",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Johnson & Johnson (JNJ) is Attracting Investor Attention: Here is What You Should Know",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "This Is What a $1 Million Dividend Portfolio Pays After Taxes",
-          "publisher": "24/7 Wall St."
-        },
-        {
-          "title": "Even If Eli Lilly Stock Continues to Shine, Stay Away from This Pharmaceutical ETF",
-          "publisher": "Barchart"
-        },
-        {
-          "title": "Johnson & Johnson Hopes to Dethrone AbbVie's Biggest Growth Driver. Here's Why Investors Shouldn't Panic",
-          "publisher": "Motley Fool"
-        }
-      ],
-      "sentiment": {
-        "score": 0.313,
-        "label": "bullish",
-        "keywords": [
-          {
-            "word": "strong",
-            "type": "positive"
-          },
-          {
-            "word": "growth",
-            "type": "positive"
-          },
-          {
-            "word": "dividend",
-            "type": "positive"
-          },
-          {
-            "word": "cut",
-            "type": "negative"
-          },
-          {
-            "word": "cuts",
-            "type": "negative"
-          },
-          {
-            "word": "surge",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "buy",
-      "analyst_target": 252.86957,
-      "num_analysts": 23,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 0,
-        "signal": "none"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:32Z",
-      "error": null
-    },
-    "HD": {
-      "symbol": "HD",
-      "key_news": [
-        {
-          "title": "Home Depot rival hardware chain files Chapter 11 bankruptcy",
-          "publisher": "TheStreet"
-        },
-        {
-          "title": "3 Out-of-Favor Stocks with Open Questions",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "Congressman Looking For Dividends? Taylor Ditches 2 Magnificent Seven Stocks For Blue Chips",
-          "publisher": "Benzinga"
-        },
-        {
-          "title": "Walmart makes a move to challenge Lowe's and Home Depot",
-          "publisher": "TheStreet"
-        },
-        {
-          "title": "Is It Time To Reassess Home Depot (HD) After Recent Share Price Weakness?",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "How Low Can Home Depot Stock Go?",
-          "publisher": "Trefis"
-        },
-        {
-          "title": "Texas Supreme Court Limits Shipper Liability in Trucking Crash Case",
-          "publisher": "FreightWaves"
-        },
-        {
-          "title": "Is Home Depot's Interconnected Retail Strategy Paying Off?",
-          "publisher": "Zacks"
-        }
-      ],
-      "sentiment": {
-        "score": 0.026,
-        "label": "neutral",
-        "keywords": [
-          {
-            "word": "bankruptcy",
-            "type": "negative"
-          },
-          {
-            "word": "dividend",
-            "type": "positive"
-          },
-          {
-            "word": "weak",
-            "type": "negative"
-          },
-          {
-            "word": "rally",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "buy",
-      "analyst_target": 370.21213,
-      "num_analysts": 33,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 0,
-        "signal": "none"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:32Z",
-      "error": null
-    },
-    "MRK": {
-      "symbol": "MRK",
-      "key_news": [
-        {
-          "title": "Moderna (MRNA) Climbs 7.5% Ahead of Next Week\u2019s Key Updates",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "Here is Why Erasca (ERAS) is One of the Best Growth Stocks Under $20",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "Extreme Networks And 2 Other Stocks That Could Be Trading Below Their Estimated Value",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "How Recent Pipeline Bets Are Rewriting the Story for Merck (MRK)",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "GSK Bets on Specialty Medicines to Drive Long-Term Revenue Growth",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Can AstraZeneca's Expanding Cancer Portfolio Sustain Momentum?",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Pfizer vs Merck: Chasing High Yield vs Higher Returns",
-          "publisher": "24/7 Wall St."
-        },
-        {
-          "title": "3 Stocks That May Be Priced Below Their Estimated Worth In June 2026",
-          "publisher": "Simply Wall St."
-        }
-      ],
-      "sentiment": {
-        "score": 0.119,
-        "label": "bullish",
-        "keywords": [
-          {
-            "word": "growth",
-            "type": "positive"
-          },
-          {
-            "word": "lawsuit",
-            "type": "negative"
-          },
-          {
-            "word": "strong",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "buy",
-      "analyst_target": 129.74074,
-      "num_analysts": 27,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 0,
-        "signal": "none"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:32Z",
-      "error": null
-    },
-    "NVDA": {
-      "symbol": "NVDA",
-      "key_news": [
-        {
-          "title": "Marvell stock extends gains after a 32% pop as Nvidia CEO calls chipmaker 'the next trillion-dollar company'",
-          "publisher": "Yahoo Finance"
-        },
-        {
-          "title": "Intel (INTC) Stock Is Up, What You Need To Know",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "The S&P 500 Index Has Only Traded at This High a Valuation 1 Other Time in Its 69-Year Existence. History Couldn't Be Any Clearer on What Happens Next.",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "Dow Jones Futures: Broadcom, CrowdStrike Dive On Earnings; SpaceX IPO Price Target Set",
-          "publisher": "Investor's Business Daily"
-        },
-        {
-          "title": "Stocks drop on AI, rate hike worries as Lebanon deal hits oil",
-          "publisher": "AFP"
-        },
-        {
-          "title": "Why Intel Stock Rallied Today",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "Navitas (NVTS) Hits All-Time High \u2014 Nvidia May Hold the Reason",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "POET Technologies (POET) Soars 11%, Mimics Industry Rally",
-          "publisher": "Insider Monkey"
-        }
-      ],
-      "sentiment": {
-        "score": 0.133,
-        "label": "bullish",
-        "keywords": [
-          {
-            "word": "rally",
-            "type": "positive"
-          },
-          {
-            "word": "record",
-            "type": "positive"
-          },
-          {
-            "word": "beat",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "strong buy",
-      "analyst_target": 298.06897,
-      "num_analysts": 58,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 1,
-        "signal": "mixed"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:33Z",
-      "error": null
-    },
-    "MSFT": {
-      "symbol": "MSFT",
-      "key_news": [
-        {
-          "title": "Microsoft debuts in-house AI models as it looks to ease reliance on OpenAI",
-          "publisher": "Yahoo Finance"
-        },
-        {
-          "title": "BB Or NOK: Which Fallen Phone Giant\u2019s Stock Is The Better AI Bet Right Now?",
-          "publisher": "Stocktwits"
-        },
-        {
-          "title": "Qualcomm stock under pressure as Nvidia unveils new product",
-          "publisher": "TheStreet"
-        },
-        {
-          "title": "Big Tech's AI Spending Is on Track to Top $700 Billion This Year. Here's Who May Cash In Next.",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "Stock Market Today, June 3: Markets End Winning Streak on Middle East Escalation Fears",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "Stock Market Today, June 3: Alphabet Falls After $84.75 Billion AI Infrastructure Equity Raise",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "Wall Street Snaps Record Rally Amid Re-Escalation in Middle East Conflict",
-          "publisher": "MT Newswires"
-        },
-        {
-          "title": "Nvidia Shakes Up PC Market With Its Surprise Entry",
-          "publisher": "Investor's Business Daily"
-        }
-      ],
-      "sentiment": {
-        "score": 0.095,
-        "label": "neutral",
-        "keywords": [
-          {
-            "word": "record",
-            "type": "positive"
-          },
-          {
-            "word": "rally",
-            "type": "positive"
-          },
-          {
-            "word": "strong",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "strong buy",
-      "analyst_target": 560.946,
-      "num_analysts": 55,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 2,
-        "signal": "distributing"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:33Z",
+      "fetched_at": "2026-06-04T14:56:38Z",
       "error": null
     },
     "CVX": {
@@ -1889,7 +1434,7 @@
         }
       ],
       "sentiment": {
-        "score": 0.149,
+        "score": 0.151,
         "label": "bullish",
         "keywords": [
           {
@@ -1924,12 +1469,616 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-04T04:10:33Z",
+      "fetched_at": "2026-06-04T14:56:39Z",
+      "error": null
+    },
+    "JNJ": {
+      "symbol": "JNJ",
+      "key_news": [
+        {
+          "title": "CereVasc raises $85m to advance hydrocephalus treatment",
+          "publisher": "Medical Device Network"
+        },
+        {
+          "title": "How to Maximize Dividend Income in Retirement Before RMDs Change the Math",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Without a Roth, $60,000 in Dividend Income From These 5 Stocks Means You Owe the IRS $22,200",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Why Social Security\u2019s 2.8% COLA Isn\u2019t Keeping Up With What Retirees Actually Spend on Healthcare",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Can Pure Dividend Stocks Replace a $110,000 Dual-Income Household Income? Here\u2019s What It Would Take",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Medtronic Stock Is Defying a Market Selloff After Earnings. Here\u2019s Why.",
+          "publisher": "Barrons.com"
+        },
+        {
+          "title": "Medtronic Stock Jumps on Strong Earnings",
+          "publisher": "The Wall Street Journal"
+        },
+        {
+          "title": "Are You Looking for a High-Growth Dividend Stock?",
+          "publisher": "Zacks"
+        }
+      ],
+      "sentiment": {
+        "score": 0.481,
+        "label": "bullish",
+        "keywords": [
+          {
+            "word": "raises",
+            "type": "positive"
+          },
+          {
+            "word": "dividend",
+            "type": "positive"
+          },
+          {
+            "word": "strong",
+            "type": "positive"
+          },
+          {
+            "word": "growth",
+            "type": "positive"
+          },
+          {
+            "word": "beat",
+            "type": "positive"
+          },
+          {
+            "word": "profit",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "buy",
+      "analyst_target": 252.86957,
+      "num_analysts": 23,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 0,
+        "signal": "none"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:38Z",
+      "error": null
+    },
+    "MELI": {
+      "symbol": "MELI",
+      "key_news": [
+        {
+          "title": "Dogecoin Is A 'Buy', Analyst Says, As House Of Doge Integrates With Paxos Network",
+          "publisher": "Benzinga"
+        },
+        {
+          "title": "Intapp And 2 Additional Stocks That May Be Priced Below Estimated Value",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "Brown Advisory Global Leaders Strategy Bets on Mercado Libre (MELI)",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "How Diverging Institutional Bets On MercadoLibre\u2019s Margin Trade-Offs (MELI) Has Changed Its Investment Story",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "House of Doge and Paxos Partner to Expand Regulated Access to Dogecoin",
+          "publisher": "CryptoProwl"
+        },
+        {
+          "title": "TBH Stock Climbs On House Of Doge-Paxos Dogecoin Deal, But Reverse Split Muddies The Retail Sentiment",
+          "publisher": "Stocktwits"
+        },
+        {
+          "title": "Why a Fintech-Focused Fund Just Added $44 Million of MercadoLibre Stock",
+          "publisher": "Motley Fool"
+        },
+        {
+          "title": "Why a Fund Made a $17 Million Bet on MercadoLibre Despite a 35% Stock Drop",
+          "publisher": "Motley Fool"
+        }
+      ],
+      "sentiment": {
+        "score": 0.093,
+        "label": "neutral",
+        "keywords": [
+          {
+            "word": "growth",
+            "type": "positive"
+          },
+          {
+            "word": "strong",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "buy",
+      "analyst_target": 2216.9583,
+      "num_analysts": 24,
+      "insider": {
+        "buys_30d": 1,
+        "sells_30d": 0,
+        "signal": "mixed"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:38Z",
+      "error": null
+    },
+    "NEM": {
+      "symbol": "NEM",
+      "key_news": [
+        {
+          "title": "Newmont (NEM) Is Among Gold Equities Trading At A Premium Valuation Relative To Peers, Says RBC Capital",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "Is It Too Late To Reassess Newmont (NEM) After Its 1 Year 96% Surge?",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "A Look At Newmont (NEM) Valuation As Shares Trade Near Estimated Fair Value",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "Gold Stocks Are in a Bear Market. The Case For Buying.",
+          "publisher": "Barrons.com"
+        },
+        {
+          "title": "Newmont Corporation (NEM) Is a Trending Stock: Facts to Know Before Betting on It",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "This Gold Stock Under $30 Is The Pivot Away From Historically Overvalued Tech",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Newmont\u2019s 2025 ESG Reports Inform Safety And Valuation Considerations",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "Why Newmont Corporation (NEM) Outpaced the Stock Market Today",
+          "publisher": "Zacks"
+        }
+      ],
+      "sentiment": {
+        "score": 0.101,
+        "label": "bullish",
+        "keywords": [
+          {
+            "word": "surge",
+            "type": "positive"
+          },
+          {
+            "word": "cut",
+            "type": "negative"
+          },
+          {
+            "word": "cuts",
+            "type": "negative"
+          },
+          {
+            "word": "rally",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "buy",
+      "analyst_target": 142.69333,
+      "num_analysts": 21,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 2,
+        "signal": "distributing"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:38Z",
+      "error": null
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "key_news": [
+        {
+          "title": "Alphabet and Nvidia reveal a surprising truth about the 'Magnificent 7' stocks",
+          "publisher": "Yahoo Finance"
+        },
+        {
+          "title": "IEFA: Why This Fund Is One of the Best International ETFs",
+          "publisher": "Motley Fool"
+        },
+        {
+          "title": "3 Chip, Cloud, and SaaS Stocks to Own for the Agentic AI Revolution",
+          "publisher": "Motley Fool"
+        },
+        {
+          "title": "The Fed\u2019s Next Move Will Determine Whether GLD Can Extend Its 36% Rally",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Why Broadcom Stock Crashed Today",
+          "publisher": "Motley Fool"
+        },
+        {
+          "title": "Why Nvidia Stock Is Riding the Chip Selloff Better Than Its Rivals",
+          "publisher": "Barrons.com"
+        },
+        {
+          "title": "The Trade That Actually Worked in 2026 Was Not Stocks, It Was Crude",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Opinion: The Best Memory Stock to Buy Isn\u2019t Named Micron or SanDisk",
+          "publisher": "24/7 Wall St."
+        }
+      ],
+      "sentiment": {
+        "score": 0.06,
+        "label": "neutral",
+        "keywords": [
+          {
+            "word": "rally",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "strong buy",
+      "analyst_target": 298.06897,
+      "num_analysts": 58,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 1,
+        "signal": "mixed"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:39Z",
+      "error": null
+    },
+    "JPM": {
+      "symbol": "JPM",
+      "key_news": [
+        {
+          "title": "'The chokepoints now run both ways': JPMorgan says 5 forces are quietly reshaping the US-China balance of power",
+          "publisher": "Moneywise"
+        },
+        {
+          "title": "Deutsche Bank shuns \u201caggressive\u201d promotions to beat rivals",
+          "publisher": "Retail Banker International"
+        },
+        {
+          "title": "Is JPMorgan Diversified Return Emerging Markets Equity ETF (JPEM) a Strong ETF Right Now?",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "How The Standard Life (LSE:SDLF) Narrative Is Shifting With Aegon UK And Capital Light Growth",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "Should JPMorgan\u2019s Expanded Note Issuance and Preferred Redemption Strategy Prompt Action From JPM (JPM) Investors?",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "Assessing JPMorgan Chase (JPM) Valuation After Recent Share Price Consolidation",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "McKesson Unit Prices $2.25 Billion Leveraged Loan Ahead of IPO",
+          "publisher": "Bloomberg"
+        },
+        {
+          "title": "Sector Update: Financial Stocks Decline Late Afternoon",
+          "publisher": "MT Newswires"
+        }
+      ],
+      "sentiment": {
+        "score": 0.211,
+        "label": "bullish",
+        "keywords": [
+          {
+            "word": "beat",
+            "type": "positive"
+          },
+          {
+            "word": "strong",
+            "type": "positive"
+          },
+          {
+            "word": "growth",
+            "type": "positive"
+          },
+          {
+            "word": "decline",
+            "type": "negative"
+          },
+          {
+            "word": "dividend",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "buy",
+      "analyst_target": 342.1905,
+      "num_analysts": 21,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 5,
+        "signal": "distributing"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:40Z",
+      "error": null
+    },
+    "MSFT": {
+      "symbol": "MSFT",
+      "key_news": [
+        {
+          "title": "Alphabet and Nvidia reveal a surprising truth about the 'Magnificent 7' stocks",
+          "publisher": "Yahoo Finance"
+        },
+        {
+          "title": "1 Historic Dow Giant to Buy Hand Over Fist and Hold for the Next 25 Years",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "The White House Is Now Hoarding AI Tokens: How Government Compute Competition Reshapes the AI Trade",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Company News for Jun 4, 2026",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "Amazon's AI ambitions are running into local resistance",
+          "publisher": "GuruFocus.com"
+        },
+        {
+          "title": "Is CrowdStrike Stock A Great Business At A Dangerous Price?",
+          "publisher": "Trefis"
+        },
+        {
+          "title": "Is Oracle Stock A Smart Buy At $230?",
+          "publisher": "Trefis"
+        },
+        {
+          "title": "Google vs. Microsoft: Which Cloud Giant Deserves Your Capital Right Now?",
+          "publisher": "24/7 Wall St."
+        }
+      ],
+      "sentiment": {
+        "score": 0.038,
+        "label": "neutral",
+        "keywords": [
+          {
+            "word": "record",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "strong buy",
+      "analyst_target": 560.946,
+      "num_analysts": 55,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 2,
+        "signal": "distributing"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:40Z",
+      "error": null
+    },
+    "META": {
+      "symbol": "META",
+      "key_news": [
+        {
+          "title": "Alphabet and Nvidia reveal a surprising truth about the 'Magnificent 7' stocks",
+          "publisher": "Yahoo Finance"
+        },
+        {
+          "title": "Broadcom stock sinks 15% as AI chip forecast disappoints",
+          "publisher": "Yahoo Finance"
+        },
+        {
+          "title": "Elon Musk\u2019s New Role: Why SpaceX Just Became a \u2018Neo Cloud\u2019 for Anthropic",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Is Meta Platforms (META) Still Attractive After Heavy AI Spending And Recent Share Price Swings?",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "The White House Is Now Hoarding AI Tokens: How Government Compute Competition Reshapes the AI Trade",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Broadcom\u2019s Stock Tumble Could Be About More Than Just Guidance",
+          "publisher": "The Wall Street Journal"
+        },
+        {
+          "title": "Cathie Wood Goes Bargain Hunting: 3 Stocks She Just Bought",
+          "publisher": "Motley Fool"
+        },
+        {
+          "title": "A.I. Data Centres Drive Surge In Texas Power Demand",
+          "publisher": "CryptoProwl"
+        }
+      ],
+      "sentiment": {
+        "score": 0.041,
+        "label": "neutral",
+        "keywords": [
+          {
+            "word": "disappoints",
+            "type": "negative"
+          },
+          {
+            "word": "surge",
+            "type": "positive"
+          },
+          {
+            "word": "partnership",
+            "type": "positive"
+          },
+          {
+            "word": "beat",
+            "type": "positive"
+          },
+          {
+            "word": "beats",
+            "type": "positive"
+          },
+          {
+            "word": "weak",
+            "type": "negative"
+          }
+        ]
+      },
+      "analyst_recommendation": "strong buy",
+      "analyst_target": 828.798,
+      "num_analysts": 59,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 7,
+        "signal": "distributing"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:40Z",
+      "error": null
+    },
+    "AMGN": {
+      "symbol": "AMGN",
+      "key_news": [
+        {
+          "title": "Stock Market Today: Dow Cruises 700 Points Higher But Broadcom Plunges 15% On Earnings (Live Coverage)",
+          "publisher": "Investor's Business Daily"
+        },
+        {
+          "title": "Dear Future Quantinuum Stock Investors, Mark Your Calendars for June 3",
+          "publisher": "Barchart"
+        },
+        {
+          "title": "ASCO 2026: Mixed SCLC result for Legend\u2019s LB2102, Novartis expedites manufacture",
+          "publisher": "Pharmaceutical Technology"
+        },
+        {
+          "title": "Amgen Secures EU Nod for Imdylltra in Lung Cancer Indication",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "TScan Therapeutics, Inc. (TCRX) Reports Q1 2026 Results With Improved Net Loss",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "How Is Gilead Sciences's Stock Performance Compared to Other Healthcare Stocks",
+          "publisher": "Barchart"
+        },
+        {
+          "title": "MIT bullish on its Initiative for New Manufacturing at the one-year mark",
+          "publisher": "Manufacturing Dive"
+        },
+        {
+          "title": "2 Unpopular Stocks That Should Get More Attention and 1 We Question",
+          "publisher": "StockStory"
+        }
+      ],
+      "sentiment": {
+        "score": 0.024,
+        "label": "neutral",
+        "keywords": [
+          {
+            "word": "loss",
+            "type": "negative"
+          },
+          {
+            "word": "beat",
+            "type": "positive"
+          },
+          {
+            "word": "approval",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "buy",
+      "analyst_target": 352.23334,
+      "num_analysts": 30,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 0,
+        "signal": "none"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:40Z",
       "error": null
     },
     "CRM": {
       "symbol": "CRM",
       "key_news": [
+        {
+          "title": "Is Oracle Stock A Smart Buy At $230?",
+          "publisher": "Trefis"
+        },
+        {
+          "title": "Is Veeva Stock Undervalued At $170?",
+          "publisher": "Trefis"
+        },
+        {
+          "title": "Can EmployeeWorks Become a Major Growth Driver for ServiceNow?",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "E-Commerce Update - Shopify Boosts Buyback Program Reflecting Market Confidence",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "Salesforce Sponsor Spotlight",
+          "publisher": "Bloomberg"
+        },
         {
           "title": "Salesforce (CRM) Is Up 7.4% After Big Anthropic Bet And Agentforce Push \u2013 Has The Bull Case Changed?",
           "publisher": "Simply Wall St."
@@ -1941,32 +2090,20 @@
         {
           "title": "Wall Street Snaps Record Rally Amid Re-Escalation in Middle East Conflict",
           "publisher": "MT Newswires"
-        },
-        {
-          "title": "Adobe is getting closer to choosing its next CEO",
-          "publisher": "GuruFocus.com"
-        },
-        {
-          "title": "Salesforce vs. Braze: Which Technology Stock Is a Better Buy in 2026?",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "Equities Fall Intraday, Oil Jumps Amid Renewed Middle East Tensions",
-          "publisher": "MT Newswires"
-        },
-        {
-          "title": "Atlassian's AI Momentum Builds: Is Rovo the Next Growth Pillar?",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Stocks Fall on Escalation of US-Iran Hostilities",
-          "publisher": "Barchart"
         }
       ],
       "sentiment": {
-        "score": 0.244,
+        "score": 0.212,
         "label": "bullish",
         "keywords": [
+          {
+            "word": "growth",
+            "type": "positive"
+          },
+          {
+            "word": "buyback",
+            "type": "positive"
+          },
           {
             "word": "record",
             "type": "positive"
@@ -1976,8 +2113,12 @@
             "type": "positive"
           },
           {
-            "word": "growth",
-            "type": "positive"
+            "word": "cut",
+            "type": "negative"
+          },
+          {
+            "word": "cuts",
+            "type": "negative"
           }
         ]
       },
@@ -1995,12 +2136,162 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-04T04:10:33Z",
+      "fetched_at": "2026-06-04T14:56:40Z",
+      "error": null
+    },
+    "MRK": {
+      "symbol": "MRK",
+      "key_news": [
+        {
+          "title": "Sanofi Stock Falls 6% in 3 Months: Should You Buy, Sell or Hold?",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "Nasdaq drops after Broadcom, Crowdstrike earnings, Dow Jones jumps at open",
+          "publisher": "Proactive"
+        },
+        {
+          "title": "BioLife Solutions Leads 3 Stocks Estimated To Be Trading Below Fair Value",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "FTSE 100 Live: Index flat as Prudential and HSBC fall, US tech falls",
+          "publisher": "Proactive"
+        },
+        {
+          "title": "Moderna (MRNA) Climbs 7.5% Ahead of Next Week\u2019s Key Updates",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "Here is Why Erasca (ERAS) is One of the Best Growth Stocks Under $20",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "Extreme Networks And 2 Other Stocks That Could Be Trading Below Their Estimated Value",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "How Recent Pipeline Bets Are Rewriting the Story for Merck (MRK)",
+          "publisher": "Simply Wall St."
+        }
+      ],
+      "sentiment": {
+        "score": 0.186,
+        "label": "bullish",
+        "keywords": [
+          {
+            "word": "growth",
+            "type": "positive"
+          },
+          {
+            "word": "beat",
+            "type": "positive"
+          },
+          {
+            "word": "strong",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "buy",
+      "analyst_target": 129.74074,
+      "num_analysts": 27,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 0,
+        "signal": "none"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:40Z",
+      "error": null
+    },
+    "FCX": {
+      "symbol": "FCX",
+      "key_news": [
+        {
+          "title": "Freeport-McMoRan (FCX) Earns Another Higher Target As Copper Optimism Builds",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "Can FCX Protect Margins Amid Higher Copper Production Costs in Q2?",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "Is It Too Late To Consider Freeport-McMoRan (FCX) After Its Strong Multi-Year Share Price Run?",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "Copper Tops $14,000 With Banks Calling for Even More Upside",
+          "publisher": "Oilprice.com"
+        },
+        {
+          "title": "Rare Earth Stocks, Copper Plays Surging; FCX, MP Near Buy Points",
+          "publisher": "Investor's Business Daily"
+        },
+        {
+          "title": "Watch These 5 Non-Tech Stocks Thriving in 2026 on AI Data Center Boom",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "Freeport-McMoRan (FCX) Rises Higher Than Market: Key Facts",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "First Quantum Minerals (FQVLF) Soars 5.0%: Is Further Upside Left in the Stock?",
+          "publisher": "Zacks"
+        }
+      ],
+      "sentiment": {
+        "score": 0.096,
+        "label": "neutral",
+        "keywords": [
+          {
+            "word": "strong",
+            "type": "positive"
+          },
+          {
+            "word": "outperform",
+            "type": "positive"
+          },
+          {
+            "word": "loss",
+            "type": "negative"
+          },
+          {
+            "word": "losses",
+            "type": "negative"
+          }
+        ]
+      },
+      "analyst_recommendation": "buy",
+      "analyst_target": 68.26818,
+      "num_analysts": 22,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 0,
+        "signal": "none"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:40Z",
       "error": null
     },
     "WFC": {
       "symbol": "WFC",
       "key_news": [
+        {
+          "title": "Is Trending Stock Wells Fargo & Company (WFC) a Buy Now?",
+          "publisher": "Zacks"
+        },
         {
           "title": "Wells Fargo shares at attractive entry point amid execution concerns",
           "publisher": "Proactive"
@@ -2028,14 +2319,10 @@
         {
           "title": "Best Wells Fargo credit cards for June 2026",
           "publisher": "Yahoo Personal Finance"
-        },
-        {
-          "title": "JPMorgan's Bullish Q2 Outlook Highlights Fee Income Potential",
-          "publisher": "Zacks"
         }
       ],
       "sentiment": {
-        "score": -0.01,
+        "score": -0.005,
         "label": "neutral",
         "keywords": [
           {
@@ -2047,16 +2334,16 @@
             "type": "positive"
           },
           {
-            "word": "miss",
-            "type": "negative"
+            "word": "beat",
+            "type": "positive"
           },
           {
             "word": "cuts",
             "type": "negative"
           },
           {
-            "word": "beat",
-            "type": "positive"
+            "word": "miss",
+            "type": "negative"
           }
         ]
       },
@@ -2074,261 +2361,20 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-04T04:10:33Z",
-      "error": null
-    },
-    "UNH": {
-      "symbol": "UNH",
-      "key_news": [
-        {
-          "title": "5 HMO Stocks in Focus Amid an Aging U.S. Population, Tech Innovation",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Berkshire Hathaway Made Some Major Portfolio Moves, but This One Was a Head-Scratcher. How Should Investors Take It?",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "UnitedHealth Group (UNH) Hit by Medicare Reimbursement Concerns",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "Eli Lilly Wins Back CVS Health, Reverting Novo's Advantage",
-          "publisher": "MarketBeat"
-        },
-        {
-          "title": "Cigna Stock: Is CI Underperforming the Healthcare Sector?",
-          "publisher": "Barchart"
-        },
-        {
-          "title": "Beyond the AI Boom: 3 Forgotten Sectors to Buy Amid Historic Market Disconnect",
-          "publisher": "Barrons.com"
-        },
-        {
-          "title": "UnitedHealth Lawsuit Raises Fresh Questions On Medicaid Revenue And Investor Risk",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "Better Dividend Growth Stock to Buy: CVS Health or UnitedHealth Group?",
-          "publisher": "Motley Fool"
-        }
-      ],
-      "sentiment": {
-        "score": 0.115,
-        "label": "bullish",
-        "keywords": [
-          {
-            "word": "innovation",
-            "type": "positive"
-          },
-          {
-            "word": "raises",
-            "type": "positive"
-          },
-          {
-            "word": "lawsuit",
-            "type": "negative"
-          },
-          {
-            "word": "growth",
-            "type": "positive"
-          },
-          {
-            "word": "dividend",
-            "type": "positive"
-          },
-          {
-            "word": "cut",
-            "type": "negative"
-          }
-        ]
-      },
-      "analyst_recommendation": "buy",
-      "analyst_target": 401.46155,
-      "num_analysts": 26,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 0,
-        "signal": "none"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:33Z",
-      "error": null
-    },
-    "BAC": {
-      "symbol": "BAC",
-      "key_news": [
-        {
-          "title": "What Progressive (PGR)'s Mixed EPS, Cat Losses and 'Anti\u2011AI Hedge' Label Mean For Shareholders",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "Wells Fargo shares at attractive entry point amid execution concerns",
-          "publisher": "Proactive"
-        },
-        {
-          "title": "Is Evercore Well-Positioned to Sustain Its Capital Return Strategy?",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Bank CEOs Press Mamdani to Get More New York Housing Built",
-          "publisher": "Bloomberg"
-        },
-        {
-          "title": "SpaceX Targets $75 Billion in IPO at $135 Per Share",
-          "publisher": "Bloomberg"
-        },
-        {
-          "title": "Does Bank of America's Deposit Franchise Power Earnings Growth?",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Bank of America to hire nearly 4,000 summer interns and campus recruits",
-          "publisher": "Fox Business"
-        },
-        {
-          "title": "'The world is choosing Texas': Is 'Y'All Street' taking over as the new financial capital of America?",
-          "publisher": "Moneywise"
-        }
-      ],
-      "sentiment": {
-        "score": 0.097,
-        "label": "neutral",
-        "keywords": [
-          {
-            "word": "loss",
-            "type": "negative"
-          },
-          {
-            "word": "losses",
-            "type": "negative"
-          },
-          {
-            "word": "cut",
-            "type": "negative"
-          },
-          {
-            "word": "growth",
-            "type": "positive"
-          },
-          {
-            "word": "dividend",
-            "type": "positive"
-          },
-          {
-            "word": "partnership",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "strong buy",
-      "analyst_target": 63.15909,
-      "num_analysts": 22,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 1,
-        "signal": "mixed"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:33Z",
-      "error": null
-    },
-    "OXY": {
-      "symbol": "OXY",
-      "key_news": [
-        {
-          "title": "EOG Resources Stock: Is EOG Underperforming the Energy Sector?",
-          "publisher": "Barchart"
-        },
-        {
-          "title": "Here is What to Know Beyond Why Occidental Petroleum Corporation (OXY) is a Trending Stock",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Jim Cramer Says Occidental Petroleum\u2019s (OXY) His Second Top Oil Stock",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "Why Is Taylor Morrison Home (TMHC) Stock Soaring Today",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "Why Occidental Petroleum Stock Is Up Today",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "Berkshire Stock Drops. Its Bargain-Priced Deal for Home Builder Fails to Impress Investors.",
-          "publisher": "Barrons.com"
-        },
-        {
-          "title": "Berkshire Hathaway to Buy Taylor Morrison for $6.8 Billion",
-          "publisher": "Bloomberg"
-        },
-        {
-          "title": "New Strong Buy Stocks for June 1st",
-          "publisher": "Zacks"
-        }
-      ],
-      "sentiment": {
-        "score": 0.173,
-        "label": "bullish",
-        "keywords": [
-          {
-            "word": "strong",
-            "type": "positive"
-          },
-          {
-            "word": "upgrade",
-            "type": "positive"
-          },
-          {
-            "word": "upgraded",
-            "type": "positive"
-          },
-          {
-            "word": "raised",
-            "type": "positive"
-          },
-          {
-            "word": "award",
-            "type": "positive"
-          },
-          {
-            "word": "beat",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "hold",
-      "analyst_target": 65.54167,
-      "num_analysts": 24,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 0,
-        "signal": "none"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:34Z",
+      "fetched_at": "2026-06-04T14:56:40Z",
       "error": null
     },
     "ABBV": {
       "symbol": "ABBV",
       "key_news": [
+        {
+          "title": "BioLife Solutions Leads 3 Stocks Estimated To Be Trading Below Fair Value",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "The Best Stocks to Invest $500 in Right Now",
+          "publisher": "Motley Fool"
+        },
         {
           "title": "Extreme Networks And 2 Other Stocks That Could Be Trading Below Their Estimated Value",
           "publisher": "Simply Wall St."
@@ -2352,18 +2398,10 @@
         {
           "title": "3 Stocks That May Be Priced Below Their Estimated Worth In June 2026",
           "publisher": "Simply Wall St."
-        },
-        {
-          "title": "Getting Alzheimer\u2019s Drugs Into the Brain Is Hard. Now There\u2019s a New Trick.",
-          "publisher": "Barrons.com"
-        },
-        {
-          "title": "Johnson & Johnson Hopes to Dethrone AbbVie's Biggest Growth Driver. Here's Why Investors Shouldn't Panic",
-          "publisher": "Motley Fool"
         }
       ],
       "sentiment": {
-        "score": 0.178,
+        "score": 0.136,
         "label": "bullish",
         "keywords": [
           {
@@ -2385,10 +2423,6 @@
           {
             "word": "approval",
             "type": "positive"
-          },
-          {
-            "word": "strong",
-            "type": "positive"
           }
         ]
       },
@@ -2406,122 +2440,51 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-04T04:10:34Z",
+      "fetched_at": "2026-06-04T14:56:41Z",
       "error": null
     },
-    "C": {
-      "symbol": "C",
+    "BAC": {
+      "symbol": "BAC",
       "key_news": [
         {
-          "title": "Western Digital (WDC) Hits All-Time High as Citi Hikes PT by 37%",
+          "title": "Broadcom Stock Dropped 15% Despite a Record Quarter and AI Revenue",
+          "publisher": "BeInCrypto"
+        },
+        {
+          "title": "Jim Cramer on Bank of America: \u201cThere\u2019s Something That\u2019s Not That Great Happening There\u201d",
           "publisher": "Insider Monkey"
         },
         {
-          "title": "Citi Names New Head of Strategy as Jane Fraser Steers Bank Into \u2018Next Phase\u2019",
-          "publisher": "Barrons.com"
+          "title": "What Progressive (PGR)'s Mixed EPS, Cat Losses and 'Anti\u2011AI Hedge' Label Mean For Shareholders",
+          "publisher": "Simply Wall St."
         },
         {
-          "title": "How The Western Digital (WDC) Investment Story Is Shifting With AI Storage And New Valuations",
-          "publisher": "Simply Wall St."
+          "title": "Wells Fargo shares at attractive entry point amid execution concerns",
+          "publisher": "Proactive"
         },
         {
           "title": "Is Evercore Well-Positioned to Sustain Its Capital Return Strategy?",
           "publisher": "Zacks"
         },
         {
-          "title": "1 Momentum  Stock with Competitive Advantages and 2 We Brush Off",
-          "publisher": "StockStory"
+          "title": "Bank CEOs Press Mamdani to Get More New York Housing Built",
+          "publisher": "Bloomberg"
         },
         {
           "title": "SpaceX Targets $75 Billion in IPO at $135 Per Share",
           "publisher": "Bloomberg"
         },
         {
-          "title": "How The Tebapivat Setback Is Reframing The Story For Agios Pharmaceuticals (AGIO)",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "Citigroup\u2019s Tokenization Push And Valuation Gap Draw Investor Attention",
-          "publisher": "Simply Wall St."
+          "title": "Does Bank of America's Deposit Franchise Power Earnings Growth?",
+          "publisher": "Zacks"
         }
       ],
       "sentiment": {
-        "score": 0.097,
+        "score": 0.075,
         "label": "neutral",
         "keywords": [
           {
-            "word": "raises",
-            "type": "positive"
-          },
-          {
-            "word": "outperform",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "buy",
-      "analyst_target": 146.92857,
-      "num_analysts": 21,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 1,
-        "signal": "mixed"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-04T04:10:35Z",
-      "error": null
-    },
-    "LLY": {
-      "symbol": "LLY",
-      "key_news": [
-        {
-          "title": "Dow Jones Futures: Broadcom, CrowdStrike Dive On Earnings; SpaceX IPO Price Target Set",
-          "publisher": "Investor's Business Daily"
-        },
-        {
-          "title": "Apple Stock, Google And More Lure Investors In Frothy Market. How To Stay Grounded.",
-          "publisher": "Investor's Business Daily"
-        },
-        {
-          "title": "Lilly Strikes Up To $1.9 Billion Kidney Disease Gene Therapy Deal",
-          "publisher": "GuruFocus.com"
-        },
-        {
-          "title": "Eli Lilly Retevmo Breakthrough Recasts Growth Story Beyond Obesity Treatments",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "Forget Zepbound: Eli Lilly's Next Billion-Dollar Weight-Loss Drug May Be Even Better",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "Eli Lilly Deepens Innovation Push Through New Biopharma Collaborations",
-          "publisher": "Benzinga"
-        },
-        {
-          "title": "Prediction: Eli Lilly Will Be Worth More Than SpaceX in 2 Years",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "Move Over AI: Jeff Bezos and NVIDIA Are Quietly Backing a New Breakthrough Industry",
-          "publisher": "24/7 Wall St."
-        }
-      ],
-      "sentiment": {
-        "score": 0.155,
-        "label": "bullish",
-        "keywords": [
-          {
-            "word": "growth",
-            "type": "positive"
-          },
-          {
-            "word": "breakthrough",
+            "word": "record",
             "type": "positive"
           },
           {
@@ -2529,25 +2492,108 @@
             "type": "negative"
           },
           {
-            "word": "innovation",
+            "word": "losses",
+            "type": "negative"
+          },
+          {
+            "word": "cut",
+            "type": "negative"
+          },
+          {
+            "word": "growth",
             "type": "positive"
           },
           {
-            "word": "surge",
-            "type": "positive"
-          },
-          {
-            "word": "approval",
+            "word": "beat",
             "type": "positive"
           }
         ]
       },
-      "analyst_recommendation": "buy",
-      "analyst_target": 1215.1034,
-      "num_analysts": 29,
+      "analyst_recommendation": "strong buy",
+      "analyst_target": 63.15909,
+      "num_analysts": 22,
       "insider": {
         "buys_30d": 0,
-        "sells_30d": 1,
+        "sells_30d": 0,
+        "signal": "none"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-04T14:56:41Z",
+      "error": null
+    },
+    "TSM": {
+      "symbol": "TSM",
+      "key_news": [
+        {
+          "title": "TSMC CEO says AI chip demand will outpace supply for years",
+          "publisher": "Quartz"
+        },
+        {
+          "title": "Taiwan Semiconductor Delivers 2,095% Gain Over 10 Years. Will It Continue To Outperform?",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "TSMC Warns AI Chip Shortage Could Last For Years",
+          "publisher": "GuruFocus.com"
+        },
+        {
+          "title": "TSM Stock Slips Premarket Today \u2014 CEO Reportedly Says AI Chip Shortage Isn\u2019t Ending Anytime Soon",
+          "publisher": "Stocktwits"
+        },
+        {
+          "title": "TSMC Sees Strong Long-Term Growth as AI Demand Continues to Accelerate (TSM)",
+          "publisher": "InvestorsHub"
+        },
+        {
+          "title": "TSMC Says It Isn\u2019t Falling Behind in Next-Gen Chips",
+          "publisher": "The Wall Street Journal"
+        },
+        {
+          "title": "TSMC boss bets big on AI growth, says he'd 'like' to hike chip prices",
+          "publisher": "Reuters Videos"
+        },
+        {
+          "title": "Nasdaq, S&P 500, Dow Futures Mixed As Investors Eye Jobs Reports, Iran Tensions: Why AVGO, CRWD, TSM, NVDA, MSTR, BMNR In Focus",
+          "publisher": "Stocktwits"
+        }
+      ],
+      "sentiment": {
+        "score": 0.26,
+        "label": "bullish",
+        "keywords": [
+          {
+            "word": "outperform",
+            "type": "positive"
+          },
+          {
+            "word": "growth",
+            "type": "positive"
+          },
+          {
+            "word": "strong",
+            "type": "positive"
+          },
+          {
+            "word": "beat",
+            "type": "positive"
+          },
+          {
+            "word": "beats",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "strong buy",
+      "analyst_target": 467.84027,
+      "num_analysts": 18,
+      "insider": {
+        "buys_30d": 1,
+        "sells_30d": 0,
         "signal": "mixed"
       },
       "reddit": {
@@ -2556,7 +2602,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-04T04:10:35Z",
+      "fetched_at": "2026-06-04T14:56:42Z",
       "error": null
     }
   }
