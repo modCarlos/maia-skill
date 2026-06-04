@@ -193,7 +193,7 @@ def main() -> None:
 
     # Prune history
     history_dir = os.path.dirname(history_path)
-    pruned = prune_history(history_dir)
+    pruned = prune_history(history_dir, keep=365)
 
     print(f"OK  history  → {history_path}")
     print(f"OK  report   → {report_path}")

@@ -34,10 +34,11 @@ NUM_PREDICT  = int(os.getenv("MAIA_NUM_PREDICT", "1500"))
 TIMEOUT      = int(os.getenv("MAIA_TIMEOUT", "480"))
 
 REPO = Path(__file__).parent.parent
-DATA_DIR  = REPO / "data"
+DATA_DIR    = REPO / "data"
 MARKET_CTX  = DATA_DIR / "market_context.json"
 NEWS_CTX    = DATA_DIR / "news_context.json"
 SEC_CTX     = DATA_DIR / "sec_risk_context.json"
+BACKTEST_CTX = DATA_DIR / "backtest_summary.json"
 
 # ─── Schema requerido por write_report.py ────────────────────────────────────
 REQUIRED_TOP = [
@@ -298,9 +299,10 @@ def compress_sec(data: dict | list, top_symbols: list[str] | None = None) -> str
 
 
 def build_context(risk_profile: str) -> str:
-    market = load_json_safe(MARKET_CTX, "market_context")
-    news   = load_json_safe(NEWS_CTX,   "news_context")
-    sec    = load_json_safe(SEC_CTX,    "sec_risk_context")
+    market   = load_json_safe(MARKET_CTX,   "market_context")
+    news     = load_json_safe(NEWS_CTX,     "news_context")
+    sec      = load_json_safe(SEC_CTX,      "sec_risk_context")
+    backtest = load_json_safe(BACKTEST_CTX, "backtest_summary")
 
     # Extraer los símbolos top para filtrar noticias/SEC
     top_symbols = []
@@ -319,6 +321,13 @@ def build_context(risk_profile: str) -> str:
         "",
         compress_sec(sec or {}, top_symbols),
     ]
+
+    # Inyectar backtest solo cuando hay suficientes sesiones (evita ruido con N=1)
+    if backtest:
+        prompt_block = backtest.get("prompt_block", "")
+        if prompt_block:
+            parts += ["", prompt_block]
+
     return "\n".join(parts)
 
 
@@ -426,10 +435,29 @@ def fill_defaults(data: dict, risk_profile: str) -> dict:
     data.setdefault("creator", "@quebert")
     data.setdefault("generated_at", now)
     data.setdefault("risk_profile", risk_profile)
-    data.setdefault("historical_accuracy", {
-        "note": "First run — no historical data available",
-        "sessions": 0
-    })
+    # Poblar historical_accuracy desde backtest_summary si existe
+    if not data.get("historical_accuracy") or data.get("historical_accuracy", {}).get("sessions", 0) == 0:
+        backtest = load_json_safe(BACKTEST_CTX, "backtest_summary")
+        if backtest and backtest.get("sessions_evaluated", 0) > 0:
+            stats_30 = backtest.get("by_horizon", {}).get("30", {})
+            hr = stats_30.get("hit_rate")
+            avg_r = stats_30.get("avg_return_pct")
+            data["historical_accuracy"] = {
+                "sessions": backtest["sessions_evaluated"],
+                "picks_evaluated": backtest.get("picks_evaluated", 0),
+                "hit_rate_30d": hr,
+                "avg_return_30d_pct": avg_r,
+                "note": (
+                    f"{backtest['sessions_evaluated']} sessions evaluated | "
+                    f"30d hit_rate={f'{hr*100:.0f}%' if hr is not None else 'N/A'} | "
+                    f"avg_return={f'{avg_r:+.1f}%' if avg_r is not None else 'N/A'}"
+                ),
+            }
+        else:
+            data.setdefault("historical_accuracy", {
+                "note": "First run — no historical data available",
+                "sessions": 0,
+            })
     data.setdefault("warnings", [
         "This report is for informational purposes only and does not constitute financial advice."
     ])

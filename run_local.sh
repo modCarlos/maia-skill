@@ -65,6 +65,11 @@ wait $PID_NEWS $PID_SEC
 echo "  ✅ Datos de mercado descargados"
 echo ""
 
+# ── 1b. Backtest histórico ────────────────────────────────────────────────────
+echo "📈 Fase 1b — Backtest histórico..."
+python3 tools/backtest.py || echo "  ⚠️  backtest.py falló — continuando sin datos históricos"
+echo ""
+
 # ── 2. MegaAgent local (Ollama) ───────────────────────────────────────────────
 echo "🤖 Fase 2 — MegaAgent (Ollama, ~90-180s)..."
 python3 tools/mega_agent.py "$RISK" > /tmp/tododeia_report.json
