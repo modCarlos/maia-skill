@@ -74,7 +74,7 @@
     "name": "NVIDIA Corporation",
     "sector": "big_tech",
     "buyPrice": 125.2,
-    "quantity": 14,
+    "quantity": 10,
     "buyDate": "2024-01-01T00:00:00.000Z",
     "currentPrice": 215.2,
     "pnlPct": 71.88,
@@ -837,5 +837,32 @@
     "buyPrice": 419.3,
     "quantity": 1,
     "buyDate": "2026-05-28T14:36:33.817Z"
+  },
+  {
+    "id": "MA-1780623959687",
+    "symbol": "MA",
+    "name": "Mastercard Incorporated",
+    "sector": "Payments",
+    "buyPrice": 481.76,
+    "quantity": 1,
+    "buyDate": "2026-06-05T01:45:59.687Z"
+  },
+  {
+    "id": "AMZN-1780623978759",
+    "symbol": "AMZN",
+    "name": "Amazon.com Inc",
+    "sector": "Big Tech",
+    "buyPrice": 253.79,
+    "quantity": 2,
+    "buyDate": "2026-06-05T01:46:18.759Z"
+  },
+  {
+    "id": "NFLX-1780623991216",
+    "symbol": "NFLX",
+    "name": "Netflix Inc",
+    "sector": "Streaming",
+    "buyPrice": 81.56,
+    "quantity": 5,
+    "buyDate": "2026-06-05T01:46:31.216Z"
   }
 ]

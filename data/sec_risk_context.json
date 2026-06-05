@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-06-04T14:56:52Z",
+  "generated_at": "2026-06-05T01:32:18Z",
   "source": "SEC EDGAR",
   "top": 15,
   "symbols": [
     "NFLX",
+    "PYPL",
     "SBUX",
     "NU",
-    "GILD",
     "MA",
+    "GILD",
     "AMZN",
     "HD",
-    "AVGO",
-    "GOOGL",
-    "PLTR",
     "V",
+    "PLTR",
     "TSLA",
     "SOFI",
-    "SONY",
-    "BLK"
+    "META",
+    "CRM",
+    "SONY"
   ],
   "results": [
     {
@@ -31,6 +31,20 @@
         "(“Netflix”, the “Company”, “registrant”, “we”, or “us”) is one of the world’s leading entertainment services offering TV series, films, games and live programming across a wide variety of genres and languages.",
         "Members can play, pause and resume watching as much as they want, anytime, anywhere, and can change their plans at any time.",
         "Our core strategy is to grow our business globally within the parameters of our operating margin target."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "PYPL",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-03",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001633917/000163391726000024/pypl-20251231.htm",
+      "risk_factors": [
+        "We do not intend, and undertake no obligation except as required by law, to update any of our forward-looking statements after the date of this report to reflect actual results, new information, or future events or circumstances.",
+        "Given these risks and uncertainties, readers are cautioned not to place undue reliance on such forward-looking statements.",
+        "You should read the information in this report in conjunction with the audited consolidated financial statements and the related notes that appear in this report.",
+        "BUSINESS OVERVIEW At PayPal Holdings, Inc., our mission is to revolutionize commerce globally."
       ],
       "error": null
     },
@@ -63,6 +77,15 @@
       "error": null
     },
     {
+      "symbol": "MA",
+      "cik": null,
+      "form": null,
+      "filing_date": null,
+      "source_url": null,
+      "risk_factors": [],
+      "error": "no_annual_filing_found"
+    },
+    {
       "symbol": "GILD",
       "cik": null,
       "form": "10-K",
@@ -75,15 +98,6 @@
         "We submit this data to FDA in an Investigational New Drug (“IND”) application seeking its approval to test the compound in humans."
       ],
       "error": null
-    },
-    {
-      "symbol": "MA",
-      "cik": null,
-      "form": null,
-      "filing_date": null,
-      "source_url": null,
-      "risk_factors": [],
-      "error": "no_annual_filing_found"
     },
     {
       "symbol": "AMZN",
@@ -114,30 +128,16 @@
       "error": null
     },
     {
-      "symbol": "AVGO",
+      "symbol": "V",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2025-12-18",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001730168/000173016825000121/avgo-20251102.htm",
+      "filing_date": "2025-11-06",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001403161/000140316125000089/v-20250930.htm",
       "risk_factors": [
-        "At the “Investor Center” page on this website, we promptly make available free of charge the reports we file or furnish pursuant to Section 13(a) or 15(d) of the Securities Exchange Act of 1934 (the “Exchange Act”) with the Securities and Exchange Commission (the “SEC”), as well as our proxy statements.",
-        "Such periodic reports, proxy statements and other information are also available at the SEC’s website at www.sec.gov.",
-        "The information posted on our website is not incorporated into this Annual Report on Form 10-K.",
-        "Information About Our Executive Officers The following table provides information regarding our executive officers as of December 18, 2025: Name and Title Age Position and Offices Hock E."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "GOOGL",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2025-02-05",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001652044/000165204425000014/goog-20241231.htm",
-      "risk_factors": [
-        "Ongoing Commitment to Sustainability Our environmental strat egy has two key pillars, supported by our dedication to accessible information and technological innovation: • Our products: We are empowering people with information about the environmental impacts of their choices.",
-        "• Our operations: We are working to drive sustainability and efficiency across our operations and value chain.",
-        "Through our products, we have an aspiration to help individuals, cities, and other partners collectively reduce one gigaton of their carbon equivalent emissions annually by 2030.",
-        "In 2021, we set an ambitious goal to reach net-zero emissions across all of our operations and value chain by 2030."
+        "Except as required by law, we do not intend to update or revise any forward-looking statements as a result of new information, future events or otherwise.",
+        "Our purpose is to uplift everyone, everywhere by being the best way to pay and be paid.",
+        "Since Visa’s early days in 1958, we have been in the business of facilitating secure, reliable and efficient global commerce and money movement.",
+        "We provide transaction processing services (primarily authorization, clearing and settlement) among consumers, issuing and acquiring financial institutions and sellers in a structure we call the “four-party” model."
       ],
       "error": null
     },
@@ -152,20 +152,6 @@
         "Our business, financial condition, results of operations, or prospects could also be harmed by risks and uncertainties not currently known to us or that we currently do not believe are material.",
         "If any of the risks actually occur, our business, financial condition, results of operations, and prospects could be adversely affected.",
         "In that event, the trading price of our Class A common stock could decline, and you could lose part or all of your investment."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "V",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2025-11-06",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001403161/000140316125000089/v-20250930.htm",
-      "risk_factors": [
-        "Except as required by law, we do not intend to update or revise any forward-looking statements as a result of new information, future events or otherwise.",
-        "Our purpose is to uplift everyone, everywhere by being the best way to pay and be paid.",
-        "Since Visa’s early days in 1958, we have been in the business of facilitating secure, reliable and efficient global commerce and money movement.",
-        "We provide transaction processing services (primarily authorization, clearing and settlement) among consumers, issuing and acquiring financial institutions and sellers in a structure we call the “four-party” model."
       ],
       "error": null
     },
@@ -198,6 +184,34 @@
       "error": null
     },
     {
+      "symbol": "META",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-01-29",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000162828026003942/meta-20251231.htm",
+      "risk_factors": [
+        "It is not possible for our management to predict all risks, nor can we assess the impact of all factors on our business or the extent to which any factor, or combination of factors, may cause actual results to differ materially from those contained in any forward-looking statements we may make.",
+        "In light of these risks, uncertainties and assumptions, the future events and trends discussed in this Annual Report on Form 10-K may not occur and actual results could differ materially and adversely from those anticipated or implied in the forward-looking statements.",
+        "We undertake no obligation to revise or publicly release the results of any revision to these forward-looking statements, except as required by law.",
+        "Given these risks and uncertainties, readers are cautioned not to place undue reliance on such forward‑looking statements."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "CRM",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-03-02",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001108524/000110852426000060/crm-20260131.htm",
+      "risk_factors": [
+        "A manifestation of any of the following risks and uncertainties could, in circumstances we may or may not be able to accurately predict, materially and adversely affect our business and operations, growth, reputation, prospects, operating and financial results, financial condition, cash flows, liquidity and stock pr...",
+        "Some of the factors, events and contingencies discussed below may have occurred in the past, but the disclosures below are not representations as to whether or not the factors, events or contingencies have occurred in the past and instead reflect our beliefs and opinions as to the factors, events or contingencies th...",
+        "Other events, factors or uncertainties that we do not currently anticipate or that we currently deem immaterial also may affect our business, financial condition, results of operations, cash flows, other key metrics and the trading price of our common stock.",
+        "Therefore, you should not consider the following risks to be a complete statement of all the potential risks or uncertainties that we face."
+      ],
+      "error": null
+    },
+    {
       "symbol": "SONY",
       "cik": null,
       "form": "20-F",
@@ -208,20 +222,6 @@
         "Sony has several business segments in different industries with many product and service categories, which cause it to compete with many existing and new competitors ranging from large multinational companies to highly specialized entities that focus on only one or a few businesses and also, potentially, with outsou...",
         "These competitors may have greater financial, technical, labor and marketing resources available to them than those available to Sony.",
         "Sony’s financial condition and operating results depend on its ability to efficiently anticipate and respond to these established and new competitors."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "BLK",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2025-02-25",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0002012383/000095017025026584/blk-20241231.htm",
-      "risk_factors": [
-        "(together, with its subsidiaries, unless the context otherwise indicates, “BlackRock” or the “Company”) is a leading publicly traded investment management firm with $11.6 trillion of AUM at December 31, 2024.",
-        "With approximately 21,100 employees in more than 30 countries, BlackRock provides a broad range of investment management and technology services to institutional and retail clients in more than 100 countries across the globe.",
-        "For further information see Note 1, Business Overview , and Note 27, Segment Information , in the notes to the consolidated financial statements contained in Part II, Item 8.",
-        "On October 1, 2024, BlackRock completed the acquisition of 100% of the issued and outstanding limited liability company interests of GIP for a total consideration, at close, of approximately $3 billion in cash and 6.9 million shares, valued at $5.9 billion."
       ],
       "error": null
     }

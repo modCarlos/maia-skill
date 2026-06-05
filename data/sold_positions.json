@@ -128,5 +128,31 @@
     "saleDate": "2026-05-28T14:36:48.768Z",
     "pnlAmount": 105.75,
     "pnlPct": 32.24
+  },
+  {
+    "id": "NVDA-1004",
+    "symbol": "NVDA",
+    "name": "NVIDIA Corporation",
+    "sector": "big_tech",
+    "buyPrice": 125.2,
+    "buyDate": "2024-01-01T00:00:00.000Z",
+    "quantity": 4,
+    "salePrice": 215.2,
+    "saleDate": "2026-06-05T01:46:50.208Z",
+    "pnlAmount": 360,
+    "pnlPct": 71.88
+  },
+  {
+    "id": "NVDA-1004",
+    "symbol": "NVDA",
+    "name": "NVIDIA Corporation",
+    "sector": "big_tech",
+    "buyPrice": 125.2,
+    "buyDate": "2024-01-01T00:00:00.000Z",
+    "quantity": 4,
+    "salePrice": 215.2,
+    "saleDate": "2026-06-05T01:46:50.209Z",
+    "pnlAmount": 360,
+    "pnlPct": 71.88
   }
 ]
