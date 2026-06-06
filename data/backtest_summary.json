@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-05T01:32:20Z",
-  "sessions_evaluated": 2,
-  "picks_evaluated": 18,
-  "no_data_count": 1,
+  "generated_at": "2026-06-06T21:20:12Z",
+  "sessions_evaluated": 3,
+  "picks_evaluated": 22,
+  "no_data_count": 0,
   "by_horizon": {
     "30": {
       "picks": 0,
@@ -22,9 +22,9 @@
   },
   "by_risk_profile": {
     "moderate": {
-      "picks": 18,
-      "hit_rate": 0.5,
-      "avg_return_pct": 4.23
+      "picks": 22,
+      "hit_rate": 0.409,
+      "avg_return_pct": 3.21
     }
   },
   "top_wins": [
@@ -32,84 +32,84 @@
       "symbol": "V",
       "recommendation": "TRIM",
       "entry": 200.02,
-      "current": 320.18,
-      "return_pct": 60.07,
+      "current": 323.57,
+      "return_pct": 61.77,
       "date": "2026-06-03"
     },
     {
       "symbol": "BX",
       "recommendation": "ADD",
       "entry": 110.28,
-      "current": 118.55,
-      "return_pct": 7.5,
+      "current": 115.35,
+      "return_pct": 4.6,
+      "date": "2026-06-03"
+    },
+    {
+      "symbol": "MA",
+      "recommendation": "ADD",
+      "entry": 471.55,
+      "current": 491.08,
+      "return_pct": 4.14,
+      "date": "2026-06-03"
+    },
+    {
+      "symbol": "REGN",
+      "recommendation": "ADD",
+      "entry": 618.95,
+      "current": 635.45,
+      "return_pct": 2.67,
       "date": "2026-06-03"
     },
     {
       "symbol": "GOOGL",
       "recommendation": "ADD",
       "entry": 358.99,
-      "current": 372.19,
-      "return_pct": 3.68,
+      "current": 368.53,
+      "return_pct": 2.66,
       "date": "2026-06-03"
-    },
-    {
-      "symbol": "BLK",
-      "recommendation": "ADD",
-      "entry": 990.87,
-      "current": 1022.56,
-      "return_pct": 3.2,
-      "date": "2026-06-03"
-    },
-    {
-      "symbol": "AVGO",
-      "recommendation": "ADD",
-      "entry": 409.15,
-      "current": 418.91,
-      "return_pct": 2.39,
-      "date": "2026-06-04"
     }
   ],
   "top_losses": [
     {
-      "symbol": "SBUX",
+      "symbol": "PYPL",
       "recommendation": "ADD",
-      "entry": 95.91,
-      "current": 94.14,
-      "return_pct": -1.85,
+      "entry": 42.75,
+      "current": 41.29,
+      "return_pct": -3.42,
+      "date": "2026-06-04"
+    },
+    {
+      "symbol": "PYPL",
+      "recommendation": "TRIM",
+      "entry": 42.61,
+      "current": 41.29,
+      "return_pct": -3.1,
+      "date": "2026-06-03"
+    },
+    {
+      "symbol": "AMZN",
+      "recommendation": "ADD",
+      "entry": 253.79,
+      "current": 246.03,
+      "return_pct": -3.06,
       "date": "2026-06-04"
     },
     {
       "symbol": "SBUX",
       "recommendation": "ADD",
       "entry": 95.89,
-      "current": 94.14,
-      "return_pct": -1.83,
+      "current": 95.29,
+      "return_pct": -0.63,
       "date": "2026-06-03"
     },
     {
-      "symbol": "NFLX",
+      "symbol": "PYPL",
       "recommendation": "ADD",
-      "entry": 82.56,
-      "current": 81.56,
-      "return_pct": -1.21,
-      "date": "2026-06-04"
-    },
-    {
-      "symbol": "MA",
-      "recommendation": "ADD",
-      "entry": 484.6,
-      "current": 481.76,
-      "return_pct": -0.59,
-      "date": "2026-06-04"
-    },
-    {
-      "symbol": "HD",
-      "recommendation": "ADD",
-      "entry": 311.25,
-      "current": 309.95,
-      "return_pct": -0.42,
-      "date": "2026-06-04"
+      "entry": 41.29,
+      "current": 41.29,
+      "return_pct": 0.0,
+      "date": "2026-06-05"
     }
   ],
-  "prompt_block": ""
+  "prompt_block": "=== HISTORICAL_ACCURACY (3 sessions) ===\n  ✅ top wins: V(+61.8%)  BX(+4.6%)  MA(+4.1%)\n  ❌ worst:    PYPL(-3.4%)  PYPL(-3.1%)  AMZN(-3.1%)\n  moderate: hit_rate=41% (22 picks)"
 }

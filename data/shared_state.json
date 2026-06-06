@@ -1,25 +1,22 @@
 {
-  "generated_at": "2026-06-05T01:34:07Z",
+  "generated_at": "2026-06-06T21:21:45Z",
   "screener": {
-    "date": "2026-06-05",
+    "date": "2026-06-06",
     "risk_profile": "moderate",
     "add": [
       "NFLX",
-      "PYPL",
-      "MA",
-      "AMZN"
+      "NU",
+      "MELI",
+      "NVDA",
+      "FCX"
     ],
     "hold": [
+      "PYPL",
       "SBUX",
-      "SQ",
       "GILD",
-      "HD",
-      "PLTR",
-      "NYCB",
-      "MRK"
+      "GOOGL",
+      "MSFT"
     ],
-    "trim": [
-      "V"
-    ]
+    "trim": []
   }
 }
