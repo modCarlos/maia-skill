@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-06-06T21:20:11Z",
+  "generated_at": "2026-06-10T04:19:42Z",
   "source": "SEC EDGAR",
   "top": 15,
   "symbols": [
     "PYPL",
-    "NFLX",
-    "SBUX",
     "NU",
-    "MELI",
+    "NFLX",
+    "REGN",
+    "SBUX",
+    "NEM",
+    "BABA",
+    "AMZN",
+    "DIS",
+    "BLK",
+    "META",
     "GILD",
-    "NVDA",
-    "GOOGL",
-    "MSFT",
-    "FCX",
-    "MA",
-    "SONY",
-    "CRM",
-    "V",
-    "AMZN"
+    "KMI",
+    "MELI",
+    "AVGO"
   ],
   "results": [
     {
@@ -31,34 +31,6 @@
         "Given these risks and uncertainties, readers are cautioned not to place undue reliance on such forward-looking statements.",
         "You should read the information in this report in conjunction with the audited consolidated financial statements and the related notes that appear in this report.",
         "was incorporated in Delaware in January 2015 and is a leading technology platform that enables digital payments and simplifies commerce experiences on behalf of merchants and consumers worldwide."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "NFLX",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2026-01-23",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001065280/000106528026000034/nflx-20251231.htm",
-      "risk_factors": [
-        "All forward-looking statements included in this document are based on information available to us on the date hereof, and we assume no obligation to revise or publicly release any revision to any such forward-looking statement, except as may otherwise be required by law.",
-        "(“Netflix”, the “Company”, “registrant”, “we”, or “us”) is one of the world’s leading entertainment services offering TV series, films, games and live programming across a wide variety of genres and languages.",
-        "Members can play, pause and resume watching as much as they want, anytime, anywhere, and can change their plans at any time.",
-        "Our core strategy is to grow our business globally within the parameters of our operating margin target."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "SBUX",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2025-11-14",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000829224/000082922425000114/sbux-20250928.htm",
-      "risk_factors": [
-        "Governance Our cybersecurity program is led by our senior vice president, chief information security officer (“ciso”), who is responsible for identifying, assessing, and managing our collective information security and technology risks.",
-        "Our ciso has more than 20 years of experience in the information security and technology fields, including various leadership roles in several large companies across multiple industries.",
-        "Those roles have included leading various cybersecurity capabilities and managing information security, business intelligence, and data analytics teams.",
-        "The ciso is informed about the prevention, detection, mitigation, and remediation of cybersecurity incidents through management of, and participation in, the cybersecurity program described above, including through reports prepared by our internal cybersecurity team and the operation of our incident response plan."
       ],
       "error": null
     },
@@ -77,16 +49,128 @@
       "error": null
     },
     {
-      "symbol": "MELI",
+      "symbol": "NFLX",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-01-23",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001065280/000106528026000034/nflx-20251231.htm",
+      "risk_factors": [
+        "All forward-looking statements included in this document are based on information available to us on the date hereof, and we assume no obligation to revise or publicly release any revision to any such forward-looking statement, except as may otherwise be required by law.",
+        "(“Netflix”, the “Company”, “registrant”, “we”, or “us”) is one of the world’s leading entertainment services offering TV series, films, games and live programming across a wide variety of genres and languages.",
+        "Members can play, pause and resume watching as much as they want, anytime, anywhere, and can change their plans at any time.",
+        "Our core strategy is to grow our business globally within the parameters of our operating margin target."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "REGN",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-04",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000872589/000087258926000008/regn-20251231.htm",
+      "risk_factors": [
+        "The risks described below include forward-looking statements, and actual events and our actual results may differ materially from these forward-looking statements.",
+        "Additional risks and uncertainties not currently known to us or that we currently deem immaterial may also impair our business, prospects, operating results, and financial condition.",
+        "Furthermore, additional risks and uncertainties are described under other captions in this report and should also be considered by our investors.",
+        "For purposes of this section (as well as this report in general), references to our products encompass products marketed or otherwise commercialized by us and/or our collaborators or licensees; and references to our product candidates encompass product candidates in development by us and/or our collaborators or lice..."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "SBUX",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-11-14",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000829224/000082922425000114/sbux-20250928.htm",
+      "risk_factors": [
+        "Governance Our cybersecurity program is led by our senior vice president, chief information security officer (“ciso”), who is responsible for identifying, assessing, and managing our collective information security and technology risks.",
+        "Our ciso has more than 20 years of experience in the information security and technology fields, including various leadership roles in several large companies across multiple industries.",
+        "Those roles have included leading various cybersecurity capabilities and managing information security, business intelligence, and data analytics teams.",
+        "The ciso is informed about the prevention, detection, mitigation, and remediation of cybersecurity incidents through management of, and participation in, the cybersecurity program described above, including through reports prepared by our internal cybersecurity team and the operation of our incident response plan."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "NEM",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-19",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001164727/000116472726000010/nem-20251231.htm",
+      "risk_factors": [
+        "Forward-Looking Statements The foregoing discussion and analysis, as well as certain information contained elsewhere in this Annual Report, contain “forward-looking statements” within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amen...",
+        "Non-GAAP Financial Measures Non-GAAP financial measures are intended to provide additional information only and do not have any standard meaning prescribed by GAAP.",
+        "These measures should not be considered in isolation or as a substitute for measures of performance prepared in accordance with GAAP.",
+        "Unless otherwise noted, we present the non-GAAP financial measures of our continuing operations in the tables below."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "BABA",
+      "cik": null,
+      "form": "20-F",
+      "filing_date": "2026-05-20",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001577552/000119312526231755/baba-20260331.htm",
+      "risk_factors": [
+        "For example, in recent years, the PRC government has enhanced regulation in areas such as AI, data privacy and personal data protection, anti-monopoly, anti-unfair competition, content and consumer protection, including food safety.",
+        "Complying with these laws and regulations increases our cost of operations, limits our business opportunities and may require changes to our data collection, use and other practices or negatively affect our user growth and engagement.",
+        "Failure to comply with these laws and regulations could result in claims, regulatory investigations, litigation or penalties, or otherwise negatively affect our business.",
+        "”; “— Claims or regulatory actions under competition laws against us may result in our being subject to fines, constraints on our business and damage to our reputation.”; “— PRC regulations regarding acquisitions impose significant regulatory approval and review requirements, which could make it more difficult for u..."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "AMZN",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-02-07",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001018724/000101872425000004/amzn-20241231.htm",
+      "risk_factors": [
+        "We are guided by four principles: customer obsession rather than competitor focus, passion for invention, commitment to operational excellence, and long-term thinking.",
+        "In each of our segments, we serve our primary customer sets, consisting of consumers, sellers, developers, enterprises, content creators, advertisers, and employees.",
+        "We have organized our operations into three segments: North America, International, and Amazon Web Services (“AWS”).",
+        "These segments reflect the way the Company evaluates its business performance and manages its operations."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "DIS",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-11-13",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001744489/000174448925000155/dis-20250927.htm",
+      "risk_factors": [
+        "In addition to the factors affecting specific business operations identified in connection with the description of these operations and the financial results of these operations elsewhere in our filings with the SEC, the most significant factors affecting our business include the following: RISKS RELATED TO OUR BUSI...",
+        "Declines in U.S., global and regional economic conditions, such as recessions, other less severe slowdowns in economic activity and/or inflationary conditions typically adversely affect demand for our products and services and/or costs to operate our businesses, reducing our revenue and earnings.",
+        "While a number of different factors affect the demand for our products and services, actual or perceived declines in economic conditions typically have impacts across our businesses, including, among others, lower attendance and spending at our parks and experiences businesses, fees received for our cable programmin...",
+        "Even when inflationary pressures moderate, we expect certain costs, such as for labor, to remain elevated."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "BLK",
       "cik": null,
       "form": "10-K",
       "filing_date": "2026-02-25",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001099590/000109959026000006/meli-20251231.htm",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0002012383/000119312526071966/blk-20251231.htm",
       "risk_factors": [
-        "To prevent disclosure of our proprietary information to unauthorized parties, we have also entered into non-disclosure agreements with our employees, strategic partners and suppliers.",
-        "We have licensed certain proprietary rights, such as trademarks or copyrights, to third parties in the past and expect to continue to license such rights in the future.",
-        "While we seek to ensure that our licensees maintain the quality of the Mercado Libre brand, they may take actions that could adversely affect the value of our proprietary rights or our reputation, which could have a material adverse effect on our business, results of operations and financial condition.",
-        "We could potentially face claims alleging that our technologies infringe the property rights of others.” Offices We are a Delaware corporation incorporated on October 15, 1999."
+        "(together, with its subsidiaries, unless the context otherwise indicates, “BlackRock” or the “Company”) is a leading publicly traded investment management firm with $14.0 trillion of AUM at December 31, 2025.",
+        "With approximately 24,900 employees in more than 30 countries, BlackRock provides a broad range of investment management and technology services to institutional and retail clients in more than 100 countries across the globe.",
+        "For further information see Note 1, Business Overview , and Note 27, Segment Information , in the notes to the consolidated financial statements contained in Part II, Item 8.",
+        "The following discussion includes a comparison of BlackRock’s results for 2025 and 2024."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "META",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-01-29",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000162828026003942/meta-20251231.htm",
+      "risk_factors": [
+        "It is not possible for our management to predict all risks, nor can we assess the impact of all factors on our business or the extent to which any factor, or combination of factors, may cause actual results to differ materially from those contained in any forward-looking statements we may make.",
+        "In light of these risks, uncertainties and assumptions, the future events and trends discussed in this Annual Report on Form 10-K may not occur and actual results could differ materially and adversely from those anticipated or implied in the forward-looking statements.",
+        "We undertake no obligation to revise or publicly release the results of any revision to these forward-looking statements, except as required by law.",
+        "Given these risks and uncertainties, readers are cautioned not to place undue reliance on such forward‑looking statements."
       ],
       "error": null
     },
@@ -105,128 +189,44 @@
       "error": null
     },
     {
-      "symbol": "NVDA",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2026-02-25",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001045810/000104581026000021/nvda-20260125.htm",
-      "risk_factors": [
-        "Compliance with laws, rules, and regulations has not otherwise had a material effect upon our capital expenditures, results of operations, or competitive position and we do not currently anticipate material capital expenditures for environmental control facilities.",
-        "Compliance with existing or future governmental regulations, including, but not limited to, those pertaining to IP ownership and infringement, taxes, import and export requirements and tariffs, anti-corruption, business acquisitions, foreign exchange controls and cash repatriation restrictions, data privacy requirem...",
-        "Human Capital Management As of the end of fiscal year 2026, we had approximately 42,000 employees in 38 countries; 31,000 were engaged in research and development and 11,000 were engaged in sales, marketing, operations, and administrative positions.",
-        "To execute our business strategy successfully, we focus on recruiting, developing, and retaining top global talent."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "GOOGL",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2025-02-05",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001652044/000165204425000014/goog-20241231.htm",
-      "risk_factors": [
-        "Ongoing Commitment to Sustainability Our environmental strat egy has two key pillars, supported by our dedication to accessible information and technological innovation: • Our products: We are empowering people with information about the environmental impacts of their choices.",
-        "• Our operations: We are working to drive sustainability and efficiency across our operations and value chain.",
-        "Through our products, we have an aspiration to help individuals, cities, and other partners collectively reduce one gigaton of their carbon equivalent emissions annually by 2030.",
-        "In 2021, we set an ambitious goal to reach net-zero emissions across all of our operations and value chain by 2030."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "MSFT",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2025-07-30",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000789019/000095017025100235/msft-20250630.htm",
-      "risk_factors": [
-        "These forward-looking statements generally are identified by the words “believe,” “project,” “expect,” “anticipate,” “estimate,” “intend,” “strategy,” “future,” “opportunity,” “plan,” “may,” “should,” “will,” “would,” “will be,” “will continue,” “will likely result,” and similar expressions.",
-        "Forward-looking statements are based on current expectations and assumptions that are subject to risks and uncertainties that may cause actual results to differ materially.",
-        "Readers are cautioned not to place undue reliance on forward-looking statements, which speak only as of the date they are made.",
-        "We undertake no obligation to update or revise publicly any forward-looking statements, whether because of new information, future events, or otherwise."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "FCX",
+      "symbol": "KMI",
       "cik": null,
       "form": "10-K",
       "filing_date": "2026-02-13",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000831259/000083125926000012/fcx-20251231.htm",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001506307/000150630726000011/kmi-20251231.htm",
       "risk_factors": [
-        "GENERAL We are a leading international metals company with the objective of being foremost in copper.",
-        "Headquartered in Phoenix, Arizona, we operate large, long-lived, geographically diverse assets with significant proven and probable mineral reserves of copper, gold and molybdenum.",
-        "Our portfolio of assets includes the Grasberg minerals district in Indonesia, one of the world’s largest copper and gold deposits; and significant operations in the U.S.",
-        "and South America, including the large-scale Morenci minerals district in Arizona and the Cerro Verde operation in Peru."
+        "“ Management’s Discussion and Analysis of Financial Condition and Results of Operations ” and Item 7A.",
+        "“ Quantitative and Qualitative Disclosures About Market Risk—Energy Commodity Market Risk.",
+        "” When considering forward-looking statements, you should keep in mind the factors described in this section and the other sections referenced above.",
+        "We disclaim any obligation, other than as required by applicable law, to publicly update or revise any of our forward-looking statements to reflect future events or developments."
       ],
       "error": null
     },
     {
-      "symbol": "MA",
+      "symbol": "MELI",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-02-11",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001141391/000114139126000013/ma-20251231.htm",
+      "filing_date": "2026-02-25",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001099590/000109959026000006/meli-20251231.htm",
       "risk_factors": [
-        "We face competition in the ACH and real-time account-based payments space from providers of infrastructure, applications and services.",
-        "As these real-time account-based propositions mature, we face a possible increase in competition for our existing domestic person-to-merchant (“P2M”) and person-to-person (“P2P”) transaction market share.",
-        "Similarly, as interlinking of these infrastructures is further explored, they could disrupt our existing cross-border P2M and P2P market share.",
-        "Also, several industry initiatives are experimenting with the concept of account-based global schemes, which could lead to a disruption of the clearing and settlement options utilized in various currencies."
+        "To prevent disclosure of our proprietary information to unauthorized parties, we have also entered into non-disclosure agreements with our employees, strategic partners and suppliers.",
+        "We have licensed certain proprietary rights, such as trademarks or copyrights, to third parties in the past and expect to continue to license such rights in the future.",
+        "While we seek to ensure that our licensees maintain the quality of the Mercado Libre brand, they may take actions that could adversely affect the value of our proprietary rights or our reputation, which could have a material adverse effect on our business, results of operations and financial condition.",
+        "We could potentially face claims alleging that our technologies infringe the property rights of others.” Offices We are a Delaware corporation incorporated on October 15, 1999."
       ],
       "error": null
     },
     {
-      "symbol": "SONY",
-      "cik": null,
-      "form": "20-F",
-      "filing_date": "2025-06-20",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000313838/000119312525143137/d820387d20f.htm",
-      "risk_factors": [
-        "Operating and Financial Review and Prospects ,” “Legal Proceedings” included in “Item 8.",
-        "Financial Information ,” Sony’s consolidated financial statements referenced in “Item 8.",
-        "Quantitative and Qualitative Disclosures about Market Risk .” In this document, Sony Group Corporation and its consolidated subsidiaries are together referred to as “Sony” or “Sony Group.” In addition, “Sales and financial services revenue” are referred to as “sales” in the narrative description except in the consol...",
-        "At a meeting of Sony Group Corporation’s Board of Directors held on May 14, 2025, Sony Group Corporation decided on a plan for the execution of a partial spin-off of Sony Financial Group Inc."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "CRM",
+      "symbol": "AVGO",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-03-02",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001108524/000110852426000060/crm-20260131.htm",
+      "filing_date": "2025-12-18",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001730168/000173016825000121/avgo-20251102.htm",
       "risk_factors": [
-        "A manifestation of any of the following risks and uncertainties could, in circumstances we may or may not be able to accurately predict, materially and adversely affect our business and operations, growth, reputation, prospects, operating and financial results, financial condition, cash flows, liquidity and stock pr...",
-        "Some of the factors, events and contingencies discussed below may have occurred in the past, but the disclosures below are not representations as to whether or not the factors, events or contingencies have occurred in the past and instead reflect our beliefs and opinions as to the factors, events or contingencies th...",
-        "Other events, factors or uncertainties that we do not currently anticipate or that we currently deem immaterial also may affect our business, financial condition, results of operations, cash flows, other key metrics and the trading price of our common stock.",
-        "Therefore, you should not consider the following risks to be a complete statement of all the potential risks or uncertainties that we face."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "V",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2025-11-06",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001403161/000140316125000089/v-20250930.htm",
-      "risk_factors": [
-        "Except as required by law, we do not intend to update or revise any forward-looking statements as a result of new information, future events or otherwise.",
-        "Our purpose is to uplift everyone, everywhere by being the best way to pay and be paid.",
-        "Since Visa’s early days in 1958, we have been in the business of facilitating secure, reliable and efficient global commerce and money movement.",
-        "We provide transaction processing services (primarily authorization, clearing and settlement) among consumers, issuing and acquiring financial institutions and sellers in a structure we call the “four-party” model."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "AMZN",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2025-02-07",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001018724/000101872425000004/amzn-20241231.htm",
-      "risk_factors": [
-        "We are guided by four principles: customer obsession rather than competitor focus, passion for invention, commitment to operational excellence, and long-term thinking.",
-        "In each of our segments, we serve our primary customer sets, consisting of consumers, sellers, developers, enterprises, content creators, advertisers, and employees.",
-        "We have organized our operations into three segments: North America, International, and Amazon Web Services (“AWS”).",
-        "These segments reflect the way the Company evaluates its business performance and manages its operations."
+        "At the “Investor Center” page on this website, we promptly make available free of charge the reports we file or furnish pursuant to Section 13(a) or 15(d) of the Securities Exchange Act of 1934 (the “Exchange Act”) with the Securities and Exchange Commission (the “SEC”), as well as our proxy statements.",
+        "Such periodic reports, proxy statements and other information are also available at the SEC’s website at www.sec.gov.",
+        "The information posted on our website is not incorporated into this Annual Report on Form 10-K.",
+        "Information About Our Executive Officers The following table provides information regarding our executive officers as of December 18, 2025: Name and Title Age Position and Offices Hock E."
       ],
       "error": null
     }

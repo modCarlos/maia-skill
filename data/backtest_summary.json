@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-06T21:20:12Z",
-  "sessions_evaluated": 3,
-  "picks_evaluated": 22,
+  "generated_at": "2026-06-10T04:19:43Z",
+  "sessions_evaluated": 6,
+  "picks_evaluated": 40,
   "no_data_count": 0,
   "by_horizon": {
     "30": {
@@ -22,9 +22,9 @@
   },
   "by_risk_profile": {
     "moderate": {
-      "picks": 22,
-      "hit_rate": 0.409,
-      "avg_return_pct": 3.21
+      "picks": 40,
+      "hit_rate": 0.475,
+      "avg_return_pct": 2.96
     }
   },
   "top_wins": [
@@ -32,84 +32,84 @@
       "symbol": "V",
       "recommendation": "TRIM",
       "entry": 200.02,
-      "current": 323.57,
-      "return_pct": 61.77,
+      "current": 325.05,
+      "return_pct": 62.51,
       "date": "2026-06-03"
+    },
+    {
+      "symbol": "META",
+      "recommendation": "ADD",
+      "entry": 380.56,
+      "current": 584.59,
+      "return_pct": 53.61,
+      "date": "2026-06-09"
     },
     {
       "symbol": "BX",
       "recommendation": "ADD",
       "entry": 110.28,
-      "current": 115.35,
-      "return_pct": 4.6,
+      "current": 120.29,
+      "return_pct": 9.08,
       "date": "2026-06-03"
     },
     {
       "symbol": "MA",
       "recommendation": "ADD",
       "entry": 471.55,
-      "current": 491.08,
-      "return_pct": 4.14,
+      "current": 495.24,
+      "return_pct": 5.02,
       "date": "2026-06-03"
     },
     {
-      "symbol": "REGN",
+      "symbol": "MA",
       "recommendation": "ADD",
-      "entry": 618.95,
-      "current": 635.45,
-      "return_pct": 2.67,
-      "date": "2026-06-03"
-    },
-    {
-      "symbol": "GOOGL",
-      "recommendation": "ADD",
-      "entry": 358.99,
-      "current": 368.53,
-      "return_pct": 2.66,
-      "date": "2026-06-03"
+      "entry": 481.76,
+      "current": 495.24,
+      "return_pct": 2.8,
+      "date": "2026-06-04"
     }
   ],
   "top_losses": [
     {
+      "symbol": "MSFT",
+      "recommendation": "TRIM",
+      "entry": 460.98,
+      "current": 403.41,
+      "return_pct": -12.49,
+      "date": "2026-06-09"
+    },
+    {
+      "symbol": "AMZN",
+      "recommendation": "ADD",
+      "entry": 253.79,
+      "current": 244.19,
+      "return_pct": -3.78,
+      "date": "2026-06-04"
+    },
+    {
+      "symbol": "MSFT",
+      "recommendation": "TRIM",
+      "entry": 416.67,
+      "current": 403.41,
+      "return_pct": -3.18,
+      "date": "2026-06-05"
+    },
+    {
       "symbol": "PYPL",
       "recommendation": "ADD",
       "entry": 42.75,
-      "current": 41.29,
-      "return_pct": -3.42,
+      "current": 41.46,
+      "return_pct": -3.02,
       "date": "2026-06-04"
     },
     {
       "symbol": "PYPL",
       "recommendation": "TRIM",
       "entry": 42.61,
-      "current": 41.29,
-      "return_pct": -3.1,
+      "current": 41.46,
+      "return_pct": -2.7,
       "date": "2026-06-03"
-    },
-    {
-      "symbol": "AMZN",
-      "recommendation": "ADD",
-      "entry": 253.79,
-      "current": 246.03,
-      "return_pct": -3.06,
-      "date": "2026-06-04"
-    },
-    {
-      "symbol": "SBUX",
-      "recommendation": "ADD",
-      "entry": 95.89,
-      "current": 95.29,
-      "return_pct": -0.63,
-      "date": "2026-06-03"
-    },
-    {
-      "symbol": "PYPL",
-      "recommendation": "ADD",
-      "entry": 41.29,
-      "current": 41.29,
-      "return_pct": 0.0,
-      "date": "2026-06-05"
     }
   ],
-  "prompt_block": "=== HISTORICAL_ACCURACY (3 sessions) ===\n  ✅ top wins: V(+61.8%)  BX(+4.6%)  MA(+4.1%)\n  ❌ worst:    PYPL(-3.4%)  PYPL(-3.1%)  AMZN(-3.1%)\n  moderate: hit_rate=41% (22 picks)"
+  "prompt_block": "=== HISTORICAL_ACCURACY (6 sessions) ===\n  ✅ top wins: V(+62.5%)  META(+53.6%)  BX(+9.1%)\n  ❌ worst:    MSFT(-12.5%)  AMZN(-3.8%)  MSFT(-3.2%)\n  moderate: hit_rate=48% (40 picks)"
 }

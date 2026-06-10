@@ -864,5 +864,14 @@
     "buyPrice": 81.56,
     "quantity": 5,
     "buyDate": "2026-06-05T01:46:31.216Z"
+  },
+  {
+    "id": "NVDA-1781016429744",
+    "symbol": "NVDA",
+    "name": "NVIDIA Corporation",
+    "sector": "Semiconductors",
+    "buyPrice": 207.18,
+    "quantity": 1,
+    "buyDate": "2026-06-09T14:47:09.744Z"
   }
 ]
