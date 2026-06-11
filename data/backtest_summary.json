@@ -1,115 +1,178 @@
 {
-  "generated_at": "2026-06-10T04:19:43Z",
-  "sessions_evaluated": 6,
-  "picks_evaluated": 40,
+  "generated_at": "2026-06-11T02:28:31Z",
+  "sessions_evaluated": 7,
+  "picks_evaluated": 39,
   "no_data_count": 0,
+  "missed_entries_count": 7,
+  "entry_tolerance_pct": 3.0,
   "by_horizon": {
     "30": {
       "picks": 0,
+      "missed_entries": 0,
       "hit_rate": null,
-      "avg_return_pct": null
+      "avg_direction_score": null,
+      "avg_spy_return_pct": null,
+      "avg_alpha": null
     },
     "60": {
       "picks": 0,
+      "missed_entries": 0,
       "hit_rate": null,
-      "avg_return_pct": null
+      "avg_direction_score": null,
+      "avg_spy_return_pct": null,
+      "avg_alpha": null
     },
     "90": {
       "picks": 0,
+      "missed_entries": 0,
       "hit_rate": null,
-      "avg_return_pct": null
+      "avg_direction_score": null,
+      "avg_spy_return_pct": null,
+      "avg_alpha": null
     }
   },
   "by_risk_profile": {
     "moderate": {
-      "picks": 40,
-      "hit_rate": 0.475,
-      "avg_return_pct": 2.96
+      "picks": 39,
+      "missed_entries": 7,
+      "hit_rate": 0.385,
+      "avg_direction_score": -0.08,
+      "avg_alpha": 1.93
     }
   },
   "top_wins": [
     {
-      "symbol": "V",
+      "symbol": "TSLA",
       "recommendation": "TRIM",
-      "entry": 200.02,
-      "current": 325.05,
-      "return_pct": 62.51,
-      "date": "2026-06-03"
+      "llm_entry": 400.06,
+      "true_entry": 411.0299987792969,
+      "entry_deviation_pct": 2.74,
+      "current": 381.59,
+      "return_pct": -7.16,
+      "direction_score": 7.16,
+      "spy_return_pct": -1.87,
+      "alpha": 9.03,
+      "date": "2026-06-08"
     },
     {
-      "symbol": "META",
-      "recommendation": "ADD",
-      "entry": 380.56,
-      "current": 584.59,
-      "return_pct": 53.61,
-      "date": "2026-06-09"
+      "symbol": "PYPL",
+      "recommendation": "TRIM",
+      "llm_entry": 42.61,
+      "true_entry": 43.41999816894531,
+      "entry_deviation_pct": 1.9,
+      "current": 40.7,
+      "return_pct": -6.26,
+      "direction_score": 6.26,
+      "spy_return_pct": -3.82,
+      "alpha": 10.08,
+      "date": "2026-06-03"
     },
     {
       "symbol": "BX",
       "recommendation": "ADD",
-      "entry": 110.28,
-      "current": 120.29,
-      "return_pct": 9.08,
+      "llm_entry": 110.28,
+      "true_entry": 112.25,
+      "entry_deviation_pct": 1.79,
+      "current": 118.48,
+      "return_pct": 5.55,
+      "direction_score": 5.55,
+      "spy_return_pct": -3.82,
+      "alpha": 9.37,
       "date": "2026-06-03"
     },
     {
-      "symbol": "MA",
-      "recommendation": "ADD",
-      "entry": 471.55,
-      "current": 495.24,
-      "return_pct": 5.02,
-      "date": "2026-06-03"
+      "symbol": "NVDA",
+      "recommendation": "TRIM",
+      "llm_entry": 205.1,
+      "true_entry": 210.17999267578125,
+      "entry_deviation_pct": 2.48,
+      "current": 200.42,
+      "return_pct": -4.64,
+      "direction_score": 4.64,
+      "spy_return_pct": -1.64,
+      "alpha": 6.28,
+      "date": "2026-06-05"
     },
     {
-      "symbol": "MA",
-      "recommendation": "ADD",
-      "entry": 481.76,
-      "current": 495.24,
-      "return_pct": 2.8,
-      "date": "2026-06-04"
+      "symbol": "MSFT",
+      "recommendation": "TRIM",
+      "llm_entry": 416.67,
+      "true_entry": 414.1400146484375,
+      "entry_deviation_pct": -0.61,
+      "current": 397.36,
+      "return_pct": -4.05,
+      "direction_score": 4.05,
+      "spy_return_pct": -1.64,
+      "alpha": 5.69,
+      "date": "2026-06-05"
     }
   ],
   "top_losses": [
     {
-      "symbol": "MSFT",
-      "recommendation": "TRIM",
-      "entry": 460.98,
-      "current": 403.41,
-      "return_pct": -12.49,
-      "date": "2026-06-09"
-    },
-    {
       "symbol": "AMZN",
       "recommendation": "ADD",
-      "entry": 253.79,
-      "current": 244.19,
-      "return_pct": -3.78,
+      "llm_entry": 253.79,
+      "true_entry": 254.25999450683594,
+      "entry_deviation_pct": 0.19,
+      "current": 238.0,
+      "return_pct": -6.4,
+      "direction_score": -6.4,
+      "spy_return_pct": -4.18,
+      "alpha": -2.22,
       "date": "2026-06-04"
     },
     {
-      "symbol": "MSFT",
-      "recommendation": "TRIM",
-      "entry": 416.67,
-      "current": 403.41,
-      "return_pct": -3.18,
+      "symbol": "NVDA",
+      "recommendation": "ADD",
+      "llm_entry": 205.1,
+      "true_entry": 210.17999267578125,
+      "entry_deviation_pct": 2.48,
+      "current": 200.42,
+      "return_pct": -4.64,
+      "direction_score": -4.64,
+      "spy_return_pct": -1.64,
+      "alpha": -3.0,
+      "date": "2026-06-06"
+    },
+    {
+      "symbol": "REGN",
+      "recommendation": "ADD",
+      "llm_entry": 618.95,
+      "true_entry": 628.0700073242188,
+      "entry_deviation_pct": 1.47,
+      "current": 601.65,
+      "return_pct": -4.21,
+      "direction_score": -4.21,
+      "spy_return_pct": -3.82,
+      "alpha": -0.39,
+      "date": "2026-06-03"
+    },
+    {
+      "symbol": "FCX",
+      "recommendation": "ADD",
+      "llm_entry": 63.37,
+      "true_entry": 64.61000061035156,
+      "entry_deviation_pct": 1.96,
+      "current": 62.08,
+      "return_pct": -3.92,
+      "direction_score": -3.92,
+      "spy_return_pct": -1.64,
+      "alpha": -2.28,
       "date": "2026-06-05"
     },
     {
-      "symbol": "PYPL",
+      "symbol": "FCX",
       "recommendation": "ADD",
-      "entry": 42.75,
-      "current": 41.46,
-      "return_pct": -3.02,
-      "date": "2026-06-04"
-    },
-    {
-      "symbol": "PYPL",
-      "recommendation": "TRIM",
-      "entry": 42.61,
-      "current": 41.46,
-      "return_pct": -2.7,
-      "date": "2026-06-03"
+      "llm_entry": 63.37,
+      "true_entry": 64.61000061035156,
+      "entry_deviation_pct": 1.96,
+      "current": 62.08,
+      "return_pct": -3.92,
+      "direction_score": -3.92,
+      "spy_return_pct": -1.64,
+      "alpha": -2.28,
+      "date": "2026-06-06"
     }
   ],
-  "prompt_block": "=== HISTORICAL_ACCURACY (6 sessions) ===\n  ✅ top wins: V(+62.5%)  META(+53.6%)  BX(+9.1%)\n  ❌ worst:    MSFT(-12.5%)  AMZN(-3.8%)  MSFT(-3.2%)\n  moderate: hit_rate=48% (40 picks)"
+  "prompt_block": "=== HISTORICAL_ACCURACY (7 sessions) ===\n  ✅ top wins: TSLA(-7.2%)  PYPL(-6.3%)  BX(+5.5%)\n  ❌ worst:    AMZN(-6.4%)  NVDA(-4.6%)  REGN(-4.2%)\n  moderate: hit_rate=38% (39 picks)  alpha_vs_SPY=+1.9%"
 }

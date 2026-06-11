@@ -873,5 +873,14 @@
     "buyPrice": 207.18,
     "quantity": 1,
     "buyDate": "2026-06-09T14:47:09.744Z"
+  },
+  {
+    "id": "BABA-1781145062593",
+    "symbol": "BABA",
+    "name": "Alibaba Group Holding Limited",
+    "sector": "ecommerce_global",
+    "buyPrice": 115.38,
+    "quantity": 2,
+    "buyDate": "2026-06-11T02:31:02.593Z"
   }
 ]

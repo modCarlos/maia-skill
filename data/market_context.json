@@ -1,1064 +1,1099 @@
 {
-  "generated_at": "2026-06-10T04:19:18Z",
+  "generated_at": "2026-06-11T02:28:08Z",
   "tickers_fetched": [
-    "AVGO",
-    "AMZN",
-    "ASML",
-    "BABA",
-    "ABBV",
-    "AMAT",
-    "AMGN",
     "AMD",
+    "BABA",
     "ARM",
+    "AVGO",
+    "AMAT",
     "AAPL",
+    "ASML",
+    "AMGN",
+    "ABBV",
+    "AMZN",
+    "BAC",
     "BX",
-    "CRM",
-    "COP",
     "BLK",
     "C",
-    "BAC",
-    "CVX",
     "GILD",
-    "DIS",
+    "CVX",
     "FCX",
+    "COP",
+    "DIS",
+    "CRM",
     "GOOGL",
-    "HD",
-    "IBM",
     "GS",
-    "INTC",
+    "IBM",
+    "HD",
     "KMI",
-    "JNJ",
+    "INTC",
     "JPM",
+    "JNJ",
     "LLY",
     "MA",
     "MELI",
-    "MSFT",
     "META",
-    "NFLX",
-    "MRK",
     "MS",
-    "NOW",
+    "MRK",
+    "NFLX",
     "NEM",
+    "MSFT",
     "NU",
+    "NOW",
     "NVDA",
     "OXY",
     "PANW",
     "PLTR",
-    "PYPL",
     "QCOM",
-    "RIVN",
     "REGN",
+    "RIVN",
+    "PYPL",
     "SNOW",
     "SBUX",
-    "SONY",
+    "SOFI",
     "TSLA",
+    "SONY",
     "V",
-    "UNH",
-    "XOM",
     "TSM",
-    "WFC",
-    "SOFI"
+    "XOM",
+    "UNH",
+    "WFC"
   ],
   "prices_snapshot": {
-    "AVGO": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "AMZN": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "ASML": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+    "AMD": {
+      "price": 452.4,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "BABA": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "ABBV": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "AMAT": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "AMGN": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "AMD": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 115.38,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "ARM": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 307.43,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "AVGO": {
+      "price": 372.1,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "AMAT": {
+      "price": 497.01,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "AAPL": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 291.58,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
-    "BX": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+    "ASML": {
+      "price": 1734.19,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
-    "CRM": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+    "AMGN": {
+      "price": 337.73,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
-    "COP": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+    "ABBV": {
+      "price": 224.95,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
-    "BLK": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "C": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+    "AMZN": {
+      "price": 238.0,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "BAC": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 54.54,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
-    "CVX": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+    "BX": {
+      "price": 118.48,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "BLK": {
+      "price": 1010.68,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "C": {
+      "price": 133.38,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "GILD": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 121.48,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
-    "DIS": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+    "CVX": {
+      "price": 189.8,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "FCX": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 62.08,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "COP": {
+      "price": 119.92,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "DIS": {
+      "price": 98.61,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "CRM": {
+      "price": 170.92,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "GOOGL": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "HD": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "IBM": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 356.38,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "GS": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 1001.29,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
-    "INTC": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+    "IBM": {
+      "price": 272.36,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "HD": {
+      "price": 318.92,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "KMI": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 31.84,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
-    "JNJ": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+    "INTC": {
+      "price": 107.04,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "JPM": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 309.14,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "JNJ": {
+      "price": 238.49,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "LLY": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 1136.37,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "MA": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 489.08,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "MELI": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "MSFT": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 1588.29,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "META": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "NFLX": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "MRK": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 570.98,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "MS": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 206.66,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
-    "NOW": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+    "MRK": {
+      "price": 119.09,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "NFLX": {
+      "price": 82.0,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "NEM": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 92.77,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "MSFT": {
+      "price": 397.36,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "NU": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 11.62,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "NOW": {
+      "price": 106.06,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "NVDA": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 200.42,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "OXY": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 57.1,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "PANW": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 263.22,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "PLTR": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "PYPL": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 130.21,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "QCOM": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "RIVN": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 191.2,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "REGN": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 601.65,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "RIVN": {
+      "price": 14.76,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "PYPL": {
+      "price": 40.7,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "SNOW": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 239.9,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "SBUX": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "SONY": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "TSLA": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "V": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "UNH": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "XOM": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "TSM": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
-    },
-    "WFC": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 98.76,
+      "fetched_at": "2026-06-11T02:28:08Z"
     },
     "SOFI": {
-      "price": NaN,
-      "fetched_at": "2026-06-10T04:19:18Z"
+      "price": 15.87,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "TSLA": {
+      "price": 381.59,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "SONY": {
+      "price": 20.76,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "V": {
+      "price": 322.96,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "TSM": {
+      "price": 408.75,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "XOM": {
+      "price": 150.62,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "UNH": {
+      "price": 407.46,
+      "fetched_at": "2026-06-11T02:28:08Z"
+    },
+    "WFC": {
+      "price": 81.97,
+      "fetched_at": "2026-06-11T02:28:08Z"
     }
   },
   "candidates": [
     {
       "symbol": "PYPL",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 29.2,
+      "price": 40.7,
+      "price_at_fetch": 40.7,
+      "rsi": 28.1,
       "trend": "downtrend",
       "entry_quality": "excellent \u2014 oversold",
       "correlation_group": "payments",
-      "forward_pe": 7.2014,
-      "peg": 0.7472,
+      "forward_pe": 7.0682,
+      "peg": 0.7335,
       "revenue_growth_yoy": 0.072,
       "fcf_margin": 0.121,
-      "earnings_days_away": 48,
+      "earnings_days_away": 47,
       "beat_streak": 3,
       "insider_signal": "neutral",
-      "volume_ratio": 1.12,
-      "range_52w_pct": NaN,
+      "volume_ratio": 0.85,
+      "range_52w_pct": 4.8,
+      "atr_14": 1.25,
       "short_ratio": 3.16,
       "short_float_pct": 6.26,
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -15.5,
       "eps_revision": "lowering"
     },
     {
-      "symbol": "NU",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 32.7,
-      "trend": "downtrend",
-      "entry_quality": "excellent \u2014 oversold",
-      "correlation_group": "fintech",
-      "forward_pe": 10.3737,
-      "peg": 0.6992,
-      "revenue_growth_yoy": 0.437,
-      "fcf_margin": null,
-      "earnings_days_away": -27,
-      "beat_streak": 2,
-      "insider_signal": "neutral",
-      "volume_ratio": 0.7,
-      "range_52w_pct": NaN,
-      "short_ratio": 2.66,
-      "short_float_pct": 3.79,
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    {
-      "symbol": "NFLX",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 32.8,
-      "trend": "downtrend",
-      "entry_quality": "excellent \u2014 oversold",
-      "correlation_group": "streaming",
-      "forward_pe": 21.1922,
-      "peg": 1.6142,
-      "revenue_growth_yoy": 0.162,
-      "fcf_margin": 0.5544,
-      "earnings_days_away": -55,
-      "beat_streak": 2,
-      "insider_signal": "neutral",
-      "volume_ratio": 0.99,
-      "range_52w_pct": NaN,
-      "short_ratio": 3.06,
-      "short_float_pct": 2.43,
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    {
-      "symbol": "REGN",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 34.8,
+      "symbol": "GILD",
+      "price": 121.48,
+      "price_at_fetch": 121.48,
+      "rsi": 29.3,
       "trend": "downtrend",
       "entry_quality": "excellent \u2014 oversold",
       "correlation_group": "healthcare",
-      "forward_pe": 11.4597,
-      "peg": 1.1063,
-      "revenue_growth_yoy": 0.19,
-      "fcf_margin": 0.2194,
-      "earnings_days_away": -42,
+      "forward_pe": 12.6645,
+      "peg": 2.1441,
+      "revenue_growth_yoy": 0.044,
+      "fcf_margin": 0.2668,
+      "earnings_days_away": -35,
       "beat_streak": 4,
       "insider_signal": "neutral",
-      "volume_ratio": 0.92,
-      "range_52w_pct": NaN,
-      "short_ratio": 2.6,
-      "short_float_pct": 3.03,
-      "relative_strength_3m": NaN,
-      "eps_revision": "lowering"
-    },
-    {
-      "symbol": "SBUX",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 33.2,
-      "trend": "downtrend",
-      "entry_quality": "oversold \u2014 verify fundamentals",
-      "correlation_group": "consumer_discretionary",
-      "forward_pe": 32.3542,
-      "peg": 1.2681,
-      "revenue_growth_yoy": 0.088,
-      "fcf_margin": -0.0339,
-      "earnings_days_away": -43,
-      "beat_streak": 1,
-      "insider_signal": "neutral",
-      "volume_ratio": 1.23,
-      "range_52w_pct": NaN,
-      "short_ratio": 5.83,
-      "short_float_pct": 4.7,
-      "relative_strength_3m": NaN,
+      "volume_ratio": 1.3,
+      "range_52w_pct": 34.4,
+      "atr_14": 3.49,
+      "short_ratio": 3.92,
+      "short_float_pct": 2.07,
+      "relative_strength_3m": -23.42,
       "eps_revision": "raising"
     },
     {
       "symbol": "NEM",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 35.8,
+      "price": 92.77,
+      "price_at_fetch": 92.77,
+      "rsi": 30.0,
       "trend": "downtrend",
-      "entry_quality": "fair",
+      "entry_quality": "excellent \u2014 oversold",
       "correlation_group": "precious_metals",
-      "forward_pe": 8.6476,
+      "forward_pe": 8.1413,
       "peg": 2.7807,
       "revenue_growth_yoy": 0.458,
       "fcf_margin": 0.3927,
-      "earnings_days_away": -48,
+      "earnings_days_away": -49,
       "beat_streak": 4,
       "insider_signal": "neutral",
-      "volume_ratio": 1.14,
-      "range_52w_pct": NaN,
+      "volume_ratio": 1.34,
+      "range_52w_pct": 50.9,
+      "atr_14": 4.68,
       "short_ratio": 2.67,
       "short_float_pct": 2.06,
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -26.33,
+      "eps_revision": "raising"
+    },
+    {
+      "symbol": "NFLX",
+      "price": 82.0,
+      "price_at_fetch": 82.0,
+      "rsi": 33.0,
+      "trend": "downtrend",
+      "entry_quality": "excellent \u2014 oversold",
+      "correlation_group": "streaming",
+      "forward_pe": 21.3458,
+      "peg": 1.5991,
+      "revenue_growth_yoy": 0.162,
+      "fcf_margin": 0.5544,
+      "earnings_days_away": -56,
+      "beat_streak": 2,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.99,
+      "range_52w_pct": 10.6,
+      "atr_14": 2.12,
+      "short_ratio": 3.06,
+      "short_float_pct": 2.43,
+      "relative_strength_3m": -20.61,
+      "eps_revision": "raising"
+    },
+    {
+      "symbol": "REGN",
+      "price": 601.65,
+      "price_at_fetch": 601.65,
+      "rsi": 33.4,
+      "trend": "downtrend",
+      "entry_quality": "excellent \u2014 oversold",
+      "correlation_group": "healthcare",
+      "forward_pe": 11.1895,
+      "peg": 1.0727,
+      "revenue_growth_yoy": 0.19,
+      "fcf_margin": 0.2194,
+      "earnings_days_away": -43,
+      "beat_streak": 4,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.7,
+      "range_52w_pct": 31.4,
+      "atr_14": 19.54,
+      "short_ratio": 2.6,
+      "short_float_pct": 3.03,
+      "relative_strength_3m": -26.85,
+      "eps_revision": "lowering"
+    },
+    {
+      "symbol": "NU",
+      "price": 11.62,
+      "price_at_fetch": 11.62,
+      "rsi": 34.9,
+      "trend": "downtrend",
+      "entry_quality": "excellent \u2014 oversold",
+      "correlation_group": "fintech",
+      "forward_pe": 10.1467,
+      "peg": 0.6992,
+      "revenue_growth_yoy": 0.437,
+      "fcf_margin": null,
+      "earnings_days_away": -28,
+      "beat_streak": 2,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.66,
+      "range_52w_pct": 0.3,
+      "atr_14": 0.52,
+      "short_ratio": 2.66,
+      "short_float_pct": 3.79,
+      "relative_strength_3m": -24.37,
       "eps_revision": "raising"
     },
     {
       "symbol": "BABA",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 36.2,
+      "price": 115.38,
+      "price_at_fetch": 115.38,
+      "rsi": 31.7,
       "trend": "downtrend",
-      "entry_quality": "fair",
+      "entry_quality": "oversold \u2014 verify fundamentals",
       "correlation_group": "ecommerce_global",
-      "forward_pe": 12.9824,
+      "forward_pe": 12.5272,
       "peg": 0.4146,
       "revenue_growth_yoy": 0.029,
       "fcf_margin": -0.0431,
-      "earnings_days_away": -28,
+      "earnings_days_away": -29,
       "beat_streak": 0,
       "insider_signal": "neutral",
-      "volume_ratio": 1.0,
-      "range_52w_pct": NaN,
+      "volume_ratio": 0.91,
+      "range_52w_pct": 13.5,
+      "atr_14": 4.36,
       "short_ratio": 3.21,
       "short_float_pct": 1.65,
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -21.58,
       "eps_revision": "raising"
     },
     {
       "symbol": "AMZN",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 37.3,
-      "trend": "downtrend",
-      "entry_quality": "fair",
+      "price": 238.0,
+      "price_at_fetch": 238.0,
+      "rsi": 32.5,
+      "trend": "mixed",
+      "entry_quality": "oversold \u2014 verify fundamentals",
       "correlation_group": "big_tech",
-      "forward_pe": 24.7658,
+      "forward_pe": 24.138,
       "peg": 1.8344,
       "revenue_growth_yoy": 0.166,
       "fcf_margin": 0.0132,
-      "earnings_days_away": -42,
+      "earnings_days_away": -43,
       "beat_streak": 3,
       "insider_signal": "neutral",
-      "volume_ratio": 0.93,
-      "range_52w_pct": NaN,
+      "volume_ratio": 0.87,
+      "range_52w_pct": 51.5,
+      "atr_14": 7.3,
       "short_ratio": 2.12,
       "short_float_pct": 0.94,
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": 6.03,
       "eps_revision": "raising"
     },
     {
-      "symbol": "DIS",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 38.8,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "streaming",
-      "forward_pe": 13.2598,
-      "peg": 2.3308,
-      "revenue_growth_yoy": 0.065,
-      "fcf_margin": 0.0386,
-      "earnings_days_away": -35,
+      "symbol": "AVGO",
+      "price": 372.1,
+      "price_at_fetch": 372.1,
+      "rsi": 37.8,
+      "trend": "mixed",
+      "entry_quality": "good \u2014 near support",
+      "correlation_group": "semiconductors",
+      "forward_pe": 19.2295,
+      "peg": 0.7127,
+      "revenue_growth_yoy": 0.479,
+      "fcf_margin": 0.3606,
+      "earnings_days_away": -8,
       "beat_streak": 4,
       "insider_signal": "neutral",
-      "volume_ratio": 0.96,
-      "range_52w_pct": NaN,
-      "short_ratio": 2.88,
-      "short_float_pct": 1.53,
-      "relative_strength_3m": NaN,
-      "eps_revision": "lowering"
-    },
-    {
-      "symbol": "BLK",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 39.4,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "asset_managers",
-      "forward_pe": 16.6669,
-      "peg": 1.2635,
-      "revenue_growth_yoy": 0.27,
-      "fcf_margin": 0.2762,
-      "earnings_days_away": -57,
-      "beat_streak": 4,
-      "insider_signal": "neutral",
-      "volume_ratio": 0.78,
-      "range_52w_pct": NaN,
-      "short_ratio": 3.36,
-      "short_float_pct": 1.32,
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    {
-      "symbol": "META",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 39.5,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "big_tech",
-      "forward_pe": 16.1658,
-      "peg": 0.8458,
-      "revenue_growth_yoy": 0.331,
-      "fcf_margin": 0.1189,
-      "earnings_days_away": -42,
-      "beat_streak": 3,
-      "insider_signal": "neutral",
-      "volume_ratio": 0.92,
-      "range_52w_pct": NaN,
-      "short_ratio": 1.91,
-      "short_float_pct": 1.47,
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    {
-      "symbol": "GILD",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 39.9,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "healthcare",
-      "forward_pe": 13.0929,
-      "peg": 2.1441,
-      "revenue_growth_yoy": 0.044,
-      "fcf_margin": 0.2668,
-      "earnings_days_away": -34,
-      "beat_streak": 4,
-      "insider_signal": "neutral",
-      "volume_ratio": 1.12,
-      "range_52w_pct": NaN,
-      "short_ratio": 3.92,
-      "short_float_pct": 2.07,
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    {
-      "symbol": "KMI",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 41.4,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "energy",
-      "forward_pe": 20.8726,
-      "peg": 3.7319,
-      "revenue_growth_yoy": 0.138,
-      "fcf_margin": 0.094,
-      "earnings_days_away": -49,
-      "beat_streak": 3,
-      "insider_signal": "neutral",
-      "volume_ratio": 1.0,
-      "range_52w_pct": NaN,
-      "short_ratio": 4.2,
-      "short_float_pct": 2.31,
-      "relative_strength_3m": NaN,
+      "volume_ratio": 1.42,
+      "range_52w_pct": 53.4,
+      "atr_14": 23.15,
+      "short_ratio": 3.01,
+      "short_float_pct": 1.25,
+      "relative_strength_3m": 3.43,
       "eps_revision": "raising"
     },
     {
       "symbol": "MELI",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 41.7,
+      "price": 1588.29,
+      "price_at_fetch": 1588.29,
+      "rsi": 40.3,
       "trend": "downtrend",
-      "entry_quality": "fair",
+      "entry_quality": "good \u2014 near support",
       "correlation_group": "ecommerce_global",
-      "forward_pe": 27.6893,
-      "peg": 0.991,
+      "forward_pe": 26.7973,
+      "peg": 1.0116,
       "revenue_growth_yoy": 0.49,
       "fcf_margin": -0.1291,
-      "earnings_days_away": -34,
+      "earnings_days_away": -35,
       "beat_streak": 1,
       "insider_signal": "neutral",
-      "volume_ratio": 0.76,
-      "range_52w_pct": NaN,
+      "volume_ratio": 0.6,
+      "range_52w_pct": 3.9,
+      "atr_14": 59.78,
       "short_ratio": 1.52,
       "short_float_pct": 2.18,
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -13.01,
       "eps_revision": "lowering"
     },
     {
-      "symbol": "AVGO",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 43.3,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "semiconductors",
-      "forward_pe": 20.2662,
-      "peg": 0.7127,
-      "revenue_growth_yoy": 0.479,
-      "fcf_margin": 0.3606,
-      "earnings_days_away": -7,
-      "beat_streak": 4,
-      "insider_signal": "neutral",
-      "volume_ratio": 1.4,
-      "range_52w_pct": NaN,
-      "short_ratio": 3.01,
-      "short_float_pct": 1.25,
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    {
-      "symbol": "GOOGL",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 43.5,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "big_tech",
-      "forward_pe": 25.1811,
-      "peg": 1.451,
-      "revenue_growth_yoy": 0.218,
-      "fcf_margin": 0.0661,
-      "earnings_days_away": -42,
-      "beat_streak": 4,
-      "insider_signal": "neutral",
-      "volume_ratio": 0.92,
-      "range_52w_pct": NaN,
-      "short_ratio": 2.79,
-      "short_float_pct": 1.42,
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    {
-      "symbol": "BX",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 44.2,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "asset_managers",
-      "forward_pe": 15.964,
-      "peg": 1.9371,
-      "revenue_growth_yoy": 0.057,
-      "fcf_margin": null,
-      "earnings_days_away": -48,
-      "beat_streak": 4,
-      "insider_signal": "neutral",
-      "volume_ratio": 1.04,
-      "range_52w_pct": NaN,
-      "short_ratio": 3.96,
-      "short_float_pct": 2.67,
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    {
-      "symbol": "MA",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 44.8,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "payments",
-      "forward_pe": 21.7497,
-      "peg": 1.5238,
-      "revenue_growth_yoy": 0.158,
-      "fcf_margin": 0.4758,
-      "earnings_days_away": -41,
-      "beat_streak": 4,
-      "insider_signal": "neutral",
-      "volume_ratio": 0.84,
-      "range_52w_pct": NaN,
-      "short_ratio": 1.68,
-      "short_float_pct": 0.74,
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    {
-      "symbol": "MSFT",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 45.5,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "big_tech",
-      "forward_pe": 20.8563,
-      "peg": 1.2845,
-      "revenue_growth_yoy": 0.183,
-      "fcf_margin": 0.1163,
-      "earnings_days_away": -42,
-      "beat_streak": 4,
-      "insider_signal": "neutral",
-      "volume_ratio": 0.93,
-      "range_52w_pct": NaN,
-      "short_ratio": 2.42,
-      "short_float_pct": 1.19,
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    {
-      "symbol": "HD",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 45.7,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "consumer_discretionary",
-      "forward_pe": 19.9496,
-      "peg": 1.7522,
-      "revenue_growth_yoy": 0.048,
-      "fcf_margin": 0.0608,
-      "earnings_days_away": 69,
-      "beat_streak": 2,
-      "insider_signal": "neutral",
-      "volume_ratio": 0.93,
-      "range_52w_pct": NaN,
-      "short_ratio": 2.2,
-      "short_float_pct": 1.34,
-      "relative_strength_3m": NaN,
-      "eps_revision": "stable"
-    },
-    {
       "symbol": "PLTR",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 45.7,
+      "price": 130.21,
+      "price_at_fetch": 130.21,
+      "rsi": 40.8,
       "trend": "downtrend",
-      "entry_quality": "fair",
+      "entry_quality": "good \u2014 near support",
       "correlation_group": "big_tech",
-      "forward_pe": 63.6703,
-      "peg": 1.8939,
+      "forward_pe": 62.7736,
+      "peg": 1.8672,
       "revenue_growth_yoy": 0.847,
       "fcf_margin": 0.3356,
-      "earnings_days_away": -37,
+      "earnings_days_away": -38,
       "beat_streak": 4,
       "insider_signal": "neutral",
-      "volume_ratio": 0.9,
-      "range_52w_pct": NaN,
+      "volume_ratio": 0.68,
+      "range_52w_pct": 2.7,
+      "atr_14": 6.89,
       "short_ratio": 1.58,
       "short_float_pct": 3.23,
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    {
-      "symbol": "NVDA",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 46.9,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "semiconductors",
-      "forward_pe": 16.4159,
-      "peg": 0.6319,
-      "revenue_growth_yoy": 0.852,
-      "fcf_margin": 0.1828,
-      "earnings_days_away": 77,
-      "beat_streak": 4,
-      "insider_signal": "neutral",
-      "volume_ratio": 1.05,
-      "range_52w_pct": NaN,
-      "short_ratio": 1.71,
-      "short_float_pct": 1.22,
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    {
-      "symbol": "V",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 47.8,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "payments",
-      "forward_pe": 21.8686,
-      "peg": 1.4266,
-      "revenue_growth_yoy": 0.171,
-      "fcf_margin": 0.4843,
-      "earnings_days_away": -43,
-      "beat_streak": 4,
-      "insider_signal": "neutral",
-      "volume_ratio": 0.57,
-      "range_52w_pct": NaN,
-      "short_ratio": 2.58,
-      "short_float_pct": 1.29,
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    {
-      "symbol": "TSLA",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 48.0,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "ev",
-      "forward_pe": 157.875,
-      "peg": 5.462,
-      "revenue_growth_yoy": 0.158,
-      "fcf_margin": 0.0537,
-      "earnings_days_away": -49,
-      "beat_streak": 2,
-      "insider_signal": "neutral",
-      "volume_ratio": 1.14,
-      "range_52w_pct": NaN,
-      "short_ratio": 1.48,
-      "short_float_pct": 2.3,
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    {
-      "symbol": "OXY",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 48.2,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "energy",
-      "forward_pe": 14.0192,
-      "peg": 1.1993,
-      "revenue_growth_yoy": -0.083,
-      "fcf_margin": 0.1436,
-      "earnings_days_away": -36,
-      "beat_streak": 4,
-      "insider_signal": "neutral",
-      "volume_ratio": 0.94,
-      "range_52w_pct": NaN,
-      "short_ratio": 0.01,
-      "short_float_pct": 0.02,
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    {
-      "symbol": "SOFI",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 48.7,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "fintech",
-      "forward_pe": 21.1089,
-      "peg": 1.0281,
-      "revenue_growth_yoy": 0.425,
-      "fcf_margin": null,
-      "earnings_days_away": -42,
-      "beat_streak": 3,
-      "insider_signal": "neutral",
-      "volume_ratio": 1.06,
-      "range_52w_pct": NaN,
-      "short_ratio": 2.52,
-      "short_float_pct": 14.71,
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -22.73,
       "eps_revision": "raising"
     },
     {
       "symbol": "CRM",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 48.8,
+      "price": 170.92,
+      "price_at_fetch": 170.92,
+      "rsi": 41.4,
       "trend": "downtrend",
-      "entry_quality": "fair",
+      "entry_quality": "good \u2014 near support",
       "correlation_group": "saas",
-      "forward_pe": 11.2833,
-      "peg": 0.9037,
+      "forward_pe": 10.9983,
+      "peg": 0.8366,
       "revenue_growth_yoy": 0.133,
       "fcf_margin": 0.3865,
-      "earnings_days_away": -14,
+      "earnings_days_away": -15,
       "beat_streak": 4,
       "insider_signal": "neutral",
-      "volume_ratio": 1.08,
-      "range_52w_pct": NaN,
+      "volume_ratio": 0.75,
+      "range_52w_pct": 5.6,
+      "atr_14": 9.05,
       "short_ratio": 4.45,
       "short_float_pct": 8.61,
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -21.57,
       "eps_revision": "raising"
     },
     {
-      "symbol": "FCX",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 48.9,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "base_metals",
-      "forward_pe": 16.7243,
-      "peg": 4.2673,
-      "revenue_growth_yoy": 0.088,
-      "fcf_margin": 0.0647,
-      "earnings_days_away": -48,
-      "beat_streak": 4,
-      "insider_signal": "neutral",
-      "volume_ratio": 0.98,
-      "range_52w_pct": NaN,
-      "short_ratio": 2.14,
-      "short_float_pct": 1.98,
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    {
-      "symbol": "COP",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 50.1,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "energy",
-      "forward_pe": 12.7002,
-      "peg": 0.9933,
-      "revenue_growth_yoy": -0.053,
-      "fcf_margin": 0.0891,
-      "earnings_days_away": -41,
-      "beat_streak": 3,
-      "insider_signal": "neutral",
-      "volume_ratio": 0.59,
-      "range_52w_pct": NaN,
-      "short_ratio": 2.94,
-      "short_float_pct": 1.83,
-      "relative_strength_3m": NaN,
-      "eps_revision": "lowering"
-    },
-    {
-      "symbol": "XOM",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 50.5,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "energy",
-      "forward_pe": 13.9975,
-      "peg": 1.3845,
-      "revenue_growth_yoy": 0.026,
-      "fcf_margin": 0.0357,
-      "earnings_days_away": -40,
-      "beat_streak": 4,
-      "insider_signal": "neutral",
-      "volume_ratio": 0.71,
-      "range_52w_pct": NaN,
-      "short_ratio": 2.39,
-      "short_float_pct": 1.14,
-      "relative_strength_3m": NaN,
-      "eps_revision": "lowering"
-    },
-    {
-      "symbol": "QCOM",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 52.2,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "semiconductors",
-      "forward_pe": 19.2572,
-      "peg": 0.9093,
-      "revenue_growth_yoy": -0.035,
-      "fcf_margin": 0.2156,
+      "symbol": "AAPL",
+      "price": 291.58,
+      "price_at_fetch": 291.58,
+      "rsi": 43.8,
+      "trend": "uptrend",
+      "entry_quality": "good \u2014 near support",
+      "correlation_group": "big_tech",
+      "forward_pe": 30.3944,
+      "peg": 2.3354,
+      "revenue_growth_yoy": 0.166,
+      "fcf_margin": 0.2239,
       "earnings_days_away": -42,
       "beat_streak": 4,
       "insider_signal": "neutral",
-      "volume_ratio": 1.02,
-      "range_52w_pct": NaN,
-      "short_ratio": 1.45,
-      "short_float_pct": 4.78,
-      "relative_strength_3m": NaN,
+      "volume_ratio": 0.95,
+      "range_52w_pct": 80.4,
+      "atr_14": 7.3,
+      "short_ratio": 3.12,
+      "short_float_pct": 1.06,
+      "relative_strength_3m": 6.56,
+      "eps_revision": "raising"
+    },
+    {
+      "symbol": "MA",
+      "price": 489.08,
+      "price_at_fetch": 489.08,
+      "rsi": 47.3,
+      "trend": "downtrend",
+      "entry_quality": "good \u2014 near support",
+      "correlation_group": "payments",
+      "forward_pe": 21.4749,
+      "peg": 1.5048,
+      "revenue_growth_yoy": 0.158,
+      "fcf_margin": 0.4758,
+      "earnings_days_away": -42,
+      "beat_streak": 4,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.83,
+      "range_52w_pct": 14.1,
+      "atr_14": 11.54,
+      "short_ratio": 1.68,
+      "short_float_pct": 0.74,
+      "relative_strength_3m": -9.04,
+      "eps_revision": "raising"
+    },
+    {
+      "symbol": "TSM",
+      "price": 408.75,
+      "price_at_fetch": 408.75,
+      "rsi": 48.3,
+      "trend": "uptrend",
+      "entry_quality": "good \u2014 near support",
+      "correlation_group": "semiconductors",
+      "forward_pe": 20.9305,
+      "peg": 1.3344,
+      "revenue_growth_yoy": 0.351,
+      "fcf_margin": 0.1752,
+      "earnings_days_away": -56,
+      "beat_streak": 4,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.91,
+      "range_52w_pct": 84.1,
+      "atr_14": 18.16,
+      "short_ratio": 2.21,
+      "short_float_pct": 0.58,
+      "relative_strength_3m": 14.18,
+      "eps_revision": "raising"
+    },
+    {
+      "symbol": "AMGN",
+      "price": 337.73,
+      "price_at_fetch": 337.73,
+      "rsi": 49.8,
+      "trend": "mixed",
+      "entry_quality": "good \u2014 near support",
+      "correlation_group": "healthcare",
+      "forward_pe": 14.3855,
+      "peg": 2.2774,
+      "revenue_growth_yoy": 0.058,
+      "fcf_margin": 0.1998,
+      "earnings_days_away": -42,
+      "beat_streak": 4,
+      "insider_signal": "neutral",
+      "volume_ratio": 1.11,
+      "range_52w_pct": 60.6,
+      "atr_14": 8.25,
+      "short_ratio": 4.38,
+      "short_float_pct": 2.2,
+      "relative_strength_3m": -15.03,
+      "eps_revision": "raising"
+    },
+    {
+      "symbol": "V",
+      "price": 322.96,
+      "price_at_fetch": 322.96,
+      "rsi": 51.0,
+      "trend": "mixed",
+      "entry_quality": "good \u2014 near support",
+      "correlation_group": "payments",
+      "forward_pe": 21.728,
+      "peg": 1.4174,
+      "revenue_growth_yoy": 0.171,
+      "fcf_margin": 0.4843,
+      "earnings_days_away": -44,
+      "beat_streak": 4,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.71,
+      "range_52w_pct": 37.2,
+      "atr_14": 7.13,
+      "short_ratio": 2.58,
+      "short_float_pct": 1.29,
+      "relative_strength_3m": -1.96,
+      "eps_revision": "raising"
+    },
+    {
+      "symbol": "IBM",
+      "price": 272.36,
+      "price_at_fetch": 272.36,
+      "rsi": 53.4,
+      "trend": "uptrend",
+      "entry_quality": "good \u2014 near support",
+      "correlation_group": "big_tech",
+      "forward_pe": 20.2911,
+      "peg": 2.5913,
+      "revenue_growth_yoy": 0.095,
+      "fcf_margin": 0.1898,
+      "earnings_days_away": 41,
+      "beat_streak": 4,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.52,
+      "range_52w_pct": 50.4,
+      "atr_14": 13.46,
+      "short_ratio": 3.41,
+      "short_float_pct": 3.61,
+      "relative_strength_3m": 3.22,
       "eps_revision": "raising"
     },
     {
       "symbol": "CVX",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 52.8,
-      "trend": "downtrend",
-      "entry_quality": "fair",
+      "price": 189.8,
+      "price_at_fetch": 189.8,
+      "rsi": 53.5,
+      "trend": "uptrend",
+      "entry_quality": "good \u2014 near support",
       "correlation_group": "energy",
-      "forward_pe": 14.8615,
-      "peg": 0.8198,
+      "forward_pe": 15.1034,
+      "peg": 0.7528,
       "revenue_growth_yoy": 0.023,
       "fcf_margin": 0.0634,
-      "earnings_days_away": -40,
-      "beat_streak": 4,
-      "insider_signal": "neutral",
-      "volume_ratio": 0.67,
-      "range_52w_pct": NaN,
-      "short_ratio": 2.24,
-      "short_float_pct": 1.16,
-      "relative_strength_3m": NaN,
-      "eps_revision": "lowering"
-    },
-    {
-      "symbol": "INTC",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 53.0,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "semiconductors",
-      "forward_pe": 70.103,
-      "peg": 1.36,
-      "revenue_growth_yoy": 0.072,
-      "fcf_margin": -0.1544,
-      "earnings_days_away": -48,
-      "beat_streak": 3,
-      "insider_signal": "neutral",
-      "volume_ratio": 1.03,
-      "range_52w_pct": NaN,
-      "short_ratio": 0.92,
-      "short_float_pct": 2.69,
-      "relative_strength_3m": NaN,
-      "eps_revision": null
-    },
-    {
-      "symbol": "AAPL",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 53.4,
-      "trend": "downtrend",
-      "entry_quality": "fair",
-      "correlation_group": "big_tech",
-      "forward_pe": 30.2342,
-      "peg": 2.4704,
-      "revenue_growth_yoy": 0.166,
-      "fcf_margin": 0.2239,
       "earnings_days_away": -41,
       "beat_streak": 4,
       "insider_signal": "neutral",
-      "volume_ratio": 1.36,
-      "range_52w_pct": NaN,
-      "short_ratio": 3.12,
-      "short_float_pct": 1.06,
-      "relative_strength_3m": NaN,
+      "volume_ratio": 0.78,
+      "range_52w_pct": 72.9,
+      "atr_14": 4.31,
+      "short_ratio": 2.24,
+      "short_float_pct": 1.16,
+      "relative_strength_3m": -10.31,
+      "eps_revision": "lowering"
+    },
+    {
+      "symbol": "JPM",
+      "price": 309.14,
+      "price_at_fetch": 309.14,
+      "rsi": 54.9,
+      "trend": "uptrend",
+      "entry_quality": "good \u2014 near support",
+      "correlation_group": "financials",
+      "forward_pe": 13.126,
+      "peg": 1.6599,
+      "revenue_growth_yoy": 0.127,
+      "fcf_margin": null,
+      "earnings_days_away": 33,
+      "beat_streak": 3,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.86,
+      "range_52w_pct": 67.4,
+      "atr_14": 6.31,
+      "short_ratio": 3.36,
+      "short_float_pct": 1.07,
+      "relative_strength_3m": 2.29,
+      "eps_revision": "raising"
+    },
+    {
+      "symbol": "META",
+      "price": 570.98,
+      "price_at_fetch": 570.98,
+      "rsi": 35.7,
+      "trend": "downtrend",
+      "entry_quality": "fair",
+      "correlation_group": "big_tech",
+      "forward_pe": 15.7895,
+      "peg": 0.8446,
+      "revenue_growth_yoy": 0.331,
+      "fcf_margin": 0.1189,
+      "earnings_days_away": -43,
+      "beat_streak": 3,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.92,
+      "range_52w_pct": 17.2,
+      "atr_14": 19.11,
+      "short_ratio": 1.91,
+      "short_float_pct": 1.47,
+      "relative_strength_3m": -18.01,
+      "eps_revision": "raising"
+    },
+    {
+      "symbol": "DIS",
+      "price": 98.61,
+      "price_at_fetch": 98.61,
+      "rsi": 38.7,
+      "trend": "downtrend",
+      "entry_quality": "fair",
+      "correlation_group": "streaming",
+      "forward_pe": 13.1637,
+      "peg": 2.3064,
+      "revenue_growth_yoy": 0.065,
+      "fcf_margin": 0.0386,
+      "earnings_days_away": -36,
+      "beat_streak": 4,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.77,
+      "range_52w_pct": 20.1,
+      "atr_14": 2.1,
+      "short_ratio": 2.88,
+      "short_float_pct": 1.53,
+      "relative_strength_3m": -8.38,
+      "eps_revision": "lowering"
+    },
+    {
+      "symbol": "MSFT",
+      "price": 397.36,
+      "price_at_fetch": 397.36,
+      "rsi": 39.6,
+      "trend": "downtrend",
+      "entry_quality": "fair",
+      "correlation_group": "big_tech",
+      "forward_pe": 20.4909,
+      "peg": 1.2436,
+      "revenue_growth_yoy": 0.183,
+      "fcf_margin": 0.1163,
+      "earnings_days_away": -43,
+      "beat_streak": 4,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.83,
+      "range_52w_pct": 22.6,
+      "atr_14": 12.3,
+      "short_ratio": 2.42,
+      "short_float_pct": 1.19,
+      "relative_strength_3m": -8.46,
       "eps_revision": "raising"
     },
     {
       "symbol": "SONY",
-      "price": NaN,
-      "price_at_fetch": NaN,
-      "rsi": 53.6,
+      "price": 20.76,
+      "price_at_fetch": 20.76,
+      "rsi": 40.5,
       "trend": "downtrend",
       "entry_quality": "fair",
       "correlation_group": "big_tech",
-      "forward_pe": 17.9076,
-      "peg": 1.9855,
+      "forward_pe": 17.4454,
+      "peg": 1.9372,
       "revenue_growth_yoy": 0.154,
       "fcf_margin": -0.0227,
-      "earnings_days_away": 51,
+      "earnings_days_away": 50,
       "beat_streak": 2,
       "insider_signal": "neutral",
-      "volume_ratio": 0.84,
-      "range_52w_pct": NaN,
+      "volume_ratio": 0.83,
+      "range_52w_pct": 10.5,
+      "atr_14": 0.56,
       "short_ratio": 1.37,
       "short_float_pct": 0.2,
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -10.81,
       "eps_revision": "lowering"
+    },
+    {
+      "symbol": "NVDA",
+      "price": 200.42,
+      "price_at_fetch": 200.42,
+      "rsi": 41.2,
+      "trend": "mixed",
+      "entry_quality": "fair",
+      "correlation_group": "semiconductors",
+      "forward_pe": 15.7474,
+      "peg": 0.6407,
+      "revenue_growth_yoy": 0.852,
+      "fcf_margin": 0.1828,
+      "earnings_days_away": 76,
+      "beat_streak": 4,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.88,
+      "range_52w_pct": 62.6,
+      "atr_14": 8.54,
+      "short_ratio": 1.71,
+      "short_float_pct": 1.22,
+      "relative_strength_3m": 2.01,
+      "eps_revision": "raising"
+    },
+    {
+      "symbol": "QCOM",
+      "price": 191.2,
+      "price_at_fetch": 191.2,
+      "rsi": 43.5,
+      "trend": "uptrend",
+      "entry_quality": "fair",
+      "correlation_group": "semiconductors",
+      "forward_pe": 17.9242,
+      "peg": 0.8702,
+      "revenue_growth_yoy": -0.035,
+      "fcf_margin": 0.2156,
+      "earnings_days_away": -43,
+      "beat_streak": 4,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.65,
+      "range_52w_pct": 53.4,
+      "atr_14": 17.67,
+      "short_ratio": 1.45,
+      "short_float_pct": 4.78,
+      "relative_strength_3m": 38.77,
+      "eps_revision": "raising"
+    },
+    {
+      "symbol": "BLK",
+      "price": 1010.68,
+      "price_at_fetch": 1010.68,
+      "rsi": 44.2,
+      "trend": "downtrend",
+      "entry_quality": "fair",
+      "correlation_group": "asset_managers",
+      "forward_pe": 16.6459,
+      "peg": 1.2843,
+      "revenue_growth_yoy": 0.27,
+      "fcf_margin": 0.2762,
+      "earnings_days_away": -58,
+      "beat_streak": 4,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.75,
+      "range_52w_pct": 35.0,
+      "atr_14": 24.69,
+      "short_ratio": 3.36,
+      "short_float_pct": 1.32,
+      "relative_strength_3m": 2.58,
+      "eps_revision": "raising"
+    },
+    {
+      "symbol": "SOFI",
+      "price": 15.87,
+      "price_at_fetch": 15.87,
+      "rsi": 44.6,
+      "trend": "downtrend",
+      "entry_quality": "fair",
+      "correlation_group": "fintech",
+      "forward_pe": 20.3399,
+      "peg": 1.0281,
+      "revenue_growth_yoy": 0.425,
+      "fcf_margin": null,
+      "earnings_days_away": -43,
+      "beat_streak": 3,
+      "insider_signal": "neutral",
+      "volume_ratio": 1.14,
+      "range_52w_pct": 9.8,
+      "atr_14": 0.96,
+      "short_ratio": 2.52,
+      "short_float_pct": 14.71,
+      "relative_strength_3m": -17.89,
+      "eps_revision": "raising"
+    },
+    {
+      "symbol": "SBUX",
+      "price": 98.76,
+      "price_at_fetch": 98.76,
+      "rsi": 47.5,
+      "trend": "mixed",
+      "entry_quality": "fair",
+      "correlation_group": "consumer_discretionary",
+      "forward_pe": 32.7994,
+      "peg": 1.2963,
+      "revenue_growth_yoy": 0.088,
+      "fcf_margin": -0.0339,
+      "earnings_days_away": -44,
+      "beat_streak": 1,
+      "insider_signal": "neutral",
+      "volume_ratio": 1.03,
+      "range_52w_pct": 73.0,
+      "atr_14": 2.69,
+      "short_ratio": 5.83,
+      "short_float_pct": 4.7,
+      "relative_strength_3m": -8.39,
+      "eps_revision": "raising"
+    },
+    {
+      "symbol": "KMI",
+      "price": 31.84,
+      "price_at_fetch": 31.84,
+      "rsi": 47.7,
+      "trend": "mixed",
+      "entry_quality": "fair",
+      "correlation_group": "energy",
+      "forward_pe": 21.2056,
+      "peg": 3.7379,
+      "revenue_growth_yoy": 0.138,
+      "fcf_margin": 0.094,
+      "earnings_days_away": -50,
+      "beat_streak": 3,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.68,
+      "range_52w_pct": 73.2,
+      "atr_14": 0.66,
+      "short_ratio": 4.2,
+      "short_float_pct": 2.31,
+      "relative_strength_3m": -11.23,
+      "eps_revision": "raising"
+    },
+    {
+      "symbol": "XOM",
+      "price": 150.62,
+      "price_at_fetch": 150.62,
+      "rsi": 49.0,
+      "trend": "mixed",
+      "entry_quality": "fair",
+      "correlation_group": "energy",
+      "forward_pe": 14.1582,
+      "peg": 1.236,
+      "revenue_growth_yoy": 0.026,
+      "fcf_margin": 0.0357,
+      "earnings_days_away": -41,
+      "beat_streak": 4,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.69,
+      "range_52w_pct": 70.9,
+      "atr_14": 3.96,
+      "short_ratio": 2.39,
+      "short_float_pct": 1.14,
+      "relative_strength_3m": -8.78,
+      "eps_revision": "lowering"
+    },
+    {
+      "symbol": "NOW",
+      "price": 106.06,
+      "price_at_fetch": 106.06,
+      "rsi": 49.3,
+      "trend": "mixed",
+      "entry_quality": "fair",
+      "correlation_group": "saas",
+      "forward_pe": 21.0994,
+      "peg": 1.029,
+      "revenue_growth_yoy": 0.221,
+      "fcf_margin": 0.3659,
+      "earnings_days_away": -50,
+      "beat_streak": 4,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.64,
+      "range_52w_pct": 18.3,
+      "atr_14": 7.6,
+      "short_ratio": 2.05,
+      "short_float_pct": 5.93,
+      "relative_strength_3m": -13.67,
+      "eps_revision": "stable"
+    },
+    {
+      "symbol": "GS",
+      "price": 1001.29,
+      "price_at_fetch": 1001.29,
+      "rsi": 51.8,
+      "trend": "uptrend",
+      "entry_quality": "fair",
+      "correlation_group": "financials",
+      "forward_pe": 15.313,
+      "peg": 1.5942,
+      "revenue_growth_yoy": 0.145,
+      "fcf_margin": null,
+      "earnings_days_away": 33,
+      "beat_streak": 4,
+      "insider_signal": "neutral",
+      "volume_ratio": 1.07,
+      "range_52w_pct": 81.4,
+      "atr_14": 33.23,
+      "short_ratio": 3.84,
+      "short_float_pct": 2.62,
+      "relative_strength_3m": 20.15,
+      "eps_revision": "raising"
+    },
+    {
+      "symbol": "HD",
+      "price": 318.92,
+      "price_at_fetch": 318.92,
+      "rsi": 54.5,
+      "trend": "downtrend",
+      "entry_quality": "fair",
+      "correlation_group": "consumer_discretionary",
+      "forward_pe": 19.8,
+      "peg": 1.8116,
+      "revenue_growth_yoy": 0.048,
+      "fcf_margin": 0.0608,
+      "earnings_days_away": 68,
+      "beat_streak": 2,
+      "insider_signal": "neutral",
+      "volume_ratio": 0.92,
+      "range_52w_pct": 19.8,
+      "atr_14": 7.96,
+      "short_ratio": 2.2,
+      "short_float_pct": 1.34,
+      "relative_strength_3m": -12.75,
+      "eps_revision": "stable"
+    },
+    {
+      "symbol": "MRK",
+      "price": 119.09,
+      "price_at_fetch": 119.09,
+      "rsi": 55.4,
+      "trend": "uptrend",
+      "entry_quality": "fair",
+      "correlation_group": "healthcare",
+      "forward_pe": 12.452,
+      "peg": 5.5615,
+      "revenue_growth_yoy": 0.049,
+      "fcf_margin": 0.2136,
+      "earnings_days_away": 54,
+      "beat_streak": 4,
+      "insider_signal": "neutral",
+      "volume_ratio": 1.04,
+      "range_52w_pct": 91.3,
+      "atr_14": 3.13,
+      "short_ratio": 3.28,
+      "short_float_pct": 1.24,
+      "relative_strength_3m": -4.05,
+      "eps_revision": null
     }
   ],
   "correlation_warnings": [
@@ -1081,16 +1116,36 @@
       "message": "Over-concentration: 3 'payments' candidates (PYPL, MA, V). Recommend keeping max 2: PYPL, MA. Consider cutting: V."
     },
     {
+      "group": "healthcare",
+      "count": 4,
+      "max_allowed": 2,
+      "all_candidates": [
+        "GILD",
+        "REGN",
+        "AMGN",
+        "MRK"
+      ],
+      "suggested_keep": [
+        "GILD",
+        "REGN"
+      ],
+      "suggested_cut": [
+        "AMGN",
+        "MRK"
+      ],
+      "message": "Over-concentration: 4 'healthcare' candidates (GILD, REGN, AMGN, MRK). Recommend keeping max 2: GILD, REGN. Consider cutting: AMGN, MRK."
+    },
+    {
       "group": "big_tech",
       "count": 7,
       "max_allowed": 2,
       "all_candidates": [
         "AMZN",
-        "META",
-        "GOOGL",
-        "MSFT",
         "PLTR",
         "AAPL",
+        "IBM",
+        "META",
+        "MSFT",
         "SONY"
       ],
       "suggested_keep": [
@@ -1098,35 +1153,13 @@
         "META"
       ],
       "suggested_cut": [
-        "GOOGL",
         "MSFT",
+        "SONY",
         "PLTR",
         "AAPL",
-        "SONY"
+        "IBM"
       ],
-      "message": "Over-concentration: 7 'big_tech' candidates (AMZN, META, GOOGL, MSFT, PLTR, AAPL, SONY). Recommend keeping max 2: AMZN, META. Consider cutting: GOOGL, MSFT, PLTR, AAPL, SONY."
-    },
-    {
-      "group": "energy",
-      "count": 5,
-      "max_allowed": 2,
-      "all_candidates": [
-        "KMI",
-        "OXY",
-        "COP",
-        "XOM",
-        "CVX"
-      ],
-      "suggested_keep": [
-        "KMI",
-        "OXY"
-      ],
-      "suggested_cut": [
-        "COP",
-        "XOM",
-        "CVX"
-      ],
-      "message": "Over-concentration: 5 'energy' candidates (KMI, OXY, COP, XOM, CVX). Recommend keeping max 2: KMI, OXY. Consider cutting: COP, XOM, CVX."
+      "message": "Over-concentration: 7 'big_tech' candidates (AMZN, PLTR, AAPL, IBM, META, MSFT, SONY). Recommend keeping max 2: AMZN, META. Consider cutting: MSFT, SONY, PLTR, AAPL, IBM."
     },
     {
       "group": "semiconductors",
@@ -1134,9 +1167,9 @@
       "max_allowed": 2,
       "all_candidates": [
         "AVGO",
+        "TSM",
         "NVDA",
-        "QCOM",
-        "INTC"
+        "QCOM"
       ],
       "suggested_keep": [
         "AVGO",
@@ -1144,332 +1177,50 @@
       ],
       "suggested_cut": [
         "QCOM",
-        "INTC"
+        "TSM"
       ],
-      "message": "Over-concentration: 4 'semiconductors' candidates (AVGO, NVDA, QCOM, INTC). Recommend keeping max 2: AVGO, NVDA. Consider cutting: QCOM, INTC."
+      "message": "Over-concentration: 4 'semiconductors' candidates (AVGO, TSM, NVDA, QCOM). Recommend keeping max 2: AVGO, NVDA. Consider cutting: QCOM, TSM."
+    },
+    {
+      "group": "energy",
+      "count": 3,
+      "max_allowed": 2,
+      "all_candidates": [
+        "CVX",
+        "KMI",
+        "XOM"
+      ],
+      "suggested_keep": [
+        "KMI",
+        "XOM"
+      ],
+      "suggested_cut": [
+        "CVX"
+      ],
+      "message": "Over-concentration: 3 'energy' candidates (CVX, KMI, XOM). Recommend keeping max 2: KMI, XOM. Consider cutting: CVX."
     }
   ],
   "stocks": {
-    "AVGO": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 43.3,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 242.66,
-        "key_resistance": 481.57,
-        "entry_quality": "fair",
-        "volume_ratio": 1.4,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 65.36,
-        "forward_pe": 20.2662,
-        "peg": 0.7127,
-        "ev_ebitda": 45.458,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.479,
-        "gross_margin": 0.7628,
-        "fcf_margin": 0.3606,
-        "debt_equity": 74.018,
-        "free_cashflow": 27212249088.0,
-        "total_revenue": 75464998912.0
-      },
-      "earnings": {
-        "next_date": "2026-06-03",
-        "days_away": -7,
-        "last_surprise_pct": 0.02,
-        "beat_streak": 4
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 3.01,
-        "short_float_pct": 1.25
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    "AMZN": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 37.3,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 198.79,
-        "key_resistance": 274.99,
-        "entry_quality": "fair",
-        "volume_ratio": 0.93,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 31.5084,
-        "forward_pe": 24.7658,
-        "peg": 1.8344,
-        "ev_ebitda": 17.447,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.166,
-        "gross_margin": 0.506,
-        "fcf_margin": 0.0132,
-        "debt_equity": 53.3,
-        "free_cashflow": 9806624768.0,
-        "total_revenue": 742775980032.0
-      },
-      "earnings": {
-        "next_date": "2026-04-29",
-        "days_away": -42,
-        "last_surprise_pct": 0.26,
-        "beat_streak": 3
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 2.12,
-        "short_float_pct": 0.94
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    "ASML": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 63.4,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 686.0,
-        "key_resistance": 1757.47,
-        "entry_quality": "fair",
-        "volume_ratio": 1.83,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 59.5169,
-        "forward_pe": 37.218,
-        "peg": 2.6271,
-        "ev_ebitda": 2995.683,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.132,
-        "gross_margin": 0.526,
-        "fcf_margin": 0.2447,
-        "debt_equity": 12.989,
-        "free_cashflow": 8243274752.0,
-        "total_revenue": 33692700672.0
-      },
-      "earnings": {
-        "next_date": "2026-07-15",
-        "days_away": 35,
-        "last_surprise_pct": 0.12,
-        "beat_streak": 3
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 0.65,
-        "short_float_pct": 0.27
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    "BABA": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 36.2,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 103.83,
-        "key_resistance": 189.34,
-        "entry_quality": "fair",
-        "volume_ratio": 1.0,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 18.4154,
-        "forward_pe": 12.9824,
-        "peg": 0.4146,
-        "ev_ebitda": 2.812,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.029,
-        "gross_margin": 0.3981,
-        "fcf_margin": -0.0431,
-        "debt_equity": 25.014,
-        "free_cashflow": -44074250240.0,
-        "total_revenue": 1023670026240.0
-      },
-      "earnings": {
-        "next_date": "2026-05-13",
-        "days_away": -28,
-        "last_surprise_pct": -0.05,
-        "beat_streak": 0
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 3.21,
-        "short_float_pct": 1.65
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    "ABBV": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 61.9,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 176.56,
-        "key_resistance": 238.71,
-        "entry_quality": "fair",
-        "volume_ratio": 0.69,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 111.0443,
-        "forward_pe": 13.8672,
-        "peg": 0.6214,
-        "ev_ebitda": 15.438,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.124,
-        "gross_margin": 0.7203,
-        "fcf_margin": 0.3313,
-        "debt_equity": null,
-        "free_cashflow": 20811624448.0,
-        "total_revenue": 62819000320.0
-      },
-      "earnings": {
-        "next_date": "2026-04-29",
-        "days_away": -42,
-        "last_surprise_pct": 0.02,
-        "beat_streak": 3
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 3.88,
-        "short_float_pct": 1.46
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "lowering"
-    },
-    "AMAT": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 62.7,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 155.56,
-        "key_resistance": 501.7,
-        "entry_quality": "fair",
-        "volume_ratio": 1.37,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 46.9624,
-        "forward_pe": 30.8732,
-        "peg": 1.5373,
-        "ev_ebitda": 42.629,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.114,
-        "gross_margin": 0.4896,
-        "fcf_margin": 0.1048,
-        "debt_equity": 30.399,
-        "free_cashflow": 3040375040.0,
-        "total_revenue": 29024000000.0
-      },
-      "earnings": {
-        "next_date": "2026-08-13",
-        "days_away": 64,
-        "last_surprise_pct": 0.05,
-        "beat_streak": 4
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 2.66,
-        "short_float_pct": 2.52
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    "AMGN": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 58.1,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 264.49,
-        "key_resistance": 385.25,
-        "entry_quality": "fair",
-        "volume_ratio": 1.22,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 23.9781,
-        "forward_pe": 14.6766,
-        "peg": 2.3105,
-        "ev_ebitda": 13.669,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.058,
-        "gross_margin": 0.7144,
-        "fcf_margin": 0.1998,
-        "debt_equity": 623.754,
-        "free_cashflow": 7436624896.0,
-        "total_revenue": 37219999744.0
-      },
-      "earnings": {
-        "next_date": "2026-04-30",
-        "days_away": -41,
-        "last_surprise_pct": 0.14,
-        "beat_streak": 4
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 4.38,
-        "short_float_pct": 2.2
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
     "AMD": {
-      "price": NaN,
+      "price": 452.4,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 58.8,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 116.16,
+        "trend": "uptrend",
+        "rsi": 50.4,
+        "macd": "bearish",
+        "sma_50": 375.05,
+        "sma_200": 250.58,
+        "key_support": 375.05,
         "key_resistance": 542.52,
-        "entry_quality": "fair",
-        "volume_ratio": 0.97,
-        "range_52w_pct": NaN
+        "entry_quality": "poor \u2014 extended",
+        "volume_ratio": 0.73,
+        "range_52w_pct": 78.9,
+        "atr_14": 31.89
       },
       "valuation": {
-        "pe": 158.5017,
-        "forward_pe": 36.363,
+        "pe": 150.8,
+        "forward_pe": 34.5961,
         "peg": 1.1439,
-        "ev_ebitda": 103.214,
+        "ev_ebitda": 98.144,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -1482,7 +1233,7 @@
       },
       "earnings": {
         "next_date": "2026-05-05",
-        "days_away": -36,
+        "days_away": -37,
         "last_surprise_pct": -0.01,
         "beat_streak": 3
       },
@@ -1491,28 +1242,73 @@
         "short_ratio": 1.1,
         "short_float_pct": 2.71
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": 121.23,
+      "eps_revision": "raising"
+    },
+    "BABA": {
+      "price": 115.38,
+      "technicals": {
+        "trend": "downtrend",
+        "rsi": 31.7,
+        "macd": "bearish",
+        "sma_50": 130.8,
+        "sma_200": 149.69,
+        "key_support": 103.83,
+        "key_resistance": 189.34,
+        "entry_quality": "oversold \u2014 verify fundamentals",
+        "volume_ratio": 0.91,
+        "range_52w_pct": 13.5,
+        "atr_14": 4.36
+      },
+      "valuation": {
+        "pe": 18.4019,
+        "forward_pe": 12.5272,
+        "peg": 0.4146,
+        "ev_ebitda": 2.721,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.029,
+        "gross_margin": 0.3981,
+        "fcf_margin": -0.0431,
+        "debt_equity": 25.014,
+        "free_cashflow": -44074250240.0,
+        "total_revenue": 1023670026240.0
+      },
+      "earnings": {
+        "next_date": "2026-05-13",
+        "days_away": -29,
+        "last_surprise_pct": -0.05,
+        "beat_streak": 0
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 3.21,
+        "short_float_pct": 1.65
+      },
+      "relative_strength_3m": -21.58,
       "eps_revision": "raising"
     },
     "ARM": {
-      "price": NaN,
+      "price": 307.43,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 61.1,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 104.55,
+        "trend": "uptrend",
+        "rsi": 52.1,
+        "macd": "bearish",
+        "sma_50": 234.67,
+        "sma_200": 160.04,
+        "key_support": 234.67,
         "key_resistance": 411.83,
-        "entry_quality": "fair",
-        "volume_ratio": 1.09,
-        "range_52w_pct": NaN
+        "entry_quality": "poor \u2014 extended",
+        "volume_ratio": 0.65,
+        "range_52w_pct": 66.0,
+        "atr_14": 32.24
       },
       "valuation": {
-        "pe": 386.7381,
-        "forward_pe": 106.1273,
-        "peg": 3.0105,
-        "ev_ebitda": 322.97,
+        "pe": 384.2875,
+        "forward_pe": 100.2119,
+        "peg": 2.8234,
+        "ev_ebitda": 305.485,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -1525,7 +1321,7 @@
       },
       "earnings": {
         "next_date": "2026-05-06",
-        "days_away": -35,
+        "days_away": -36,
         "last_surprise_pct": -0.0,
         "beat_streak": 3
       },
@@ -1534,28 +1330,117 @@
         "short_ratio": 1.58,
         "short_float_pct": 12.74
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": 159.5,
+      "eps_revision": "raising"
+    },
+    "AVGO": {
+      "price": 372.1,
+      "technicals": {
+        "trend": "mixed",
+        "rsi": 37.8,
+        "macd": "bearish",
+        "sma_50": 403.55,
+        "sma_200": 356.38,
+        "key_support": 356.38,
+        "key_resistance": 481.57,
+        "entry_quality": "good \u2014 near support",
+        "volume_ratio": 1.42,
+        "range_52w_pct": 53.4,
+        "atr_14": 23.15
+      },
+      "valuation": {
+        "pe": 61.7081,
+        "forward_pe": 19.2295,
+        "peg": 0.7127,
+        "ev_ebitda": 43.282,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.479,
+        "gross_margin": 0.7628,
+        "fcf_margin": 0.3606,
+        "debt_equity": 74.018,
+        "free_cashflow": 27212249088.0,
+        "total_revenue": 75464998912.0
+      },
+      "earnings": {
+        "next_date": "2026-06-03",
+        "days_away": -8,
+        "last_surprise_pct": 0.02,
+        "beat_streak": 4
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 3.01,
+        "short_float_pct": 1.25
+      },
+      "relative_strength_3m": 3.43,
+      "eps_revision": "raising"
+    },
+    "AMAT": {
+      "price": 497.01,
+      "technicals": {
+        "trend": "uptrend",
+        "rsi": 63.3,
+        "macd": "bullish_weakening",
+        "sma_50": 418.37,
+        "sma_200": 304.62,
+        "key_support": 418.37,
+        "key_resistance": 501.7,
+        "entry_quality": "poor \u2014 extended",
+        "volume_ratio": 1.4,
+        "range_52w_pct": 98.6,
+        "atr_14": 27.63
+      },
+      "valuation": {
+        "pe": 46.932,
+        "forward_pe": 30.566,
+        "peg": 1.6602,
+        "ev_ebitda": 42.44,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.114,
+        "gross_margin": 0.4896,
+        "fcf_margin": 0.1048,
+        "debt_equity": 30.399,
+        "free_cashflow": 3040375040.0,
+        "total_revenue": 29024000000.0
+      },
+      "earnings": {
+        "next_date": "2026-08-13",
+        "days_away": 63,
+        "last_surprise_pct": 0.05,
+        "beat_streak": 4
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 2.66,
+        "short_float_pct": 2.52
+      },
+      "relative_strength_3m": 39.99,
       "eps_revision": "raising"
     },
     "AAPL": {
-      "price": NaN,
+      "price": 291.58,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 53.4,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 194.87,
+        "trend": "uptrend",
+        "rsi": 43.8,
+        "macd": "bearish",
+        "sma_50": 283.81,
+        "sma_200": 265.8,
+        "key_support": 283.81,
         "key_resistance": 315.2,
-        "entry_quality": "fair",
-        "volume_ratio": 1.36,
-        "range_52w_pct": NaN
+        "entry_quality": "good \u2014 near support",
+        "volume_ratio": 0.95,
+        "range_52w_pct": 80.4,
+        "atr_14": 7.3
       },
       "valuation": {
-        "pe": 35.2182,
-        "forward_pe": 30.2342,
-        "peg": 2.4704,
-        "ev_ebitda": 26.777,
+        "pe": 35.215,
+        "forward_pe": 30.3944,
+        "peg": 2.3354,
+        "ev_ebitda": 26.871,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -1568,7 +1453,7 @@
       },
       "earnings": {
         "next_date": "2026-04-30",
-        "days_away": -41,
+        "days_away": -42,
         "last_surprise_pct": 0.1,
         "beat_streak": 4
       },
@@ -1577,242 +1462,204 @@
         "short_ratio": 3.12,
         "short_float_pct": 1.06
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": 6.56,
       "eps_revision": "raising"
     },
-    "BX": {
-      "price": NaN,
+    "ASML": {
+      "price": 1734.19,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 44.2,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 101.18,
-        "key_resistance": 183.17,
+        "trend": "uptrend",
+        "rsi": 60.5,
+        "macd": "bullish_weakening",
+        "sma_50": 1514.32,
+        "sma_200": 1230.61,
+        "key_support": 1514.32,
+        "key_resistance": 1777.77,
         "entry_quality": "fair",
-        "volume_ratio": 1.04,
-        "range_52w_pct": NaN
+        "volume_ratio": 1.48,
+        "range_52w_pct": 96.0,
+        "atr_14": 79.4
       },
       "valuation": {
-        "pe": 30.8436,
-        "forward_pe": 15.964,
-        "peg": 1.9371,
-        "ev_ebitda": null,
+        "pe": 59.5328,
+        "forward_pe": 36.2416,
+        "peg": 2.6271,
+        "ev_ebitda": 2922.237,
         "price_to_fcf": null
       },
       "fundamentals": {
-        "revenue_growth_yoy": 0.057,
-        "gross_margin": 1.0,
-        "fcf_margin": null,
-        "debt_equity": 72.022,
-        "free_cashflow": null,
-        "total_revenue": 14397440000.0
+        "revenue_growth_yoy": 0.132,
+        "gross_margin": 0.526,
+        "fcf_margin": 0.2447,
+        "debt_equity": 12.989,
+        "free_cashflow": 8243274752.0,
+        "total_revenue": 33692700672.0
       },
       "earnings": {
-        "next_date": "2026-04-23",
-        "days_away": -48,
-        "last_surprise_pct": 0.1,
-        "beat_streak": 4
+        "next_date": "2026-07-15",
+        "days_away": 34,
+        "last_surprise_pct": 0.12,
+        "beat_streak": 3
       },
       "insider_signal": "neutral",
       "short_interest": {
-        "short_ratio": 3.96,
-        "short_float_pct": 2.67
+        "short_ratio": 0.65,
+        "short_float_pct": 0.27
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": 21.04,
       "eps_revision": "raising"
     },
-    "CRM": {
-      "price": NaN,
+    "AMGN": {
+      "price": 337.73,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 48.8,
+        "trend": "mixed",
+        "rsi": 49.8,
         "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 164.96,
-        "key_resistance": 272.05,
-        "entry_quality": "fair",
-        "volume_ratio": 1.08,
-        "range_52w_pct": NaN
+        "sma_50": 338.59,
+        "sma_200": 325.89,
+        "key_support": 325.89,
+        "key_resistance": 385.25,
+        "entry_quality": "good \u2014 near support",
+        "volume_ratio": 1.11,
+        "range_52w_pct": 60.6,
+        "atr_14": 8.25
       },
       "valuation": {
-        "pe": 20.3187,
-        "forward_pe": 11.2833,
-        "peg": 0.9037,
-        "ev_ebitda": 13.519,
+        "pe": 23.9865,
+        "forward_pe": 14.3855,
+        "peg": 2.2774,
+        "ev_ebitda": 13.451,
         "price_to_fcf": null
       },
       "fundamentals": {
-        "revenue_growth_yoy": 0.133,
-        "gross_margin": 0.7764,
-        "fcf_margin": 0.3865,
-        "debt_equity": 124.282,
-        "free_cashflow": 16552999936.0,
-        "total_revenue": 42829000704.0
-      },
-      "earnings": {
-        "next_date": "2026-05-27",
-        "days_away": -14,
-        "last_surprise_pct": 0.05,
-        "beat_streak": 4
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 4.45,
-        "short_float_pct": 8.61
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    "COP": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 50.1,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 83.6,
-        "key_resistance": 132.81,
-        "entry_quality": "fair",
-        "volume_ratio": 0.59,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 19.7949,
-        "forward_pe": 12.7002,
-        "peg": 0.9933,
-        "ev_ebitda": 6.821,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": -0.053,
-        "gross_margin": 0.4559,
-        "fcf_margin": 0.0891,
-        "debt_equity": 36.143,
-        "free_cashflow": 5289124864.0,
-        "total_revenue": 59377999872.0
+        "revenue_growth_yoy": 0.058,
+        "gross_margin": 0.7144,
+        "fcf_margin": 0.1998,
+        "debt_equity": 623.754,
+        "free_cashflow": 7436624896.0,
+        "total_revenue": 37219999744.0
       },
       "earnings": {
         "next_date": "2026-04-30",
-        "days_away": -41,
-        "last_surprise_pct": 0.05,
-        "beat_streak": 3
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 2.94,
-        "short_float_pct": 1.83
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "lowering"
-    },
-    "BLK": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 39.4,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 917.73,
-        "key_resistance": 1183.47,
-        "entry_quality": "fair",
-        "volume_ratio": 0.78,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 25.4453,
-        "forward_pe": 16.6669,
-        "peg": 1.2635,
-        "ev_ebitda": 16.008,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.27,
-        "gross_margin": 0.4689,
-        "fcf_margin": 0.2762,
-        "debt_equity": 23.635,
-        "free_cashflow": 7082375168.0,
-        "total_revenue": 25638000640.0
-      },
-      "earnings": {
-        "next_date": "2026-04-14",
-        "days_away": -57,
-        "last_surprise_pct": 0.11,
+        "days_away": -42,
+        "last_surprise_pct": 0.14,
         "beat_streak": 4
       },
       "insider_signal": "neutral",
       "short_interest": {
-        "short_ratio": 3.36,
-        "short_float_pct": 1.32
+        "short_ratio": 4.38,
+        "short_float_pct": 2.2
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -15.03,
       "eps_revision": "raising"
     },
-    "C": {
-      "price": NaN,
+    "ABBV": {
+      "price": 224.95,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 62.3,
+        "trend": "uptrend",
+        "rsi": 63.4,
         "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 74.67,
-        "key_resistance": 135.15,
+        "sma_50": 210.06,
+        "sma_200": 217.53,
+        "key_support": 217.53,
+        "key_resistance": 238.71,
         "entry_quality": "fair",
-        "volume_ratio": 0.88,
-        "range_52w_pct": NaN
+        "volume_ratio": 0.71,
+        "range_52w_pct": 77.9,
+        "atr_14": 5.5
       },
       "valuation": {
-        "pe": 16.6745,
-        "forward_pe": 10.7532,
-        "peg": 0.7313,
-        "ev_ebitda": null,
+        "pe": 111.3614,
+        "forward_pe": 13.8383,
+        "peg": 0.6201,
+        "ev_ebitda": 15.41,
         "price_to_fcf": null
       },
       "fundamentals": {
-        "revenue_growth_yoy": 0.159,
-        "gross_margin": 0.0,
-        "fcf_margin": null,
+        "revenue_growth_yoy": 0.124,
+        "gross_margin": 0.7203,
+        "fcf_margin": 0.3313,
         "debt_equity": null,
-        "free_cashflow": null,
-        "total_revenue": 78734000128.0
+        "free_cashflow": 20811624448.0,
+        "total_revenue": 62819000320.0
       },
       "earnings": {
-        "next_date": "2026-07-14",
-        "days_away": 34,
-        "last_surprise_pct": 0.28,
+        "next_date": "2026-04-29",
+        "days_away": -43,
+        "last_surprise_pct": 0.02,
         "beat_streak": 3
       },
       "insider_signal": "neutral",
       "short_interest": {
-        "short_ratio": 0.06,
-        "short_float_pct": 0.04
+        "short_ratio": 3.88,
+        "short_float_pct": 1.46
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -6.91,
+      "eps_revision": "lowering"
+    },
+    "AMZN": {
+      "price": 238.0,
+      "technicals": {
+        "trend": "mixed",
+        "rsi": 32.5,
+        "macd": "bearish",
+        "sma_50": 253.55,
+        "sma_200": 232.39,
+        "key_support": 232.39,
+        "key_resistance": 274.99,
+        "entry_quality": "oversold \u2014 verify fundamentals",
+        "volume_ratio": 0.87,
+        "range_52w_pct": 51.5,
+        "atr_14": 7.3
+      },
+      "valuation": {
+        "pe": 30.829,
+        "forward_pe": 24.138,
+        "peg": 1.8344,
+        "ev_ebitda": 17.019,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.166,
+        "gross_margin": 0.506,
+        "fcf_margin": 0.0132,
+        "debt_equity": 53.3,
+        "free_cashflow": 9806624768.0,
+        "total_revenue": 742775980032.0
+      },
+      "earnings": {
+        "next_date": "2026-04-29",
+        "days_away": -43,
+        "last_surprise_pct": 0.26,
+        "beat_streak": 3
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 2.12,
+        "short_float_pct": 0.94
+      },
+      "relative_strength_3m": 6.03,
       "eps_revision": "raising"
     },
     "BAC": {
-      "price": NaN,
+      "price": 54.54,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 63.1,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 43.15,
+        "trend": "uptrend",
+        "rsi": 67.4,
+        "macd": "bullish",
+        "sma_50": 51.86,
+        "sma_200": 51.49,
+        "key_support": 51.86,
         "key_resistance": 56.63,
         "entry_quality": "fair",
-        "volume_ratio": 0.72,
-        "range_52w_pct": NaN
+        "volume_ratio": 0.82,
+        "range_52w_pct": 84.5,
+        "atr_14": 1.12
       },
       "valuation": {
-        "pe": 13.3056,
-        "forward_pe": 10.7774,
-        "peg": 0.9622,
+        "pe": 13.5,
+        "forward_pe": 10.8012,
+        "peg": 0.9728,
         "ev_ebitda": null,
         "price_to_fcf": null
       },
@@ -1826,7 +1673,7 @@
       },
       "earnings": {
         "next_date": "2026-07-14",
-        "days_away": 34,
+        "days_away": 33,
         "last_surprise_pct": 0.04,
         "beat_streak": 4
       },
@@ -1835,71 +1682,161 @@
         "short_ratio": 0.0,
         "short_float_pct": 0.0
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": 8.77,
       "eps_revision": "raising"
     },
-    "CVX": {
-      "price": NaN,
+    "BX": {
+      "price": 118.48,
       "technicals": {
         "trend": "downtrend",
-        "rsi": 52.8,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 137.43,
-        "key_resistance": 209.23,
-        "entry_quality": "fair",
-        "volume_ratio": 0.67,
-        "range_52w_pct": NaN
+        "rsi": 50.8,
+        "macd": "bullish",
+        "sma_50": 119.51,
+        "sma_200": 138.2,
+        "key_support": 101.18,
+        "key_resistance": 183.17,
+        "entry_quality": "poor \u2014 extended",
+        "volume_ratio": 0.74,
+        "range_52w_pct": 21.1,
+        "atr_14": 4.41
       },
       "valuation": {
-        "pe": 32.9965,
-        "forward_pe": 14.8615,
-        "peg": 0.8198,
-        "ev_ebitda": 10.95,
+        "pe": 30.3795,
+        "forward_pe": 15.7237,
+        "peg": 2.037,
+        "ev_ebitda": null,
         "price_to_fcf": null
       },
       "fundamentals": {
-        "revenue_growth_yoy": 0.023,
-        "gross_margin": 0.4242,
-        "fcf_margin": 0.0634,
-        "debt_equity": 23.989,
-        "free_cashflow": 11776499712.0,
-        "total_revenue": 185740001280.0
+        "revenue_growth_yoy": 0.057,
+        "gross_margin": 1.0,
+        "fcf_margin": null,
+        "debt_equity": 72.022,
+        "free_cashflow": null,
+        "total_revenue": 14397440000.0
       },
       "earnings": {
-        "next_date": "2026-05-01",
-        "days_away": -40,
-        "last_surprise_pct": 0.02,
+        "next_date": "2026-04-23",
+        "days_away": -49,
+        "last_surprise_pct": 0.1,
         "beat_streak": 4
       },
       "insider_signal": "neutral",
       "short_interest": {
-        "short_ratio": 2.24,
-        "short_float_pct": 1.16
+        "short_ratio": 3.96,
+        "short_float_pct": 2.67
       },
-      "relative_strength_3m": NaN,
-      "eps_revision": "lowering"
+      "relative_strength_3m": 9.54,
+      "eps_revision": "raising"
     },
-    "GILD": {
-      "price": NaN,
+    "BLK": {
+      "price": 1010.68,
       "technicals": {
         "trend": "downtrend",
-        "rsi": 39.9,
+        "rsi": 44.2,
         "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 103.92,
-        "key_resistance": 154.92,
+        "sma_50": 1033.31,
+        "sma_200": 1060.27,
+        "key_support": 917.73,
+        "key_resistance": 1183.47,
         "entry_quality": "fair",
-        "volume_ratio": 1.12,
-        "range_52w_pct": NaN
+        "volume_ratio": 0.75,
+        "range_52w_pct": 35.0,
+        "atr_14": 24.69
       },
       "valuation": {
-        "pe": 17.0748,
-        "forward_pe": 13.0929,
+        "pe": 25.4451,
+        "forward_pe": 16.6459,
+        "peg": 1.2843,
+        "ev_ebitda": 15.989,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.27,
+        "gross_margin": 0.4689,
+        "fcf_margin": 0.2762,
+        "debt_equity": 23.635,
+        "free_cashflow": 7082375168.0,
+        "total_revenue": 25638000640.0
+      },
+      "earnings": {
+        "next_date": "2026-04-14",
+        "days_away": -58,
+        "last_surprise_pct": 0.11,
+        "beat_streak": 4
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 3.36,
+        "short_float_pct": 1.32
+      },
+      "relative_strength_3m": 2.58,
+      "eps_revision": "raising"
+    },
+    "C": {
+      "price": 133.38,
+      "technicals": {
+        "trend": "uptrend",
+        "rsi": 61.0,
+        "macd": "bullish_weakening",
+        "sma_50": 126.37,
+        "sma_200": 111.06,
+        "key_support": 126.37,
+        "key_resistance": 135.15,
+        "entry_quality": "fair",
+        "volume_ratio": 1.31,
+        "range_52w_pct": 97.1,
+        "atr_14": 3.59
+      },
+      "valuation": {
+        "pe": 16.5074,
+        "forward_pe": 10.6454,
+        "peg": 0.7438,
+        "ev_ebitda": null,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.159,
+        "gross_margin": 0.0,
+        "fcf_margin": null,
+        "debt_equity": null,
+        "free_cashflow": null,
+        "total_revenue": 78734000128.0
+      },
+      "earnings": {
+        "next_date": "2026-07-14",
+        "days_away": 33,
+        "last_surprise_pct": 0.28,
+        "beat_streak": 3
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 0.06,
+        "short_float_pct": 0.04
+      },
+      "relative_strength_3m": 19.47,
+      "eps_revision": "raising"
+    },
+    "GILD": {
+      "price": 121.48,
+      "technicals": {
+        "trend": "downtrend",
+        "rsi": 29.3,
+        "macd": "bearish",
+        "sma_50": 133.53,
+        "sma_200": 128.2,
+        "key_support": 103.92,
+        "key_resistance": 154.92,
+        "entry_quality": "excellent \u2014 oversold",
+        "volume_ratio": 1.3,
+        "range_52w_pct": 34.4,
+        "atr_14": 3.49
+      },
+      "valuation": {
+        "pe": 17.0618,
+        "forward_pe": 12.6645,
         "peg": 2.1441,
-        "ev_ebitda": 11.405,
+        "ev_ebitda": 11.067,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -1912,7 +1849,7 @@
       },
       "earnings": {
         "next_date": "2026-05-07",
-        "days_away": -34,
+        "days_away": -35,
         "last_surprise_pct": 0.03,
         "beat_streak": 4
       },
@@ -1921,71 +1858,73 @@
         "short_ratio": 3.92,
         "short_float_pct": 2.07
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -23.42,
       "eps_revision": "raising"
     },
-    "DIS": {
-      "price": NaN,
+    "CVX": {
+      "price": 189.8,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 38.8,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 92.42,
-        "key_resistance": 123.18,
-        "entry_quality": "fair",
-        "volume_ratio": 0.96,
-        "range_52w_pct": NaN
+        "trend": "uptrend",
+        "rsi": 53.5,
+        "macd": "bullish",
+        "sma_50": 188.07,
+        "sma_200": 168.32,
+        "key_support": 188.07,
+        "key_resistance": 209.23,
+        "entry_quality": "good \u2014 near support",
+        "volume_ratio": 0.78,
+        "range_52w_pct": 72.9,
+        "atr_14": 4.31
       },
       "valuation": {
-        "pe": 15.8169,
-        "forward_pe": 13.2598,
-        "peg": 2.3308,
-        "ev_ebitda": 11.195,
+        "pe": 33.1239,
+        "forward_pe": 15.1034,
+        "peg": 0.7528,
+        "ev_ebitda": 11.108,
         "price_to_fcf": null
       },
       "fundamentals": {
-        "revenue_growth_yoy": 0.065,
-        "gross_margin": 0.3716,
-        "fcf_margin": 0.0386,
-        "debt_equity": 41.069,
-        "free_cashflow": 3751375104.0,
-        "total_revenue": 97263001600.0
+        "revenue_growth_yoy": 0.023,
+        "gross_margin": 0.4242,
+        "fcf_margin": 0.0634,
+        "debt_equity": 23.989,
+        "free_cashflow": 11776499712.0,
+        "total_revenue": 185740001280.0
       },
       "earnings": {
-        "next_date": "2026-05-06",
-        "days_away": -35,
-        "last_surprise_pct": 0.11,
+        "next_date": "2026-05-01",
+        "days_away": -41,
+        "last_surprise_pct": 0.02,
         "beat_streak": 4
       },
       "insider_signal": "neutral",
       "short_interest": {
-        "short_ratio": 2.88,
-        "short_float_pct": 1.53
+        "short_ratio": 2.24,
+        "short_float_pct": 1.16
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -10.31,
       "eps_revision": "lowering"
     },
     "FCX": {
-      "price": NaN,
+      "price": 62.08,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 48.9,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 35.05,
+        "trend": "mixed",
+        "rsi": 45.4,
+        "macd": "bearish",
+        "sma_50": 63.7,
+        "sma_200": 53.42,
+        "key_support": 53.42,
         "key_resistance": 71.72,
-        "entry_quality": "fair",
-        "volume_ratio": 0.98,
-        "range_52w_pct": NaN
+        "entry_quality": "poor \u2014 extended",
+        "volume_ratio": 0.87,
+        "range_52w_pct": 73.7,
+        "atr_14": 3.2
       },
       "valuation": {
-        "pe": 33.9947,
-        "forward_pe": 16.7243,
-        "peg": 4.2673,
-        "ev_ebitda": 11.35,
+        "pe": 32.8466,
+        "forward_pe": 16.1595,
+        "peg": 4.3266,
+        "ev_ebitda": 11.031,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -1998,7 +1937,7 @@
       },
       "earnings": {
         "next_date": "2026-04-23",
-        "days_away": -48,
+        "days_away": -49,
         "last_surprise_pct": 0.22,
         "beat_streak": 4
       },
@@ -2007,28 +1946,161 @@
         "short_ratio": 2.14,
         "short_float_pct": 1.98
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -2.47,
+      "eps_revision": "raising"
+    },
+    "COP": {
+      "price": 119.92,
+      "technicals": {
+        "trend": "mixed",
+        "rsi": 52.3,
+        "macd": "bullish",
+        "sma_50": 120.66,
+        "sma_200": 103.34,
+        "key_support": 103.34,
+        "key_resistance": 132.81,
+        "entry_quality": "poor \u2014 extended",
+        "volume_ratio": 1.2,
+        "range_52w_pct": 73.8,
+        "atr_14": 3.24
+      },
+      "valuation": {
+        "pe": 19.7888,
+        "forward_pe": 13.0406,
+        "peg": 0.9903,
+        "ev_ebitda": 6.984,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": -0.053,
+        "gross_margin": 0.4559,
+        "fcf_margin": 0.0891,
+        "debt_equity": 36.143,
+        "free_cashflow": 5289124864.0,
+        "total_revenue": 59377999872.0
+      },
+      "earnings": {
+        "next_date": "2026-04-30",
+        "days_away": -42,
+        "last_surprise_pct": 0.05,
+        "beat_streak": 3
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 2.94,
+        "short_float_pct": 1.83
+      },
+      "relative_strength_3m": -7.09,
+      "eps_revision": "lowering"
+    },
+    "DIS": {
+      "price": 98.61,
+      "technicals": {
+        "trend": "downtrend",
+        "rsi": 38.7,
+        "macd": "bearish_weakening",
+        "sma_50": 102.2,
+        "sma_200": 107.34,
+        "key_support": 92.42,
+        "key_resistance": 123.18,
+        "entry_quality": "fair",
+        "volume_ratio": 0.77,
+        "range_52w_pct": 20.1,
+        "atr_14": 2.1
+      },
+      "valuation": {
+        "pe": 15.7776,
+        "forward_pe": 13.1637,
+        "peg": 2.3064,
+        "ev_ebitda": 11.132,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.065,
+        "gross_margin": 0.3716,
+        "fcf_margin": 0.0386,
+        "debt_equity": 41.069,
+        "free_cashflow": 3751375104.0,
+        "total_revenue": 97263001600.0
+      },
+      "earnings": {
+        "next_date": "2026-05-06",
+        "days_away": -36,
+        "last_surprise_pct": 0.11,
+        "beat_streak": 4
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 2.88,
+        "short_float_pct": 1.53
+      },
+      "relative_strength_3m": -8.38,
+      "eps_revision": "lowering"
+    },
+    "CRM": {
+      "price": 170.92,
+      "technicals": {
+        "trend": "downtrend",
+        "rsi": 41.4,
+        "macd": "bearish",
+        "sma_50": 180.83,
+        "sma_200": 218.43,
+        "key_support": 164.96,
+        "key_resistance": 272.05,
+        "entry_quality": "good \u2014 near support",
+        "volume_ratio": 0.75,
+        "range_52w_pct": 5.6,
+        "atr_14": 9.05
+      },
+      "valuation": {
+        "pe": 19.8053,
+        "forward_pe": 10.9983,
+        "peg": 0.8366,
+        "ev_ebitda": 13.237,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.133,
+        "gross_margin": 0.7764,
+        "fcf_margin": 0.3865,
+        "debt_equity": 124.282,
+        "free_cashflow": 16552999936.0,
+        "total_revenue": 42829000704.0
+      },
+      "earnings": {
+        "next_date": "2026-05-27",
+        "days_away": -15,
+        "last_surprise_pct": 0.05,
+        "beat_streak": 4
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 4.45,
+        "short_float_pct": 8.61
+      },
+      "relative_strength_3m": -21.57,
       "eps_revision": "raising"
     },
     "GOOGL": {
-      "price": NaN,
+      "price": 356.38,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 43.5,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 164.72,
+        "trend": "mixed",
+        "rsi": 39.7,
+        "macd": "bearish",
+        "sma_50": 359.4,
+        "sma_200": 306.05,
+        "key_support": 306.05,
         "key_resistance": 402.38,
-        "entry_quality": "fair",
-        "volume_ratio": 0.92,
-        "range_52w_pct": NaN
+        "entry_quality": "poor \u2014 extended",
+        "volume_ratio": 0.99,
+        "range_52w_pct": 80.6,
+        "atr_14": 10.44
       },
       "valuation": {
-        "pe": 27.7849,
-        "forward_pe": 25.1811,
-        "peg": 1.451,
-        "ev_ebitda": 27.167,
+        "pe": 27.7771,
+        "forward_pe": 24.6364,
+        "peg": 1.4342,
+        "ev_ebitda": 26.575,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -2041,7 +2113,7 @@
       },
       "earnings": {
         "next_date": "2026-04-29",
-        "days_away": -42,
+        "days_away": -43,
         "last_surprise_pct": 0.06,
         "beat_streak": 4
       },
@@ -2050,113 +2122,28 @@
         "short_ratio": 2.79,
         "short_float_pct": 1.42
       },
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    "HD": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 45.7,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 295.3,
-        "key_resistance": 414.79,
-        "entry_quality": "fair",
-        "volume_ratio": 0.93,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 22.838,
-        "forward_pe": 19.9496,
-        "peg": 1.7522,
-        "ev_ebitda": 15.334,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.048,
-        "gross_margin": 0.3313,
-        "fcf_margin": 0.0608,
-        "debt_equity": 459.356,
-        "free_cashflow": 10128249856.0,
-        "total_revenue": 166592004096.0
-      },
-      "earnings": {
-        "next_date": "2026-08-18",
-        "days_away": 69,
-        "last_surprise_pct": -0.0,
-        "beat_streak": 2
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 2.2,
-        "short_float_pct": 1.34
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "stable"
-    },
-    "IBM": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 57.4,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 214.64,
-        "key_resistance": 329.23,
-        "entry_quality": "fair",
-        "volume_ratio": 0.89,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 24.5784,
-        "forward_pe": 20.6732,
-        "peg": 2.6599,
-        "ev_ebitda": 19.199,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.095,
-        "gross_margin": 0.5836,
-        "fcf_margin": 0.1898,
-        "debt_equity": 211.169,
-        "free_cashflow": 13080750080.0,
-        "total_revenue": 68910997504.0
-      },
-      "earnings": {
-        "next_date": "2026-07-22",
-        "days_away": 42,
-        "last_surprise_pct": 0.05,
-        "beat_streak": 4
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 3.41,
-        "short_float_pct": 3.61
-      },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": 9.92,
       "eps_revision": "raising"
     },
     "GS": {
-      "price": NaN,
+      "price": 1001.29,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 61.6,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 601.43,
+        "trend": "uptrend",
+        "rsi": 51.8,
+        "macd": "bearish",
+        "sma_50": 945.32,
+        "sma_200": 858.82,
+        "key_support": 945.32,
         "key_resistance": 1092.61,
         "entry_quality": "fair",
-        "volume_ratio": 1.08,
-        "range_52w_pct": NaN
+        "volume_ratio": 1.07,
+        "range_52w_pct": 81.4,
+        "atr_14": 33.23
       },
       "valuation": {
-        "pe": 18.8323,
-        "forward_pe": 15.7828,
-        "peg": 1.6045,
+        "pe": 18.8319,
+        "forward_pe": 15.313,
+        "peg": 1.5942,
         "ev_ebitda": null,
         "price_to_fcf": null
       },
@@ -2170,7 +2157,7 @@
       },
       "earnings": {
         "next_date": "2026-07-14",
-        "days_away": 34,
+        "days_away": 33,
         "last_surprise_pct": 0.13,
         "beat_streak": 4
       },
@@ -2179,71 +2166,117 @@
         "short_ratio": 3.84,
         "short_float_pct": 2.62
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": 20.15,
       "eps_revision": "raising"
     },
-    "INTC": {
-      "price": NaN,
+    "IBM": {
+      "price": 272.36,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 53.0,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 19.31,
-        "key_resistance": 129.44,
-        "entry_quality": "fair",
-        "volume_ratio": 1.03,
-        "range_52w_pct": NaN
+        "trend": "uptrend",
+        "rsi": 53.4,
+        "macd": "bearish",
+        "sma_50": 246.98,
+        "sma_200": 269.62,
+        "key_support": 269.62,
+        "key_resistance": 329.23,
+        "entry_quality": "good \u2014 near support",
+        "volume_ratio": 0.52,
+        "range_52w_pct": 50.4,
+        "atr_14": 13.46
       },
       "valuation": {
-        "pe": null,
-        "forward_pe": 70.103,
-        "peg": 1.36,
-        "ev_ebitda": 40.091,
+        "pe": 24.124,
+        "forward_pe": 20.2911,
+        "peg": 2.5913,
+        "ev_ebitda": 18.908,
         "price_to_fcf": null
       },
       "fundamentals": {
-        "revenue_growth_yoy": 0.072,
-        "gross_margin": 0.372,
-        "fcf_margin": -0.1544,
-        "debt_equity": 36.028,
-        "free_cashflow": -8301250048.0,
-        "total_revenue": 53762998272.0
+        "revenue_growth_yoy": 0.095,
+        "gross_margin": 0.5836,
+        "fcf_margin": 0.1898,
+        "debt_equity": 211.169,
+        "free_cashflow": 13080750080.0,
+        "total_revenue": 68910997504.0
       },
       "earnings": {
-        "next_date": "2026-04-23",
-        "days_away": -48,
-        "last_surprise_pct": -12.81,
-        "beat_streak": 3
+        "next_date": "2026-07-22",
+        "days_away": 41,
+        "last_surprise_pct": 0.05,
+        "beat_streak": 4
       },
       "insider_signal": "neutral",
       "short_interest": {
-        "short_ratio": 0.92,
-        "short_float_pct": 2.69
+        "short_ratio": 3.41,
+        "short_float_pct": 3.61
       },
-      "relative_strength_3m": NaN,
-      "eps_revision": null
+      "relative_strength_3m": 3.22,
+      "eps_revision": "raising"
     },
-    "KMI": {
-      "price": NaN,
+    "HD": {
+      "price": 318.92,
       "technicals": {
         "trend": "downtrend",
-        "rsi": 41.4,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 25.09,
-        "key_resistance": 34.31,
+        "rsi": 54.5,
+        "macd": "bullish",
+        "sma_50": 320.33,
+        "sma_200": 355.72,
+        "key_support": 295.3,
+        "key_resistance": 414.79,
         "entry_quality": "fair",
-        "volume_ratio": 1.0,
-        "range_52w_pct": NaN
+        "volume_ratio": 0.92,
+        "range_52w_pct": 19.8,
+        "atr_14": 7.96
       },
       "valuation": {
-        "pe": 21.0336,
-        "forward_pe": 20.8726,
-        "peg": 3.7319,
-        "ev_ebitda": 13.865,
+        "pe": 22.6667,
+        "forward_pe": 19.8,
+        "peg": 1.8116,
+        "ev_ebitda": 15.238,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.048,
+        "gross_margin": 0.3313,
+        "fcf_margin": 0.0608,
+        "debt_equity": 459.356,
+        "free_cashflow": 10128249856.0,
+        "total_revenue": 166592004096.0
+      },
+      "earnings": {
+        "next_date": "2026-08-18",
+        "days_away": 68,
+        "last_surprise_pct": -0.0,
+        "beat_streak": 2
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 2.2,
+        "short_float_pct": 1.34
+      },
+      "relative_strength_3m": -12.75,
+      "eps_revision": "stable"
+    },
+    "KMI": {
+      "price": 31.84,
+      "technicals": {
+        "trend": "mixed",
+        "rsi": 47.7,
+        "macd": "bearish_weakening",
+        "sma_50": 32.16,
+        "sma_200": 29.18,
+        "key_support": 29.18,
+        "key_resistance": 34.31,
+        "entry_quality": "fair",
+        "volume_ratio": 0.68,
+        "range_52w_pct": 73.2,
+        "atr_14": 0.66
+      },
+      "valuation": {
+        "pe": 21.0861,
+        "forward_pe": 21.2056,
+        "peg": 3.7379,
+        "ev_ebitda": 14.015,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -2256,7 +2289,7 @@
       },
       "earnings": {
         "next_date": "2026-04-22",
-        "days_away": -49,
+        "days_away": -50,
         "last_surprise_pct": 0.01,
         "beat_streak": 3
       },
@@ -2265,70 +2298,72 @@
         "short_ratio": 4.2,
         "short_float_pct": 2.31
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -11.23,
       "eps_revision": "raising"
     },
-    "JNJ": {
-      "price": NaN,
+    "INTC": {
+      "price": 107.04,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 56.7,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 146.14,
-        "key_resistance": 247.14,
-        "entry_quality": "fair",
-        "volume_ratio": 1.08,
-        "range_52w_pct": NaN
+        "trend": "uptrend",
+        "rsi": 50.4,
+        "macd": "bearish_weakening",
+        "sma_50": 92.7,
+        "sma_200": 52.54,
+        "key_support": 92.7,
+        "key_resistance": 129.44,
+        "entry_quality": "poor \u2014 extended",
+        "volume_ratio": 0.86,
+        "range_52w_pct": 79.7,
+        "atr_14": 9.03
       },
       "valuation": {
-        "pe": 27.4623,
-        "forward_pe": 18.636,
-        "peg": 3.0253,
-        "ev_ebitda": 17.58,
+        "pe": null,
+        "forward_pe": 69.6005,
+        "peg": 1.36,
+        "ev_ebitda": 39.778,
         "price_to_fcf": null
       },
       "fundamentals": {
-        "revenue_growth_yoy": 0.099,
-        "gross_margin": 0.6804,
-        "fcf_margin": 0.1298,
-        "debt_equity": 67.73,
-        "free_cashflow": 12511375360.0,
-        "total_revenue": 96361996288.0
+        "revenue_growth_yoy": 0.072,
+        "gross_margin": 0.372,
+        "fcf_margin": -0.1544,
+        "debt_equity": 36.028,
+        "free_cashflow": -8301250048.0,
+        "total_revenue": 53762998272.0
       },
       "earnings": {
-        "next_date": "2026-07-15",
-        "days_away": 35,
-        "last_surprise_pct": 0.03,
+        "next_date": "2026-04-23",
+        "days_away": -49,
+        "last_surprise_pct": -12.81,
         "beat_streak": 3
       },
       "insider_signal": "neutral",
       "short_interest": {
-        "short_ratio": 3.06,
-        "short_float_pct": 1.08
+        "short_ratio": 0.92,
+        "short_float_pct": 2.69
       },
-      "relative_strength_3m": NaN,
-      "eps_revision": "lowering"
+      "relative_strength_3m": 129.0,
+      "eps_revision": null
     },
     "JPM": {
-      "price": NaN,
+      "price": 309.14,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 58.1,
+        "trend": "uptrend",
+        "rsi": 54.9,
         "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 259.9,
+        "sma_50": 305.61,
+        "sma_200": 304.32,
+        "key_support": 305.61,
         "key_resistance": 332.91,
-        "entry_quality": "fair",
-        "volume_ratio": 0.72,
-        "range_52w_pct": NaN
+        "entry_quality": "good \u2014 near support",
+        "volume_ratio": 0.86,
+        "range_52w_pct": 67.4,
+        "atr_14": 6.31
       },
       "valuation": {
-        "pe": 14.9689,
-        "forward_pe": 13.2772,
-        "peg": 1.6582,
+        "pe": 14.7985,
+        "forward_pe": 13.126,
+        "peg": 1.6599,
         "ev_ebitda": null,
         "price_to_fcf": null
       },
@@ -2342,7 +2377,7 @@
       },
       "earnings": {
         "next_date": "2026-07-14",
-        "days_away": 34,
+        "days_away": 33,
         "last_surprise_pct": 0.11,
         "beat_streak": 3
       },
@@ -2351,28 +2386,73 @@
         "short_ratio": 3.36,
         "short_float_pct": 1.07
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": 2.29,
       "eps_revision": "raising"
     },
-    "LLY": {
-      "price": NaN,
+    "JNJ": {
+      "price": 238.49,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 70.5,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 621.26,
-        "key_resistance": 1149.15,
-        "entry_quality": "poor \u2014 overbought",
-        "volume_ratio": 1.06,
-        "range_52w_pct": NaN
+        "trend": "uptrend",
+        "rsi": 64.6,
+        "macd": "bullish",
+        "sma_50": 230.15,
+        "sma_200": 211.79,
+        "key_support": 230.15,
+        "key_resistance": 247.14,
+        "entry_quality": "fair",
+        "volume_ratio": 0.92,
+        "range_52w_pct": 91.4,
+        "atr_14": 4.53
       },
       "valuation": {
-        "pe": 40.6636,
-        "forward_pe": 25.7279,
-        "peg": 1.5167,
-        "ev_ebitda": 29.238,
+        "pe": 27.4758,
+        "forward_pe": 18.7531,
+        "peg": 3.0803,
+        "ev_ebitda": 17.685,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.099,
+        "gross_margin": 0.6804,
+        "fcf_margin": 0.1298,
+        "debt_equity": 67.73,
+        "free_cashflow": 12511375360.0,
+        "total_revenue": 96361996288.0
+      },
+      "earnings": {
+        "next_date": "2026-07-15",
+        "days_away": 34,
+        "last_surprise_pct": 0.03,
+        "beat_streak": 3
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 3.06,
+        "short_float_pct": 1.08
+      },
+      "relative_strength_3m": -8.45,
+      "eps_revision": "lowering"
+    },
+    "LLY": {
+      "price": 1136.37,
+      "technicals": {
+        "trend": "uptrend",
+        "rsi": 67.0,
+        "macd": "bullish_weakening",
+        "sma_50": 987.36,
+        "sma_200": 951.39,
+        "key_support": 987.36,
+        "key_resistance": 1149.15,
+        "entry_quality": "poor \u2014 extended",
+        "volume_ratio": 0.76,
+        "range_52w_pct": 97.6,
+        "atr_14": 36.58
+      },
+      "valuation": {
+        "pe": 40.6572,
+        "forward_pe": 25.5412,
+        "peg": 1.5345,
+        "ev_ebitda": 29.033,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -2385,7 +2465,7 @@
       },
       "earnings": {
         "next_date": "2026-08-05",
-        "days_away": 56,
+        "days_away": 55,
         "last_surprise_pct": 0.13,
         "beat_streak": 4
       },
@@ -2394,28 +2474,29 @@
         "short_ratio": 2.75,
         "short_float_pct": 1.1
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": 8.93,
       "eps_revision": "raising"
     },
     "MA": {
-      "price": NaN,
+      "price": 489.08,
       "technicals": {
         "trend": "downtrend",
-        "rsi": 44.8,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
+        "rsi": 47.3,
+        "macd": "bullish",
+        "sma_50": 499.6,
+        "sma_200": 536.57,
         "key_support": 471.55,
         "key_resistance": 596.25,
-        "entry_quality": "fair",
-        "volume_ratio": 0.84,
-        "range_52w_pct": NaN
+        "entry_quality": "good \u2014 near support",
+        "volume_ratio": 0.83,
+        "range_52w_pct": 14.1,
+        "atr_14": 11.54
       },
       "valuation": {
-        "pe": 28.0908,
-        "forward_pe": 21.7497,
-        "peg": 1.5238,
-        "ev_ebitda": 20.973,
+        "pe": 28.3032,
+        "forward_pe": 21.4749,
+        "peg": 1.5048,
+        "ev_ebitda": 20.718,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -2428,7 +2509,7 @@
       },
       "earnings": {
         "next_date": "2026-04-30",
-        "days_away": -41,
+        "days_away": -42,
         "last_surprise_pct": 0.03,
         "beat_streak": 4
       },
@@ -2437,28 +2518,29 @@
         "short_ratio": 1.68,
         "short_float_pct": 0.74
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -9.04,
       "eps_revision": "raising"
     },
     "MELI": {
-      "price": NaN,
+      "price": 1588.29,
       "technicals": {
         "trend": "downtrend",
-        "rsi": 41.7,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
+        "rsi": 40.3,
+        "macd": "bearish",
+        "sma_50": 1726.3,
+        "sma_200": 1997.8,
         "key_support": 1546.81,
         "key_resistance": 2613.63,
-        "entry_quality": "fair",
-        "volume_ratio": 0.76,
-        "range_52w_pct": NaN
+        "entry_quality": "good \u2014 near support",
+        "volume_ratio": 0.6,
+        "range_52w_pct": 3.9,
+        "atr_14": 59.78
       },
       "valuation": {
-        "pe": 43.291,
-        "forward_pe": 27.6893,
-        "peg": 0.991,
-        "ev_ebitda": 22.815,
+        "pe": 41.8963,
+        "forward_pe": 26.7973,
+        "peg": 1.0116,
+        "ev_ebitda": 22.135,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -2471,7 +2553,7 @@
       },
       "earnings": {
         "next_date": "2026-05-07",
-        "days_away": -34,
+        "days_away": -35,
         "last_surprise_pct": -0.13,
         "beat_streak": 1
       },
@@ -2480,71 +2562,29 @@
         "short_ratio": 1.52,
         "short_float_pct": 2.18
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -13.01,
       "eps_revision": "lowering"
     },
-    "MSFT": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 45.5,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 356.0,
-        "key_resistance": 538.66,
-        "entry_quality": "fair",
-        "volume_ratio": 0.93,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 24.0125,
-        "forward_pe": 20.8563,
-        "peg": 1.2845,
-        "ev_ebitda": 16.502,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.183,
-        "gross_margin": 0.6831,
-        "fcf_margin": 0.1163,
-        "debt_equity": 30.271,
-        "free_cashflow": 37011251200.0,
-        "total_revenue": 318272995328.0
-      },
-      "earnings": {
-        "next_date": "2026-04-29",
-        "days_away": -42,
-        "last_surprise_pct": 0.08,
-        "beat_streak": 4
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 2.42,
-        "short_float_pct": 1.19
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
     "META": {
-      "price": NaN,
+      "price": 570.98,
       "technicals": {
         "trend": "downtrend",
-        "rsi": 39.5,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
+        "rsi": 35.7,
+        "macd": "bearish",
+        "sma_50": 622.15,
+        "sma_200": 659.27,
         "key_support": 525.72,
         "key_resistance": 788.15,
         "entry_quality": "fair",
         "volume_ratio": 0.92,
-        "range_52w_pct": NaN
+        "range_52w_pct": 17.2,
+        "atr_14": 19.11
       },
       "valuation": {
-        "pe": 21.2733,
-        "forward_pe": 16.1658,
-        "peg": 0.8458,
-        "ev_ebitda": 13.627,
+        "pe": 21.2735,
+        "forward_pe": 15.7895,
+        "peg": 0.8446,
+        "ev_ebitda": 13.311,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -2557,7 +2597,7 @@
       },
       "earnings": {
         "next_date": "2026-04-29",
-        "days_away": -42,
+        "days_away": -43,
         "last_surprise_pct": 0.21,
         "beat_streak": 3
       },
@@ -2566,113 +2606,28 @@
         "short_ratio": 1.91,
         "short_float_pct": 1.47
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -18.01,
       "eps_revision": "raising"
-    },
-    "NFLX": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 32.8,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 75.86,
-        "key_resistance": 133.91,
-        "entry_quality": "excellent \u2014 oversold",
-        "volume_ratio": 0.99,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 26.2613,
-        "forward_pe": 21.1922,
-        "peg": 1.6142,
-        "ev_ebitda": 24.314,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.162,
-        "gross_margin": 0.4903,
-        "fcf_margin": 0.5544,
-        "debt_equity": 53.788,
-        "free_cashflow": 25993676800.0,
-        "total_revenue": 46889992192.0
-      },
-      "earnings": {
-        "next_date": "2026-04-16",
-        "days_away": -55,
-        "last_surprise_pct": 0.02,
-        "beat_streak": 2
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 3.06,
-        "short_float_pct": 2.43
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    "MRK": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 56.6,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 76.14,
-        "key_resistance": 123.18,
-        "entry_quality": "fair",
-        "volume_ratio": 0.99,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 33.6901,
-        "forward_pe": 12.5053,
-        "peg": 5.6168,
-        "ev_ebitda": 11.48,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.049,
-        "gross_margin": 0.7673,
-        "fcf_margin": 0.2136,
-        "debt_equity": 106.936,
-        "free_cashflow": 14049250304.0,
-        "total_revenue": 65768001536.0
-      },
-      "earnings": {
-        "next_date": "2026-08-04",
-        "days_away": 55,
-        "last_surprise_pct": 0.05,
-        "beat_streak": 4
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 3.28,
-        "short_float_pct": 1.24
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": null
     },
     "MS": {
-      "price": NaN,
+      "price": 206.66,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 64.8,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 126.44,
+        "trend": "uptrend",
+        "rsi": 56.4,
+        "macd": "bearish",
+        "sma_50": 191.63,
+        "sma_200": 171.96,
+        "key_support": 191.63,
         "key_resistance": 218.27,
         "entry_quality": "fair",
-        "volume_ratio": 1.1,
-        "range_52w_pct": NaN
+        "volume_ratio": 0.94,
+        "range_52w_pct": 87.4,
+        "atr_14": 5.43
       },
       "valuation": {
-        "pe": 19.236,
-        "forward_pe": 16.5555,
-        "peg": 2.548,
+        "pe": 18.7192,
+        "forward_pe": 16.2728,
+        "peg": 2.5278,
         "ev_ebitda": null,
         "price_to_fcf": null
       },
@@ -2686,7 +2641,7 @@
       },
       "earnings": {
         "next_date": "2026-07-15",
-        "days_away": 35,
+        "days_away": 34,
         "last_surprise_pct": 0.09,
         "beat_streak": 4
       },
@@ -2695,71 +2650,117 @@
         "short_ratio": 0.0,
         "short_float_pct": 0.0
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": 27.04,
       "eps_revision": "raising"
     },
-    "NOW": {
-      "price": NaN,
+    "MRK": {
+      "price": 119.09,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 55.7,
+        "trend": "uptrend",
+        "rsi": 55.4,
         "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 83.0,
-        "key_resistance": 208.94,
+        "sma_50": 116.21,
+        "sma_200": 103.58,
+        "key_support": 116.21,
+        "key_resistance": 123.18,
         "entry_quality": "fair",
-        "volume_ratio": 1.02,
-        "range_52w_pct": NaN
+        "volume_ratio": 1.04,
+        "range_52w_pct": 91.3,
+        "atr_14": 3.13
       },
       "valuation": {
-        "pe": 63.6726,
-        "forward_pe": 21.2804,
-        "peg": 1.0378,
-        "ev_ebitda": 37.247,
+        "pe": 33.5465,
+        "forward_pe": 12.452,
+        "peg": 5.5615,
+        "ev_ebitda": 11.437,
         "price_to_fcf": null
       },
       "fundamentals": {
-        "revenue_growth_yoy": 0.221,
-        "gross_margin": 0.7656,
-        "fcf_margin": 0.3659,
-        "debt_equity": 20.728,
-        "free_cashflow": 5108125184.0,
-        "total_revenue": 13959999488.0
+        "revenue_growth_yoy": 0.049,
+        "gross_margin": 0.7673,
+        "fcf_margin": 0.2136,
+        "debt_equity": 106.936,
+        "free_cashflow": 14049250304.0,
+        "total_revenue": 65768001536.0
       },
       "earnings": {
-        "next_date": "2026-04-22",
-        "days_away": -49,
-        "last_surprise_pct": 0.15,
+        "next_date": "2026-08-04",
+        "days_away": 54,
+        "last_surprise_pct": 0.05,
         "beat_streak": 4
       },
       "insider_signal": "neutral",
       "short_interest": {
-        "short_ratio": 2.05,
-        "short_float_pct": 5.93
+        "short_ratio": 3.28,
+        "short_float_pct": 1.24
       },
-      "relative_strength_3m": NaN,
-      "eps_revision": "stable"
+      "relative_strength_3m": -4.05,
+      "eps_revision": null
     },
-    "NEM": {
-      "price": NaN,
+    "NFLX": {
+      "price": 82.0,
       "technicals": {
         "trend": "downtrend",
-        "rsi": 35.8,
+        "rsi": 33.0,
         "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 52.01,
-        "key_resistance": 131.38,
-        "entry_quality": "fair",
-        "volume_ratio": 1.14,
-        "range_52w_pct": NaN
+        "sma_50": 91.45,
+        "sma_200": 99.62,
+        "key_support": 75.86,
+        "key_resistance": 133.91,
+        "entry_quality": "excellent \u2014 oversold",
+        "volume_ratio": 0.99,
+        "range_52w_pct": 10.6,
+        "atr_14": 2.12
       },
       "valuation": {
-        "pe": 12.8307,
-        "forward_pe": 8.6476,
+        "pe": 26.2821,
+        "forward_pe": 21.3458,
+        "peg": 1.5991,
+        "ev_ebitda": 24.488,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.162,
+        "gross_margin": 0.4903,
+        "fcf_margin": 0.5544,
+        "debt_equity": 53.788,
+        "free_cashflow": 25993676800.0,
+        "total_revenue": 46889992192.0
+      },
+      "earnings": {
+        "next_date": "2026-04-16",
+        "days_away": -56,
+        "last_surprise_pct": 0.02,
+        "beat_streak": 2
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 3.06,
+        "short_float_pct": 2.43
+      },
+      "relative_strength_3m": -20.61,
+      "eps_revision": "raising"
+    },
+    "NEM": {
+      "price": 92.77,
+      "technicals": {
+        "trend": "downtrend",
+        "rsi": 30.0,
+        "macd": "bearish",
+        "sma_50": 111.14,
+        "sma_200": 101.14,
+        "key_support": 52.75,
+        "key_resistance": 131.38,
+        "entry_quality": "excellent \u2014 oversold",
+        "volume_ratio": 1.34,
+        "range_52w_pct": 50.9,
+        "atr_14": 4.68
+      },
+      "valuation": {
+        "pe": 12.7959,
+        "forward_pe": 8.1413,
         "peg": 2.7807,
-        "ev_ebitda": 6.25,
+        "ev_ebitda": 5.873,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -2772,7 +2773,7 @@
       },
       "earnings": {
         "next_date": "2026-04-23",
-        "days_away": -48,
+        "days_away": -49,
         "last_surprise_pct": 0.23,
         "beat_streak": 4
       },
@@ -2781,26 +2782,71 @@
         "short_ratio": 2.67,
         "short_float_pct": 2.06
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -26.33,
+      "eps_revision": "raising"
+    },
+    "MSFT": {
+      "price": 397.36,
+      "technicals": {
+        "trend": "downtrend",
+        "rsi": 39.6,
+        "macd": "bearish",
+        "sma_50": 410.33,
+        "sma_200": 452.97,
+        "key_support": 356.0,
+        "key_resistance": 538.66,
+        "entry_quality": "fair",
+        "volume_ratio": 0.83,
+        "range_52w_pct": 22.6,
+        "atr_14": 12.3
+      },
+      "valuation": {
+        "pe": 23.6806,
+        "forward_pe": 20.4909,
+        "peg": 1.2436,
+        "ev_ebitda": 16.258,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.183,
+        "gross_margin": 0.6831,
+        "fcf_margin": 0.1163,
+        "debt_equity": 30.271,
+        "free_cashflow": 37011251200.0,
+        "total_revenue": 318272995328.0
+      },
+      "earnings": {
+        "next_date": "2026-04-29",
+        "days_away": -43,
+        "last_surprise_pct": 0.08,
+        "beat_streak": 4
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 2.42,
+        "short_float_pct": 1.19
+      },
+      "relative_strength_3m": -8.46,
       "eps_revision": "raising"
     },
     "NU": {
-      "price": NaN,
+      "price": 11.62,
       "technicals": {
         "trend": "downtrend",
-        "rsi": 32.7,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
+        "rsi": 34.9,
+        "macd": "bearish",
+        "sma_50": 13.7,
+        "sma_200": 15.45,
         "key_support": 11.6,
         "key_resistance": 18.76,
         "entry_quality": "excellent \u2014 oversold",
-        "volume_ratio": 0.7,
-        "range_52w_pct": NaN
+        "volume_ratio": 0.66,
+        "range_52w_pct": 0.3,
+        "atr_14": 0.52
       },
       "valuation": {
-        "pe": 18.2769,
-        "forward_pe": 10.3737,
+        "pe": 18.4444,
+        "forward_pe": 10.1467,
         "peg": 0.6992,
         "ev_ebitda": null,
         "price_to_fcf": null
@@ -2815,7 +2861,7 @@
       },
       "earnings": {
         "next_date": "2026-05-14",
-        "days_away": -27,
+        "days_away": -28,
         "last_surprise_pct": 0.02,
         "beat_streak": 2
       },
@@ -2824,28 +2870,73 @@
         "short_ratio": 2.66,
         "short_float_pct": 3.79
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -24.37,
       "eps_revision": "raising"
     },
-    "NVDA": {
-      "price": NaN,
+    "NOW": {
+      "price": 106.06,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 46.9,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 141.78,
-        "key_resistance": 235.47,
+        "trend": "mixed",
+        "rsi": 49.3,
+        "macd": "bearish",
+        "sma_50": 99.44,
+        "sma_200": 139.16,
+        "key_support": 99.44,
+        "key_resistance": 208.94,
         "entry_quality": "fair",
-        "volume_ratio": 1.05,
-        "range_52w_pct": NaN
+        "volume_ratio": 0.64,
+        "range_52w_pct": 18.3,
+        "atr_14": 7.6
       },
       "valuation": {
-        "pe": 31.8333,
-        "forward_pe": 16.4159,
-        "peg": 0.6319,
-        "ev_ebitda": 30.196,
+        "pe": 63.509,
+        "forward_pe": 21.0994,
+        "peg": 1.029,
+        "ev_ebitda": 36.922,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.221,
+        "gross_margin": 0.7656,
+        "fcf_margin": 0.3659,
+        "debt_equity": 20.728,
+        "free_cashflow": 5108125184.0,
+        "total_revenue": 13959999488.0
+      },
+      "earnings": {
+        "next_date": "2026-04-22",
+        "days_away": -50,
+        "last_surprise_pct": 0.15,
+        "beat_streak": 4
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 2.05,
+        "short_float_pct": 5.93
+      },
+      "relative_strength_3m": -13.67,
+      "eps_revision": "stable"
+    },
+    "NVDA": {
+      "price": 200.42,
+      "technicals": {
+        "trend": "mixed",
+        "rsi": 41.2,
+        "macd": "bearish",
+        "sma_50": 205.5,
+        "sma_200": 188.79,
+        "key_support": 188.79,
+        "key_resistance": 235.47,
+        "entry_quality": "fair",
+        "volume_ratio": 0.88,
+        "range_52w_pct": 62.6,
+        "atr_14": 8.54
+      },
+      "valuation": {
+        "pe": 31.8633,
+        "forward_pe": 15.7474,
+        "peg": 0.6407,
+        "ev_ebitda": 29.06,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -2858,7 +2949,7 @@
       },
       "earnings": {
         "next_date": "2026-08-26",
-        "days_away": 77,
+        "days_away": 76,
         "last_surprise_pct": 0.04,
         "beat_streak": 4
       },
@@ -2867,28 +2958,29 @@
         "short_ratio": 1.71,
         "short_float_pct": 1.22
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": 2.01,
       "eps_revision": "raising"
     },
     "OXY": {
-      "price": NaN,
+      "price": 57.1,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 48.2,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 38.74,
+        "trend": "mixed",
+        "rsi": 47.3,
+        "macd": "bearish",
+        "sma_50": 58.13,
+        "sma_200": 48.71,
+        "key_support": 48.71,
         "key_resistance": 66.24,
-        "entry_quality": "fair",
-        "volume_ratio": 0.94,
-        "range_52w_pct": NaN
+        "entry_quality": "poor \u2014 extended",
+        "volume_ratio": 0.76,
+        "range_52w_pct": 66.8,
+        "atr_14": 1.85
       },
       "valuation": {
-        "pe": 76.4189,
-        "forward_pe": 14.0192,
-        "peg": 1.1993,
-        "ev_ebitda": 7.201,
+        "pe": 76.1333,
+        "forward_pe": 14.1556,
+        "peg": 1.1913,
+        "ev_ebitda": 7.251,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -2901,7 +2993,7 @@
       },
       "earnings": {
         "next_date": "2026-05-05",
-        "days_away": -36,
+        "days_away": -37,
         "last_surprise_pct": 0.25,
         "beat_streak": 4
       },
@@ -2910,28 +3002,29 @@
         "short_ratio": 0.01,
         "short_float_pct": 0.02
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -9.8,
       "eps_revision": "raising"
     },
     "PANW": {
-      "price": NaN,
+      "price": 263.22,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 60.9,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 141.67,
+        "trend": "uptrend",
+        "rsi": 58.7,
+        "macd": "bearish",
+        "sma_50": 210.51,
+        "sma_200": 193.31,
+        "key_support": 210.51,
         "key_resistance": 300.48,
-        "entry_quality": "fair",
-        "volume_ratio": 0.85,
-        "range_52w_pct": NaN
+        "entry_quality": "poor \u2014 extended",
+        "volume_ratio": 0.73,
+        "range_52w_pct": 76.5,
+        "atr_14": 12.71
       },
       "valuation": {
-        "pe": 232.6071,
-        "forward_pe": 63.3906,
-        "peg": 4.2517,
-        "ev_ebitda": 142.462,
+        "pe": 226.9138,
+        "forward_pe": 63.9427,
+        "peg": 4.2957,
+        "ev_ebitda": 143.946,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -2944,7 +3037,7 @@
       },
       "earnings": {
         "next_date": "2026-06-02",
-        "days_away": -8,
+        "days_away": -9,
         "last_surprise_pct": 0.07,
         "beat_streak": 4
       },
@@ -2953,28 +3046,29 @@
         "short_ratio": 3.16,
         "short_float_pct": 3.17
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": 49.01,
       "eps_revision": null
     },
     "PLTR": {
-      "price": NaN,
+      "price": 130.21,
       "technicals": {
         "trend": "downtrend",
-        "rsi": 45.7,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
+        "rsi": 40.8,
+        "macd": "bearish",
+        "sma_50": 140.31,
+        "sma_200": 160.71,
         "key_support": 128.06,
         "key_resistance": 207.18,
-        "entry_quality": "fair",
-        "volume_ratio": 0.9,
-        "range_52w_pct": NaN
+        "entry_quality": "good \u2014 near support",
+        "volume_ratio": 0.68,
+        "range_52w_pct": 2.7,
+        "atr_14": 6.89
       },
       "valuation": {
-        "pe": 153.5698,
-        "forward_pe": 63.6703,
-        "peg": 1.8939,
-        "ev_ebitda": 153.056,
+        "pe": 149.6667,
+        "forward_pe": 62.7736,
+        "peg": 1.8672,
+        "ev_ebitda": 150.846,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -2987,7 +3081,7 @@
       },
       "earnings": {
         "next_date": "2026-05-04",
-        "days_away": -37,
+        "days_away": -38,
         "last_surprise_pct": 0.16,
         "beat_streak": 4
       },
@@ -2996,71 +3090,29 @@
         "short_ratio": 1.58,
         "short_float_pct": 3.23
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -22.73,
       "eps_revision": "raising"
     },
-    "PYPL": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 29.2,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 38.83,
-        "key_resistance": 77.55,
-        "entry_quality": "excellent \u2014 oversold",
-        "volume_ratio": 1.12,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 7.7786,
-        "forward_pe": 7.2014,
-        "peg": 0.7472,
-        "ev_ebitda": 5.919,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.072,
-        "gross_margin": 0.4093,
-        "fcf_margin": 0.121,
-        "debt_equity": 58.28,
-        "free_cashflow": 4083500032.0,
-        "total_revenue": 33734000640.0
-      },
-      "earnings": {
-        "next_date": "2026-07-28",
-        "days_away": 48,
-        "last_surprise_pct": 0.08,
-        "beat_streak": 3
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 3.16,
-        "short_float_pct": 6.26
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "lowering"
-    },
     "QCOM": {
-      "price": NaN,
+      "price": 191.2,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 52.2,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 123.61,
+        "trend": "uptrend",
+        "rsi": 43.5,
+        "macd": "bearish",
+        "sma_50": 180.27,
+        "sma_200": 163.54,
+        "key_support": 180.27,
         "key_resistance": 250.1,
         "entry_quality": "fair",
-        "volume_ratio": 1.02,
-        "range_52w_pct": NaN
+        "volume_ratio": 0.65,
+        "range_52w_pct": 53.4,
+        "atr_14": 17.67
       },
       "valuation": {
-        "pe": 23.423,
-        "forward_pe": 19.2572,
-        "peg": 0.9093,
-        "ev_ebitda": 17.077,
+        "pe": 22.0785,
+        "forward_pe": 17.9242,
+        "peg": 0.8702,
+        "ev_ebitda": 15.924,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -3073,7 +3125,7 @@
       },
       "earnings": {
         "next_date": "2026-04-29",
-        "days_away": -42,
+        "days_away": -43,
         "last_surprise_pct": 0.02,
         "beat_streak": 4
       },
@@ -3082,71 +3134,29 @@
         "short_ratio": 1.45,
         "short_float_pct": 4.78
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": 38.77,
       "eps_revision": "raising"
     },
-    "RIVN": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 58.1,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 11.64,
-        "key_resistance": 22.45,
-        "entry_quality": "fair",
-        "volume_ratio": 1.12,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": null,
-        "forward_pe": -8.3217,
-        "peg": null,
-        "ev_ebitda": -6.678,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.114,
-        "gross_margin": 0.0103,
-        "fcf_margin": -0.2357,
-        "debt_equity": 118.153,
-        "free_cashflow": -1302749952.0,
-        "total_revenue": 5528000000.0
-      },
-      "earnings": {
-        "next_date": "2026-04-30",
-        "days_away": -41,
-        "last_surprise_pct": -0.25,
-        "beat_streak": 2
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 4.57,
-        "short_float_pct": 14.07
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": null
-    },
     "REGN": {
-      "price": NaN,
+      "price": 601.65,
       "technicals": {
         "trend": "downtrend",
-        "rsi": 34.8,
+        "rsi": 33.4,
         "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
+        "sma_50": 698.06,
+        "sma_200": 694.44,
         "key_support": 506.09,
         "key_resistance": 810.08,
         "entry_quality": "excellent \u2014 oversold",
-        "volume_ratio": 0.92,
-        "range_52w_pct": NaN
+        "volume_ratio": 0.7,
+        "range_52w_pct": 31.4,
+        "atr_14": 19.54
       },
       "valuation": {
-        "pe": 15.0361,
-        "forward_pe": 11.4597,
-        "peg": 1.1063,
-        "ev_ebitda": 12.924,
+        "pe": 15.0375,
+        "forward_pe": 11.1895,
+        "peg": 1.0727,
+        "ev_ebitda": 12.586,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -3159,7 +3169,7 @@
       },
       "earnings": {
         "next_date": "2026-04-29",
-        "days_away": -42,
+        "days_away": -43,
         "last_surprise_pct": 0.53,
         "beat_streak": 4
       },
@@ -3168,28 +3178,117 @@
         "short_ratio": 2.6,
         "short_float_pct": 3.03
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -26.85,
       "eps_revision": "lowering"
     },
-    "SNOW": {
-      "price": NaN,
+    "RIVN": {
+      "price": 14.76,
       "technicals": {
         "trend": "downtrend",
-        "rsi": 66.4,
+        "rsi": 44.5,
         "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 121.11,
-        "key_resistance": 280.16,
-        "entry_quality": "fair",
-        "volume_ratio": 0.58,
-        "range_52w_pct": NaN
+        "sma_50": 15.5,
+        "sma_200": 15.61,
+        "key_support": 11.64,
+        "key_resistance": 22.45,
+        "entry_quality": "poor \u2014 extended",
+        "volume_ratio": 0.74,
+        "range_52w_pct": 28.9,
+        "atr_14": 1.0
       },
       "valuation": {
         "pe": null,
-        "forward_pe": 89.2904,
-        "peg": 6.1928,
-        "ev_ebitda": -73.565,
+        "forward_pe": -7.8086,
+        "peg": null,
+        "ev_ebitda": -6.275,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.114,
+        "gross_margin": 0.0103,
+        "fcf_margin": -0.2357,
+        "debt_equity": 118.153,
+        "free_cashflow": -1302749952.0,
+        "total_revenue": 5528000000.0
+      },
+      "earnings": {
+        "next_date": "2026-04-30",
+        "days_away": -42,
+        "last_surprise_pct": -0.25,
+        "beat_streak": 2
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 4.57,
+        "short_float_pct": 14.07
+      },
+      "relative_strength_3m": -11.08,
+      "eps_revision": null
+    },
+    "PYPL": {
+      "price": 40.7,
+      "technicals": {
+        "trend": "downtrend",
+        "rsi": 28.1,
+        "macd": "bearish",
+        "sma_50": 46.08,
+        "sma_200": 55.35,
+        "key_support": 38.83,
+        "key_resistance": 77.55,
+        "entry_quality": "excellent \u2014 oversold",
+        "volume_ratio": 0.85,
+        "range_52w_pct": 4.8,
+        "atr_14": 1.25
+      },
+      "valuation": {
+        "pe": 7.636,
+        "forward_pe": 7.0682,
+        "peg": 0.7335,
+        "ev_ebitda": 5.817,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.072,
+        "gross_margin": 0.4093,
+        "fcf_margin": 0.121,
+        "debt_equity": 58.28,
+        "free_cashflow": 4083500032.0,
+        "total_revenue": 33734000640.0
+      },
+      "earnings": {
+        "next_date": "2026-07-28",
+        "days_away": 47,
+        "last_surprise_pct": 0.08,
+        "beat_streak": 3
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 3.16,
+        "short_float_pct": 6.26
+      },
+      "relative_strength_3m": -15.5,
+      "eps_revision": "lowering"
+    },
+    "SNOW": {
+      "price": 239.9,
+      "technicals": {
+        "trend": "uptrend",
+        "rsi": 66.1,
+        "macd": "bullish_weakening",
+        "sma_50": 169.51,
+        "sma_200": 205.12,
+        "key_support": 205.12,
+        "key_resistance": 280.16,
+        "entry_quality": "poor \u2014 extended",
+        "volume_ratio": 0.61,
+        "range_52w_pct": 74.7,
+        "atr_14": 14.82
+      },
+      "valuation": {
+        "pe": null,
+        "forward_pe": 89.3799,
+        "peg": 6.199,
+        "ev_ebitda": -73.639,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -3202,7 +3301,7 @@
       },
       "earnings": {
         "next_date": "2026-05-27",
-        "days_away": -14,
+        "days_away": -15,
         "last_surprise_pct": 0.31,
         "beat_streak": 4
       },
@@ -3211,28 +3310,29 @@
         "short_ratio": 2.11,
         "short_float_pct": 6.29
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": 27.79,
       "eps_revision": null
     },
     "SBUX": {
-      "price": NaN,
+      "price": 98.76,
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 33.2,
+        "trend": "mixed",
+        "rsi": 47.5,
         "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 76.95,
+        "sma_50": 99.74,
+        "sma_200": 90.5,
+        "key_support": 90.5,
         "key_resistance": 106.82,
-        "entry_quality": "oversold \u2014 verify fundamentals",
-        "volume_ratio": 1.23,
-        "range_52w_pct": NaN
+        "entry_quality": "fair",
+        "volume_ratio": 1.03,
+        "range_52w_pct": 73.0,
+        "atr_14": 2.69
       },
       "valuation": {
-        "pe": 74.3588,
-        "forward_pe": 32.3542,
-        "peg": 1.2681,
-        "ev_ebitda": 24.787,
+        "pe": 75.3893,
+        "forward_pe": 32.7994,
+        "peg": 1.2963,
+        "ev_ebitda": 25.072,
         "price_to_fcf": null
       },
       "fundamentals": {
@@ -3245,7 +3345,7 @@
       },
       "earnings": {
         "next_date": "2026-04-28",
-        "days_away": -43,
+        "days_away": -44,
         "last_surprise_pct": -0.22,
         "beat_streak": 1
       },
@@ -3254,327 +3354,27 @@
         "short_ratio": 5.83,
         "short_float_pct": 4.7
       },
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    "SONY": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 53.6,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 19.64,
-        "key_resistance": 30.26,
-        "entry_quality": "fair",
-        "volume_ratio": 0.84,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 19.9159,
-        "forward_pe": 17.9076,
-        "peg": 1.9855,
-        "ev_ebitda": -0.007,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.154,
-        "gross_margin": 0.308,
-        "fcf_margin": -0.0227,
-        "debt_equity": 19.612,
-        "free_cashflow": -282762608640.0,
-        "total_revenue": 12479619923968.0
-      },
-      "earnings": {
-        "next_date": "2026-07-31",
-        "days_away": 51,
-        "last_surprise_pct": 0.25,
-        "beat_streak": 2
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 1.37,
-        "short_float_pct": 0.2
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "lowering"
-    },
-    "TSLA": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 48.0,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 293.94,
-        "key_resistance": 489.88,
-        "entry_quality": "fair",
-        "volume_ratio": 1.14,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 370.7289,
-        "forward_pe": 157.875,
-        "peg": 5.462,
-        "ev_ebitda": 131.752,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.158,
-        "gross_margin": 0.1906,
-        "fcf_margin": 0.0537,
-        "debt_equity": 18.738,
-        "free_cashflow": 5251999744.0,
-        "total_revenue": 97878999040.0
-      },
-      "earnings": {
-        "next_date": "2026-04-22",
-        "days_away": -49,
-        "last_surprise_pct": -0.01,
-        "beat_streak": 2
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 1.48,
-        "short_float_pct": 2.3
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    "V": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 47.8,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 294.91,
-        "key_resistance": 370.38,
-        "entry_quality": "fair",
-        "volume_ratio": 0.57,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 28.3145,
-        "forward_pe": 21.8686,
-        "peg": 1.4266,
-        "ev_ebitda": 20.672,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.171,
-        "gross_margin": 0.9778,
-        "fcf_margin": 0.4843,
-        "debt_equity": 67.233,
-        "free_cashflow": 20839749632.0,
-        "total_revenue": 43027001344.0
-      },
-      "earnings": {
-        "next_date": "2026-04-28",
-        "days_away": -43,
-        "last_surprise_pct": 0.05,
-        "beat_streak": 4
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 2.58,
-        "short_float_pct": 1.29
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    "UNH": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 71.4,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 232.89,
-        "key_resistance": 406.57,
-        "entry_quality": "poor \u2014 overbought",
-        "volume_ratio": 1.2,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 31.0526,
-        "forward_pe": 19.7592,
-        "peg": 1.3842,
-        "ev_ebitda": 19.996,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.02,
-        "gross_margin": 0.188,
-        "fcf_margin": 0.0393,
-        "debt_equity": 73.982,
-        "free_cashflow": 17687500800.0,
-        "total_revenue": 449713012736.0
-      },
-      "earnings": {
-        "next_date": "2026-04-21",
-        "days_away": -50,
-        "last_surprise_pct": -0.08,
-        "beat_streak": 3
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 2.88,
-        "short_float_pct": 2.37
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "stable"
-    },
-    "XOM": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 50.5,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 102.56,
-        "key_resistance": 170.31,
-        "entry_quality": "fair",
-        "volume_ratio": 0.71,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 25.5859,
-        "forward_pe": 13.9975,
-        "peg": 1.3845,
-        "ev_ebitda": 11.839,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.026,
-        "gross_margin": 0.2977,
-        "fcf_margin": 0.0357,
-        "debt_equity": 18.261,
-        "free_cashflow": 11630499840.0,
-        "total_revenue": 326008012800.0
-      },
-      "earnings": {
-        "next_date": "2026-05-01",
-        "days_away": -40,
-        "last_surprise_pct": 0.05,
-        "beat_streak": 4
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 2.39,
-        "short_float_pct": 1.14
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "lowering"
-    },
-    "TSM": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 55.6,
-        "macd": "bearish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 207.7,
-        "key_resistance": 446.69,
-        "entry_quality": "fair",
-        "volume_ratio": 1.6,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 36.7629,
-        "forward_pe": 21.9122,
-        "peg": 1.293,
-        "ev_ebitda": 5.43,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.351,
-        "gross_margin": 0.6187,
-        "fcf_margin": 0.1752,
-        "debt_equity": 18.447,
-        "free_cashflow": 719158444032.0,
-        "total_revenue": 4103904165888.0
-      },
-      "earnings": {
-        "next_date": "2026-04-16",
-        "days_away": -55,
-        "last_surprise_pct": 0.07,
-        "beat_streak": 4
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 2.21,
-        "short_float_pct": 0.58
-      },
-      "relative_strength_3m": NaN,
-      "eps_revision": "raising"
-    },
-    "WFC": {
-      "price": NaN,
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 59.5,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
-        "key_support": 70.81,
-        "key_resistance": 95.37,
-        "entry_quality": "fair",
-        "volume_ratio": 0.68,
-        "range_52w_pct": NaN
-      },
-      "valuation": {
-        "pe": 12.6739,
-        "forward_pe": 10.3809,
-        "peg": 1.4549,
-        "ev_ebitda": null,
-        "price_to_fcf": null
-      },
-      "fundamentals": {
-        "revenue_growth_yoy": 0.057,
-        "gross_margin": 0.0,
-        "fcf_margin": null,
-        "debt_equity": null,
-        "free_cashflow": null,
-        "total_revenue": 81135001600.0
-      },
-      "earnings": {
-        "next_date": "2026-07-14",
-        "days_away": 34,
-        "last_surprise_pct": 0.14,
-        "beat_streak": 3
-      },
-      "insider_signal": "neutral",
-      "short_interest": {
-        "short_ratio": 0.0,
-        "short_float_pct": 0.0
-      },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -8.39,
       "eps_revision": "raising"
     },
     "SOFI": {
-      "price": NaN,
+      "price": 15.87,
       "technicals": {
         "trend": "downtrend",
-        "rsi": 48.7,
-        "macd": "bullish_weakening",
-        "sma_50": NaN,
-        "sma_200": null,
+        "rsi": 44.6,
+        "macd": "bearish",
+        "sma_50": 16.8,
+        "sma_200": 22.95,
         "key_support": 14.09,
         "key_resistance": 32.21,
         "entry_quality": "fair",
-        "volume_ratio": 1.06,
-        "range_52w_pct": NaN
+        "volume_ratio": 1.14,
+        "range_52w_pct": 9.8,
+        "atr_14": 0.96
       },
       "valuation": {
-        "pe": 36.6,
-        "forward_pe": 21.1089,
+        "pe": 36.907,
+        "forward_pe": 20.3399,
         "peg": 1.0281,
         "ev_ebitda": null,
         "price_to_fcf": null
@@ -3589,7 +3389,7 @@
       },
       "earnings": {
         "next_date": "2026-04-29",
-        "days_away": -42,
+        "days_away": -43,
         "last_surprise_pct": 0.45,
         "beat_streak": 3
       },
@@ -3598,24 +3398,332 @@
         "short_ratio": 2.52,
         "short_float_pct": 14.71
       },
-      "relative_strength_3m": NaN,
+      "relative_strength_3m": -17.89,
+      "eps_revision": "raising"
+    },
+    "TSLA": {
+      "price": 381.59,
+      "technicals": {
+        "trend": "downtrend",
+        "rsi": 39.4,
+        "macd": "bearish",
+        "sma_50": 397.25,
+        "sma_200": 415.16,
+        "key_support": 293.94,
+        "key_resistance": 489.88,
+        "entry_quality": "poor \u2014 extended",
+        "volume_ratio": 0.96,
+        "range_52w_pct": 44.7,
+        "atr_14": 17.89
+      },
+      "valuation": {
+        "pe": 370.4757,
+        "forward_pe": 152.639,
+        "peg": 5.2543,
+        "ev_ebitda": 126.643,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.158,
+        "gross_margin": 0.1906,
+        "fcf_margin": 0.0537,
+        "debt_equity": 18.738,
+        "free_cashflow": 5251999744.0,
+        "total_revenue": 97878999040.0
+      },
+      "earnings": {
+        "next_date": "2026-04-22",
+        "days_away": -50,
+        "last_surprise_pct": -0.01,
+        "beat_streak": 2
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 1.48,
+        "short_float_pct": 2.3
+      },
+      "relative_strength_3m": -10.95,
+      "eps_revision": "raising"
+    },
+    "SONY": {
+      "price": 20.76,
+      "technicals": {
+        "trend": "downtrend",
+        "rsi": 40.5,
+        "macd": "bearish",
+        "sma_50": 21.32,
+        "sma_200": 24.77,
+        "key_support": 19.64,
+        "key_resistance": 30.26,
+        "entry_quality": "fair",
+        "volume_ratio": 0.83,
+        "range_52w_pct": 10.5,
+        "atr_14": 0.56
+      },
+      "valuation": {
+        "pe": 19.4019,
+        "forward_pe": 17.4454,
+        "peg": 1.9372,
+        "ev_ebitda": -0.008,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.154,
+        "gross_margin": 0.308,
+        "fcf_margin": -0.0227,
+        "debt_equity": 19.612,
+        "free_cashflow": -282762608640.0,
+        "total_revenue": 12479619923968.0
+      },
+      "earnings": {
+        "next_date": "2026-07-31",
+        "days_away": 50,
+        "last_surprise_pct": 0.25,
+        "beat_streak": 2
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 1.37,
+        "short_float_pct": 0.2
+      },
+      "relative_strength_3m": -10.81,
+      "eps_revision": "lowering"
+    },
+    "V": {
+      "price": 322.96,
+      "technicals": {
+        "trend": "mixed",
+        "rsi": 51.0,
+        "macd": "bearish_weakening",
+        "sma_50": 317.87,
+        "sma_200": 328.62,
+        "key_support": 317.87,
+        "key_resistance": 370.38,
+        "entry_quality": "good \u2014 near support",
+        "volume_ratio": 0.71,
+        "range_52w_pct": 37.2,
+        "atr_14": 7.13
+      },
+      "valuation": {
+        "pe": 28.1569,
+        "forward_pe": 21.728,
+        "peg": 1.4174,
+        "ev_ebitda": 20.542,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.171,
+        "gross_margin": 0.9778,
+        "fcf_margin": 0.4843,
+        "debt_equity": 67.233,
+        "free_cashflow": 20839749632.0,
+        "total_revenue": 43027001344.0
+      },
+      "earnings": {
+        "next_date": "2026-04-28",
+        "days_away": -44,
+        "last_surprise_pct": 0.05,
+        "beat_streak": 4
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 2.58,
+        "short_float_pct": 1.29
+      },
+      "relative_strength_3m": -1.96,
+      "eps_revision": "raising"
+    },
+    "TSM": {
+      "price": 408.75,
+      "technicals": {
+        "trend": "uptrend",
+        "rsi": 48.3,
+        "macd": "bearish",
+        "sma_50": 394.91,
+        "sma_200": 328.23,
+        "key_support": 394.91,
+        "key_resistance": 446.69,
+        "entry_quality": "good \u2014 near support",
+        "volume_ratio": 0.91,
+        "range_52w_pct": 84.1,
+        "atr_14": 18.16
+      },
+      "valuation": {
+        "pe": 35.116,
+        "forward_pe": 20.9305,
+        "peg": 1.3344,
+        "ev_ebitda": 5.151,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.351,
+        "gross_margin": 0.6187,
+        "fcf_margin": 0.1752,
+        "debt_equity": 18.447,
+        "free_cashflow": 719158444032.0,
+        "total_revenue": 4103904165888.0
+      },
+      "earnings": {
+        "next_date": "2026-04-16",
+        "days_away": -56,
+        "last_surprise_pct": 0.07,
+        "beat_streak": 4
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 2.21,
+        "short_float_pct": 0.58
+      },
+      "relative_strength_3m": 14.18,
+      "eps_revision": "raising"
+    },
+    "XOM": {
+      "price": 150.62,
+      "technicals": {
+        "trend": "mixed",
+        "rsi": 49.0,
+        "macd": "bearish_weakening",
+        "sma_50": 151.98,
+        "sma_200": 132.07,
+        "key_support": 132.07,
+        "key_resistance": 170.31,
+        "entry_quality": "fair",
+        "volume_ratio": 0.69,
+        "range_52w_pct": 70.9,
+        "atr_14": 3.96
+      },
+      "valuation": {
+        "pe": 25.3997,
+        "forward_pe": 14.1582,
+        "peg": 1.236,
+        "ev_ebitda": 11.966,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.026,
+        "gross_margin": 0.2977,
+        "fcf_margin": 0.0357,
+        "debt_equity": 18.261,
+        "free_cashflow": 11630499840.0,
+        "total_revenue": 326008012800.0
+      },
+      "earnings": {
+        "next_date": "2026-05-01",
+        "days_away": -41,
+        "last_surprise_pct": 0.05,
+        "beat_streak": 4
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 2.39,
+        "short_float_pct": 1.14
+      },
+      "relative_strength_3m": -8.78,
+      "eps_revision": "lowering"
+    },
+    "UNH": {
+      "price": 407.46,
+      "technicals": {
+        "trend": "uptrend",
+        "rsi": 68.4,
+        "macd": "bullish",
+        "sma_50": 358.34,
+        "sma_200": 327.89,
+        "key_support": 358.34,
+        "key_resistance": 413.0,
+        "entry_quality": "fair",
+        "volume_ratio": 0.92,
+        "range_52w_pct": 96.9,
+        "atr_14": 10.02
+      },
+      "valuation": {
+        "pe": 30.6361,
+        "forward_pe": 19.4942,
+        "peg": 1.4311,
+        "ev_ebitda": 19.761,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.02,
+        "gross_margin": 0.188,
+        "fcf_margin": 0.0393,
+        "debt_equity": 73.982,
+        "free_cashflow": 17687500800.0,
+        "total_revenue": 449713012736.0
+      },
+      "earnings": {
+        "next_date": "2026-04-21",
+        "days_away": -51,
+        "last_surprise_pct": -0.08,
+        "beat_streak": 3
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 2.88,
+        "short_float_pct": 2.37
+      },
+      "relative_strength_3m": 39.52,
+      "eps_revision": "stable"
+    },
+    "WFC": {
+      "price": 81.97,
+      "technicals": {
+        "trend": "mixed",
+        "rsi": 62.2,
+        "macd": "bullish_weakening",
+        "sma_50": 79.25,
+        "sma_200": 83.37,
+        "key_support": 79.25,
+        "key_resistance": 95.37,
+        "entry_quality": "fair",
+        "volume_ratio": 0.59,
+        "range_52w_pct": 45.4,
+        "atr_14": 1.85
+      },
+      "valuation": {
+        "pe": 12.6692,
+        "forward_pe": 10.3771,
+        "peg": 1.456,
+        "ev_ebitda": null,
+        "price_to_fcf": null
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 0.057,
+        "gross_margin": 0.0,
+        "fcf_margin": null,
+        "debt_equity": null,
+        "free_cashflow": null,
+        "total_revenue": 81135001600.0
+      },
+      "earnings": {
+        "next_date": "2026-07-14",
+        "days_away": 33,
+        "last_surprise_pct": 0.14,
+        "beat_streak": 3
+      },
+      "insider_signal": "neutral",
+      "short_interest": {
+        "short_ratio": 0.0,
+        "short_float_pct": 0.0
+      },
+      "relative_strength_3m": 2.0,
       "eps_revision": "raising"
     }
   },
   "macro": {
-    "vix": NaN,
-    "yield_10y": NaN,
-    "yield_3m": NaN,
-    "yield_spread_10y_3m": NaN,
-    "spy_price": 7405.73,
-    "spy_rsi": 50.5,
-    "fear_greed_value": 9,
-    "fear_greed_index": 9,
+    "vix": 22.22,
+    "yield_10y": 4.542,
+    "yield_3m": 3.635,
+    "yield_spread_10y_3m": 0.907,
+    "spy_price": 7266.99,
+    "spy_rsi": 40.6,
+    "fear_greed_value": 12,
+    "fear_greed_index": 12,
     "fear_greed_label": "Extreme Fear",
-    "fear_greed_synthetic": 75.2,
+    "fear_greed_synthetic": 45.9,
     "fear_greed_source": "alternative.me",
     "yield_trend": "stable",
-    "dxy": 99.92,
+    "dxy": 99.93,
     "dxy_trend": "rising",
     "market_regime": "MIXED"
   }
