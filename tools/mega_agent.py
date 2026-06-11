@@ -372,24 +372,33 @@ def call_ollama(context: str, attempt: int, truncated: bool = False) -> str:
                 "Include ALL required fields. Do NOT truncate. Do NOT wrap in markdown."
             )
 
+    user_content = context + correction
+
+    # Qwen3 models use extended thinking by default, consuming num_predict budget
+    # before generating the JSON. Prepend /no_think to keep full budget for output.
+    is_qwen3 = "qwen3" in MODEL.lower()
+    if is_qwen3:
+        user_content = "/no_think\n\n" + user_content
+
     # Usar la API nativa de Ollama (/api/chat) — más estable que el endpoint OpenAI
-    resp = requests.post(
-        OLLAMA_URL,
-        json={
-            "model": MODEL,
-            "messages": [
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user",   "content": context + correction},
-            ],
-            "options": {
-                "temperature": 0.2,
-                "num_predict": NUM_PREDICT,
-                "num_ctx": int(os.getenv("MAIA_NUM_CTX", "8192")),  # reducir a 4096 en modelos 32b con poca VRAM
-            },
-            "stream": False,
+    payload: dict = {
+        "model": MODEL,
+        "messages": [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user",   "content": user_content},
+        ],
+        "options": {
+            "temperature": 0.2,
+            "num_predict": NUM_PREDICT,
+            "num_ctx": int(os.getenv("MAIA_NUM_CTX", "8192")),  # reducir a 4096 en modelos 32b con poca VRAM
         },
-        timeout=TIMEOUT,
-    )
+        "stream": False,
+    }
+    # Ollama ≥0.6 supports top-level "think" flag for qwen3; older versions ignore it
+    if is_qwen3:
+        payload["think"] = False
+
+    resp = requests.post(OLLAMA_URL, json=payload, timeout=TIMEOUT)
     resp.raise_for_status()
     result = resp.json()
     content = result.get("message", {}).get("content", "")
@@ -440,8 +449,12 @@ def extract_json(text: str) -> dict:
     except json.JSONDecodeError:
         pass
 
-    # Intento 3: truncado — buscar el último pick completo y cerrar el JSON
-    # Encuentra la última coma de pick completo y cierra el array
+    # Intento 3: truncado — buscar el último pick completo y cerrar el JSON.
+    # SOLO activar si risk_adjusted_picks ya empezó; de lo contrario este intento
+    # "cura" cross_sector_insights u otras secciones y devuelve JSON sin picks.
+    if '"risk_adjusted_picks"' not in text:
+        raise json.JSONDecodeError("No se pudo parsear ni reparar el JSON", text, 0)
+
     last_complete = text.rfind("},\n    {")
     if last_complete == -1:
         last_complete = text.rfind("},\n  {")
