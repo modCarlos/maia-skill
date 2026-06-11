@@ -22,6 +22,7 @@ import sys
 import time
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+from typing import Optional
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -72,6 +73,65 @@ def load_history_reports() -> list[tuple[datetime, dict]]:
 
 _price_cache: dict[str, float | None] = {}
 
+# ─── Vocabulary normalization ──────────────────────────────────────────────────
+
+_REC_ALIASES: dict[str, str] = {
+    "ADD": "ADD",
+    "BUY": "ADD",
+    "TRIM": "TRIM",
+    "SELL": "TRIM",
+    "REDUCE": "TRIM",
+    "HOLD": "HOLD",
+    "WATCH": "HOLD",
+}
+
+
+def normalize_rec(raw: str) -> str:
+    """Map any recommendation vocabulary to ADD / TRIM / HOLD."""
+    return _REC_ALIASES.get(raw.upper().strip(), "HOLD")
+
+
+# ─── SPY benchmark ─────────────────────────────────────────────────────────────
+
+_spy_closes: dict[str, float] = {}   # "YYYY-MM-DD" → adjusted close
+
+
+def load_spy_history(start_date: datetime, today: datetime) -> None:
+    """Fetch SPY daily closes once from yfinance and cache in _spy_closes."""
+    global _spy_closes
+    try:
+        ticker = yf.Ticker("SPY")
+        start_str = start_date.strftime("%Y-%m-%d")
+        end_str = (today + timedelta(days=1)).strftime("%Y-%m-%d")
+        hist = ticker.history(start=start_str, end=end_str, auto_adjust=True)
+        if hist.empty:
+            return
+        for ts, row in hist.iterrows():
+            date_str = ts.strftime("%Y-%m-%d") if hasattr(ts, "strftime") else str(ts)[:10]
+            _spy_closes[date_str] = float(row["Close"])
+    except Exception as exc:
+        print(f"[backtest] SPY history unavailable: {exc}", file=sys.stderr)
+
+
+def spy_return_for(pick_date: datetime, today: datetime) -> Optional[float]:
+    """Return SPY % gain from pick_date to today. None if data missing."""
+    if not _spy_closes:
+        return None
+    date_str = pick_date.strftime("%Y-%m-%d")
+    spy_entry = _spy_closes.get(date_str)
+    if spy_entry is None:
+        # Try the nearest earlier trading day (up to 5 calendar days back)
+        for offset in range(1, 6):
+            alt = (pick_date - timedelta(days=offset)).strftime("%Y-%m-%d")
+            spy_entry = _spy_closes.get(alt)
+            if spy_entry:
+                break
+    if spy_entry is None:
+        return None
+    # Current SPY = last available close
+    current_spy = list(_spy_closes.values())[-1]
+    return round((current_spy - spy_entry) / spy_entry * 100, 2)
+
 
 def fetch_current_price(symbol: str) -> float | None:
     """Fetch current price from yfinance. Returns None if unavailable/delisted."""
@@ -107,13 +167,17 @@ def evaluate_pick(pick: dict, report_date: datetime, today: datetime) -> dict | 
     """
     Evaluate a single pick. Returns result dict or None if skip.
 
-    - ADD  → hit if current_price > entry_price (return > 0)
-    - TRIM → hit if current_price < entry_price (return < 0 = trim was correct)
-    - HOLD → excluded from hit rate (no directional signal)
+    - ADD/BUY  → hit if current_price > entry_price
+    - TRIM/SELL → hit if current_price < entry_price
+    - HOLD     → excluded from hit rate (no directional signal)
+
+    direction_score: return_pct for ADD, -return_pct for TRIM.
+    Positive = model was correct. Used for top_wins / top_losses ranking.
     """
-    recommendation = (pick.get("recommendation") or "").upper()
-    if recommendation not in ("ADD", "TRIM"):
-        return None  # HOLD excluded
+    raw_rec = pick.get("recommendation") or ""
+    recommendation = normalize_rec(raw_rec)
+    if recommendation == "HOLD":
+        return None  # no directional signal
 
     symbol = pick.get("symbol", "")
     entry_price = pick.get("entry_price")
@@ -124,6 +188,8 @@ def evaluate_pick(pick: dict, report_date: datetime, today: datetime) -> dict | 
     if days_elapsed < 1:
         return None
 
+    spy_ret = spy_return_for(report_date, today)
+
     current_price = fetch_current_price(symbol)
     if current_price is None:
         return {
@@ -132,25 +198,35 @@ def evaluate_pick(pick: dict, report_date: datetime, today: datetime) -> dict | 
             "entry_price": entry_price,
             "current_price": None,
             "return_pct": None,
+            "direction_score": None,
+            "spy_return_pct": spy_ret,
+            "alpha": None,
             "hit": None,
             "days_elapsed": days_elapsed,
             "report_date": report_date.strftime("%Y-%m-%d"),
             "no_data": True,
         }
 
-    return_pct = (current_price - entry_price) / entry_price * 100
+    return_pct = round((current_price - entry_price) / entry_price * 100, 2)
 
     if recommendation == "ADD":
         hit = current_price > entry_price
+        direction_score = return_pct
     else:  # TRIM
         hit = current_price < entry_price
+        direction_score = -return_pct  # positive = stock fell = TRIM was correct
+
+    alpha = round(direction_score - spy_ret, 2) if spy_ret is not None else None
 
     return {
         "symbol": symbol,
         "recommendation": recommendation,
         "entry_price": entry_price,
         "current_price": current_price,
-        "return_pct": round(return_pct, 2),
+        "return_pct": return_pct,
+        "direction_score": round(direction_score, 2),
+        "spy_return_pct": spy_ret,
+        "alpha": alpha,
         "hit": hit,
         "days_elapsed": days_elapsed,
         "report_date": report_date.strftime("%Y-%m-%d"),
@@ -164,22 +240,32 @@ def aggregate(results: list[dict], horizon_days: int) -> dict:
     """Stats for picks that are at least `horizon_days` old."""
     subset = [r for r in results if r["days_elapsed"] >= horizon_days and not r["no_data"] and r["hit"] is not None]
     if not subset:
-        return {"picks": 0, "hit_rate": None, "avg_return_pct": None}
+        return {"picks": 0, "hit_rate": None, "avg_direction_score": None, "avg_spy_return_pct": None, "avg_alpha": None}
 
     hits = sum(1 for r in subset if r["hit"])
-    returns = [r["return_pct"] for r in subset]
+    scores = [r["direction_score"] for r in subset if r["direction_score"] is not None]
+    spy_rets = [r["spy_return_pct"] for r in subset if r["spy_return_pct"] is not None]
+    alphas = [r["alpha"] for r in subset if r["alpha"] is not None]
 
     return {
         "picks": len(subset),
         "hit_rate": round(hits / len(subset), 3),
-        "avg_return_pct": round(sum(returns) / len(returns), 2),
+        "avg_direction_score": round(sum(scores) / len(scores), 2) if scores else None,
+        "avg_spy_return_pct": round(sum(spy_rets) / len(spy_rets), 2) if spy_rets else None,
+        "avg_alpha": round(sum(alphas) / len(alphas), 2) if alphas else None,
     }
 
 
 def top_n(results: list[dict], n: int, best: bool) -> list[dict]:
-    """Return top N best or worst picks by return_pct."""
-    valid = [r for r in results if r["return_pct"] is not None]
-    sorted_picks = sorted(valid, key=lambda r: r["return_pct"], reverse=best)
+    """Return top N best or worst picks by direction_score.
+
+    direction_score > 0 = model was correct (ADD↑ or TRIM↓).
+    direction_score < 0 = model was wrong.
+    Sorting by direction_score avoids the bug where a TRIM with +62% raw
+    return (stock went UP = wrong call) appeared as a 'win'.
+    """
+    valid = [r for r in results if r.get("direction_score") is not None]
+    sorted_picks = sorted(valid, key=lambda r: r["direction_score"], reverse=best)
     return [
         {
             "symbol": r["symbol"],
@@ -187,6 +273,9 @@ def top_n(results: list[dict], n: int, best: bool) -> list[dict]:
             "entry": r["entry_price"],
             "current": r["current_price"],
             "return_pct": r["return_pct"],
+            "direction_score": r["direction_score"],
+            "spy_return_pct": r.get("spy_return_pct"),
+            "alpha": r.get("alpha"),
             "date": r["report_date"],
         }
         for r in sorted_picks[:n]
@@ -210,10 +299,12 @@ def build_prompt_summary(summary: dict) -> str:
         if picks == 0:
             continue
         hr = stats.get("hit_rate")
-        avg_r = stats.get("avg_return_pct")
+        score = stats.get("avg_direction_score")
+        alpha = stats.get("avg_alpha")
         hr_str = f"{hr*100:.0f}%" if hr is not None else "—"
-        avg_str = f"{avg_r:+.1f}%" if avg_r is not None else "—"
-        lines.append(f"  {label}: {picks} picks  hit_rate={hr_str}  avg_return={avg_str}")
+        score_str = f"{score:+.1f}%" if score is not None else "—"
+        alpha_str = f"{alpha:+.1f}%" if alpha is not None else "—"
+        lines.append(f"  {label}: {picks} picks  hit_rate={hr_str}  avg_score={score_str}  alpha_vs_SPY={alpha_str}")
 
     best = summary.get("top_wins", [])[:3]
     worst = summary.get("top_losses", [])[:3]
@@ -228,8 +319,10 @@ def build_prompt_summary(summary: dict) -> str:
     by_profile = summary.get("by_risk_profile", {})
     for profile, stats in by_profile.items():
         hr = stats.get("hit_rate")
+        alpha = stats.get("avg_alpha")
         if hr is not None:
-            lines.append(f"  {profile}: hit_rate={hr*100:.0f}% ({stats['picks']} picks)")
+            alpha_str = f"  alpha_vs_SPY={alpha:+.1f}%" if alpha is not None else ""
+            lines.append(f"  {profile}: hit_rate={hr*100:.0f}% ({stats['picks']} picks){alpha_str}")
 
     return "\n".join(lines)
 
@@ -263,6 +356,14 @@ def main() -> int:
         return 0
 
     print(f"[backtest] evaluating {len(reports)} session(s)...")
+
+    # Load SPY history once for the full date range
+    oldest_date = reports[0][0]
+    load_spy_history(oldest_date, today)
+    if _spy_closes:
+        print(f"[backtest] SPY history loaded ({len(_spy_closes)} trading days)", file=sys.stderr)
+    else:
+        print("[backtest] SPY history unavailable — alpha will be null", file=sys.stderr)
 
     all_results: list[dict] = []
     by_profile: dict[str, list[dict]] = {}
@@ -313,11 +414,13 @@ def main() -> int:
         if not valid:
             continue
         hits = sum(1 for r in valid if r["hit"])
-        returns = [r["return_pct"] for r in valid]
+        scores = [r["direction_score"] for r in valid if r.get("direction_score") is not None]
+        alphas = [r["alpha"] for r in valid if r.get("alpha") is not None]
         profile_stats[profile] = {
             "picks": len(valid),
             "hit_rate": round(hits / len(valid), 3),
-            "avg_return_pct": round(sum(returns) / len(returns), 2),
+            "avg_direction_score": round(sum(scores) / len(scores), 2) if scores else None,
+            "avg_alpha": round(sum(alphas) / len(alphas), 2) if alphas else None,
         }
 
     wins = top_n(all_results, 5, best=True)
@@ -345,8 +448,9 @@ def main() -> int:
         stats = by_horizon[str(h)]
         if stats["picks"] > 0:
             hr = f"{stats['hit_rate']*100:.0f}%" if stats["hit_rate"] is not None else "—"
-            avg = f"{stats['avg_return_pct']:+.1f}%" if stats["avg_return_pct"] is not None else "—"
-            print(f"  {h}d: {stats['picks']} picks  hit={hr}  avg_return={avg}")
+            score = f"{stats['avg_direction_score']:+.1f}%" if stats.get("avg_direction_score") is not None else "—"
+            alpha = f"{stats['avg_alpha']:+.1f}%" if stats.get("avg_alpha") is not None else "—"
+            print(f"  {h}d: {stats['picks']} picks  hit={hr}  avg_score={score}  alpha_vs_SPY={alpha}")
     print(f"[backtest] → {OUT_PATH}")
 
     if sessions_with_picks < MIN_SESSIONS_FOR_PROMPT:
