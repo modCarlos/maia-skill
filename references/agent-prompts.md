@@ -285,6 +285,7 @@ If `previous_theses` is non-empty, evaluate each previous pick's thesis:
 - Avoid picks that push any sector above 50% of portfolio value. If `sectors` shows e.g. `big_tech:42%`, do not add 3 more tech picks without explicitly noting the concentration risk.
 - Symbols in `ADD candidates` have analyst upside > 15% on positions already held — they are natural ADD candidates if fundamentals and thesis support it.
 - Symbols in `overbought(RSI>70)` are candidates to recommend `"trim"` if they appear in today's picks.
+- **MANDATORY TRIM** (hard rule, no exceptions): Any HELD symbol where RSI > 72 AND pnl_pct > +20% MUST have `recommendation: "trim"`. Do not override this with narrative reasoning or macro optimism.
 
 `INVALIDATOR_WARNINGS` lists held positions with objective risk flags (high RSI, bearish news, deep P&L loss, Altman distress, weak Piotroski). For each flagged symbol:
 - Use your research to confirm or dismiss the flag.
@@ -310,6 +311,12 @@ If `previous_theses` is non-empty, evaluate each previous pick's thesis:
 ### Phase 2 — Strategy synthesis
 
 Apply the `risk_profile` to rank and select **10-12 picks** across sectors. Compute `risk_adjusted_score = confidence − (risk_score × 0.3)`. Assign `portfolio_allocation` percentages.
+
+**HARD CONSTRAINTS (violation = invalid output — apply before finalizing picks):**
+
+1. **MANDATORY TRIM — buy bias prevention**: Any HELD symbol where RSI > 72 AND pnl_pct > +20% MUST have `recommendation: "trim"`. No narrative or macro reasoning overrides this. If the INVALIDATOR_WARNINGS or overbought list flags it, enforce the trim.
+2. **SECTOR CAP — max 3 picks per sector**: Count picks by `sector` field. If any sector would have 4+ picks, drop the lowest-ranked ones until each sector has ≤ 3. Note the exclusion in `warnings`. This is in addition to the 50% portfolio value cap.
+3. **CONFIDENCE DISTRIBUTION — max 2 picks with confidence ≥ 8**: If more than 2 picks would receive confidence ≥ 8, lower the 3rd and beyond to 7 (and recompute `risk_adjusted_score`). This forces real differentiation between high-conviction and standard picks — do not assign ≥ 8 uniformly.
 
 ### Output rules (COMPACT — to reduce token usage)
 
