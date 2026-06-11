@@ -222,9 +222,11 @@ def compress_market(data: dict) -> str:
         short_f  = c.get("short_float_pct")
         rs3m     = c.get("relative_strength_3m")
         eps_rev  = c.get("eps_revision")
+        atr_14   = c.get("atr_14")
 
         # Build compact one-liner
-        parts = [f"  {sym:<6} ${price}  RSI={rsi}  {trend:<10}  entry={entry_q}  group={grp}"]
+        atr_str = f"  ATR={atr_14}" if atr_14 is not None else ""
+        parts = [f"  {sym:<6} ${price}  RSI={rsi}  {trend:<10}  entry={entry_q}{atr_str}  group={grp}"]
 
         valuation = []
         if fpe:  valuation.append(f"fPE={fpe}")

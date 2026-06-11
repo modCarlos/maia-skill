@@ -212,6 +212,22 @@ def _support_resistance(closes: pd.Series):
     return support, resistance
 
 
+def _atr(high: pd.Series, low: pd.Series, closes: pd.Series, window: int = 14) -> float | None:
+    """Average True Range using Wilder's EWM smoothing (standard ATR-14)."""
+    try:
+        prev_close = closes.shift(1)
+        tr = pd.concat([
+            high - low,
+            (high - prev_close).abs(),
+            (low - prev_close).abs(),
+        ], axis=1).max(axis=1)
+        atr = tr.ewm(alpha=1 / window, min_periods=window, adjust=False).mean()
+        val = float(atr.iloc[-1])
+        return round(val, 2) if not pd.isna(val) else None
+    except Exception:
+        return None
+
+
 def _entry_quality(
     rsi: float,
     price: float,
@@ -343,6 +359,10 @@ def fetch_stock(symbol: str) -> dict | None:
         high_52w = float(closes.tail(252).max())
         range_52w_pct = round((price - low_52w) / (high_52w - low_52w) * 100, 1) if high_52w > low_52w else None
 
+        # ATR-14: volatility-adjusted stop-loss anchor.
+        # Uses Wilder's EWM smoothing on 1-year daily High/Low/Close data.
+        atr_14 = _atr(hist["High"], hist["Low"], closes)
+
         # Fundamentals from .info (real data from yfinance, not estimated)
         # Computed before entry_quality so it can use them as a quality gate
         try:
@@ -413,6 +433,7 @@ def fetch_stock(symbol: str) -> dict | None:
             "entry_quality": entry,
             "volume_ratio": volume_ratio,
             "range_52w_pct": range_52w_pct,
+            "atr_14": atr_14,
         },
         "valuation": {
             "pe": safe("trailingPE"),
@@ -594,6 +615,7 @@ def filter_candidates(stocks: dict, top_n: int = 35) -> list[dict]:
             "insider_signal": data.get("insider_signal"),
             "volume_ratio": data.get("technicals", {}).get("volume_ratio"),
             "range_52w_pct": data.get("technicals", {}).get("range_52w_pct"),
+            "atr_14": data.get("technicals", {}).get("atr_14"),
             "short_ratio": data.get("short_interest", {}).get("short_ratio"),
             "short_float_pct": data.get("short_interest", {}).get("short_float_pct"),
             "relative_strength_3m": data.get("relative_strength_3m"),

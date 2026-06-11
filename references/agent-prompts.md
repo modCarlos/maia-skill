@@ -310,13 +310,14 @@ If `previous_theses` is non-empty, evaluate each previous pick's thesis:
 
 ### Phase 2 — Strategy synthesis
 
-Apply the `risk_profile` to rank and select **10-12 picks** across sectors. Compute `risk_adjusted_score = confidence − (risk_score × 0.3)`. Assign `portfolio_allocation` percentages.
+Apply the `risk_profile` to rank and select **10-12 picks** across sectors. Compute `risk_adjusted_score = confidence × (1 − risk_score / 15)`. Assign `portfolio_allocation` percentages.
 
 **HARD CONSTRAINTS (violation = invalid output — apply before finalizing picks):**
 
 1. **MANDATORY TRIM — buy bias prevention**: Any HELD symbol where RSI > 72 AND pnl_pct > +20% MUST have `recommendation: "trim"`. No narrative or macro reasoning overrides this. If the INVALIDATOR_WARNINGS or overbought list flags it, enforce the trim.
 2. **SECTOR CAP — max 3 picks per sector**: Count picks by `sector` field. If any sector would have 4+ picks, drop the lowest-ranked ones until each sector has ≤ 3. Note the exclusion in `warnings`. This is in addition to the 50% portfolio value cap.
 3. **CONFIDENCE DISTRIBUTION — max 2 picks with confidence ≥ 8**: If more than 2 picks would receive confidence ≥ 8, lower the 3rd and beyond to 7 (and recompute `risk_adjusted_score`). This forces real differentiation between high-conviction and standard picks — do not assign ≥ 8 uniformly.
+4. **ATR STOP-LOSS (stocks only)**: Set `stop_loss = entry_price - (atr_14 * 2)` using the `ATR=` value from SCREENED_CANDIDATES. If `atr_14` is not available for a stock pick, fall back to `entry_price * 0.92` (8% fixed stop). For materials/ETFs, always use `entry_price * 0.92`. Never use a fixed percentage stop when `atr_14` is available.
 
 ### Output rules (COMPACT — to reduce token usage)
 
@@ -355,7 +356,7 @@ Return this JSON block:
   "risk_adjusted_picks": [
     {
       "rank": 1, "name": "Visa", "symbol": "V", "sector": "payments",
-      "confidence": 9, "risk_score": 3, "risk_adjusted_score": 8.1,
+      "confidence": 9, "risk_score": 3, "risk_adjusted_score": 7.2,
       "recommendation": "buy", "reasoning": "1 sentence",
       "position_size": "9%",
       "entry_price": 313.45, "stop_loss": 292, "target_12m": 365, "risk_reward_ratio": 2.7,
@@ -395,5 +396,5 @@ Return this JSON block:
 **Score scale is strict and required:**
 - `confidence` must be a number on a **0-10 scale** (example: `8.2`, not `82`)
 - `risk_score` must be a number on a **0-10 scale** (example: `3.5`, not `35`)
-- `risk_adjusted_score = confidence - (risk_score * 0.3)` and should normally land between `0.0` and `10.0`
+- `risk_adjusted_score = confidence * (1 - risk_score / 15)` and should normally land between `0.0` and `10.0`
 - Never express these three fields as percentages or 0-100 scores
