@@ -178,8 +178,11 @@ def prioritize_portfolio(portfolio: list, market_data: dict, max_pos: int = MAX_
     return sorted_portfolio[:max_pos]
 
 
-def compress_portfolio(market_data: dict, portfolio: list) -> str:
-    """Construye contexto comprimido del portfolio para el LLM."""
+def compress_portfolio(market_data: dict, portfolio: list) -> tuple[str, dict]:
+    """Construye contexto comprimido del portfolio para el LLM.
+    Retorna (context_string, computed_totals) donde computed_totals tiene los
+    valores numéricos calculados en Python (para parchear null del LLM).
+    """
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     # Consolidar compras múltiples del mismo ticker antes de analizar
@@ -300,7 +303,27 @@ def compress_portfolio(market_data: dict, portfolio: list) -> str:
         except Exception:
             pass
 
-    return "\n".join(lines)
+    computed_totals = {
+        "total_positions": len(portfolio),
+        "total_cost": round(total_cost, 2),
+        "total_current_value": round(total_value, 2),
+        "total_pnl": total_pnl,
+        "total_pnl_pct": total_pnl_pct,
+    }
+    return "\n".join(lines), computed_totals
+
+
+def patch_summary_nulls(data: dict, computed: dict) -> dict:
+    """Rellena con valores calculados en Python cualquier campo numérico
+    de portfolio_summary que el LLM haya devuelto como null/None."""
+    summary = data.get("portfolio_summary")
+    if not isinstance(summary, dict):
+        data["portfolio_summary"] = dict(computed)
+        return data
+    for field, value in computed.items():
+        if summary.get(field) is None:
+            summary[field] = value
+    return data
 
 
 def call_ollama(context: str, attempt: int) -> str:
@@ -430,7 +453,7 @@ def main():
 
     print(f"🤖 Portfolio Agent | modelo: {MODEL} | {len(portfolio)} posiciones", file=sys.stderr)
 
-    context = compress_portfolio(market_data, portfolio)
+    context, computed_totals = compress_portfolio(market_data, portfolio)
     print(f"   Contexto: {len(context):,} chars", file=sys.stderr)
 
     # Truncar solo si excede el límite de la ventana de contexto del modelo.
@@ -446,6 +469,7 @@ def main():
             raw    = call_ollama(context, attempt)
             data   = extract_json(raw)
             data   = fill_defaults(data, portfolio)
+            data   = patch_summary_nulls(data, computed_totals)
             errors = validate(data)
 
             if errors:
