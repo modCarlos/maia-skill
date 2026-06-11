@@ -31,7 +31,7 @@ MAX_RETRIES  = 3
 # Aumentar MAIA_NUM_PREDICT en GPU potente (ej: export MAIA_NUM_PREDICT=4000)
 NUM_PREDICT  = int(os.getenv("MAIA_NUM_PREDICT", "1500"))
 # Aumentar MAIA_TIMEOUT para modelos grandes como 32b (ej: export MAIA_TIMEOUT=900)
-TIMEOUT      = int(os.getenv("MAIA_TIMEOUT", "480"))
+TIMEOUT      = int(os.getenv("MAIA_TIMEOUT", "900"))
 
 REPO = Path(__file__).parent.parent
 DATA_DIR    = REPO / "data"
@@ -373,7 +373,7 @@ def call_ollama(context: str, attempt: int) -> str:
             "options": {
                 "temperature": 0.2,
                 "num_predict": NUM_PREDICT,
-                "num_ctx": 8192,  # context window explícito (default Ollama = 2048, insuficiente)
+                "num_ctx": int(os.getenv("MAIA_NUM_CTX", "8192")),  # reducir a 4096 en modelos 32b con poca VRAM
             },
             "stream": False,
         },
