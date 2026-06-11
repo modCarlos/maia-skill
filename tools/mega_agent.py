@@ -28,8 +28,11 @@ if hasattr(sys.stderr, "reconfigure"):
 OLLAMA_URL   = "http://localhost:11434/api/chat"  # native API — más estable que /v1
 MODEL        = os.getenv("MAIA_MODEL", "qwen2.5:14b")
 MAX_RETRIES  = 3
-# Aumentar MAIA_NUM_PREDICT en GPU potente (ej: export MAIA_NUM_PREDICT=4000)
-NUM_PREDICT  = int(os.getenv("MAIA_NUM_PREDICT", "1500"))
+# Un JSON completo de 10-12 picks con todos los campos ocupa ~3500-4000 tokens.
+# 1500 es insuficiente — el modelo se trunca y retorna 1-2 picks.
+NUM_PREDICT  = int(os.getenv("MAIA_NUM_PREDICT", "4000"))
+# Mínimo de picks aceptables antes de forzar reintento (truncación detectada)
+MIN_PICKS    = int(os.getenv("MAIA_MIN_PICKS", "8"))
 # Aumentar MAIA_TIMEOUT para modelos grandes como 32b (ej: export MAIA_TIMEOUT=900)
 TIMEOUT      = int(os.getenv("MAIA_TIMEOUT", "900"))
 
@@ -352,14 +355,22 @@ def build_context(risk_profile: str) -> str:
     return "\n".join(parts)
 
 
-def call_ollama(context: str, attempt: int) -> str:
+def call_ollama(context: str, attempt: int, truncated: bool = False) -> str:
     correction = ""
     if attempt > 1:
-        correction = (
-            f"\n\n⚠️ ATTEMPT {attempt}/{MAX_RETRIES}: Previous output was invalid. "
-            "You MUST output ONLY a valid JSON object. "
-            "Include ALL required fields. Do NOT truncate. Do NOT wrap in markdown."
-        )
+        if truncated:
+            correction = (
+                f"\n\n⚠️ ATTEMPT {attempt}/{MAX_RETRIES}: Previous output was TRUNCATED — "
+                f"you stopped before generating all picks. "
+                f"You MUST output ALL 10-12 picks in risk_adjusted_picks. "
+                "Output ONLY the complete JSON object. Do NOT stop early. Do NOT wrap in markdown."
+            )
+        else:
+            correction = (
+                f"\n\n⚠️ ATTEMPT {attempt}/{MAX_RETRIES}: Previous output was invalid. "
+                "You MUST output ONLY a valid JSON object. "
+                "Include ALL required fields. Do NOT truncate. Do NOT wrap in markdown."
+            )
 
     # Usar la API nativa de Ollama (/api/chat) — más estable que el endpoint OpenAI
     resp = requests.post(
@@ -550,10 +561,11 @@ def main():
         context = context[:6000] + "\n[...context truncated to fit model context window...]"
 
     last_error = None
+    _truncated = False
     for attempt in range(1, MAX_RETRIES + 1):
         print(f"   Intento {attempt}/{MAX_RETRIES}...", file=sys.stderr)
         try:
-            raw    = call_ollama(context, attempt)
+            raw    = call_ollama(context, attempt, truncated=_truncated)
             data   = extract_json(raw)
             data   = fill_defaults(data, risk_profile)
             errors = validate(data)
@@ -571,6 +583,18 @@ def main():
                 sys.exit(1)
 
             picks_count = len(data.get("risk_adjusted_picks", []))
+
+            # Detectar truncación: menos picks de los esperados = modelo cortado antes de terminar
+            if picks_count < MIN_PICKS and attempt < MAX_RETRIES:
+                print(
+                    f"   ⚠️  Truncación detectada ({picks_count} picks < {MIN_PICKS} mínimo) "
+                    f"— reintentando (intento {attempt + 1}/{MAX_RETRIES})...",
+                    file=sys.stderr,
+                )
+                last_error = f"output truncated: only {picks_count} picks"
+                _truncated = True
+                continue
+
             print(f"   ✅ JSON válido — {picks_count} picks generados", file=sys.stderr)
             print(json.dumps(data, indent=2, ensure_ascii=False))
             return
