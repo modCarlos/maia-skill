@@ -1,24 +1,23 @@
 {
-  "generated_at": "2026-06-11T02:30:26Z",
+  "generated_at": "2026-06-11T14:39:48Z",
   "screener": {
     "date": "2026-06-11",
     "risk_profile": "moderate",
     "add": [
-      "GILD",
       "PYPL",
-      "NEM",
       "NFLX",
-      "REGN",
+      "NEM",
+      "META",
+      "AMZN",
       "NU",
-      "BABA",
-      "AMZN",
-      "AVGO",
-      "MELI",
-      "BABA",
-      "AMZN",
-      "AVGO"
+      "CRM"
     ],
-    "hold": [],
+    "hold": [
+      "BABA",
+      "MELI",
+      "PLTR",
+      "BABA"
+    ],
     "trim": []
   }
 }
