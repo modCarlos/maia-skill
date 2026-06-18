@@ -1,39 +1,25 @@
 {
-  "generated_at": "2026-06-11T14:37:48Z",
+  "generated_at": "2026-06-18T01:56:45Z",
   "source": "SEC EDGAR",
   "top": 15,
   "symbols": [
-    "PYPL",
     "NFLX",
-    "NEM",
-    "META",
+    "CRM",
+    "MSFT",
     "BABA",
     "AMZN",
-    "NU",
-    "CRM",
-    "MELI",
+    "SONY",
     "PLTR",
+    "MRK",
     "AAPL",
+    "NEM",
     "MA",
-    "NOW",
-    "V",
-    "FCX"
+    "AMGN",
+    "RIVN",
+    "JNJ",
+    "ABBV"
   ],
   "results": [
-    {
-      "symbol": "PYPL",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2024-02-08",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001633917/000163391724000024/pypl-20231231.htm",
-      "risk_factors": [
-        "We do not intend, and undertake no obligation except as required by law, to update any of our forward-looking statements after the date of this report to reflect actual results, new information, or future events or circumstances.",
-        "Given these risks and uncertainties, readers are cautioned not to place undue reliance on such forward-looking statements.",
-        "You should read the information in this report in conjunction with the audited consolidated financial statements and the related notes that appear in this report.",
-        "was incorporated in Delaware in January 2015 and is a leading technology platform that enables digital payments and simplifies commerce experiences on behalf of merchants and consumers worldwide."
-      ],
-      "error": null
-    },
     {
       "symbol": "NFLX",
       "cik": null,
@@ -49,30 +35,30 @@
       "error": null
     },
     {
-      "symbol": "NEM",
+      "symbol": "CRM",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2025-02-21",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001164727/000116472725000011/nem-20241231.htm",
+      "filing_date": "2026-03-02",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001108524/000110852426000060/crm-20260131.htm",
       "risk_factors": [
-        "Forward-Looking Statements The foregoing discussion and analysis, as well as certain information contained elsewhere in this Annual Report, contain “forward-looking statements” within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amen...",
-        "Non-GAAP Financial Measures Non-GAAP financial measures are intended to provide additional information only and do not have any standard meaning prescribed by GAAP.",
-        "These measures should not be considered in isolation or as a substitute for measures of performance prepared in accordance with GAAP.",
-        "Unless otherwise noted, we present the non-GAAP financial measures of our continuing operations in the tables below."
+        "A manifestation of any of the following risks and uncertainties could, in circumstances we may or may not be able to accurately predict, materially and adversely affect our business and operations, growth, reputation, prospects, operating and financial results, financial condition, cash flows, liquidity and stock pr...",
+        "Some of the factors, events and contingencies discussed below may have occurred in the past, but the disclosures below are not representations as to whether or not the factors, events or contingencies have occurred in the past and instead reflect our beliefs and opinions as to the factors, events or contingencies th...",
+        "Other events, factors or uncertainties that we do not currently anticipate or that we currently deem immaterial also may affect our business, financial condition, results of operations, cash flows, other key metrics and the trading price of our common stock.",
+        "Therefore, you should not consider the following risks to be a complete statement of all the potential risks or uncertainties that we face."
       ],
       "error": null
     },
     {
-      "symbol": "META",
+      "symbol": "MSFT",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2025-01-30",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001326801/000132680125000017/meta-20241231.htm",
+      "filing_date": "2023-07-27",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000789019/000095017023035122/msft-20230630.htm",
       "risk_factors": [
-        "It is not possible for our management to predict all risks, nor can we assess the impact of all factors on our business or the extent to which any factor, or combination of factors, may cause actual results to differ materially from those contained in any forward-looking statements we may make.",
-        "In light of these risks, uncertainties and assumptions, the future events and trends discussed in this Annual Report on Form 10-K may not occur and actual results could differ materially and adversely from those anticipated or implied in the forward-looking statements.",
-        "We undertake no obligation to revise or publicly release the results of any revision to these forward-looking statements, except as required by law.",
-        "Given these risks and uncertainties, readers are cautioned not to place undue reliance on such forward‑looking statements."
+        "These forward-looking statements generally are identified by the words “believe,” “project,” “expect,” “anticipate,” “estimate,” “intend,” “strategy,” “future,” “opportunity,” “plan,” “may,” “should,” “will,” “would,” “will be,” “will continue,” “will likely result,” and similar expressions.",
+        "Forward-looking statements are based on current expectations and assumptions that are subject to risks and uncertainties that may cause actual results to differ materially.",
+        "Readers are cautioned not to place undue reliance on forward-looking statements, which speak only as of the date they are made.",
+        "We undertake no obligation to update or revise publicly any forward-looking statements, whether because of new information, future events, or otherwise."
       ],
       "error": null
     },
@@ -105,44 +91,16 @@
       "error": null
     },
     {
-      "symbol": "NU",
+      "symbol": "SONY",
       "cik": null,
       "form": "20-F",
-      "filing_date": "2026-04-08",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001691493/000129281426002166/nuform20f_2025.htm",
+      "filing_date": "2024-06-25",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000313838/000119312524167500/d797371d20f.htm",
       "risk_factors": [
-        "You should not rely upon forward-looking statements as predictions of future events.",
-        "We have based the forward-looking statements contained in this annual report primarily on our current expectations and projections about future events and trends that we believe may affect our business, financial condition, results of operations, and prospects.",
-        "The outcome of the events described in these forward-looking statements is subject to risks, uncertainties, and other factors, including those described in “Item 3.",
-        "New risks and uncertainties emerge from time to time and it is not possible for us to predict all risks and uncertainties that could have an impact on the forward-looking statements contained in this annual report."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "CRM",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2026-03-02",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001108524/000110852426000060/crm-20260131.htm",
-      "risk_factors": [
-        "A manifestation of any of the following risks and uncertainties could, in circumstances we may or may not be able to accurately predict, materially and adversely affect our business and operations, growth, reputation, prospects, operating and financial results, financial condition, cash flows, liquidity and stock pr...",
-        "Some of the factors, events and contingencies discussed below may have occurred in the past, but the disclosures below are not representations as to whether or not the factors, events or contingencies have occurred in the past and instead reflect our beliefs and opinions as to the factors, events or contingencies th...",
-        "Other events, factors or uncertainties that we do not currently anticipate or that we currently deem immaterial also may affect our business, financial condition, results of operations, cash flows, other key metrics and the trading price of our common stock.",
-        "Therefore, you should not consider the following risks to be a complete statement of all the potential risks or uncertainties that we face."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "MELI",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2026-02-25",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001099590/000109959026000006/meli-20251231.htm",
-      "risk_factors": [
-        "To prevent disclosure of our proprietary information to unauthorized parties, we have also entered into non-disclosure agreements with our employees, strategic partners and suppliers.",
-        "We have licensed certain proprietary rights, such as trademarks or copyrights, to third parties in the past and expect to continue to license such rights in the future.",
-        "While we seek to ensure that our licensees maintain the quality of the Mercado Libre brand, they may take actions that could adversely affect the value of our proprietary rights or our reputation, which could have a material adverse effect on our business, results of operations and financial condition.",
-        "We could potentially face claims alleging that our technologies infringe the property rights of others.” Offices We are a Delaware corporation incorporated on October 15, 1999."
+        "Sony must overcome increasingly intense competition, which could lead to lower revenue or operating margins.",
+        "Sony has several business segments in different industries with many product and service categories, which cause it to compete with many existing and new competitors ranging from large multinational companies to highly specialized entities that focus on only one or a few businesses and also, potentially, with outsou...",
+        "These competitors may have greater financial, technical, labor and marketing resources available to them than those available to Sony.",
+        "Sony’s financial condition and operating results depend on its ability to efficiently anticipate and respond to these established and new competitors."
       ],
       "error": null
     },
@@ -161,6 +119,20 @@
       "error": null
     },
     {
+      "symbol": "MRK",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-24",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000310158/000031015826000063/mrk-20251231.htm",
+      "risk_factors": [
+        "15 Table of Contents Worldwide, all of the Company’s important products are sold under trademarks that are considered in the aggregate to be of material importance.",
+        "Trademark protection continues in some countries as long as used; in other countries, as long as registered.",
+        "Royalty income in 2025 on patent and know-how licenses and other rights amounted to $1.5 billion.",
+        "Merck also incurred royalty expenses amounting to $1.9 billion in 2025 under patent and know-how licenses it holds."
+      ],
+      "error": null
+    },
+    {
       "symbol": "AAPL",
       "cik": null,
       "form": "10-K",
@@ -171,6 +143,20 @@
         "Each of the terms the “Company” and “Apple” as used herein refers collectively to Apple Inc.",
         "Business Company Background The Company designs, manufactures and markets smartphones, personal computers, tablets, wearables and accessories, and sells a variety of related services.",
         "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "NEM",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-02-21",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001164727/000116472725000011/nem-20241231.htm",
+      "risk_factors": [
+        "Forward-Looking Statements The foregoing discussion and analysis, as well as certain information contained elsewhere in this Annual Report, contain “forward-looking statements” within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amen...",
+        "Non-GAAP Financial Measures Non-GAAP financial measures are intended to provide additional information only and do not have any standard meaning prescribed by GAAP.",
+        "These measures should not be considered in isolation or as a substitute for measures of performance prepared in accordance with GAAP.",
+        "Unless otherwise noted, we present the non-GAAP financial measures of our continuing operations in the tables below."
       ],
       "error": null
     },
@@ -189,44 +175,58 @@
       "error": null
     },
     {
-      "symbol": "NOW",
+      "symbol": "AMGN",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-01-29",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001373715/000137371526000007/now-20251231.htm",
+      "filing_date": "2025-02-14",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000318154/000031815425000010/amgn-20241231.htm",
       "risk_factors": [
-        "While forward-looking statements are based on our management’s reasonable expectations at the time that they are made, you should not rely on those statements.",
-        "We undertake no obligation to revise or update publicly any forward-looking statements for any reason, whether as a result of new information, future events or otherwise, except as may be required by law.",
-        "Business Overview ServiceNow delivers solutions that help public and private organizations govern, secure and manage artificial intelligence and digitalize and streamline workflows to drive collaboration, productivity and better experiences across the enterprise.",
-        "We offer an innovative suite of products, including AI-powered applications, and services designed to automate workflows, integrate systems and empower employees, regardless of existing systems, cloud environments or collaboration tools."
+        "8 The following table reflects our significant competitors for our principal products and is not exhaustive.",
+        "Product Territory Competitor-marketed product Competitors Prolia (1) U.S., Europe & Asia Pacific Bisphosphonates, including generics Various ENBREL U.S.",
+        "& Europe Zoledronate generics Various Repatha U.S., Europe & Asia Pacific PRALUENT Regeneron Sanofi U.S.",
+        "Bisphosphonates, including generics Various Japan Teribone Asahi Kasei Pharma KYPROLIS U.S."
       ],
       "error": null
     },
     {
-      "symbol": "V",
+      "symbol": "RIVN",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2025-11-06",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001403161/000140316125000089/v-20250930.htm",
+      "filing_date": "2025-02-24",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001874178/000187417825000007/rivn-20241231.htm",
       "risk_factors": [
-        "Except as required by law, we do not intend to update or revise any forward-looking statements as a result of new information, future events or otherwise.",
-        "Our purpose is to uplift everyone, everywhere by being the best way to pay and be paid.",
-        "Since Visa’s early days in 1958, we have been in the business of facilitating secure, reliable and efficient global commerce and money movement.",
-        "We provide transaction processing services (primarily authorization, clearing and settlement) among consumers, issuing and acquiring financial institutions and sellers in a structure we call the “four-party” model."
+        "The forward-looking statements in this Form 10-K are based upon information available to us as of the date of this Form 10-K, and while we believe such information forms a reasonable basis for such statements, such information may be limited or incomplete, and our statements should not be read to indicate that we ha...",
+        "These statements are inherently uncertain and investors are cautioned not to unduly rely upon these statements.",
+        "You should read this Form 10-K and the documents that we reference in this Form 10-K and have filed as exhibits to this Form 10-K with the understanding that our actual future results, performance, and achievements may be materially different from what we expect.",
+        "We qualify all of our forward-looking statements by these cautionary statements."
       ],
       "error": null
     },
     {
-      "symbol": "FCX",
+      "symbol": "JNJ",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-02-13",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000831259/000083125926000012/fcx-20251231.htm",
+      "filing_date": "2024-02-16",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000200406/000020040624000013/jnj-20231231.htm",
       "risk_factors": [
-        "GENERAL We are a leading international metals company with the objective of being foremost in copper.",
-        "Headquartered in Phoenix, Arizona, we operate large, long-lived, geographically diverse assets with significant proven and probable mineral reserves of copper, gold and molybdenum.",
-        "Our portfolio of assets includes the Grasberg minerals district in Indonesia, one of the world’s largest copper and gold deposits; and significant operations in the U.S.",
-        "and South America, including the large-scale Morenci minerals district in Arizona and the Cerro Verde operation in Peru."
+        "The Company seeks to identify, manage and mitigate risks to our business, but uncertainties and risks are difficult to predict and many are outside of the Company’s control and cannot therefore be eliminated.",
+        "In addition to the other information in this report and the Company’s other filings with the SEC, investors should consider carefully the factors set forth below.",
+        "Investors should be aware that it is not possible to predict or identify all such factors and that the following is not meant to be a complete discussion of all potential risks or uncertainties.",
+        "If known or unknown risks or uncertainties materialize, the Company’s business, results of operations or financial condition could be adversely affected, potentially in a material way."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "ABBV",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-20",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115226000008/abbv-20251231.htm",
+      "risk_factors": [
+        "Any of the following risks could materially and adversely affect AbbVie's results of operations, financial condition or cash flows.",
+        "Additional risks and uncertainties not presently known to AbbVie or that AbbVie currently believes to be immaterial may also adversely affect its business.",
+        "In addition, past financial performance may not be a reliable indicator of future performance and historical trends should not be used to anticipate results or trends in future periods.",
+        "If any of the following risks and uncertainties develops into actual events, these events could have a material adverse effect on AbbVie's business, results of operations, financial condition or cash flows."
       ],
       "error": null
     }
