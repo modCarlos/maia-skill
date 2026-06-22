@@ -1,0 +1,21 @@
+# 70+ archivos JSON de fundamentals — generados automáticamente, no editar
+.claude/skills/investment-analysis/data/cache/
+
+# Contextos grandes generados por el pipeline
+.claude/skills/investment-analysis/data/news_context.json
+.claude/skills/investment-analysis/data/sec_risk_context.json
+.claude/skills/investment-analysis/data/market_context.json
+
+# Artefactos del dashboard
+dashboard/node_modules/
+dashboard/.next/
+dashboard/.turbo/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+env/
+
+# Git
+.git/
