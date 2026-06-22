@@ -78,8 +78,9 @@ _price_cache: dict[str, float | None] = {}
 _ticker_hist: dict[str, dict[str, tuple[float, float]]] = {}
 
 # Max % deviation between LLM entry target and real market open before a pick
-# is considered "never executed". Override via env: MAIA_ENTRY_TOLERANCE_PCT=5
-ENTRY_TOLERANCE_PCT = float(os.getenv("MAIA_ENTRY_TOLERANCE_PCT", "3.0"))
+# is considered "never executed". Override via env: MAIA_ENTRY_TOLERANCE_PCT=3
+# Lowered from 3.0 → 2.0 to match the prompt constraint (entry_price within 2% of current_price).
+ENTRY_TOLERANCE_PCT = float(os.getenv("MAIA_ENTRY_TOLERANCE_PCT", "2.0"))
 
 # ─── Vocabulary normalization ──────────────────────────────────────────────────
 
@@ -446,6 +447,18 @@ def build_prompt_summary(summary: dict) -> str:
             alpha_str = f"  alpha_vs_SPY={alpha:+.1f}%" if alpha is not None else ""
             lines.append(f"  {profile}: hit_rate={hr*100:.0f}% ({stats['picks']} picks){alpha_str}")
 
+    # Per-symbol repeat losers (compact — only symbols with >=2 consecutive losses)
+    per_symbol = summary.get("per_symbol", {})
+    repeat_losers = [
+        (sym, s) for sym, s in per_symbol.items()
+        if s.get("consecutive_losses", 0) >= 2
+    ]
+    if repeat_losers:
+        loser_parts = []
+        for sym, s in sorted(repeat_losers, key=lambda x: -x[1]["consecutive_losses"])[:5]:
+            loser_parts.append(f"{sym}({s['consecutive_losses']}L)")
+        lines.append(f"  ⚠ repeat losers: {' '.join(loser_parts)}")
+
     return "\n".join(lines)
 
 
@@ -537,15 +550,17 @@ def main() -> int:
             sessions_with_picks += 1
         all_results.extend(session_results)
 
-    # Filter by min-days
+    # Filter by min-days — used only for print summary, NOT for horizon buckets.
+    # Horizons use all_results so that --min-days doesn't silently empty shorter buckets.
+    # Example: --min-days 60 would zero out the 30d bucket if we passed filtered to aggregate().
     filtered = [r for r in all_results if r["days_elapsed"] >= args.min_days]
 
     no_data_count = sum(1 for r in all_results if r["no_data"])
     missed_entries_count = sum(1 for r in all_results if not r.get("executed", True))
 
-    # Horizons
+    # Horizons — always computed on full all_results, independent of --min-days
     by_horizon = {
-        str(h): aggregate(filtered, h) for h in HORIZONS
+        str(h): aggregate(all_results, h) for h in HORIZONS
     }
 
     # By risk profile (all days, executed picks only)
@@ -569,6 +584,40 @@ def main() -> int:
     wins = top_n(all_results, 5, best=True)
     losses = top_n(all_results, 5, best=False)
 
+    # ── Per-symbol summary: hit rate + consecutive losses ─────────────────────
+    # Used by mega_agent.py to penalize repeat losers and avoid re-recommending
+    # symbols that have failed multiple sessions in a row (e.g. CRM ADD ×3 while falling).
+    by_symbol: dict[str, list[dict]] = {}
+    for r in all_results:
+        if r.get("no_data") or not r.get("executed", True) or r.get("hit") is None:
+            continue
+        sym = r["symbol"]
+        by_symbol.setdefault(sym, []).append(r)
+
+    per_symbol: dict[str, dict] = {}
+    for sym, results in by_symbol.items():
+        # Sort chronologically to detect consecutive losses at the tail
+        sorted_r = sorted(results, key=lambda x: x["report_date"])
+        hits = sum(1 for r in sorted_r if r["hit"])
+        scores = [r["direction_score"] for r in sorted_r if r.get("direction_score") is not None]
+        alphas = [r["alpha"] for r in sorted_r if r.get("alpha") is not None]
+        # Count consecutive losses from the most recent pick backwards
+        consecutive_losses = 0
+        for r in reversed(sorted_r):
+            if not r["hit"]:
+                consecutive_losses += 1
+            else:
+                break
+        per_symbol[sym] = {
+            "sessions": len(sorted_r),
+            "hit_rate": round(hits / len(sorted_r), 3),
+            "avg_direction_score": round(sum(scores) / len(scores), 2) if scores else None,
+            "avg_alpha": round(sum(alphas) / len(alphas), 2) if alphas else None,
+            "consecutive_losses": consecutive_losses,
+            "last_recommendation": sorted_r[-1]["recommendation"],
+            "last_date": sorted_r[-1]["report_date"],
+        }
+
     summary = {
         "generated_at": today.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "sessions_evaluated": sessions_with_picks,
@@ -578,6 +627,7 @@ def main() -> int:
         "entry_tolerance_pct": ENTRY_TOLERANCE_PCT,
         "by_horizon": by_horizon,
         "by_risk_profile": profile_stats,
+        "per_symbol": per_symbol,
         "top_wins": wins,
         "top_losses": losses,
         "prompt_block": "",  # filled below

@@ -73,14 +73,23 @@ CRITICAL RULES:
 4. Each pick must have ALL required fields with correct data types
 5. Use the real price data from MARKET_CONTEXT — do not invent numbers
 6. Adapt position sizes and asset mix to the RISK_PROFILE
+7. DIVERSITY RULE: Do NOT repeat more than 6 of the same symbols from LAST_SESSION_PICKS.
+   When two candidates have comparable entry quality, prefer the one NOT in the last session.
+   Use HISTORICAL_ACCURACY per-symbol data to identify stale picks and rotate to fresh candidates.
 
 RECOMMENDATION DECISION RULES (apply these before assigning recommendation):
-- entry_quality=excellent AND analyst_upside > 20% AND RSI < 45 → recommend ADD (not HOLD)
-- entry_quality=good AND analyst_upside > 15% AND no insider selling → recommend ADD
-- entry_quality=fair OR RSI > 65 OR insider selling detected → HOLD is appropriate
-- Only use TRIM if RSI > 70 AND price is near 52-week high AND analyst_upside < 5%
-- When in doubt between ADD and HOLD with strong fundamentals, choose ADD
-- Do NOT default to HOLD simply because macro environment has uncertainty — all markets have uncertainty
+- entry_quality=excellent AND analyst_upside > 20% AND RSI < 45 → recommend ADD
+- entry_quality=good AND analyst_upside > 15% AND RSI < 55 AND no insider selling → recommend ADD
+- entry_quality=fair OR RSI > 60 OR insider selling detected → HOLD is appropriate (not ADD)
+- Use TRIM if RSI > 68 AND (price > 90% of 52-week high OR analyst_upside < 8%)
+- When in doubt between ADD and HOLD, choose HOLD — require positive conviction to ADD
+- Do NOT over-concentrate: if a symbol appeared in the previous session AND has no new catalyst, default to HOLD
+
+TARGET DISTRIBUTION PER REPORT (enforce this — check before finalizing):
+- ADD:  50–60% of picks (5–8 out of 10–13)
+- HOLD: 25–35% of picks (3–4 out of 10–13)
+- TRIM: 10–20% of picks (1–2 out of 10–13)
+If your draft has 0 TRIM picks, re-evaluate the highest-RSI and most-overextended positions and mark at least 1 as TRIM.
 
 REQUIRED JSON STRUCTURE:
 {
@@ -116,7 +125,7 @@ REQUIRED JSON STRUCTURE:
       "recommendation": "ADD|HOLD|TRIM",
       "reasoning": "<specific reasoning with data from MARKET_CONTEXT>",
       "position_size": <percentage of portfolio as number>,
-      "entry_price": <number — use current_price from data>,
+      "entry_price": <number — MUST be within 2% of current_price from MARKET_CONTEXT. Do NOT set a pullback target below current price hoping the stock dips — use the actual market price shown in SCREENED_CANDIDATES>,
       "stop_loss": <number>,
       "target_12m": <number>,
       "risk_reward_ratio": <number>,
@@ -332,6 +341,57 @@ def build_context(risk_profile: str) -> str:
         prompt_block = backtest.get("prompt_block", "")
         if prompt_block:
             parts += ["", prompt_block]
+
+        # Inyectar penalizaciones por símbolo: evitar repetir losers consecutivos
+        per_symbol = backtest.get("per_symbol", {})
+        if per_symbol:
+            penalty_lines = []
+            caution_lines = []
+            for sym, stats in per_symbol.items():
+                consec = stats.get("consecutive_losses", 0)
+                hr = stats.get("hit_rate", 1.0)
+                sessions = stats.get("sessions", 1)
+                avg_score = stats.get("avg_direction_score")
+                if consec >= 2:
+                    # Hard penalty: 2+ consecutive losses → require strong new catalyst
+                    penalty_lines.append(
+                        f"  ⚠ {sym}: {consec} consecutive losses "
+                        f"(hit_rate={hr*100:.0f}% over {sessions} sessions"
+                        + (f", avg_score={avg_score:+.1f}%" if avg_score is not None else "")
+                        + ") — only ADD if RSI < 40 AND new fundamental catalyst present; otherwise HOLD or TRIM"
+                    )
+                elif consec == 1 and sessions >= 2 and hr < 0.4:
+                    # Soft caution: losing streak starting + poor overall record
+                    caution_lines.append(
+                        f"  ~ {sym}: 1 recent loss, overall hit_rate={hr*100:.0f}% — prefer HOLD over ADD"
+                    )
+            if penalty_lines:
+                parts += ["", "=== SYMBOLS WITH REPEATED LOSSES (high bar to ADD) ==="] + penalty_lines
+            if caution_lines:
+                parts += ["", "=== SYMBOLS WITH CAUTION FLAG ==="] + caution_lines
+
+    # Inyectar picks de la última sesión para enforcer DIVERSITY RULE (regla 7)
+    history_dir = REPO / "output" / "history"
+    if history_dir.exists():
+        history_files = sorted(history_dir.glob("*.json"))
+        if history_files:
+            try:
+                last_report = json.loads(history_files[-1].read_text(encoding="utf-8"))
+                last_picks = [
+                    p.get("symbol", "").upper().strip()
+                    for p in last_report.get("risk_adjusted_picks", [])
+                    if p.get("symbol")
+                ]
+                last_date = history_files[-1].stem  # YYYY-MM-DD from filename
+                if last_picks:
+                    parts += [
+                        "",
+                        f"LAST_SESSION_PICKS ({last_date}): {' '.join(last_picks)}",
+                        f"→ Max 6 of these {len(last_picks)} symbols may appear again. "
+                        "Rotate at least " + str(max(1, len(last_picks) - 6)) + " symbol(s) to fresh candidates from SCREENED_CANDIDATES.",
+                    ]
+            except Exception:
+                pass
 
     # Inyectar holdings del portfolio para coherencia screener↔portfolio
     portfolio_path = REPO / "data" / "portfolio.json"
