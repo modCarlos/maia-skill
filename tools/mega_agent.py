@@ -26,7 +26,7 @@ if hasattr(sys.stderr, "reconfigure"):
 
 # ─── Config ───────────────────────────────────────────────────────────────────
 OLLAMA_URL   = "http://localhost:11434/api/chat"  # native API — más estable que /v1
-MODEL        = os.getenv("MAIA_MODEL", "qwen2.5:14b")
+MODEL        = os.getenv("MAIA_MODEL", "maia-agent")
 MAX_RETRIES  = 3
 # Un JSON completo de 10-12 picks con todos los campos ocupa ~3500-4000 tokens.
 # 1500 es insuficiente — el modelo se trunca y retorna 1-2 picks.
@@ -622,11 +622,27 @@ def validate(data: dict) -> list[str]:
 # ─── Main ────────────────────────────────────────────────────────────────────
 
 def main():
-    risk_profile = sys.argv[1] if len(sys.argv) > 1 else "moderate"
+    import argparse
+    parser = argparse.ArgumentParser(description="MegaAgent local — Ollama strategy synthesis")
+    parser.add_argument("risk_profile", nargs="?", default="moderate",
+                        help="Risk profile: conservative | moderate | aggressive")
+    parser.add_argument("--context-file", metavar="FILE",
+                        help="Pre-built context file from pipeline.py (skips build_context)")
+    args = parser.parse_args()
+    risk_profile = args.risk_profile
+
     print(f"🤖 MegaAgent local | modelo: {MODEL} | perfil: {risk_profile}", file=sys.stderr)
 
-    context = build_context(risk_profile)
-    print(f"   Contexto construido ({len(context):,} chars)", file=sys.stderr)
+    if args.context_file:
+        ctx_path = Path(args.context_file)
+        if not ctx_path.exists():
+            print(f"   ❌ context-file no encontrado: {ctx_path}", file=sys.stderr)
+            sys.exit(1)
+        context = ctx_path.read_text(encoding="utf-8")
+        print(f"   Contexto cargado desde {ctx_path} ({len(context):,} chars)", file=sys.stderr)
+    else:
+        context = build_context(risk_profile)
+        print(f"   Contexto construido ({len(context):,} chars)", file=sys.stderr)
 
     # Truncar contexto si es demasiado largo para el context window del modelo
     if len(context) > 6000:

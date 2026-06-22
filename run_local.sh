@@ -1,22 +1,25 @@
 #!/bin/bash
-# run_local.sh — Pipeline completo de Tododeia con Ollama (sin cloud)
+# run_local.sh — Pipeline completo de Tododeia v2 con Ollama (sin cloud)
 # Uso: bash run_local.sh [conservative|moderate|aggressive]
 #
 # Requiere:
-#   - Ollama corriendo con qwen2.5:14b (u otro modelo vía MAIA_MODEL)
+#   - Ollama corriendo con maia-agent (o MAIA_MODEL=qwen3:14b)
 #   - pip3 install yfinance pandas numpy requests
 #   - Conexión a internet (para yfinance + news + SEC)
+#   - Para crear maia-agent: ollama create maia-agent -f Modelfile.qwen3
+#     (requiere OLLAMA_FLASH_ATTENTION=1 y OLLAMA_KV_CACHE_TYPE=q8_0)
 
 set -e
 
 RISK="${1:-moderate}"
 SKILL_DIR="$(cd "$(dirname "$0")" && pwd)"
-MODEL="${MAIA_MODEL:-qwen2.5:14b}"
-# MAIA_NUM_PREDICT: tokens máximos a generar. Aumentar en GPU rápida (ej: 4000).
-export MAIA_NUM_PREDICT="${MAIA_NUM_PREDICT:-1500}"
+MODEL="${MAIA_MODEL:-maia-agent}"
+OUT_DIR="${TODODEIA_OUT_DIR:-/tmp/tododeia}"
+DASHBOARD_PORT="${DASHBOARD_PORT:-3420}"
+export MAIA_NUM_PREDICT="${MAIA_NUM_PREDICT:-4000}"
 
 echo ""
-echo "🚀 Tododeia Local | Perfil: $RISK | Modelo: $MODEL"
+echo "🚀 Tododeia v2 | Perfil: $RISK | Modelo: $MODEL"
 echo "────────────────────────────────────────────────"
 echo ""
 
@@ -31,76 +34,73 @@ if ! curl -s http://localhost:11434/api/tags > /dev/null 2>&1; then
 fi
 echo "✅ Ollama activo"
 
-# Modelo disponible
+# Modelo disponible — si maia-agent no existe, sugerir qwen3:14b como fallback
 if ! curl -s http://localhost:11434/api/tags | python3 -c "
 import sys, json
 models = [m['name'] for m in json.load(sys.stdin).get('models', [])]
 target = '$MODEL'
-# Verificar con y sin tag :latest
 if not any(m == target or m.startswith(target.split(':')[0]) for m in models):
-    print(f'Modelo $MODEL no encontrado. Modelos disponibles: {models}')
+    print(f'Modelo {target} no encontrado.')
+    if target == 'maia-agent':
+        print('  → Para crearlo: cd $(dirname \$0) && ollama create maia-agent -f Modelfile.qwen3')
+        print('  → Alternativa:  MAIA_MODEL=qwen3:14b bash run_local.sh $RISK')
+    else:
+        print(f'  → Instálalo con: ollama pull {target}')
     exit(1)
 " 2>/dev/null; then
-    echo "❌ Modelo $MODEL no encontrado."
-    echo "   Ejecuta: ollama pull $MODEL"
     exit 1
 fi
 echo "✅ Modelo $MODEL disponible"
 echo ""
 
 cd "$SKILL_DIR"
-mkdir -p data output/history dashboard/public/data
+mkdir -p "$OUT_DIR"
 
-# ── 1. Pre-fetch de datos de mercado ─────────────────────────────────────────
-echo "📊 Fase 1 — Fetch de datos (internet requerido)..."
-echo "  → pre_fetch.py (yfinance, ~30-60s)..."
-python3 tools/pre_fetch.py
+# ── 1. Pipeline determinístico ────────────────────────────────────────────────
+# Ejecuta en orden: pre_fetch → news/sec (paralelo) → accuracy →
+# build_sectors → update_stops → compress_context → pipeline_meta.json
 
-echo "  → news_fetch.py + sec_risk_fetch.py (paralelo)..."
-python3 tools/news_fetch.py --no-reddit &  # Reddit bloqueado/rate-limited → desactivado
-PID_NEWS=$!
-python3 tools/sec_risk_fetch.py &
-PID_SEC=$!
-wait $PID_NEWS $PID_SEC
-echo "  ✅ Datos de mercado descargados"
-echo ""
-
-# ── 1b. Backtest histórico ────────────────────────────────────────────────────
-echo "📈 Fase 1b — Backtest histórico..."
-python3 tools/backtest.py || echo "  ⚠️  backtest.py falló — continuando sin datos históricos"
+echo "📊 Fase 1 — Pipeline determinístico..."
+echo "  (pre_fetch + news + SEC + accuracy + sectors + compress)"
+python3 tools/pipeline.py --risk-profile "$RISK" --watchlist all --out-dir "$OUT_DIR"
+echo "  ✅ Pipeline completo → $OUT_DIR"
 echo ""
 
 # ── 2. MegaAgent local (Ollama) ───────────────────────────────────────────────
-echo "🤖 Fase 2 — MegaAgent (Ollama, ~90-180s)..."
-python3 tools/mega_agent.py "$RISK" > /tmp/tododeia_report.json
+# Lee el contexto pre-comprimido — no necesita re-fetchar datos
+
+echo "🤖 Fase 2 — MegaAgent estrategia (Ollama, ~90-180s)..."
+python3 tools/mega_agent.py "$RISK" --context-file "$OUT_DIR/mega_context.txt" \
+    > "$OUT_DIR/strategy.json"
+echo "  ✅ Estrategia generada → $OUT_DIR/strategy.json"
 echo ""
 
-# ── 3. Validar y guardar reporte ─────────────────────────────────────────────
-echo "📝 Fase 3 — Guardando reporte..."
-python3 tools/write_report.py /tmp/tododeia_report.json
+# ── 3. Ensamblar reporte ──────────────────────────────────────────────────────
+# Normaliza picks, recomputa scores, aplica límites de correlación,
+# escribe history + dashboard JSON vía write_report.py
 
-# Actualizar shared_state.json para que portfolio_agent lo lea en el siguiente run
-python3 tools/update_shared_state.py || echo "  ⚠️  update_shared_state.py falló — continuando"
+echo "📝 Fase 3 — Ensamblando reporte final..."
+python3 tools/assemble_report.py \
+    --sectors  "$OUT_DIR/sectors.json" \
+    --strategy "$OUT_DIR/strategy.json" \
+    --meta     "$OUT_DIR/pipeline_meta.json"
+echo "  ✅ Reporte ensamblado"
 echo ""
 
-# ── 4. Dashboard ─────────────────────────────────────────────────────────────
+# ── 4. Servir dashboard ───────────────────────────────────────────────────────
+
 echo "✅ Pipeline completo."
 echo ""
 
-DASHBOARD_PORT="${DASHBOARD_PORT:-3420}"
-
-# Verificar si ya hay un servidor corriendo en el puerto
 if curl -s "http://localhost:$DASHBOARD_PORT" > /dev/null 2>&1; then
     echo "📈 Dashboard ya activo → http://localhost:$DASHBOARD_PORT"
     echo "   (recarga la página para ver los nuevos datos)"
 else
     echo "🌐 Iniciando dashboard en http://localhost:$DASHBOARD_PORT ..."
-    cd "$SKILL_DIR/dashboard"
-    npm run dev -- -p "$DASHBOARD_PORT" &
+    python3 tools/serve_report.py --port "$DASHBOARD_PORT" &
     DASHBOARD_PID=$!
     echo "   PID: $DASHBOARD_PID (Ctrl+C para detener)"
     echo ""
-    # Esperar a que arranque
     for i in $(seq 1 15); do
         sleep 1
         if curl -s "http://localhost:$DASHBOARD_PORT" > /dev/null 2>&1; then

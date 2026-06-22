@@ -1,4 +1,4 @@
-FROM dengcao/Qwen3-14B:Q5_K_M
+FROM qwen3:14b
 
 # ─── VRAM budget con Flash Attention + KV cache q8_0 ───
 # Pesos Q4_K_M: ~9.4GB
