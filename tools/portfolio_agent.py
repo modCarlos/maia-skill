@@ -26,7 +26,7 @@ if hasattr(sys.stderr, "reconfigure"):
 
 # ─── Config ───────────────────────────────────────────────────────────────────
 OLLAMA_URL  = "http://localhost:11434/api/chat"
-MODEL       = os.getenv("MAIA_MODEL", "qwen2.5:14b")
+MODEL       = os.getenv("MAIA_MODEL", "maia-agent")
 MAX_RETRIES = 3
 # Aumentar MAIA_NUM_PREDICT en GPU potente (ej: export MAIA_NUM_PREDICT=4000)
 NUM_PREDICT = int(os.getenv("MAIA_NUM_PREDICT", "1500"))
