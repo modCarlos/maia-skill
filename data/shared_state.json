@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T18:33:13Z",
+  "generated_at": "2026-06-22T22:34:10Z",
   "screener": {
     "date": "2026-06-22",
     "risk_profile": "moderate",
@@ -7,19 +7,17 @@
       "NFLX",
       "CRM",
       "MSFT",
-      "SONY",
-      "OXY",
-      "XOM",
-      "CVX",
       "PLTR",
-      "BABA"
+      "SONY",
+      "XOM",
+      "OXY"
     ],
     "hold": [
-      "AMZN",
-      "NFLX"
+      "CVX",
+      "BABA"
     ],
     "trim": [
-      "CVX"
+      "MELI"
     ]
   }
 }

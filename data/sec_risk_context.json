@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-06-22T18:30:59Z",
+  "generated_at": "2026-06-22T22:32:11Z",
   "source": "SEC EDGAR",
   "top": 15,
   "symbols": [
     "NFLX",
     "CRM",
     "MSFT",
+    "PLTR",
     "BABA",
     "SONY",
-    "OXY",
     "XOM",
+    "OXY",
     "CVX",
-    "PLTR",
-    "AMZN",
     "MELI",
+    "IBM",
     "MA",
     "MRK",
-    "JNJ",
-    "TSLA"
+    "TSLA",
+    "JNJ"
   ],
   "results": [
     {
@@ -63,6 +63,20 @@
       "error": null
     },
     {
+      "symbol": "PLTR",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-02-18",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001321655/000132165525000022/pltr-20241231.htm",
+      "risk_factors": [
+        "You should carefully consider the risks and uncertainties described below, together with all of the other information in this Annual Report on Form 10-K, including the section titled “Management’s Discussion and Analysis of Financial Condition and Results of Operations” and our consolidated financial statements and...",
+        "Our business, financial condition, results of operations, or prospects could also be harmed by risks and uncertainties not currently known to us or that we currently do not believe are material.",
+        "If any of the risks actually occur, our business, financial condition, results of operations, and prospects could be adversely affected.",
+        "In that event, the trading price of our Class A common stock could decline, and you could lose part or all of your investment."
+      ],
+      "error": null
+    },
+    {
       "symbol": "BABA",
       "cik": null,
       "form": "20-F",
@@ -91,20 +105,6 @@
       "error": null
     },
     {
-      "symbol": "OXY",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2024-02-14",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000797468/000079746824000034/oxy-20231231.htm",
-      "risk_factors": [
-        "Occidental continues to be a member of One Mind at Work, an employer coalition dedicated to implementing a gold standard for workplace mental health by combating stigma, improving access to treatment and prevention services and fostering a psychologically safe culture.",
-        "In 2023, Occidental launched an enhanced mental health benefit through Lyra Health.",
-        "Lyra Health provides cost-free mental and emotional healthcare that is effective, convenient and personalized to all employees and their dependents.",
-        "Lyra Health professionals provide virtual or in-person support for a variety of mental health concerns including anxiety, depression, stress management, parenting challenges, relationship conflicts and sleep problems."
-      ],
-      "error": null
-    },
-    {
       "symbol": "XOM",
       "cik": null,
       "form": "10-K",
@@ -115,6 +115,20 @@
         "Oil, gas, petrochemical, and product prices and margins in turn depend on local, regional, and global events or conditions that affect supply and demand for the relevant commodity or product.",
         "Any material decline in oil or natural gas prices could have a material adverse effect on the Company’s operations, results, financial condition, and proved reserves, especially in the Upstream segment.",
         "On the other hand, a material increase in oil or natural gas prices could have a material adverse effect on the Company’s operations and results, especially in the Energy Products, Chemical Products, and Specialty Products segments."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "OXY",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2024-02-14",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000797468/000079746824000034/oxy-20231231.htm",
+      "risk_factors": [
+        "Occidental continues to be a member of One Mind at Work, an employer coalition dedicated to implementing a gold standard for workplace mental health by combating stigma, improving access to treatment and prevention services and fostering a psychologically safe culture.",
+        "In 2023, Occidental launched an enhanced mental health benefit through Lyra Health.",
+        "Lyra Health provides cost-free mental and emotional healthcare that is effective, convenient and personalized to all employees and their dependents.",
+        "Lyra Health professionals provide virtual or in-person support for a variety of mental health concerns including anxiety, depression, stress management, parenting challenges, relationship conflicts and sleep problems."
       ],
       "error": null
     },
@@ -133,34 +147,6 @@
       "error": null
     },
     {
-      "symbol": "PLTR",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2025-02-18",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001321655/000132165525000022/pltr-20241231.htm",
-      "risk_factors": [
-        "You should carefully consider the risks and uncertainties described below, together with all of the other information in this Annual Report on Form 10-K, including the section titled “Management’s Discussion and Analysis of Financial Condition and Results of Operations” and our consolidated financial statements and...",
-        "Our business, financial condition, results of operations, or prospects could also be harmed by risks and uncertainties not currently known to us or that we currently do not believe are material.",
-        "If any of the risks actually occur, our business, financial condition, results of operations, and prospects could be adversely affected.",
-        "In that event, the trading price of our Class A common stock could decline, and you could lose part or all of your investment."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "AMZN",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2026-02-06",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001018724/000101872426000004/amzn-20251231.htm",
-      "risk_factors": [
-        "We are guided by four principles: customer obsession rather than competitor focus, passion for invention, commitment to operational excellence, and long-term thinking.",
-        "In each of our segments, we serve our primary customer sets, consisting of consumers, sellers, developers, enterprises, content creators, advertisers, and employees.",
-        "We have organized our operations into three segments: North America, International, and Amazon Web Services (“AWS”).",
-        "These segments reflect the way the Company evaluates its business performance and manages its operations."
-      ],
-      "error": null
-    },
-    {
       "symbol": "MELI",
       "cik": null,
       "form": "10-K",
@@ -171,6 +157,20 @@
         "We have licensed certain proprietary rights, such as trademarks or copyrights, to third parties in the past and expect to continue to license such rights in the future.",
         "While we seek to ensure that our licensees maintain the quality of the Mercado Libre brand, they may take actions that could adversely affect the value of our proprietary rights or our reputation, which could have a material adverse effect on our business, results of operations and financial condition.",
         "We could potentially face claims alleging that our technologies infringe the property rights of others.” Offices We are a Delaware corporation incorporated on October 15, 1999."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "IBM",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-24",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000051143/000005114326000010/ibm-20251231.htm",
+      "risk_factors": [
+        "Readers should carefully review such cautionary statements as they identify certain important factors that could cause actual results to differ materially from those in the forward-looking statements and from historical trends.",
+        "Those 2 Table of Contents cautionary statements are not exclusive and are in addition to other factors discussed elsewhere in this Form 10-K, in the company’s filings with the SEC or in materials incorporated therein by reference.",
+        "The following information is included in IBM’s 2025 Annual Report to Stockholders and is incorporated herein by reference: Segment information and revenue by classes of similar products or services—pages 65 to 68.",
+        "Information About Our Executive Officers (at February 24, 2026): Age Officer since Arvind Krishna, Chairman of the Board, President and Chief Executive Officer (1) 63 2020 Gary D."
       ],
       "error": null
     },
@@ -203,20 +203,6 @@
       "error": null
     },
     {
-      "symbol": "JNJ",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2024-02-16",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000200406/000020040624000013/jnj-20231231.htm",
-      "risk_factors": [
-        "The Company seeks to identify, manage and mitigate risks to our business, but uncertainties and risks are difficult to predict and many are outside of the Company’s control and cannot therefore be eliminated.",
-        "In addition to the other information in this report and the Company’s other filings with the SEC, investors should consider carefully the factors set forth below.",
-        "Investors should be aware that it is not possible to predict or identify all such factors and that the following is not meant to be a complete discussion of all potential risks or uncertainties.",
-        "If known or unknown risks or uncertainties materialize, the Company’s business, results of operations or financial condition could be adversely affected, potentially in a material way."
-      ],
-      "error": null
-    },
-    {
       "symbol": "TSLA",
       "cik": null,
       "form": "10-K",
@@ -227,6 +213,20 @@
         "Risks Related to Our Ability to Grow Our Business We may experience issues or delays in developing, launching and ramping the production of our products, services and features, or we may be unable to control our manufacturing costs.",
         "We are developing new technologies and services, unique manufacturing processes and design features in our products.",
         "There is no guarantee we will be able to successfully develop or timely introduce and scale these new products, services and features, or that there will be widespread consumer adoption."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "JNJ",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2024-02-16",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000200406/000020040624000013/jnj-20231231.htm",
+      "risk_factors": [
+        "The Company seeks to identify, manage and mitigate risks to our business, but uncertainties and risks are difficult to predict and many are outside of the Company’s control and cannot therefore be eliminated.",
+        "In addition to the other information in this report and the Company’s other filings with the SEC, investors should consider carefully the factors set forth below.",
+        "Investors should be aware that it is not possible to predict or identify all such factors and that the following is not meant to be a complete discussion of all potential risks or uncertainties.",
+        "If known or unknown risks or uncertainties materialize, the Company’s business, results of operations or financial condition could be adversely affected, potentially in a material way."
       ],
       "error": null
     }
