@@ -1,3 +1,4 @@
+# Pre-fetch de datos - ver SKILL.md paso 2 para el contexto completo
 #!/usr/bin/env python3
 """
 Tododeia Pre-fetch Script

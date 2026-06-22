@@ -891,5 +891,14 @@
     "buyPrice": 166.12,
     "quantity": 2,
     "buyDate": "2026-06-11T14:42:45.624Z"
+  },
+  {
+    "id": "NFLX-1782153258731",
+    "symbol": "NFLX",
+    "name": "Netflix, Inc.",
+    "sector": "Streaming",
+    "buyPrice": 73.22,
+    "quantity": 3,
+    "buyDate": "2026-06-22T18:34:18.731Z"
   }
 ]
