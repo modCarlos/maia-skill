@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T01:56:45Z",
+  "generated_at": "2026-06-22T13:59:22Z",
   "source": "SEC EDGAR",
   "top": 15,
   "symbols": [
@@ -7,17 +7,17 @@
     "CRM",
     "MSFT",
     "BABA",
-    "AMZN",
+    "XOM",
+    "OXY",
+    "CVX",
     "SONY",
+    "COP",
+    "AMZN",
     "PLTR",
-    "MRK",
-    "AAPL",
-    "NEM",
+    "TSLA",
     "MA",
-    "AMGN",
     "RIVN",
-    "JNJ",
-    "ABBV"
+    "AMGN"
   ],
   "results": [
     {
@@ -77,16 +77,44 @@
       "error": null
     },
     {
-      "symbol": "AMZN",
+      "symbol": "XOM",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-02-06",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001018724/000101872426000004/amzn-20251231.htm",
+      "filing_date": "2026-02-18",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000034088/000003408826000045/xom-20251231.htm",
       "risk_factors": [
-        "We are guided by four principles: customer obsession rather than competitor focus, passion for invention, commitment to operational excellence, and long-term thinking.",
-        "In each of our segments, we serve our primary customer sets, consisting of consumers, sellers, developers, enterprises, content creators, advertisers, and employees.",
-        "We have organized our operations into three segments: North America, International, and Amazon Web Services (“AWS”).",
-        "These segments reflect the way the Company evaluates its business performance and manages its operations."
+        "This means ExxonMobil’s operations and earnings may be significantly affected by changes in oil, gas, and petrochemical prices and by changes in margins on refined products.",
+        "Oil, gas, petrochemical, and product prices and margins in turn depend on local, regional, and global events or conditions that affect supply and demand for the relevant commodity or product.",
+        "Any material decline in oil or natural gas prices could have a material adverse effect on the Company’s operations, results, financial condition, and proved reserves, especially in the Upstream segment.",
+        "On the other hand, a material increase in oil or natural gas prices could have a material adverse effect on the Company’s operations and results, especially in the Energy Products, Chemical Products, and Specialty Products segments."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "OXY",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2024-02-14",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000797468/000079746824000034/oxy-20231231.htm",
+      "risk_factors": [
+        "Occidental continues to be a member of One Mind at Work, an employer coalition dedicated to implementing a gold standard for workplace mental health by combating stigma, improving access to treatment and prevention services and fostering a psychologically safe culture.",
+        "In 2023, Occidental launched an enhanced mental health benefit through Lyra Health.",
+        "Lyra Health provides cost-free mental and emotional healthcare that is effective, convenient and personalized to all employees and their dependents.",
+        "Lyra Health professionals provide virtual or in-person support for a variety of mental health concerns including anxiety, depression, stress management, parenting challenges, relationship conflicts and sleep problems."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "CVX",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-24",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000093410/000009341026000078/cvx-20251231.htm",
+      "risk_factors": [
+        "Refer to Management’s Discussion and Analysis of Financial Conditions and Results of Operations in Business Environment and Outlook on pages 35 through 37 for further discussion of climate change related trends and uncertainties.",
+        "Refer to Management’s Discussion and Analysis of Financial Conditions and Results of Operations on page 55 for additional information on environmental matters and their impact on Chevron, and on the company’s 2025 environmental expenditures.",
+        "Refer to page 54 and Note 24 Other Contingencies and Commitments for a discussion of environmental remediation provisions and year-end reserves.",
+        "The following disclosures reflect our beliefs and opinions as to factors that could materially and adversely affect us in the future."
       ],
       "error": null
     },
@@ -105,6 +133,34 @@
       "error": null
     },
     {
+      "symbol": "COP",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-17",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001163165/000116316526000009/cop-20251231.htm",
+      "risk_factors": [
+        "Our business could also be affected by additional risks and uncertainties not currently known to us or that we currently consider to be immaterial.",
+        "If any of these risks or other risks that are yet unknown or currently considered immaterial were to occur, our business, operating results and financial condition, as well as the value of an investment in our common stock, could be materially and adversely affected.",
+        "Risks Related to Our Industry Our operating results, our ability to execute on our strategy and the carrying value of our assets are exposed to the effects of volatile commodity prices or prolonged periods of low commodity prices.",
+        "Among the most significant factors impacting our revenues, operating results and future rate of growth are the sales prices for crude oil, bitumen, LNG, natural gas and NGLs."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "AMZN",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-06",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001018724/000101872426000004/amzn-20251231.htm",
+      "risk_factors": [
+        "We are guided by four principles: customer obsession rather than competitor focus, passion for invention, commitment to operational excellence, and long-term thinking.",
+        "In each of our segments, we serve our primary customer sets, consisting of consumers, sellers, developers, enterprises, content creators, advertisers, and employees.",
+        "We have organized our operations into three segments: North America, International, and Amazon Web Services (“AWS”).",
+        "These segments reflect the way the Company evaluates its business performance and manages its operations."
+      ],
+      "error": null
+    },
+    {
       "symbol": "PLTR",
       "cik": null,
       "form": "10-K",
@@ -119,44 +175,16 @@
       "error": null
     },
     {
-      "symbol": "MRK",
+      "symbol": "TSLA",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-02-24",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000310158/000031015826000063/mrk-20251231.htm",
+      "filing_date": "2026-01-29",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001318605/000162828026003952/tsla-20251231.htm",
       "risk_factors": [
-        "15 Table of Contents Worldwide, all of the Company’s important products are sold under trademarks that are considered in the aggregate to be of material importance.",
-        "Trademark protection continues in some countries as long as used; in other countries, as long as registered.",
-        "Royalty income in 2025 on patent and know-how licenses and other rights amounted to $1.5 billion.",
-        "Merck also incurred royalty expenses amounting to $1.9 billion in 2025 under patent and know-how licenses it holds."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "AAPL",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2025-10-31",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000320193/000032019325000079/aapl-20250927.htm",
-      "risk_factors": [
-        "Unless otherwise stated, all information presented herein is based on the Company’s fiscal calendar, and references to particular years, quarters, months or periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
-        "Each of the terms the “Company” and “Apple” as used herein refers collectively to Apple Inc.",
-        "Business Company Background The Company designs, manufactures and markets smartphones, personal computers, tablets, wearables and accessories, and sells a variety of related services.",
-        "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "NEM",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2025-02-21",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001164727/000116472725000011/nem-20241231.htm",
-      "risk_factors": [
-        "Forward-Looking Statements The foregoing discussion and analysis, as well as certain information contained elsewhere in this Annual Report, contain “forward-looking statements” within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amen...",
-        "Non-GAAP Financial Measures Non-GAAP financial measures are intended to provide additional information only and do not have any standard meaning prescribed by GAAP.",
-        "These measures should not be considered in isolation or as a substitute for measures of performance prepared in accordance with GAAP.",
-        "Unless otherwise noted, we present the non-GAAP financial measures of our continuing operations in the tables below."
+        "Risks and uncertainties not currently known to us or that we currently deem to be immaterial also may materially adversely affect our business, financial condition and operating results.",
+        "Risks Related to Our Ability to Grow Our Business We may experience issues or delays in developing, launching and ramping the production of our products, services and features, or we may be unable to control our manufacturing costs.",
+        "We are developing new technologies and services, unique manufacturing processes and design features in our products.",
+        "There is no guarantee we will be able to successfully develop or timely introduce and scale these new products, services and features, or that there will be widespread consumer adoption."
       ],
       "error": null
     },
@@ -175,20 +203,6 @@
       "error": null
     },
     {
-      "symbol": "AMGN",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2025-02-14",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000318154/000031815425000010/amgn-20241231.htm",
-      "risk_factors": [
-        "8 The following table reflects our significant competitors for our principal products and is not exhaustive.",
-        "Product Territory Competitor-marketed product Competitors Prolia (1) U.S., Europe & Asia Pacific Bisphosphonates, including generics Various ENBREL U.S.",
-        "& Europe Zoledronate generics Various Repatha U.S., Europe & Asia Pacific PRALUENT Regeneron Sanofi U.S.",
-        "Bisphosphonates, including generics Various Japan Teribone Asahi Kasei Pharma KYPROLIS U.S."
-      ],
-      "error": null
-    },
-    {
       "symbol": "RIVN",
       "cik": null,
       "form": "10-K",
@@ -203,30 +217,16 @@
       "error": null
     },
     {
-      "symbol": "JNJ",
+      "symbol": "AMGN",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2024-02-16",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000200406/000020040624000013/jnj-20231231.htm",
+      "filing_date": "2025-02-14",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000318154/000031815425000010/amgn-20241231.htm",
       "risk_factors": [
-        "The Company seeks to identify, manage and mitigate risks to our business, but uncertainties and risks are difficult to predict and many are outside of the Company’s control and cannot therefore be eliminated.",
-        "In addition to the other information in this report and the Company’s other filings with the SEC, investors should consider carefully the factors set forth below.",
-        "Investors should be aware that it is not possible to predict or identify all such factors and that the following is not meant to be a complete discussion of all potential risks or uncertainties.",
-        "If known or unknown risks or uncertainties materialize, the Company’s business, results of operations or financial condition could be adversely affected, potentially in a material way."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "ABBV",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2026-02-20",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001551152/000155115226000008/abbv-20251231.htm",
-      "risk_factors": [
-        "Any of the following risks could materially and adversely affect AbbVie's results of operations, financial condition or cash flows.",
-        "Additional risks and uncertainties not presently known to AbbVie or that AbbVie currently believes to be immaterial may also adversely affect its business.",
-        "In addition, past financial performance may not be a reliable indicator of future performance and historical trends should not be used to anticipate results or trends in future periods.",
-        "If any of the following risks and uncertainties develops into actual events, these events could have a material adverse effect on AbbVie's business, results of operations, financial condition or cash flows."
+        "8 The following table reflects our significant competitors for our principal products and is not exhaustive.",
+        "Product Territory Competitor-marketed product Competitors Prolia (1) U.S., Europe & Asia Pacific Bisphosphonates, including generics Various ENBREL U.S.",
+        "& Europe Zoledronate generics Various Repatha U.S., Europe & Asia Pacific PRALUENT Regeneron Sanofi U.S.",
+        "Bisphosphonates, including generics Various Japan Teribone Asahi Kasei Pharma KYPROLIS U.S."
       ],
       "error": null
     }
