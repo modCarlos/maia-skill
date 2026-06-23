@@ -16,10 +16,20 @@ from __future__ import annotations
 import argparse
 import html as html_lib
 import json
+import shutil
 import socket
 import subprocess
 import sys
 from pathlib import Path
+
+# Force UTF-8 output for Windows compatibility
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
+
+# On Windows, npm is npm.cmd — shutil.which resolves the correct name
+_NPM = shutil.which("npm") or "npm"
 
 SKILL_DIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = SKILL_DIR / "output"
@@ -41,7 +51,7 @@ def ensure_node_modules() -> bool:
 
     print("[serve_report] Installing dashboard dependencies…")
     proc = subprocess.run(
-        ["npm", "install", "--prefix", str(DASHBOARD_DIR)],
+        [_NPM, "install", "--prefix", str(DASHBOARD_DIR)],
         cwd=str(SKILL_DIR),
         text=True,
     )
@@ -133,7 +143,7 @@ def start_next_dashboard(port: int) -> None:
     log_path.parent.mkdir(parents=True, exist_ok=True)
     with open(log_path, "a", encoding="utf-8") as log_file:
         subprocess.Popen(
-            ["npm", "run", "dev", "--prefix", str(DASHBOARD_DIR), "--", "-p", str(port)],
+            [_NPM, "run", "dev", "--prefix", str(DASHBOARD_DIR), "--", "-p", str(port)],
             cwd=str(SKILL_DIR),
             stdout=log_file,
             stderr=log_file,
