@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-22T14:30:00Z",
+  "generated_at": "2026-06-23T12:00:00Z",
   "portfolio_summary": {
     "total_positions": 25,
     "total_cost": 35600.0,
     "total_current_value": 42147.0,
     "total_pnl": 6547.0,
     "total_pnl_pct": 18.39,
-    "overall_health": "STRONG",
-    "immediate_actions_needed": 4
+    "overall_health": "MODERATE",
+    "immediate_actions_needed": 3
   },
   "positions": [
     {
@@ -25,7 +25,7 @@
       "pnl_amount": -314.86,
       "pnl_pct": -25.9,
       "rsi_14": 30.0,
-      "week_52_high": 271.3533,
+      "week_52_high": 271.3534,
       "week_52_low": 150.12,
       "pct_from_52w_high": -44.68,
       "pct_from_52w_low": 0.0,
@@ -55,19 +55,19 @@
       },
       "trend": "downtrend",
       "news_headlines": [
-        "Asana, Commerce, and Five9 Stocks Trade Down, What You Need To Know",
-        "Salesforce Stock Is Trying—and Failing—to Avoid a 14-Day Losing Streak",
-        "James Glassman's Top 30 Stock Picks Mid-Year Recap",
-        "Price Prediction: ServiceNow Stock Will Be Worth This Much In 2027",
-        "Alphabet, Micron, SpaceX, Fervo, Salesforce, and More Stocks That Explain Today’s Market"
+        "Why Fastly (FSLY) Stock Is Nosediving",
+        "Rapid7, Braze, and Teradata Stocks Trade Down, What You Need To Know",
+        "Domo and DigitalOcean Shares Are Falling, What You Need To Know",
+        "Oracle (ORCL) Stock Trades Down, Here Is Why",
+        "Why Palantir Technologies (PLTR) Shares Are Trading Lower Today"
       ],
       "news_sentiment": "neutral",
       "error": null,
-      "action": "ADD",
-      "urgency": "LOW",
-      "position_health": "MODERATE",
-      "thesis_status": "ACTIVE",
-      "reasoning": "RSI=30 (<40), P&L=-25.9% (> -30%), analyst_upside=+67.5%, and analyst_rec=1.7 (buy). Screener recommends ADD despite current loss."
+      "action": "EXIT",
+      "urgency": "HIGH",
+      "position_health": "WEAK",
+      "thesis_status": "DETERIORATING",
+      "reasoning": "P&L=-25.9% (below -20%), RSI=30 (oversold), analyst target +67.5% but fundamentals show altman=gray and 30d=-17.22%. Thesis is at risk due to prolonged downtrend."
     },
     {
       "symbol": "NVO",
@@ -92,8 +92,8 @@
       "pe_ratio": 10.769953,
       "forward_pe": 13.880218,
       "peg_ratio": 3.13,
-      "analyst_target": 47.00695,
-      "analyst_upside": 2.46,
+      "analyst_target": 46.993084,
+      "analyst_upside": 2.43,
       "recommendation_mean": 2.35714,
       "altman_z": {
         "score": 2.15,
@@ -123,7 +123,7 @@
       "urgency": "HIGH",
       "position_health": "WEAK",
       "thesis_status": "INVALIDATED",
-      "reasoning": "P&L=-29.8% (<-25%), RSI=60.7, analyst_upside=+2.5%, and fundamentals show PEG=3.13 (overvalued). Deteriorating fundamentals with bearish news."
+      "reasoning": "P&L=-29.8% (below -25%), RSI=60.7, analyst target +2.4%. Fundamentals show altman=gray and piotroski=4/9. Deteriorating fundamentals invalidate thesis."
     },
     {
       "symbol": "BABA",
@@ -148,8 +148,8 @@
       "pe_ratio": 16.124424,
       "forward_pe": 11.392922,
       "peg_ratio": 0.37,
-      "analyst_target": 191.53793,
-      "analyst_upside": 82.47,
+      "analyst_target": 191.34282,
+      "analyst_upside": 82.28,
       "recommendation_mean": 1.36585,
       "altman_z": {
         "score": 1.57,
@@ -174,11 +174,11 @@
       ],
       "news_sentiment": "neutral",
       "error": null,
-      "action": "ADD",
-      "urgency": "LOW",
-      "position_health": "MODERATE",
-      "thesis_status": "ACTIVE",
-      "reasoning": "RSI=23.4 (<40), P&L=-13.3% (> -30%), analyst_upside=+82.5%, and analyst_rec=1.4 (buy). Strong upside potential despite altman=distress."
+      "action": "TRIM",
+      "urgency": "MEDIUM",
+      "position_health": "WEAK",
+      "thesis_status": "DETERIORATING",
+      "reasoning": "P&L=-13.3%, RSI=23.4 (oversold), altman=distress, piotroski=3/9. Analyst target +82.3% but fundamentals are weak."
     },
     {
       "symbol": "NFLX",
@@ -225,11 +225,11 @@
       },
       "trend": "downtrend",
       "news_headlines": [
+        "Netflix (NFLX) Dips More Than Broader Market: What You Should Know",
         "S&P 500, Nasdaq Drop As SpaceX, Broader Tech Weakness Outweighs US-Iran Hopes — SPCX, GOOGL, NFLX, COIN, MU In Focus",
         "Update: Sliding Communication Services, Surging Treasury Yields Push US Equity Indexes in Mixed Territory",
         "Update: US Equity Indexes Mixed as Communication Services Sector Slides, Treasury Yields Surge",
-        "After Missing Out on Roku, Netflix Claims It Won't Buy Lionsgate. Here's Why the Market Hates That Answer.",
-        "NFLX Stock Sinks To Near 52-Week Low: Retail Traders Think It Is A Great Buying Opportunity"
+        "After Missing Out on Roku, Netflix Claims It Won't Buy Lionsgate. Here's Why the Market Hates That Answer."
       ],
       "news_sentiment": "bearish",
       "error": null,
@@ -237,7 +237,7 @@
       "urgency": "LOW",
       "position_health": "MODERATE",
       "thesis_status": "ACTIVE",
-      "reasoning": "RSI=21.4 (<40), P&L=-7.1% (> -30%), analyst_upside=+56.6%, and analyst_rec=1.7 (buy). Screener recommends ADD despite bearish news."
+      "reasoning": "RSI=21.4 (<40), P&L=-7.1% (> -30%), analyst target +56.6%. Screener recommends ADD despite bearish news."
     },
     {
       "symbol": "ORCL",
@@ -282,19 +282,19 @@
       },
       "trend": "uptrend",
       "news_headlines": [
+        "Oracle (ORCL) Stock Trades Down, Here Is Why",
         "Oracle (ORCL) Cuts 21,000 Jobs As It Prepares $50 Billion AI Buildout",
         "3 Highly Ranked Alternative Energy Stocks to Buy Now",
         "Oracle workforce shrinks by about 21,000 employees amid AI adoption",
-        "Big Tech’s $750 Billion AI Debt Binge Means Investors Now Have to Watch the Bond Market",
-        "Can Oracle Reach $800 Per Share by 2030? Here’s How It Can Happen"
+        "Big Tech’s $750 Billion AI Debt Binge Means Investors Now Have to Watch the Bond Market"
       ],
       "news_sentiment": "bearish",
       "error": null,
-      "action": "ADD",
+      "action": "HOLD",
       "urgency": "LOW",
       "position_health": "MODERATE",
       "thesis_status": "ACTIVE",
-      "reasoning": "RSI=39.0 (<40), P&L=-8.3% (> -30%), analyst_upside=+44.3%, and analyst_rec=1.5 (buy). Strong fundamentals with piotroski=5/9."
+      "reasoning": "RSI=39.0 (neutral), P&L=-8.3%, analyst target +44.3%. Fundamentals stable with piotroski=5/9."
     },
     {
       "symbol": "META",
@@ -341,17 +341,17 @@
       "news_headlines": [
         "Stock market today: S&P 500, Nasdaq slide as Big Tech, SpaceX hammered",
         "Abbvie acquiring Apogee for $10.9B, Coca-Cola vs. IRS in appeals court",
-        "Stock Market Today, June 22: Alphabet Falls as AlphaFold Co-Creator’s Exit Raises AI Talent Concerns",
-        "Analyst Trims Price Target on Entergy (ETR). Here is Why",
-        "Meta Names Indian Entrepreneur Kunal Shah As WhatsApp Chief"
+        "Elon Musk’s X Executive Trolls Meta For Its Workplace Woes, Extends Better ‘Snack Budget’ Offers To Neglected Employees",
+        "Meta Platforms (META) Sees a More Significant Dip Than Broader Market: Some Facts to Know",
+        "Stock Market Today, June 22: Alphabet Falls as AlphaFold Co-Creator’s Exit Raises AI Talent Concerns"
       ],
-      "news_sentiment": "bullish",
+      "news_sentiment": "neutral",
       "error": null,
-      "action": "ADD",
+      "action": "HOLD",
       "urgency": "LOW",
       "position_health": "MODERATE",
       "thesis_status": "ACTIVE",
-      "reasoning": "RSI=39.5 (<40), P&L=-11.8% (> -30%), analyst_upside=+46.7%, and analyst_rec=1.3 (buy). Bullish news despite 30d downtrend."
+      "reasoning": "RSI=39.5 (neutral), P&L=-11.8%, analyst target +46.7%. Altman=safe and piotroski=5/9."
     },
     {
       "symbol": "MSFT",
@@ -397,18 +397,18 @@
       "trend": "downtrend",
       "news_headlines": [
         "Memory's price surge threatens Apple's 'magic formula' — and the economy: WSJ reporter",
-        "Asana, Commerce, and Five9 Stocks Trade Down, What You Need To Know",
-        "Stock Market Today, June 22: Alphabet Falls as AlphaFold Co-Creator’s Exit Raises AI Talent Concerns",
-        "Microsoft and Chevron plan one of the largest gas-powered data center projects in US",
-        "Stock Market Today: Dow Up As Bessent Makes This Iran Move; SpaceX Craters (Live Coverage)"
+        "Why Fastly (FSLY) Stock Is Nosediving",
+        "Rapid7, Braze, and Teradata Stocks Trade Down, What You Need To Know",
+        "Domo and DigitalOcean Shares Are Falling, What You Need To Know",
+        "Oracle (ORCL) Stock Trades Down, Here Is Why"
       ],
       "news_sentiment": "bullish",
       "error": null,
       "action": "ADD",
       "urgency": "LOW",
-      "position_health": "MODERATE",
+      "position_health": "STRONG",
       "thesis_status": "ACTIVE",
-      "reasoning": "RSI=31.0 (<40), P&L=-13.9% (> -30%), analyst_upside=+52.8%, and analyst_rec=1.3 (buy). Screener recommends ADD."
+      "reasoning": "RSI=31.0 (<40), P&L=-13.9% (> -30%), analyst target +52.8%. Screener recommends ADD despite bearish news."
     },
     {
       "symbol": "AVGO",
@@ -468,7 +468,7 @@
       "urgency": "LOW",
       "position_health": "STRONG",
       "thesis_status": "ACTIVE",
-      "reasoning": "RSI=46.3 (40-65), P&L=-8.2%, analyst_upside=+33.6%, and piotroski=8/9. No major red flags."
+      "reasoning": "RSI=46.3 (neutral), P&L=-8.2%, analyst target +33.6%. Altman=safe and piotroski=8/9."
     },
     {
       "symbol": "WMT",
@@ -516,18 +516,18 @@
       "trend": "downtrend",
       "news_headlines": [
         "Amazon Prime Day to spark online spending frenzy as Walmart, Target lean into deal days",
+        "102-year-old supermarket chain quietly shut down",
         "Walmart slashed the prices of expensive electronics by up to 88% off",
         "BP, Marathon, 7-Eleven, Walmart sued for allegedly using AI to boost California gas prices",
-        "Prime Day Could Generate $15.7 Billion as Amazon Targets 60.3% Share",
-        "The SpaceX IPO Is Over. History Says Investors Should Do This Next."
+        "Prime Day Could Generate $15.7 Billion as Amazon Targets 60.3% Share"
       ],
       "news_sentiment": "neutral",
       "error": null,
-      "action": "TRIM",
-      "urgency": "MEDIUM",
+      "action": "HOLD",
+      "urgency": "LOW",
       "position_health": "STRONG",
       "thesis_status": "ACTIVE",
-      "reasoning": "P&L=+99.7% (>40%), RSI=38.6, and analyst_upside=+18.3%. Overweight position with strong fundamentals."
+      "reasoning": "P&L=+99.7%, RSI=38.6 (neutral), analyst target +18.3%. Altman=safe and piotroski=7/9."
     },
     {
       "symbol": "NVDA",
@@ -572,18 +572,18 @@
       "trend": "uptrend",
       "news_headlines": [
         "Stock market today: S&P 500, Nasdaq slide as Big Tech, SpaceX hammered",
-        "Why Super Micro (SMCI) Stock Is Up Today",
-        "10 Words From Apple CEO Tim Cook That Are Music to the Ears of Micron Technology Investors",
-        "Buying SpaceX Stock Isn't the Same as Buying Tesla's IPO Back in 2010. There's One Massive Difference",
-        "Stock Market Today, June 22: Super Micro Computer Jumps After Introducing New Platform Accelerating AI Server Backlog Growth"
+        "Why Intel (INTC) Stock Is Trading Up Today",
+        "Qorvo and Skyworks Solutions Shares Skyrocket, What You Need To Know",
+        "Supermicro (SMCI) Joins Nvidia Vera Rubin Launch With Liquid Cooled AI Racks",
+        "What I Didn't Know About the ETF Liquidity Illusion"
       ],
-      "news_sentiment": "bullish",
+      "news_sentiment": "neutral",
       "error": null,
-      "action": "TRIM",
-      "urgency": "MEDIUM",
+      "action": "HOLD",
+      "urgency": "LOW",
       "position_health": "STRONG",
       "thesis_status": "ACTIVE",
-      "reasoning": "P&L=+57.3% (>40%), RSI=48.8, and analyst_upside=+43.3%. Screener recommends ADD but position is overexposed."
+      "reasoning": "P&L=+57.3%, RSI=48.8 (neutral), analyst target +43.3%. Altman=safe and piotroski=4/9."
     },
     {
       "symbol": "TSLA",
@@ -628,19 +628,19 @@
       },
       "trend": "uptrend",
       "news_headlines": [
-        "Buying SpaceX Stock Isn't the Same as Buying Tesla's IPO Back in 2010. There's One Massive Difference",
-        "Fatal Tesla Crash Into Texas Home Now Under Federal Safety Investigation",
-        "SpaceX Merger Would Hurt Tesla Stock, Jefferies Says. Cathie Wood Adds Tesla.",
-        "The SpaceX IPO Is Over. History Says Investors Should Do This Next.",
-        "Redistributing Elon Musk’s $1 Trillion Fortune Would Likely Give Each U.S. Household Just $1,500. Here’s the Math"
+        "GM leans into AI to rewrite rules on vehicle design",
+        "A Little Good News for Tesla's Big Forgotten Product",
+        "Global EV Industry Faces Outsized Risk From Cobalt Supply Disruptions",
+        "Tesla (TSLA) Ascends While Market Falls: Some Facts to Note",
+        "Buying SpaceX Stock Isn't the Same as Buying Tesla's IPO Back in 2010. There's One Massive Difference"
       ],
-      "news_sentiment": "bearish",
+      "news_sentiment": "neutral",
       "error": null,
-      "action": "TRIM",
-      "urgency": "MEDIUM",
+      "action": "HOLD",
+      "urgency": "LOW",
       "position_health": "STRONG",
       "thesis_status": "ACTIVE",
-      "reasoning": "P&L=+60.2% (>40%), RSI=48.9, and analyst_upside=+3.8%. Overexposure despite strong fundamentals."
+      "reasoning": "P&L=+60.2%, RSI=48.9 (neutral), analyst target +3.8%. Altman=safe and piotroski=5/9."
     },
     {
       "symbol": "GOOGL",
@@ -688,17 +688,17 @@
       "news_headlines": [
         "Stock market today: S&P 500, Nasdaq slide as Big Tech, SpaceX hammered",
         "SpaceX initiates first bond sale while the stock sheds post-IPO gains",
-        "Asana, Commerce, and Five9 Stocks Trade Down, What You Need To Know",
-        "Google's $75M stake in A24 follows a 50% funding increase in AI content creation startups",
-        "S&P 500, Nasdaq Drop As SpaceX, Broader Tech Weakness Outweighs US-Iran Hopes — SPCX, GOOGL, NFLX, COIN, MU In Focus"
+        "Dow Jones Futures: Tech Stocks Tumble As SpaceX Plunges; Amazon, Alphabet, Nvidia Sell Off",
+        "Why Fastly (FSLY) Stock Is Nosediving",
+        "Rapid7, Braze, and Teradata Stocks Trade Down, What You Need To Know"
       ],
-      "news_sentiment": "bearish",
+      "news_sentiment": "neutral",
       "error": null,
-      "action": "TRIM",
-      "urgency": "MEDIUM",
+      "action": "HOLD",
+      "urgency": "LOW",
       "position_health": "STRONG",
       "thesis_status": "ACTIVE",
-      "reasoning": "P&L=+66.3% (>40%), RSI=39.0, and analyst_upside=+23.8%. Overexposure with bearish news."
+      "reasoning": "P&L=+66.3%, RSI=39.0 (neutral), analyst target +23.8%. Altman=gray and piotroski=6/9."
     },
     {
       "symbol": "SOFI",
@@ -749,10 +749,10 @@
       "news_sentiment": "bullish",
       "error": null,
       "action": "TRIM",
-      "urgency": "HIGH",
-      "position_health": "STRONG",
-      "thesis_status": "ACTIVE",
-      "reasoning": "P&L=+109.0% (>40%), RSI=51.6, and analyst_upside=+22.2%. Overexposure with altman=distress."
+      "urgency": "MEDIUM",
+      "position_health": "WEAK",
+      "thesis_status": "DETERIORATING",
+      "reasoning": "P&L=+109.0%, RSI=51.6 (overbought), altman=distress, piotroski=2/9. Despite gains, fundamentals are weak."
     },
     {
       "symbol": "FTNT",
@@ -807,10 +807,10 @@
       "news_sentiment": "bullish",
       "error": null,
       "action": "TRIM",
-      "urgency": "HIGH",
+      "urgency": "MEDIUM",
       "position_health": "STRONG",
       "thesis_status": "ACTIVE",
-      "reasoning": "P&L=+173.8% (>40%), RSI=64.4, and analyst_upside=-21.7%. Overexposure with high PEG."
+      "reasoning": "P&L=+173.8%, RSI=64.4 (overbought), analyst target -21.7%. Overweight position with negative analyst outlook."
     },
     {
       "symbol": "AAL",
@@ -864,9 +864,9 @@
       "error": null,
       "action": "TRIM",
       "urgency": "MEDIUM",
-      "position_health": "STRONG",
-      "thesis_status": "ACTIVE",
-      "reasoning": "P&L=+61.0% (>40%), RSI=69.0, and analyst_upside=-2.9%. Overexposure with altman=distress."
+      "position_health": "WEAK",
+      "thesis_status": "DETERIORATING",
+      "reasoning": "P&L=+61.0%, RSI=69.0 (overbought), altman=distress, piotroski=4/9. Overweight position with weak fundamentals."
     },
     {
       "symbol": "URA",
@@ -906,11 +906,11 @@
       ],
       "news_sentiment": "neutral",
       "error": null,
-      "action": "TRIM",
-      "urgency": "MEDIUM",
+      "action": "HOLD",
+      "urgency": "LOW",
       "position_health": "STRONG",
       "thesis_status": "ACTIVE",
-      "reasoning": "P&L=+63.2% (>40%), RSI=45.0, and analyst_upside=unavailable. Overexposure with 30d downtrend."
+      "reasoning": "P&L=+63.2%, RSI=45.0 (neutral), analyst target not provided. Strong performance with no major red flags."
     },
     {
       "symbol": "GOOG",
@@ -958,168 +958,9 @@
       "news_headlines": [
         "Stock market today: S&P 500, Nasdaq slide as Big Tech, SpaceX hammered",
         "SpaceX initiates first bond sale while the stock sheds post-IPO gains",
-        "Asana, Commerce, and Five9 Stocks Trade Down, What You Need To Know",
-        "Google's $75M stake in A24 follows a 50% funding increase in AI content creation startups",
-        "S&P 500, Nasdaq Drop As SpaceX, Broader Tech Weakness Outweighs US-Iran Hopes — SPCX, GOOGL, NFLX, COIN, MU In Focus"
-      ],
-      "news_sentiment": "bearish",
-      "error": null,
-      "action": "TRIM",
-      "urgency": "HIGH",
-      "position_health": "STRONG",
-      "thesis_status": "ACTIVE",
-      "reasoning": "P&L=+113.1% (>40%), RSI=40.0, and analyst_upside=+22.3%. Overexposure with bearish news."
-    },
-    {
-      "symbol": "VOO",
-      "name": "Vanguard S&P 500 ETF",
-      "sector": "etf",
-      "buy_price": 497.03,
-      "quantity": 9.0,
-      "buy_date": "2024-01-01T00:00:00.000Z",
-      "cost_basis": 4473.27,
-      "current_price": 686.1,
-      "change_pct_1d": -0.29,
-      "change_pct_7d": 1.16,
-      "change_pct_30d": 1.19,
-      "pnl_amount": 1701.63,
-      "pnl_pct": 38.04,
-      "rsi_14": 53.6,
-      "week_52_high": 698.26,
-      "week_52_low": 546.8053,
-      "pct_from_52w_high": -1.74,
-      "pct_from_52w_low": 25.47,
-      "market_cap": null,
-      "pe_ratio": 26.77643,
-      "forward_pe": null,
-      "peg_ratio": null,
-      "analyst_target": null,
-      "analyst_upside": null,
-      "recommendation_mean": null,
-      "altman_z": null,
-      "piotroski": null,
-      "trend": "uptrend",
-      "news_headlines": [
-        "I Make $150,000 a Year, But It Feels Like I’m Just Middle Class in a World Full of Rich People",
-        "Thanks to SpaceX, Index Funds Won’t Track Each Other as Closely. Here’s One Pro’s Advice.",
-        "The Case for Holding VOO in Your Roth IRA",
-        "One S&P 500 Stock Is Older Than The U.S. — But Don't Buy It",
-        "Better S&P 500 ETF: VOO vs. SPY"
-      ],
-      "news_sentiment": "neutral",
-      "error": null,
-      "action": "HOLD",
-      "urgency": "LOW",
-      "position_health": "STRONG",
-      "thesis_status": "ACTIVE",
-      "reasoning": "RSI=53.6 (40-65), P&L=+38.0%, and analyst_upside=unavailable. No major red flags."
-    },
-    {
-      "symbol": "MELI",
-      "name": "MercadoLibre",
-      "sector": "Technology / E-Commerce & Fintech LatAm",
-      "buy_price": 1615.725,
-      "quantity": 2.0,
-      "buy_date": "2026-05-15T14:54:46.472Z",
-      "cost_basis": 3231.45,
-      "current_price": 1589.45,
-      "change_pct_1d": -2.79,
-      "change_pct_7d": -1.28,
-      "change_pct_30d": -2.64,
-      "pnl_amount": -52.55,
-      "pnl_pct": -1.63,
-      "rsi_14": 42.5,
-      "week_52_high": 2613.6299,
-      "week_52_low": 1546.8101,
-      "pct_from_52w_high": -39.19,
-      "pct_from_52w_low": 2.76,
-      "market_cap": 80580632576,
-      "pe_ratio": 41.89378,
-      "forward_pe": 27.183792,
-      "peg_ratio": 1.01,
-      "analyst_target": 2216.9583,
-      "analyst_upside": 39.48,
-      "recommendation_mean": 1.54167,
-      "altman_z": {
-        "score": 2.58,
-        "zone": "gray"
-      },
-      "piotroski": {
-        "score": 5,
-        "strength": "neutral",
-        "signals": [
-          "ROA>0",
-          "OCF>0",
-          "Quality",
-          "Debt↓",
-          "NoDilution"
-        ]
-      },
-      "trend": "downtrend",
-      "news_headlines": [
-        "Did Heavy Logistics and Fintech Spending Just Shift MercadoLibre's (MELI) Investment Narrative?",
-        "A Once-in-a-Decade Opportunity: 5 Growth Stocks Down 28% to 54% to Buy on the Dip",
-        "The Market Has Punished MercadoLibre Stock -- Is That Your Buying Opportunity?",
-        "MercadoLibre Expands 1P Rapidly: Is Margin Recovery at Risk?",
-        "Stanley Druckenmiller Has a Secret South American Trade That Has Nothing to Do With AI"
-      ],
-      "news_sentiment": "bullish",
-      "error": null,
-      "action": "TRIM",
-      "urgency": "MEDIUM",
-      "position_health": "MODERATE",
-      "thesis_status": "DETERIORATING",
-      "reasoning": "Screener recommends TRIM, P&L=-1.6%, RSI=42.5, and analyst_upside=+39.5%. Deteriorating fundamentals with 30d downtrend."
-    },
-    {
-      "symbol": "AMZN",
-      "name": "Amazon.com Inc",
-      "sector": "ecommerce",
-      "buy_price": 212.0758,
-      "quantity": 12.0,
-      "buy_date": "2024-01-01T00:00:00.000Z",
-      "cost_basis": 2544.91,
-      "current_price": 232.79,
-      "change_pct_1d": -4.75,
-      "change_pct_7d": -3.61,
-      "change_pct_30d": -14.63,
-      "pnl_amount": 248.57,
-      "pnl_pct": 9.77,
-      "rsi_14": 36.5,
-      "week_52_high": 274.99,
-      "week_52_low": 198.79,
-      "pct_from_52w_high": -15.35,
-      "pct_from_52w_low": 17.1,
-      "market_cap": 2504147599360,
-      "pe_ratio": 30.154144,
-      "forward_pe": 23.560905,
-      "peg_ratio": 1.83,
-      "analyst_target": 312.98715,
-      "analyst_upside": 34.45,
-      "recommendation_mean": 1.34328,
-      "altman_z": {
-        "score": 5.41,
-        "zone": "safe"
-      },
-      "piotroski": {
-        "score": 6,
-        "strength": "neutral",
-        "signals": [
-          "ROA>0",
-          "OCF>0",
-          "ROA↑",
-          "Quality",
-          "Debt↓",
-          "Margin↑"
-        ]
-      },
-      "trend": "downtrend",
-      "news_headlines": [
-        "SpaceX's retail boom runs into its first price wall",
-        "Walmart slashed the prices of expensive electronics by up to 88% off",
         "Dow Jones Futures: Tech Stocks Tumble As SpaceX Plunges; Amazon, Alphabet, Nvidia Sell Off",
-        "AI Stocks in a Value Fund? This Veteran Money Pro Says Absolutely.",
-        "Amazon (AMZN) Teams Up With ArcelorMittal To Bring AI Into Steel Plants"
+        "Why Fastly (FSLY) Stock Is Nosediving",
+        "Rapid7, Braze, and Teradata Stocks Trade Down, What You Need To Know"
       ],
       "news_sentiment": "neutral",
       "error": null,
@@ -1127,7 +968,7 @@
       "urgency": "LOW",
       "position_health": "STRONG",
       "thesis_status": "ACTIVE",
-      "reasoning": "RSI=36.5 (<40), P&L=+9.8%, and analyst_upside=+34.5%. No major red flags."
+      "reasoning": "P&L=+113.1%, RSI=40.0 (neutral), analyst target +22.3%. Altman=gray and piotroski=6/9."
     }
   ],
   "cross_position_insights": [],

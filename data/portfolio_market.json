@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T22:34:46Z",
+  "generated_at": "2026-06-23T00:35:11Z",
   "positions": [
     {
       "symbol": "VOO",
@@ -31,11 +31,11 @@
       "piotroski": null,
       "trend": "uptrend",
       "news_headlines": [
+        "ETF Zoo: The Leveraged ETF Frenzy Picks Up Momentum",
         "I Make $150,000 a Year, But It Feels Like I’m Just Middle Class in a World Full of Rich People",
         "Thanks to SpaceX, Index Funds Won’t Track Each Other as Closely. Here’s One Pro’s Advice.",
         "The Case for Holding VOO in Your Roth IRA",
-        "One S&P 500 Stock Is Older Than The U.S. — But Don't Buy It",
-        "Better S&P 500 ETF: VOO vs. SPY"
+        "One S&P 500 Stock Is Older Than The U.S. — But Don't Buy It"
       ],
       "news_sentiment": "neutral",
       "error": null
@@ -83,11 +83,11 @@
       },
       "trend": "uptrend",
       "news_headlines": [
+        "Oracle (ORCL) Stock Trades Down, Here Is Why",
         "Oracle (ORCL) Cuts 21,000 Jobs As It Prepares $50 Billion AI Buildout",
         "3 Highly Ranked Alternative Energy Stocks to Buy Now",
         "Oracle workforce shrinks by about 21,000 employees amid AI adoption",
-        "Big Tech’s $750 Billion AI Debt Binge Means Investors Now Have to Watch the Bond Market",
-        "Can Oracle Reach $800 Per Share by 2030? Here’s How It Can Happen"
+        "Big Tech’s $750 Billion AI Debt Binge Means Investors Now Have to Watch the Bond Market"
       ],
       "news_sentiment": "bearish",
       "error": null
@@ -138,10 +138,10 @@
       "trend": "downtrend",
       "news_headlines": [
         "Amazon Prime Day to spark online spending frenzy as Walmart, Target lean into deal days",
+        "102-year-old supermarket chain quietly shut down",
         "Walmart slashed the prices of expensive electronics by up to 88% off",
         "BP, Marathon, 7-Eleven, Walmart sued for allegedly using AI to boost California gas prices",
-        "Prime Day Could Generate $15.7 Billion as Amazon Targets 60.3% Share",
-        "The SpaceX IPO Is Over. History Says Investors Should Do This Next."
+        "Prime Day Could Generate $15.7 Billion as Amazon Targets 60.3% Share"
       ],
       "news_sentiment": "neutral",
       "error": null
@@ -189,12 +189,12 @@
       "trend": "uptrend",
       "news_headlines": [
         "Stock market today: S&P 500, Nasdaq slide as Big Tech, SpaceX hammered",
-        "Why Super Micro (SMCI) Stock Is Up Today",
-        "10 Words From Apple CEO Tim Cook That Are Music to the Ears of Micron Technology Investors",
-        "Buying SpaceX Stock Isn't the Same as Buying Tesla's IPO Back in 2010. There's One Massive Difference",
-        "Stock Market Today, June 22: Super Micro Computer Jumps After Introducing New Platform Accelerating AI Server Backlog Growth"
+        "Why Intel (INTC) Stock Is Trading Up Today",
+        "Qorvo and Skyworks Solutions Shares Skyrocket, What You Need To Know",
+        "Supermicro (SMCI) Joins Nvidia Vera Rubin Launch With Liquid Cooled AI Racks",
+        "What I Didn't Know About the ETF Liquidity Illusion"
       ],
-      "news_sentiment": "bullish",
+      "news_sentiment": "neutral",
       "error": null
     },
     {
@@ -243,11 +243,11 @@
       "news_headlines": [
         "Stock market today: S&P 500, Nasdaq slide as Big Tech, SpaceX hammered",
         "SpaceX initiates first bond sale while the stock sheds post-IPO gains",
-        "Asana, Commerce, and Five9 Stocks Trade Down, What You Need To Know",
-        "Google's $75M stake in A24 follows a 50% funding increase in AI content creation startups",
-        "S&P 500, Nasdaq Drop As SpaceX, Broader Tech Weakness Outweighs US-Iran Hopes — SPCX, GOOGL, NFLX, COIN, MU In Focus"
+        "Dow Jones Futures: Tech Stocks Tumble As SpaceX Plunges; Amazon, Alphabet, Nvidia Sell Off",
+        "Why Fastly (FSLY) Stock Is Nosediving",
+        "Rapid7, Braze, and Teradata Stocks Trade Down, What You Need To Know"
       ],
-      "news_sentiment": "bearish",
+      "news_sentiment": "neutral",
       "error": null
     },
     {
@@ -295,11 +295,11 @@
       "news_headlines": [
         "Stock market today: S&P 500, Nasdaq slide as Big Tech, SpaceX hammered",
         "Abbvie acquiring Apogee for $10.9B, Coca-Cola vs. IRS in appeals court",
-        "Stock Market Today, June 22: Alphabet Falls as AlphaFold Co-Creator’s Exit Raises AI Talent Concerns",
-        "Analyst Trims Price Target on Entergy (ETR). Here is Why",
-        "Meta Names Indian Entrepreneur Kunal Shah As WhatsApp Chief"
+        "Elon Musk’s X Executive Trolls Meta For Its Workplace Woes, Extends Better ‘Snack Budget’ Offers To Neglected Employees",
+        "Meta Platforms (META) Sees a More Significant Dip Than Broader Market: Some Facts to Know",
+        "Stock Market Today, June 22: Alphabet Falls as AlphaFold Co-Creator’s Exit Raises AI Talent Concerns"
       ],
-      "news_sentiment": "bullish",
+      "news_sentiment": "neutral",
       "error": null
     },
     {
@@ -346,11 +346,7 @@
       },
       "trend": "downtrend",
       "news_headlines": [
-        "SpaceX's retail boom runs into its first price wall",
-        "Walmart slashed the prices of expensive electronics by up to 88% off",
-        "Dow Jones Futures: Tech Stocks Tumble As SpaceX Plunges; Amazon, Alphabet, Nvidia Sell Off",
-        "AI Stocks in a Value Fund? This Veteran Money Pro Says Absolutely.",
-        "Amazon (AMZN) Teams Up With ArcelorMittal To Bring AI Into Steel Plants"
+        "SpaceX's retail boom runs into its first price wall"
       ],
       "news_sentiment": "neutral",
       "error": null
@@ -399,10 +395,10 @@
       "trend": "downtrend",
       "news_headlines": [
         "Memory's price surge threatens Apple's 'magic formula' — and the economy: WSJ reporter",
-        "Asana, Commerce, and Five9 Stocks Trade Down, What You Need To Know",
-        "Stock Market Today, June 22: Alphabet Falls as AlphaFold Co-Creator’s Exit Raises AI Talent Concerns",
-        "Microsoft and Chevron plan one of the largest gas-powered data center projects in US",
-        "Stock Market Today: Dow Up As Bessent Makes This Iran Move; SpaceX Craters (Live Coverage)"
+        "Why Fastly (FSLY) Stock Is Nosediving",
+        "Rapid7, Braze, and Teradata Stocks Trade Down, What You Need To Know",
+        "Domo and DigitalOcean Shares Are Falling, What You Need To Know",
+        "Oracle (ORCL) Stock Trades Down, Here Is Why"
       ],
       "news_sentiment": "bullish",
       "error": null
@@ -450,13 +446,13 @@
       },
       "trend": "uptrend",
       "news_headlines": [
-        "Buying SpaceX Stock Isn't the Same as Buying Tesla's IPO Back in 2010. There's One Massive Difference",
-        "Fatal Tesla Crash Into Texas Home Now Under Federal Safety Investigation",
-        "SpaceX Merger Would Hurt Tesla Stock, Jefferies Says. Cathie Wood Adds Tesla.",
-        "The SpaceX IPO Is Over. History Says Investors Should Do This Next.",
-        "Redistributing Elon Musk’s $1 Trillion Fortune Would Likely Give Each U.S. Household Just $1,500. Here’s the Math"
+        "GM leans into AI to rewrite rules on vehicle design",
+        "A Little Good News for Tesla's Big Forgotten Product",
+        "Global EV Industry Faces Outsized Risk From Cobalt Supply Disruptions",
+        "Tesla (TSLA) Ascends While Market Falls: Some Facts to Note",
+        "Buying SpaceX Stock Isn't the Same as Buying Tesla's IPO Back in 2010. There's One Massive Difference"
       ],
-      "news_sentiment": "bearish",
+      "news_sentiment": "neutral",
       "error": null
     },
     {
@@ -524,7 +520,7 @@
       "pnl_pct": 26.66,
       "rsi_14": 34.7,
       "week_52_high": 170.314,
-      "week_52_low": 102.5608,
+      "week_52_low": 102.5607,
       "pct_from_52w_high": -18.7,
       "pct_from_52w_low": 35.01,
       "market_cap": 573950853120,
@@ -583,8 +579,8 @@
       "pe_ratio": 16.124424,
       "forward_pe": 11.392922,
       "peg_ratio": 0.37,
-      "analyst_target": 191.53793,
-      "analyst_upside": 82.47,
+      "analyst_target": 191.34282,
+      "analyst_upside": 82.28,
       "recommendation_mean": 1.36585,
       "altman_z": {
         "score": 1.57,
@@ -758,11 +754,11 @@
       },
       "trend": "downtrend",
       "news_headlines": [
+        "Walt Disney (DIS) Suffers a Larger Drop Than the General Market: Key Insights",
         "ABC Launches On-Air Campaign Against FCC Investigations",
         "Sector Update: Consumer Stocks Decline Late Afternoon",
         "Disney earnings expected to show improving US park attendance",
-        "Micron Earnings Will Likely Whip Up AI Frenzy. Why That’s Bad for Markets.",
-        "Here's What Fox Buying Roku Means for Disney Investors"
+        "Micron Earnings Will Likely Whip Up AI Frenzy. Why That’s Bad for Markets."
       ],
       "news_sentiment": "bearish",
       "error": null
@@ -809,13 +805,13 @@
       },
       "trend": "uptrend",
       "news_headlines": [
+        "Prologis (PLD) Rises As Market Takes a Dip: Key Facts",
         "Are Finance Stocks Lagging  Prologis (PLD) This Year?",
         "Terreno Realty's Acquisition Spree Gains Steam With Hialeah Deal",
         "Top Research Reports for Alphabet, Broadcom & Johnson & Johnson",
-        "Is Prologis Stock a Buy After the Fed's Hawkish Rate Stance Now?",
-        "SpaceX initiated, Salesforce upgraded: Wall Street's top analyst calls"
+        "Is Prologis Stock a Buy After the Fed's Hawkish Rate Stance Now?"
       ],
-      "news_sentiment": "bullish",
+      "news_sentiment": "neutral",
       "error": null
     },
     {
@@ -999,11 +995,11 @@
       },
       "trend": "uptrend",
       "news_headlines": [
+        "Rivian Automotive (RIVN) Sees a More Significant Dip Than Broader Market: Some Facts to Know",
         "Lucid Is Cutting 18% of Its U.S. Workforce. Why the EV Maker Is Struggling.",
         "3 Reasons to Avoid RIVN and 1 Stock to Buy Instead",
         "The SpaceX IPO Should Help Rivian. Here's How.",
-        "Will EV Stocks Make a Comeback in 2026?",
-        "US Auto Safety Regulator Opens Probe into almost 115,000 Rivian Automotive, Inc. (RIVN) Vehicles"
+        "Will EV Stocks Make a Comeback in 2026?"
       ],
       "news_sentiment": "bearish",
       "error": null
@@ -1023,7 +1019,7 @@
       "pnl_amount": -314.86,
       "pnl_pct": -25.9,
       "rsi_14": 30.0,
-      "week_52_high": 271.3533,
+      "week_52_high": 271.3534,
       "week_52_low": 150.12,
       "pct_from_52w_high": -44.68,
       "pct_from_52w_low": 0.0,
@@ -1053,11 +1049,11 @@
       },
       "trend": "downtrend",
       "news_headlines": [
-        "Asana, Commerce, and Five9 Stocks Trade Down, What You Need To Know",
-        "Salesforce Stock Is Trying—and Failing—to Avoid a 14-Day Losing Streak",
-        "James Glassman's Top 30 Stock Picks Mid-Year Recap",
-        "Price Prediction: ServiceNow Stock Will Be Worth This Much In 2027",
-        "Alphabet, Micron, SpaceX, Fervo, Salesforce, and More Stocks That Explain Today’s Market"
+        "Why Fastly (FSLY) Stock Is Nosediving",
+        "Rapid7, Braze, and Teradata Stocks Trade Down, What You Need To Know",
+        "Domo and DigitalOcean Shares Are Falling, What You Need To Know",
+        "Oracle (ORCL) Stock Trades Down, Here Is Why",
+        "Why Palantir Technologies (PLTR) Shares Are Trading Lower Today"
       ],
       "news_sentiment": "neutral",
       "error": null
@@ -1085,8 +1081,8 @@
       "pe_ratio": 10.769953,
       "forward_pe": 13.880218,
       "peg_ratio": 3.13,
-      "analyst_target": 47.00695,
-      "analyst_upside": 2.46,
+      "analyst_target": 46.993084,
+      "analyst_upside": 2.43,
       "recommendation_mean": 2.35714,
       "altman_z": {
         "score": 2.15,
@@ -1136,8 +1132,8 @@
       "pe_ratio": null,
       "forward_pe": 12.229061,
       "peg_ratio": 0.63,
-      "analyst_target": 180.52538,
-      "analyst_upside": 61.56,
+      "analyst_target": 180.34149,
+      "analyst_upside": 61.39,
       "recommendation_mean": 1.48485,
       "altman_z": {
         "score": 1.23,
@@ -1352,13 +1348,13 @@
       },
       "trend": "uptrend",
       "news_headlines": [
+        "TSMC (TSM) Advances While Market Declines: Some Information for Investors",
         "Cerebras gets set for inaugural earnings with upside potential, Wedbush says",
         "The Best-Performing Dividend ETFs Have a Big AI Bet",
         "Forget Nvidia: Four Billionaires Who Rarely Agree on Anything Hold the Same Overlooked Chip Stock",
-        "Cerebras Stock Gets Major Vote of Confidence as Key Earnings Test Nears",
-        "Why I'm Not Selling ASML After a 230% Gain"
+        "Cerebras Stock Gets Major Vote of Confidence as Key Earnings Test Nears"
       ],
-      "news_sentiment": "bullish",
+      "news_sentiment": "neutral",
       "error": null
     },
     {
@@ -1407,11 +1403,11 @@
       "news_headlines": [
         "Stock market today: S&P 500, Nasdaq slide as Big Tech, SpaceX hammered",
         "SpaceX initiates first bond sale while the stock sheds post-IPO gains",
-        "Asana, Commerce, and Five9 Stocks Trade Down, What You Need To Know",
-        "Google's $75M stake in A24 follows a 50% funding increase in AI content creation startups",
-        "S&P 500, Nasdaq Drop As SpaceX, Broader Tech Weakness Outweighs US-Iran Hopes — SPCX, GOOGL, NFLX, COIN, MU In Focus"
+        "Dow Jones Futures: Tech Stocks Tumble As SpaceX Plunges; Amazon, Alphabet, Nvidia Sell Off",
+        "Why Fastly (FSLY) Stock Is Nosediving",
+        "Rapid7, Braze, and Teradata Stocks Trade Down, What You Need To Know"
       ],
-      "news_sentiment": "bearish",
+      "news_sentiment": "neutral",
       "error": null
     },
     {
@@ -1429,7 +1425,7 @@
       "pnl_amount": 10.44,
       "pnl_pct": 3.3,
       "rsi_14": 54.7,
-      "week_52_high": 414.7938,
+      "week_52_high": 414.7939,
       "week_52_low": 295.2951,
       "pct_from_52w_high": -21.26,
       "pct_from_52w_low": 10.61,
@@ -1612,11 +1608,11 @@
       },
       "trend": "uptrend",
       "news_headlines": [
+        "ServiceNow (NOW) Suffers a Larger Drop Than the General Market: Key Insights",
         "Price Prediction: ServiceNow Stock Will Be Worth This Much In 2027",
         "ServiceNow Gets an AI Governance Win",
         "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Amid Continued US-Iran Talks",
-        "Is ServiceNow (NOW) One of the Best AI Software Stocks to Buy According to Hedge Funds?",
-        "Is ServiceNow the Biggest AI Winner Nobody Is Talking About?"
+        "Is ServiceNow (NOW) One of the Best AI Software Stocks to Buy According to Hedge Funds?"
       ],
       "news_sentiment": "neutral",
       "error": null
@@ -1662,11 +1658,11 @@
       },
       "trend": "uptrend",
       "news_headlines": [
+        "Citigroup (C) Rises As Market Takes a Dip: Key Facts",
         "Citigroup Inc. (C): One of The Elite Financial Stocks to Buy?",
         "Citi Has a New Warning for AppLovin Stock Investors",
         "Inside a Wells Fargo Father-Daughter Advisor Team’s Unusual Transition",
-        "Why Citi Sees a Potential Upside Opportunity in Sherwin-Williams (SHW) Despite Housing Headwinds",
-        "Citi Cuts PT on Adobe Inc. (ADBE)"
+        "Why Citi Sees a Potential Upside Opportunity in Sherwin-Williams (SHW) Despite Housing Headwinds"
       ],
       "news_sentiment": "bearish",
       "error": null
@@ -1718,11 +1714,11 @@
       },
       "trend": "downtrend",
       "news_headlines": [
+        "MasterCard (MA) Falls More Steeply Than Broader Market: What Investors Need to Know",
         "How Mastercard (MA) Is Pushing Deeper Into Cross-Border Commerce and Agentic Payments",
         "How Investors May Respond To Mastercard (MA) Pushing Agent Pay and Machine-Driven Digital Payments",
         "Mastercard Incorporated (MA): One of the Best Financial Stocks to Buy According to Warren Buffett",
-        "Congress Set to Ban Digital Dollar. What It Means for Crypto Stocks.",
-        "MoneyGram joins Solana as validator to help run blockchain payment rails"
+        "Congress Set to Ban Digital Dollar. What It Means for Crypto Stocks."
       ],
       "news_sentiment": "neutral",
       "error": null
@@ -1770,13 +1766,13 @@
       },
       "trend": "downtrend",
       "news_headlines": [
+        "MercadoLibre (MELI) Declines More Than Market: Some Information for Investors",
         "Did Heavy Logistics and Fintech Spending Just Shift MercadoLibre's (MELI) Investment Narrative?",
         "A Once-in-a-Decade Opportunity: 5 Growth Stocks Down 28% to 54% to Buy on the Dip",
         "The Market Has Punished MercadoLibre Stock -- Is That Your Buying Opportunity?",
-        "MercadoLibre Expands 1P Rapidly: Is Margin Recovery at Risk?",
-        "Stanley Druckenmiller Has a Secret South American Trade That Has Nothing to Do With AI"
+        "MercadoLibre Expands 1P Rapidly: Is Margin Recovery at Risk?"
       ],
-      "news_sentiment": "bullish",
+      "news_sentiment": "neutral",
       "error": null
     },
     {
@@ -1987,11 +1983,11 @@
       },
       "trend": "downtrend",
       "news_headlines": [
+        "Netflix (NFLX) Dips More Than Broader Market: What You Should Know",
         "S&P 500, Nasdaq Drop As SpaceX, Broader Tech Weakness Outweighs US-Iran Hopes — SPCX, GOOGL, NFLX, COIN, MU In Focus",
         "Update: Sliding Communication Services, Surging Treasury Yields Push US Equity Indexes in Mixed Territory",
         "Update: US Equity Indexes Mixed as Communication Services Sector Slides, Treasury Yields Surge",
-        "After Missing Out on Roku, Netflix Claims It Won't Buy Lionsgate. Here's Why the Market Hates That Answer.",
-        "NFLX Stock Sinks To Near 52-Week Low: Retail Traders Think It Is A Great Buying Opportunity"
+        "After Missing Out on Roku, Netflix Claims It Won't Buy Lionsgate. Here's Why the Market Hates That Answer."
       ],
       "news_sentiment": "bearish",
       "error": null
@@ -2004,13 +2000,13 @@
     "yield_spread_10y_3m": 0.829,
     "spy_price": 7472.79,
     "spy_rsi": 53.2,
-    "fear_greed_value": 20,
-    "fear_greed_index": 20,
+    "fear_greed_value": 23,
+    "fear_greed_index": 23,
     "fear_greed_label": "Extreme Fear",
     "fear_greed_synthetic": 62.0,
     "fear_greed_source": "alternative.me",
     "yield_trend": "stable",
-    "dxy": 101.0,
+    "dxy": 101.04,
     "dxy_trend": "rising",
     "market_regime": "MIXED"
   },
