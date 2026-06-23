@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T00:35:11Z",
+  "generated_at": "2026-06-23T00:42:23Z",
   "positions": [
     {
       "symbol": "VOO",
@@ -17,7 +17,7 @@
       "pnl_pct": 38.04,
       "rsi_14": 53.6,
       "week_52_high": 698.26,
-      "week_52_low": 546.8053,
+      "week_52_low": 546.8052,
       "pct_from_52w_high": -1.74,
       "pct_from_52w_low": 25.47,
       "market_cap": null,
@@ -346,7 +346,11 @@
       },
       "trend": "downtrend",
       "news_headlines": [
-        "SpaceX's retail boom runs into its first price wall"
+        "SpaceX's retail boom runs into its first price wall",
+        "102-year-old supermarket chain quietly shut down",
+        "Dow Jones Futures: Tech Stocks Tumble As SpaceX Plunges; Amazon, Alphabet, Nvidia Sell Off",
+        "Walmart slashed the prices of expensive electronics by up to 88% off",
+        "AI Stocks in a Value Fund? This Veteran Money Pro Says Absolutely."
       ],
       "news_sentiment": "neutral",
       "error": null
@@ -1019,7 +1023,7 @@
       "pnl_amount": -314.86,
       "pnl_pct": -25.9,
       "rsi_14": 30.0,
-      "week_52_high": 271.3534,
+      "week_52_high": 271.3533,
       "week_52_low": 150.12,
       "pct_from_52w_high": -44.68,
       "pct_from_52w_low": 0.0,
@@ -1081,7 +1085,7 @@
       "pe_ratio": 10.769953,
       "forward_pe": 13.880218,
       "peg_ratio": 3.13,
-      "analyst_target": 46.993084,
+      "analyst_target": 46.9933,
       "analyst_upside": 2.43,
       "recommendation_mean": 2.35714,
       "altman_z": {
@@ -1100,13 +1104,13 @@
       },
       "trend": "uptrend",
       "news_headlines": [
+        "Why This Mid-Cap Biotech Could Be the Dark-Horse Threat to Eli Lilly and Novo Nordisk",
         "European Equities Traded in the US as American Depositary Receipts Rise in Monday Trading",
         "Here's Why You Should Add LXRX Stock to Your Portfolio Now",
         "UPS invests $48 million in cold-chain healthcare logistics",
-        "Here is why Novo Nordisk A/S (NVO) is among the Best Longevity and Anti-Aging Stocks to Buy",
-        "PwC Survey Finds 70% of GLP-1 Users Cutting Snack Spending"
+        "Here is why Novo Nordisk A/S (NVO) is among the Best Longevity and Anti-Aging Stocks to Buy"
       ],
-      "news_sentiment": "bearish",
+      "news_sentiment": "neutral",
       "error": null
     },
     {
@@ -2006,7 +2010,7 @@
     "fear_greed_synthetic": 62.0,
     "fear_greed_source": "alternative.me",
     "yield_trend": "stable",
-    "dxy": 101.04,
+    "dxy": 101.03,
     "dxy_trend": "rising",
     "market_regime": "MIXED"
   },

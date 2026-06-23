@@ -1,12 +1,83 @@
 {
-  "fetched_at": "2026-06-23T00:33:17Z",
+  "fetched_at": "2026-06-23T00:40:30Z",
   "tickers_fetched": 12,
   "reddit_enabled": true,
-  "elapsed_seconds": 12.0,
+  "elapsed_seconds": 11.5,
   "news": {
-    "CRM": {
-      "symbol": "CRM",
+    "SONY": {
+      "symbol": "SONY",
       "key_news": [
+        {
+          "title": "Sony (SONY) Registers a Bigger Fall Than the Market: Important Facts to Note",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "Music Business Prospects Assert Sony Group Corporation (SONY) as one of the Best Falling Stocks to Invest In",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "AI is turning Nintendo and Sony products into accidental luxury goods",
+          "publisher": "Financial Times"
+        },
+        {
+          "title": "Take-Two's Rockstar Says 'GTA VI' Pre-Orders to Start June 25; Shares Rise",
+          "publisher": "MT Newswires"
+        },
+        {
+          "title": "Microsoft\u2019s Xbox Problem Is Bigger Than a Console War",
+          "publisher": "MarketBeat"
+        },
+        {
+          "title": "Sony (SONY) Shows Why PlayStation\u2019s Profit Story Is Moving Beyond Console Hardware",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "Goldman-Backed Go Rises 10% After Biggest Japan IPO This Year",
+          "publisher": "Bloomberg"
+        },
+        {
+          "title": "Microsoft weighs an Xbox spinoff. Would it revive the business or put it at risk?",
+          "publisher": "FastCompany"
+        }
+      ],
+      "sentiment": {
+        "score": 0.007,
+        "label": "neutral",
+        "keywords": [
+          {
+            "word": "profit",
+            "type": "positive"
+          },
+          {
+            "word": "cut",
+            "type": "negative"
+          }
+        ]
+      },
+      "analyst_recommendation": "strong buy",
+      "analyst_target": 29.375,
+      "num_analysts": 4,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 0,
+        "signal": "none"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-23T00:40:19Z",
+      "error": null
+    },
+    "MSFT": {
+      "symbol": "MSFT",
+      "key_news": [
+        {
+          "title": "Memory's price surge threatens Apple's 'magic formula' \u2014 and the economy: WSJ reporter",
+          "publisher": "Yahoo Finance Video"
+        },
         {
           "title": "Why Fastly (FSLY) Stock Is Nosediving",
           "publisher": "StockStory"
@@ -34,29 +105,33 @@
         {
           "title": "Sprout Social, ZoomInfo, and Upland Software Shares Plummet, What You Need To Know",
           "publisher": "StockStory"
-        },
-        {
-          "title": "Asana, Commerce, and Five9 Stocks Trade Down, What You Need To Know",
-          "publisher": "StockStory"
         }
       ],
       "sentiment": {
-        "score": 0.037,
+        "score": 0.073,
         "label": "neutral",
         "keywords": [
           {
-            "word": "record",
+            "word": "surge",
             "type": "positive"
+          },
+          {
+            "word": "raises",
+            "type": "positive"
+          },
+          {
+            "word": "miss",
+            "type": "negative"
           }
         ]
       },
-      "analyst_recommendation": "buy",
-      "analyst_target": 251.52731,
-      "num_analysts": 52,
+      "analyst_recommendation": "strong buy",
+      "analyst_target": 561.38763,
+      "num_analysts": 55,
       "insider": {
         "buys_30d": 0,
-        "sells_30d": 0,
-        "signal": "none"
+        "sells_30d": 3,
+        "signal": "distributing"
       },
       "reddit": {
         "mentions": 0,
@@ -64,7 +139,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-23T00:33:05Z",
+      "fetched_at": "2026-06-23T00:40:19Z",
       "error": null
     },
     "NFLX": {
@@ -143,181 +218,47 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-23T00:33:05Z",
+      "fetched_at": "2026-06-23T00:40:19Z",
       "error": null
     },
-    "SONY": {
-      "symbol": "SONY",
+    "OXY": {
+      "symbol": "OXY",
       "key_news": [
-        {
-          "title": "Sony (SONY) Registers a Bigger Fall Than the Market: Important Facts to Note",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Music Business Prospects Assert Sony Group Corporation (SONY) as one of the Best Falling Stocks to Invest In",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "AI is turning Nintendo and Sony products into accidental luxury goods",
-          "publisher": "Financial Times"
-        },
-        {
-          "title": "Take-Two's Rockstar Says 'GTA VI' Pre-Orders to Start June 25; Shares Rise",
-          "publisher": "MT Newswires"
-        },
-        {
-          "title": "Microsoft\u2019s Xbox Problem Is Bigger Than a Console War",
-          "publisher": "MarketBeat"
-        },
-        {
-          "title": "Sony (SONY) Shows Why PlayStation\u2019s Profit Story Is Moving Beyond Console Hardware",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "Goldman-Backed Go Rises 10% After Biggest Japan IPO This Year",
-          "publisher": "Bloomberg"
-        },
-        {
-          "title": "Microsoft weighs an Xbox spinoff. Would it revive the business or put it at risk?",
-          "publisher": "FastCompany"
-        }
-      ],
-      "sentiment": {
-        "score": 0.007,
-        "label": "neutral",
-        "keywords": [
-          {
-            "word": "profit",
-            "type": "positive"
-          },
-          {
-            "word": "cut",
-            "type": "negative"
-          }
-        ]
-      },
-      "analyst_recommendation": "strong buy",
-      "analyst_target": 29.375,
-      "num_analysts": 4,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 0,
-        "signal": "none"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-23T00:33:05Z",
-      "error": null
-    },
-    "BABA": {
-      "symbol": "BABA",
-      "key_news": [
-        {
-          "title": "Alibaba Group Holding Limited (BABA) Is a Trending Stock: Facts to Know Before Betting on It",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Chinese Stocks in Hong Kong Rebound From Edge of Bear Market",
-          "publisher": "Bloomberg"
-        },
-        {
-          "title": "Tencent Tests AI Assistant for Its Super App WeChat in China",
-          "publisher": "Bloomberg"
-        },
-        {
-          "title": "Tech, crypto firms to help tackle illegal wildlife trade",
-          "publisher": "Reuters"
-        },
-        {
-          "title": "BABA Stock: The Physical AI Race Heats Up as Alibaba Releases New AI Models for Robots",
-          "publisher": "Barchart"
-        },
-        {
-          "title": "Alibaba Stock Is a Compelling Buy as It Drifts Toward 52-Week Lows. Here\u2019s Why.",
-          "publisher": "Barchart"
-        },
-        {
-          "title": "Alibaba Group Holding (BABA): One of the Stocks with Potential to Explode in 2026",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "Here\u2019s What JPMorgan Thinks of Alibaba Group Holding Ltd (BABA)",
-          "publisher": "Insider Monkey"
-        }
-      ],
-      "sentiment": {
-        "score": 0.076,
-        "label": "neutral",
-        "keywords": [
-          {
-            "word": "growth",
-            "type": "positive"
-          },
-          {
-            "word": "beat",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "strong buy",
-      "analyst_target": 191.34282,
-      "num_analysts": 40,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 0,
-        "signal": "none"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-23T00:33:05Z",
-      "error": null
-    },
-    "XOM": {
-      "symbol": "XOM",
-      "key_news": [
-        {
-          "title": "Is Exxon Mobil\u2019s (XOM) Support for Sable Offshore Revealing a New Approach to Legacy Liabilities?",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "The Race to Revive Venezuela\u2019s Vast Oil Wealth Is Underway",
-          "publisher": "Oilprice.com"
-        },
-        {
-          "title": "Exxon Mobil (XOM) Is Moving Its Legal Home To Texas In 2026",
-          "publisher": "Simply Wall St."
-        },
         {
           "title": "Exxon Saves Billions, But Margins Still Cut In Half",
           "publisher": "Trefis"
         },
         {
-          "title": "Company News for Jun 22, 2026",
+          "title": "1 S&P 500 Stock with Solid Fundamentals and 2 We Avoid",
+          "publisher": "StockStory"
+        },
+        {
+          "title": "ExxonMobil and Occidental Petroleum Stocks Trade Down, What You Need To Know",
+          "publisher": "StockStory"
+        },
+        {
+          "title": "Can Devon's Multi-Basin Assets Sustain Growth for Years to Come?",
           "publisher": "Zacks"
         },
         {
-          "title": "XLE\u2019s Concentration Risk Meets Oil\u2019s Next Move: What to Monitor in June",
-          "publisher": "24/7 Wall St."
-        },
-        {
-          "title": "Exxon Mobil Corporation (XOM) Is a Trending Stock: Facts to Know Before Betting on It",
+          "title": "SEDG Rides on Growing Demand for Integrated Solar & Storage Solutions",
           "publisher": "Zacks"
         },
         {
-          "title": "Energy\u2019s Hottest Trade: 6 High-Yielding Integrateds and Midstream Giants Are All Strong Buys",
-          "publisher": "24/7 Wall St."
+          "title": "EQT vs. Occidental Petroleum: Which Energy Stock Is a Better Buy in 2026?",
+          "publisher": "Motley Fool"
+        },
+        {
+          "title": "Stocks Supported as Geopolitical Risks Recede",
+          "publisher": "Barchart"
+        },
+        {
+          "title": "How an Oil Outsider Became Shale\u2019s Staunchest Defender",
+          "publisher": "Bloomberg"
         }
       ],
       "sentiment": {
-        "score": 0.041,
+        "score": -0.008,
         "label": "neutral",
         "keywords": [
           {
@@ -325,18 +266,14 @@
             "type": "negative"
           },
           {
-            "word": "strong",
-            "type": "positive"
-          },
-          {
-            "word": "dividend",
+            "word": "growth",
             "type": "positive"
           }
         ]
       },
-      "analyst_recommendation": "buy",
-      "analyst_target": 169.90909,
-      "num_analysts": 22,
+      "analyst_recommendation": "hold",
+      "analyst_target": 65.5,
+      "num_analysts": 24,
       "insider": {
         "buys_30d": 0,
         "sells_30d": 0,
@@ -348,7 +285,70 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-23T00:33:05Z",
+      "fetched_at": "2026-06-23T00:40:19Z",
+      "error": null
+    },
+    "CRM": {
+      "symbol": "CRM",
+      "key_news": [
+        {
+          "title": "Why Fastly (FSLY) Stock Is Nosediving",
+          "publisher": "StockStory"
+        },
+        {
+          "title": "Rapid7, Braze, and Teradata Stocks Trade Down, What You Need To Know",
+          "publisher": "StockStory"
+        },
+        {
+          "title": "Domo and DigitalOcean Shares Are Falling, What You Need To Know",
+          "publisher": "StockStory"
+        },
+        {
+          "title": "Oracle (ORCL) Stock Trades Down, Here Is Why",
+          "publisher": "StockStory"
+        },
+        {
+          "title": "Why Palantir Technologies (PLTR) Shares Are Trading Lower Today",
+          "publisher": "StockStory"
+        },
+        {
+          "title": "Appian and MongoDB Stocks Trade Down, What You Need To Know",
+          "publisher": "StockStory"
+        },
+        {
+          "title": "Sprout Social, ZoomInfo, and Upland Software Shares Plummet, What You Need To Know",
+          "publisher": "StockStory"
+        },
+        {
+          "title": "Asana, Commerce, and Five9 Stocks Trade Down, What You Need To Know",
+          "publisher": "StockStory"
+        }
+      ],
+      "sentiment": {
+        "score": 0.037,
+        "label": "neutral",
+        "keywords": [
+          {
+            "word": "record",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "buy",
+      "analyst_target": 251.52731,
+      "num_analysts": 52,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 0,
+        "signal": "none"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-23T00:40:19Z",
       "error": null
     },
     "PLTR": {
@@ -419,47 +419,47 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-23T00:33:05Z",
+      "fetched_at": "2026-06-23T00:40:19Z",
       "error": null
     },
-    "OXY": {
-      "symbol": "OXY",
+    "XOM": {
+      "symbol": "XOM",
       "key_news": [
+        {
+          "title": "Is Exxon Mobil\u2019s (XOM) Support for Sable Offshore Revealing a New Approach to Legacy Liabilities?",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "The Race to Revive Venezuela\u2019s Vast Oil Wealth Is Underway",
+          "publisher": "Oilprice.com"
+        },
+        {
+          "title": "Exxon Mobil (XOM) Is Moving Its Legal Home To Texas In 2026",
+          "publisher": "Simply Wall St."
+        },
         {
           "title": "Exxon Saves Billions, But Margins Still Cut In Half",
           "publisher": "Trefis"
         },
         {
-          "title": "1 S&P 500 Stock with Solid Fundamentals and 2 We Avoid",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "ExxonMobil and Occidental Petroleum Stocks Trade Down, What You Need To Know",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "Can Devon's Multi-Basin Assets Sustain Growth for Years to Come?",
+          "title": "Company News for Jun 22, 2026",
           "publisher": "Zacks"
         },
         {
-          "title": "SEDG Rides on Growing Demand for Integrated Solar & Storage Solutions",
+          "title": "XLE\u2019s Concentration Risk Meets Oil\u2019s Next Move: What to Monitor in June",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Exxon Mobil Corporation (XOM) Is a Trending Stock: Facts to Know Before Betting on It",
           "publisher": "Zacks"
         },
         {
-          "title": "EQT vs. Occidental Petroleum: Which Energy Stock Is a Better Buy in 2026?",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "Stocks Supported as Geopolitical Risks Recede",
-          "publisher": "Barchart"
-        },
-        {
-          "title": "How an Oil Outsider Became Shale\u2019s Staunchest Defender",
-          "publisher": "Bloomberg"
+          "title": "Energy\u2019s Hottest Trade: 6 High-Yielding Integrateds and Midstream Giants Are All Strong Buys",
+          "publisher": "24/7 Wall St."
         }
       ],
       "sentiment": {
-        "score": -0.008,
+        "score": 0.04,
         "label": "neutral",
         "keywords": [
           {
@@ -467,14 +467,18 @@
             "type": "negative"
           },
           {
-            "word": "growth",
+            "word": "strong",
+            "type": "positive"
+          },
+          {
+            "word": "dividend",
             "type": "positive"
           }
         ]
       },
-      "analyst_recommendation": "hold",
-      "analyst_target": 65.5,
-      "num_analysts": 24,
+      "analyst_recommendation": "buy",
+      "analyst_target": 169.90909,
+      "num_analysts": 22,
       "insider": {
         "buys_30d": 0,
         "sells_30d": 0,
@@ -486,70 +490,66 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-23T00:33:05Z",
+      "fetched_at": "2026-06-23T00:40:19Z",
       "error": null
     },
-    "MSFT": {
-      "symbol": "MSFT",
+    "BABA": {
+      "symbol": "BABA",
       "key_news": [
         {
-          "title": "Memory's price surge threatens Apple's 'magic formula' \u2014 and the economy: WSJ reporter",
-          "publisher": "Yahoo Finance Video"
+          "title": "Alibaba Group Holding Limited (BABA) Is a Trending Stock: Facts to Know Before Betting on It",
+          "publisher": "Zacks"
         },
         {
-          "title": "Why Fastly (FSLY) Stock Is Nosediving",
-          "publisher": "StockStory"
+          "title": "Chinese Stocks in Hong Kong Rebound From Edge of Bear Market",
+          "publisher": "Bloomberg"
         },
         {
-          "title": "Rapid7, Braze, and Teradata Stocks Trade Down, What You Need To Know",
-          "publisher": "StockStory"
+          "title": "Tencent Tests AI Assistant for Its Super App WeChat in China",
+          "publisher": "Bloomberg"
         },
         {
-          "title": "Domo and DigitalOcean Shares Are Falling, What You Need To Know",
-          "publisher": "StockStory"
+          "title": "Tech, crypto firms to help tackle illegal wildlife trade",
+          "publisher": "Reuters"
         },
         {
-          "title": "Oracle (ORCL) Stock Trades Down, Here Is Why",
-          "publisher": "StockStory"
+          "title": "BABA Stock: The Physical AI Race Heats Up as Alibaba Releases New AI Models for Robots",
+          "publisher": "Barchart"
         },
         {
-          "title": "Why Palantir Technologies (PLTR) Shares Are Trading Lower Today",
-          "publisher": "StockStory"
+          "title": "Alibaba Stock Is a Compelling Buy as It Drifts Toward 52-Week Lows. Here\u2019s Why.",
+          "publisher": "Barchart"
         },
         {
-          "title": "Appian and MongoDB Stocks Trade Down, What You Need To Know",
-          "publisher": "StockStory"
+          "title": "Alibaba Group Holding (BABA): One of the Stocks with Potential to Explode in 2026",
+          "publisher": "Insider Monkey"
         },
         {
-          "title": "Sprout Social, ZoomInfo, and Upland Software Shares Plummet, What You Need To Know",
-          "publisher": "StockStory"
+          "title": "Here\u2019s What JPMorgan Thinks of Alibaba Group Holding Ltd (BABA)",
+          "publisher": "Insider Monkey"
         }
       ],
       "sentiment": {
-        "score": 0.073,
+        "score": 0.076,
         "label": "neutral",
         "keywords": [
           {
-            "word": "surge",
+            "word": "growth",
             "type": "positive"
           },
           {
-            "word": "raises",
+            "word": "beat",
             "type": "positive"
-          },
-          {
-            "word": "miss",
-            "type": "negative"
           }
         ]
       },
       "analyst_recommendation": "strong buy",
-      "analyst_target": 561.38763,
-      "num_analysts": 55,
+      "analyst_target": 191.34282,
+      "num_analysts": 40,
       "insider": {
         "buys_30d": 0,
-        "sells_30d": 3,
-        "signal": "distributing"
+        "sells_30d": 0,
+        "signal": "none"
       },
       "reddit": {
         "mentions": 0,
@@ -557,7 +557,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-23T00:33:05Z",
+      "fetched_at": "2026-06-23T00:40:19Z",
       "error": null
     },
     "CVX": {
@@ -632,7 +632,141 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-23T00:33:11Z",
+      "fetched_at": "2026-06-23T00:40:25Z",
+      "error": null
+    },
+    "MELI": {
+      "symbol": "MELI",
+      "key_news": [
+        {
+          "title": "MercadoLibre (MELI) Declines More Than Market: Some Information for Investors",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "Did Heavy Logistics and Fintech Spending Just Shift MercadoLibre's (MELI) Investment Narrative?",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "A Once-in-a-Decade Opportunity: 5 Growth Stocks Down 28% to 54% to Buy on the Dip",
+          "publisher": "Motley Fool"
+        },
+        {
+          "title": "The Market Has Punished MercadoLibre Stock -- Is That Your Buying Opportunity?",
+          "publisher": "Motley Fool"
+        },
+        {
+          "title": "MercadoLibre Expands 1P Rapidly: Is Margin Recovery at Risk?",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "Stanley Druckenmiller Has a Secret South American Trade That Has Nothing to Do With AI",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "MercadoLibre vs. Alibaba: Which E-Commerce Stock Holds an Edge?",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "Why I Can\u2019t Stop Buying This Unstoppable, 49% Growth Juggernaut Even as a Warsh \u201cRate Shock\u201d Threatens to Tank The Market",
+          "publisher": "24/7 Wall St."
+        }
+      ],
+      "sentiment": {
+        "score": 0.082,
+        "label": "neutral",
+        "keywords": [
+          {
+            "word": "decline",
+            "type": "negative"
+          },
+          {
+            "word": "growth",
+            "type": "positive"
+          },
+          {
+            "word": "beat",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "buy",
+      "analyst_target": 2216.9583,
+      "num_analysts": 24,
+      "insider": {
+        "buys_30d": 1,
+        "sells_30d": 0,
+        "signal": "mixed"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-23T00:40:25Z",
+      "error": null
+    },
+    "MA": {
+      "symbol": "MA",
+      "key_news": [
+        {
+          "title": "MasterCard (MA) Falls More Steeply Than Broader Market: What Investors Need to Know",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "How Mastercard (MA) Is Pushing Deeper Into Cross-Border Commerce and Agentic Payments",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "How Investors May Respond To Mastercard (MA) Pushing Agent Pay and Machine-Driven Digital Payments",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "Mastercard Incorporated (MA): One of the Best Financial Stocks to Buy According to Warren Buffett",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "Congress Set to Ban Digital Dollar. What It Means for Crypto Stocks.",
+          "publisher": "Barrons.com"
+        },
+        {
+          "title": "MoneyGram joins Solana as validator to help run blockchain payment rails",
+          "publisher": "TheStreet"
+        },
+        {
+          "title": "Here is why Mastercard Incorporated\u00a0(MA) is among the Best Crypto Exchange Stocks to Buy Following Bitcoin\u2019s Recovery",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "Mastercard CMO Jill Kramer on How 'Agent Pay' Secures AI Commerce",
+          "publisher": "WSJ"
+        }
+      ],
+      "sentiment": {
+        "score": 0.03,
+        "label": "neutral",
+        "keywords": [
+          {
+            "word": "award",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "strong buy",
+      "analyst_target": 644.8889,
+      "num_analysts": 36,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 0,
+        "signal": "none"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-06-23T00:40:25Z",
       "error": null
     },
     "IBM": {
@@ -711,141 +845,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-06-23T00:33:12Z",
-      "error": null
-    },
-    "MELI": {
-      "symbol": "MELI",
-      "key_news": [
-        {
-          "title": "MercadoLibre (MELI) Declines More Than Market: Some Information for Investors",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Did Heavy Logistics and Fintech Spending Just Shift MercadoLibre's (MELI) Investment Narrative?",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "A Once-in-a-Decade Opportunity: 5 Growth Stocks Down 28% to 54% to Buy on the Dip",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "The Market Has Punished MercadoLibre Stock -- Is That Your Buying Opportunity?",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "MercadoLibre Expands 1P Rapidly: Is Margin Recovery at Risk?",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Stanley Druckenmiller Has a Secret South American Trade That Has Nothing to Do With AI",
-          "publisher": "24/7 Wall St."
-        },
-        {
-          "title": "MercadoLibre vs. Alibaba: Which E-Commerce Stock Holds an Edge?",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Why I Can\u2019t Stop Buying This Unstoppable, 49% Growth Juggernaut Even as a Warsh \u201cRate Shock\u201d Threatens to Tank The Market",
-          "publisher": "24/7 Wall St."
-        }
-      ],
-      "sentiment": {
-        "score": 0.082,
-        "label": "neutral",
-        "keywords": [
-          {
-            "word": "decline",
-            "type": "negative"
-          },
-          {
-            "word": "growth",
-            "type": "positive"
-          },
-          {
-            "word": "beat",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "buy",
-      "analyst_target": 2216.9583,
-      "num_analysts": 24,
-      "insider": {
-        "buys_30d": 1,
-        "sells_30d": 0,
-        "signal": "mixed"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-23T00:33:12Z",
-      "error": null
-    },
-    "MA": {
-      "symbol": "MA",
-      "key_news": [
-        {
-          "title": "MasterCard (MA) Falls More Steeply Than Broader Market: What Investors Need to Know",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "How Mastercard (MA) Is Pushing Deeper Into Cross-Border Commerce and Agentic Payments",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "How Investors May Respond To Mastercard (MA) Pushing Agent Pay and Machine-Driven Digital Payments",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "Mastercard Incorporated (MA): One of the Best Financial Stocks to Buy According to Warren Buffett",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "Congress Set to Ban Digital Dollar. What It Means for Crypto Stocks.",
-          "publisher": "Barrons.com"
-        },
-        {
-          "title": "MoneyGram joins Solana as validator to help run blockchain payment rails",
-          "publisher": "TheStreet"
-        },
-        {
-          "title": "Here is why Mastercard Incorporated\u00a0(MA) is among the Best Crypto Exchange Stocks to Buy Following Bitcoin\u2019s Recovery",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "Mastercard CMO Jill Kramer on How 'Agent Pay' Secures AI Commerce",
-          "publisher": "WSJ"
-        }
-      ],
-      "sentiment": {
-        "score": 0.03,
-        "label": "neutral",
-        "keywords": [
-          {
-            "word": "award",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "strong buy",
-      "analyst_target": 644.8889,
-      "num_analysts": 36,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 0,
-        "signal": "none"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-06-23T00:33:12Z",
+      "fetched_at": "2026-06-23T00:40:25Z",
       "error": null
     }
   }

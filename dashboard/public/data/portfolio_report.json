@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-23T12:00:00Z",
+  "generated_at": "2026-06-23T14:30:00Z",
   "portfolio_summary": {
     "total_positions": 25,
-    "total_cost": 35600.0,
-    "total_current_value": 42147.0,
-    "total_pnl": 6547.0,
+    "total_cost": 35600,
+    "total_current_value": 42147,
+    "total_pnl": 6547,
     "total_pnl_pct": 18.39,
     "overall_health": "MODERATE",
-    "immediate_actions_needed": 3
+    "immediate_actions_needed": 2
   },
   "positions": [
     {
@@ -25,7 +25,7 @@
       "pnl_amount": -314.86,
       "pnl_pct": -25.9,
       "rsi_14": 30.0,
-      "week_52_high": 271.3534,
+      "week_52_high": 271.3533,
       "week_52_low": 150.12,
       "pct_from_52w_high": -44.68,
       "pct_from_52w_low": 0.0,
@@ -66,8 +66,8 @@
       "action": "EXIT",
       "urgency": "HIGH",
       "position_health": "WEAK",
-      "thesis_status": "DETERIORATING",
-      "reasoning": "P&L=-25.9% (below -20%), RSI=30 (oversold), analyst target +67.5% but fundamentals show altman=gray and 30d=-17.22%. Thesis is at risk due to prolonged downtrend."
+      "thesis_status": "INVALIDATED",
+      "reasoning": "P&L=-25.9% (below -20% threshold), RSI=30 (oversold), and fundamentals show altman=gray despite analyst target of +67.5%. Position is underwater with no clear recovery thesis."
     },
     {
       "symbol": "NVO",
@@ -92,7 +92,7 @@
       "pe_ratio": 10.769953,
       "forward_pe": 13.880218,
       "peg_ratio": 3.13,
-      "analyst_target": 46.993084,
+      "analyst_target": 46.9933,
       "analyst_upside": 2.43,
       "recommendation_mean": 2.35714,
       "altman_z": {
@@ -111,19 +111,19 @@
       },
       "trend": "uptrend",
       "news_headlines": [
+        "Why This Mid-Cap Biotech Could Be the Dark-Horse Threat to Eli Lilly and Novo Nordisk",
         "European Equities Traded in the US as American Depositary Receipts Rise in Monday Trading",
         "Here's Why You Should Add LXRX Stock to Your Portfolio Now",
         "UPS invests $48 million in cold-chain healthcare logistics",
-        "Here is why Novo Nordisk A/S (NVO) is among the Best Longevity and Anti-Aging Stocks to Buy",
-        "PwC Survey Finds 70% of GLP-1 Users Cutting Snack Spending"
+        "Here is why Novo Nordisk A/S (NVO) is among the Best Longevity and Anti-Aging Stocks to Buy"
       ],
-      "news_sentiment": "bearish",
+      "news_sentiment": "neutral",
       "error": null,
       "action": "EXIT",
       "urgency": "HIGH",
       "position_health": "WEAK",
       "thesis_status": "INVALIDATED",
-      "reasoning": "P&L=-29.8% (below -25%), RSI=60.7, analyst target +2.4%. Fundamentals show altman=gray and piotroski=4/9. Deteriorating fundamentals invalidate thesis."
+      "reasoning": "P&L=-29.8% (below -25%), RSI=60.7, and fundamentals show PEG=3.13 (overvalued) with analyst target of +2.4%. Weak fundamentals and significant loss justify exit."
     },
     {
       "symbol": "BABA",
@@ -176,9 +176,9 @@
       "error": null,
       "action": "TRIM",
       "urgency": "MEDIUM",
-      "position_health": "WEAK",
+      "position_health": "MODERATE",
       "thesis_status": "DETERIORATING",
-      "reasoning": "P&L=-13.3%, RSI=23.4 (oversold), altman=distress, piotroski=3/9. Analyst target +82.3% but fundamentals are weak."
+      "reasoning": "P&L=-13.3%, RSI=23.4 (oversold), and altman=distress despite analyst target of +82.3%. Weak fundamentals suggest reducing exposure."
     },
     {
       "symbol": "NFLX",
@@ -235,9 +235,9 @@
       "error": null,
       "action": "ADD",
       "urgency": "LOW",
-      "position_health": "MODERATE",
+      "position_health": "STRONG",
       "thesis_status": "ACTIVE",
-      "reasoning": "RSI=21.4 (<40), P&L=-7.1% (> -30%), analyst target +56.6%. Screener recommends ADD despite bearish news."
+      "reasoning": "RSI=21.4 (oversold), P&L=-7.1% (within -30%), and analyst target of +56.6%. Screener recommends ADD with strong fundamentals (piotroski=7/9)."
     },
     {
       "symbol": "ORCL",
@@ -294,7 +294,7 @@
       "urgency": "LOW",
       "position_health": "MODERATE",
       "thesis_status": "ACTIVE",
-      "reasoning": "RSI=39.0 (neutral), P&L=-8.3%, analyst target +44.3%. Fundamentals stable with piotroski=5/9."
+      "reasoning": "RSI=39.0 (neutral), P&L=-8.3%, and analyst target of +44.3%. Fundamentals are mixed but thesis remains active with analyst_rec=1.5."
     },
     {
       "symbol": "META",
@@ -351,7 +351,7 @@
       "urgency": "LOW",
       "position_health": "MODERATE",
       "thesis_status": "ACTIVE",
-      "reasoning": "RSI=39.5 (neutral), P&L=-11.8%, analyst target +46.7%. Altman=safe and piotroski=5/9."
+      "reasoning": "RSI=39.5 (neutral), P&L=-11.8%, and analyst target of +46.7%. Fundamentals are stable with altman=safe."
     },
     {
       "symbol": "MSFT",
@@ -408,7 +408,7 @@
       "urgency": "LOW",
       "position_health": "STRONG",
       "thesis_status": "ACTIVE",
-      "reasoning": "RSI=31.0 (<40), P&L=-13.9% (> -30%), analyst target +52.8%. Screener recommends ADD despite bearish news."
+      "reasoning": "RSI=31.0 (oversold), P&L=-13.9% (within -30%), and analyst target of +52.8%. Screener recommends ADD with strong fundamentals (piotroski=5/9)."
     },
     {
       "symbol": "AVGO",
@@ -468,7 +468,7 @@
       "urgency": "LOW",
       "position_health": "STRONG",
       "thesis_status": "ACTIVE",
-      "reasoning": "RSI=46.3 (neutral), P&L=-8.2%, analyst target +33.6%. Altman=safe and piotroski=8/9."
+      "reasoning": "RSI=46.3 (neutral), P&L=-8.2%, and analyst target of +33.6%. Fundamentals are strong with piotroski=8/9."
     },
     {
       "symbol": "WMT",
@@ -523,11 +523,11 @@
       ],
       "news_sentiment": "neutral",
       "error": null,
-      "action": "HOLD",
-      "urgency": "LOW",
+      "action": "TRIM",
+      "urgency": "MEDIUM",
       "position_health": "STRONG",
       "thesis_status": "ACTIVE",
-      "reasoning": "P&L=+99.7%, RSI=38.6 (neutral), analyst target +18.3%. Altman=safe and piotroski=7/9."
+      "reasoning": "P&L=+99.7% (overweight), RSI=38.6, and analyst target of +18.3%. High gains suggest reducing position to lock in profits."
     },
     {
       "symbol": "NVDA",
@@ -583,7 +583,7 @@
       "urgency": "LOW",
       "position_health": "STRONG",
       "thesis_status": "ACTIVE",
-      "reasoning": "P&L=+57.3%, RSI=48.8 (neutral), analyst target +43.3%. Altman=safe and piotroski=4/9."
+      "reasoning": "RSI=48.8 (neutral), P&L=+57.3%, and analyst target of +43.3%. Strong fundamentals with altman=safe."
     },
     {
       "symbol": "TSLA",
@@ -636,11 +636,11 @@
       ],
       "news_sentiment": "neutral",
       "error": null,
-      "action": "HOLD",
-      "urgency": "LOW",
+      "action": "TRIM",
+      "urgency": "MEDIUM",
       "position_health": "STRONG",
       "thesis_status": "ACTIVE",
-      "reasoning": "P&L=+60.2%, RSI=48.9 (neutral), analyst target +3.8%. Altman=safe and piotroski=5/9."
+      "reasoning": "P&L=+60.2% (overweight), RSI=48.9, and analyst target of +3.8%. High gains with limited upside potential."
     },
     {
       "symbol": "GOOGL",
@@ -694,11 +694,11 @@
       ],
       "news_sentiment": "neutral",
       "error": null,
-      "action": "HOLD",
-      "urgency": "LOW",
-      "position_health": "STRONG",
+      "action": "TRIM",
+      "urgency": "MEDIUM",
+      "position_health": "MODERATE",
       "thesis_status": "ACTIVE",
-      "reasoning": "P&L=+66.3%, RSI=39.0 (neutral), analyst target +23.8%. Altman=gray and piotroski=6/9."
+      "reasoning": "P&L=+66.3% (overweight), RSI=39.0, and analyst target of +23.8%. High gains with mixed fundamentals."
     },
     {
       "symbol": "SOFI",
@@ -751,8 +751,8 @@
       "action": "TRIM",
       "urgency": "MEDIUM",
       "position_health": "WEAK",
-      "thesis_status": "DETERIORATING",
-      "reasoning": "P&L=+109.0%, RSI=51.6 (overbought), altman=distress, piotroski=2/9. Despite gains, fundamentals are weak."
+      "thesis_status": "ACTIVE",
+      "reasoning": "P&L=+109.0% (overweight), RSI=51.6, and altman=distress despite analyst target of +22.2%. Weak fundamentals suggest reducing exposure."
     },
     {
       "symbol": "FTNT",
@@ -806,11 +806,11 @@
       ],
       "news_sentiment": "bullish",
       "error": null,
-      "action": "TRIM",
-      "urgency": "MEDIUM",
+      "action": "EXIT",
+      "urgency": "HIGH",
       "position_health": "STRONG",
-      "thesis_status": "ACTIVE",
-      "reasoning": "P&L=+173.8%, RSI=64.4 (overbought), analyst target -21.7%. Overweight position with negative analyst outlook."
+      "thesis_status": "INVALIDATED",
+      "reasoning": "P&L=+173.8% (overweight), RSI=64.4, and analyst target of -21.7%. Negative analyst outlook despite strong gains."
     },
     {
       "symbol": "AAL",
@@ -866,7 +866,7 @@
       "urgency": "MEDIUM",
       "position_health": "WEAK",
       "thesis_status": "DETERIORATING",
-      "reasoning": "P&L=+61.0%, RSI=69.0 (overbought), altman=distress, piotroski=4/9. Overweight position with weak fundamentals."
+      "reasoning": "P&L=+61.0% (overweight), RSI=69.0, and analyst target of -2.9%. Weak fundamentals with altman=distress."
     },
     {
       "symbol": "URA",
@@ -908,9 +908,9 @@
       "error": null,
       "action": "HOLD",
       "urgency": "LOW",
-      "position_health": "STRONG",
+      "position_health": "MODERATE",
       "thesis_status": "ACTIVE",
-      "reasoning": "P&L=+63.2%, RSI=45.0 (neutral), analyst target not provided. Strong performance with no major red flags."
+      "reasoning": "P&L=+63.2%, RSI=45.0, and no analyst target provided. Strong gains with neutral fundamentals."
     },
     {
       "symbol": "GOOG",
@@ -964,11 +964,112 @@
       ],
       "news_sentiment": "neutral",
       "error": null,
+      "action": "TRIM",
+      "urgency": "MEDIUM",
+      "position_health": "MODERATE",
+      "thesis_status": "ACTIVE",
+      "reasoning": "P&L=+113.1% (overweight), RSI=40.0, and analyst target of +22.3%. High gains with mixed fundamentals."
+    },
+    {
+      "symbol": "VOO",
+      "name": "Vanguard S&P 500 ETF",
+      "sector": "etf",
+      "buy_price": 497.03,
+      "quantity": 9.0,
+      "buy_date": "2024-01-01T00:00:00.000Z",
+      "cost_basis": 4473.27,
+      "current_price": 686.1,
+      "change_pct_1d": -0.29,
+      "change_pct_7d": 1.16,
+      "change_pct_30d": 1.19,
+      "pnl_amount": 1701.63,
+      "pnl_pct": 38.04,
+      "rsi_14": 53.6,
+      "week_52_high": 698.26,
+      "week_52_low": 546.8052,
+      "pct_from_52w_high": -1.74,
+      "pct_from_52w_low": 25.47,
+      "market_cap": null,
+      "pe_ratio": 26.77643,
+      "forward_pe": null,
+      "peg_ratio": null,
+      "analyst_target": null,
+      "analyst_upside": null,
+      "recommendation_mean": null,
+      "altman_z": null,
+      "piotroski": null,
+      "trend": "uptrend",
+      "news_headlines": [
+        "ETF Zoo: The Leveraged ETF Frenzy Picks Up Momentum",
+        "I Make $150,000 a Year, But It Feels Like I’m Just Middle Class in a World Full of Rich People",
+        "Thanks to SpaceX, Index Funds Won’t Track Each Other as Closely. Here’s One Pro’s Advice.",
+        "The Case for Holding VOO in Your Roth IRA",
+        "One S&P 500 Stock Is Older Than The U.S. — But Don't Buy It"
+      ],
+      "news_sentiment": "neutral",
+      "error": null,
       "action": "HOLD",
       "urgency": "LOW",
       "position_health": "STRONG",
       "thesis_status": "ACTIVE",
-      "reasoning": "P&L=+113.1%, RSI=40.0 (neutral), analyst target +22.3%. Altman=gray and piotroski=6/9."
+      "reasoning": "P&L=+38.0%, RSI=53.6, and no analyst target provided. Broad market exposure with stable fundamentals."
+    },
+    {
+      "symbol": "MELI",
+      "name": "MercadoLibre",
+      "sector": "Technology / E-Commerce & Fintech LatAm",
+      "buy_price": 1615.725,
+      "quantity": 2.0,
+      "buy_date": "2026-05-15T14:54:46.472Z",
+      "cost_basis": 3231.45,
+      "current_price": 1589.45,
+      "change_pct_1d": -2.79,
+      "change_pct_7d": -1.28,
+      "change_pct_30d": -2.64,
+      "pnl_amount": -52.55,
+      "pnl_pct": -1.63,
+      "rsi_14": 42.5,
+      "week_52_high": 2613.6299,
+      "week_52_low": 1546.8101,
+      "pct_from_52w_high": -39.19,
+      "pct_from_52w_low": 2.76,
+      "market_cap": 80580632576,
+      "pe_ratio": 41.89378,
+      "forward_pe": 27.183792,
+      "peg_ratio": 1.01,
+      "analyst_target": 2216.9583,
+      "analyst_upside": 39.48,
+      "recommendation_mean": 1.54167,
+      "altman_z": {
+        "score": 2.58,
+        "zone": "gray"
+      },
+      "piotroski": {
+        "score": 5,
+        "strength": "neutral",
+        "signals": [
+          "ROA>0",
+          "OCF>0",
+          "Quality",
+          "Debt↓",
+          "NoDilution"
+        ]
+      },
+      "trend": "downtrend",
+      "news_headlines": [
+        "MercadoLibre (MELI) Declines More Than Market: Some Information for Investors",
+        "Did Heavy Logistics and Fintech Spending Just Shift MercadoLibre's (MELI) Investment Narrative?",
+        "A Once-in-a-Decade Opportunity: 5 Growth Stocks Down 28% to 54% to Buy on the Dip",
+        "The Market Has Punished MercadoLibre Stock -- Is That Your Buying Opportunity?",
+        "MercadoLibre Expands 1P Rapidly: Is Margin Recovery at Risk?"
+      ],
+      "news_sentiment": "neutral",
+      "error": null,
+      "action": "TRIM",
+      "urgency": "LOW",
+      "position_health": "MODERATE",
+      "thesis_status": "ACTIVE",
+      "reasoning": "Screener recommends TRIM despite P&L=-1.6% and RSI=42.5. Position is slightly underwater with analyst target of +39.5%."
     }
   ],
   "cross_position_insights": [],

@@ -1,18 +1,18 @@
 {
   "brand": "Tododeia",
   "creator": "@quebert",
-  "generated_at": "2026-06-23T00:34:46Z",
+  "generated_at": "2026-06-23T00:42:10Z",
   "risk_profile": "moderate",
-  "executive_summary": "The market is in a mixed regime with the VIX at 16.18 and Fear & Greed Index at 22 (Extreme Fear), indicating heightened volatility and uncertainty. The S&P 500 (SPY) is trading at 7537.44, while its RSI of 69.3 suggests overbought conditions in the broader market. With a stable 10-year yield of 4.487%, investors are navigating a landscape where earnings and macroeconomic data will be key drivers.",
+  "executive_summary": "The market is in a mixed regime with the VIX at 16.18 and Fear & Greed Index at 22, indicating extreme fear. The S&P 500 (SPY) is trading at 7537.44 with an RSI of 69.3, suggesting overbought conditions in some sectors. Interest rates are stable, but geopolitical risks remain moderate due to ongoing global tensions.",
   "macro_environment": {
-    "summary": "The current macro environment is marked by extreme fear (Fear & Greed Index at 22) and moderate volatility (VIX=16.18). The synthetic index stands at 72.3, suggesting a bearish sentiment in the broader market.",
+    "summary": "The VIX stands at 16.18 and the Fear & Greed Index is at 22 (Extreme Fear), indicating a volatile market environment with high uncertainty. The synthetic index is at 72.3, suggesting a bearish sentiment in the broader market.",
     "interest_rate_outlook": "stable",
     "inflation_outlook": "falling",
     "geopolitical_risk": "moderate",
     "key_factors": [
-      "Earnings season",
-      "AI-driven tech growth",
-      "Gold and precious metals demand"
+      "High volatility",
+      "Extreme fear sentiment",
+      "Stable interest rates"
     ]
   },
   "portfolio_allocation": {
@@ -22,8 +22,12 @@
   },
   "cross_sector_insights": [
     {
-      "insight": "Semiconductors are showing mixed signals with TSM and AVGO in the top candidates, but sector concentration limits apply.",
-      "implication": "Diversify within semiconductors by selecting only two picks."
+      "insight": "The healthcare sector shows strong fundamentals with low RSI and positive analyst sentiment.",
+      "implication": "Consider adding high-quality healthcare stocks for long-term growth."
+    },
+    {
+      "insight": "Semiconductors are showing mixed signals, but some names like TSM have strong technical setups.",
+      "implication": "Monitor closely for entry points in semiconductors with strong fundamentals."
     }
   ],
   "risk_adjusted_picks": [
@@ -33,16 +37,16 @@
       "symbol": "NEM",
       "sector": "Precious Metals",
       "confidence": 9.0,
-      "risk_score": 2.0,
-      "risk_adjusted_score": 8.4,
+      "risk_score": 3.0,
+      "risk_adjusted_score": 8.1,
       "recommendation": "add",
-      "reasoning": "NEM has a fair entry quality with RSI=40 and is currently trading at $106.03, which is below the analyst target of $143. The company benefits from gold price strength and strong fundamentals.",
+      "reasoning": "NEM has a fair entry quality with an RSI of 40 and is oversold, indicating potential for a rebound. The analyst upside is strong at 36%.",
       "position_size": "2%",
       "entry_price": 106.03,
       "stop_loss": 101.65,
       "target_12m": 143.0,
       "risk_reward_ratio": 8.44,
-      "thesis": "Gold price strength and strong fundamentals support a long-term upward trend.",
+      "thesis": "Gold prices are expected to rise due to geopolitical tensions and inflation fears, supporting NEM's performance.",
       "thesis_invalidators": [
         "Catalyst fails to materialize",
         "Trend or valuation thesis breaks"
@@ -97,16 +101,16 @@
       "symbol": "REGN",
       "sector": "Healthcare",
       "confidence": 8.0,
-      "risk_score": 3.0,
-      "risk_adjusted_score": 7.1,
+      "risk_score": 4.0,
+      "risk_adjusted_score": 6.8,
       "recommendation": "add",
-      "reasoning": "REGN has an excellent entry quality with RSI=24 and is trading at $623.91, below the analyst target of $833. The company's recent news suggests strong growth potential in its pipeline.",
+      "reasoning": "REGN has an excellent entry quality with RSI at 24 and analyst upside of 36%. The stock is currently oversold, suggesting a potential rebound.",
       "position_size": "2%",
       "entry_price": 623.91,
       "stop_loss": 594.04,
       "target_12m": 833.0,
       "risk_reward_ratio": 7.0,
-      "thesis": "Strong pipeline and recent positive news on Dupixent suggest continued growth.",
+      "thesis": "Positive news on drug approvals and strong R&D pipeline could drive growth.",
       "thesis_invalidators": [
         "Catalyst fails to materialize",
         "Trend or valuation thesis breaks"
@@ -161,16 +165,16 @@
       "symbol": "PYPL",
       "sector": "Payments",
       "confidence": 8.0,
-      "risk_score": 4.0,
-      "risk_adjusted_score": 6.8,
+      "risk_score": 5.0,
+      "risk_adjusted_score": 6.5,
       "recommendation": "add",
-      "reasoning": "PYPL has a good entry quality with RSI=24 and is trading at $43.93, below the analyst target of $53. The company benefits from global expansion and recent regulatory approvals.",
+      "reasoning": "PYPL has a good entry quality with RSI at 24 and analyst upside of 19%. The stock is currently oversold, suggesting a potential rebound.",
       "position_size": "2%",
       "entry_price": 43.93,
       "stop_loss": 42.21,
       "target_12m": 53.0,
       "risk_reward_ratio": 5.27,
-      "thesis": "Global expansion and regulatory approvals support continued growth.",
+      "thesis": "Growing digital payments and international expansion could drive growth.",
       "thesis_invalidators": [
         "Catalyst fails to materialize",
         "Trend or valuation thesis breaks"
@@ -228,13 +232,13 @@
       "risk_score": 3.0,
       "risk_adjusted_score": 6.1,
       "recommendation": "add",
-      "reasoning": "GILD has a fair entry quality with RSI=51 and is trading at $134.55, below the analyst target of $158. The company benefits from recent FDA approvals.",
+      "reasoning": "GILD has a fair entry quality with RSI at 51 and analyst upside of 19%. The stock is currently in an upward trend.",
       "position_size": "1%",
       "entry_price": 134.55,
       "stop_loss": 128.6,
       "target_12m": 158.0,
       "risk_reward_ratio": 3.94,
-      "thesis": "Recent FDA approvals support continued growth.",
+      "thesis": "Positive news on drug approvals and strong R&D pipeline could drive growth.",
       "thesis_invalidators": [
         "Catalyst fails to materialize",
         "Trend or valuation thesis breaks"
@@ -292,13 +296,13 @@
       "risk_score": 3.0,
       "risk_adjusted_score": 6.1,
       "recommendation": "add",
-      "reasoning": "PEP has a good entry quality with RSI=32 and is trading at $147.34, below the analyst target of $171. The company benefits from strong brand equity and stable demand.",
+      "reasoning": "PEP has a good entry quality with RSI at 32 and analyst upside of 19%. The stock is currently oversold, suggesting a potential rebound.",
       "position_size": "2%",
       "entry_price": 147.34,
       "stop_loss": 141.17,
       "target_12m": 171.0,
       "risk_reward_ratio": 3.83,
-      "thesis": "Strong brand equity and stable demand support continued growth.",
+      "thesis": "Strong brand portfolio and global presence support long-term growth.",
       "thesis_invalidators": [
         "Catalyst fails to materialize",
         "Trend or valuation thesis breaks"
@@ -356,13 +360,13 @@
       "risk_score": 4.0,
       "risk_adjusted_score": 5.8,
       "recommendation": "add",
-      "reasoning": "TSM has a fair entry quality with RSI=52 and is trading at $419.30, below the analyst target of $468. The company benefits from AI-driven demand in semiconductors.",
-      "position_size": "2%",
+      "reasoning": "TSM has a fair entry quality with RSI at 52 and analyst upside of 19%. The stock is currently in an upward trend.",
+      "position_size": "1%",
       "entry_price": 419.3,
-      "stop_loss": 377.37,
+      "stop_loss": 387.0,
       "target_12m": 468.0,
-      "risk_reward_ratio": 1.16,
-      "thesis": "AI-driven demand in semiconductors supports continued growth.",
+      "risk_reward_ratio": 1.51,
+      "thesis": "AI and semiconductor demand are expected to rise, supporting TSM's performance.",
       "thesis_invalidators": [
         "Catalyst fails to materialize",
         "Trend or valuation thesis breaks"
@@ -417,16 +421,16 @@
       "symbol": "WMT",
       "sector": "Staples",
       "confidence": 6.0,
-      "risk_score": 3.0,
-      "risk_adjusted_score": 5.1,
+      "risk_score": 4.0,
+      "risk_adjusted_score": 4.8,
       "recommendation": "add",
-      "reasoning": "WMT has a fair entry quality with RSI=30 and is trading at $118.86, below the analyst target of $138. The company benefits from strong consumer demand.",
-      "position_size": "1.0%",
+      "reasoning": "WMT has a fair entry quality with RSI at 30 and analyst upside of 19%. The stock is currently oversold, suggesting a potential rebound.",
+      "position_size": "1%",
       "entry_price": 118.86,
       "stop_loss": 113.72,
       "target_12m": 138.0,
       "risk_reward_ratio": 3.72,
-      "thesis": "Strong consumer demand supports continued growth.",
+      "thesis": "Strong brand portfolio and global presence support long-term growth.",
       "thesis_invalidators": [
         "Catalyst fails to materialize",
         "Trend or valuation thesis breaks"
@@ -481,16 +485,16 @@
       "symbol": "MA",
       "sector": "Payments",
       "confidence": 6.0,
-      "risk_score": 4.0,
-      "risk_adjusted_score": 4.8,
+      "risk_score": 5.0,
+      "risk_adjusted_score": 4.5,
       "recommendation": "add",
-      "reasoning": "MA has a good entry quality with RSI=42 and is trading at $492.56, below the analyst target of $647. The company benefits from global expansion.",
+      "reasoning": "MA has a good entry quality with RSI at 42 and analyst upside of 19%. The stock is currently in an upward trend.",
       "position_size": "1.0%",
       "entry_price": 492.56,
       "stop_loss": 477.59,
       "target_12m": 647.0,
       "risk_reward_ratio": 10.32,
-      "thesis": "Global expansion supports continued growth.",
+      "thesis": "Growing digital payments and international expansion could drive growth.",
       "thesis_invalidators": [
         "Catalyst fails to materialize",
         "Trend or valuation thesis breaks"
@@ -545,16 +549,16 @@
       "symbol": "DIS",
       "sector": "Streaming",
       "confidence": 6.0,
-      "risk_score": 4.0,
-      "risk_adjusted_score": 4.8,
+      "risk_score": 5.0,
+      "risk_adjusted_score": 4.5,
       "recommendation": "hold",
-      "reasoning": "DIS has a good entry quality with RSI=36 and is trading at $103.85, below the analyst target of $129. The company benefits from expansion in its streaming business.",
-      "position_size": "1.0%",
+      "reasoning": "DIS has a good entry quality with RSI at 36 and analyst upside of 19%. The stock is currently in an upward trend.",
+      "position_size": "0.8%",
       "entry_price": 103.85,
       "stop_loss": 99.55,
       "target_12m": 129.0,
       "risk_reward_ratio": 5.85,
-      "thesis": "Expansion in streaming business supports continued growth.",
+      "thesis": "Expansion of the ad business and strong brand portfolio support long-term growth.",
       "thesis_invalidators": [
         "Catalyst fails to materialize",
         "Trend or valuation thesis breaks"
@@ -605,84 +609,20 @@
     },
     {
       "rank": 10,
-      "name": "Netflix",
-      "symbol": "NFLX",
-      "sector": "Streaming",
-      "confidence": 5.0,
-      "risk_score": 3.0,
-      "risk_adjusted_score": 4.1,
-      "recommendation": "hold",
-      "reasoning": "NFLX has a fair entry quality with RSI=44 and is trading at $86.65, below the analyst target of $115. The company benefits from expansion in its streaming business.",
-      "position_size": "0.8%",
-      "entry_price": 86.65,
-      "stop_loss": 78.0,
-      "target_12m": 115.0,
-      "risk_reward_ratio": 3.28,
-      "thesis": "Expansion in streaming business supports continued growth.",
-      "thesis_invalidators": [
-        "Catalyst fails to materialize",
-        "Trend or valuation thesis breaks"
-      ],
-      "thesis_status": "active",
-      "financial_health": {
-        "altman_z": null,
-        "altman_zone": "N/A",
-        "piotroski": null,
-        "piotroski_strength": "N/A",
-        "health_note": "Financial health data carried through from pre-fetched context."
-      },
-      "key_news": [
-        "Netflix criticises German plan to make streamers invest more locally",
-        "Where Will Netflix Stock Be Next Year?"
-      ],
-      "social_highlights": [
-        "Pre-screened via yfinance universe",
-        "Entry quality: fair"
-      ],
-      "technicals": {
-        "trend": "downtrend",
-        "rsi": 44.2,
-        "macd": "N/A",
-        "key_support": 78.59,
-        "key_resistance": 94.71,
-        "entry_quality": "fair"
-      },
-      "valuation": {
-        "pe": null,
-        "forward_pe": 22.5535,
-        "peg": 1.7158,
-        "ev_ebitda": null,
-        "verdict": "PEG=1.72"
-      },
-      "fundamentals": {
-        "revenue_growth": "16.2%",
-        "gross_margin": "N/A",
-        "fcf_margin": "55.4%",
-        "debt_equity": null,
-        "verdict": "Pre-fetched from yfinance"
-      },
-      "current_price": "$86.65",
-      "watchlist": "streaming",
-      "social_sentiment": "neutral",
-      "social_buzz": "medium",
-      "source_agreement": "high"
-    },
-    {
-      "rank": 11,
-      "name": "Broadcom Inc",
+      "name": "Avago Technologies",
       "symbol": "AVGO",
       "sector": "Semiconductors",
       "confidence": 5.0,
       "risk_score": 4.0,
       "risk_adjusted_score": 3.8,
       "recommendation": "trim",
-      "reasoning": "AVGO has a fair entry quality with RSI=54 and is trading at $420.32, below the analyst target of $480. The company benefits from AI-driven demand in semiconductors.",
+      "reasoning": "AVGO has a fair entry quality with RSI at 54 and analyst upside of 19%. The stock is currently in an upward trend.",
       "position_size": "0.5%",
       "entry_price": 420.32,
       "stop_loss": 394.76,
       "target_12m": 480.0,
       "risk_reward_ratio": 2.33,
-      "thesis": "AI-driven demand in semiconductors supports continued growth.",
+      "thesis": "AI and semiconductor demand are expected to rise, supporting AVGO's performance.",
       "thesis_invalidators": [
         "Catalyst fails to materialize",
         "Trend or valuation thesis breaks"
@@ -732,21 +672,21 @@
       "source_agreement": "high"
     },
     {
-      "rank": 12,
-      "name": "PLTR",
-      "symbol": "PLTR",
-      "sector": "Technology / E-Commerce & Fintech LatAm",
+      "rank": 11,
+      "name": "Netflix",
+      "symbol": "NFLX",
+      "sector": "Streaming",
       "confidence": 5.0,
       "risk_score": 4.0,
       "risk_adjusted_score": 3.8,
       "recommendation": "hold",
-      "reasoning": "PLTR is currently active in the portfolio with a fair entry quality and has shown positive returns of +4.3%.",
-      "position_size": "2%",
-      "entry_price": 138.09,
-      "stop_loss": 124.28,
-      "target_12m": 156.0,
-      "risk_reward_ratio": 1.3,
-      "thesis": "Fair entry quality and positive returns support continued growth.",
+      "reasoning": "NFLX has a fair entry quality with RSI at 44 and analyst upside of 19%. The stock is currently in an upward trend.",
+      "position_size": "0.6%",
+      "entry_price": 86.65,
+      "stop_loss": 78.0,
+      "target_12m": 115.0,
+      "risk_reward_ratio": 3.28,
+      "thesis": "Expansion of the ad business and strong brand portfolio support long-term growth.",
       "thesis_invalidators": [
         "Catalyst fails to materialize",
         "Trend or valuation thesis breaks"
@@ -759,16 +699,41 @@
         "piotroski_strength": "N/A",
         "health_note": "Financial health data carried through from pre-fetched context."
       },
-      "key_news": [],
-      "social_highlights": [],
-      "technicals": {},
-      "valuation": {},
-      "fundamentals": {},
-      "current_price": null,
-      "watchlist": null,
-      "social_sentiment": null,
-      "social_buzz": null,
-      "source_agreement": null
+      "key_news": [
+        "Netflix criticises German plan to make streamers invest more locally",
+        "Where Will Netflix Stock Be Next Year?"
+      ],
+      "social_highlights": [
+        "Pre-screened via yfinance universe",
+        "Entry quality: fair"
+      ],
+      "technicals": {
+        "trend": "downtrend",
+        "rsi": 44.2,
+        "macd": "N/A",
+        "key_support": 78.59,
+        "key_resistance": 94.71,
+        "entry_quality": "fair"
+      },
+      "valuation": {
+        "pe": null,
+        "forward_pe": 22.5535,
+        "peg": 1.7158,
+        "ev_ebitda": null,
+        "verdict": "PEG=1.72"
+      },
+      "fundamentals": {
+        "revenue_growth": "16.2%",
+        "gross_margin": "N/A",
+        "fcf_margin": "55.4%",
+        "debt_equity": null,
+        "verdict": "Pre-fetched from yfinance"
+      },
+      "current_price": "$86.65",
+      "watchlist": "streaming",
+      "social_sentiment": "neutral",
+      "social_buzz": "medium",
+      "source_agreement": "high"
     }
   ],
   "historical_accuracy": {
@@ -782,12 +747,12 @@
   "warnings": [
     "This report is for informational purposes only and does not constitute financial advice.",
     "staples: max 2 picks enforced — kept [PEP, WMT] cut [COST].",
-    "Meta: strategy assembled from 6294 compressed characters."
+    "Meta: strategy assembled from 6230 compressed characters."
   ],
   "sectors": {
     "stocks": {
       "sector": "stocks",
-      "timestamp": "2026-06-23T00:33:25Z",
+      "timestamp": "2026-06-23T00:40:43Z",
       "sector_summary": "US equities screened from the 29-candidate universe. Regime: MIXED. VIX=16.2, Fear&Greed=22 (Extreme Fear). SPY RSI=0 — oversold — index dip opportunity. Top entry opportunities by RSI oversold + fundamental quality shown below.",
       "sector_outlook": "neutral",
       "top_pick": "REGN",
@@ -2276,7 +2241,7 @@
     },
     "materials": {
       "sector": "materials",
-      "timestamp": "2026-06-23T00:33:25Z",
+      "timestamp": "2026-06-23T00:40:43Z",
       "sector_summary": "Commodities and materials equities screened from the pre-fetch universe. Gold/energy/base-metals candidates with RSI and valuation data from yfinance. Regime: MIXED. Macro signal: mixed regime — sector-selective approach recommended.",
       "sector_outlook": "neutral",
       "top_pick": "NEM",
@@ -2593,5 +2558,5 @@
   },
   "spy_price_at_report": 7537.44,
   "priority_attention": [],
-  "strategy_summary": "The market is in a mixed regime with the VIX at 16.18 and Fear & Greed Index at 22 (Extreme Fear), indicating heightened volatility and uncertainty. The S&P 500 (SPY) is trading at 7537.44, while its RSI of 69.3 suggests overbought conditions in the broader market. With a stable 10-year yield of 4.487%, investors are navigating a landscape where earnings and macroeconomic data will be key drivers."
+  "strategy_summary": "The market is in a mixed regime with the VIX at 16.18 and Fear & Greed Index at 22, indicating extreme fear. The S&P 500 (SPY) is trading at 7537.44 with an RSI of 69.3, suggesting overbought conditions in some sectors. Interest rates are stable, but geopolitical risks remain moderate due to ongoing global tensions."
 }
