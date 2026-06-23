@@ -24,6 +24,12 @@ import os
 import json
 import glob
 import warnings
+
+# Force UTF-8 output for Windows compatibility (cp1252 can't encode emojis)
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 warnings.filterwarnings("ignore")
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed

@@ -25,6 +25,12 @@ import re
 import sys
 import time
 from datetime import datetime, timezone
+
+# Force UTF-8 output for Windows compatibility (cp1252 can't encode emojis)
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 from html import unescape
 from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError

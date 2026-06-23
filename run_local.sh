@@ -17,6 +17,8 @@ MODEL="${MAIA_MODEL:-maia-agent}"
 OUT_DIR="${TODODEIA_OUT_DIR:-/tmp/tododeia}"
 DASHBOARD_PORT="${DASHBOARD_PORT:-3420}"
 export MAIA_NUM_PREDICT="${MAIA_NUM_PREDICT:-4000}"
+# Forzar UTF-8 en todos los subprocesos Python (Windows cp1252 no soporta emojis)
+export PYTHONUTF8=1
 
 echo ""
 echo "🚀 Tododeia v2 | Perfil: $RISK | Modelo: $MODEL"

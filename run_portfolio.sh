@@ -14,6 +14,8 @@ MODEL="${MAIA_MODEL:-maia-agent}"
 export MAIA_NUM_PREDICT="${MAIA_NUM_PREDICT:-1500}"
 export MAIA_TIMEOUT="${MAIA_TIMEOUT:-480}"
 export MAIA_MAX_POSITIONS="${MAIA_MAX_POSITIONS:-20}"
+# Forzar UTF-8 en todos los subprocesos Python (Windows cp1252 no soporta emojis)
+export PYTHONUTF8=1
 
 echo ""
 echo "📊 Tododeia — Análisis de Portfolio | Modelo: $MODEL"
