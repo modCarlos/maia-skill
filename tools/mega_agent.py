@@ -644,11 +644,6 @@ def main():
         context = build_context(risk_profile)
         print(f"   Contexto construido ({len(context):,} chars)", file=sys.stderr)
 
-    # Truncar contexto si es demasiado largo para el context window del modelo
-    if len(context) > 6000:
-        print(f"   ⚠️  Contexto largo ({len(context):,} chars) — truncando a 6,000", file=sys.stderr)
-        context = context[:6000] + "\n[...context truncated to fit model context window...]"
-
     last_error = None
     _truncated = False
     for attempt in range(1, MAX_RETRIES + 1):
