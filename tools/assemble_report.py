@@ -357,6 +357,7 @@ def normalize_picks(
     sectors: dict[str, Any],
     risk_profile: str,
     market_context: dict[str, Any],
+    contrarian_signal: bool = False,
 ) -> tuple[list[dict[str, Any]], list[str]]:
     asset_index = build_asset_index(sectors)
     trailing_stops = load_trailing_stops()
@@ -380,6 +381,22 @@ def normalize_picks(
         rec = normalize_recommendation(merged.get("recommendation"), held)
         confidence = parse_number(merged.get("confidence"), 6.5 if not held else 6.8) or 6.5
         risk_score = parse_number(merged.get("risk_score"), 4.0) or 4.0
+
+        # Contrarian floor: during Extreme Fear + quality oversold conditions, the LLM
+        # tends to under-weight excellent-oversold ADD picks due to negative macro narrative.
+        # Apply a deterministic confidence floor of 7.0 for those picks.
+        if contrarian_signal and rec in {"buy", "add"}:
+            entry_q = str(
+                merged.get("entry_quality") or asset.get("entry_quality") or ""
+            ).lower()
+            if "excellent" in entry_q and "oversold" in entry_q:
+                if confidence < 7.0:
+                    warnings.append(
+                        f"{symbol}: contrarian floor applied (confidence {confidence:.1f}→7.0 — "
+                        "extreme fear + quality oversold accumulation window)."
+                    )
+                    confidence = 7.0
+
         risk_adjusted = clamp(round(confidence - (risk_score * 0.3), 1))
 
         asset_price = parse_number(asset.get("current_price"))
@@ -583,10 +600,11 @@ def main() -> None:
         strategy = fallback_strategy(sectors, risk_profile, market_context, meta)
         picks = strategy["risk_adjusted_picks"]
 
-    normalized_picks, local_warnings = normalize_picks(picks, sectors, risk_profile, market_context)
+    contrarian_signal = bool(meta.get("contrarian_signal", False))
+    normalized_picks, local_warnings = normalize_picks(picks, sectors, risk_profile, market_context, contrarian_signal)
     if not normalized_picks:
         strategy = fallback_strategy(sectors, risk_profile, market_context, meta)
-        normalized_picks, local_warnings = normalize_picks(strategy["risk_adjusted_picks"], sectors, risk_profile, market_context)
+        normalized_picks, local_warnings = normalize_picks(strategy["risk_adjusted_picks"], sectors, risk_profile, market_context, contrarian_signal)
 
     macro_environment = strategy.get("macro_environment") or fallback_macro_environment(market_context)
     portfolio_allocation = strategy.get("portfolio_allocation") or fallback_allocation(risk_profile)
