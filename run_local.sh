@@ -14,7 +14,8 @@ set -e
 RISK="${1:-moderate}"
 SKILL_DIR="$(cd "$(dirname "$0")" && pwd)"
 MODEL="${MAIA_MODEL:-maia-agent}"
-OUT_DIR="${TODODEIA_OUT_DIR:-/tmp/tododeia}"
+# Resolve temp dir cross-platform: Git Bash maps /tmp on Windows; Python uses %TEMP%
+OUT_DIR="${TODODEIA_OUT_DIR:-$(python3 -c 'import tempfile,os; print(os.path.join(tempfile.gettempdir(),"tododeia"))')}"
 DASHBOARD_PORT="${DASHBOARD_PORT:-3420}"
 export MAIA_NUM_PREDICT="${MAIA_NUM_PREDICT:-4000}"
 # Forzar UTF-8 en todos los subprocesos Python (Windows cp1252 no soporta emojis)

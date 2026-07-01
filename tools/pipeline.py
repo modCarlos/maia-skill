@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import tempfile
 import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -39,7 +40,7 @@ _SKILL_BASE = PROJECT_ROOT / ".claude" / "skills" / "investment-analysis"
 SKILL_DIR = _SKILL_BASE
 DATA_DIR = _SKILL_BASE / "data"
 HISTORY_DIR = PROJECT_ROOT / "output" / "history"
-DEFAULT_OUT_DIR = Path("/tmp/tododeia")
+DEFAULT_OUT_DIR = Path(tempfile.gettempdir()) / "tododeia"  # /tmp on Mac/Linux, %TEMP% on Windows
 
 
 def now_utc() -> str:
