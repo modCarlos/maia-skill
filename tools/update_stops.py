@@ -30,7 +30,7 @@ from datetime import datetime
 _TOOLS_DIR   = os.path.dirname(os.path.abspath(__file__))
 _PROJECT_ROOT = os.path.dirname(_TOOLS_DIR)
 SKILL_ROOT   = os.path.join(_PROJECT_ROOT, ".claude", "skills", "investment-analysis")
-HISTORY_DIR  = os.path.join(SKILL_ROOT, "output", "history")
+HISTORY_DIR  = os.path.join(_PROJECT_ROOT, "output", "history")
 CONTEXT_PATH = os.path.join(SKILL_ROOT, "data", "market_context.json")
 OUTPUT_PATH  = os.path.join(SKILL_ROOT, "data", "trailing_stops.json")
 

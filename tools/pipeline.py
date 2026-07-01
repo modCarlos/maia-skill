@@ -38,7 +38,7 @@ PROJECT_ROOT = TOOLS_DIR.parent
 _SKILL_BASE = PROJECT_ROOT / ".claude" / "skills" / "investment-analysis"
 SKILL_DIR = _SKILL_BASE
 DATA_DIR = _SKILL_BASE / "data"
-HISTORY_DIR = _SKILL_BASE / "output" / "history"
+HISTORY_DIR = PROJECT_ROOT / "output" / "history"
 DEFAULT_OUT_DIR = Path("/tmp/tododeia")
 
 

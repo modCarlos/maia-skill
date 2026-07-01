@@ -29,7 +29,7 @@ _TOOLS_DIR = Path(__file__).resolve().parent
 _PROJECT_ROOT = _TOOLS_DIR.parent
 _SKILL_BASE = _PROJECT_ROOT / ".claude" / "skills" / "investment-analysis"
 SKILL_DIR = _SKILL_BASE
-HISTORY_DIR = _SKILL_BASE / "output" / "history"
+HISTORY_DIR = _PROJECT_ROOT / "output" / "history"
 MARKET_CTX  = _SKILL_BASE / "data" / "market_context.json"
 
 # Ventanas en días HÁBILES exactos (numpy.busday_offset, calendario NYSE).
