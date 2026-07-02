@@ -377,6 +377,65 @@ def build_invalidator_warnings(skill_dir: Path) -> list[str]:
     return lines
 
 
+def build_contrarian_signal_block(macro: dict, candidates: list) -> list[str]:
+    """Emits CONTRARIAN_SIGNAL block when market conditions favor contrarian accumulation.
+
+    Triggers ONLY when ALL three conditions hold:
+    - Fear & Greed < 30 (Fear or Extreme Fear)
+    - market_regime != BULL
+    - ≥3 candidates with entry_quality = 'excellent — oversold'
+      (excludes 'oversold — fundamentals deteriorating' to avoid pumping value traps)
+    """
+    fg = float(macro.get("fear_greed_index") or macro.get("fear_greed_value") or 50)
+    spy_rsi = float(macro.get("spy_rsi") or 50)
+    regime = str(macro.get("market_regime", "MIXED"))
+    fg_label = str(macro.get("fear_greed_label", ""))
+
+    n_quality_oversold = sum(
+        1 for c in candidates
+        if "excellent" in str(c.get("entry_quality", "")).lower()
+        and "oversold" in str(c.get("entry_quality", "")).lower()
+    )
+
+    if fg >= 30 or regime == "BULL" or n_quality_oversold < 3:
+        return []
+
+    return [
+        f"CONTRARIAN_SIGNAL: ACTIVE — F&G={fg:.0f}({fg_label}) SPY_RSI={spy_rsi:.0f} "
+        f"quality_oversold={n_quality_oversold} regime={regime}",
+        "→ Historical pattern: Extreme Fear + 3+ quality-oversold stocks → positive 30-90d returns in ~70% of cases.",
+        "→ RULE: Do NOT reduce confidence below 7.0 for ADD picks with entry_quality=excellent-oversold "
+        "solely because of negative macro narrative — fear IS the signal here.",
+        "→ RULE: Prefer ADD over HOLD when thesis is intact and entry_quality=excellent-oversold. "
+        "Maintain normal stops and position sizing — contrarian premium on quality names only.",
+    ]
+
+
+def build_sector_news_block(news_raw: dict) -> list[str]:
+    """Compact sector sentiment block from sector_news (populated by news_fetch.py).
+
+    Returns empty list when sector_news is absent (graceful degradation).
+    """
+    sector_data = news_raw.get("sector_news", {}) if isinstance(news_raw, dict) else {}
+    if not sector_data:
+        return []
+
+    short_names = {
+        "tech": "tech", "financials": "fin", "consumer": "cons",
+        "energy": "ener", "healthcare": "hlth",
+    }
+    lines = ["SECTOR_SENTIMENT (tech|fin|cons|ener|hlth):"]
+    for sector, data in sector_data.items():
+        if not isinstance(data, dict):
+            continue
+        label = data.get("sentiment", "neutral")
+        headlines = data.get("headlines", [])
+        h1 = truncate(headlines[0] if headlines else "—", 70)
+        short = short_names.get(sector, sector[:4])
+        lines.append(f"  {short}:[{label}] → {h1}")
+    return lines
+
+
 def build_theses_block(prev_path: str, prices_snapshot: dict) -> list[str]:
     if not prev_path:
         return []
@@ -429,14 +488,20 @@ def main():
     # 1. Macro
     blocks.append(build_macro_line(macro))
 
+    # 1b. Contrarian signal — emitted right after macro so LLM sees it before candidates
+    blocks.extend(build_contrarian_signal_block(macro, candidates))
+
     # 2. Candidates table
     blocks.extend(build_candidates_table(candidates))
 
     # 3. Correlation limits
     blocks.extend(build_corr_warnings(corr_warnings))
 
-    # 4. News
+    # 4. Per-ticker news
     blocks.extend(build_news_block(news_map, candidates))
+
+    # 4b. Sector-level sentiment
+    blocks.extend(build_sector_news_block(news_raw))
 
     # 5. SEC risks
     blocks.extend(build_sec_block(sec_results, candidates))

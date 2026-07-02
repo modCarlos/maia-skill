@@ -181,6 +181,43 @@ def get_reddit_sentiment(symbol: str) -> dict:
 # Google News RSS — more source diversity, no auth
 # ---------------------------------------------------------------------------
 
+# Sector queries for market-level sentiment (proxy via Google News RSS)
+# ETF tickers like XLK not used directly; queries give better headline diversity.
+_SECTOR_QUERIES: dict[str, str] = {
+    "tech":       "technology sector stocks outlook",
+    "financials": "financial sector banks earnings",
+    "consumer":   "consumer spending retail stocks",
+    "energy":     "energy sector oil commodities",
+    "healthcare": "healthcare biotech sector stocks",
+}
+
+
+def get_sector_news() -> dict[str, dict]:
+    """Fetch Google News RSS headlines for each major market sector.
+
+    Returns {sector: {headlines, sentiment, score}} — all network errors are
+    caught silently so one flaky RSS call cannot abort the pipeline.
+    """
+    results: dict[str, dict] = {}
+    for sector, query in _SECTOR_QUERIES.items():
+        try:
+            news = get_google_news(query)
+            sentiment = analyze_sentiment(news)
+            results[sector] = {
+                "headlines": [n["title"] for n in news[:3]],
+                "sentiment": sentiment["label"],
+                "score": round(sentiment["score"], 2),
+            }
+        except Exception as exc:
+            results[sector] = {
+                "headlines": [],
+                "sentiment": "neutral",
+                "score": 0.0,
+                "error": str(exc),
+            }
+    return results
+
+
 def get_google_news(symbol: str) -> list:
     """
     Fetch up to 10 headlines from Google News RSS for the given ticker.
@@ -409,6 +446,14 @@ def main():
 
     elapsed = time.time() - start
 
+    # ── Sector-level news (market/sector sentiment) ───────────────────────
+    print("[news_fetch] Fetching sector news (5 sectors)…", file=sys.stderr)
+    sector_news = get_sector_news()
+    for sector, data in sector_news.items():
+        label = data.get("sentiment", "neutral")
+        n = len(data.get("headlines", []))
+        print(f"  {sector:<12} sentiment={label}  headlines={n}", file=sys.stderr)
+
     # ── Write output ──────────────────────────────────────────────────────
     output = {
         "fetched_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -416,6 +461,7 @@ def main():
         "reddit_enabled": include_reddit,
         "elapsed_seconds": round(elapsed, 1),
         "news": results,
+        "sector_news": sector_news,
     }
 
     tmp_path = NEWS_CTX + ".tmp"

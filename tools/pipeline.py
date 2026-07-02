@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import tempfile
 import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -38,8 +39,8 @@ PROJECT_ROOT = TOOLS_DIR.parent
 _SKILL_BASE = PROJECT_ROOT / ".claude" / "skills" / "investment-analysis"
 SKILL_DIR = _SKILL_BASE
 DATA_DIR = _SKILL_BASE / "data"
-HISTORY_DIR = _SKILL_BASE / "output" / "history"
-DEFAULT_OUT_DIR = Path("/tmp/tododeia")
+HISTORY_DIR = PROJECT_ROOT / "output" / "history"
+DEFAULT_OUT_DIR = Path(tempfile.gettempdir()) / "tododeia"  # /tmp on Mac/Linux, %TEMP% on Windows
 
 
 def now_utc() -> str:
@@ -292,6 +293,24 @@ def main() -> None:
     if mega_context_chars > 6000:
         print(f"[pipeline] WARN mega_context exceeds guardrail: {mega_context_chars} chars", file=sys.stderr)
 
+    # ── Contrarian signal ─────────────────────────────────────────────────────
+    _macro_ctx = market_context.get("macro", {})
+    _candidates = market_context.get("candidates", [])
+    _fg = float(_macro_ctx.get("fear_greed_index") or _macro_ctx.get("fear_greed_value") or 50)
+    _regime = str(_macro_ctx.get("market_regime", "MIXED"))
+    _n_quality_oversold = sum(
+        1 for c in _candidates
+        if "excellent" in str(c.get("entry_quality", "")).lower()
+        and "oversold" in str(c.get("entry_quality", "")).lower()
+    )
+    contrarian_signal = bool(_fg < 30 and _regime != "BULL" and _n_quality_oversold >= 3)
+    if contrarian_signal:
+        print(
+            f"[pipeline] CONTRARIAN_SIGNAL active — F&G={_fg:.0f} regime={_regime} "
+            f"quality_oversold={_n_quality_oversold}",
+            file=sys.stderr,
+        )
+
     meta = {
         "generated_at": now_utc(),
         "risk_profile": risk_profile,
@@ -317,6 +336,9 @@ def main() -> None:
         "parallel_fetches": summarize_processes(parallel_results),
         "update_stops": update_stops_summary,
         "correlation_warnings": market_context.get("correlation_warnings", []),
+        "contrarian_signal": contrarian_signal,
+        "contrarian_n_quality_oversold": _n_quality_oversold,
+        "contrarian_fear_greed": _fg,
     }
 
     write_json(pipeline_meta_path, meta)
