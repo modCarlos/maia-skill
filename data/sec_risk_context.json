@@ -1,75 +1,33 @@
 {
-  "generated_at": "2026-06-23T00:40:43Z",
+  "generated_at": "2026-07-02T04:20:23Z",
   "source": "SEC EDGAR",
   "top": 12,
   "symbols": [
-    "NFLX",
-    "CRM",
-    "MSFT",
-    "PLTR",
-    "BABA",
-    "SONY",
-    "XOM",
     "OXY",
+    "BABA",
     "CVX",
-    "MELI",
-    "IBM",
-    "MA"
+    "XOM",
+    "DIS",
+    "NFLX",
+    "AVGO",
+    "NVDA",
+    "SONY",
+    "GS",
+    "AMZN",
+    "MS"
   ],
   "results": [
     {
-      "symbol": "NFLX",
+      "symbol": "OXY",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2025-01-27",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001065280/000106528025000044/nflx-20241231.htm",
+      "filing_date": "2026-02-18",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000797468/000162828026009059/oxy-20251231.htm",
       "risk_factors": [
-        "All forward-looking statements included in this document are based on information available to us on the date hereof, and we assume no obligation to revise or publicly release any revision to any such forward-looking statement, except as may otherwise be required by law.",
-        "(“Netflix”, “the Company”, “registrant”, “we”, or “us”) is one of the world’s leading entertainment services with approximately 302 million paid memberships in over 190 countries enjoying TV series, films and games across a wide variety of genres and languages.",
-        "Members can play, pause and resume watching as much as they want, anytime, anywhere, and can change their plans at any time.",
-        "Our core strategy is to grow our business globally within the parameters of our operating margin target."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "CRM",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2026-03-02",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001108524/000110852426000060/crm-20260131.htm",
-      "risk_factors": [
-        "A manifestation of any of the following risks and uncertainties could, in circumstances we may or may not be able to accurately predict, materially and adversely affect our business and operations, growth, reputation, prospects, operating and financial results, financial condition, cash flows, liquidity and stock pr...",
-        "Some of the factors, events and contingencies discussed below may have occurred in the past, but the disclosures below are not representations as to whether or not the factors, events or contingencies have occurred in the past and instead reflect our beliefs and opinions as to the factors, events or contingencies th...",
-        "Other events, factors or uncertainties that we do not currently anticipate or that we currently deem immaterial also may affect our business, financial condition, results of operations, cash flows, other key metrics and the trading price of our common stock.",
-        "Therefore, you should not consider the following risks to be a complete statement of all the potential risks or uncertainties that we face."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "MSFT",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2023-07-27",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000789019/000095017023035122/msft-20230630.htm",
-      "risk_factors": [
-        "These forward-looking statements generally are identified by the words “believe,” “project,” “expect,” “anticipate,” “estimate,” “intend,” “strategy,” “future,” “opportunity,” “plan,” “may,” “should,” “will,” “would,” “will be,” “will continue,” “will likely result,” and similar expressions.",
-        "Forward-looking statements are based on current expectations and assumptions that are subject to risks and uncertainties that may cause actual results to differ materially.",
-        "Readers are cautioned not to place undue reliance on forward-looking statements, which speak only as of the date they are made.",
-        "We undertake no obligation to update or revise publicly any forward-looking statements, whether because of new information, future events, or otherwise."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "PLTR",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2025-02-18",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001321655/000132165525000022/pltr-20241231.htm",
-      "risk_factors": [
-        "You should carefully consider the risks and uncertainties described below, together with all of the other information in this Annual Report on Form 10-K, including the section titled “Management’s Discussion and Analysis of Financial Condition and Results of Operations” and our consolidated financial statements and...",
-        "Our business, financial condition, results of operations, or prospects could also be harmed by risks and uncertainties not currently known to us or that we currently do not believe are material.",
-        "If any of the risks actually occur, our business, financial condition, results of operations, and prospects could be adversely affected.",
-        "In that event, the trading price of our Class A common stock could decline, and you could lose part or all of your investment."
+        "AVAILABLE INFORMATION The Company’s annual reports on Form 10-K, quarterly reports on Form 10-Q, current reports on Form 8-K and any amendments to those reports are available free of charge on its website, www.oxy.com, as soon as reasonably practicable after the Company electronically files the material with, or fur...",
+        "In addition, copies of the Company’s annual report will be made available, free of charge, upon written request.",
+        "From time to time, the Company has made and expects in the future to use its website as a channel of distribution of material information regarding the Company.",
+        "Financial and other material information regarding the Company is routinely posted on the Company’s website and accessible at www.oxy.com/investors/."
       ],
       "error": null
     },
@@ -88,16 +46,16 @@
       "error": null
     },
     {
-      "symbol": "SONY",
+      "symbol": "CVX",
       "cik": null,
-      "form": "20-F",
-      "filing_date": "2024-06-25",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000313838/000119312524167500/d797371d20f.htm",
+      "form": "10-K",
+      "filing_date": "2026-02-24",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000093410/000009341026000078/cvx-20251231.htm",
       "risk_factors": [
-        "Sony must overcome increasingly intense competition, which could lead to lower revenue or operating margins.",
-        "Sony has several business segments in different industries with many product and service categories, which cause it to compete with many existing and new competitors ranging from large multinational companies to highly specialized entities that focus on only one or a few businesses and also, potentially, with outsou...",
-        "These competitors may have greater financial, technical, labor and marketing resources available to them than those available to Sony.",
-        "Sony’s financial condition and operating results depend on its ability to efficiently anticipate and respond to these established and new competitors."
+        "Refer to Management’s Discussion and Analysis of Financial Conditions and Results of Operations in Business Environment and Outlook on pages 35 through 37 for further discussion of climate change related trends and uncertainties.",
+        "Refer to Management’s Discussion and Analysis of Financial Conditions and Results of Operations on page 55 for additional information on environmental matters and their impact on Chevron, and on the company’s 2025 environmental expenditures.",
+        "Refer to page 54 and Note 24 Other Contingencies and Commitments for a discussion of environmental remediation provisions and year-end reserves.",
+        "The following disclosures reflect our beliefs and opinions as to factors that could materially and adversely affect us in the future."
       ],
       "error": null
     },
@@ -116,72 +74,112 @@
       "error": null
     },
     {
-      "symbol": "OXY",
+      "symbol": "DIS",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2024-02-14",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000797468/000079746824000034/oxy-20231231.htm",
+      "filing_date": "2024-11-14",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001744489/000174448924000276/dis-20240928.htm",
       "risk_factors": [
-        "Occidental continues to be a member of One Mind at Work, an employer coalition dedicated to implementing a gold standard for workplace mental health by combating stigma, improving access to treatment and prevention services and fostering a psychologically safe culture.",
-        "In 2023, Occidental launched an enhanced mental health benefit through Lyra Health.",
-        "Lyra Health provides cost-free mental and emotional healthcare that is effective, convenient and personalized to all employees and their dependents.",
-        "Lyra Health professionals provide virtual or in-person support for a variety of mental health concerns including anxiety, depression, stress management, parenting challenges, relationship conflicts and sleep problems."
+        "In addition to the factors affecting specific business operations identified in connection with the description of these operations and the financial results of these operations elsewhere in our filings with the SEC, the most significant factors affecting our business include the following: RISKS RELATED TO OUR BUSI...",
+        "Declines in economic conditions, such as recessions, other less severe slowdowns in economic activity and/or inflationary conditions in the U.S.",
+        "and other regions of the world in which we do business typically adversely affect demand for our products and services and/or costs to operate our businesses, reducing our revenue and earnings.",
+        "Past declines in economic conditions reduced or resulted in slower growth than expected in, among other things, guest spending at our parks and resorts, purchases of and prices for advertising on our platforms and purchases of Company-branded consumer products, and we expect similar impacts as such conditions recur."
       ],
       "error": null
     },
     {
-      "symbol": "CVX",
+      "symbol": "NFLX",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-02-24",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000093410/000009341026000078/cvx-20251231.htm",
+      "filing_date": "2025-01-27",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001065280/000106528025000044/nflx-20241231.htm",
       "risk_factors": [
-        "Refer to Management’s Discussion and Analysis of Financial Conditions and Results of Operations in Business Environment and Outlook on pages 35 through 37 for further discussion of climate change related trends and uncertainties.",
-        "Refer to Management’s Discussion and Analysis of Financial Conditions and Results of Operations on page 55 for additional information on environmental matters and their impact on Chevron, and on the company’s 2025 environmental expenditures.",
-        "Refer to page 54 and Note 24 Other Contingencies and Commitments for a discussion of environmental remediation provisions and year-end reserves.",
-        "The following disclosures reflect our beliefs and opinions as to factors that could materially and adversely affect us in the future."
+        "All forward-looking statements included in this document are based on information available to us on the date hereof, and we assume no obligation to revise or publicly release any revision to any such forward-looking statement, except as may otherwise be required by law.",
+        "(“Netflix”, “the Company”, “registrant”, “we”, or “us”) is one of the world’s leading entertainment services with approximately 302 million paid memberships in over 190 countries enjoying TV series, films and games across a wide variety of genres and languages.",
+        "Members can play, pause and resume watching as much as they want, anytime, anywhere, and can change their plans at any time.",
+        "Our core strategy is to grow our business globally within the parameters of our operating margin target."
       ],
       "error": null
     },
     {
-      "symbol": "MELI",
+      "symbol": "AVGO",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-02-25",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001099590/000109959026000006/meli-20251231.htm",
+      "filing_date": "2025-12-18",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001730168/000173016825000121/avgo-20251102.htm",
       "risk_factors": [
-        "To prevent disclosure of our proprietary information to unauthorized parties, we have also entered into non-disclosure agreements with our employees, strategic partners and suppliers.",
-        "We have licensed certain proprietary rights, such as trademarks or copyrights, to third parties in the past and expect to continue to license such rights in the future.",
-        "While we seek to ensure that our licensees maintain the quality of the Mercado Libre brand, they may take actions that could adversely affect the value of our proprietary rights or our reputation, which could have a material adverse effect on our business, results of operations and financial condition.",
-        "We could potentially face claims alleging that our technologies infringe the property rights of others.” Offices We are a Delaware corporation incorporated on October 15, 1999."
+        "At the “Investor Center” page on this website, we promptly make available free of charge the reports we file or furnish pursuant to Section 13(a) or 15(d) of the Securities Exchange Act of 1934 (the “Exchange Act”) with the Securities and Exchange Commission (the “SEC”), as well as our proxy statements.",
+        "Such periodic reports, proxy statements and other information are also available at the SEC’s website at www.sec.gov.",
+        "The information posted on our website is not incorporated into this Annual Report on Form 10-K.",
+        "Information About Our Executive Officers The following table provides information regarding our executive officers as of December 18, 2025: Name and Title Age Position and Offices Hock E."
       ],
       "error": null
     },
     {
-      "symbol": "IBM",
+      "symbol": "NVDA",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-02-24",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000051143/000005114326000010/ibm-20251231.htm",
+      "filing_date": "2025-02-26",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001045810/000104581025000023/nvda-20250126.htm",
       "risk_factors": [
-        "Readers should carefully review such cautionary statements as they identify certain important factors that could cause actual results to differ materially from those in the forward-looking statements and from historical trends.",
-        "Those 2 Table of Contents cautionary statements are not exclusive and are in addition to other factors discussed elsewhere in this Form 10-K, in the company’s filings with the SEC or in materials incorporated therein by reference.",
-        "The following information is included in IBM’s 2025 Annual Report to Stockholders and is incorporated herein by reference: Segment information and revenue by classes of similar products or services—pages 65 to 68.",
-        "Information About Our Executive Officers (at February 24, 2026): Age Officer since Arvind Krishna, Chairman of the Board, President and Chief Executive Officer (1) 63 2020 Gary D."
+        "10 Table of Contents Compliance with laws, rules, and regulations has not otherwise had a material effect upon our capital expenditures, results of operations, or competitive position and we do not currently anticipate material capital expenditures for environmental control facilities.",
+        "Compliance with existing or future governmental regulations, including, but not limited to, those pertaining to IP ownership and infringement, taxes, import and export requirements and tariffs, anti-corruption, business acquisitions, foreign exchange controls and cash repatriation restrictions, data privacy requirem...",
+        "Sustainability and Governance NVIDIA invents computing technologies that improve lives and address global challenges.",
+        "Our goal is to integrate sound environmental, social, and corporate governance principles and practices into every aspect of the Company."
       ],
       "error": null
     },
     {
-      "symbol": "MA",
+      "symbol": "SONY",
+      "cik": null,
+      "form": "20-F",
+      "filing_date": "2024-06-25",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000313838/000119312524167500/d797371d20f.htm",
+      "risk_factors": [
+        "Sony must overcome increasingly intense competition, which could lead to lower revenue or operating margins.",
+        "Sony has several business segments in different industries with many product and service categories, which cause it to compete with many existing and new competitors ranging from large multinational companies to highly specialized entities that focus on only one or a few businesses and also, potentially, with outsou...",
+        "These competitors may have greater financial, technical, labor and marketing resources available to them than those available to Sony.",
+        "Sony’s financial condition and operating results depend on its ability to efficiently anticipate and respond to these established and new competitors."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "GS",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-02-11",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001141391/000114139126000013/ma-20251231.htm",
+      "filing_date": "2023-02-24",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000886982/000088698223000003/gs-20221231.htm",
       "risk_factors": [
-        "We face competition in the ACH and real-time account-based payments space from providers of infrastructure, applications and services.",
-        "As these real-time account-based propositions mature, we face a possible increase in competition for our existing domestic person-to-merchant (“P2M”) and person-to-person (“P2P”) transaction market share.",
-        "Similarly, as interlinking of these infrastructures is further explored, they could disrupt our existing cross-border P2M and P2P market share.",
-        "Also, several industry initiatives are experimenting with the concept of account-based global schemes, which could lead to a disruption of the clearing and settlement options utilized in various currencies."
+        "The following is a summary of some of the more important factors that could affect our businesses: Market • Our businesses have been and may in the future be adversely affected by conditions in the global financial markets and broader economic conditions.",
+        "• Our businesses have been and may in the future be adversely affected by declining asset values, particularly where we have net “long” positions, receive fees based on the value of assets managed, or receive or post collateral.",
+        "• Our market-making activities have been and may in the future be affected by changes in the levels of market volatility.",
+        "• Our investment banking, client intermediation, asset management and wealth management businesses have been adversely affected and may in the future be adversely affected by market uncertainty or lack of confidence among investors and CEOs due to declines in economic activity and other unfavorable economic, geopoli..."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "AMZN",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-06",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001018724/000101872426000004/amzn-20251231.htm",
+      "risk_factors": [
+        "We are guided by four principles: customer obsession rather than competitor focus, passion for invention, commitment to operational excellence, and long-term thinking.",
+        "In each of our segments, we serve our primary customer sets, consisting of consumers, sellers, developers, enterprises, content creators, advertisers, and employees.",
+        "We have organized our operations into three segments: North America, International, and Amazon Web Services (“AWS”).",
+        "These segments reflect the way the Company evaluates its business performance and manages its operations."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "MS",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-02-21",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000895421/000089542125000304/ms-20241231.htm",
+      "risk_factors": [
+        "34 ) 76 Consolidated Income Statement 78 Consolidated Comprehensive Income Statement 78 Consolidated Balance Sheet 79 Consolidated Statement of Changes in Total Equity 80 Consolidated Cash Flow Statement 81 Notes to Consolidated Financial Statements 82 1.",
+        "Parent Company 145 Financial Data Supplement (Unaudited) 148 Glossary of Common Terms and Acronyms 151 Changes in and Disagreements with Accountants on Accounting and Financial Disclosure 9 152 Controls and Procedures 9A 152 Other Information 9B 154 Disclosure Regarding Foreign Jurisdictions that Prevent Inspections..."
       ],
       "error": null
     }
