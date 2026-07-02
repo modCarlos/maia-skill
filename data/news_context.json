@@ -1,55 +1,59 @@
 {
-  "fetched_at": "2026-07-02T04:20:16Z",
+  "fetched_at": "2026-07-02T04:25:43Z",
   "tickers_fetched": 12,
   "reddit_enabled": true,
-  "elapsed_seconds": 11.5,
+  "elapsed_seconds": 11.3,
   "news": {
-    "OXY": {
-      "symbol": "OXY",
+    "CVX": {
+      "symbol": "CVX",
       "key_news": [
         {
-          "title": "ConocoPhillips or Occidental Petroleum: Which Oil Stock Should You Buy Now?",
-          "publisher": "Motley Fool"
+          "title": "What\u2019s Ahead for Tech and Other Sectors In the Second Half of 2026",
+          "publisher": "Barrons.com"
         },
         {
-          "title": "Occidental Petroleum (OXY) is Amongst the Most Favored Integrated Oil and Gas Stocks by Hedge Funds",
+          "title": "South Africa LNG Opportunity Asserts Exxon Mobil Corporation (XOM) as a Top Dividend Aristocrat Stock to Buy",
           "publisher": "Insider Monkey"
+        },
+        {
+          "title": "Chevron Corporation (CVX) A Top Dividend Aristocrat Stock to Buy amid Growth on New Energies and Strategic Partnerships",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "Chevron Corporation (CVX) Partners with Microsoft to Power Texas Data Center",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "Chevron (CVX) Just Signed A 20 Year Microsoft AI Data Center Power Deal",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "JMP Securities Reaffirms Bullish Outlook on Microsoft Corporation (MSFT) Following Copilot Cowork Launch",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "Chevron Yields 4.2% Because Oil Prices Make Everyone Nervous. Here\u2019s Why That Thinking Is Outdated",
+          "publisher": "24/7 Wall St."
         },
         {
           "title": "Berkshire Hathaway has 9% of its Portfolio in These Oil Stocks. Should it Sell Now That the War With Iran is Winding Down?",
           "publisher": "Motley Fool"
-        },
-        {
-          "title": "Occidental Petroleum (OXY) Stock Drops Despite Market Gains: Important Facts to Note",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Should You Buy Occidental Petroleum Corporation (OXY)\u2019s Shares?",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "Here's How BP Enhances Financial Strength With Deleveraging Efforts",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Occidental Petroleum or Chevron: Which Oil Stock Offers More Upside?",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "Occidental Petroleum Corporation (OXY) Is a Trending Stock: Facts to Know Before Betting on It",
-          "publisher": "Zacks"
         }
       ],
       "sentiment": {
-        "score": 0.036,
-        "label": "neutral",
+        "score": 0.172,
+        "label": "bullish",
         "keywords": [
           {
             "word": "dividend",
             "type": "positive"
           },
           {
-            "word": "beat",
+            "word": "growth",
+            "type": "positive"
+          },
+          {
+            "word": "partnership",
             "type": "positive"
           },
           {
@@ -58,13 +62,13 @@
           }
         ]
       },
-      "analyst_recommendation": "hold",
-      "analyst_target": 65.3913,
-      "num_analysts": 23,
+      "analyst_recommendation": "buy",
+      "analyst_target": 217.13635,
+      "num_analysts": 22,
       "insider": {
-        "buys_30d": 1,
+        "buys_30d": 0,
         "sells_30d": 0,
-        "signal": "mixed"
+        "signal": "none"
       },
       "reddit": {
         "mentions": 0,
@@ -72,7 +76,86 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-02T04:20:04Z",
+      "fetched_at": "2026-07-02T04:25:27Z",
+      "error": null
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "key_news": [
+        {
+          "title": "What's next for AI and Big Tech in the second half of 2026?",
+          "publisher": "Yahoo Finance Video"
+        },
+        {
+          "title": "Is Nike Inc a Buy After Its Latest Earnings Report?",
+          "publisher": "Motley Fool"
+        },
+        {
+          "title": "How Dutch Bros Stock Gained 23.8% Last Month",
+          "publisher": "Motley Fool"
+        },
+        {
+          "title": "Why Meta Platforms Stock Surged Today",
+          "publisher": "Motley Fool"
+        },
+        {
+          "title": "Palantir Technologies (PLTR) Shares Skyrocket, What You Need To Know",
+          "publisher": "StockStory"
+        },
+        {
+          "title": "$4 Trillion in Deals Is Coming. Wall Street Hasn\u2019t Seen an M&A Wave This Big in a Decade",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Eurozone\u2019s Biggest Payers Face Geopolitical Pressure On Dividend Safety This Year",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Meta Compute Launch Sends AI Compute Stocks Tumbling Globally",
+          "publisher": "BeInCrypto"
+        }
+      ],
+      "sentiment": {
+        "score": 0.158,
+        "label": "bullish",
+        "keywords": [
+          {
+            "word": "surge",
+            "type": "positive"
+          },
+          {
+            "word": "dividend",
+            "type": "positive"
+          },
+          {
+            "word": "miss",
+            "type": "negative"
+          },
+          {
+            "word": "missed",
+            "type": "negative"
+          },
+          {
+            "word": "growth",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "strong buy",
+      "analyst_target": 301.6207,
+      "num_analysts": 58,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 3,
+        "signal": "distributing"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-07-02T04:25:27Z",
       "error": null
     },
     "BABA": {
@@ -143,86 +226,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-02T04:20:04Z",
-      "error": null
-    },
-    "DIS": {
-      "symbol": "DIS",
-      "key_news": [
-        {
-          "title": "Here\u2019s What The Brendan Carr, Chair of the Federal Communications Commission Said About Walt Disney (DIS)",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "Why Is DIS Stock Inching Higher Premarket Today?",
-          "publisher": "Stocktwits"
-        },
-        {
-          "title": "Walt Disney (DIS) Stock Declines While Market Improves: Some Information for Investors",
-          "publisher": "Zacks"
-        },
-        {
-          "title": "How YouTube TV and DirecTV Stream subscribers can get a payout from Disney's $50M antitrust settlement",
-          "publisher": "Fox Business"
-        },
-        {
-          "title": "3 Dates for Disney Stock Investors to Circle in July",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "June Domestic Box Office Likely to Set Up Best Second-Quarter Post COVID-19, B. Riley Says",
-          "publisher": "MT Newswires"
-        },
-        {
-          "title": "Disney $50M antitrust settlement: how to file a claim",
-          "publisher": "Quartz"
-        },
-        {
-          "title": "Comcast Just Split Itself Up: These 5 Conglomerates Could Be Next",
-          "publisher": "24/7 Wall St."
-        }
-      ],
-      "sentiment": {
-        "score": -0.096,
-        "label": "neutral",
-        "keywords": [
-          {
-            "word": "miss",
-            "type": "negative"
-          },
-          {
-            "word": "decline",
-            "type": "negative"
-          },
-          {
-            "word": "slump",
-            "type": "negative"
-          },
-          {
-            "word": "buyback",
-            "type": "positive"
-          },
-          {
-            "word": "beat",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "strong buy",
-      "analyst_target": 129.94138,
-      "num_analysts": 29,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 0,
-        "signal": "none"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-07-02T04:20:04Z",
+      "fetched_at": "2026-07-02T04:25:27Z",
       "error": null
     },
     "XOM": {
@@ -305,7 +309,78 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-02T04:20:04Z",
+      "fetched_at": "2026-07-02T04:25:27Z",
+      "error": null
+    },
+    "OXY": {
+      "symbol": "OXY",
+      "key_news": [
+        {
+          "title": "ConocoPhillips or Occidental Petroleum: Which Oil Stock Should You Buy Now?",
+          "publisher": "Motley Fool"
+        },
+        {
+          "title": "Occidental Petroleum (OXY) is Amongst the Most Favored Integrated Oil and Gas Stocks by Hedge Funds",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "Berkshire Hathaway has 9% of its Portfolio in These Oil Stocks. Should it Sell Now That the War With Iran is Winding Down?",
+          "publisher": "Motley Fool"
+        },
+        {
+          "title": "Occidental Petroleum (OXY) Stock Drops Despite Market Gains: Important Facts to Note",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "Should You Buy Occidental Petroleum Corporation (OXY)\u2019s Shares?",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "Here's How BP Enhances Financial Strength With Deleveraging Efforts",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "Occidental Petroleum or Chevron: Which Oil Stock Offers More Upside?",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "Occidental Petroleum Corporation (OXY) Is a Trending Stock: Facts to Know Before Betting on It",
+          "publisher": "Zacks"
+        }
+      ],
+      "sentiment": {
+        "score": 0.036,
+        "label": "neutral",
+        "keywords": [
+          {
+            "word": "dividend",
+            "type": "positive"
+          },
+          {
+            "word": "beat",
+            "type": "positive"
+          },
+          {
+            "word": "lowered",
+            "type": "negative"
+          }
+        ]
+      },
+      "analyst_recommendation": "hold",
+      "analyst_target": 65.3913,
+      "num_analysts": 23,
+      "insider": {
+        "buys_30d": 1,
+        "sells_30d": 0,
+        "signal": "mixed"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-07-02T04:25:27Z",
       "error": null
     },
     "AVGO": {
@@ -372,149 +447,74 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-02T04:20:04Z",
+      "fetched_at": "2026-07-02T04:25:27Z",
       "error": null
     },
-    "NVDA": {
-      "symbol": "NVDA",
+    "DIS": {
+      "symbol": "DIS",
       "key_news": [
         {
-          "title": "What's next for AI and Big Tech in the second half of 2026?",
-          "publisher": "Yahoo Finance Video"
+          "title": "Here\u2019s What The Brendan Carr, Chair of the Federal Communications Commission Said About Walt Disney (DIS)",
+          "publisher": "Insider Monkey"
         },
         {
-          "title": "Is Nike Inc a Buy After Its Latest Earnings Report?",
+          "title": "Why Is DIS Stock Inching Higher Premarket Today?",
+          "publisher": "Stocktwits"
+        },
+        {
+          "title": "Walt Disney (DIS) Stock Declines While Market Improves: Some Information for Investors",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "How YouTube TV and DirecTV Stream subscribers can get a payout from Disney's $50M antitrust settlement",
+          "publisher": "Fox Business"
+        },
+        {
+          "title": "3 Dates for Disney Stock Investors to Circle in July",
           "publisher": "Motley Fool"
         },
         {
-          "title": "How Dutch Bros Stock Gained 23.8% Last Month",
-          "publisher": "Motley Fool"
+          "title": "June Domestic Box Office Likely to Set Up Best Second-Quarter Post COVID-19, B. Riley Says",
+          "publisher": "MT Newswires"
         },
         {
-          "title": "Why Meta Platforms Stock Surged Today",
-          "publisher": "Motley Fool"
+          "title": "Disney $50M antitrust settlement: how to file a claim",
+          "publisher": "Quartz"
         },
         {
-          "title": "Palantir Technologies (PLTR) Shares Skyrocket, What You Need To Know",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "$4 Trillion in Deals Is Coming. Wall Street Hasn\u2019t Seen an M&A Wave This Big in a Decade",
+          "title": "Comcast Just Split Itself Up: These 5 Conglomerates Could Be Next",
           "publisher": "24/7 Wall St."
-        },
-        {
-          "title": "Eurozone\u2019s Biggest Payers Face Geopolitical Pressure On Dividend Safety This Year",
-          "publisher": "24/7 Wall St."
-        },
-        {
-          "title": "Meta Compute Launch Sends AI Compute Stocks Tumbling Globally",
-          "publisher": "BeInCrypto"
         }
       ],
       "sentiment": {
-        "score": 0.158,
-        "label": "bullish",
+        "score": -0.096,
+        "label": "neutral",
         "keywords": [
-          {
-            "word": "surge",
-            "type": "positive"
-          },
-          {
-            "word": "dividend",
-            "type": "positive"
-          },
           {
             "word": "miss",
             "type": "negative"
           },
           {
-            "word": "missed",
+            "word": "decline",
             "type": "negative"
           },
           {
-            "word": "growth",
+            "word": "slump",
+            "type": "negative"
+          },
+          {
+            "word": "buyback",
+            "type": "positive"
+          },
+          {
+            "word": "beat",
             "type": "positive"
           }
         ]
       },
       "analyst_recommendation": "strong buy",
-      "analyst_target": 301.6207,
-      "num_analysts": 58,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 3,
-        "signal": "distributing"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-07-02T04:20:04Z",
-      "error": null
-    },
-    "CVX": {
-      "symbol": "CVX",
-      "key_news": [
-        {
-          "title": "What\u2019s Ahead for Tech and Other Sectors In the Second Half of 2026",
-          "publisher": "Barrons.com"
-        },
-        {
-          "title": "South Africa LNG Opportunity Asserts Exxon Mobil Corporation (XOM) as a Top Dividend Aristocrat Stock to Buy",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "Chevron Corporation (CVX) A Top Dividend Aristocrat Stock to Buy amid Growth on New Energies and Strategic Partnerships",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "Chevron Corporation (CVX) Partners with Microsoft to Power Texas Data Center",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "Chevron (CVX) Just Signed A 20 Year Microsoft AI Data Center Power Deal",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "JMP Securities Reaffirms Bullish Outlook on Microsoft Corporation (MSFT) Following Copilot Cowork Launch",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "Chevron Yields 4.2% Because Oil Prices Make Everyone Nervous. Here\u2019s Why That Thinking Is Outdated",
-          "publisher": "24/7 Wall St."
-        },
-        {
-          "title": "Berkshire Hathaway has 9% of its Portfolio in These Oil Stocks. Should it Sell Now That the War With Iran is Winding Down?",
-          "publisher": "Motley Fool"
-        }
-      ],
-      "sentiment": {
-        "score": 0.172,
-        "label": "bullish",
-        "keywords": [
-          {
-            "word": "dividend",
-            "type": "positive"
-          },
-          {
-            "word": "growth",
-            "type": "positive"
-          },
-          {
-            "word": "partnership",
-            "type": "positive"
-          },
-          {
-            "word": "lowered",
-            "type": "negative"
-          }
-        ]
-      },
-      "analyst_recommendation": "buy",
-      "analyst_target": 217.13635,
-      "num_analysts": 22,
+      "analyst_target": 129.94138,
+      "num_analysts": 29,
       "insider": {
         "buys_30d": 0,
         "sells_30d": 0,
@@ -526,7 +526,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-02T04:20:04Z",
+      "fetched_at": "2026-07-02T04:25:27Z",
       "error": null
     },
     "NFLX": {
@@ -593,7 +593,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-02T04:20:04Z",
+      "fetched_at": "2026-07-02T04:25:27Z",
       "error": null
     },
     "SONY": {
@@ -660,7 +660,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-02T04:20:10Z",
+      "fetched_at": "2026-07-02T04:25:33Z",
       "error": null
     },
     "AMZN": {
@@ -727,7 +727,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-02T04:20:11Z",
+      "fetched_at": "2026-07-02T04:25:33Z",
       "error": null
     },
     "MS": {
@@ -806,7 +806,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-02T04:20:11Z",
+      "fetched_at": "2026-07-02T04:25:33Z",
       "error": null
     },
     "GS": {
@@ -881,8 +881,55 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-02T04:20:11Z",
+      "fetched_at": "2026-07-02T04:25:33Z",
       "error": null
+    }
+  },
+  "sector_news": {
+    "tech": {
+      "headlines": [
+        "The Best Tech Stocks to Buy - Morningstar",
+        "Indian IT stocks slump up to 7% as Accenture cuts revenue outlook, fueling fresh concerns over sector growth - CNBC",
+        "Broadcom Plunge Drags Tech Stocks; Oil Retreats from Recent Peaks - Earnings Outlook Update - lwvtexas.org"
+      ],
+      "sentiment": "bullish",
+      "score": 0.11
+    },
+    "financials": {
+      "headlines": [
+        "How do changing interest rates affect the stock market in 2026 - U.S. Bank",
+        "Q1 Earnings Highlights: Columbia Banking System (NASDAQ:COLB) Vs The Rest Of The Regional Banks Stocks - Yahoo Finance",
+        "3 US Bank Stocks With Earnings Growth And Dividend Yield - simplywall.st"
+      ],
+      "sentiment": "neutral",
+      "score": 0.07
+    },
+    "consumer": {
+      "headlines": [
+        "These retail stocks have the strongest momentum as consumer spending accelerates (XLY:NYSEARCA) - Seeking Alpha",
+        "Consumers Just Keep Spending. Deckers and 6 Other Retail Stocks for Your Shopping List. - Barron's",
+        "2 Consumer Stocks with Competitive Advantages and 1 We Ignore - StockStory"
+      ],
+      "sentiment": "neutral",
+      "score": 0.08
+    },
+    "energy": {
+      "headlines": [
+        "3 Midstream Energy Stocks Built to Withstand Commodity Price Volatility - The Globe and Mail",
+        "7 Energy Stocks With Fat Dividend Yields | Investing - U.S. News - Money",
+        "Iran war throws oil market into biggest crisis in decades - Reuters"
+      ],
+      "sentiment": "neutral",
+      "score": -0.01
+    },
+    "healthcare": {
+      "headlines": [
+        "Health care stock outlook: What\u2019s next for biotech stocks? - Fidelity",
+        "Nexalis Therapeutics (ASX:NX1): Healthcare Penny Stock Rises as Biotech Watchers Take Notice - Kalkine",
+        "Biotechnology vs. Pharmaceuticals: What Are the Differences? - The Motley Fool"
+      ],
+      "sentiment": "neutral",
+      "score": 0.04
     }
   }
 }

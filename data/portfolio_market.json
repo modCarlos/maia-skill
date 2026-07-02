@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T04:22:32Z",
+  "generated_at": "2026-07-02T04:27:25Z",
   "positions": [
     {
       "symbol": "VOO",
@@ -1023,7 +1023,7 @@
       "pnl_amount": -236.2,
       "pnl_pct": -19.43,
       "rsi_14": 47.2,
-      "week_52_high": 271.3533,
+      "week_52_high": 271.3534,
       "week_52_low": 150.12,
       "pct_from_52w_high": -39.85,
       "pct_from_52w_low": 8.73,
@@ -1085,7 +1085,7 @@
       "pe_ratio": 11.723558,
       "forward_pe": 15.058537,
       "peg_ratio": 3.6,
-      "analyst_target": 47.502247,
+      "analyst_target": 47.499928,
       "analyst_upside": -2.6,
       "recommendation_mean": 2.42857,
       "altman_z": {
@@ -1377,7 +1377,7 @@
       "pnl_pct": 118.67,
       "rsi_14": 49.7,
       "week_52_high": 398.8,
-      "week_52_low": 174.6613,
+      "week_52_low": 174.6612,
       "pct_from_52w_high": -10.26,
       "pct_from_52w_low": 104.91,
       "market_cap": 4367179055104,
@@ -2010,7 +2010,7 @@
     "fear_greed_synthetic": 77.3,
     "fear_greed_source": "alternative.me",
     "yield_trend": "stable",
-    "dxy": 101.32,
+    "dxy": 101.34,
     "dxy_trend": "rising",
     "market_regime": "MIXED"
   },

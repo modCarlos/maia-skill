@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T04:20:23Z",
+  "generated_at": "2026-07-02T04:25:45Z",
   "source": "SEC EDGAR",
   "top": 12,
   "symbols": [
@@ -21,13 +21,13 @@
       "symbol": "OXY",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-02-18",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000797468/000162828026009059/oxy-20251231.htm",
+      "filing_date": "2024-02-14",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000797468/000079746824000034/oxy-20231231.htm",
       "risk_factors": [
-        "AVAILABLE INFORMATION The Company’s annual reports on Form 10-K, quarterly reports on Form 10-Q, current reports on Form 8-K and any amendments to those reports are available free of charge on its website, www.oxy.com, as soon as reasonably practicable after the Company electronically files the material with, or fur...",
-        "In addition, copies of the Company’s annual report will be made available, free of charge, upon written request.",
-        "From time to time, the Company has made and expects in the future to use its website as a channel of distribution of material information regarding the Company.",
-        "Financial and other material information regarding the Company is routinely posted on the Company’s website and accessible at www.oxy.com/investors/."
+        "Occidental continues to be a member of One Mind at Work, an employer coalition dedicated to implementing a gold standard for workplace mental health by combating stigma, improving access to treatment and prevention services and fostering a psychologically safe culture.",
+        "In 2023, Occidental launched an enhanced mental health benefit through Lyra Health.",
+        "Lyra Health provides cost-free mental and emotional healthcare that is effective, convenient and personalized to all employees and their dependents.",
+        "Lyra Health professionals provide virtual or in-person support for a variety of mental health concerns including anxiety, depression, stress management, parenting challenges, relationship conflicts and sleep problems."
       ],
       "error": null
     },
