@@ -111,7 +111,12 @@ export function useReportData() {
     setLoading(true)
     setError(null)
 
-    fetch("/data/report.json")
+    // Force cache busting — the dashboard reads a static file that is overwritten
+    // by mega_agent.py; without this query parameter the browser may serve a stale
+    // cached version and the user sees old picks (e.g. AMZN, GOOGL).
+    const url = `/data/report.json?t=${Date.now()}`
+
+    fetch(url, { cache: "no-cache" })
       .then((res) => {
         if (!res.ok) throw new Error(`Failed to load report data: ${res.status}`)
         return res.json()

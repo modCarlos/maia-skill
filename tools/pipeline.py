@@ -208,11 +208,32 @@ def main() -> None:
     parser.add_argument("--news-top", type=int, default=12, help="Top N candidates to send to news_fetch.py")
     parser.add_argument("--sec-top", type=int, default=12, help="Top N candidates to send to sec_risk_fetch.py")
     parser.add_argument("--verbose", action="store_true", help="Print full subprocess output")
+    parser.add_argument(
+        "--refresh",
+        action="store_true",
+        help="Delete cached market/news/SEC data before running pre_fetch (forces fresh downloads)",
+    )
     args = parser.parse_args()
 
     risk_profile = normalize_risk_profile(args.risk_profile)
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
+
+    # ── early definition of cache files (needed for --refresh) ─────────────────
+    market_context_path = DATA_DIR / "market_context.json"
+    news_context_path   = DATA_DIR / "news_context.json"
+    sec_risk_context_path = DATA_DIR / "sec_risk_context.json"
+
+    # ── Optional cache purge ───────────────────────────────────────────────────
+    if args.refresh:
+        for cache_path, label in [
+            (market_context_path, "market_context"),
+            (news_context_path, "news_context"),
+            (sec_risk_context_path, "sec_risk_context"),
+        ]:
+            if cache_path.exists():
+                cache_path.unlink()
+                print(f"[pipeline] cache cleared: {cache_path}")
 
     pre_fetch_cmd = [sys.executable, str(TOOLS_DIR / "pre_fetch.py"), "--watchlist", *args.watchlist]
     news_cmd = [sys.executable, str(TOOLS_DIR / "news_fetch.py"), "--top", str(args.news_top)]
@@ -227,7 +248,7 @@ def main() -> None:
     # Step 1 — pre-fetch is critical
     run_command("pre_fetch", pre_fetch_cmd, verbose=args.verbose)
 
-    market_context_path = DATA_DIR / "market_context.json"
+    # Read the freshly generated (or cached) market context
     market_context = read_json(market_context_path)
     if not market_context:
         raise RuntimeError(f"market_context.json missing or empty after pre_fetch: {market_context_path}")
@@ -319,8 +340,8 @@ def main() -> None:
         "project_root": str(PROJECT_ROOT),
         "out_dir": str(out_dir),
         "market_context_path": str(market_context_path),
-        "news_context_path": str(DATA_DIR / "news_context.json"),
-        "sec_risk_context_path": str(DATA_DIR / "sec_risk_context.json"),
+        "news_context_path": str(news_context_path),
+        "sec_risk_context_path": str(sec_risk_context_path),
         "accuracy_path": str(accuracy_path),
         "sectors_path": str(sectors_path),
         "mega_context_path": str(mega_context_path),

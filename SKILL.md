@@ -18,6 +18,8 @@ user_invocable: true
 
 You are the **orchestrator** of a Tododeia investment research system branded as **Tododeia by @quebert**. You run a local deterministic preprocessing pipeline, spawn a single MegaAgent for strategy synthesis, adapt to user risk profiles, track historical accuracy, and generate an interactive branded HTML report.
 
+**Important**: the dashboard reads a static JSON file (`dashboard/public/data/report.json`) that is created only by `assemble_report.py` / `write_report.py`. Running `mega_agent.py` alone will **not** refresh the dashboard. Always complete the full workflow (Steps 2‑5) to update the dashboard.
+
 ## Workflow
 
 Follow these steps exactly:
@@ -61,16 +63,17 @@ If there is no history yet, the pipeline skips trailing stops and writes a safe 
 
 Use `references/agent-prompts.md` section `## MegaAgent (Combined Research + Strategy)` as the system prompt.
 
-Inputs to provide:
-- `/tmp/tododeia/mega_context.txt` as `DATA_CONTEXT`
-- `/tmp/tododeia/pipeline_meta.json` for `accuracy_baseline`, `latest_history_path`, and `spy_price_at_report`
-- `risk_profile` from Step 1
+Run mega_agent with the `--output` flag so it writes the strategy JSON to disk automatically:
 
-The MegaAgent returns **only Block 2** (strategy JSON). Do not re-do the mechanical data prep inside the agent.
+```bash
+python3 tools/mega_agent.py {risk_profile} \
+  --context-file /tmp/tododeia/mega_context.txt \
+  --output /tmp/tododeia/strategy.json
+```
+
+The script prints the picks summary to stderr and saves the complete JSON to `/tmp/tododeia/strategy.json`.
 
 ### Step 4: Assemble the final report locally
-
-Save the MegaAgent output to `/tmp/tododeia/strategy.json` and run:
 
 ```bash
 python3 tools/assemble_report.py \
@@ -86,7 +89,13 @@ The assembler now handles the mechanical post-processing locally:
 - fills missing fields from sectors / trailing stops / portfolio data when possible
 - writes the validated history + dashboard JSON through `tools/write_report.py`
 
-If the strategy JSON is malformed or missing, `assemble_report.py` can fall back to a deterministic sector ranking and note that strategy analysis was unavailable.
+**After the assembler finishes, copy the latest report to the dashboard’s public folder** so the UI picks it up immediately:
+
+```bash
+cp output/history/$(ls -t output/history/*.json | head -1) dashboard/public/data/report.json
+```
+
+If the dashboard JSON is malformed or missing, `assemble_report.py` can fall back to a deterministic sector ranking and note that strategy analysis was unavailable.
 
 ### Step 5: Serve the report
 
@@ -95,6 +104,19 @@ python3 tools/serve_report.py --port 3420
 ```
 
 If the Next.js dashboard exists, it starts there. Otherwise the script renders a local static preview and serves it from the same port.
+
+---
+
+## Troubleshooting – Dashboard Stale Data
+
+If the dashboard shows old picks (e.g., Amazon, Google) even after running the workflow, the most common causes are:
+
+1. **Forgot to run `assemble_report.py`** – the dashboard file is **only** written when you run the full `assemble_report` step. Running `mega_agent.py` alone does not update the dashboard.
+2. **MegaAgent output was not saved** – now fixed by using the `--output` flag in Step 3, which writes the strategy JSON directly to `/tmp/tododeia/strategy.json`. Ensure that flag is always passed.
+3. **Browser cache** – do a hard refresh (`Ctrl+Shift+R` / `Cmd+Shift+R`) or open the dashboard in an incognito window.
+4. **The copy command wasn’t executed** – repeat the `cp` command from Step 4 to ensure `dashboard/public/data/report.json` points to the latest history.
+
+**Quick sanity check**: compare the picks shown in the console (the `PICKS SUMMARY` table in stderr) with the report file. They must match because the `--output` flag writes the exact same data to `/tmp/tododeia/strategy.json` which the assembler uses.
 
 ## Error handling
 

@@ -15,6 +15,8 @@ import sys
 import os
 import re
 import requests
+import subprocess
+import shutil
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -27,12 +29,17 @@ if hasattr(sys.stderr, "reconfigure"):
 # ─── Config ───────────────────────────────────────────────────────────────────
 OLLAMA_URL   = "http://localhost:11434/api/chat"  # native API — más estable que /v1
 MODEL        = os.getenv("MAIA_MODEL", "maia-agent")
-MAX_RETRIES  = 3
-# Un JSON completo de 10-12 picks con todos los campos ocupa ~3500-4000 tokens.
-# 1500 es insuficiente — el modelo se trunca y retorna 1-2 picks.
-NUM_PREDICT  = int(os.getenv("MAIA_NUM_PREDICT", "4000"))
-# Mínimo de picks aceptables antes de forzar reintento (truncación detectada)
-MIN_PICKS    = int(os.getenv("MAIA_MIN_PICKS", "8"))
+_MAX_RETRIES  = 3
+
+# ── Ajustes por modelo (7B / 8B / R1) ───────────────────────────────────────
+_MODEL_LOWER = MODEL.lower()
+
+_DEFAULT_NUM_PREDICT = "6000" if any(m in _MODEL_LOWER for m in ["deepseek-r1", "r1"]) else "4000"
+NUM_PREDICT  = int(os.getenv("MAIA_NUM_PREDICT", _DEFAULT_NUM_PREDICT))
+
+_DEFAULT_MIN_PICKS = "6" if any(m in _MODEL_LOWER for m in ["7b", "8b"]) else "8"
+MIN_PICKS    = int(os.getenv("MAIA_MIN_PICKS", _DEFAULT_MIN_PICKS))
+
 # Aumentar MAIA_TIMEOUT para modelos grandes como 32b (ej: export MAIA_TIMEOUT=900)
 TIMEOUT      = int(os.getenv("MAIA_TIMEOUT", "900"))
 
@@ -61,89 +68,55 @@ REQUIRED_PICK = [
     "thesis", "thesis_invalidators", "thesis_status",
 ]
 
-# ─── System prompt para el MegaAgent ─────────────────────────────────────────
-SYSTEM_PROMPT = """You are a professional investment analyst for Tododeia, a financial research system.
+# ─── System prompt (cargado dinámicamente desde agent-prompts.md) ────────────
+_AGENT_PROMPTS_PATH = REPO / "references" / "agent-prompts.md"
+
+# Fallback mínimo — solo se usa si el archivo no existe o no tiene la sección
+_SYSTEM_PROMPT_FALLBACK = """You are a professional investment analyst for Tododeia, a financial research system.
 
 Your task: analyze the provided market data and produce a complete investment report as a single JSON object.
 
 CRITICAL RULES:
-1. Output ONLY valid JSON — no markdown code blocks, no explanation text, nothing outside the JSON
-2. The JSON must have ALL required top-level fields
-3. Include 10-13 investment picks in risk_adjusted_picks — aim for the upper end of this range
-4. Each pick must have ALL required fields with correct data types
-5. Use the real price data from MARKET_CONTEXT — do not invent numbers
-6. Adapt position sizes and asset mix to the RISK_PROFILE
-7. DIVERSITY RULE: Do NOT repeat more than 6 of the same symbols from LAST_SESSION_PICKS.
-   When two candidates have comparable entry quality, prefer the one NOT in the last session.
-   Use HISTORICAL_ACCURACY per-symbol data to identify stale picks and rotate to fresh candidates.
+1. Output ONLY valid JSON — no markdown code blocks, no explanation text
+2. Include 10-13 investment picks in risk_adjusted_picks
+3. Each pick must have ALL required fields with correct data types
+4. Use the real price data from MARKET_CONTEXT — do not invent numbers
+5. Adapt position sizes and asset mix to the RISK_PROFILE
 
-RECOMMENDATION DECISION RULES (apply these before assigning recommendation):
-- entry_quality=excellent AND analyst_upside > 20% AND RSI < 45 → recommend ADD
-- entry_quality=good AND analyst_upside > 15% AND RSI < 55 AND no insider selling → recommend ADD
-- entry_quality=fair OR RSI > 60 OR insider selling detected → HOLD is appropriate (not ADD)
-- Use TRIM if RSI > 68 AND (price > 90% of 52-week high OR analyst_upside < 8%)
-- When in doubt between ADD and HOLD, choose HOLD — require positive conviction to ADD
-- Do NOT over-concentrate: if a symbol appeared in the previous session AND has no new catalyst, default to HOLD
+See the full MegaAgent prompt in references/agent-prompts.md for detailed constraints."""
 
-TARGET DISTRIBUTION PER REPORT (enforce this — check before finalizing):
-- ADD:  50–60% of picks (5–8 out of 10–13)
-- HOLD: 25–35% of picks (3–4 out of 10–13)
-- TRIM: 10–20% of picks (1–2 out of 10–13)
-If your draft has 0 TRIM picks, re-evaluate the highest-RSI and most-overextended positions and mark at least 1 as TRIM.
 
-REQUIRED JSON STRUCTURE:
-{
-  "brand": "Tododeia",
-  "creator": "@quebert",
-  "generated_at": "<ISO 8601 datetime>",
-  "risk_profile": "<risk profile>",
-  "executive_summary": "<2-3 sentence market narrative with specific data points>",
-  "macro_environment": {
-    "summary": "<macro context with VIX, Fear&Greed if available>",
-    "interest_rate_outlook": "stable|rising|falling",
-    "inflation_outlook": "stable|rising|falling",
-    "geopolitical_risk": "low|moderate|high",
-    "key_factors": ["<factor 1>", "<factor 2>", "<factor 3>"]
-  },
-  "portfolio_allocation": {
-    "stocks": <number 0-100>,
-    "materials": <number 0-100>,
-    "cash": <number 0-100>
-  },
-  "cross_sector_insights": [
-    {"insight": "<observation>", "implication": "<action implication>"}
-  ],
-  "risk_adjusted_picks": [
-    {
-      "rank": <integer 1-13>,
-      "name": "<company full name>",
-      "symbol": "<TICKER>",
-      "sector": "<sector name>",
-      "confidence": <number 1-10>,
-      "risk_score": <number 1-10, lower is safer>,
-      "risk_adjusted_score": <number 1-10>,
-      "recommendation": "ADD|HOLD|TRIM",
-      "reasoning": "<specific reasoning with data from MARKET_CONTEXT>",
-      "position_size": <percentage of portfolio as number>,
-      "entry_price": <number — MUST be within 2% of current_price from MARKET_CONTEXT. Do NOT set a pullback target below current price hoping the stock dips — use the actual market price shown in SCREENED_CANDIDATES>,
-      "stop_loss": <number>,
-      "target_12m": <number>,
-      "risk_reward_ratio": <number>,
-      "thesis": "<specific catalyst with date/metric>",
-      "thesis_invalidators": "<specific condition that breaks thesis>",
-      "thesis_status": "NEW|ACTIVE|CARRY_FORWARD"
-    }
-  ],
-  "historical_accuracy": {
-    "note": "First run — no historical data available",
-    "sessions": 0
-  },
-  "warnings": ["This report is for informational purposes only and does not constitute financial advice."],
-  "sectors": {
-    "stocks": {"count": <number>, "avg_confidence": <number>},
-    "materials": {"count": <number>, "avg_confidence": <number>}
-  }
-}"""
+def _load_mega_agent_prompt() -> str:
+    """Extrae el prompt del MegaAgent desde agent-prompts.md.
+
+    Busca la sección '## MegaAgent (Combined Research + Strategy)' y devuelve
+    todo su contenido hasta la siguiente sección de nivel 2 o el final del archivo.
+    Si el archivo o la sección no existen, devuelve el fallback mínimo.
+    """
+    if not _AGENT_PROMPTS_PATH.exists():
+        print(f"   ⚠️  agent-prompts.md no encontrado en {_AGENT_PROMPTS_PATH} — usando fallback", file=sys.stderr)
+        return _SYSTEM_PROMPT_FALLBACK
+
+    try:
+        text = _AGENT_PROMPTS_PATH.read_text(encoding="utf-8")
+    except Exception as e:
+        print(f"   ⚠️  Error leyendo agent-prompts.md: {e} — usando fallback", file=sys.stderr)
+        return _SYSTEM_PROMPT_FALLBACK
+
+    # Buscar la sección del MegaAgent: desde "## MegaAgent (Combined..." hasta el próximo "## "
+    pattern = r'## MegaAgent \(Combined Research \+ Strategy\)\s*\n(.*?)(?=\n## |\Z)'
+    match = re.search(pattern, text, re.DOTALL)
+    if not match:
+        print("   ⚠️  Sección MegaAgent no encontrada en agent-prompts.md — usando fallback", file=sys.stderr)
+        return _SYSTEM_PROMPT_FALLBACK
+
+    prompt = match.group(1).strip()
+    print(f"   ✅ Prompt cargado desde agent-prompts.md ({len(prompt):,} chars)", file=sys.stderr)
+    return prompt
+
+
+# El prompt se carga una vez al importar el módulo
+SYSTEM_PROMPT = _load_mega_agent_prompt()
 
 
 # ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -420,24 +393,24 @@ def call_ollama(context: str, attempt: int, truncated: bool = False) -> str:
     if attempt > 1:
         if truncated:
             correction = (
-                f"\n\n⚠️ ATTEMPT {attempt}/{MAX_RETRIES}: Previous output was TRUNCATED — "
+                f"\n\n⚠️ ATTEMPT {attempt}/{_MAX_RETRIES}: Previous output was TRUNCATED — "
                 f"you stopped before generating all picks. "
                 f"You MUST output ALL 10-12 picks in risk_adjusted_picks. "
                 "Output ONLY the complete JSON object. Do NOT stop early. Do NOT wrap in markdown."
             )
         else:
             correction = (
-                f"\n\n⚠️ ATTEMPT {attempt}/{MAX_RETRIES}: Previous output was invalid. "
+                f"\n\n⚠️ ATTEMPT {attempt}/{_MAX_RETRIES}: Previous output was invalid. "
                 "You MUST output ONLY a valid JSON object. "
                 "Include ALL required fields. Do NOT truncate. Do NOT wrap in markdown."
             )
 
     user_content = context + correction
 
-    # Qwen3 models use extended thinking by default, consuming num_predict budget
-    # before generating the JSON. Prepend /no_think to keep full budget for output.
-    is_qwen3 = "qwen3" in MODEL.lower()
-    if is_qwen3:
+    # Qwen3 y deepseek-r1 usan extended thinking por defecto, consumiendo el budget de
+    # num_predict antes de generar el JSON. /no_think mantiene el budget para el output.
+    is_reasoning = "qwen3" in MODEL.lower() or "deepseek-r1" in MODEL.lower()
+    if is_reasoning:
         user_content = "/no_think\n\n" + user_content
 
     # Usar la API nativa de Ollama (/api/chat) — más estable que el endpoint OpenAI
@@ -454,14 +427,21 @@ def call_ollama(context: str, attempt: int, truncated: bool = False) -> str:
         },
         "stream": False,
     }
-    # Ollama ≥0.6 supports top-level "think" flag for qwen3; older versions ignore it
-    if is_qwen3:
+    # Ollama ≥0.6 soporta la bandera top-level "think" para qwen3 / deepseek-r1
+    if is_reasoning:
         payload["think"] = False
 
     resp = requests.post(OLLAMA_URL, json=payload, timeout=TIMEOUT)
     resp.raise_for_status()
     result = resp.json()
     content = result.get("message", {}).get("content", "")
+
+    # Si el output es SOLO thinking tokens sin JSON, extrae lo que haya tras el último </think>
+    if is_reasoning and content.strip():
+        m = re.search(r"([\s\S]*)$", content)
+        if m and m.group(1).strip():
+            content = m.group(1)
+
     if not content or not content.strip():
         print(f"   ⚠️  Respuesta vacía. done_reason={result.get('done_reason')} eval_count={result.get('eval_count')} prompt_eval_count={result.get('prompt_eval_count')}", file=sys.stderr)
         raise json.JSONDecodeError("Respuesta vacía del modelo", "", 0)
@@ -487,6 +467,8 @@ def repair_json(text: str) -> str:
 
 def extract_json(text: str) -> dict:
     """Extrae y repara JSON del output del modelo."""
+    # Quitar bloques <think>...</think> de modelos de razonamiento (deepseek-r1, qwen3)
+    text = re.sub(r"<\s*think\s*>[\s\S]*?<\s*/\s*think\s*>", "", text)
     # Quitar bloques ```json ... ```
     text = re.sub(r"```json\s*", "", text)
     text = re.sub(r"```\s*", "", text)
@@ -540,6 +522,77 @@ def fill_defaults(data: dict, risk_profile: str) -> dict:
     data.setdefault("creator", "@quebert")
     data.setdefault("generated_at", now)
     data.setdefault("risk_profile", risk_profile)
+
+    # Fallback for critical narrative fields the model may omit
+    if not data.get("executive_summary"):
+        data["executive_summary"] = "No executive summary generated by the strategy model. Please review the picks manually."
+
+    # Fallback for macro_environment — small models often omit this section entirely
+    if not data.get("macro_environment"):
+        data["macro_environment"] = {
+            "summary": "Macro analysis not generated by the strategy model.",
+            "interest_rate_outlook": "stable",
+            "inflation_outlook": "stable",
+            "geopolitical_risk": "medium",
+            "key_factors": ["Model output incomplete; using deterministic defaults."],
+        }
+
+    # Fallback risk_adjusted_picks — generate from market data when the model
+    # returns no picks at all (common for small models).
+    if not data.get("risk_adjusted_picks") or len(data.get("risk_adjusted_picks", [])) == 0:
+        mkt = load_json_safe(MARKET_CTX, "market_context")
+        top_cands = (mkt or {}).get("candidates") or (mkt or {}).get("screened_candidates") or []
+        fallback_picks = []
+        for idx, cand in enumerate(top_cands[:8]):
+            sym = cand.get("symbol", "UNK")
+            price = float(cand.get("price") or cand.get("price_at_fetch") or 100.0)
+            entry_str = str(cand.get("entry_quality", "")).lower()
+            if "excellent" in entry_str:
+                conf = 8
+            elif "good" in entry_str:
+                conf = 7
+            elif "fair" in entry_str:
+                conf = 6
+            else:
+                conf = 5
+            rsi_val = cand.get("rsi", 50)
+            if isinstance(rsi_val, (int, float)):
+                risk_score = max(1.0, min(10.0, (float(rsi_val) - 30) / 5.0))
+            else:
+                risk_score = 5.0
+            risk_adj = round(conf * (1 - risk_score / 15.0), 2)
+            stop = round(price * 0.92, 2)
+            target = round(price * 1.15, 2)
+            rr = round((target - price) / (price - stop), 2) if price > stop else 2.0
+            fallback_picks.append({
+                "rank": idx + 1,
+                "name": cand.get("name", sym),
+                "symbol": sym,
+                "sector": cand.get("sector", "unknown"),
+                "confidence": conf,
+                "risk_score": round(risk_score, 1),
+                "risk_adjusted_score": risk_adj,
+                "recommendation": "buy",
+                "reasoning": f"Auto-generated fallback — entry quality: {cand.get('entry_quality', '?')}, RSI: {rsi_val}.",
+                "position_size": f"{max(2, 10 - idx * 1)}%",
+                "entry_price": price,
+                "stop_loss": stop,
+                "target_12m": target,
+                "risk_reward_ratio": rr,
+                "thesis": f"Deterministic fallback thesis for {sym}.",
+                "thesis_invalidators": ["Price drops below 92% of entry."],
+                "thesis_status": "new",
+                "financial_health": {
+                    "altman_z": None,
+                    "altman_zone": "N/A",
+                    "piotroski": None,
+                    "piotroski_strength": "N/A",
+                    "health_note": "Financial health data not available (fallback).",
+                },
+            })
+        if fallback_picks:
+            data["risk_adjusted_picks"] = fallback_picks
+
     # Poblar historical_accuracy desde backtest_summary si existe
     if not data.get("historical_accuracy") or data.get("historical_accuracy", {}).get("sessions", 0) == 0:
         backtest = load_json_safe(BACKTEST_CTX, "backtest_summary")
@@ -619,6 +672,43 @@ def validate(data: dict) -> list[str]:
     return errors
 
 
+def _print_picks_table(data: dict) -> None:
+    """Muestra un resumen legible de los picks en stderr (no interfiere con stdout)."""
+    picks = data.get("risk_adjusted_picks", [])
+    if not picks:
+        print("\n(no picks in report)", file=sys.stderr)
+        return
+
+    print("\n--- PICKS SUMMARY (top 8) ---", file=sys.stderr)
+    header = f" {'#':<3} {'symbol':<7} {'name':<24} {'conf':>4} {'risk':>4} {'score':>5} {'rec':>8}  thesis (truncated)"
+    print(header, file=sys.stderr)
+    print("-" * len(header), file=sys.stderr)
+
+    for pick in picks[:8]:
+        rank = pick.get("rank", "?")
+        sym = pick.get("symbol", "??")
+        name = pick.get("name", sym)[:24]
+        conf = pick.get("confidence", "?")
+        risk = pick.get("risk_score", "?")
+        adj = pick.get("risk_adjusted_score", "?")
+        rec = pick.get("recommendation", "?")
+        thesis = (pick.get("thesis") or "")[:60]
+        try:
+            rank_s = f"{int(rank):3d}"
+        except (ValueError, TypeError):
+            rank_s = f"{str(rank):>3}"
+
+        print(
+            f" {rank_s} {sym:<7} {name:<24} {conf!s:>4} {risk!s:>4} {adj!s:>5} {rec!s:>8}  {thesis}",
+            file=sys.stderr,
+        )
+
+    total = len(picks)
+    if total > 8:
+        print(f"   ... (+{total - 8} more)", file=sys.stderr)
+    print("=" * 60, file=sys.stderr)
+
+
 # ─── Main ────────────────────────────────────────────────────────────────────
 
 def main():
@@ -628,8 +718,20 @@ def main():
                         help="Risk profile: conservative | moderate | aggressive")
     parser.add_argument("--context-file", metavar="FILE",
                         help="Pre-built context file from pipeline.py (skips build_context)")
+    parser.add_argument("-o", "--output", metavar="FILE",
+                        help="Write the generated strategy JSON to FILE (in addition to stdout)")
+    parser.add_argument("--assemble", action="store_true",
+                        help="After generation, run assemble_report.py and copy the result to the dashboard")
+    parser.add_argument("--dashboard", action="store_true",
+                        help="Write the generated strategy JSON directly to dashboard/public/data/report.json "
+                             "(overwrites the file the UI reads; use for quick iteration without assembly)")
     args = parser.parse_args()
     risk_profile = args.risk_profile
+
+    output_file: Path | None = None
+    if args.output:
+        output_file = Path(args.output)
+        output_file.parent.mkdir(parents=True, exist_ok=True)
 
     print(f"🤖 MegaAgent local | modelo: {MODEL} | perfil: {risk_profile}", file=sys.stderr)
 
@@ -646,8 +748,8 @@ def main():
 
     last_error = None
     _truncated = False
-    for attempt in range(1, MAX_RETRIES + 1):
-        print(f"   Intento {attempt}/{MAX_RETRIES}...", file=sys.stderr)
+    for attempt in range(1, _MAX_RETRIES + 1):
+        print(f"   Intento {attempt}/{_MAX_RETRIES}...", file=sys.stderr)
         try:
             raw    = call_ollama(context, attempt, truncated=_truncated)
             data   = extract_json(raw)
@@ -657,22 +759,25 @@ def main():
             if errors:
                 last_error = errors
                 print(f"   ⚠️  Validación ({attempt}): {errors[:3]}", file=sys.stderr)
-                if attempt < MAX_RETRIES:
+                if attempt < _MAX_RETRIES:
                     continue
                 # En el último intento, si hay picks, guardar igual con advertencia
                 if data.get("risk_adjusted_picks"):
                     print("   ⚠️  Guardando output parcialmente válido...", file=sys.stderr)
-                    print(json.dumps(data, indent=2, ensure_ascii=False))
+                    _print_picks_table(data)
+                    output_json = json.dumps(data, indent=2, ensure_ascii=False)
+                    print(output_json)
+                    _write_outputs(output_json, output_file, args)
                     sys.exit(0)
                 sys.exit(1)
 
             picks_count = len(data.get("risk_adjusted_picks", []))
 
             # Detectar truncación: menos picks de los esperados = modelo cortado antes de terminar
-            if picks_count < MIN_PICKS and attempt < MAX_RETRIES:
+            if picks_count < MIN_PICKS and attempt < _MAX_RETRIES:
                 print(
                     f"   ⚠️  Truncación detectada ({picks_count} picks < {MIN_PICKS} mínimo) "
-                    f"— reintentando (intento {attempt + 1}/{MAX_RETRIES})...",
+                    f"— reintentando (intento {attempt + 1}/{_MAX_RETRIES})...",
                     file=sys.stderr,
                 )
                 last_error = f"output truncated: only {picks_count} picks"
@@ -680,13 +785,16 @@ def main():
                 continue
 
             print(f"   ✅ JSON válido — {picks_count} picks generados", file=sys.stderr)
-            print(json.dumps(data, indent=2, ensure_ascii=False))
+            _print_picks_table(data)
+            output_json = json.dumps(data, indent=2, ensure_ascii=False)
+            print(output_json)
+            _write_outputs(output_json, output_file, args)
             return
 
         except json.JSONDecodeError as e:
             last_error = str(e)
             print(f"   ⚠️  JSON inválido (intento {attempt}): {e}", file=sys.stderr)
-            if attempt == MAX_RETRIES:
+            if attempt == _MAX_RETRIES:
                 print("   ❌ No se pudo parsear JSON tras todos los reintentos.", file=sys.stderr)
                 sys.exit(1)
 
@@ -694,6 +802,73 @@ def main():
             print(f"   ❌ Error conectando a Ollama: {e}", file=sys.stderr)
             print("   Verifica: brew services start ollama  (o: ollama serve)", file=sys.stderr)
             sys.exit(1)
+
+
+def _write_outputs(output_json: str, output_file: Path | None, args):
+    """Persist the strategy JSON to the requested output file and/or dashboard."""
+    if output_file:
+        output_file.write_text(output_json, encoding="utf-8")
+        print(f"   📁 Strategy JSON written to {output_file}", file=sys.stderr)
+    if args.dashboard:
+        dashboard_file = REPO / "dashboard" / "public" / "data" / "report.json"
+        dashboard_file.parent.mkdir(parents=True, exist_ok=True)
+        dashboard_file.write_text(output_json, encoding="utf-8")
+        print(f"   🖥️  Dashboard updated → {dashboard_file}", file=sys.stderr)
+    if args.assemble:
+        _auto_assemble(args, output_file)
+
+
+def _auto_assemble(args, strategy_path: Path | None):
+    """Run assemble_report.py and copy latest history to dashboard if possible."""
+    if not strategy_path:
+        return
+
+    if args.context_file:
+        pipeline_dir = Path(args.context_file).parent
+    else:
+        pipeline_dir = Path("/tmp/tododeia")
+
+    sectors = pipeline_dir / "sectors.json"
+    meta    = pipeline_dir / "pipeline_meta.json"
+
+    if not sectors.exists() or not meta.exists():
+        missing = []
+        if not sectors.exists():
+            missing.append(str(sectors))
+        if not meta.exists():
+            missing.append(str(meta))
+        print(f"   ⚠️  No se encontraron los archivos de pipeline: {', '.join(missing)} — assembly skipped", file=sys.stderr)
+        return
+
+    assemble_py = REPO / "tools" / "assemble_report.py"
+    cmd = [
+        sys.executable,
+        str(assemble_py),
+        "--sectors", str(sectors),
+        "--strategy", str(strategy_path),
+        "--meta", str(meta),
+    ]
+    print(f"   🔧 Ejecutando {assemble_py.name} ...", file=sys.stderr)
+    result = subprocess.run(cmd, capture_output=True, text=True)
+    if result.returncode != 0:
+        print(f"   ⚠️  Assembly falló (exit={result.returncode})", file=sys.stderr)
+        print(result.stderr[:800], file=sys.stderr)
+        return
+
+    # copy latest history to dashboard
+    history_dir = REPO / "output" / "history"
+    if history_dir.exists():
+        history_files = sorted(history_dir.glob("*.json"))
+        if history_files:
+            latest = history_files[-1]
+            dashboard_file = REPO / "dashboard" / "public" / "data" / "report.json"
+            dashboard_file.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(str(latest), str(dashboard_file))
+            print(f"   📊 Dashboard actualizado → {dashboard_file}", file=sys.stderr)
+        else:
+            print("   ⚠️  No se encontró archivo de historial después del assembly", file=sys.stderr)
+    else:
+        print("   ⚠️  output/history no existe, no se puede copiar al dashboard", file=sys.stderr)
 
 
 if __name__ == "__main__":

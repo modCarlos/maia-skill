@@ -3,3 +3,4 @@ output/
 dashboard/node_modules/
 dashboard/.next/
 tools/__pycache__/constants.cpython-314.pyc
+.aider*
