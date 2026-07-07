@@ -151,7 +151,7 @@ def main() -> None:
     if len(sys.argv) == 2 and sys.argv[1] == "-":
         raw = sys.stdin.read()
     elif len(sys.argv) == 2:
-        with open(sys.argv[1], encoding="utf-8") as f:
+        with open(sys.argv[1], encoding="utf-8", errors="replace") as f:
             raw = f.read()
     else:
         print(
@@ -193,7 +193,7 @@ def main() -> None:
 
     # Prune history
     history_dir = os.path.dirname(history_path)
-    pruned = prune_history(history_dir)
+    pruned = prune_history(history_dir, keep=365)
 
     print(f"OK  history  → {history_path}")
     print(f"OK  report   → {report_path}")

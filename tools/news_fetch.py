@@ -21,6 +21,12 @@ import os
 import sys
 import time
 import warnings
+
+# Force UTF-8 output for Windows compatibility (cp1252 can't encode emojis)
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone, timedelta
@@ -175,6 +181,43 @@ def get_reddit_sentiment(symbol: str) -> dict:
 # Google News RSS — more source diversity, no auth
 # ---------------------------------------------------------------------------
 
+# Sector queries for market-level sentiment (proxy via Google News RSS)
+# ETF tickers like XLK not used directly; queries give better headline diversity.
+_SECTOR_QUERIES: dict[str, str] = {
+    "tech":       "technology sector stocks outlook",
+    "financials": "financial sector banks earnings",
+    "consumer":   "consumer spending retail stocks",
+    "energy":     "energy sector oil commodities",
+    "healthcare": "healthcare biotech sector stocks",
+}
+
+
+def get_sector_news() -> dict[str, dict]:
+    """Fetch Google News RSS headlines for each major market sector.
+
+    Returns {sector: {headlines, sentiment, score}} — all network errors are
+    caught silently so one flaky RSS call cannot abort the pipeline.
+    """
+    results: dict[str, dict] = {}
+    for sector, query in _SECTOR_QUERIES.items():
+        try:
+            news = get_google_news(query)
+            sentiment = analyze_sentiment(news)
+            results[sector] = {
+                "headlines": [n["title"] for n in news[:3]],
+                "sentiment": sentiment["label"],
+                "score": round(sentiment["score"], 2),
+            }
+        except Exception as exc:
+            results[sector] = {
+                "headlines": [],
+                "sentiment": "neutral",
+                "score": 0.0,
+                "error": str(exc),
+            }
+    return results
+
+
 def get_google_news(symbol: str) -> list:
     """
     Fetch up to 10 headlines from Google News RSS for the given ticker.
@@ -264,9 +307,10 @@ def get_insider_signal(ticker: yf.Ticker) -> dict:
 # ---------------------------------------------------------------------------
 # Per-ticker news fetch
 # ---------------------------------------------------------------------------
-def fetch_news_for_ticker(symbol: str, include_reddit: bool = True) -> dict:
+def fetch_news_for_ticker(symbol: str, include_reddit: bool = True, known_price: float = 0) -> dict:
     """
     Fetch yfinance news + analyst rec + optional Reddit for one ticker.
+    known_price: precio de cierre de pre_fetch usado como fallback de validación.
     Returns a dict ready for news_context.json.
     """
     result = {
@@ -312,7 +356,20 @@ def fetch_news_for_ticker(symbol: str, include_reddit: bool = True) -> dict:
         rec = info.get("recommendationKey")  # "buy" / "hold" / "sell" / "strong_buy" etc.
         if rec:
             result["analyst_recommendation"] = rec.lower().replace("_", " ")
-        result["analyst_target"] = info.get("targetMeanPrice")
+
+        # Analyst target — validar que esté en rango razonable vs precio actual
+        # (targets < 20% o > 500% del precio = dato corrupto de yfinance)
+        raw_target = info.get("targetMeanPrice")
+        # Precio: primero yfinance info, luego el precio de pre_fetch como fallback
+        current_price = (info.get("regularMarketPrice") or info.get("currentPrice") or known_price) or 0
+        if raw_target and current_price > 0:
+            ratio = raw_target / current_price
+            if 0.2 <= ratio <= 5.0:
+                result["analyst_target"] = raw_target
+            # else: target imposible — descartado silenciosamente
+        else:
+            result["analyst_target"] = raw_target
+
         result["num_analysts"] = info.get("numberOfAnalystOpinions")
 
         # ── Insider signal (Form 4 via yfinance) ──────────────────────────
@@ -353,6 +410,8 @@ def main():
         candidates = candidates[: args.top]
 
     symbols = [c["symbol"] for c in candidates]
+    # Precio de cierre desde pre_fetch — usado como fallback en validación de analyst_target
+    price_lookup: dict[str, float] = {c["symbol"]: c.get("price", 0) for c in candidates}
 
     print(
         f"[news_fetch] {datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')} — "
@@ -365,7 +424,7 @@ def main():
     start = time.time()
 
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures = {pool.submit(fetch_news_for_ticker, sym, include_reddit): sym for sym in symbols}
+        futures = {pool.submit(fetch_news_for_ticker, sym, include_reddit, price_lookup.get(sym, 0)): sym for sym in symbols}
         done = 0
         for future in as_completed(futures):
             sym = futures[future]
@@ -387,6 +446,14 @@ def main():
 
     elapsed = time.time() - start
 
+    # ── Sector-level news (market/sector sentiment) ───────────────────────
+    print("[news_fetch] Fetching sector news (5 sectors)…", file=sys.stderr)
+    sector_news = get_sector_news()
+    for sector, data in sector_news.items():
+        label = data.get("sentiment", "neutral")
+        n = len(data.get("headlines", []))
+        print(f"  {sector:<12} sentiment={label}  headlines={n}", file=sys.stderr)
+
     # ── Write output ──────────────────────────────────────────────────────
     output = {
         "fetched_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -394,6 +461,7 @@ def main():
         "reddit_enabled": include_reddit,
         "elapsed_seconds": round(elapsed, 1),
         "news": results,
+        "sector_news": sector_news,
     }
 
     tmp_path = NEWS_CTX + ".tmp"

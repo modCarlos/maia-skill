@@ -1,0 +1,189 @@
+{
+  "generated_at": "2026-07-04T03:07:31Z",
+  "source": "SEC EDGAR",
+  "top": 12,
+  "symbols": [
+    "BABA",
+    "OXY",
+    "XOM",
+    "AVGO",
+    "NVDA",
+    "GS",
+    "AMZN",
+    "TSM",
+    "QCOM",
+    "FCX",
+    "ARM",
+    "BLK"
+  ],
+  "results": [
+    {
+      "symbol": "BABA",
+      "cik": null,
+      "form": "20-F",
+      "filing_date": "2026-05-20",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001577552/000119312526231755/baba-20260331.htm",
+      "risk_factors": [
+        "For example, in recent years, the PRC government has enhanced regulation in areas such as AI, data privacy and personal data protection, anti-monopoly, anti-unfair competition, content and consumer protection, including food safety.",
+        "Complying with these laws and regulations increases our cost of operations, limits our business opportunities and may require changes to our data collection, use and other practices or negatively affect our user growth and engagement.",
+        "Failure to comply with these laws and regulations could result in claims, regulatory investigations, litigation or penalties, or otherwise negatively affect our business.",
+        "”; “— Claims or regulatory actions under competition laws against us may result in our being subject to fines, constraints on our business and damage to our reputation.”; “— PRC regulations regarding acquisitions impose significant regulatory approval and review requirements, which could make it more difficult for u..."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "OXY",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2024-02-14",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000797468/000079746824000034/oxy-20231231.htm",
+      "risk_factors": [
+        "Occidental continues to be a member of One Mind at Work, an employer coalition dedicated to implementing a gold standard for workplace mental health by combating stigma, improving access to treatment and prevention services and fostering a psychologically safe culture.",
+        "In 2023, Occidental launched an enhanced mental health benefit through Lyra Health.",
+        "Lyra Health provides cost-free mental and emotional healthcare that is effective, convenient and personalized to all employees and their dependents.",
+        "Lyra Health professionals provide virtual or in-person support for a variety of mental health concerns including anxiety, depression, stress management, parenting challenges, relationship conflicts and sleep problems."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "XOM",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-18",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000034088/000003408826000045/xom-20251231.htm",
+      "risk_factors": [
+        "This means ExxonMobil’s operations and earnings may be significantly affected by changes in oil, gas, and petrochemical prices and by changes in margins on refined products.",
+        "Oil, gas, petrochemical, and product prices and margins in turn depend on local, regional, and global events or conditions that affect supply and demand for the relevant commodity or product.",
+        "Any material decline in oil or natural gas prices could have a material adverse effect on the Company’s operations, results, financial condition, and proved reserves, especially in the Upstream segment.",
+        "On the other hand, a material increase in oil or natural gas prices could have a material adverse effect on the Company’s operations and results, especially in the Energy Products, Chemical Products, and Specialty Products segments."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "AVGO",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-12-18",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001730168/000173016825000121/avgo-20251102.htm",
+      "risk_factors": [
+        "At the “Investor Center” page on this website, we promptly make available free of charge the reports we file or furnish pursuant to Section 13(a) or 15(d) of the Securities Exchange Act of 1934 (the “Exchange Act”) with the Securities and Exchange Commission (the “SEC”), as well as our proxy statements.",
+        "Such periodic reports, proxy statements and other information are also available at the SEC’s website at www.sec.gov.",
+        "The information posted on our website is not incorporated into this Annual Report on Form 10-K.",
+        "Information About Our Executive Officers The following table provides information regarding our executive officers as of December 18, 2025: Name and Title Age Position and Offices Hock E."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "NVDA",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-02-26",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001045810/000104581025000023/nvda-20250126.htm",
+      "risk_factors": [
+        "10 Table of Contents Compliance with laws, rules, and regulations has not otherwise had a material effect upon our capital expenditures, results of operations, or competitive position and we do not currently anticipate material capital expenditures for environmental control facilities.",
+        "Compliance with existing or future governmental regulations, including, but not limited to, those pertaining to IP ownership and infringement, taxes, import and export requirements and tariffs, anti-corruption, business acquisitions, foreign exchange controls and cash repatriation restrictions, data privacy requirem...",
+        "Sustainability and Governance NVIDIA invents computing technologies that improve lives and address global challenges.",
+        "Our goal is to integrate sound environmental, social, and corporate governance principles and practices into every aspect of the Company."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "GS",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2023-02-24",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000886982/000088698223000003/gs-20221231.htm",
+      "risk_factors": [
+        "The following is a summary of some of the more important factors that could affect our businesses: Market • Our businesses have been and may in the future be adversely affected by conditions in the global financial markets and broader economic conditions.",
+        "• Our businesses have been and may in the future be adversely affected by declining asset values, particularly where we have net “long” positions, receive fees based on the value of assets managed, or receive or post collateral.",
+        "• Our market-making activities have been and may in the future be affected by changes in the levels of market volatility.",
+        "• Our investment banking, client intermediation, asset management and wealth management businesses have been adversely affected and may in the future be adversely affected by market uncertainty or lack of confidence among investors and CEOs due to declines in economic activity and other unfavorable economic, geopoli..."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "AMZN",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-06",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001018724/000101872426000004/amzn-20251231.htm",
+      "risk_factors": [
+        "We are guided by four principles: customer obsession rather than competitor focus, passion for invention, commitment to operational excellence, and long-term thinking.",
+        "In each of our segments, we serve our primary customer sets, consisting of consumers, sellers, developers, enterprises, content creators, advertisers, and employees.",
+        "We have organized our operations into three segments: North America, International, and Amazon Web Services (“AWS”).",
+        "These segments reflect the way the Company evaluates its business performance and manages its operations."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "TSM",
+      "cik": null,
+      "form": "20-F",
+      "filing_date": "2026-04-16",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001046179/000162828026025362/tsm-20251231.htm",
+      "risk_factors": [
+        "As used in this annual report, all references to “we,” “us,” the “Company” and “TSMC” are to Taiwan Semiconductor Manufacturing Company Limited and its consolidated subsidiaries, while “R.O.C.” and “Taiwan” are references to the Republic of China.",
+        "2 EXCHANGE RATES We publish our financial statements in New Taiwan dollars, the lawful currency of the R.O.C.",
+        "dollars” mean United States dollars, the lawful currency of the United States, and “NT$” and “NT dollars” mean New Taiwan dollars.",
+        "dollars in this annual report were made at NT$ 31.37 to US$1.00, the exchange rate set forth in the H.10 statistical release of the Federal Reserve Board on December 31, 2025 ."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "QCOM",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-11-05",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000804328/000080432825000085/qcom-20250928.htm",
+      "risk_factors": [
+        "Readers are urged not to place undue reliance on these forward-looking statements, which speak only as of the date of this Annual Report.",
+        "We undertake no obligation to revise or update any forward-looking statements in order to reflect any event or circumstance that may arise after the date of this Annual Report.",
+        "Readers are urged to carefully review and consider the various disclosures made in this Annual Report, which attempt to advise interested parties of the risks and factors that may affect our business, financial condition, results of operations and prospects.",
+        "Business We incorporated in California in 1985 and reincorporated in Delaware in 1991."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "FCX",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-13",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000831259/000083125926000012/fcx-20251231.htm",
+      "risk_factors": [
+        "GENERAL We are a leading international metals company with the objective of being foremost in copper.",
+        "Headquartered in Phoenix, Arizona, we operate large, long-lived, geographically diverse assets with significant proven and probable mineral reserves of copper, gold and molybdenum.",
+        "Our portfolio of assets includes the Grasberg minerals district in Indonesia, one of the world’s largest copper and gold deposits; and significant operations in the U.S.",
+        "and South America, including the large-scale Morenci minerals district in Arizona and the Cerro Verde operation in Peru."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "ARM",
+      "cik": null,
+      "form": "20-F",
+      "filing_date": "2024-05-29",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000197323924000012/arm-20240331.htm",
+      "risk_factors": [
+        "See “Special Note Regarding Forward-Looking Statements.” SPECIAL NOTE REGARDING FORWARD-LOOKING STATEMENTS This Annual Report contains forward-looking statements within the meaning of Section 27A of the Securities Act of 1933, as amended (the “Securities Act”), and Section 21E of the Securities Exchange Act of 1934,...",
+        "Statements regarding our future and projections relating to revenue, cost of sales, operating expenses, income (loss), and potential growth opportunities are typical of such statements.",
+        "The forward-looking statements appear in a number of places, including, but not limited to, “ Item 5.",
+        "Operating and Financial Review and Prospects .” Forward-looking statements are based on our management’s beliefs and assumptions and on information currently available to our management."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "BLK",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-25",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0002012383/000119312526071966/blk-20251231.htm",
+      "risk_factors": [
+        "(together, with its subsidiaries, unless the context otherwise indicates, “BlackRock” or the “Company”) is a leading publicly traded investment management firm with $14.0 trillion of AUM at December 31, 2025.",
+        "With approximately 24,900 employees in more than 30 countries, BlackRock provides a broad range of investment management and technology services to institutional and retail clients in more than 100 countries across the globe.",
+        "For further information see Note 1, Business Overview , and Note 27, Segment Information , in the notes to the consolidated financial statements contained in Part II, Item 8.",
+        "The following discussion includes a comparison of BlackRock’s results for 2025 and 2024."
+      ],
+      "error": null
+    }
+  ]
+}

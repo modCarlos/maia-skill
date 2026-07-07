@@ -74,7 +74,7 @@
     "name": "NVIDIA Corporation",
     "sector": "big_tech",
     "buyPrice": 125.2,
-    "quantity": 14,
+    "quantity": 10,
     "buyDate": "2024-01-01T00:00:00.000Z",
     "currentPrice": 215.2,
     "pnlPct": 71.88,
@@ -837,5 +837,68 @@
     "buyPrice": 419.3,
     "quantity": 1,
     "buyDate": "2026-05-28T14:36:33.817Z"
+  },
+  {
+    "id": "MA-1780623959687",
+    "symbol": "MA",
+    "name": "Mastercard Incorporated",
+    "sector": "Payments",
+    "buyPrice": 481.76,
+    "quantity": 1,
+    "buyDate": "2026-06-05T01:45:59.687Z"
+  },
+  {
+    "id": "AMZN-1780623978759",
+    "symbol": "AMZN",
+    "name": "Amazon.com Inc",
+    "sector": "Big Tech",
+    "buyPrice": 253.79,
+    "quantity": 2,
+    "buyDate": "2026-06-05T01:46:18.759Z"
+  },
+  {
+    "id": "NFLX-1780623991216",
+    "symbol": "NFLX",
+    "name": "Netflix Inc",
+    "sector": "Streaming",
+    "buyPrice": 81.56,
+    "quantity": 5,
+    "buyDate": "2026-06-05T01:46:31.216Z"
+  },
+  {
+    "id": "NVDA-1781016429744",
+    "symbol": "NVDA",
+    "name": "NVIDIA Corporation",
+    "sector": "Semiconductors",
+    "buyPrice": 207.18,
+    "quantity": 1,
+    "buyDate": "2026-06-09T14:47:09.744Z"
+  },
+  {
+    "id": "BABA-1781145062593",
+    "symbol": "BABA",
+    "name": "Alibaba Group Holding Limited",
+    "sector": "ecommerce_global",
+    "buyPrice": 115.38,
+    "quantity": 2,
+    "buyDate": "2026-06-11T02:31:02.593Z"
+  },
+  {
+    "id": "CRM-1781188965624",
+    "symbol": "CRM",
+    "name": "Salesforce.com Inc.",
+    "sector": "saas",
+    "buyPrice": 166.12,
+    "quantity": 2,
+    "buyDate": "2026-06-11T14:42:45.624Z"
+  },
+  {
+    "id": "NFLX-1782153258731",
+    "symbol": "NFLX",
+    "name": "Netflix, Inc.",
+    "sector": "Streaming",
+    "buyPrice": 73.22,
+    "quantity": 3,
+    "buyDate": "2026-06-22T18:34:18.731Z"
   }
 ]

@@ -1,0 +1,28 @@
+FROM dengcao/Qwen3-14B:Q5_K_M
+
+# ─── VRAM budget con Flash Attention + KV cache q8_0 ───
+# Pesos Q4_K_M: ~9.4GB
+# KV cache 65K (q8_0):  ~2.5GB  ← mitad gracias a KV quant
+# Total estimado: ~12GB — cabe en 16GB con margen
+# REQUIERE: OLLAMA_FLASH_ATTENTION=1 + OLLAMA_KV_CACHE_TYPE=q8_0
+PARAMETER num_ctx 65536
+
+# ─── Sampling — parámetros oficiales Qwen3 para coding ───
+PARAMETER temperature 0.7
+PARAMETER top_k 20
+PARAMETER top_p 0.8
+PARAMETER repeat_penalty 1.05
+
+# ─── Rendimiento ───
+# num_batch: tokens procesados en paralelo al evaluar el prompt (más rápido)
+PARAMETER num_batch 512
+# num_keep: tokens del system prompt que nunca se truncan del contexto
+PARAMETER num_keep 48
+
+# ─── Thinking Mode deshabilitado ───
+# /no_think al final del SYSTEM activa modo sin razonamiento interno
+SYSTEM """Eres un asistente de código experto integrado en VS Code para el proyecto maia-skill.
+Siempre lee los archivos antes de modificarlos.
+Comunícate en español. Usa inglés solo para código.
+Cuando completes una tarea, confirma brevemente qué cambió.
+/no_think"""

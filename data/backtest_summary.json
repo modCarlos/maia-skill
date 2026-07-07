@@ -1,0 +1,450 @@
+{
+  "generated_at": "2026-06-22T22:32:12Z",
+  "sessions_evaluated": 14,
+  "picks_evaluated": 80,
+  "no_data_count": 0,
+  "missed_entries_count": 25,
+  "entry_tolerance_pct": 2.0,
+  "by_horizon": {
+    "30": {
+      "picks": 0,
+      "missed_entries": 0,
+      "hit_rate": null,
+      "avg_direction_score": null,
+      "avg_spy_return_pct": null,
+      "avg_alpha": null
+    },
+    "60": {
+      "picks": 0,
+      "missed_entries": 0,
+      "hit_rate": null,
+      "avg_direction_score": null,
+      "avg_spy_return_pct": null,
+      "avg_alpha": null
+    },
+    "90": {
+      "picks": 0,
+      "missed_entries": 0,
+      "hit_rate": null,
+      "avg_direction_score": null,
+      "avg_spy_return_pct": null,
+      "avg_alpha": null
+    }
+  },
+  "by_risk_profile": {
+    "moderate": {
+      "picks": 80,
+      "missed_entries": 25,
+      "hit_rate": 0.388,
+      "avg_direction_score": -1.42,
+      "avg_alpha": -1.78
+    }
+  },
+  "per_symbol": {
+    "MA": {
+      "sessions": 3,
+      "hit_rate": 0.667,
+      "avg_direction_score": -0.21,
+      "avg_alpha": 0.99,
+      "consecutive_losses": 1,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-15"
+    },
+    "BX": {
+      "sessions": 1,
+      "hit_rate": 1.0,
+      "avg_direction_score": 9.81,
+      "avg_alpha": 10.86,
+      "consecutive_losses": 0,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-03"
+    },
+    "SBUX": {
+      "sessions": 1,
+      "hit_rate": 1.0,
+      "avg_direction_score": 2.41,
+      "avg_alpha": 3.46,
+      "consecutive_losses": 0,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-03"
+    },
+    "GOOGL": {
+      "sessions": 3,
+      "hit_rate": 0.333,
+      "avg_direction_score": -1.22,
+      "avg_alpha": -0.89,
+      "consecutive_losses": 1,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-15"
+    },
+    "REGN": {
+      "sessions": 2,
+      "hit_rate": 0.5,
+      "avg_direction_score": -0.56,
+      "avg_alpha": -1.48,
+      "consecutive_losses": 0,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-10"
+    },
+    "BLK": {
+      "sessions": 1,
+      "hit_rate": 1.0,
+      "avg_direction_score": 6.0,
+      "avg_alpha": 7.05,
+      "consecutive_losses": 0,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-03"
+    },
+    "PYPL": {
+      "sessions": 5,
+      "hit_rate": 1.0,
+      "avg_direction_score": 3.0,
+      "avg_alpha": 1.97,
+      "consecutive_losses": 0,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-11"
+    },
+    "NFLX": {
+      "sessions": 11,
+      "hit_rate": 0.0,
+      "avg_direction_score": -8.73,
+      "avg_alpha": -9.28,
+      "consecutive_losses": 11,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-19"
+    },
+    "AMZN": {
+      "sessions": 5,
+      "hit_rate": 0.0,
+      "avg_direction_score": -3.8,
+      "avg_alpha": -4.75,
+      "consecutive_losses": 5,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-19"
+    },
+    "V": {
+      "sessions": 1,
+      "hit_rate": 0.0,
+      "avg_direction_score": -1.3,
+      "avg_alpha": 0.12,
+      "consecutive_losses": 1,
+      "last_recommendation": "TRIM",
+      "last_date": "2026-06-04"
+    },
+    "NU": {
+      "sessions": 3,
+      "hit_rate": 1.0,
+      "avg_direction_score": 7.84,
+      "avg_alpha": 6.09,
+      "consecutive_losses": 0,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-10"
+    },
+    "MELI": {
+      "sessions": 4,
+      "hit_rate": 0.25,
+      "avg_direction_score": -0.9,
+      "avg_alpha": -2.37,
+      "consecutive_losses": 1,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-12"
+    },
+    "MSFT": {
+      "sessions": 2,
+      "hit_rate": 0.5,
+      "avg_direction_score": 4.27,
+      "avg_alpha": 3.31,
+      "consecutive_losses": 1,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-17"
+    },
+    "FCX": {
+      "sessions": 2,
+      "hit_rate": 1.0,
+      "avg_direction_score": 7.12,
+      "avg_alpha": 5.93,
+      "consecutive_losses": 0,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-06"
+    },
+    "GILD": {
+      "sessions": 1,
+      "hit_rate": 1.0,
+      "avg_direction_score": 3.2,
+      "avg_alpha": 0.32,
+      "consecutive_losses": 0,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-10"
+    },
+    "NEM": {
+      "sessions": 3,
+      "hit_rate": 0.333,
+      "avg_direction_score": -0.01,
+      "avg_alpha": -0.84,
+      "consecutive_losses": 2,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-17"
+    },
+    "AVGO": {
+      "sessions": 2,
+      "hit_rate": 1.0,
+      "avg_direction_score": 5.18,
+      "avg_alpha": 2.3,
+      "consecutive_losses": 0,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-10"
+    },
+    "META": {
+      "sessions": 1,
+      "hit_rate": 0.0,
+      "avg_direction_score": -1.5,
+      "avg_alpha": -2.66,
+      "consecutive_losses": 1,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-11"
+    },
+    "CRM": {
+      "sessions": 7,
+      "hit_rate": 0.0,
+      "avg_direction_score": -5.01,
+      "avg_alpha": -5.03,
+      "consecutive_losses": 7,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-19"
+    },
+    "BABA": {
+      "sessions": 3,
+      "hit_rate": 0.0,
+      "avg_direction_score": -3.7,
+      "avg_alpha": -3.62,
+      "consecutive_losses": 3,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-18"
+    },
+    "SONY": {
+      "sessions": 3,
+      "hit_rate": 0.0,
+      "avg_direction_score": -3.82,
+      "avg_alpha": -3.51,
+      "consecutive_losses": 3,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-17"
+    },
+    "NOW": {
+      "sessions": 2,
+      "hit_rate": 0.0,
+      "avg_direction_score": -8.62,
+      "avg_alpha": -7.78,
+      "consecutive_losses": 2,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-16"
+    },
+    "TSLA": {
+      "sessions": 1,
+      "hit_rate": 1.0,
+      "avg_direction_score": 0.23,
+      "avg_alpha": 1.36,
+      "consecutive_losses": 0,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-15"
+    },
+    "NVDA": {
+      "sessions": 2,
+      "hit_rate": 0.5,
+      "avg_direction_score": -0.57,
+      "avg_alpha": 0.27,
+      "consecutive_losses": 0,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-16"
+    },
+    "AAPL": {
+      "sessions": 3,
+      "hit_rate": 0.333,
+      "avg_direction_score": -0.35,
+      "avg_alpha": -0.03,
+      "consecutive_losses": 2,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-17"
+    },
+    "PLTR": {
+      "sessions": 1,
+      "hit_rate": 0.0,
+      "avg_direction_score": -9.3,
+      "avg_alpha": -8.76,
+      "consecutive_losses": 1,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-16"
+    },
+    "MRK": {
+      "sessions": 1,
+      "hit_rate": 1.0,
+      "avg_direction_score": 0.73,
+      "avg_alpha": 0.01,
+      "consecutive_losses": 0,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-17"
+    },
+    "CVX": {
+      "sessions": 2,
+      "hit_rate": 1.0,
+      "avg_direction_score": 0.56,
+      "avg_alpha": 0.87,
+      "consecutive_losses": 0,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-19"
+    },
+    "XOM": {
+      "sessions": 2,
+      "hit_rate": 0.0,
+      "avg_direction_score": -0.05,
+      "avg_alpha": 0.26,
+      "consecutive_losses": 2,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-19"
+    },
+    "AMGN": {
+      "sessions": 2,
+      "hit_rate": 1.0,
+      "avg_direction_score": 2.09,
+      "avg_alpha": 2.4,
+      "consecutive_losses": 0,
+      "last_recommendation": "ADD",
+      "last_date": "2026-06-19"
+    }
+  },
+  "top_wins": [
+    {
+      "symbol": "MSFT",
+      "recommendation": "TRIM",
+      "llm_entry": 416.67,
+      "true_entry": 414.1400146484375,
+      "entry_deviation_pct": -0.61,
+      "current": 367.34,
+      "return_pct": -11.3,
+      "direction_score": 11.3,
+      "spy_return_pct": 1.19,
+      "alpha": 10.11,
+      "date": "2026-06-05"
+    },
+    {
+      "symbol": "NU",
+      "recommendation": "ADD",
+      "llm_entry": 11.62,
+      "true_entry": 11.569999694824219,
+      "entry_deviation_pct": -0.43,
+      "current": 12.79,
+      "return_pct": 10.54,
+      "direction_score": 10.54,
+      "spy_return_pct": 2.88,
+      "alpha": 7.66,
+      "date": "2026-06-10"
+    },
+    {
+      "symbol": "BX",
+      "recommendation": "ADD",
+      "llm_entry": 110.28,
+      "true_entry": 112.25,
+      "entry_deviation_pct": 1.79,
+      "current": 123.26,
+      "return_pct": 9.81,
+      "direction_score": 9.81,
+      "spy_return_pct": -1.05,
+      "alpha": 10.86,
+      "date": "2026-06-03"
+    },
+    {
+      "symbol": "NEM",
+      "recommendation": "ADD",
+      "llm_entry": 92.77,
+      "true_entry": 93.4800033569336,
+      "entry_deviation_pct": 0.77,
+      "current": 101.8,
+      "return_pct": 8.9,
+      "direction_score": 8.9,
+      "spy_return_pct": 2.88,
+      "alpha": 6.02,
+      "date": "2026-06-10"
+    },
+    {
+      "symbol": "FCX",
+      "recommendation": "ADD",
+      "llm_entry": 63.37,
+      "true_entry": 64.61000061035156,
+      "entry_deviation_pct": 1.96,
+      "current": 69.21,
+      "return_pct": 7.12,
+      "direction_score": 7.12,
+      "spy_return_pct": 1.19,
+      "alpha": 5.93,
+      "date": "2026-06-05"
+    }
+  ],
+  "top_losses": [
+    {
+      "symbol": "NFLX",
+      "recommendation": "ADD",
+      "llm_entry": 81.56,
+      "true_entry": 82.33000183105469,
+      "entry_deviation_pct": 0.94,
+      "current": 72.88,
+      "return_pct": -11.48,
+      "direction_score": -11.48,
+      "spy_return_pct": -1.42,
+      "alpha": -10.06,
+      "date": "2026-06-04"
+    },
+    {
+      "symbol": "NFLX",
+      "recommendation": "ADD",
+      "llm_entry": 82.25,
+      "true_entry": 82.12999725341797,
+      "entry_deviation_pct": -0.15,
+      "current": 72.88,
+      "return_pct": -11.26,
+      "direction_score": -11.26,
+      "spy_return_pct": 0.96,
+      "alpha": -12.22,
+      "date": "2026-06-08"
+    },
+    {
+      "symbol": "NFLX",
+      "recommendation": "ADD",
+      "llm_entry": 82.0,
+      "true_entry": 81.87000274658203,
+      "entry_deviation_pct": -0.16,
+      "current": 72.88,
+      "return_pct": -10.98,
+      "direction_score": -10.98,
+      "spy_return_pct": 2.88,
+      "alpha": -13.86,
+      "date": "2026-06-10"
+    },
+    {
+      "symbol": "NFLX",
+      "recommendation": "ADD",
+      "llm_entry": 82.18,
+      "true_entry": 81.66000366210938,
+      "entry_deviation_pct": -0.63,
+      "current": 72.88,
+      "return_pct": -10.75,
+      "direction_score": -10.75,
+      "spy_return_pct": 1.19,
+      "alpha": -11.94,
+      "date": "2026-06-05"
+    },
+    {
+      "symbol": "NFLX",
+      "recommendation": "ADD",
+      "llm_entry": 82.18,
+      "true_entry": 81.66000366210938,
+      "entry_deviation_pct": -0.63,
+      "current": 72.88,
+      "return_pct": -10.75,
+      "direction_score": -10.75,
+      "spy_return_pct": 1.19,
+      "alpha": -11.94,
+      "date": "2026-06-06"
+    }
+  ],
+  "prompt_block": "=== HISTORICAL_ACCURACY (14 sessions) ===\n  ✅ top wins: MSFT(-11.3%)  NU(+10.5%)  BX(+9.8%)\n  ❌ worst:    NFLX(-11.5%)  NFLX(-11.3%)  NFLX(-11.0%)\n  moderate: hit_rate=39% (80 picks)  alpha_vs_SPY=-1.8%\n  ⚠ repeat losers: NFLX(11L) CRM(7L) AMZN(5L) BABA(3L) SONY(3L)"
+}

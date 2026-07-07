@@ -348,6 +348,50 @@ def fetch_ticker(entry: dict) -> dict:
     return result
 
 # ---------------------------------------------------------------------------
+# Consolidation helper
+# ---------------------------------------------------------------------------
+def merge_duplicate_positions(portfolio: list) -> list:
+    """Consolidates multiple purchases of the same ticker into one position.
+
+    - quantity  : summed
+    - buyPrice  : weighted average cost basis  Σ(price × qty) / Σ(qty)
+    - buyDate   : earliest purchase date
+    - name/sector: from the first entry found
+    """
+    merged: dict[str, dict] = {}
+    total_cost_map: dict[str, float] = {}
+
+    for entry in portfolio:
+        sym = (entry.get("symbol") or "").upper().strip()
+        if not sym:
+            continue
+        qty   = float(entry.get("quantity") or 0)
+        price = float(entry.get("buyPrice") or entry.get("buy_price") or 0)
+        date  = entry.get("buyDate") or entry.get("buy_date") or ""
+
+        if sym not in merged:
+            merged[sym] = {**entry, "symbol": sym, "quantity": qty}
+            total_cost_map[sym] = price * qty
+        else:
+            existing = merged[sym]
+            existing["quantity"] += qty
+            total_cost_map[sym] += price * qty
+            # Keep earliest buy date
+            existing_date = existing.get("buyDate") or existing.get("buy_date") or ""
+            if date and (not existing_date or date < existing_date):
+                existing["buyDate"] = date
+                existing.pop("buy_date", None)
+
+    result = []
+    for sym, entry in merged.items():
+        qty = entry.get("quantity") or 1
+        entry["buyPrice"] = round(total_cost_map[sym] / qty, 4) if qty else entry.get("buyPrice", 0)
+        result.append(entry)
+
+    return result
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 def main():
@@ -359,6 +403,13 @@ def main():
     if not portfolio:
         print("Portfolio is empty.", file=sys.stderr)
         sys.exit(0)
+
+    # Consolidar compras múltiples del mismo ticker antes de buscar datos
+    original_count = len(portfolio)
+    portfolio = merge_duplicate_positions(portfolio)
+    if len(portfolio) < original_count:
+        merged_count = original_count - len(portfolio)
+        print(f"  ℹ️  Consolidadas {merged_count} compra(s) duplicada(s) en posiciones únicas por ticker")
 
     symbols = [e["symbol"] for e in portfolio]
     print(f"Fetching data for {len(symbols)} positions: {', '.join(symbols)}")

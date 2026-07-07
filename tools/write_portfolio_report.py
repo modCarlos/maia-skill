@@ -48,9 +48,12 @@ def validate(data: dict) -> list[str]:
     if errors:
         return errors
     summary = data.get("portfolio_summary", {})
+    numeric_summary_fields = {"total_cost", "total_current_value", "total_pnl", "total_pnl_pct"}
     for f in REQUIRED_SUMMARY:
         if f not in summary:
             errors.append(f"Missing portfolio_summary.{f}")
+        elif f in numeric_summary_fields and not isinstance(summary[f], (int, float)):
+            errors.append(f"portfolio_summary.{f} must be a number, got {type(summary[f]).__name__}")
     positions = data.get("positions", [])
     if not isinstance(positions, list):
         errors.append("'positions' must be a list")
@@ -120,7 +123,7 @@ def main():
         if not os.path.exists(src):
             print(f"ERROR: file not found: {src}", file=sys.stderr)
             sys.exit(1)
-        raw = open(src, encoding="utf-8").read()
+        raw = open(src, encoding="utf-8", errors="replace").read()
 
     # Strip markdown fences if present
     raw = raw.strip()
@@ -150,8 +153,9 @@ def main():
 
     atomic_write(dashboard_out, serialized)
     print(f"OK → {dashboard_out}")
+    pnl_pct = data['portfolio_summary'].get('total_pnl_pct') or 0.0
     print(f"Positions: {data['portfolio_summary']['total_positions']} | "
-          f"P&L: {data['portfolio_summary']['total_pnl_pct']:+.2f}% | "
+          f"P&L: {pnl_pct:+.2f}% | "
           f"Attention needed: {data['portfolio_summary']['immediate_actions_needed']}")
 
 

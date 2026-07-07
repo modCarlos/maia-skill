@@ -25,6 +25,12 @@ import re
 import sys
 import time
 from datetime import datetime, timezone
+
+# Force UTF-8 output for Windows compatibility (cp1252 can't encode emojis)
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 from html import unescape
 from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
@@ -47,6 +53,14 @@ SEC_USER_AGENT = os.environ.get(
     "SEC_USER_AGENT",
     "TododeiaRiskFetcher/1.0 (github.com/modCarlos/maia-skill; contact: support@example.com)",
 )
+
+# Aliases para tickers que yfinance/SEC no mapean bien con su ticker primario.
+# Se usan solo en la búsqueda de filings SEC, no en precios ni RSI.
+SEC_TICKER_ALIASES: dict[str, str] = {
+    "GOOGL": "GOOG",   # Alphabet Class A → SEC lo indexa igual que Class C
+    "BRK.B": "BRK-B",
+    "BF.B":  "BF-B",
+}
 
 
 def fetch_url_text(url: str, timeout: int = 20) -> str:
@@ -283,6 +297,11 @@ def fetch_risks_for_symbol(symbol: str, ticker_to_cik: dict[str, str]) -> dict:
     }
 
     cik = ticker_to_cik.get(symbol)
+    # Intentar alias si el ticker primario no tiene CIK (ej: GOOGL → GOOG)
+    sec_symbol = symbol
+    if not cik and symbol in SEC_TICKER_ALIASES:
+        sec_symbol = SEC_TICKER_ALIASES[symbol]
+        cik = ticker_to_cik.get(sec_symbol)
     if cik:
         out["cik"] = cik
 
@@ -296,7 +315,7 @@ def fetch_risks_for_symbol(symbol: str, ticker_to_cik: dict[str, str]) -> dict:
 
         # Fallback path when SEC lookup is unavailable (e.g. HTTP 403) or no annual filing found.
         if not meta:
-            meta = latest_yf_annual_filing(symbol)
+            meta = latest_yf_annual_filing(sec_symbol)
 
         if not meta:
             out["error"] = "no_annual_filing_found"

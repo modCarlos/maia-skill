@@ -1,3 +1,4 @@
+# Pre-fetch de datos - ver SKILL.md paso 2 para el contexto completo
 #!/usr/bin/env python3
 """
 Tododeia Pre-fetch Script
@@ -23,6 +24,12 @@ import os
 import json
 import glob
 import warnings
+
+# Force UTF-8 output for Windows compatibility (cp1252 can't encode emojis)
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 warnings.filterwarnings("ignore")
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -75,9 +82,8 @@ WATCHLISTS = {
         "BABA", "MELI",
     ],
 
-    # Materials & energy: precious metals ETFs + oil & gas
+    # Materials & energy: miners + oil & gas stocks only (ETFs removed — no fundamentals)
     "materials": [
-        "GLD", "SLV", "GDX", "GDXJ",
         "XOM", "CVX", "COP", "KMI", "OXY",
         "FCX", "NEM",
     ],
@@ -88,21 +94,15 @@ WATCHLISTS = {
         "AMGN", "GILD", "REGN", "MRNA", "PFE",
     ],
 
-    # Indices & macro proxies (use for macro context alongside stocks)
-    "macro": [
-        "SPY", "QQQ", "IWM", "DIA",
-        "TLT", "GLD", "USO", "UUP",
-    ],
-
     # Crypto proxies — removed (no longer tracked)
     # "crypto": ["BTC-USD", "ETH-USD", "SOL-USD", "COIN", "MSTR", "MARA", "RIOT"],
 
-    # Full extended: all of the above deduplicated (~65 tickers, ~3-4 min runtime)
+    # Full extended: all of the above deduplicated (~60 tickers, ~3-4 min runtime)
     "all": sorted(set(
         _CORE +
         ["INTC", "QCOM", "ARM", "AMAT", "ASML", "SNOW", "CRM", "NOW", "PANW"] +
         ["JPM", "BAC", "GS", "MS", "WFC", "C", "V", "MA", "PYPL", "BLK", "BX"] +
-        ["GLD", "SLV", "GDX", "XOM", "CVX", "COP", "OXY", "FCX", "NEM"] +
+        ["XOM", "CVX", "COP", "OXY", "FCX", "NEM"] +
         ["LLY", "UNH", "JNJ", "ABBV", "MRK", "AMGN", "GILD", "REGN"] +
         # New additions (May 2026)
         ["SONY", "BABA", "RIVN", "MELI", "NU", "SOFI", "DIS", "HD", "SBUX", "IBM"]
@@ -112,7 +112,7 @@ WATCHLISTS = {
 # Default: full universe so the Stocks Agent always has a pre-screened list
 DEFAULT_TICKERS = WATCHLISTS["all"]
 
-MACRO_TICKERS = ["^VIX", "^TNX", "^GSPC", "^IRX"]
+MACRO_TICKERS = ["^VIX", "^TNX", "^GSPC", "^IRX", "DX-Y.NYB"]
 
 # ─── Correlation groups ───────────────────────────────────────────────────────
 # Assets within the same group tend to move together (high beta correlation).
@@ -127,7 +127,7 @@ MACRO_TICKERS = ["^VIX", "^TNX", "^GSPC", "^IRX"]
 # - COIN/MSTR are "crypto_equity" — they track crypto but add equity risk.
 
 CORRELATION_GROUPS: dict[str, list[str]] = {
-    "precious_metals":       ["GLD", "SLV", "GDX", "NEM"],
+    "precious_metals":       ["NEM"],  # GLD/SLV/GDX eran ETFs — eliminados
     "semiconductors":        ["NVDA", "AMD", "INTC", "QCOM", "TSM", "ARM", "AMAT", "ASML", "AVGO"],
     "big_tech":              ["MSFT", "AAPL", "GOOGL", "META", "AMZN", "IBM", "PLTR", "SONY"],
     "financials":            ["JPM", "BAC", "GS", "MS", "WFC", "C"],
@@ -163,9 +163,10 @@ OUTPUT_PATH = os.path.join(SKILL_ROOT, "data", "market_context.json")
 # ─── Technical indicators (pure pandas/numpy — no external deps) ──────────────
 
 def _rsi(closes: pd.Series, window: int = 14) -> float:
+    """RSI con suavizado de Wilder (EWM) — coincide con TradingView/Bloomberg."""
     delta = closes.diff()
-    gain = delta.where(delta > 0, 0.0).rolling(window).mean()
-    loss = (-delta.where(delta < 0, 0.0)).rolling(window).mean()
+    gain = delta.where(delta > 0, 0.0).ewm(alpha=1 / window, adjust=False).mean()
+    loss = (-delta.where(delta < 0, 0.0)).ewm(alpha=1 / window, adjust=False).mean()
     rs = gain / loss.replace(0, np.nan)
     rsi_series = 100 - (100 / (1 + rs))
     return round(float(rsi_series.iloc[-1]), 1)
@@ -216,6 +217,22 @@ def _support_resistance(closes: pd.Series):
     support = round(max(smas_below) if smas_below else low_52w, 2)
     resistance = round(high_52w, 2)
     return support, resistance
+
+
+def _atr(high: pd.Series, low: pd.Series, closes: pd.Series, window: int = 14) -> float | None:
+    """Average True Range using Wilder's EWM smoothing (standard ATR-14)."""
+    try:
+        prev_close = closes.shift(1)
+        tr = pd.concat([
+            high - low,
+            (high - prev_close).abs(),
+            (low - prev_close).abs(),
+        ], axis=1).max(axis=1)
+        atr = tr.ewm(alpha=1 / window, min_periods=window, adjust=False).mean()
+        val = float(atr.iloc[-1])
+        return round(val, 2) if not pd.isna(val) else None
+    except Exception:
+        return None
 
 
 def _entry_quality(
@@ -323,6 +340,13 @@ def fetch_stock(symbol: str) -> dict | None:
         price = round(float(closes.iloc[-1]), 2)
 
         rsi = _rsi(closes)
+
+        # Sanity check: RSI fuera de rango real (< 10 o > 98) indica datos corruptos.
+        # En la práctica ningún blue chip sostiene RSI < 10 por más de 1-2 días.
+        if not (10.0 <= rsi <= 98.0):
+            print(f"  {symbol:<6} SKIP — RSI={rsi} fuera de rango válido (datos corruptos)", file=sys.stderr)
+            return None
+
         macd = _macd_signal(closes)
         trend = _trend(closes)
         support, resistance = _support_resistance(closes)
@@ -341,6 +365,10 @@ def fetch_stock(symbol: str) -> dict | None:
         low_52w = float(closes.tail(252).min())
         high_52w = float(closes.tail(252).max())
         range_52w_pct = round((price - low_52w) / (high_52w - low_52w) * 100, 1) if high_52w > low_52w else None
+
+        # ATR-14: volatility-adjusted stop-loss anchor.
+        # Uses Wilder's EWM smoothing on 1-year daily High/Low/Close data.
+        atr_14 = _atr(hist["High"], hist["Low"], closes)
 
         # Fundamentals from .info (real data from yfinance, not estimated)
         # Computed before entry_quality so it can use them as a quality gate
@@ -375,6 +403,27 @@ def fetch_stock(symbol: str) -> dict | None:
         earnings = _earnings(ticker)
         insider = _insider(ticker)
 
+        # Relative strength vs SPY over 3 months
+        # Positive = outperforming market; negative = underperforming
+        relative_strength_3m = None
+        try:
+            spy_hist = yf.Ticker("SPY").history(period="3mo", interval="1d")
+            if not spy_hist.empty and len(closes) >= 63:
+                spy_ret = (spy_hist["Close"].iloc[-1] / spy_hist["Close"].iloc[0] - 1) * 100
+                ticker_ret = (closes.iloc[-1] / closes.iloc[-63] - 1) * 100
+                relative_strength_3m = round(float(ticker_ret - spy_ret), 2)
+        except Exception:
+            pass
+
+        # EPS estimate revision trend (proxy via earningsQuarterlyGrowth)
+        eps_revision = None
+        try:
+            qg = safe("earningsQuarterlyGrowth")
+            if qg is not None:
+                eps_revision = "raising" if qg > 0.05 else "lowering" if qg < -0.05 else "stable"
+        except Exception:
+            pass
+
     except Exception:
         return None
 
@@ -391,6 +440,7 @@ def fetch_stock(symbol: str) -> dict | None:
             "entry_quality": entry,
             "volume_ratio": volume_ratio,
             "range_52w_pct": range_52w_pct,
+            "atr_14": atr_14,
         },
         "valuation": {
             "pe": safe("trailingPE"),
@@ -413,6 +463,8 @@ def fetch_stock(symbol: str) -> dict | None:
             "short_ratio": short_ratio,
             "short_float_pct": short_float_pct,
         },
+        "relative_strength_3m": relative_strength_3m,
+        "eps_revision": eps_revision,
     }
 
 
@@ -463,6 +515,19 @@ def fetch_macro() -> dict:
         except Exception:
             pass  # fallback: keep synthetic values already set above
 
+        # DXY — US Dollar Index
+        dxy = None
+        try:
+            dxy_series = data["DX-Y.NYB"].dropna()
+            if not dxy_series.empty:
+                dxy = round(float(dxy_series.iloc[-1]), 2)
+                dxy_20 = float(dxy_series.iloc[-20]) if len(dxy_series) >= 20 else dxy
+                dxy_trend = "rising" if dxy > dxy_20 * 1.01 else "falling" if dxy < dxy_20 * 0.99 else "stable"
+            else:
+                dxy_trend = "unknown"
+        except Exception:
+            dxy_trend = "unknown"
+
         tnx_20 = float(data["^TNX"].iloc[-20]) if len(data) >= 20 else tnx
         tnx_trend = "rising" if tnx > tnx_20 * 1.05 else "falling" if tnx < tnx_20 * 0.95 else "stable"
 
@@ -490,6 +555,8 @@ def fetch_macro() -> dict:
             "fear_greed_synthetic": fg_synthetic,
             "fear_greed_source": fg_source,
             "yield_trend": tnx_trend,
+            "dxy": dxy,
+            "dxy_trend": dxy_trend,
             "market_regime": regime,
         }
     except Exception as e:
@@ -555,8 +622,11 @@ def filter_candidates(stocks: dict, top_n: int = 35) -> list[dict]:
             "insider_signal": data.get("insider_signal"),
             "volume_ratio": data.get("technicals", {}).get("volume_ratio"),
             "range_52w_pct": data.get("technicals", {}).get("range_52w_pct"),
+            "atr_14": data.get("technicals", {}).get("atr_14"),
             "short_ratio": data.get("short_interest", {}).get("short_ratio"),
             "short_float_pct": data.get("short_interest", {}).get("short_float_pct"),
+            "relative_strength_3m": data.get("relative_strength_3m"),
+            "eps_revision": data.get("eps_revision"),
             "_sort_key": (QUALITY_RANK.get(quality_key, 2), rsi),
         })
 
