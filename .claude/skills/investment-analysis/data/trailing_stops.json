@@ -1,11 +1,24 @@
 {
-  "generated_at": "2026-07-02T04:25:48Z",
-  "history_file": "2026-07-01.json",
+  "generated_at": "2026-07-04T03:07:36Z",
+  "history_file": "2026-07-03.json",
   "atr_multiplier": 2.0,
-  "picks_total": 11,
-  "stops_raised": 2,
+  "picks_total": 12,
+  "stops_raised": 1,
   "stops_no_data": 0,
   "stops": {
+    "PYPL": {
+      "symbol": "PYPL",
+      "current_price": 43.93,
+      "entry_price": 43.93,
+      "original_stop": 42.21,
+      "atr_14": 0.9889,
+      "atr_multiplier": 2.0,
+      "atr_stop": 41.9522,
+      "recommended_stop": 42.21,
+      "stop_raised": false,
+      "stop_distance_pct": 3.92,
+      "computed_at": "2026-07-04T03:07:36Z"
+    },
     "NEM": {
       "symbol": "NEM",
       "current_price": 106.03,
@@ -17,7 +30,7 @@
       "recommended_stop": 101.65,
       "stop_raised": false,
       "stop_distance_pct": 4.13,
-      "computed_at": "2026-07-02T04:25:48Z"
+      "computed_at": "2026-07-04T03:07:36Z"
     },
     "REGN": {
       "symbol": "REGN",
@@ -30,59 +43,7 @@
       "recommended_stop": 594.04,
       "stop_raised": false,
       "stop_distance_pct": 4.79,
-      "computed_at": "2026-07-02T04:25:48Z"
-    },
-    "PYPL": {
-      "symbol": "PYPL",
-      "current_price": 43.93,
-      "entry_price": 43.93,
-      "original_stop": 42.21,
-      "atr_14": 0.9889,
-      "atr_multiplier": 2.0,
-      "atr_stop": 41.9522,
-      "recommended_stop": 42.21,
-      "stop_raised": false,
-      "stop_distance_pct": 3.92,
-      "computed_at": "2026-07-02T04:25:48Z"
-    },
-    "GILD": {
-      "symbol": "GILD",
-      "current_price": 134.55,
-      "entry_price": 134.55,
-      "original_stop": 128.6,
-      "atr_14": 3.2729,
-      "atr_multiplier": 2.0,
-      "atr_stop": 128.0042,
-      "recommended_stop": 128.6,
-      "stop_raised": false,
-      "stop_distance_pct": 4.42,
-      "computed_at": "2026-07-02T04:25:48Z"
-    },
-    "PEP": {
-      "symbol": "PEP",
-      "current_price": 147.34,
-      "entry_price": 147.34,
-      "original_stop": 141.17,
-      "atr_14": 3.2229,
-      "atr_multiplier": 2.0,
-      "atr_stop": 140.8942,
-      "recommended_stop": 141.17,
-      "stop_raised": false,
-      "stop_distance_pct": 4.19,
-      "computed_at": "2026-07-02T04:25:48Z"
-    },
-    "TSM": {
-      "symbol": "TSM",
-      "current_price": 419.3,
-      "entry_price": 419.3,
-      "original_stop": 377.0,
-      "atr_14": 14.5314,
-      "atr_multiplier": 2.0,
-      "atr_stop": 390.2372,
-      "recommended_stop": 390.2372,
-      "stop_raised": true,
-      "stop_distance_pct": 6.93,
-      "computed_at": "2026-07-02T04:25:48Z"
+      "computed_at": "2026-07-04T03:07:36Z"
     },
     "WMT": {
       "symbol": "WMT",
@@ -95,20 +56,20 @@
       "recommended_stop": 113.72,
       "stop_raised": false,
       "stop_distance_pct": 4.32,
-      "computed_at": "2026-07-02T04:25:48Z"
+      "computed_at": "2026-07-04T03:07:36Z"
     },
-    "MA": {
-      "symbol": "MA",
-      "current_price": 492.56,
-      "entry_price": 492.56,
-      "original_stop": 477.59,
-      "atr_14": 9.2836,
+    "PEP": {
+      "symbol": "PEP",
+      "current_price": 147.34,
+      "entry_price": 147.34,
+      "original_stop": 141.17,
+      "atr_14": 3.2229,
       "atr_multiplier": 2.0,
-      "atr_stop": 473.9928,
-      "recommended_stop": 477.59,
+      "atr_stop": 140.8942,
+      "recommended_stop": 141.17,
       "stop_raised": false,
-      "stop_distance_pct": 3.04,
-      "computed_at": "2026-07-02T04:25:48Z"
+      "stop_distance_pct": 4.19,
+      "computed_at": "2026-07-04T03:07:36Z"
     },
     "DIS": {
       "symbol": "DIS",
@@ -121,33 +82,85 @@
       "recommended_stop": 99.55,
       "stop_raised": false,
       "stop_distance_pct": 4.14,
-      "computed_at": "2026-07-02T04:25:48Z"
+      "computed_at": "2026-07-04T03:07:36Z"
+    },
+    "TSM": {
+      "symbol": "TSM",
+      "current_price": 419.3,
+      "entry_price": 419.3,
+      "original_stop": 397.0,
+      "atr_14": 14.5314,
+      "atr_multiplier": 2.0,
+      "atr_stop": 390.2372,
+      "recommended_stop": 397.0,
+      "stop_raised": false,
+      "stop_distance_pct": 5.32,
+      "computed_at": "2026-07-04T03:07:36Z"
+    },
+    "GILD": {
+      "symbol": "GILD",
+      "current_price": 134.55,
+      "entry_price": 134.55,
+      "original_stop": 128.6,
+      "atr_14": 3.2729,
+      "atr_multiplier": 2.0,
+      "atr_stop": 128.0042,
+      "recommended_stop": 128.6,
+      "stop_raised": false,
+      "stop_distance_pct": 4.42,
+      "computed_at": "2026-07-04T03:07:36Z"
+    },
+    "MA": {
+      "symbol": "MA",
+      "current_price": 492.56,
+      "entry_price": 492.56,
+      "original_stop": 473.99,
+      "atr_14": 9.2836,
+      "atr_multiplier": 2.0,
+      "atr_stop": 473.9928,
+      "recommended_stop": 473.9928,
+      "stop_raised": true,
+      "stop_distance_pct": 3.77,
+      "computed_at": "2026-07-04T03:07:36Z"
     },
     "NFLX": {
       "symbol": "NFLX",
       "current_price": 86.65,
       "entry_price": 86.65,
-      "original_stop": 78.0,
+      "original_stop": 82.15,
       "atr_14": 2.25,
       "atr_multiplier": 2.0,
       "atr_stop": 82.15,
       "recommended_stop": 82.15,
-      "stop_raised": true,
+      "stop_raised": false,
       "stop_distance_pct": 5.19,
-      "computed_at": "2026-07-02T04:25:48Z"
+      "computed_at": "2026-07-04T03:07:36Z"
     },
     "AVGO": {
       "symbol": "AVGO",
       "current_price": 420.32,
       "entry_price": 420.32,
-      "original_stop": 394.76,
+      "original_stop": 396.0,
       "atr_14": 15.8211,
       "atr_multiplier": 2.0,
       "atr_stop": 388.6778,
-      "recommended_stop": 394.76,
+      "recommended_stop": 396.0,
       "stop_raised": false,
-      "stop_distance_pct": 6.08,
-      "computed_at": "2026-07-02T04:25:48Z"
+      "stop_distance_pct": 5.79,
+      "computed_at": "2026-07-04T03:07:36Z"
+    },
+    "PLTR": {
+      "symbol": "PLTR",
+      "current_price": 138.09,
+      "entry_price": 138.09,
+      "original_stop": 128.23,
+      "atr_14": 4.9303,
+      "atr_multiplier": 2.0,
+      "atr_stop": 128.2294,
+      "recommended_stop": 128.23,
+      "stop_raised": false,
+      "stop_distance_pct": 7.14,
+      "computed_at": "2026-07-04T03:07:36Z"
     }
   }
 }

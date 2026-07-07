@@ -1,36 +1,22 @@
 {
-  "generated_at": "2026-07-02T04:25:45Z",
+  "generated_at": "2026-07-04T03:07:31Z",
   "source": "SEC EDGAR",
   "top": 12,
   "symbols": [
-    "OXY",
     "BABA",
-    "CVX",
+    "OXY",
     "XOM",
-    "DIS",
-    "NFLX",
     "AVGO",
     "NVDA",
-    "SONY",
     "GS",
     "AMZN",
-    "MS"
+    "TSM",
+    "QCOM",
+    "FCX",
+    "ARM",
+    "BLK"
   ],
   "results": [
-    {
-      "symbol": "OXY",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2024-02-14",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000797468/000079746824000034/oxy-20231231.htm",
-      "risk_factors": [
-        "Occidental continues to be a member of One Mind at Work, an employer coalition dedicated to implementing a gold standard for workplace mental health by combating stigma, improving access to treatment and prevention services and fostering a psychologically safe culture.",
-        "In 2023, Occidental launched an enhanced mental health benefit through Lyra Health.",
-        "Lyra Health provides cost-free mental and emotional healthcare that is effective, convenient and personalized to all employees and their dependents.",
-        "Lyra Health professionals provide virtual or in-person support for a variety of mental health concerns including anxiety, depression, stress management, parenting challenges, relationship conflicts and sleep problems."
-      ],
-      "error": null
-    },
     {
       "symbol": "BABA",
       "cik": null,
@@ -46,16 +32,16 @@
       "error": null
     },
     {
-      "symbol": "CVX",
+      "symbol": "OXY",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-02-24",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000093410/000009341026000078/cvx-20251231.htm",
+      "filing_date": "2024-02-14",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000797468/000079746824000034/oxy-20231231.htm",
       "risk_factors": [
-        "Refer to Management’s Discussion and Analysis of Financial Conditions and Results of Operations in Business Environment and Outlook on pages 35 through 37 for further discussion of climate change related trends and uncertainties.",
-        "Refer to Management’s Discussion and Analysis of Financial Conditions and Results of Operations on page 55 for additional information on environmental matters and their impact on Chevron, and on the company’s 2025 environmental expenditures.",
-        "Refer to page 54 and Note 24 Other Contingencies and Commitments for a discussion of environmental remediation provisions and year-end reserves.",
-        "The following disclosures reflect our beliefs and opinions as to factors that could materially and adversely affect us in the future."
+        "Occidental continues to be a member of One Mind at Work, an employer coalition dedicated to implementing a gold standard for workplace mental health by combating stigma, improving access to treatment and prevention services and fostering a psychologically safe culture.",
+        "In 2023, Occidental launched an enhanced mental health benefit through Lyra Health.",
+        "Lyra Health provides cost-free mental and emotional healthcare that is effective, convenient and personalized to all employees and their dependents.",
+        "Lyra Health professionals provide virtual or in-person support for a variety of mental health concerns including anxiety, depression, stress management, parenting challenges, relationship conflicts and sleep problems."
       ],
       "error": null
     },
@@ -70,34 +56,6 @@
         "Oil, gas, petrochemical, and product prices and margins in turn depend on local, regional, and global events or conditions that affect supply and demand for the relevant commodity or product.",
         "Any material decline in oil or natural gas prices could have a material adverse effect on the Company’s operations, results, financial condition, and proved reserves, especially in the Upstream segment.",
         "On the other hand, a material increase in oil or natural gas prices could have a material adverse effect on the Company’s operations and results, especially in the Energy Products, Chemical Products, and Specialty Products segments."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "DIS",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2024-11-14",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001744489/000174448924000276/dis-20240928.htm",
-      "risk_factors": [
-        "In addition to the factors affecting specific business operations identified in connection with the description of these operations and the financial results of these operations elsewhere in our filings with the SEC, the most significant factors affecting our business include the following: RISKS RELATED TO OUR BUSI...",
-        "Declines in economic conditions, such as recessions, other less severe slowdowns in economic activity and/or inflationary conditions in the U.S.",
-        "and other regions of the world in which we do business typically adversely affect demand for our products and services and/or costs to operate our businesses, reducing our revenue and earnings.",
-        "Past declines in economic conditions reduced or resulted in slower growth than expected in, among other things, guest spending at our parks and resorts, purchases of and prices for advertising on our platforms and purchases of Company-branded consumer products, and we expect similar impacts as such conditions recur."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "NFLX",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2025-01-27",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001065280/000106528025000044/nflx-20241231.htm",
-      "risk_factors": [
-        "All forward-looking statements included in this document are based on information available to us on the date hereof, and we assume no obligation to revise or publicly release any revision to any such forward-looking statement, except as may otherwise be required by law.",
-        "(“Netflix”, “the Company”, “registrant”, “we”, or “us”) is one of the world’s leading entertainment services with approximately 302 million paid memberships in over 190 countries enjoying TV series, films and games across a wide variety of genres and languages.",
-        "Members can play, pause and resume watching as much as they want, anytime, anywhere, and can change their plans at any time.",
-        "Our core strategy is to grow our business globally within the parameters of our operating margin target."
       ],
       "error": null
     },
@@ -130,20 +88,6 @@
       "error": null
     },
     {
-      "symbol": "SONY",
-      "cik": null,
-      "form": "20-F",
-      "filing_date": "2024-06-25",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000313838/000119312524167500/d797371d20f.htm",
-      "risk_factors": [
-        "Sony must overcome increasingly intense competition, which could lead to lower revenue or operating margins.",
-        "Sony has several business segments in different industries with many product and service categories, which cause it to compete with many existing and new competitors ranging from large multinational companies to highly specialized entities that focus on only one or a few businesses and also, potentially, with outsou...",
-        "These competitors may have greater financial, technical, labor and marketing resources available to them than those available to Sony.",
-        "Sony’s financial condition and operating results depend on its ability to efficiently anticipate and respond to these established and new competitors."
-      ],
-      "error": null
-    },
-    {
       "symbol": "GS",
       "cik": null,
       "form": "10-K",
@@ -172,14 +116,72 @@
       "error": null
     },
     {
-      "symbol": "MS",
+      "symbol": "TSM",
+      "cik": null,
+      "form": "20-F",
+      "filing_date": "2026-04-16",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001046179/000162828026025362/tsm-20251231.htm",
+      "risk_factors": [
+        "As used in this annual report, all references to “we,” “us,” the “Company” and “TSMC” are to Taiwan Semiconductor Manufacturing Company Limited and its consolidated subsidiaries, while “R.O.C.” and “Taiwan” are references to the Republic of China.",
+        "2 EXCHANGE RATES We publish our financial statements in New Taiwan dollars, the lawful currency of the R.O.C.",
+        "dollars” mean United States dollars, the lawful currency of the United States, and “NT$” and “NT dollars” mean New Taiwan dollars.",
+        "dollars in this annual report were made at NT$ 31.37 to US$1.00, the exchange rate set forth in the H.10 statistical release of the Federal Reserve Board on December 31, 2025 ."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "QCOM",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2025-02-21",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000895421/000089542125000304/ms-20241231.htm",
+      "filing_date": "2025-11-05",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000804328/000080432825000085/qcom-20250928.htm",
       "risk_factors": [
-        "34 ) 76 Consolidated Income Statement 78 Consolidated Comprehensive Income Statement 78 Consolidated Balance Sheet 79 Consolidated Statement of Changes in Total Equity 80 Consolidated Cash Flow Statement 81 Notes to Consolidated Financial Statements 82 1.",
-        "Parent Company 145 Financial Data Supplement (Unaudited) 148 Glossary of Common Terms and Acronyms 151 Changes in and Disagreements with Accountants on Accounting and Financial Disclosure 9 152 Controls and Procedures 9A 152 Other Information 9B 154 Disclosure Regarding Foreign Jurisdictions that Prevent Inspections..."
+        "Readers are urged not to place undue reliance on these forward-looking statements, which speak only as of the date of this Annual Report.",
+        "We undertake no obligation to revise or update any forward-looking statements in order to reflect any event or circumstance that may arise after the date of this Annual Report.",
+        "Readers are urged to carefully review and consider the various disclosures made in this Annual Report, which attempt to advise interested parties of the risks and factors that may affect our business, financial condition, results of operations and prospects.",
+        "Business We incorporated in California in 1985 and reincorporated in Delaware in 1991."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "FCX",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-13",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000831259/000083125926000012/fcx-20251231.htm",
+      "risk_factors": [
+        "GENERAL We are a leading international metals company with the objective of being foremost in copper.",
+        "Headquartered in Phoenix, Arizona, we operate large, long-lived, geographically diverse assets with significant proven and probable mineral reserves of copper, gold and molybdenum.",
+        "Our portfolio of assets includes the Grasberg minerals district in Indonesia, one of the world’s largest copper and gold deposits; and significant operations in the U.S.",
+        "and South America, including the large-scale Morenci minerals district in Arizona and the Cerro Verde operation in Peru."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "ARM",
+      "cik": null,
+      "form": "20-F",
+      "filing_date": "2024-05-29",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000197323924000012/arm-20240331.htm",
+      "risk_factors": [
+        "See “Special Note Regarding Forward-Looking Statements.” SPECIAL NOTE REGARDING FORWARD-LOOKING STATEMENTS This Annual Report contains forward-looking statements within the meaning of Section 27A of the Securities Act of 1933, as amended (the “Securities Act”), and Section 21E of the Securities Exchange Act of 1934,...",
+        "Statements regarding our future and projections relating to revenue, cost of sales, operating expenses, income (loss), and potential growth opportunities are typical of such statements.",
+        "The forward-looking statements appear in a number of places, including, but not limited to, “ Item 5.",
+        "Operating and Financial Review and Prospects .” Forward-looking statements are based on our management’s beliefs and assumptions and on information currently available to our management."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "BLK",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-25",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0002012383/000119312526071966/blk-20251231.htm",
+      "risk_factors": [
+        "(together, with its subsidiaries, unless the context otherwise indicates, “BlackRock” or the “Company”) is a leading publicly traded investment management firm with $14.0 trillion of AUM at December 31, 2025.",
+        "With approximately 24,900 employees in more than 30 countries, BlackRock provides a broad range of investment management and technology services to institutional and retail clients in more than 100 countries across the globe.",
+        "For further information see Note 1, Business Overview , and Note 27, Segment Information , in the notes to the consolidated financial statements contained in Part II, Item 8.",
+        "The following discussion includes a comparison of BlackRock’s results for 2025 and 2024."
       ],
       "error": null
     }
