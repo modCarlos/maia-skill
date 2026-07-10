@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T06:55:09Z",
+  "generated_at": "2026-07-10T07:06:23Z",
   "history_file": "2026-07-09.json",
   "atr_multiplier": 2.0,
   "picks_total": 10,
@@ -17,7 +17,7 @@
       "recommended_stop": 101.65,
       "stop_raised": false,
       "stop_distance_pct": 4.13,
-      "computed_at": "2026-07-10T06:55:09Z"
+      "computed_at": "2026-07-10T07:06:23Z"
     },
     "WMT": {
       "symbol": "WMT",
@@ -30,7 +30,7 @@
       "recommended_stop": 113.72,
       "stop_raised": false,
       "stop_distance_pct": 4.32,
-      "computed_at": "2026-07-10T06:55:09Z"
+      "computed_at": "2026-07-10T07:06:23Z"
     },
     "PYPL": {
       "symbol": "PYPL",
@@ -43,7 +43,7 @@
       "recommended_stop": 42.21,
       "stop_raised": false,
       "stop_distance_pct": 3.92,
-      "computed_at": "2026-07-10T06:55:09Z"
+      "computed_at": "2026-07-10T07:06:23Z"
     },
     "TSM": {
       "symbol": "TSM",
@@ -56,7 +56,7 @@
       "recommended_stop": 397.0,
       "stop_raised": false,
       "stop_distance_pct": 5.32,
-      "computed_at": "2026-07-10T06:55:09Z"
+      "computed_at": "2026-07-10T07:06:23Z"
     },
     "AVGO": {
       "symbol": "AVGO",
@@ -69,7 +69,7 @@
       "recommended_stop": 398.0,
       "stop_raised": false,
       "stop_distance_pct": 5.31,
-      "computed_at": "2026-07-10T06:55:09Z"
+      "computed_at": "2026-07-10T07:06:23Z"
     },
     "GILD": {
       "symbol": "GILD",
@@ -82,7 +82,7 @@
       "recommended_stop": 128.6,
       "stop_raised": false,
       "stop_distance_pct": 4.42,
-      "computed_at": "2026-07-10T06:55:09Z"
+      "computed_at": "2026-07-10T07:06:23Z"
     },
     "REGN": {
       "symbol": "REGN",
@@ -95,7 +95,7 @@
       "recommended_stop": 594.04,
       "stop_raised": false,
       "stop_distance_pct": 4.79,
-      "computed_at": "2026-07-10T06:55:09Z"
+      "computed_at": "2026-07-10T07:06:23Z"
     },
     "NFLX": {
       "symbol": "NFLX",
@@ -108,7 +108,7 @@
       "recommended_stop": 82.15,
       "stop_raised": false,
       "stop_distance_pct": 5.19,
-      "computed_at": "2026-07-10T06:55:09Z"
+      "computed_at": "2026-07-10T07:06:23Z"
     },
     "COST": {
       "symbol": "COST",
@@ -121,7 +121,7 @@
       "recommended_stop": 958.63,
       "stop_raised": false,
       "stop_distance_pct": 4.56,
-      "computed_at": "2026-07-10T06:55:09Z"
+      "computed_at": "2026-07-10T07:06:23Z"
     },
     "DIS": {
       "symbol": "DIS",
@@ -134,7 +134,7 @@
       "recommended_stop": 99.55,
       "stop_raised": false,
       "stop_distance_pct": 4.14,
-      "computed_at": "2026-07-10T06:55:09Z"
+      "computed_at": "2026-07-10T07:06:23Z"
     }
   }
 }

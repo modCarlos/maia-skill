@@ -1,9 +1,143 @@
 {
-  "fetched_at": "2026-07-10T06:55:08Z",
+  "fetched_at": "2026-07-10T07:06:23Z",
   "tickers_fetched": 12,
   "reddit_enabled": true,
-  "elapsed_seconds": 10.8,
+  "elapsed_seconds": 11.1,
   "news": {
+    "ORCL": {
+      "symbol": "ORCL",
+      "key_news": [
+        {
+          "title": "AI could cause a huge electricity shortfall in the US, Bank of America says: A closer look",
+          "publisher": "Yahoo Finance Video"
+        },
+        {
+          "title": "S&P 500, Nasdaq, Dow End Higher Led By Chipmaker Stocks As Investors Look Past US-Iran Hostility \u2014 ORCL, SBUX, WULF, PANW, FATE In Focus",
+          "publisher": "Stocktwits"
+        },
+        {
+          "title": "Oracle Gets Credit Rating Downgrade",
+          "publisher": "The Wall Street Journal"
+        },
+        {
+          "title": "Oracle stock shrugs off S&P downgrade to \u2019BBB-\u2019, but $160B debt shadow looms",
+          "publisher": "Investing.com"
+        },
+        {
+          "title": "Why Is Palantir Stock Falling Today",
+          "publisher": "GuruFocus.com"
+        },
+        {
+          "title": "Oracle Stock Climbs As OpenAI Touts New Model's Performance",
+          "publisher": "Investor's Business Daily"
+        },
+        {
+          "title": "Jim Cramer Explains How SpaceX is Changing the Economics of the xAI Business",
+          "publisher": "Insider Monkey"
+        },
+        {
+          "title": "Jim Cramer Highlights Future Earnings Projections that Make Oracle Look Cheap",
+          "publisher": "Insider Monkey"
+        }
+      ],
+      "sentiment": {
+        "score": -0.162,
+        "label": "bearish",
+        "keywords": [
+          {
+            "word": "downgrade",
+            "type": "negative"
+          },
+          {
+            "word": "slump",
+            "type": "negative"
+          }
+        ]
+      },
+      "analyst_recommendation": "buy",
+      "analyst_target": 251.8495,
+      "num_analysts": 40,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 1,
+        "signal": "mixed"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-07-10T07:06:08Z",
+      "error": null
+    },
+    "DIS": {
+      "symbol": "DIS",
+      "key_news": [
+        {
+          "title": "VZ, T, TMUS: SpaceX Starlink\u2019s Rise Tests Telecom Giants, But This Analyst Sees Opportunity Ahead",
+          "publisher": "Stocktwits"
+        },
+        {
+          "title": "Disney (DIS) Stock Looks Cheap On Earnings And Cash Flow",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "FUBO Stock Climbs After Hours As FuboTV Taps Former Disney Executive As CEO",
+          "publisher": "Stocktwits"
+        },
+        {
+          "title": "Disney (DIS) Ties Moana To Govee And Brings MrBeast To Shark Tank",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "Netflix (NFLX) Eyes FIFA Rights As It Weighs Live Channels And App Bundles",
+          "publisher": "Simply Wall St."
+        },
+        {
+          "title": "FuboTV Appoints Disney Executive Alisa Bowen to CEO",
+          "publisher": "The Wall Street Journal"
+        },
+        {
+          "title": "FuboTV names Disney's Bowen CEO, removes veteran Gandler",
+          "publisher": "Reuters"
+        },
+        {
+          "title": "Netflix Is Exploring Live TV and Bundles as It Struggles to Keep Viewers Hooked",
+          "publisher": "The Wall Street Journal"
+        }
+      ],
+      "sentiment": {
+        "score": -0.162,
+        "label": "bearish",
+        "keywords": [
+          {
+            "word": "cut",
+            "type": "negative"
+          },
+          {
+            "word": "warning",
+            "type": "negative"
+          }
+        ]
+      },
+      "analyst_recommendation": "strong buy",
+      "analyst_target": 129.66553,
+      "num_analysts": 29,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 0,
+        "signal": "none"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-07-10T07:06:08Z",
+      "error": null
+    },
     "VZ": {
       "symbol": "VZ",
       "key_news": [
@@ -72,74 +206,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-10T06:54:54Z",
-      "error": null
-    },
-    "DIS": {
-      "symbol": "DIS",
-      "key_news": [
-        {
-          "title": "VZ, T, TMUS: SpaceX Starlink\u2019s Rise Tests Telecom Giants, But This Analyst Sees Opportunity Ahead",
-          "publisher": "Stocktwits"
-        },
-        {
-          "title": "Disney (DIS) Stock Looks Cheap On Earnings And Cash Flow",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "FUBO Stock Climbs After Hours As FuboTV Taps Former Disney Executive As CEO",
-          "publisher": "Stocktwits"
-        },
-        {
-          "title": "Disney (DIS) Ties Moana To Govee And Brings MrBeast To Shark Tank",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "Netflix (NFLX) Eyes FIFA Rights As It Weighs Live Channels And App Bundles",
-          "publisher": "Simply Wall St."
-        },
-        {
-          "title": "FuboTV Appoints Disney Executive Alisa Bowen to CEO",
-          "publisher": "The Wall Street Journal"
-        },
-        {
-          "title": "FuboTV names Disney's Bowen CEO, removes veteran Gandler",
-          "publisher": "Reuters"
-        },
-        {
-          "title": "Netflix Is Exploring Live TV and Bundles as It Struggles to Keep Viewers Hooked",
-          "publisher": "The Wall Street Journal"
-        }
-      ],
-      "sentiment": {
-        "score": -0.162,
-        "label": "bearish",
-        "keywords": [
-          {
-            "word": "cut",
-            "type": "negative"
-          },
-          {
-            "word": "warning",
-            "type": "negative"
-          }
-        ]
-      },
-      "analyst_recommendation": "strong buy",
-      "analyst_target": 129.66553,
-      "num_analysts": 29,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 0,
-        "signal": "none"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-07-10T06:54:54Z",
+      "fetched_at": "2026-07-10T07:06:08Z",
       "error": null
     },
     "XOM": {
@@ -214,7 +281,70 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-10T06:54:54Z",
+      "fetched_at": "2026-07-10T07:06:08Z",
+      "error": null
+    },
+    "T": {
+      "symbol": "T",
+      "key_news": [
+        {
+          "title": "AT&T is helping small businesses stay protected from cyber threats",
+          "publisher": "Yahoo Finance Video"
+        },
+        {
+          "title": "AT&T may be left out of the Starlink deal everyone wants",
+          "publisher": "TheStreet"
+        },
+        {
+          "title": "AT&T vs. Verizon: Which Cell Phone Network Stock Is a Better Buy in 2026?",
+          "publisher": "Motley Fool"
+        },
+        {
+          "title": "T or VZ: Which Telecom Stock Deserves a Place in Your Portfolio?",
+          "publisher": "Zacks"
+        },
+        {
+          "title": "How SpaceX Spending Spree Could Threaten AT&T, Verizon, T-Mobile",
+          "publisher": "Investor's Business Daily"
+        },
+        {
+          "title": "3 High-Yield Dividends That Pay You Soon (But You Must Act Quickly)",
+          "publisher": "24/7 Wall St."
+        },
+        {
+          "title": "Is SpaceX\u2019s Starlink a Real Threat to AT&T and Verizon?",
+          "publisher": "Barrons.com"
+        },
+        {
+          "title": "AT&T leaves rivals flat-footed as bankrupt carrier folds",
+          "publisher": "TheStreet"
+        }
+      ],
+      "sentiment": {
+        "score": 0.101,
+        "label": "bullish",
+        "keywords": [
+          {
+            "word": "dividend",
+            "type": "positive"
+          }
+        ]
+      },
+      "analyst_recommendation": "buy",
+      "analyst_target": 29.5,
+      "num_analysts": 23,
+      "insider": {
+        "buys_30d": 0,
+        "sells_30d": 0,
+        "signal": "none"
+      },
+      "reddit": {
+        "mentions": 0,
+        "score": 0.0,
+        "label": "neutral",
+        "buzz": "low"
+      },
+      "fetched_at": "2026-07-10T07:06:08Z",
       "error": null
     },
     "COST": {
@@ -293,7 +423,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-10T06:54:54Z",
+      "fetched_at": "2026-07-10T07:06:08Z",
       "error": null
     },
     "HON": {
@@ -333,7 +463,7 @@
         }
       ],
       "sentiment": {
-        "score": 0.069,
+        "score": 0.072,
         "label": "neutral",
         "keywords": [
           {
@@ -372,7 +502,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-10T06:54:54Z",
+      "fetched_at": "2026-07-10T07:06:08Z",
       "error": null
     },
     "AMT": {
@@ -455,58 +585,78 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-10T06:54:54Z",
+      "fetched_at": "2026-07-10T07:06:08Z",
       "error": null
     },
-    "T": {
-      "symbol": "T",
+    "MMM": {
+      "symbol": "MMM",
       "key_news": [
         {
-          "title": "AT&T is helping small businesses stay protected from cyber threats",
-          "publisher": "Yahoo Finance Video"
+          "title": "New York sues 3M, DuPont and other chemical companies over PFAS pollution",
+          "publisher": "Investing.com"
         },
         {
-          "title": "AT&T may be left out of the Starlink deal everyone wants",
-          "publisher": "TheStreet"
+          "title": "3M, DuPont, Corteva, Chemours Sued by New York AG Over Toxic Pollution From Consumer Products",
+          "publisher": "MT Newswires"
         },
         {
-          "title": "AT&T vs. Verizon: Which Cell Phone Network Stock Is a Better Buy in 2026?",
-          "publisher": "Motley Fool"
-        },
-        {
-          "title": "T or VZ: Which Telecom Stock Deserves a Place in Your Portfolio?",
+          "title": "FUL Stock Is Riding Medical, Aerospace and Pricing Trends",
           "publisher": "Zacks"
         },
         {
-          "title": "How SpaceX Spending Spree Could Threaten AT&T, Verizon, T-Mobile",
-          "publisher": "Investor's Business Daily"
+          "title": "3M (MMM) Enters Cadillac Formula 1 Partnership To Put Material Science On Display",
+          "publisher": "Simply Wall St."
         },
         {
-          "title": "3 High-Yield Dividends That Pay You Soon (But You Must Act Quickly)",
-          "publisher": "24/7 Wall St."
+          "title": "Is 3M Company (MMM) Stock Undervalued With Growth Trends Improving and Liabilities Easing?",
+          "publisher": "Insider Monkey"
         },
         {
-          "title": "Is SpaceX\u2019s Starlink a Real Threat to AT&T and Verizon?",
-          "publisher": "Barrons.com"
+          "title": "HON's Building Automation Unit's Growth Picks Up: More Upside Ahead?",
+          "publisher": "Zacks"
         },
         {
-          "title": "AT&T leaves rivals flat-footed as bankrupt carrier folds",
-          "publisher": "TheStreet"
+          "title": "1 Unpopular Stock That Should Get More Attention and 2 Facing Headwinds",
+          "publisher": "StockStory"
+        },
+        {
+          "title": "Honeywell Technologies Debuts as Public Pure-Play Automation Company",
+          "publisher": "Zacks"
         }
       ],
       "sentiment": {
-        "score": 0.101,
+        "score": 0.213,
         "label": "bullish",
         "keywords": [
           {
-            "word": "dividend",
+            "word": "partnership",
             "type": "positive"
+          },
+          {
+            "word": "growth",
+            "type": "positive"
+          },
+          {
+            "word": "undervalued",
+            "type": "positive"
+          },
+          {
+            "word": "upgrade",
+            "type": "positive"
+          },
+          {
+            "word": "turnaround",
+            "type": "positive"
+          },
+          {
+            "word": "restructuring",
+            "type": "negative"
           }
         ]
       },
       "analyst_recommendation": "buy",
-      "analyst_target": 29.5,
-      "num_analysts": 23,
+      "analyst_target": 171.43471,
+      "num_analysts": 17,
       "insider": {
         "buys_30d": 0,
         "sells_30d": 0,
@@ -518,74 +668,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-10T06:54:54Z",
-      "error": null
-    },
-    "ORCL": {
-      "symbol": "ORCL",
-      "key_news": [
-        {
-          "title": "AI could cause a huge electricity shortfall in the US, Bank of America says: A closer look",
-          "publisher": "Yahoo Finance Video"
-        },
-        {
-          "title": "S&P 500, Nasdaq, Dow End Higher Led By Chipmaker Stocks As Investors Look Past US-Iran Hostility \u2014 ORCL, SBUX, WULF, PANW, FATE In Focus",
-          "publisher": "Stocktwits"
-        },
-        {
-          "title": "Oracle Gets Credit Rating Downgrade",
-          "publisher": "The Wall Street Journal"
-        },
-        {
-          "title": "Oracle stock shrugs off S&P downgrade to \u2019BBB-\u2019, but $160B debt shadow looms",
-          "publisher": "Investing.com"
-        },
-        {
-          "title": "Why Is Palantir Stock Falling Today",
-          "publisher": "GuruFocus.com"
-        },
-        {
-          "title": "Oracle Stock Climbs As OpenAI Touts New Model's Performance",
-          "publisher": "Investor's Business Daily"
-        },
-        {
-          "title": "Jim Cramer Explains How SpaceX is Changing the Economics of the xAI Business",
-          "publisher": "Insider Monkey"
-        },
-        {
-          "title": "Jim Cramer Highlights Future Earnings Projections that Make Oracle Look Cheap",
-          "publisher": "Insider Monkey"
-        }
-      ],
-      "sentiment": {
-        "score": -0.078,
-        "label": "neutral",
-        "keywords": [
-          {
-            "word": "downgrade",
-            "type": "negative"
-          },
-          {
-            "word": "undervalued",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "buy",
-      "analyst_target": 251.8495,
-      "num_analysts": 40,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 1,
-        "signal": "mixed"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-07-10T06:54:54Z",
+      "fetched_at": "2026-07-10T07:06:13Z",
       "error": null
     },
     "COP": {
@@ -652,78 +735,78 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-10T06:54:59Z",
+      "fetched_at": "2026-07-10T07:06:13Z",
       "error": null
     },
-    "MMM": {
-      "symbol": "MMM",
+    "CVX": {
+      "symbol": "CVX",
       "key_news": [
         {
-          "title": "New York sues 3M, DuPont and other chemical companies over PFAS pollution",
-          "publisher": "Investing.com"
+          "title": "The Real Risk Inside ExxonMobil Stock",
+          "publisher": "Trefis"
         },
         {
-          "title": "3M, DuPont, Corteva, Chemours Sued by New York AG Over Toxic Pollution From Consumer Products",
+          "title": "Micron Gives Stocks a $250 Billion AI Boost: Stock Market Today",
+          "publisher": "Kiplinger"
+        },
+        {
+          "title": "Sector Update: Energy Stocks Fall Late Afternoon",
           "publisher": "MT Newswires"
         },
         {
-          "title": "FUL Stock Is Riding Medical, Aerospace and Pricing Trends",
-          "publisher": "Zacks"
+          "title": "CVX Stock Has A New Bull Case \u2014 Why Bank Of America Favors Chevron Over Exxon As Hormuz Risks Push Oil Prices Higher",
+          "publisher": "Stocktwits"
         },
         {
-          "title": "3M (MMM) Enters Cadillac Formula 1 Partnership To Put Material Science On Display",
-          "publisher": "Simply Wall St."
+          "title": "Exxon Mobil signals massive profit spike but Wall Street is divided",
+          "publisher": "TheStreet"
         },
         {
-          "title": "Is 3M Company (MMM) Stock Undervalued With Growth Trends Improving and Liabilities Easing?",
-          "publisher": "Insider Monkey"
+          "title": "Sector Update: Energy Stocks Fall Thursday Afternoon",
+          "publisher": "MT Newswires"
         },
         {
-          "title": "HON's Building Automation Unit's Growth Picks Up: More Upside Ahead?",
-          "publisher": "Zacks"
+          "title": "Microsoft\u2019s Emissions Surged 25% in 2025 During Data Center Boom",
+          "publisher": "Bloomberg"
         },
         {
-          "title": "1 Unpopular Stock That Should Get More Attention and 2 Facing Headwinds",
-          "publisher": "StockStory"
-        },
-        {
-          "title": "Honeywell Technologies Debuts as Public Pure-Play Automation Company",
-          "publisher": "Zacks"
+          "title": "Chevron Poised to Beat Second-Quarter Profit Estimates on Surging Crude Revenue, UBS Says",
+          "publisher": "MT Newswires"
         }
       ],
       "sentiment": {
-        "score": 0.216,
+        "score": 0.183,
         "label": "bullish",
         "keywords": [
           {
-            "word": "partnership",
+            "word": "profit",
             "type": "positive"
           },
           {
-            "word": "growth",
+            "word": "surge",
             "type": "positive"
           },
           {
-            "word": "undervalued",
-            "type": "positive"
-          },
-          {
-            "word": "upgrade",
-            "type": "positive"
-          },
-          {
-            "word": "turnaround",
-            "type": "positive"
-          },
-          {
-            "word": "restructuring",
+            "word": "miss",
             "type": "negative"
+          },
+          {
+            "word": "beat",
+            "type": "positive"
+          },
+          {
+            "word": "raises",
+            "type": "positive"
+          },
+          {
+            "word": "dividend",
+            "type": "positive"
           }
         ]
       },
       "analyst_recommendation": "buy",
-      "analyst_target": 171.43471,
-      "num_analysts": 17,
+      "analyst_target": 215.0,
+      "num_analysts": 23,
       "insider": {
         "buys_30d": 0,
         "sells_30d": 0,
@@ -735,7 +818,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-10T06:54:59Z",
+      "fetched_at": "2026-07-10T07:06:13Z",
       "error": null
     },
     "NKE": {
@@ -818,90 +901,7 @@
         "label": "neutral",
         "buzz": "low"
       },
-      "fetched_at": "2026-07-10T06:54:59Z",
-      "error": null
-    },
-    "CVX": {
-      "symbol": "CVX",
-      "key_news": [
-        {
-          "title": "The Real Risk Inside ExxonMobil Stock",
-          "publisher": "Trefis"
-        },
-        {
-          "title": "Micron Gives Stocks a $250 Billion AI Boost: Stock Market Today",
-          "publisher": "Kiplinger"
-        },
-        {
-          "title": "Sector Update: Energy Stocks Fall Late Afternoon",
-          "publisher": "MT Newswires"
-        },
-        {
-          "title": "CVX Stock Has A New Bull Case \u2014 Why Bank Of America Favors Chevron Over Exxon As Hormuz Risks Push Oil Prices Higher",
-          "publisher": "Stocktwits"
-        },
-        {
-          "title": "Exxon Mobil signals massive profit spike but Wall Street is divided",
-          "publisher": "TheStreet"
-        },
-        {
-          "title": "Sector Update: Energy Stocks Fall Thursday Afternoon",
-          "publisher": "MT Newswires"
-        },
-        {
-          "title": "Microsoft\u2019s Emissions Surged 25% in 2025 During Data Center Boom",
-          "publisher": "Bloomberg"
-        },
-        {
-          "title": "Chevron Poised to Beat Second-Quarter Profit Estimates on Surging Crude Revenue, UBS Says",
-          "publisher": "MT Newswires"
-        }
-      ],
-      "sentiment": {
-        "score": 0.181,
-        "label": "bullish",
-        "keywords": [
-          {
-            "word": "profit",
-            "type": "positive"
-          },
-          {
-            "word": "surge",
-            "type": "positive"
-          },
-          {
-            "word": "miss",
-            "type": "negative"
-          },
-          {
-            "word": "beat",
-            "type": "positive"
-          },
-          {
-            "word": "raises",
-            "type": "positive"
-          },
-          {
-            "word": "dividend",
-            "type": "positive"
-          }
-        ]
-      },
-      "analyst_recommendation": "buy",
-      "analyst_target": 215.0,
-      "num_analysts": 23,
-      "insider": {
-        "buys_30d": 0,
-        "sells_30d": 0,
-        "signal": "none"
-      },
-      "reddit": {
-        "mentions": 0,
-        "score": 0.0,
-        "label": "neutral",
-        "buzz": "low"
-      },
-      "fetched_at": "2026-07-10T06:54:59Z",
+      "fetched_at": "2026-07-10T07:06:14Z",
       "error": null
     }
   },
@@ -937,10 +937,10 @@
       "headlines": [
         "7 Best Oil and Gas Stocks to Buy in 2026 - U.S. News - Money",
         "What\u2019s Next for the Canadian Stock Market? - Morningstar",
-        "US-Iran War Oil Price Impact 2026: Energy Markets Face Historic Crisis - Intellectia AI"
+        "Equity, Oil, or MLPs? Choosing Your Route To Energy - ETF Trends"
       ],
-      "sentiment": "bearish",
-      "score": -0.14
+      "sentiment": "neutral",
+      "score": -0.07
     },
     "healthcare": {
       "headlines": [
