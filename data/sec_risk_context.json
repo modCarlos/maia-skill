@@ -1,22 +1,92 @@
 {
-  "generated_at": "2026-07-10T02:18:47Z",
+  "generated_at": "2026-07-10T06:55:09Z",
   "source": "SEC EDGAR",
   "top": 12,
   "symbols": [
+    "VZ",
+    "ORCL",
+    "COST",
+    "T",
+    "AMT",
     "XOM",
     "DIS",
+    "HON",
+    "MMM",
     "COP",
     "CVX",
-    "TSM",
-    "HD",
-    "KMI",
-    "BX",
-    "GS",
-    "NFLX",
-    "FCX",
-    "CRM"
+    "NKE"
   ],
   "results": [
+    {
+      "symbol": "VZ",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-17",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000732712/000073271226000007/vz-20251231.htm",
+      "risk_factors": [
+        "Market for Registrant’s Common Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities The principal market for trading in the common stock of the Company is the New York Stock Exchange under the symbol \"VZ.\" As of December 31, 2025, there were 374,977 shareholders of record.",
+        "In addition, a significant number of holders of the Company's common stock are \"street name\" or beneficial holders, whose shares are held of record by banks, brokers, and other financial institutions.",
+        "Stock Repurchases On January 30, 2026, the Board of Directors of the Company authorized a share repurchase program for up to $25 billion of our common stock.",
+        "The program will terminate when the aggregate consideration paid to purchase shares of our common stock reaches $25 billion, exclusive of any fees, commissions or other expenses, or a new share repurchase plan superseding the current plan is authorized, whichever is sooner."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "ORCL",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-06-22",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001341439/000119312526277521/orcl-20260531.htm",
+      "risk_factors": [
+        "federal, state and foreign laws and regulations covering a wide variety of subject matters.",
+        "Available Information Our Annual Reports on Form 10-K, Quarterly Reports on Form 10-Q, Current Reports on Form 8-K and amendments to those reports filed pursuant to Sections 13(a) and 15(d) of the Exchange Act are available, free of charge, on the SEC website at www.sec.gov and our Investor Relations website at www....",
+        "We use our Investor Relations website as a means of disclosing material non-public information.",
+        "Accordingly, investors should monitor our Investor Relations website, in addition to following our press releases, SEC filings and public conference calls and webcasts."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "COST",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-10-08",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000909832/000090983225000101/cost-20250831.htm",
+      "risk_factors": [
+        "Forward-looking statements speak only as of the date they are made, and we do not undertake to update these statements, except as required by law.",
+        "PART I Item 1—Business Costco Wholesale Corporation and its subsidiaries (Costco or the Company) began operations in 1983, in Seattle, Washington.",
+        "We are principally engaged in the operation of membership warehouses in the United States (U.S.) and Puerto Rico, Canada, Mexico, Japan, the United Kingdom (U.K.), Korea, Australia, Taiwan, China, Spain, France, Sweden, Iceland, and New Zealand.",
+        "Costco operated 914, 890, and 861 warehouses worldwide at August 31, 2025, September 1, 2024, and September 3, 2023."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "T",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-09",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000732717/000073271726000120/t-20251231.htm",
+      "risk_factors": [
+        "securities markets, a higher interest rate environment, rising inflation and medical costs could materially increase our benefit plan costs and future funding requirements.",
+        "Our costs to provide current benefits and funding for future benefits are subject to increases, primarily due to continuing increases in medical and prescription drug costs, in part due to inflation, and can be affected by lower returns on assets held by our pension and other benefit plans, which are reflected in ou...",
+        "In calculating the recognized benefit costs, we have made certain assumptions regarding future investment returns, interest rates and medical costs.",
+        "These assumptions could change significantly over time and could be materially different than originally projected."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "AMT",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-24",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001053507/000105350726000035/amt-20251231.htm",
+      "risk_factors": [
+        "We have no duty, and do not intend, to update or revise the forward-looking statements we make in this Annual Report, except as may be required by law.",
+        "In light of these risks and uncertainties, you should keep in mind that the future events or circumstances described in any forward-looking statement we make in this Annual Report or elsewhere might not occur.",
+        "References in this Annual Report to “we,” “our” and the “Company” refer to American Tower Corporation and its predecessor, as applicable, individually and collectively with its subsidiaries as the context requires.",
+        "BUSINESS Overview We are one of the largest global real estate investment trusts and a leading independent owner, operator and developer of multitenant communications real estate."
+      ],
+      "error": null
+    },
     {
       "symbol": "XOM",
       "cik": null,
@@ -42,6 +112,34 @@
         "Declines in economic conditions, such as recessions, other less severe slowdowns in economic activity and/or inflationary conditions in the U.S.",
         "and other regions of the world in which we do business typically adversely affect demand for our products and services and/or costs to operate our businesses, reducing our revenue and earnings.",
         "Past declines in economic conditions reduced or resulted in slower growth than expected in, among other things, guest spending at our parks and resorts, purchases of and prices for advertising on our platforms and purchases of Company-branded consumer products, and we expect similar impacts as such conditions recur."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "HON",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-17",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000773840/000077384026000013/hon-20251231.htm",
+      "risk_factors": [
+        "Such discussions contain forward-looking statements within the meaning of Section 21E of the Securities Exchange Act of 1934, as amended (the Exchange Act), including statements related to the proposed separation of Honeywell from Honeywell Aerospace and the planned sale of the Productivity Solutions and Services an...",
+        "Forward-looking statements are those that address activities, events, or developments that we or our management intend, expect, project, believe, or anticipate will or may occur in the future.",
+        "They are based on management’s assumptions and assessments in light of past experience and trends, current economic and industry conditions, expected future developments, and other relevant factors, many of which are difficult to predict and outside of our control, including Honeywell's current expectations, estimat...",
+        "They are not guarantees of future performance, and actual results, developments, and business decisions may differ significantly from those envisaged by our forward-looking statements, including the proposed separation of Honeywell from Honeywell Aerospace and the planned sale of the Productivity Solutions and Servi..."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "MMM",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-02-05",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000066740/000006674025000006/mmm-20241231.htm",
+      "risk_factors": [
+        "Discussion of these factors is incorporated by reference into and considered an integral part of Part II, Item 7, “Management’s Discussion and Analysis of Financial Condition and Results of Operations.” Risks Related to the Global Economy and External Conditions * The Company’s results are impacted by the effects of...",
+        "During 2024, the Company derived approximately 56 percent of its revenues from outside the United States.",
+        "Accordingly, the Company’s operations and the execution of its business strategies and plans are subject to global competition and economic and geopolitical risks that are beyond its control, such as, among other things, disruptions in financial markets, economic downturns, military conflicts, terrorism, public heal...",
+        "and China, or more broadly in global trade conflict, could have a material adverse effect on the Company's business and operations around the world."
       ],
       "error": null
     },
@@ -74,109 +172,16 @@
       "error": null
     },
     {
-      "symbol": "TSM",
-      "cik": null,
-      "form": "20-F",
-      "filing_date": "2026-04-16",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001046179/000162828026025362/tsm-20251231.htm",
-      "risk_factors": [
-        "As used in this annual report, all references to “we,” “us,” the “Company” and “TSMC” are to Taiwan Semiconductor Manufacturing Company Limited and its consolidated subsidiaries, while “R.O.C.” and “Taiwan” are references to the Republic of China.",
-        "2 EXCHANGE RATES We publish our financial statements in New Taiwan dollars, the lawful currency of the R.O.C.",
-        "dollars” mean United States dollars, the lawful currency of the United States, and “NT$” and “NT dollars” mean New Taiwan dollars.",
-        "dollars in this annual report were made at NT$ 31.37 to US$1.00, the exchange rate set forth in the H.10 statistical release of the Federal Reserve Board on December 31, 2025 ."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "HD",
+      "symbol": "NKE",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-03-18",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000354950/000162828026019436/hd-20260201.htm",
+      "filing_date": "2024-07-25",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000320187/000032018724000044/nke-20240531.htm",
       "risk_factors": [
-        "At the Board level, cybersecurity is overseen by the Board and the Audit Committee , which has primary responsibility for overseeing data protection, cybersecurity and privacy matters.",
-        "In fiscal 2025, our Board held a session dedicated to cybersecurity and business continuity.",
-        "In addition, since the beginning of fiscal 2025, the Board and/or the Audit Committee have received reports on data protection, cybersecurity and/or privacy matters from senior information technology (“IT”) leaders, including our Chief Information Officer (“CIO”), CISO, Chief Privacy Officer, and the Chair of our Da...",
-        "Periodically, our Board receives presentations on these matters from third-party experts."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "KMI",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2026-02-13",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001506307/000150630726000011/kmi-20251231.htm",
-      "risk_factors": [
-        "“ Management’s Discussion and Analysis of Financial Condition and Results of Operations ” and Item 7A.",
-        "“ Quantitative and Qualitative Disclosures About Market Risk—Energy Commodity Market Risk.",
-        "” When considering forward-looking statements, you should keep in mind the factors described in this section and the other sections referenced above.",
-        "We disclaim any obligation, other than as required by applicable law, to publicly update or revise any of our forward-looking statements to reflect future events or developments."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "BX",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2026-02-27",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001393818/000119312526082531/d48618d10k1.pdf",
-      "risk_factors": [],
-      "error": "item_1a_not_extracted"
-    },
-    {
-      "symbol": "GS",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2023-02-24",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000886982/000088698223000003/gs-20221231.htm",
-      "risk_factors": [
-        "The following is a summary of some of the more important factors that could affect our businesses: Market • Our businesses have been and may in the future be adversely affected by conditions in the global financial markets and broader economic conditions.",
-        "• Our businesses have been and may in the future be adversely affected by declining asset values, particularly where we have net “long” positions, receive fees based on the value of assets managed, or receive or post collateral.",
-        "• Our market-making activities have been and may in the future be affected by changes in the levels of market volatility.",
-        "• Our investment banking, client intermediation, asset management and wealth management businesses have been adversely affected and may in the future be adversely affected by market uncertainty or lack of confidence among investors and CEOs due to declines in economic activity and other unfavorable economic, geopoli..."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "NFLX",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2025-01-27",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001065280/000106528025000044/nflx-20241231.htm",
-      "risk_factors": [
-        "All forward-looking statements included in this document are based on information available to us on the date hereof, and we assume no obligation to revise or publicly release any revision to any such forward-looking statement, except as may otherwise be required by law.",
-        "(“Netflix”, “the Company”, “registrant”, “we”, or “us”) is one of the world’s leading entertainment services with approximately 302 million paid memberships in over 190 countries enjoying TV series, films and games across a wide variety of genres and languages.",
-        "Members can play, pause and resume watching as much as they want, anytime, anywhere, and can change their plans at any time.",
-        "Our core strategy is to grow our business globally within the parameters of our operating margin target."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "FCX",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2026-02-13",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000831259/000083125926000012/fcx-20251231.htm",
-      "risk_factors": [
-        "GENERAL We are a leading international metals company with the objective of being foremost in copper.",
-        "Headquartered in Phoenix, Arizona, we operate large, long-lived, geographically diverse assets with significant proven and probable mineral reserves of copper, gold and molybdenum.",
-        "Our portfolio of assets includes the Grasberg minerals district in Indonesia, one of the world’s largest copper and gold deposits; and significant operations in the U.S.",
-        "and South America, including the large-scale Morenci minerals district in Arizona and the Cerro Verde operation in Peru."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "CRM",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2026-03-02",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001108524/000110852426000060/crm-20260131.htm",
-      "risk_factors": [
-        "A manifestation of any of the following risks and uncertainties could, in circumstances we may or may not be able to accurately predict, materially and adversely affect our business and operations, growth, reputation, prospects, operating and financial results, financial condition, cash flows, liquidity and stock pr...",
-        "Some of the factors, events and contingencies discussed below may have occurred in the past, but the disclosures below are not representations as to whether or not the factors, events or contingencies have occurred in the past and instead reflect our beliefs and opinions as to the factors, events or contingencies th...",
-        "Other events, factors or uncertainties that we do not currently anticipate or that we currently deem immaterial also may affect our business, financial condition, results of operations, cash flows, other key metrics and the trading price of our common stock.",
-        "Therefore, you should not consider the following risks to be a complete statement of all the potential risks or uncertainties that we face."
+        "OUR MARKETS We report our NIKE Brand operations based on our internal geographic organization.",
+        "Each NIKE Brand geographic segment operates predominantly in one industry: the design, development, marketing and selling of athletic footwear, apparel and equipment.",
+        "The Company's reportable operating segments for the NIKE Brand are: North America; Europe, Middle East & Africa (\"EMEA\"); Greater China; and Asia Pacific & Latin America (\"APLA\"), and include results for the NIKE and Jordan brands.",
+        "Sales through our NIKE Direct operations are managed within each geographic operating segment."
       ],
       "error": null
     }

@@ -56,12 +56,19 @@ _POSITIVE_KW = [
     "upgrade", "upgraded", "raises", "raised", "buyback", "dividend",
     "expansion", "partnership", "approval", "approved", "outperform",
     "strong", "rally", "profit", "milestone", "award", "innovation",
+    # --- Nuevas Incorporaciones ---
+    "bullish", "acquisition", "acquires", "rebound", "accelerates", 
+    "acceleration", "turnaround", "undervalued", "overweight", "squeeze"
 ]
+
 _NEGATIVE_KW = [
     "miss", "misses", "missed", "downgrade", "downgraded", "loss", "losses",
     "lawsuit", "investigation", "recall", "warning", "bankruptcy", "crisis",
     "decline", "regulation", "fine", "violation", "scandal", "cut", "cuts",
     "lowers", "lowered", "weak", "disappoints", "disappointed", "slump",
+    # --- Nuevas Incorporaciones ---
+    "bearish", "dilution", "dilutes", "selloff", "underperform", "slowdown",
+    "decelerates", "slashes", "overvalued", "default", "insolvency", "restructuring"
 ]
 
 def score_sentiment(text: str) -> str:

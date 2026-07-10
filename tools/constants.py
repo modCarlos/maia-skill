@@ -89,14 +89,14 @@ WATCHLISTS: dict[str, list[str]] = {
     # Full extended: all of the above deduplicated (~65 tickers, ~3-4 min runtime)
     "all": sorted(set(
         _CORE +
-        ["INTC", "QCOM", "ARM", "AMAT", "ASML", "SNOW", "CRM", "NOW", "PANW"] +
+        ["INTC", "QCOM", "ARM", "AMAT", "ASML", "SNOW", "CRM", "NOW", "PANW", "CRWD", "SMCI", "VRT", "ANET"] +
         ["JPM", "BAC", "GS", "MS", "WFC", "C", "V", "MA", "PYPL", "BLK", "BX"] +
         ["GLD", "SLV", "GDX", "GDXJ", "XOM", "CVX", "COP", "OXY", "FCX", "NEM"] +
         ["LLY", "UNH", "JNJ", "ABBV", "MRK", "AMGN", "GILD", "REGN", "MRNA", "PFE"] +
         # New additions (May 2026)
-        ["SONY", "BABA", "RIVN", "MELI", "NU", "SOFI", "DIS", "HD", "SBUX", "IBM",
+        ["SONY", "BABA", "TCEHY", "RIVN", "MELI", "NU", "SOFI", "DIS", "HD", "SBUX", "IBM",
          "WMT", "COST", "PG", "KO", "PEP", "CAT", "HON", "UPS", "BA", "T", "VZ",
-         "O", "PLD", "AMT", "MPW", "ORCL"]
+         "O", "PLD", "AMT", "MPW", "ORCL", "MMM", "NKE", "CMG", "F"]
     )),
 }
 
@@ -116,25 +116,25 @@ MACRO_TICKERS: list[str] = ["^VIX", "^TNX", "^GSPC", "^IRX"]
 # - FCX is "base_metals" not "precious_metals" (copper-driven, not gold).
 
 CORRELATION_GROUPS: dict[str, list[str]] = {
-    "precious_metals":        ["GLD", "SLV", "GDX", "GDXJ", "NEM"],
-    "semiconductors":         ["NVDA", "AMD", "INTC", "QCOM", "TSM", "ARM", "AMAT", "ASML", "AVGO"],
+    "precious_metals":        ["GLD", "SLV", "GDX", "GDXJ", "NEM", "SLV"],
+    "semiconductors":         ["NVDA", "AMD", "INTC", "QCOM", "TSM", "ARM", "AMAT", "ASML", "AVGO", "ANET", "SMCI", "VRT"],
     "big_tech":               ["MSFT", "AAPL", "GOOGL", "META", "AMZN", "IBM", "PLTR", "SONY"],
     "financials":             ["JPM", "BAC", "GS", "MS", "WFC", "C"],
     "payments":               ["V", "MA", "PYPL"],
     "healthcare":             ["JNJ", "ABBV", "MRK", "AMGN", "GILD", "REGN", "LLY", "UNH", "MRNA", "PFE"],
     "staples":                ["WMT", "COST", "PG", "KO", "PEP"],
-    "industrials":            ["CAT", "HON", "UPS", "BA"],
+    "industrials":            ["CAT", "HON", "UPS", "BA", "FDX", "MMM"],
     "telecom":                ["T", "VZ"],
     "energy":                 ["XOM", "CVX", "COP", "OXY", "KMI"],
     "base_metals":            ["FCX"],
-    "saas":                   ["CRM", "NOW", "SNOW", "PANW"],
+    "saas":                   ["CRM", "NOW", "SNOW", "PANW", "CRWD"],
     "enterprise_software":    ["ORCL"],
     "asset_managers":         ["BLK", "BX"],
     "ev":                     ["TSLA", "RIVN"],
     "streaming":              ["NFLX", "DIS"],
-    "ecommerce_global":       ["BABA", "MELI"],
+    "ecommerce_global":       ["BABA", "MELI", "TCEHY"],
     "fintech":                ["NU", "SOFI"],
-    "consumer_discretionary": ["HD", "SBUX"],
+    "consumer_discretionary": ["HD", "SBUX", "CMG", "NKE"],
     "reits":                  ["O", "PLD", "AMT", "MPW"],
 }
 
