@@ -1,50 +1,22 @@
 {
-  "generated_at": "2026-07-06T01:13:02Z",
+  "generated_at": "2026-07-10T02:18:47Z",
   "source": "SEC EDGAR",
   "top": 12,
   "symbols": [
-    "BABA",
-    "OXY",
     "XOM",
-    "AVGO",
-    "NVDA",
-    "GS",
-    "AMZN",
+    "DIS",
+    "COP",
+    "CVX",
     "TSM",
-    "QCOM",
+    "HD",
+    "KMI",
+    "BX",
+    "GS",
+    "NFLX",
     "FCX",
-    "ARM",
-    "BLK"
+    "CRM"
   ],
   "results": [
-    {
-      "symbol": "BABA",
-      "cik": null,
-      "form": "20-F",
-      "filing_date": "2026-05-20",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001577552/000119312526231755/baba-20260331.htm",
-      "risk_factors": [
-        "For example, in recent years, the PRC government has enhanced regulation in areas such as AI, data privacy and personal data protection, anti-monopoly, anti-unfair competition, content and consumer protection, including food safety.",
-        "Complying with these laws and regulations increases our cost of operations, limits our business opportunities and may require changes to our data collection, use and other practices or negatively affect our user growth and engagement.",
-        "Failure to comply with these laws and regulations could result in claims, regulatory investigations, litigation or penalties, or otherwise negatively affect our business.",
-        "”; “— Claims or regulatory actions under competition laws against us may result in our being subject to fines, constraints on our business and damage to our reputation.”; “— PRC regulations regarding acquisitions impose significant regulatory approval and review requirements, which could make it more difficult for u..."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "OXY",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2026-02-18",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000797468/000162828026009059/oxy-20251231.htm",
-      "risk_factors": [
-        "AVAILABLE INFORMATION The Company’s annual reports on Form 10-K, quarterly reports on Form 10-Q, current reports on Form 8-K and any amendments to those reports are available free of charge on its website, www.oxy.com, as soon as reasonably practicable after the Company electronically files the material with, or fur...",
-        "In addition, copies of the Company’s annual report will be made available, free of charge, upon written request.",
-        "From time to time, the Company has made and expects in the future to use its website as a channel of distribution of material information regarding the Company.",
-        "Financial and other material information regarding the Company is routinely posted on the Company’s website and accessible at www.oxy.com/investors/."
-      ],
-      "error": null
-    },
     {
       "symbol": "XOM",
       "cik": null,
@@ -60,39 +32,104 @@
       "error": null
     },
     {
-      "symbol": "AVGO",
+      "symbol": "DIS",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2025-12-18",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001730168/000173016825000121/avgo-20251102.htm",
+      "filing_date": "2024-11-14",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001744489/000174448924000276/dis-20240928.htm",
       "risk_factors": [
-        "At the “Investor Center” page on this website, we promptly make available free of charge the reports we file or furnish pursuant to Section 13(a) or 15(d) of the Securities Exchange Act of 1934 (the “Exchange Act”) with the Securities and Exchange Commission (the “SEC”), as well as our proxy statements.",
-        "Such periodic reports, proxy statements and other information are also available at the SEC’s website at www.sec.gov.",
-        "The information posted on our website is not incorporated into this Annual Report on Form 10-K.",
-        "Information About Our Executive Officers The following table provides information regarding our executive officers as of December 18, 2025: Name and Title Age Position and Offices Hock E."
+        "In addition to the factors affecting specific business operations identified in connection with the description of these operations and the financial results of these operations elsewhere in our filings with the SEC, the most significant factors affecting our business include the following: RISKS RELATED TO OUR BUSI...",
+        "Declines in economic conditions, such as recessions, other less severe slowdowns in economic activity and/or inflationary conditions in the U.S.",
+        "and other regions of the world in which we do business typically adversely affect demand for our products and services and/or costs to operate our businesses, reducing our revenue and earnings.",
+        "Past declines in economic conditions reduced or resulted in slower growth than expected in, among other things, guest spending at our parks and resorts, purchases of and prices for advertising on our platforms and purchases of Company-branded consumer products, and we expect similar impacts as such conditions recur."
       ],
       "error": null
     },
     {
-      "symbol": "NVDA",
+      "symbol": "COP",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-02-25",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001045810/000104581026000021/nvda-20260125.htm",
+      "filing_date": "2026-02-17",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001163165/000116316526000009/cop-20251231.htm",
       "risk_factors": [
-        "Compliance with laws, rules, and regulations has not otherwise had a material effect upon our capital expenditures, results of operations, or competitive position and we do not currently anticipate material capital expenditures for environmental control facilities.",
-        "Compliance with existing or future governmental regulations, including, but not limited to, those pertaining to IP ownership and infringement, taxes, import and export requirements and tariffs, anti-corruption, business acquisitions, foreign exchange controls and cash repatriation restrictions, data privacy requirem...",
-        "Human Capital Management As of the end of fiscal year 2026, we had approximately 42,000 employees in 38 countries; 31,000 were engaged in research and development and 11,000 were engaged in sales, marketing, operations, and administrative positions.",
-        "To execute our business strategy successfully, we focus on recruiting, developing, and retaining top global talent."
+        "Our business could also be affected by additional risks and uncertainties not currently known to us or that we currently consider to be immaterial.",
+        "If any of these risks or other risks that are yet unknown or currently considered immaterial were to occur, our business, operating results and financial condition, as well as the value of an investment in our common stock, could be materially and adversely affected.",
+        "Risks Related to Our Industry Our operating results, our ability to execute on our strategy and the carrying value of our assets are exposed to the effects of volatile commodity prices or prolonged periods of low commodity prices.",
+        "Among the most significant factors impacting our revenues, operating results and future rate of growth are the sales prices for crude oil, bitumen, LNG, natural gas and NGLs."
       ],
       "error": null
+    },
+    {
+      "symbol": "CVX",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-24",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000093410/000009341026000078/cvx-20251231.htm",
+      "risk_factors": [
+        "Refer to Management’s Discussion and Analysis of Financial Conditions and Results of Operations in Business Environment and Outlook on pages 35 through 37 for further discussion of climate change related trends and uncertainties.",
+        "Refer to Management’s Discussion and Analysis of Financial Conditions and Results of Operations on page 55 for additional information on environmental matters and their impact on Chevron, and on the company’s 2025 environmental expenditures.",
+        "Refer to page 54 and Note 24 Other Contingencies and Commitments for a discussion of environmental remediation provisions and year-end reserves.",
+        "The following disclosures reflect our beliefs and opinions as to factors that could materially and adversely affect us in the future."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "TSM",
+      "cik": null,
+      "form": "20-F",
+      "filing_date": "2026-04-16",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001046179/000162828026025362/tsm-20251231.htm",
+      "risk_factors": [
+        "As used in this annual report, all references to “we,” “us,” the “Company” and “TSMC” are to Taiwan Semiconductor Manufacturing Company Limited and its consolidated subsidiaries, while “R.O.C.” and “Taiwan” are references to the Republic of China.",
+        "2 EXCHANGE RATES We publish our financial statements in New Taiwan dollars, the lawful currency of the R.O.C.",
+        "dollars” mean United States dollars, the lawful currency of the United States, and “NT$” and “NT dollars” mean New Taiwan dollars.",
+        "dollars in this annual report were made at NT$ 31.37 to US$1.00, the exchange rate set forth in the H.10 statistical release of the Federal Reserve Board on December 31, 2025 ."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "HD",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-03-18",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000354950/000162828026019436/hd-20260201.htm",
+      "risk_factors": [
+        "At the Board level, cybersecurity is overseen by the Board and the Audit Committee , which has primary responsibility for overseeing data protection, cybersecurity and privacy matters.",
+        "In fiscal 2025, our Board held a session dedicated to cybersecurity and business continuity.",
+        "In addition, since the beginning of fiscal 2025, the Board and/or the Audit Committee have received reports on data protection, cybersecurity and/or privacy matters from senior information technology (“IT”) leaders, including our Chief Information Officer (“CIO”), CISO, Chief Privacy Officer, and the Chair of our Da...",
+        "Periodically, our Board receives presentations on these matters from third-party experts."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "KMI",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-13",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001506307/000150630726000011/kmi-20251231.htm",
+      "risk_factors": [
+        "“ Management’s Discussion and Analysis of Financial Condition and Results of Operations ” and Item 7A.",
+        "“ Quantitative and Qualitative Disclosures About Market Risk—Energy Commodity Market Risk.",
+        "” When considering forward-looking statements, you should keep in mind the factors described in this section and the other sections referenced above.",
+        "We disclaim any obligation, other than as required by applicable law, to publicly update or revise any of our forward-looking statements to reflect future events or developments."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "BX",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-27",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001393818/000119312526082531/d48618d10k1.pdf",
+      "risk_factors": [],
+      "error": "item_1a_not_extracted"
     },
     {
       "symbol": "GS",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2024-02-23",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000886982/000088698224000006/gs-20231231.htm",
+      "filing_date": "2023-02-24",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000886982/000088698223000003/gs-20221231.htm",
       "risk_factors": [
         "The following is a summary of some of the more important factors that could affect our businesses: Market • Our businesses have been and may in the future be adversely affected by conditions in the global financial markets and broader economic conditions.",
         "• Our businesses have been and may in the future be adversely affected by declining asset values, particularly where we have net “long” positions, receive fees based on the value of assets managed, or receive or post collateral.",
@@ -102,39 +139,16 @@
       "error": null
     },
     {
-      "symbol": "AMZN",
+      "symbol": "NFLX",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2024-02-02",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001018724/000101872424000008/amzn-20231231.htm",
+      "filing_date": "2025-01-27",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001065280/000106528025000044/nflx-20241231.htm",
       "risk_factors": [
-        "We are guided by four principles: customer obsession rather than competitor focus, passion for invention, commitment to operational excellence, and long-term thinking.",
-        "In each of our segments, we serve our primary customer sets, consisting of consumers, sellers, developers, enterprises, content creators, advertisers, and employees.",
-        "We have organized our operations into three segments: North America, International, and Amazon Web Services (“AWS”).",
-        "These segments reflect the way the Company evaluates its business performance and manages its operations."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "TSM",
-      "cik": null,
-      "form": null,
-      "filing_date": null,
-      "source_url": null,
-      "risk_factors": [],
-      "error": "no_annual_filing_found"
-    },
-    {
-      "symbol": "QCOM",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2025-11-05",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000804328/000080432825000085/qcom-20250928.htm",
-      "risk_factors": [
-        "Readers are urged not to place undue reliance on these forward-looking statements, which speak only as of the date of this Annual Report.",
-        "We undertake no obligation to revise or update any forward-looking statements in order to reflect any event or circumstance that may arise after the date of this Annual Report.",
-        "Readers are urged to carefully review and consider the various disclosures made in this Annual Report, which attempt to advise interested parties of the risks and factors that may affect our business, financial condition, results of operations and prospects.",
-        "Business We incorporated in California in 1985 and reincorporated in Delaware in 1991."
+        "All forward-looking statements included in this document are based on information available to us on the date hereof, and we assume no obligation to revise or publicly release any revision to any such forward-looking statement, except as may otherwise be required by law.",
+        "(“Netflix”, “the Company”, “registrant”, “we”, or “us”) is one of the world’s leading entertainment services with approximately 302 million paid memberships in over 190 countries enjoying TV series, films and games across a wide variety of genres and languages.",
+        "Members can play, pause and resume watching as much as they want, anytime, anywhere, and can change their plans at any time.",
+        "Our core strategy is to grow our business globally within the parameters of our operating margin target."
       ],
       "error": null
     },
@@ -153,30 +167,16 @@
       "error": null
     },
     {
-      "symbol": "ARM",
-      "cik": null,
-      "form": "20-F",
-      "filing_date": "2025-05-28",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000197323925000016/arm-20250331.htm",
-      "risk_factors": [
-        "See “Special Note Regarding Forward-Looking Statements.” SPECIAL NOTE REGARDING FORWARD-LOOKING STATEMENTS This Annual Report contains forward-looking statements within the meaning of Section 27A of the Securities Act of 1933, as amended (the “Securities Act”), and Section 21E of the Securities Exchange Act of 1934,...",
-        "Statements regarding our future and projections relating to revenue, cost of sales, operating expenses, income (loss), and potential growth opportunities are typical of such statements.",
-        "The forward-looking statements appear in a number of places, including, but not limited to, “ Item 5.",
-        "Operating and Financial Review and Prospects .” Forward-looking statements are based on our management’s beliefs and assumptions and on information currently available to our management."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "BLK",
+      "symbol": "CRM",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-02-25",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0002012383/000119312526071966/blk-20251231.htm",
+      "filing_date": "2026-03-02",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001108524/000110852426000060/crm-20260131.htm",
       "risk_factors": [
-        "(together, with its subsidiaries, unless the context otherwise indicates, “BlackRock” or the “Company”) is a leading publicly traded investment management firm with $14.0 trillion of AUM at December 31, 2025.",
-        "With approximately 24,900 employees in more than 30 countries, BlackRock provides a broad range of investment management and technology services to institutional and retail clients in more than 100 countries across the globe.",
-        "For further information see Note 1, Business Overview , and Note 27, Segment Information , in the notes to the consolidated financial statements contained in Part II, Item 8.",
-        "The following discussion includes a comparison of BlackRock’s results for 2025 and 2024."
+        "A manifestation of any of the following risks and uncertainties could, in circumstances we may or may not be able to accurately predict, materially and adversely affect our business and operations, growth, reputation, prospects, operating and financial results, financial condition, cash flows, liquidity and stock pr...",
+        "Some of the factors, events and contingencies discussed below may have occurred in the past, but the disclosures below are not representations as to whether or not the factors, events or contingencies have occurred in the past and instead reflect our beliefs and opinions as to the factors, events or contingencies th...",
+        "Other events, factors or uncertainties that we do not currently anticipate or that we currently deem immaterial also may affect our business, financial condition, results of operations, cash flows, other key metrics and the trading price of our common stock.",
+        "Therefore, you should not consider the following risks to be a complete statement of all the potential risks or uncertainties that we face."
       ],
       "error": null
     }
