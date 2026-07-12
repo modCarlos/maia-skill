@@ -1,36 +1,22 @@
 {
-  "generated_at": "2026-07-10T07:06:22Z",
+  "generated_at": "2026-07-12T01:10:50Z",
   "source": "SEC EDGAR",
   "top": 12,
   "symbols": [
-    "VZ",
     "ORCL",
-    "COST",
+    "NFLX",
+    "DIS",
     "T",
     "AMT",
     "XOM",
-    "DIS",
     "HON",
-    "MMM",
     "COP",
-    "CVX",
-    "NKE"
+    "ARM",
+    "PG",
+    "MMM",
+    "BA"
   ],
   "results": [
-    {
-      "symbol": "VZ",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2026-02-17",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000732712/000073271226000007/vz-20251231.htm",
-      "risk_factors": [
-        "Market for Registrant’s Common Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities The principal market for trading in the common stock of the Company is the New York Stock Exchange under the symbol \"VZ.\" As of December 31, 2025, there were 374,977 shareholders of record.",
-        "In addition, a significant number of holders of the Company's common stock are \"street name\" or beneficial holders, whose shares are held of record by banks, brokers, and other financial institutions.",
-        "Stock Repurchases On January 30, 2026, the Board of Directors of the Company authorized a share repurchase program for up to $25 billion of our common stock.",
-        "The program will terminate when the aggregate consideration paid to purchase shares of our common stock reaches $25 billion, exclusive of any fees, commissions or other expenses, or a new share repurchase plan superseding the current plan is authorized, whichever is sooner."
-      ],
-      "error": null
-    },
     {
       "symbol": "ORCL",
       "cik": null,
@@ -46,16 +32,30 @@
       "error": null
     },
     {
-      "symbol": "COST",
+      "symbol": "NFLX",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2025-10-08",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000909832/000090983225000101/cost-20250831.htm",
+      "filing_date": "2025-01-27",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001065280/000106528025000044/nflx-20241231.htm",
       "risk_factors": [
-        "Forward-looking statements speak only as of the date they are made, and we do not undertake to update these statements, except as required by law.",
-        "PART I Item 1—Business Costco Wholesale Corporation and its subsidiaries (Costco or the Company) began operations in 1983, in Seattle, Washington.",
-        "We are principally engaged in the operation of membership warehouses in the United States (U.S.) and Puerto Rico, Canada, Mexico, Japan, the United Kingdom (U.K.), Korea, Australia, Taiwan, China, Spain, France, Sweden, Iceland, and New Zealand.",
-        "Costco operated 914, 890, and 861 warehouses worldwide at August 31, 2025, September 1, 2024, and September 3, 2023."
+        "All forward-looking statements included in this document are based on information available to us on the date hereof, and we assume no obligation to revise or publicly release any revision to any such forward-looking statement, except as may otherwise be required by law.",
+        "(“Netflix”, “the Company”, “registrant”, “we”, or “us”) is one of the world’s leading entertainment services with approximately 302 million paid memberships in over 190 countries enjoying TV series, films and games across a wide variety of genres and languages.",
+        "Members can play, pause and resume watching as much as they want, anytime, anywhere, and can change their plans at any time.",
+        "Our core strategy is to grow our business globally within the parameters of our operating margin target."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "DIS",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2024-11-14",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001744489/000174448924000276/dis-20240928.htm",
+      "risk_factors": [
+        "In addition to the factors affecting specific business operations identified in connection with the description of these operations and the financial results of these operations elsewhere in our filings with the SEC, the most significant factors affecting our business include the following: RISKS RELATED TO OUR BUSI...",
+        "Declines in economic conditions, such as recessions, other less severe slowdowns in economic activity and/or inflationary conditions in the U.S.",
+        "and other regions of the world in which we do business typically adversely affect demand for our products and services and/or costs to operate our businesses, reducing our revenue and earnings.",
+        "Past declines in economic conditions reduced or resulted in slower growth than expected in, among other things, guest spending at our parks and resorts, purchases of and prices for advertising on our platforms and purchases of Company-branded consumer products, and we expect similar impacts as such conditions recur."
       ],
       "error": null
     },
@@ -102,20 +102,6 @@
       "error": null
     },
     {
-      "symbol": "DIS",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2024-11-14",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001744489/000174448924000276/dis-20240928.htm",
-      "risk_factors": [
-        "In addition to the factors affecting specific business operations identified in connection with the description of these operations and the financial results of these operations elsewhere in our filings with the SEC, the most significant factors affecting our business include the following: RISKS RELATED TO OUR BUSI...",
-        "Declines in economic conditions, such as recessions, other less severe slowdowns in economic activity and/or inflationary conditions in the U.S.",
-        "and other regions of the world in which we do business typically adversely affect demand for our products and services and/or costs to operate our businesses, reducing our revenue and earnings.",
-        "Past declines in economic conditions reduced or resulted in slower growth than expected in, among other things, guest spending at our parks and resorts, purchases of and prices for advertising on our platforms and purchases of Company-branded consumer products, and we expect similar impacts as such conditions recur."
-      ],
-      "error": null
-    },
-    {
       "symbol": "HON",
       "cik": null,
       "form": "10-K",
@@ -126,20 +112,6 @@
         "Forward-looking statements are those that address activities, events, or developments that we or our management intend, expect, project, believe, or anticipate will or may occur in the future.",
         "They are based on management’s assumptions and assessments in light of past experience and trends, current economic and industry conditions, expected future developments, and other relevant factors, many of which are difficult to predict and outside of our control, including Honeywell's current expectations, estimat...",
         "They are not guarantees of future performance, and actual results, developments, and business decisions may differ significantly from those envisaged by our forward-looking statements, including the proposed separation of Honeywell from Honeywell Aerospace and the planned sale of the Productivity Solutions and Servi..."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "MMM",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2025-02-05",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000066740/000006674025000006/mmm-20241231.htm",
-      "risk_factors": [
-        "Discussion of these factors is incorporated by reference into and considered an integral part of Part II, Item 7, “Management’s Discussion and Analysis of Financial Condition and Results of Operations.” Risks Related to the Global Economy and External Conditions * The Company’s results are impacted by the effects of...",
-        "During 2024, the Company derived approximately 56 percent of its revenues from outside the United States.",
-        "Accordingly, the Company’s operations and the execution of its business strategies and plans are subject to global competition and economic and geopolitical risks that are beyond its control, such as, among other things, disruptions in financial markets, economic downturns, military conflicts, terrorism, public heal...",
-        "and China, or more broadly in global trade conflict, could have a material adverse effect on the Company's business and operations around the world."
       ],
       "error": null
     },
@@ -158,30 +130,58 @@
       "error": null
     },
     {
-      "symbol": "CVX",
+      "symbol": "ARM",
       "cik": null,
-      "form": "10-K",
-      "filing_date": "2026-02-24",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000093410/000009341026000078/cvx-20251231.htm",
+      "form": "20-F",
+      "filing_date": "2024-05-29",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000197323924000012/arm-20240331.htm",
       "risk_factors": [
-        "Refer to Management’s Discussion and Analysis of Financial Conditions and Results of Operations in Business Environment and Outlook on pages 35 through 37 for further discussion of climate change related trends and uncertainties.",
-        "Refer to Management’s Discussion and Analysis of Financial Conditions and Results of Operations on page 55 for additional information on environmental matters and their impact on Chevron, and on the company’s 2025 environmental expenditures.",
-        "Refer to page 54 and Note 24 Other Contingencies and Commitments for a discussion of environmental remediation provisions and year-end reserves.",
-        "The following disclosures reflect our beliefs and opinions as to factors that could materially and adversely affect us in the future."
+        "See “Special Note Regarding Forward-Looking Statements.” SPECIAL NOTE REGARDING FORWARD-LOOKING STATEMENTS This Annual Report contains forward-looking statements within the meaning of Section 27A of the Securities Act of 1933, as amended (the “Securities Act”), and Section 21E of the Securities Exchange Act of 1934,...",
+        "Statements regarding our future and projections relating to revenue, cost of sales, operating expenses, income (loss), and potential growth opportunities are typical of such statements.",
+        "The forward-looking statements appear in a number of places, including, but not limited to, “ Item 5.",
+        "Operating and Financial Review and Prospects .” Forward-looking statements are based on our management’s beliefs and assumptions and on information currently available to our management."
       ],
       "error": null
     },
     {
-      "symbol": "NKE",
+      "symbol": "PG",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2024-07-25",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000320187/000032018724000044/nke-20240531.htm",
+      "filing_date": "2025-08-04",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000080424/000008042425000076/pg-20250630.htm",
       "risk_factors": [
-        "OUR MARKETS We report our NIKE Brand operations based on our internal geographic organization.",
-        "Each NIKE Brand geographic segment operates predominantly in one industry: the design, development, marketing and selling of athletic footwear, apparel and equipment.",
-        "The Company's reportable operating segments for the NIKE Brand are: North America; Europe, Middle East & Africa (\"EMEA\"); Greater China; and Asia Pacific & Latin America (\"APLA\"), and include results for the NIKE and Jordan brands.",
-        "Sales through our NIKE Direct operations are managed within each geographic operating segment."
+        "Governance The Company’s Board of Directors oversees cybersecurity risks consistent with its general risk oversight responsibility.",
+        "The Audit Committee of the Board has specific responsibility for reviewing the status of the security of the Company’s electronic data processing information systems and the general security, including cybersecurity, of the Company’s people, assets and information systems.",
+        "In support of this general oversight, the full Board reviews, at least annually, the most significant enterprise risks facing the Company, including cybersecurity risks, as identified in the Company’s Enterprise Risk Management program.",
+        "This review, which includes key members of senior management, covers key risks from information security that have been identified and corresponding action plans."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "MMM",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2025-02-05",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000066740/000006674025000006/mmm-20241231.htm",
+      "risk_factors": [
+        "Discussion of these factors is incorporated by reference into and considered an integral part of Part II, Item 7, “Management’s Discussion and Analysis of Financial Condition and Results of Operations.” Risks Related to the Global Economy and External Conditions * The Company’s results are impacted by the effects of...",
+        "During 2024, the Company derived approximately 56 percent of its revenues from outside the United States.",
+        "Accordingly, the Company’s operations and the execution of its business strategies and plans are subject to global competition and economic and geopolitical risks that are beyond its control, such as, among other things, disruptions in financial markets, economic downturns, military conflicts, terrorism, public heal...",
+        "and China, or more broadly in global trade conflict, could have a material adverse effect on the Company's business and operations around the world."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "BA",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-01-30",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000012927/000162828026004357/ba-20251231.htm",
+      "risk_factors": [
+        "We are committed to creating a work environment where every teammate around the world can perform at their best and grow their careers while supporting our company’s mission to protect, connect and explore our world and beyond.",
+        "During 2025, we continued to make progress in our culture transformation, including through launching our new Values and Behaviors, revising our performance management system to hold employees accountable not only for what they achieve but for how they achieve it, and enhancing training and leadership development pr...",
+        "Our compensation program is designed to attract, reward and retain the best-qualified talent with competitive compensation and benefits, including healthcare, paid time off, parental leave, retirement benefits, tuition assistance, employee skills and leadership development programs, and mental and physical well-bein...",
+        "2 Table of Contents We also invest in rewarding performance and have established a multi-level recognition program to acknowledge the achievements of excellent individual or team performance."
       ],
       "error": null
     }

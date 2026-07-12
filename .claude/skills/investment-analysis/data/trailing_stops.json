@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-10T07:06:23Z",
-  "history_file": "2026-07-09.json",
+  "generated_at": "2026-07-12T01:10:50Z",
+  "history_file": "2026-07-11.json",
   "atr_multiplier": 2.0,
   "picks_total": 10,
   "stops_raised": 0,
@@ -17,20 +17,7 @@
       "recommended_stop": 101.65,
       "stop_raised": false,
       "stop_distance_pct": 4.13,
-      "computed_at": "2026-07-10T07:06:23Z"
-    },
-    "WMT": {
-      "symbol": "WMT",
-      "current_price": 118.86,
-      "entry_price": 118.86,
-      "original_stop": 113.72,
-      "atr_14": 3.3052,
-      "atr_multiplier": 2.0,
-      "atr_stop": 112.2496,
-      "recommended_stop": 113.72,
-      "stop_raised": false,
-      "stop_distance_pct": 4.32,
-      "computed_at": "2026-07-10T07:06:23Z"
+      "computed_at": "2026-07-12T01:10:50Z"
     },
     "PYPL": {
       "symbol": "PYPL",
@@ -43,46 +30,20 @@
       "recommended_stop": 42.21,
       "stop_raised": false,
       "stop_distance_pct": 3.92,
-      "computed_at": "2026-07-10T07:06:23Z"
+      "computed_at": "2026-07-12T01:10:50Z"
     },
-    "TSM": {
-      "symbol": "TSM",
-      "current_price": 419.3,
-      "entry_price": 419.3,
-      "original_stop": 397.0,
-      "atr_14": 14.5314,
+    "WMT": {
+      "symbol": "WMT",
+      "current_price": 118.86,
+      "entry_price": 118.86,
+      "original_stop": 113.72,
+      "atr_14": 3.3052,
       "atr_multiplier": 2.0,
-      "atr_stop": 390.2372,
-      "recommended_stop": 397.0,
+      "atr_stop": 112.2496,
+      "recommended_stop": 113.72,
       "stop_raised": false,
-      "stop_distance_pct": 5.32,
-      "computed_at": "2026-07-10T07:06:23Z"
-    },
-    "AVGO": {
-      "symbol": "AVGO",
-      "current_price": 420.32,
-      "entry_price": 420.32,
-      "original_stop": 398.0,
-      "atr_14": 15.8211,
-      "atr_multiplier": 2.0,
-      "atr_stop": 388.6778,
-      "recommended_stop": 398.0,
-      "stop_raised": false,
-      "stop_distance_pct": 5.31,
-      "computed_at": "2026-07-10T07:06:23Z"
-    },
-    "GILD": {
-      "symbol": "GILD",
-      "current_price": 134.55,
-      "entry_price": 134.55,
-      "original_stop": 128.6,
-      "atr_14": 3.2729,
-      "atr_multiplier": 2.0,
-      "atr_stop": 128.0042,
-      "recommended_stop": 128.6,
-      "stop_raised": false,
-      "stop_distance_pct": 4.42,
-      "computed_at": "2026-07-10T07:06:23Z"
+      "stop_distance_pct": 4.32,
+      "computed_at": "2026-07-12T01:10:50Z"
     },
     "REGN": {
       "symbol": "REGN",
@@ -95,33 +56,33 @@
       "recommended_stop": 594.04,
       "stop_raised": false,
       "stop_distance_pct": 4.79,
-      "computed_at": "2026-07-10T07:06:23Z"
+      "computed_at": "2026-07-12T01:10:50Z"
     },
-    "NFLX": {
-      "symbol": "NFLX",
-      "current_price": 86.65,
-      "entry_price": 86.65,
-      "original_stop": 82.15,
-      "atr_14": 2.25,
+    "TSM": {
+      "symbol": "TSM",
+      "current_price": 419.3,
+      "entry_price": 419.3,
+      "original_stop": 397.0,
+      "atr_14": 14.5314,
       "atr_multiplier": 2.0,
-      "atr_stop": 82.15,
-      "recommended_stop": 82.15,
+      "atr_stop": 390.2372,
+      "recommended_stop": 397.0,
       "stop_raised": false,
-      "stop_distance_pct": 5.19,
-      "computed_at": "2026-07-10T07:06:23Z"
+      "stop_distance_pct": 5.32,
+      "computed_at": "2026-07-12T01:10:50Z"
     },
-    "COST": {
-      "symbol": "COST",
-      "current_price": 1004.39,
-      "entry_price": 1004.39,
-      "original_stop": 958.63,
-      "atr_14": 22.88,
+    "AVGO": {
+      "symbol": "AVGO",
+      "current_price": 420.32,
+      "entry_price": 420.32,
+      "original_stop": 398.0,
+      "atr_14": 15.8211,
       "atr_multiplier": 2.0,
-      "atr_stop": 958.63,
-      "recommended_stop": 958.63,
+      "atr_stop": 388.6778,
+      "recommended_stop": 398.0,
       "stop_raised": false,
-      "stop_distance_pct": 4.56,
-      "computed_at": "2026-07-10T07:06:23Z"
+      "stop_distance_pct": 5.31,
+      "computed_at": "2026-07-12T01:10:50Z"
     },
     "DIS": {
       "symbol": "DIS",
@@ -134,7 +95,46 @@
       "recommended_stop": 99.55,
       "stop_raised": false,
       "stop_distance_pct": 4.14,
-      "computed_at": "2026-07-10T07:06:23Z"
+      "computed_at": "2026-07-12T01:10:50Z"
+    },
+    "NFLX": {
+      "symbol": "NFLX",
+      "current_price": 86.65,
+      "entry_price": 86.65,
+      "original_stop": 82.15,
+      "atr_14": 2.25,
+      "atr_multiplier": 2.0,
+      "atr_stop": 82.15,
+      "recommended_stop": 82.15,
+      "stop_raised": false,
+      "stop_distance_pct": 5.19,
+      "computed_at": "2026-07-12T01:10:50Z"
+    },
+    "COST": {
+      "symbol": "COST",
+      "current_price": 1004.39,
+      "entry_price": 1004.39,
+      "original_stop": 958.63,
+      "atr_14": 22.88,
+      "atr_multiplier": 2.0,
+      "atr_stop": 958.63,
+      "recommended_stop": 958.63,
+      "stop_raised": false,
+      "stop_distance_pct": 4.56,
+      "computed_at": "2026-07-12T01:10:50Z"
+    },
+    "GILD": {
+      "symbol": "GILD",
+      "current_price": 134.55,
+      "entry_price": 134.55,
+      "original_stop": 128.6,
+      "atr_14": 3.2729,
+      "atr_multiplier": 2.0,
+      "atr_stop": 128.0042,
+      "recommended_stop": 128.6,
+      "stop_raised": false,
+      "stop_distance_pct": 4.42,
+      "computed_at": "2026-07-12T01:10:50Z"
     }
   }
 }

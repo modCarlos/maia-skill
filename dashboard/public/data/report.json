@@ -1,18 +1,18 @@
 {
   "brand": "Tododeia",
   "creator": "@quebert",
-  "generated_at": "2026-07-10T07:08:14Z",
+  "generated_at": "2026-07-12T01:12:41Z",
   "risk_profile": "moderate",
-  "executive_summary": "The current macro environment shows extreme fear with the Fear & Greed index at 22 and SPY RSI near oversold territory, suggesting a potential contrarian opportunity in quality-oversold stocks. We focus on healthcare, payments, and staples sectors while managing risk through strict correlation limits.",
+  "executive_summary": "The current macro environment shows extreme fear with the Fear & Greed index at 22 and SPY RSI near oversold levels, creating a contrarian opportunity for quality-oversold stocks. Our strategy focuses on high-quality names in healthcare, payments, and staples sectors with strong fundamentals.",
   "macro_environment": {
-    "summary": "The market is in a mixed regime with extreme fear sentiment and SPY RSI at 69.3, indicating oversold conditions. Interest rates are stable, inflation is falling, and geopolitical risks remain low.",
+    "summary": "The market is in a mixed regime with extreme fear sentiment and SPY RSI at 69.3, indicating oversold conditions. Interest rates are stable, but geopolitical risks remain elevated due to global tensions.",
     "interest_rate_outlook": "stable",
     "inflation_outlook": "falling",
-    "geopolitical_risk": "low",
+    "geopolitical_risk": "high",
     "key_factors": [
       "extreme fear sentiment",
       "SPY RSI near oversold",
-      "stable interest rates"
+      "mixed market regime"
     ]
   },
   "portfolio_allocation": {
@@ -22,12 +22,8 @@
   },
   "cross_sector_insights": [
     {
-      "insight": "Healthcare and payments sectors show strong fundamentals with oversold conditions, suggesting potential for a rebound.",
-      "implication": "Focus on quality names in these sectors with strong balance sheets."
-    },
-    {
-      "insight": "Staples sector is underperforming but has strong consumer demand fundamentals, making it a candidate for contrarian plays.",
-      "implication": "Look for oversold positions with strong earnings momentum."
+      "insight": "Healthcare and payments sectors show strong fundamentals with positive catalysts like FDA approvals and international expansion.",
+      "implication": "These sectors are well-positioned for long-term growth despite current macro uncertainty."
     }
   ],
   "risk_adjusted_picks": [
@@ -40,16 +36,16 @@
       "risk_score": 2.5,
       "risk_adjusted_score": 8.2,
       "recommendation": "add",
-      "reasoning": "Strong buy recommendation with positive news on gold price momentum and a safe Altman Z-score.",
-      "position_size": "8%",
+      "reasoning": "Strong buy recommendation and positive gold price momentum support the thesis.",
+      "position_size": "10%",
       "entry_price": 106.03,
       "stop_loss": 101.65,
       "target_12m": 143.0,
       "risk_reward_ratio": 8.44,
-      "thesis": "Gold price momentum and strong buy recommendation from analysts suggest a potential rebound in precious metals.",
+      "thesis": "Gold price momentum and strong buy recommendation from analysts support the long-term case for NEM.",
       "thesis_invalidators": [
         "gold prices decline significantly",
-        "negative macro sentiment"
+        "regulatory changes in mining"
       ],
       "thesis_status": "active",
       "financial_health": {
@@ -104,24 +100,24 @@
       "risk_score": 3.0,
       "risk_adjusted_score": 7.6,
       "recommendation": "add",
-      "reasoning": "Strong consumer demand fundamentals and stable dividend yield support a long-term position.",
-      "position_size": "6%",
+      "reasoning": "Strong consumer demand and stable dividend yield support the thesis.",
+      "position_size": "9%",
       "entry_price": 118.86,
       "stop_loss": 113.72,
       "target_12m": 138.0,
       "risk_reward_ratio": 3.72,
-      "thesis": "Strong consumer demand and stable dividend yield support a long-term position in staples.",
+      "thesis": "Strong consumer demand and stable dividend yield support the long-term case for WMT.",
       "thesis_invalidators": [
         "consumer spending declines",
-        "negative macro sentiment"
+        "retail sector downturn"
       ],
       "thesis_status": "active",
       "financial_health": {
-        "altman_z": 1.58,
+        "altman_z": 1.67,
         "altman_zone": "gray",
         "piotroski": 6,
         "piotroski_strength": "neutral",
-        "health_note": "Altman Z in gray zone — monitor for potential distress."
+        "health_note": "Altman Z in gray zone — thesis must account for potential financial stress."
       },
       "key_news": [
         "How a 2006 Walmart receipt illustrates today's consumer headaches",
@@ -168,24 +164,24 @@
       "risk_score": 2.5,
       "risk_adjusted_score": 7.2,
       "recommendation": "add",
-      "reasoning": "Growing international expansion and potential regulatory approval support a long-term position.",
-      "position_size": "5%",
+      "reasoning": "Growing international expansion and potential regulatory approval support the thesis.",
+      "position_size": "8%",
       "entry_price": 43.93,
       "stop_loss": 42.21,
       "target_12m": 53.0,
       "risk_reward_ratio": 5.27,
-      "thesis": "Growing international expansion and potential regulatory approval support a long-term position in payments.",
+      "thesis": "Growing international expansion and potential regulatory approval support the long-term case for PYPL.",
       "thesis_invalidators": [
         "regulatory hurdles",
-        "negative macro sentiment"
+        "international expansion delays"
       ],
       "thesis_status": "active",
       "financial_health": {
-        "altman_z": 1.58,
+        "altman_z": 1.52,
         "altman_zone": "gray",
         "piotroski": 8,
         "piotroski_strength": "strong",
-        "health_note": "Piotroski score is strong (8/9), but Altman Z in gray zone — monitor for potential distress."
+        "health_note": "Piotroski score is strong (8/9), but Altman Z in gray zone — thesis must account for potential financial stress."
       },
       "key_news": [
         "In a tourist-friendly move, China's Tencent to allow PayPal payments through its",
@@ -225,223 +221,31 @@
     },
     {
       "rank": 4,
-      "name": "TSMC",
-      "symbol": "TSM",
-      "sector": "semiconductors",
-      "confidence": 7.5,
-      "risk_score": 2.0,
-      "risk_adjusted_score": 6.9,
-      "recommendation": "add",
-      "reasoning": "AI-driven demand and strong earnings momentum support a long-term position.",
-      "position_size": "4%",
-      "entry_price": 419.3,
-      "stop_loss": 397.0,
-      "target_12m": 468.0,
-      "risk_reward_ratio": 2.18,
-      "thesis": "AI-driven demand and strong earnings momentum support a long-term position in semiconductors.",
-      "thesis_invalidators": [
-        "AI adoption slows",
-        "negative macro sentiment"
-      ],
-      "thesis_status": "active",
-      "financial_health": {
-        "altman_z": 3.08,
-        "altman_zone": "safe",
-        "piotroski": 9,
-        "piotroski_strength": "strong",
-        "health_note": "Balance sheet is strong (Piotroski 9/9), no distress risk."
-      },
-      "key_news": [
-        "Intel vs AMD: The Ideal Long-Term Investment",
-        "Taiwan Semiconductor Stock Nearing 52-Week High: Buy, Sell or Hold?"
-      ],
-      "social_highlights": [
-        "Pre-screened via yfinance universe",
-        "Entry quality: fair"
-      ],
-      "technicals": {
-        "trend": "uptrend",
-        "rsi": 52.5,
-        "macd": "N/A",
-        "key_support": 212.79,
-        "key_resistance": 625.81,
-        "entry_quality": "fair"
-      },
-      "valuation": {
-        "pe": null,
-        "forward_pe": 21.4877,
-        "peg": 1.313,
-        "ev_ebitda": null,
-        "verdict": "PEG=1.31"
-      },
-      "fundamentals": {
-        "revenue_growth": "35.1%",
-        "gross_margin": "N/A",
-        "fcf_margin": "17.5%",
-        "debt_equity": null,
-        "verdict": "Pre-fetched from yfinance"
-      },
-      "current_price": "$419.30",
-      "watchlist": "semiconductors",
-      "social_sentiment": "bullish",
-      "social_buzz": "medium",
-      "source_agreement": "high"
-    },
-    {
-      "rank": 5,
-      "name": "Avago Technologies",
-      "symbol": "AVGO",
-      "sector": "semiconductors",
-      "confidence": 7.0,
-      "risk_score": 2.5,
-      "risk_adjusted_score": 6.2,
-      "recommendation": "add",
-      "reasoning": "AI-driven demand and strong earnings momentum support a long-term position.",
-      "position_size": "3%",
-      "entry_price": 420.32,
-      "stop_loss": 398.0,
-      "target_12m": 480.0,
-      "risk_reward_ratio": 2.67,
-      "thesis": "AI-driven demand and strong earnings momentum support a long-term position in semiconductors.",
-      "thesis_invalidators": [
-        "AI adoption slows",
-        "negative macro sentiment"
-      ],
-      "thesis_status": "active",
-      "financial_health": {
-        "altman_z": 3.08,
-        "altman_zone": "safe",
-        "piotroski": 8,
-        "piotroski_strength": "strong",
-        "health_note": "Piotroski score is strong (8/9), no distress risk."
-      },
-      "key_news": [
-        "SK Hynix and Micron lead AI boom, join trillion-dollar club",
-        "Microsoft’s AI Spending Won’t Derail Dividend Safety Inside Vanguard’s VIG"
-      ],
-      "social_highlights": [
-        "Pre-screened via yfinance universe",
-        "Entry quality: fair"
-      ],
-      "technicals": {
-        "trend": "uptrend",
-        "rsi": 53.8,
-        "macd": "N/A",
-        "key_support": 230.34,
-        "key_resistance": 610.3,
-        "entry_quality": "fair"
-      },
-      "valuation": {
-        "pe": null,
-        "forward_pe": 22.8498,
-        "peg": 0.9177,
-        "ev_ebitda": null,
-        "verdict": "PEG=0.92"
-      },
-      "fundamentals": {
-        "revenue_growth": "29.5%",
-        "gross_margin": "N/A",
-        "fcf_margin": "37.4%",
-        "debt_equity": null,
-        "verdict": "Pre-fetched from yfinance"
-      },
-      "current_price": "$420.32",
-      "watchlist": "semiconductors",
-      "social_sentiment": "bullish",
-      "social_buzz": "medium",
-      "source_agreement": "high"
-    },
-    {
-      "rank": 6,
-      "name": "Gilead Sciences",
-      "symbol": "GILD",
-      "sector": "healthcare",
-      "confidence": 7.0,
-      "risk_score": 2.5,
-      "risk_adjusted_score": 6.2,
-      "recommendation": "add",
-      "reasoning": "FDA accelerated approval of Hepcludex and strong pipeline support a long-term position.",
-      "position_size": "3%",
-      "entry_price": 134.55,
-      "stop_loss": 128.6,
-      "target_12m": 158.0,
-      "risk_reward_ratio": 3.94,
-      "thesis": "FDA accelerated approval of Hepcludex and strong pipeline support a long-term position in healthcare.",
-      "thesis_invalidators": [
-        "FDA approval delays",
-        "negative macro sentiment"
-      ],
-      "thesis_status": "active",
-      "financial_health": {
-        "altman_z": 3.08,
-        "altman_zone": "safe",
-        "piotroski": 8,
-        "piotroski_strength": "strong",
-        "health_note": "Piotroski score is strong (8/9), no distress risk."
-      },
-      "key_news": [
-        "FDA accelerated approval of Hepcludex significant milestone for US HDV market",
-        "3 Stocks Estimated To Be Trading Up To 44.8% Below Intrinsic Value"
-      ],
-      "social_highlights": [
-        "Pre-screened via yfinance universe",
-        "Entry quality: fair"
-      ],
-      "technicals": {
-        "trend": "mixed",
-        "rsi": 51.3,
-        "macd": "N/A",
-        "key_support": 94.12,
-        "key_resistance": 174.98,
-        "entry_quality": "fair"
-      },
-      "valuation": {
-        "pe": null,
-        "forward_pe": 14.0306,
-        "peg": 2.1441,
-        "ev_ebitda": null,
-        "verdict": "PEG=2.14"
-      },
-      "fundamentals": {
-        "revenue_growth": "4.4%",
-        "gross_margin": "N/A",
-        "fcf_margin": "26.7%",
-        "debt_equity": null,
-        "verdict": "Pre-fetched from yfinance"
-      },
-      "current_price": "$134.55",
-      "watchlist": "healthcare",
-      "social_sentiment": "neutral",
-      "social_buzz": "medium",
-      "source_agreement": "high"
-    },
-    {
-      "rank": 7,
       "name": "Regeneron Pharmaceuticals",
       "symbol": "REGN",
       "sector": "healthcare",
-      "confidence": 6.5,
+      "confidence": 7.5,
       "risk_score": 3.0,
-      "risk_adjusted_score": 5.6,
+      "risk_adjusted_score": 6.6,
       "recommendation": "add",
-      "reasoning": "Positive FDA news and strong pipeline for eczema support a long-term position.",
-      "position_size": "2%",
+      "reasoning": "Positive FDA news and strong pipeline for eczema treatments support the thesis.",
+      "position_size": "7%",
       "entry_price": 623.91,
       "stop_loss": 594.04,
       "target_12m": 833.0,
       "risk_reward_ratio": 7.0,
-      "thesis": "Positive FDA news and strong pipeline for eczema support a long-term position in healthcare.",
+      "thesis": "Positive FDA news and strong pipeline for eczema treatments support the long-term case for REGN.",
       "thesis_invalidators": [
         "FDA approval delays",
-        "negative macro sentiment"
+        "pipeline setbacks"
       ],
       "thesis_status": "active",
       "financial_health": {
-        "altman_z": 3.08,
-        "altman_zone": "safe",
-        "piotroski": 7,
+        "altman_z": 1.81,
+        "altman_zone": "gray",
+        "piotroski": 4,
         "piotroski_strength": "neutral",
-        "health_note": "Piotroski score is neutral (7/9), no distress risk."
+        "health_note": "Altman Z in gray zone — thesis must account for potential financial stress."
       },
       "key_news": [
         "Why Apogee Slipped On Its Dupixent-Rivaling Eczema Results",
@@ -480,96 +284,224 @@
       "source_agreement": "high"
     },
     {
-      "rank": 8,
-      "name": "Netflix",
-      "symbol": "NFLX",
-      "sector": "streaming",
-      "confidence": 6.0,
+      "rank": 5,
+      "name": "TSMC",
+      "symbol": "TSM",
+      "sector": "semiconductors",
+      "confidence": 7.0,
       "risk_score": 3.5,
-      "risk_adjusted_score": 5.0,
+      "risk_adjusted_score": 6.0,
       "recommendation": "add",
-      "reasoning": "Streaming expansion and potential for ad revenue support a long-term position.",
-      "position_size": "2%",
-      "entry_price": 86.65,
-      "stop_loss": 82.15,
-      "target_12m": 115.0,
-      "risk_reward_ratio": 6.3,
-      "thesis": "Streaming expansion and potential for ad revenue support a long-term position in streaming.",
+      "reasoning": "AI-driven demand and strong earnings momentum support the thesis.",
+      "position_size": "6%",
+      "entry_price": 419.3,
+      "stop_loss": 397.0,
+      "target_12m": 468.0,
+      "risk_reward_ratio": 2.18,
+      "thesis": "AI-driven demand and strong earnings momentum support the long-term case for TSM.",
       "thesis_invalidators": [
-        "ad revenue declines",
-        "negative macro sentiment"
+        "AI adoption slows",
+        "supply chain disruptions"
       ],
       "thesis_status": "active",
       "financial_health": {
-        "altman_z": 3.08,
-        "altman_zone": "safe",
-        "piotroski": 7,
-        "piotroski_strength": "neutral",
-        "health_note": "Piotroski score is neutral (7/9), no distress risk."
+        "altman_z": 1.44,
+        "altman_zone": "gray",
+        "piotroski": 8,
+        "piotroski_strength": "strong",
+        "health_note": "Piotroski score is strong (8/9), but Altman Z in gray zone — thesis must account for potential financial stress."
       },
       "key_news": [
-        "Netflix criticises German plan to make streamers invest more locally",
-        "Where Will Netflix Stock Be Next Year?"
+        "Intel vs AMD: The Ideal Long-Term Investment",
+        "Taiwan Semiconductor Stock Nearing 52-Week High: Buy, Sell or Hold?"
       ],
       "social_highlights": [
         "Pre-screened via yfinance universe",
         "Entry quality: fair"
       ],
       "technicals": {
-        "trend": "downtrend",
-        "rsi": 44.2,
+        "trend": "uptrend",
+        "rsi": 52.5,
         "macd": "N/A",
-        "key_support": 78.59,
-        "key_resistance": 94.71,
+        "key_support": 212.79,
+        "key_resistance": 625.81,
         "entry_quality": "fair"
       },
       "valuation": {
         "pe": null,
-        "forward_pe": 22.5535,
-        "peg": 1.7158,
+        "forward_pe": 21.4877,
+        "peg": 1.313,
         "ev_ebitda": null,
-        "verdict": "PEG=1.72"
+        "verdict": "PEG=1.31"
       },
       "fundamentals": {
-        "revenue_growth": "16.2%",
+        "revenue_growth": "35.1%",
         "gross_margin": "N/A",
-        "fcf_margin": "55.4%",
+        "fcf_margin": "17.5%",
         "debt_equity": null,
         "verdict": "Pre-fetched from yfinance"
       },
-      "current_price": "$86.65",
+      "current_price": "$419.30",
+      "watchlist": "semiconductors",
+      "social_sentiment": "bullish",
+      "social_buzz": "medium",
+      "source_agreement": "high"
+    },
+    {
+      "rank": 6,
+      "name": "Disney",
+      "symbol": "DIS",
+      "sector": "streaming",
+      "confidence": 7.0,
+      "risk_score": 3.5,
+      "risk_adjusted_score": 6.0,
+      "recommendation": "add",
+      "reasoning": "Streaming expansion and potential for ad revenue growth support the thesis.",
+      "position_size": "5%",
+      "entry_price": 103.85,
+      "stop_loss": 99.55,
+      "target_12m": 129.0,
+      "risk_reward_ratio": 5.85,
+      "thesis": "Streaming expansion and potential for ad revenue growth support the long-term case for DIS.",
+      "thesis_invalidators": [
+        "ad revenue declines",
+        "content production costs rise"
+      ],
+      "thesis_status": "active",
+      "financial_health": {
+        "altman_z": 1.57,
+        "altman_zone": "gray",
+        "piotroski": 8,
+        "piotroski_strength": "strong",
+        "health_note": "Piotroski score is strong (8/9), but Altman Z in gray zone — thesis must account for potential financial stress."
+      },
+      "key_news": [
+        "Netflix's Ad Business Expansion Continues: More Upside Ahead?",
+        "Disney World will revamp one of Walt Disney's most beloved rides — what to expec"
+      ],
+      "social_highlights": [
+        "Pre-screened via yfinance universe",
+        "Entry quality: good — near support"
+      ],
+      "technicals": {
+        "trend": "mixed",
+        "rsi": 35.9,
+        "macd": "N/A",
+        "key_support": 84.53,
+        "key_resistance": 123.17,
+        "entry_quality": "good — near support"
+      },
+      "valuation": {
+        "pe": null,
+        "forward_pe": 13.8565,
+        "peg": 2.6411,
+        "ev_ebitda": null,
+        "verdict": "PEG=2.64"
+      },
+      "fundamentals": {
+        "revenue_growth": "6.5%",
+        "gross_margin": "N/A",
+        "fcf_margin": "3.9%",
+        "debt_equity": null,
+        "verdict": "Pre-fetched from yfinance"
+      },
+      "current_price": "$103.85",
       "watchlist": "streaming",
       "social_sentiment": "neutral",
       "social_buzz": "medium",
       "source_agreement": "high"
     },
     {
-      "rank": 9,
-      "name": "Costco Wholesale",
+      "rank": 7,
+      "name": "Gilead Sciences",
+      "symbol": "GILD",
+      "sector": "healthcare",
+      "confidence": 6.5,
+      "risk_score": 3.0,
+      "risk_adjusted_score": 5.6,
+      "recommendation": "add",
+      "reasoning": "FDA accelerated approval of Hepcludex and strong pipeline support the thesis.",
+      "position_size": "4%",
+      "entry_price": 134.55,
+      "stop_loss": 128.6,
+      "target_12m": 158.0,
+      "risk_reward_ratio": 3.94,
+      "thesis": "FDA accelerated approval of Hepcludex and strong pipeline support the long-term case for GILD.",
+      "thesis_invalidators": [
+        "FDA approval delays",
+        "pipeline setbacks"
+      ],
+      "thesis_status": "active",
+      "financial_health": {
+        "altman_z": 1.44,
+        "altman_zone": "gray",
+        "piotroski": 8,
+        "piotroski_strength": "strong",
+        "health_note": "Piotroski score is strong (8/9), but Altman Z in gray zone — thesis must account for potential financial stress."
+      },
+      "key_news": [
+        "FDA accelerated approval of Hepcludex significant milestone for US HDV market",
+        "3 Stocks Estimated To Be Trading Up To 44.8% Below Intrinsic Value"
+      ],
+      "social_highlights": [
+        "Pre-screened via yfinance universe",
+        "Entry quality: fair"
+      ],
+      "technicals": {
+        "trend": "mixed",
+        "rsi": 51.3,
+        "macd": "N/A",
+        "key_support": 94.12,
+        "key_resistance": 174.98,
+        "entry_quality": "fair"
+      },
+      "valuation": {
+        "pe": null,
+        "forward_pe": 14.0306,
+        "peg": 2.1441,
+        "ev_ebitda": null,
+        "verdict": "PEG=2.14"
+      },
+      "fundamentals": {
+        "revenue_growth": "4.4%",
+        "gross_margin": "N/A",
+        "fcf_margin": "26.7%",
+        "debt_equity": null,
+        "verdict": "Pre-fetched from yfinance"
+      },
+      "current_price": "$134.55",
+      "watchlist": "healthcare",
+      "social_sentiment": "neutral",
+      "social_buzz": "medium",
+      "source_agreement": "high"
+    },
+    {
+      "rank": 8,
+      "name": "Costco",
       "symbol": "COST",
       "sector": "staples",
-      "confidence": 5.5,
+      "confidence": 6.5,
       "risk_score": 4.0,
-      "risk_adjusted_score": 4.3,
+      "risk_adjusted_score": 5.3,
       "recommendation": "buy",
-      "reasoning": "Strong consumer demand and stable dividend yield support a long-term position.",
-      "position_size": "2%",
+      "reasoning": "Strong consumer demand and stable dividend yield support the thesis.",
+      "position_size": "5%",
       "entry_price": 1004.39,
       "stop_loss": 958.63,
       "target_12m": 1077.0,
       "risk_reward_ratio": 1.59,
-      "thesis": "Strong consumer demand and stable dividend yield support a long-term position in staples.",
+      "thesis": "Strong consumer demand and stable dividend yield support the long-term case for COST.",
       "thesis_invalidators": [
         "consumer spending declines",
-        "negative macro sentiment"
+        "retail sector downturn"
       ],
       "thesis_status": "active",
       "financial_health": {
-        "altman_z": 3.08,
-        "altman_zone": "safe",
+        "altman_z": 1.59,
+        "altman_zone": "gray",
         "piotroski": 6,
         "piotroski_strength": "neutral",
-        "health_note": "Piotroski score is neutral (6/9), no distress risk."
+        "health_note": "Altman Z in gray zone — thesis must account for potential financial stress."
       },
       "key_news": [
         "Earnings live updates: Snowflake stock skyrockets on AWS deal, Kohl's pops",
@@ -608,64 +540,128 @@
       "source_agreement": "high"
     },
     {
-      "rank": 10,
-      "name": "Disney",
-      "symbol": "DIS",
-      "sector": "streaming",
-      "confidence": 5.0,
-      "risk_score": 4.5,
-      "risk_adjusted_score": 3.7,
+      "rank": 9,
+      "name": "Avago Technologies",
+      "symbol": "AVGO",
+      "sector": "semiconductors",
+      "confidence": 6.0,
+      "risk_score": 3.5,
+      "risk_adjusted_score": 5.0,
       "recommendation": "add",
-      "reasoning": "Streaming expansion and potential for ad revenue support a long-term position.",
-      "position_size": "1%",
-      "entry_price": 103.85,
-      "stop_loss": 99.55,
-      "target_12m": 129.0,
-      "risk_reward_ratio": 5.85,
-      "thesis": "Streaming expansion and potential for ad revenue support a long-term position in streaming.",
+      "reasoning": "AI-driven demand and strong earnings momentum support the thesis.",
+      "position_size": "4%",
+      "entry_price": 420.32,
+      "stop_loss": 398.0,
+      "target_12m": 480.0,
+      "risk_reward_ratio": 2.67,
+      "thesis": "AI-driven demand and strong earnings momentum support the long-term case for AVGO.",
       "thesis_invalidators": [
-        "ad revenue declines",
-        "negative macro sentiment"
+        "AI adoption slows",
+        "supply chain disruptions"
       ],
       "thesis_status": "active",
       "financial_health": {
-        "altman_z": 3.08,
-        "altman_zone": "safe",
-        "piotroski": 7,
-        "piotroski_strength": "neutral",
-        "health_note": "Piotroski score is neutral (7/9), no distress risk."
+        "altman_z": 1.57,
+        "altman_zone": "gray",
+        "piotroski": 8,
+        "piotroski_strength": "strong",
+        "health_note": "Piotroski score is strong (8/9), but Altman Z in gray zone — thesis must account for potential financial stress."
       },
       "key_news": [
-        "Netflix's Ad Business Expansion Continues: More Upside Ahead?",
-        "Disney World will revamp one of Walt Disney's most beloved rides — what to expec"
+        "SK Hynix and Micron lead AI boom, join trillion-dollar club",
+        "Microsoft’s AI Spending Won’t Derail Dividend Safety Inside Vanguard’s VIG"
       ],
       "social_highlights": [
         "Pre-screened via yfinance universe",
-        "Entry quality: good — near support"
+        "Entry quality: fair"
       ],
       "technicals": {
-        "trend": "mixed",
-        "rsi": 35.9,
+        "trend": "uptrend",
+        "rsi": 53.8,
         "macd": "N/A",
-        "key_support": 84.53,
-        "key_resistance": 123.17,
-        "entry_quality": "good — near support"
+        "key_support": 230.34,
+        "key_resistance": 610.3,
+        "entry_quality": "fair"
       },
       "valuation": {
         "pe": null,
-        "forward_pe": 13.8565,
-        "peg": 2.6411,
+        "forward_pe": 22.8498,
+        "peg": 0.9177,
         "ev_ebitda": null,
-        "verdict": "PEG=2.64"
+        "verdict": "PEG=0.92"
       },
       "fundamentals": {
-        "revenue_growth": "6.5%",
+        "revenue_growth": "29.5%",
         "gross_margin": "N/A",
-        "fcf_margin": "3.9%",
+        "fcf_margin": "37.4%",
         "debt_equity": null,
         "verdict": "Pre-fetched from yfinance"
       },
-      "current_price": "$103.85",
+      "current_price": "$420.32",
+      "watchlist": "semiconductors",
+      "social_sentiment": "bullish",
+      "social_buzz": "medium",
+      "source_agreement": "high"
+    },
+    {
+      "rank": 10,
+      "name": "NFLX",
+      "symbol": "NFLX",
+      "sector": "streaming",
+      "confidence": 6.0,
+      "risk_score": 3.5,
+      "risk_adjusted_score": 5.0,
+      "recommendation": "add",
+      "reasoning": "Streaming expansion and potential for ad revenue growth support the thesis.",
+      "position_size": "4%",
+      "entry_price": 86.65,
+      "stop_loss": 82.15,
+      "target_12m": 115.0,
+      "risk_reward_ratio": 6.3,
+      "thesis": "Streaming expansion and potential for ad revenue growth support the long-term case for NFLX.",
+      "thesis_invalidators": [
+        "ad revenue declines",
+        "content production costs rise"
+      ],
+      "thesis_status": "active",
+      "financial_health": {
+        "altman_z": 1.24,
+        "altman_zone": "gray",
+        "piotroski": 2,
+        "piotroski_strength": "weak",
+        "health_note": "Piotroski score is weak (2/9), and Altman Z in gray zone — thesis must account for potential financial stress."
+      },
+      "key_news": [
+        "Netflix criticises German plan to make streamers invest more locally",
+        "Where Will Netflix Stock Be Next Year?"
+      ],
+      "social_highlights": [
+        "Pre-screened via yfinance universe",
+        "Entry quality: fair"
+      ],
+      "technicals": {
+        "trend": "downtrend",
+        "rsi": 44.2,
+        "macd": "N/A",
+        "key_support": 78.59,
+        "key_resistance": 94.71,
+        "entry_quality": "fair"
+      },
+      "valuation": {
+        "pe": null,
+        "forward_pe": 22.5535,
+        "peg": 1.7158,
+        "ev_ebitda": null,
+        "verdict": "PEG=1.72"
+      },
+      "fundamentals": {
+        "revenue_growth": "16.2%",
+        "gross_margin": "N/A",
+        "fcf_margin": "55.4%",
+        "debt_equity": null,
+        "verdict": "Pre-fetched from yfinance"
+      },
+      "current_price": "$86.65",
       "watchlist": "streaming",
       "social_sentiment": "neutral",
       "social_buzz": "medium",
@@ -678,16 +674,17 @@
     "hit_rate_30d": null,
     "avg_return_30d_pct": null,
     "note": "14 sessions evaluated | 30d hit_rate=N/A | avg_return=N/A",
-    "notable": "window_1d: 0% (0/10 beat SPY, from 2026-07-09) | Thesis status: NEM:active; WMT:active; PYPL:active; TSM:active; AVGO:active"
+    "notable": "window_1d: 0% (0/10 beat SPY, from 2026-07-10) | window_5d: 0% (0/10 beat SPY, from 2026-07-06) | Thesis status: NEM:active; WMT:active; PYPL:active; REGN:active; TSM:active"
   },
   "warnings": [
     "This report is for informational purposes only and does not constitute financial advice.",
-    "Meta: strategy assembled from 7805 compressed characters."
+    "NFLX: Piotroski F-Score=2/9 (weak fundamentals) — thesis needs extra confirmation.",
+    "Meta: strategy assembled from 7751 compressed characters."
   ],
   "sectors": {
     "stocks": {
       "sector": "stocks",
-      "timestamp": "2026-07-10T07:06:23Z",
+      "timestamp": "2026-07-12T01:10:50Z",
       "sector_summary": "US equities screened from the 29-candidate universe. Regime: MIXED. VIX=16.2, Fear&Greed=22 (Extreme Fear). SPY RSI=0 — oversold — index dip opportunity. Top entry opportunities by RSI oversold + fundamental quality shown below.",
       "sector_outlook": "neutral",
       "top_pick": "REGN",
@@ -2176,7 +2173,7 @@
     },
     "materials": {
       "sector": "materials",
-      "timestamp": "2026-07-10T07:06:23Z",
+      "timestamp": "2026-07-12T01:10:50Z",
       "sector_summary": "Commodities and materials equities screened from the pre-fetch universe. Gold/energy/base-metals candidates with RSI and valuation data from yfinance. Regime: MIXED. Macro signal: mixed regime — sector-selective approach recommended.",
       "sector_outlook": "neutral",
       "top_pick": "NEM",
@@ -2493,5 +2490,5 @@
   },
   "spy_price_at_report": 7537.44,
   "priority_attention": [],
-  "strategy_summary": "The current macro environment shows extreme fear with the Fear & Greed index at 22 and SPY RSI near oversold territory, suggesting a potential contrarian opportunity in quality-oversold stocks. We focus on healthcare, payments, and staples sectors while managing risk through strict correlation limits."
+  "strategy_summary": "The current macro environment shows extreme fear with the Fear & Greed index at 22 and SPY RSI near oversold levels, creating a contrarian opportunity for quality-oversold stocks. Our strategy focuses on high-quality names in healthcare, payments, and staples sectors with strong fundamentals."
 }
