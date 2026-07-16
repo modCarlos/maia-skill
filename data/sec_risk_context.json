@@ -1,22 +1,36 @@
 {
-  "generated_at": "2026-07-12T01:10:50Z",
+  "generated_at": "2026-07-16T02:41:17Z",
   "source": "SEC EDGAR",
   "top": 12,
   "symbols": [
+    "IBM",
     "ORCL",
+    "PEP",
     "NFLX",
-    "DIS",
-    "T",
     "AMT",
-    "XOM",
-    "HON",
-    "COP",
-    "ARM",
+    "C",
+    "NKE",
+    "JNJ",
     "PG",
-    "MMM",
-    "BA"
+    "NOW",
+    "MRK",
+    "F"
   ],
   "results": [
+    {
+      "symbol": "IBM",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-24",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000051143/000005114326000010/ibm-20251231.htm",
+      "risk_factors": [
+        "Readers should carefully review such cautionary statements as they identify certain important factors that could cause actual results to differ materially from those in the forward-looking statements and from historical trends.",
+        "Those 2 Table of Contents cautionary statements are not exclusive and are in addition to other factors discussed elsewhere in this Form 10-K, in the company’s filings with the SEC or in materials incorporated therein by reference.",
+        "The following information is included in IBM’s 2025 Annual Report to Stockholders and is incorporated herein by reference: Segment information and revenue by classes of similar products or services—pages 65 to 68.",
+        "Information About Our Executive Officers (at February 24, 2026): Age Officer since Arvind Krishna, Chairman of the Board, President and Chief Executive Officer (1) 63 2020 Gary D."
+      ],
+      "error": null
+    },
     {
       "symbol": "ORCL",
       "cik": null,
@@ -28,6 +42,20 @@
         "Available Information Our Annual Reports on Form 10-K, Quarterly Reports on Form 10-Q, Current Reports on Form 8-K and amendments to those reports filed pursuant to Sections 13(a) and 15(d) of the Exchange Act are available, free of charge, on the SEC website at www.sec.gov and our Investor Relations website at www....",
         "We use our Investor Relations website as a means of disclosing material non-public information.",
         "Accordingly, investors should monitor our Investor Relations website, in addition to following our press releases, SEC filings and public conference calls and webcasts."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "PEP",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-03",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000077476/000007747626000007/pep-20251227.htm",
+      "risk_factors": [
+        "Management’s Discussion and Analysis of Financial Condition and Results of Operations – Our Business – Our Business Risks.” Investors are cautioned not to place undue reliance on any such forward-looking statements, which speak only as of the date they are made.",
+        "We undertake no obligation to update any forward-looking statement, whether as a result of new information, future events or otherwise.",
+        "The discussion of risks in this report is by no means all-inclusive but is designed to highlight what we believe are important factors to consider when evaluating our future performance.",
+        "When used in this report, the terms “we,” “us,” “our,” “PepsiCo” and the “Company” mean PepsiCo, Inc."
       ],
       "error": null
     },
@@ -46,34 +74,6 @@
       "error": null
     },
     {
-      "symbol": "DIS",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2024-11-14",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001744489/000174448924000276/dis-20240928.htm",
-      "risk_factors": [
-        "In addition to the factors affecting specific business operations identified in connection with the description of these operations and the financial results of these operations elsewhere in our filings with the SEC, the most significant factors affecting our business include the following: RISKS RELATED TO OUR BUSI...",
-        "Declines in economic conditions, such as recessions, other less severe slowdowns in economic activity and/or inflationary conditions in the U.S.",
-        "and other regions of the world in which we do business typically adversely affect demand for our products and services and/or costs to operate our businesses, reducing our revenue and earnings.",
-        "Past declines in economic conditions reduced or resulted in slower growth than expected in, among other things, guest spending at our parks and resorts, purchases of and prices for advertising on our platforms and purchases of Company-branded consumer products, and we expect similar impacts as such conditions recur."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "T",
-      "cik": null,
-      "form": "10-K",
-      "filing_date": "2026-02-09",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000732717/000073271726000120/t-20251231.htm",
-      "risk_factors": [
-        "securities markets, a higher interest rate environment, rising inflation and medical costs could materially increase our benefit plan costs and future funding requirements.",
-        "Our costs to provide current benefits and funding for future benefits are subject to increases, primarily due to continuing increases in medical and prescription drug costs, in part due to inflation, and can be affected by lower returns on assets held by our pension and other benefit plans, which are reflected in ou...",
-        "In calculating the recognized benefit costs, we have made certain assumptions regarding future investment returns, interest rates and medical costs.",
-        "These assumptions could change significantly over time and could be materially different than originally projected."
-      ],
-      "error": null
-    },
-    {
       "symbol": "AMT",
       "cik": null,
       "form": "10-K",
@@ -88,58 +88,44 @@
       "error": null
     },
     {
-      "symbol": "XOM",
+      "symbol": "C",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-02-18",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000034088/000003408826000045/xom-20251231.htm",
+      "filing_date": "2025-02-21",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000831001/000083100125000067/c-20241231.htm",
       "risk_factors": [
-        "This means ExxonMobil’s operations and earnings may be significantly affected by changes in oil, gas, and petrochemical prices and by changes in margins on refined products.",
-        "Oil, gas, petrochemical, and product prices and margins in turn depend on local, regional, and global events or conditions that affect supply and demand for the relevant commodity or product.",
-        "Any material decline in oil or natural gas prices could have a material adverse effect on the Company’s operations, results, financial condition, and proved reserves, especially in the Upstream segment.",
-        "On the other hand, a material increase in oil or natural gas prices could have a material adverse effect on the Company’s operations and results, especially in the Energy Products, Chemical Products, and Specialty Products segments."
+        "Citigroup is a global diversified financial services holding company whose businesses provide consumers, corporations, governments and institutions with a broad, yet focused, range of financial products and services, including consumer banking and credit, corporate and investment banking, securities brokerage, trade...",
+        "Citi’s vision is to be the preeminent banking partner for institutions with cross-border needs, a global leader in wealth management and a valued personal bank in the U.S.",
+        "At December 31, 2024, Citi had approximately 229,000 full-time employees, compared to approximately 239,000 at December 31, 2023.",
+        "Throughout this report, “Citigroup,” “Citi” and “the Company” refer to Citigroup Inc."
       ],
       "error": null
     },
     {
-      "symbol": "HON",
+      "symbol": "NKE",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-02-17",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000773840/000077384026000013/hon-20251231.htm",
+      "filing_date": "2026-07-15",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000320187/000032018726000088/nke-20260531.htm",
       "risk_factors": [
-        "Such discussions contain forward-looking statements within the meaning of Section 21E of the Securities Exchange Act of 1934, as amended (the Exchange Act), including statements related to the proposed separation of Honeywell from Honeywell Aerospace and the planned sale of the Productivity Solutions and Services an...",
-        "Forward-looking statements are those that address activities, events, or developments that we or our management intend, expect, project, believe, or anticipate will or may occur in the future.",
-        "They are based on management’s assumptions and assessments in light of past experience and trends, current economic and industry conditions, expected future developments, and other relevant factors, many of which are difficult to predict and outside of our control, including Honeywell's current expectations, estimat...",
-        "They are not guarantees of future performance, and actual results, developments, and business decisions may differ significantly from those envisaged by our forward-looking statements, including the proposed separation of Honeywell from Honeywell Aerospace and the planned sale of the Productivity Solutions and Servi..."
+        "OUR MARKETS We report our NIKE Brand operations based on our internal geographic organization.",
+        "Each NIKE Brand geographic segment operates predominantly in one industry: the design, development, marketing and selling of athletic footwear, apparel and equipment.",
+        "The Company's reportable operating segments for the NIKE Brand are: North America; Europe, Middle East & Africa (\"EMEA\"); Greater China; and Asia Pacific & Latin America (\"APLA\"), and include results for the NIKE and Jordan brands.",
+        "Converse is also a reportable operating segment and operates predominantly in one industry: the design, marketing, licensing and selling of casual sneakers, apparel and accessories."
       ],
       "error": null
     },
     {
-      "symbol": "COP",
+      "symbol": "JNJ",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-02-17",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001163165/000116316526000009/cop-20251231.htm",
+      "filing_date": "2024-02-16",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000200406/000020040624000013/jnj-20231231.htm",
       "risk_factors": [
-        "Our business could also be affected by additional risks and uncertainties not currently known to us or that we currently consider to be immaterial.",
-        "If any of these risks or other risks that are yet unknown or currently considered immaterial were to occur, our business, operating results and financial condition, as well as the value of an investment in our common stock, could be materially and adversely affected.",
-        "Risks Related to Our Industry Our operating results, our ability to execute on our strategy and the carrying value of our assets are exposed to the effects of volatile commodity prices or prolonged periods of low commodity prices.",
-        "Among the most significant factors impacting our revenues, operating results and future rate of growth are the sales prices for crude oil, bitumen, LNG, natural gas and NGLs."
-      ],
-      "error": null
-    },
-    {
-      "symbol": "ARM",
-      "cik": null,
-      "form": "20-F",
-      "filing_date": "2024-05-29",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001973239/000197323924000012/arm-20240331.htm",
-      "risk_factors": [
-        "See “Special Note Regarding Forward-Looking Statements.” SPECIAL NOTE REGARDING FORWARD-LOOKING STATEMENTS This Annual Report contains forward-looking statements within the meaning of Section 27A of the Securities Act of 1933, as amended (the “Securities Act”), and Section 21E of the Securities Exchange Act of 1934,...",
-        "Statements regarding our future and projections relating to revenue, cost of sales, operating expenses, income (loss), and potential growth opportunities are typical of such statements.",
-        "The forward-looking statements appear in a number of places, including, but not limited to, “ Item 5.",
-        "Operating and Financial Review and Prospects .” Forward-looking statements are based on our management’s beliefs and assumptions and on information currently available to our management."
+        "The Company seeks to identify, manage and mitigate risks to our business, but uncertainties and risks are difficult to predict and many are outside of the Company’s control and cannot therefore be eliminated.",
+        "In addition to the other information in this report and the Company’s other filings with the SEC, investors should consider carefully the factors set forth below.",
+        "Investors should be aware that it is not possible to predict or identify all such factors and that the following is not meant to be a complete discussion of all potential risks or uncertainties.",
+        "If known or unknown risks or uncertainties materialize, the Company’s business, results of operations or financial condition could be adversely affected, potentially in a material way."
       ],
       "error": null
     },
@@ -158,30 +144,44 @@
       "error": null
     },
     {
-      "symbol": "MMM",
+      "symbol": "NOW",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2025-02-05",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000066740/000006674025000006/mmm-20241231.htm",
+      "filing_date": "2026-01-29",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0001373715/000137371526000007/now-20251231.htm",
       "risk_factors": [
-        "Discussion of these factors is incorporated by reference into and considered an integral part of Part II, Item 7, “Management’s Discussion and Analysis of Financial Condition and Results of Operations.” Risks Related to the Global Economy and External Conditions * The Company’s results are impacted by the effects of...",
-        "During 2024, the Company derived approximately 56 percent of its revenues from outside the United States.",
-        "Accordingly, the Company’s operations and the execution of its business strategies and plans are subject to global competition and economic and geopolitical risks that are beyond its control, such as, among other things, disruptions in financial markets, economic downturns, military conflicts, terrorism, public heal...",
-        "and China, or more broadly in global trade conflict, could have a material adverse effect on the Company's business and operations around the world."
+        "While forward-looking statements are based on our management’s reasonable expectations at the time that they are made, you should not rely on those statements.",
+        "We undertake no obligation to revise or update publicly any forward-looking statements for any reason, whether as a result of new information, future events or otherwise, except as may be required by law.",
+        "Business Overview ServiceNow delivers solutions that help public and private organizations govern, secure and manage artificial intelligence and digitalize and streamline workflows to drive collaboration, productivity and better experiences across the enterprise.",
+        "We offer an innovative suite of products, including AI-powered applications, and services designed to automate workflows, integrate systems and empower employees, regardless of existing systems, cloud environments or collaboration tools."
       ],
       "error": null
     },
     {
-      "symbol": "BA",
+      "symbol": "MRK",
       "cik": null,
       "form": "10-K",
-      "filing_date": "2026-01-30",
-      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000012927/000162828026004357/ba-20251231.htm",
+      "filing_date": "2026-02-24",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000310158/000031015826000063/mrk-20251231.htm",
       "risk_factors": [
-        "We are committed to creating a work environment where every teammate around the world can perform at their best and grow their careers while supporting our company’s mission to protect, connect and explore our world and beyond.",
-        "During 2025, we continued to make progress in our culture transformation, including through launching our new Values and Behaviors, revising our performance management system to hold employees accountable not only for what they achieve but for how they achieve it, and enhancing training and leadership development pr...",
-        "Our compensation program is designed to attract, reward and retain the best-qualified talent with competitive compensation and benefits, including healthcare, paid time off, parental leave, retirement benefits, tuition assistance, employee skills and leadership development programs, and mental and physical well-bein...",
-        "2 Table of Contents We also invest in rewarding performance and have established a multi-level recognition program to acknowledge the achievements of excellent individual or team performance."
+        "15 Table of Contents Worldwide, all of the Company’s important products are sold under trademarks that are considered in the aggregate to be of material importance.",
+        "Trademark protection continues in some countries as long as used; in other countries, as long as registered.",
+        "Royalty income in 2025 on patent and know-how licenses and other rights amounted to $1.5 billion.",
+        "Merck also incurred royalty expenses amounting to $1.9 billion in 2025 under patent and know-how licenses it holds."
+      ],
+      "error": null
+    },
+    {
+      "symbol": "F",
+      "cik": null,
+      "form": "10-K",
+      "filing_date": "2026-02-11",
+      "source_url": "https://cdn.yahoofinance.com/prod/sec-filings/0000037996/000003799626000015/f-20251231.htm",
+      "risk_factors": [
+        "Quantitative and Qualitative Disclosures about Market Risk” (“Item 7A”) for a discussion of commodity price risks.",
+        "We own or hold licenses to use numerous patents, trade secrets, copyrights, and trademarks on a global basis.",
+        "We expect to continue building this portfolio as we actively pursue innovation in every part of our business.",
+        "We also own numerous trademarks and service marks that contribute to the identity and recognition of our Company and its products and services globally."
       ],
       "error": null
     }
